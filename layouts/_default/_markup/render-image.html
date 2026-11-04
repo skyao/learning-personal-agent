@@ -1,0 +1,8 @@
+{{- /* 页面目录内的相对图片解析为绝对地址，使打印视图（_print）中图片也能显示。 */ -}}
+{{- $src := .Destination -}}
+{{- $u := urls.Parse .Destination -}}
+{{- if and (not $u.IsAbs) (not (hasPrefix $u.Path "/")) -}}
+  {{- with .Page.Resources.Get $u.Path -}}{{- $src = .RelPermalink -}}{{- end -}}
+{{- end -}}
+<img src="{{ $src | safeURL }}" alt="{{ .Text }}"{{ with .Title }} title="{{ . }}"{{ end }} loading="lazy">
+{{- /* */ -}}
