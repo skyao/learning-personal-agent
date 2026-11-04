@@ -10,6 +10,7 @@
     <tr><th class="text-nowrap">发布日期</th><td>{{ .Page.Date.Format "2006-01-02" }}{{ with $p.updatedAt }}，更新于 {{ . }}{{ end }}{{ with $p.dateNote }}（{{ . }}）{{ end }}</td></tr>
     <tr><th class="text-nowrap">类型</th><td>{{ .Page.Parent.LinkTitle }}，{{ $p.fidelity }}{{ with $p.language }}，原文语言 {{ . }}{{ end }}</td></tr>
     <tr><th class="text-nowrap">收集日期</th><td>{{ $p.collectedAt }}</td></tr>
+    {{- with $p.basedOn }}<tr><th class="text-nowrap">二手报道</th><td><strong>据媒体报道。</strong>本文转述 {{ . }} 的报道，原文未直接读取{{ with $p.basedOnUrl }}：<a href="{{ . }}">{{ . }}</a>{{ end }}</td></tr>{{ end }}
   </tbody>
 </table>
 </div>
