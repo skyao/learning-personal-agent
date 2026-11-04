@@ -13,7 +13,7 @@ description: 收集 Meta Muse（Meta 的个人 AI 智能体）的资料时使用
 | --- | --- |
 | 产品目录 | `content/zh-cn/docs/muse/` |
 | 发布日期 | 2026-09-08（美国） |
-| 最后收集日期 | —（首轮收集进行中） |
+| 最后收集日期 | 官方渠道 2026-11-04；媒体与社区尚未收集 |
 
 ## 收录范围
 
@@ -38,6 +38,7 @@ description: 收集 Meta Muse（Meta 的个人 AI 智能体）的资料时使用
 | Muse Glimmer（research.meta.ai，2026-08-10） | 不收：端侧开放模型，全文未提及 Muse 产品 |
 | Ray-Ban Meta Audio 发布稿（about.fb.com，2026-09-23） | 不收：只有一句提到 Muse |
 | Meta Enterprise Platform 发布稿（about.fb.com，2026-09-28） | 不收：企业平台，非 Muse 产品资料 |
+| Building Windows for hybrid intelligence（微软 Windows 博客，2026-10-07） | 不收：Windows 平台公告，只有一句提到 Muse for Windows 即将推出 |
 
 ## 官方渠道
 
@@ -54,10 +55,10 @@ description: 收集 Meta Muse（Meta 的个人 AI 智能体）的资料时使用
 | Meta 帮助中心 | `www.meta.com/help/superintelligence/<编号>/` | Muse 帮助文档，约 14 篇以上 | 正文由脚本渲染，见「已知问题」 |
 | 订阅帮助 | `www.meta.com/help/subscriptions/<编号>/` | Muse 订阅 | 同帮助中心 |
 | 眼镜帮助 | `www.meta.com/help/ai-glasses/<编号>/` | 眼镜端 Muse Beta | 同帮助中心 |
-| 产品页 | `ai.meta.com/muse/` | 产品功能介绍 | 直接下载 |
+| 产品页 | `ai.meta.com/muse/` | 产品功能介绍 | 直接下载和抓取工具都只能拿到标题，需要能执行脚本的浏览器；2026-11-04 未收 |
 | 连接器开发指南 | `platform.muse.ai/docs` | 自定义连接器规范 | 直接下载 |
 | Gadgets | `gadgets.muse.ai`、`github.com/facebookincubator/muse-gadget-sdk` | 设备接入 | 直接下载；仓库收 README 与文档，不收代码 |
-| 漏洞赏金 | `bugbounty.meta.com/payout-guidelines/muse/` | Muse 赏金规则 | 直接下载 |
+| 漏洞赏金 | `bugbounty.meta.com/payout-guidelines/muse/` | Muse 赏金规则 | 正文由脚本渲染，用抓取工具；金额阶梯以堆叠标签呈现，整理为表格并加译注 |
 | 条款 | `agent.meta.ai/terms` | Muse 服务条款 | 直接下载 |
 
 ## 媒体与社区检索
