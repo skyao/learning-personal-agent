@@ -30,13 +30,21 @@ description: 收集 Meta Muse（Meta 的个人 AI 智能体）的资料时使用
 
 | 模型资料 | 判断 |
 | --- | --- |
-| （逐篇补充） | |
+| Muse Wonder 新闻稿（about.fb.com，2026-10-12） | 收：说明将驱动 Muse，并为个人智能体处理私人信息做了训练 |
+| Muse Wonder 研究博客（research.meta.ai，2026-10-12） | 收：同上，另说明将用于 artifact 生成 |
+| Muse Wonder 模型卡 PDF | 待定：评估以模型为主，含 MemoryBench、FocusBench；待用户确认 |
+| Muse Realtime Avatar（research.meta.ai，2026-09-23） | 收：Muse 应用中的头像功能 |
+| Muse Spark Open（research.meta.ai，2026-10-15） | 不收：全文未提及 Muse 产品 |
+| Muse Glimmer（research.meta.ai，2026-08-10） | 不收：端侧开放模型，全文未提及 Muse 产品 |
+| Ray-Ban Meta Audio 发布稿（about.fb.com，2026-09-23） | 不收：只有一句提到 Muse |
+| Meta Enterprise Platform 发布稿（about.fb.com，2026-09-28） | 不收：企业平台，非 Muse 产品资料 |
 
 ## 官方渠道
 
 | 渠道 | 地址 | 内容 | 抓取方法 |
 | --- | --- | --- | --- |
 | Meta Newsroom | `about.fb.com/news/`（AI 标签：`about.fb.com/news/tag/ai/`） | 发布、地区上线、Connect、小企业 | 直接下载 |
+| Meta 消费者博客 | `www.meta.com/blog/` | 眼镜端、Connect 汇总等面向消费者的公告 | 直接下载；日期取页面显示日期 |
 | Meta Newsroom 日文版 | `about.fb.com/ja/news/` | 日本上线等日本专属公告 | 直接下载；日文资料同样全文翻译 |
 | Muse 博客 | `muse.ai/blog` | 设计、安全、赏金回顾 | 直接下载；列表页可取全部文章链接 |
 | 设计文章 | `introducing.muse.ai` | 我们如何设计 Muse | 直接下载 |
@@ -72,7 +80,10 @@ description: 收集 Meta Muse（Meta 的个人 AI 智能体）的资料时使用
 
 - 页首的「要点」（Takeaways）框不在 `<article>` 容器内，只抽 `<article>` 会漏掉；要单独抽取，放在正文之前。
 - 页面顺序为：标题、头部视频、要点框、正文。视频是 `<video>` 标签，`<source>` 中有 mp4 地址，按占位行保存。
-- `article:published_time` 与 `article:modified_time` 分别对应 `date` 与 `updatedAt`。
+- `date` 取页面标题下显示的日期。`article:published_time` 是 UTC 时间，可能比显示日期晚一天（例如新加坡上线稿显示 October 27，元数据为 10-28T00:00 UTC），两者不一致时在 `dateNote` 记下元数据。`article:modified_time` 对应 `updatedAt`。
+- 正文中的幻灯片（`div.jetpack-slideshow`）把引语做成图片，文字在 `data-gallery` 属性的 JSON 里（每项的 `alt`）。逐张下载图片，引语按替代文本翻译成引用块；替代文本为空的，看图转录，并加译注说明。
+- 图片下载时在地址后加 `?w=960` 取缩小版，原图通常每张数百 KB 到 1 MB。
+- 链接中的跟踪参数（如 `srsltid=`）去掉，其余照录。
 - 作者字段为站点编辑账号（如 heathera），不是署名作者，不填入 `author`。
 
 ### 同一篇文章的多个官方地址
@@ -86,8 +97,20 @@ description: 收集 Meta Muse（Meta 的个人 AI 智能体）的资料时使用
 
 ### introducing.muse.ai
 
-- 图片地址形如 `/_next/image?url=...`，直接下载 `/_next/static/immutable/media/<文件名>` 即可得到原图；保存时去掉文件名中的哈希后缀。
+- 图片地址形如 `/_next/image?url=...`。下载时用 `/_next/image?url=<编码后的路径>&w=1080&q=75`，并带请求头 `Accept: image/png,image/jpeg`，得到 1080 像素宽的 PNG 或 JPEG；原图可能有数 MB。保存时去掉文件名中的哈希后缀。muse.ai 的博客同样适用。
 - 页首视频「Muse organizing everyday life」由脚本加载，取不到视频地址，用封面图加指向页面的占位行。
+
+### research.meta.ai（研究博客）
+
+- Next.js 页面。正文能直接抽取，但图表、基准表、演示视频由脚本渲染：静态 HTML 只有空的 `<figure>` 占位，图片路径和替代文本在内嵌的 RSC 数据里。用 `collect-sources/scripts/rsc_media.py` 取出，再用 `figures.py` 看占位的位置（每个占位前一段文字），按位置放回。
+- 图片取浅色版：`/articles/<文章>/images/<名称>-light-v<n>.webp`；页首图在 `/articles/<文章>/hero/`。
+- 标签页式演示（多个演示共用一个占位）写成一行占位加列表，列出每个标签和图注。
+- 视频地址是带过期签名的 fbcdn 链接，占位行链接到文章页面。
+- 文章页显示的日期和 `article:published_time` 一致。
+
+### about.fb.com 抽取脚本
+
+`scripts/extract_fb.py <html>` 依次输出标题、日期、要点框、正文，并把视频和幻灯片引语替换为 `[VIDEO ...]`、`[IMG 地址 | 替代文本]` 标记。
 
 ## 命名约定
 
