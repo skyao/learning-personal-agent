@@ -1,0 +1,33 @@
+{{- /*
+  资料清单。
+  在 sources/_index.md 中：按类型子目录分组列出。
+  在类型子目录的 _index.md 中：列出本目录的资料。
+  参数：
+    section  改为列出另一个目录，例如 "/docs/industry/sources"
+    product  只列出 products 含该产品的资料，例如 "muse"
+*/ -}}
+{{- $root := .Page -}}
+{{- with .Get "section" -}}
+  {{- $root = site.GetPage . -}}
+{{- end -}}
+{{- $product := .Get "product" -}}
+{{- $groups := slice -}}
+{{- if not $root -}}
+{{- else if $root.Sections -}}
+  {{- range $root.Sections.ByWeight -}}
+    {{- $groups = $groups | append (dict "title" .LinkTitle "pages" .RegularPages) -}}
+  {{- end -}}
+{{- else -}}
+  {{- $groups = slice (dict "title" "" "pages" $root.RegularPages) -}}
+{{- end -}}
+{{- $total := 0 -}}
+{{- range $groups -}}
+  {{- $pages := .pages -}}
+  {{- if $product -}}{{- $pages = where $pages "Params.products" "intersect" (slice $product) -}}{{- end -}}
+  {{- if $pages -}}
+    {{- $total = add $total (len $pages) -}}
+    {{- with .title }}<h3>{{ . }}（{{ len $pages }}）</h3>{{ end -}}
+    {{- partial "source-table.html" $pages -}}
+  {{- end -}}
+{{- end -}}
+{{- if eq $total 0 }}<p>暂无资料。</p>{{ end -}}

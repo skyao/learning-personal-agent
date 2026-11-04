@@ -1,0 +1,17 @@
+{{- /* 资料表格。参数：一组资料页。 */ -}}
+<table class="table table-sm source-list">
+  <thead>
+    <tr><th>日期</th><th>标题</th><th>发布方</th><th>形式</th><th>标签</th></tr>
+  </thead>
+  <tbody>
+  {{- range .ByDate.Reverse }}
+    <tr>
+      <td class="text-nowrap">{{ .Date.Format "2006-01-02" }}</td>
+      <td><a href="{{ .RelPermalink }}">{{ .Title }}</a></td>
+      <td>{{ .Params.publisher }}</td>
+      <td class="text-nowrap">{{ .Params.fidelity }}</td>
+      <td>{{ delimit (.Params.tags | default slice) "、" }}</td>
+    </tr>
+  {{- end }}
+  </tbody>
+</table>

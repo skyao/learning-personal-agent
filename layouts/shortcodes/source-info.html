@@ -1,0 +1,15 @@
+{{- /* 资料页的来源信息块，内容全部取自 frontmatter。 */ -}}
+{{- $p := .Page.Params -}}
+<div class="alert alert-light border source-info" role="note">
+<table class="table table-sm table-borderless mb-0">
+  <tbody>
+    {{- with $p.originalTitle }}<tr><th class="text-nowrap">原标题</th><td>{{ . }}</td></tr>{{ end }}
+    <tr><th class="text-nowrap">原文</th><td><a href="{{ $p.sourceUrl }}">{{ $p.sourceUrl }}</a></td></tr>
+    {{- with $p.reprintUrl }}<tr><th class="text-nowrap">依据转载</th><td><a href="{{ . }}">{{ . }}</a></td></tr>{{ end }}
+    <tr><th class="text-nowrap">作者</th><td>{{ $p.author | default "未署名" }}{{ with $p.publisher }}（{{ . }}）{{ end }}</td></tr>
+    <tr><th class="text-nowrap">发布日期</th><td>{{ .Page.Date.Format "2006-01-02" }}{{ with $p.updatedAt }}，更新于 {{ . }}{{ end }}{{ with $p.dateNote }}（{{ . }}）{{ end }}</td></tr>
+    <tr><th class="text-nowrap">类型</th><td>{{ .Page.Parent.LinkTitle }}，{{ $p.fidelity }}{{ with $p.language }}，原文语言 {{ . }}{{ end }}</td></tr>
+    <tr><th class="text-nowrap">收集日期</th><td>{{ $p.collectedAt }}</td></tr>
+  </tbody>
+</table>
+</div>
