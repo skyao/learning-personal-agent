@@ -14,18 +14,26 @@
 
 纯编程助手、企业智能体开发平台、纯陪伴产品不在范围内。新产品是否纳入由用户决定。
 
+## 模型资料的收录原则
+
+这份笔记只关注 Personal Agent，不关注模型本身。模型发布、模型卡、基准评测等资料，只有在明确与 Personal Agent 相关时才收录，例如：
+
+- 文章说明模型为 Personal Agent 做了优化，或专门用于驱动某个 Personal Agent 产品。
+- 文章说明 Personal Agent 在运行时如何选择或切换模型，例如按任务类型、订阅档位或设备选用不同模型。
+
+只介绍模型能力、跑分、开放权重、API 价格的文章不收，即使模型与某个 Personal Agent 同名或同属一家厂商。文章只顺带一句提到某个 Personal Agent 的，也不收，在本轮报告中列出，由用户判断。
+
+所有产品都遵循这条原则；产品 skill 只能在此基础上列出具体判断，不能放宽。
+
 ## 跟踪的产品
 
-收集完成后更新「最后收集日期」。
+每个产品的来源渠道、抓取方法、收录范围、已知问题和最后收集日期，写在该产品自己的 skill 中。收集某个产品时，先读它的 skill。
 
-| 目录 | 产品 | 厂商 | 最后收集日期 |
+| 目录 | 产品 | 厂商 | 产品 skill |
 | --- | --- | --- | --- |
-| muse | Meta Muse | Meta | — |
+| muse | Meta Muse | Meta | `skills/collect-muse/SKILL.md` |
 
-### muse
-
-- 官方：about.fb.com/news、introducing.muse.ai、security.muse.ai、research.meta.ai/blog、github.com/facebookincubator
-- 检索词：`Meta Muse agent`、`Muse personal AI agent`、`Meta Muse 智能体`
+新增产品时：用户同意纳入后，按 [product-skill-template.md](product-skill-template.md) 新建 `skills/collect-<product>/SKILL.md`，在上表加一行，再按 section-templates.md 建目录。
 
 ## 行业综合（industry）
 

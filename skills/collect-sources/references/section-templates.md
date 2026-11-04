@@ -14,9 +14,24 @@ description: >
 ---
 
 - [资料收集](sources/)
+- [分析总结](analysis/)
 ```
 
 产品概览的正文属于分析，收集时只建上面这个最小页面，不写产品介绍。
+
+## `<product>/analysis/_index.md`
+
+新建产品目录时一并建立这个占位页，正文留空。分析页面由用户另行安排，收集时不修改。
+
+```markdown
+---
+title: "<产品名> 资料分析和总结"
+linkTitle: "分析总结"
+weight: 20
+description: >
+  基于资料收集的分析与阶段性总结
+---
+```
 
 ## `<product>/sources/_index.md`
 

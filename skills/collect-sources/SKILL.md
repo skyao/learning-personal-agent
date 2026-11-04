@@ -29,7 +29,7 @@ content/zh-cn/docs/
 
 - 资料按**来源类型**放入子目录，每篇只属于一类。类型的判断标准见 [references/source-types.md](references/source-types.md)。
 - 资料按**主题**打标签，一篇可以有多个标签。标签只能从 [references/tags.md](references/tags.md) 的词表中选，不得自造。
-- 跟踪哪些产品、各自从哪里检索，见 [references/tracking.md](references/tracking.md)。
+- 跟踪哪些产品见 [references/tracking.md](references/tracking.md)。每个产品另有自己的 skill（`skills/collect-<product>/`），记录该产品的来源渠道、抓取方法、收录范围、已知问题和最后收集日期。本 skill 的通用规则与产品 skill 冲突时，以产品 skill 为准。
 - 新建产品目录或类型子目录时，用 [references/section-templates.md](references/section-templates.md) 中的 `_index.md` 模板。
 
 ## 资料放在哪里
@@ -41,20 +41,20 @@ content/zh-cn/docs/
 
 ## 每轮收集的流程
 
-1. **读现状。** 读 `references/tracking.md` 中每个产品的检索渠道和「最后收集日期」；列出已有资料的 `sourceUrl`：
+1. **读现状。** 读 `references/tracking.md` 和本轮要收集的产品 skill；列出已有资料的 `sourceUrl` 与 `altUrls`：
    ```bash
-   grep -rh "^sourceUrl:" content/zh-cn/docs --include=index.md | sort
+   grep -rhE "^(sourceUrl|altUrls):" content/zh-cn/docs --include=index.md | sort
    ```
-2. **检索。** 每个产品先查官方渠道，再查媒体与社区，时间范围从「最后收集日期」前三天起（覆盖时区与延迟收录）。首次收集不限起始日期。行业综合按 tracking.md 中的关键词检索。
+2. **检索。** 按产品 skill 列出的渠道，先查官方，再查媒体与社区，时间范围从「最后收集日期」前三天起（覆盖时区与延迟收录）。首次收集不限起始日期。行业综合按 tracking.md 中的关键词检索。
 3. **筛选。** 逐条判断：
-   - 是否与 Personal Agent 相关（标准见 tracking.md）。
-   - 是否重复：同一 URL、同一文章的转载、同一内容的不同语言版本，都算重复。已有转载版而找到原文时，用原文替换，更新 `fidelity`。
+   - 是否与 Personal Agent 相关（标准见 tracking.md）。模型类资料按 tracking.md 的「模型资料的收录原则」判断：只收明确与 Personal Agent 相关的。
+   - 是否重复：同一 URL、`altUrls` 中的地址、同一文章的转载、同一内容的不同语言版本，都算重复。发现已收资料的新地址时，补进它的 `altUrls`。已有转载版而找到原文时，用原文替换，更新 `fidelity`。
    - 是否可信：按 source-types.md 判断；SEO 聚合站、内容农场、无署名的搬运站直接放弃。
    - 是否有实质内容：只复述官方公告、没有新信息的媒体稿不收；同一事件优先收官方原文和一手报道。
-4. **取全文。** 读取原文全文。原文无法读取（付费墙、反爬）时，找完整转载并在 `fidelity` 注明；只能取得部分内容时标为节选。取不到可信全文的资料不收，记入本轮报告。
+4. **取全文。** 按 source-page.md 的「取全文」一节和产品 skill 中的抓取方法读取原文全文。原文无法读取（付费墙、反爬）时，找完整转载并在 `fidelity` 注明；只能取得部分内容时标为节选。取不到可信全文的资料不收，记入本轮报告。
 5. **保存。** 按 [references/source-page.md](references/source-page.md) 的模板和翻译规则写页面，放入对应类型目录，打标签，图片下载到页面目录的 `images/`。
 6. **校验。** 运行 `npm run build`，退出码必须为 0；确认新页面出现在 `sources/` 清单中。
-7. **更新状态。** 在 tracking.md 中更新各产品的「最后收集日期」。
+7. **更新状态。** 在产品 skill 中更新「最后收集日期」；行业综合的日期在 tracking.md 中更新。收集中发现的新渠道、抓取方法或页面结构问题，补进产品 skill 的对应小节。
 8. **提交。** 资料收集单独提交，不与其他修改混在一起。提交信息写明产品与篇数，例如 `collect: muse 3 篇，industry 2 篇`。
 9. **报告。** 向用户输出本轮报告：
    - 新收资料：产品、类型、日期、标题、标签。
