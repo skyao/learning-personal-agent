@@ -81,16 +81,19 @@ description: 收集 Meta Muse（Meta 的个人 AI 智能体）的资料时使用
 | Gizmodo、The Next Web、SiliconANGLE、The Decoder 等关于亚马逊屏蔽的报道 | 不收：一手报道是 GeekWire（已收） |
 | IT之家对 Reuters、官方公告的转述（如人工客服、Gadgets、Windows、Wonder） | 不收：中文复述，无新信息 |
 | DigitalToday 中文版、英文版（分享暂停、日本扩张） | 不收：复述 Ars Technica 与官方公告 |
-| Malwarebytes、Medianama、IBTimes、dig.watch 关于人物档案的报道 | 待定：一手报道是 WIRED 与 TIME，原文尚未取得；研究者 Karan Joshi 的原始材料也未找到 |
-| Reuters 人工客服测试报道 | 待定：Reuters 原文与 MarketScreener 转载都无法直接读取 |
-| Fox News 情感陪伴报道（2026-10-23） | 待定：与技术实现关系较远 |
-| Subscription Insider 订阅管理分析 | 待定：商业模式相关，需用户判断 |
-| 53AI 转载的「池中悟」国内注册实测 | 已收为节选；微信原文链接待补 |
-| Q3 2026 财报电话会（2026-10-21） | 待定：Muse 用户规模与商业化口径的一手来源，但全文以广告和资本开支为主，是否只收 Muse 相关段落需用户决定 |
-| David Senra 播客对 Alexandr Wang 的访谈 | 待定：原始音频，需找文字稿 |
-| Ars Technica 关于 Wardle 0day 的报道（2026-09） | 待收：有 Meta 回应和 ClickFix 利用路径，原文链接见 Ars 分享链接一文 |
-| GeekWire 后续分析「Amazon’s fight with Meta: Who owns the customer relationship」 | 待收：商业模式相关 |
-| CNBC「Humans are still doing the work behind some AI agents」（2026-10-31） | 待查：可能涉及 Muse 人工协助 |
+| 人物档案事件（WIRED、TIME 原文无法读取） | 已收 Medianama 的二手报道并填写 `basedOn`（用户 2026-11-04 决定）；Malwarebytes、IBTimes、dig.watch 不再收 |
+| Reuters 人工客服测试报道 | 不收（用户 2026-11-04 决定）；一手报道是 404 Media 2026-09-22 的「Meta Tests Muse AI Agent Calls…」，已收 |
+| Fox News 情感陪伴报道、Subscription Insider 订阅管理分析 | 不收（用户 2026-11-04 决定） |
+| Q3 2026 财报电话会 | 不收（用户 2026-11-04 决定） |
+| CNBC「Humans are still doing the work behind some AI agents」（2026-10-31） | 放入行业综合（仅链接）：主体是 Dazzle、Duckbill 等创业公司，Muse 只有一段 |
+| 多产品横评（WIRED、纽约时报、Axios、Claire Vo、Pat Simmons、AI Agents Library、CNBC 2026-09-30） | 已放入行业综合，暂为「仅链接」，待统一补全文 |
+| David Senra 播客对 Alexandr Wang 的访谈 | 待查：原始音频，需找文字稿 |
+| Zuckerberg 在 Sources 播客的访谈（sources.news） | 待查：谈到交易抽成的商业模式 |
+| 纽约时报 The Daily 播客「Call My A.I. Agent」（Eli Tan） | 待查：Muse 实测，需找文字稿 |
+| The Verge 关于 Muse 文件系统与夜间回顾的报道（theverge.com/ai-artificial-intelligence/1000222/…） | 待查 |
+| Hunter Brook「Dox for me, O Muse」（newsletter.hntrbrk.com） | 待查：用 Muse 汇编弱势群体个人信息的测试 |
+| Malwarebytes 关于 Marketplace 买家被引到卖家家中的报道、EPIC 影子档案评论、Surfshark 数据收集分析 | 待查 |
+| Tom's Guide、Engadget、DataCamp 等 Muse 与 Dots 对比文 | 行业综合候选，待统一处理 |
 
 ## 已知问题
 
