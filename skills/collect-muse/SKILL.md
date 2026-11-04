@@ -25,6 +25,8 @@ description: 收集 Meta Muse（Meta 的个人 AI 智能体）的资料时使用
 | Muse for Small Business、Muse 眼镜端、Muse for Windows / Mac、Gadgets 与设备接入 | 收录 |
 | 模型资料 | 按 collect-sources 的「模型资料的收录原则」逐篇判断：明确说明为 Muse 优化、用于驱动 Muse，或说明 Muse 运行时如何选择模型的才收 |
 | Muse Code（终端编程智能体）、Muse Image / Muse Video（生成模型）、Meta Enterprise Platform | 不收 |
+| 法律文档：Muse 服务条款、Muse 隐私政策、连接器平台条款、Gadget SDK 条款、眼镜自定义唤醒名隐私声明 | 不收（用户 2026-11-04 决定，见 collect-sources 的「不收的资料类型」） |
+| 边缘资料：订阅中心的 6 篇子文章、Wonder 模型卡 PDF、Gadget SDK 子目录 README | 不收（用户 2026-11-04 决定） |
 
 模型家族中各篇的判断结果记在下面，避免下一轮重复判断：
 
