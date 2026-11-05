@@ -59,9 +59,9 @@ anthropic.com 的 news 下没有 Claude Duet 页面（`/news/claude-duet` 返回
 | Reuters「Anthropic unveils Claude Duet AI agent app」（2026-10-21） | 暂不收：原站返回 401，Wayback 没有快照；需要时请用户在浏览器中复制正文 |
 | Inc.「I Tried Claude Duet. Its Best Feature Is Knowing When to Stop」（Jason Aten） | 暂不收：上手实测，值得收，但原站返回 403、Wayback 没有快照；需要时请用户在浏览器中复制正文 |
 | runtimewire.com「Claude Duet uses Claude Code Routines for scheduled check-ins」 | 不收：约 180 词的转述，标题的说法在正文中没有依据，引用的「VentureBeast first-look」找不到 |
-| 中文、日文媒体（INSIDE、iThome、TechNews 科技新报、财联社、凤凰科技、Gizmodo Japan 等）与各语言转述站 | 不收：复述发布文 |
+| 中文、日文媒体（INSIDE、iThome、TechNews 科技新报、财联社、凤凰科技、Gizmodo Japan 等）与各语言转述站 | 暂不收：据检索摘要判断为复述发布文，未逐篇打开核实；下一轮如有时间可抽查 |
 | botsinproduction.com「I built a Claude Duet by hand a year ago」 | 未细看：Hacker News 上 1 分，暂不收 |
-| myclaw.ai、eesel.ai、mindstudio.ai、DataCamp 等的「review」「explained」文章 | 不收：厂商博客或依据发布材料整理，自述没有实测 |
+| myclaw.ai、eesel.ai、mindstudio.ai、DataCamp 等的「review」「explained」文章 | 不收：厂商或工具站的博客；myclaw.ai 自述依据发布周材料而非实测，其余据检索摘要判断，未逐篇打开 |
 
 ## 命名约定
 
