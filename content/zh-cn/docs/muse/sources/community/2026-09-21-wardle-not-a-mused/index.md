@@ -8,6 +8,7 @@ author: "Patrick Wardle"
 publisher: "GitHub（pwardle）"
 language: en
 fidelity: 全文翻译
+translation: 已翻译
 collectedAt: 2026-11-04
 dateNote: "日期取仓库创建时间（GitHub API created_at，2026-09-21T14:04:11Z）；本页为仓库 README.md 的全文翻译，代码未收入"
 tags: [安全, 设备]

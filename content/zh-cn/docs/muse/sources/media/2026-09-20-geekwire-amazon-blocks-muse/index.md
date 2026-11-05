@@ -8,6 +8,7 @@ author: "Todd Bishop"
 publisher: "GeekWire"
 language: en
 fidelity: 全文翻译
+translation: 已翻译
 collectedAt: 2026-11-04
 updatedAt: 2026-09-22
 dateNote: "页面显示 Sep 20, 2026 at 11:05 pm，更新于 September 22, 2026 at 10:56 am（太平洋时间）"

@@ -7,6 +7,7 @@ sourceUrl: "https://about.fb.com/news/2026/10/introducing-muse-wonder-models/"
 publisher: "Meta"
 language: en
 fidelity: 全文翻译
+translation: 已翻译
 collectedAt: 2026-11-04
 updatedAt: 2026-10-13
 tags: [模型, 记忆与上下文, 持续执行]

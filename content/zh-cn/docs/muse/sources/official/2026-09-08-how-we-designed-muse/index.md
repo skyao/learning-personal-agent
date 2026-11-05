@@ -9,6 +9,7 @@ author: "Mona Sarantakos, Christine Awad"
 publisher: "Meta"
 language: en
 fidelity: 全文翻译
+translation: 已翻译
 collectedAt: 2026-11-04
 dateNote: "页面正文署 September 2026，日期取自页面结构化数据"
 tags: [持续执行, 记忆与上下文, 安全]

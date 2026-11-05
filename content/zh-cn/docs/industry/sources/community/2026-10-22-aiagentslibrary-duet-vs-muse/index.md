@@ -8,6 +8,7 @@ author: "Diana's AI Agents Tips"
 publisher: "AI Agents Library"
 language: en
 fidelity: 仅链接
+translation: 待翻译
 collectedAt: 2026-11-04
 dateNote: "旧笔记记录该页于 2026-10-28 更新"
 tags: [实测评测, 开放与价格]

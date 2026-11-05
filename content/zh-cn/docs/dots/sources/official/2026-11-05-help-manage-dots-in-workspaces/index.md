@@ -8,6 +8,7 @@ reprintUrl: "https://web.archive.org/web/20261027000449/https://help.openai.com/
 publisher: "OpenAI 帮助中心"
 language: en
 fidelity: 转载全文翻译
+translation: 已翻译
 collectedAt: 2026-11-05
 updatedAt: 2026-10-21
 dateNote: "help.openai.com 对自动访问返回 403，依据 Internet Archive 2026-10-27 00:04:49（UTC）的快照；快照中页面显示「Updated: 6 days ago」，据此推算更新日期约为 2026-10-21。发布日期未知，暂取收集日期"

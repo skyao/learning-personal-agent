@@ -7,6 +7,7 @@ author: "Web3村长"
 publisher: "Web3村长（个人博客）"
 language: zh
 fidelity: 原文
+translation: 不需要
 collectedAt: 2026-11-04
 tags: [实测评测, 持续执行]
 products: [muse]

@@ -8,6 +8,7 @@ altUrls: ["https://learn.chatgpt.com/codex/dots", "https://developers.openai.com
 publisher: "OpenAI（ChatGPT Learn）"
 language: en
 fidelity: 全文翻译
+translation: 已翻译
 collectedAt: 2026-11-05
 dateNote: "文档不标日期，页面中也没有结构化日期；按规则取收集日期"
 tags: [功能更新, 持续执行, 记忆与上下文, 开放与价格]

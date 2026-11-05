@@ -10,6 +10,7 @@ author: "OpenAI"
 publisher: "OpenAI"
 language: en
 fidelity: 转载全文翻译
+translation: 已翻译
 collectedAt: 2026-11-05
 dateNote: "openai.com 对自动访问返回 403，依据 Internet Archive 2026-10-26 20:23:59（UTC）的快照；页面显示日期 September 29, 2026"
 tags: [发布, 持续执行, 开放与价格, 安全]

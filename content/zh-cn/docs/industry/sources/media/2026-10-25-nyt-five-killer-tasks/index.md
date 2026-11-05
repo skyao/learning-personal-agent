@@ -8,6 +8,7 @@ reprintUrl: "https://indianexpress.com/article/technology/artificial-intelligenc
 publisher: "The New York Times（经 Indian Express 转载）"
 language: en
 fidelity: 仅链接
+translation: 待翻译
 collectedAt: 2026-11-04
 dateNote: "纽约时报原文链接待补；转载页被反爬拦截，标题依据网址整理，日期依据旧笔记，作者待补"
 tags: [实测评测]

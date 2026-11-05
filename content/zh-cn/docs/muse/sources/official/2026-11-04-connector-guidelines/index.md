@@ -7,6 +7,7 @@ sourceUrl: "https://platform.muse.ai/docs"
 publisher: "Meta（Muse Connector Platform）"
 language: en
 fidelity: 全文翻译
+translation: 已翻译
 collectedAt: 2026-11-04
 dateNote: "开发者文档不标日期，页面中也没有结构化日期；按规则取收集日期"
 tags: [连接器, 安全]

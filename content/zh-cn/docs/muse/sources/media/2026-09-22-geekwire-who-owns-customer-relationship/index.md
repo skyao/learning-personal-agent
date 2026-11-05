@@ -8,6 +8,7 @@ author: "Todd Bishop"
 publisher: "GeekWire"
 language: en
 fidelity: 全文翻译
+translation: 已翻译
 collectedAt: 2026-11-04
 dateNote: "页面显示 Sep 22, 2026 at 10:39 am（太平洋时间）"
 tags: [商业与规模]

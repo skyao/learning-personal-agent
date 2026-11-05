@@ -8,6 +8,7 @@ altUrls: ["https://learn.chatgpt.com/codex/dots/channels"]
 publisher: "OpenAI（ChatGPT Learn）"
 language: en
 fidelity: 全文翻译
+translation: 已翻译
 collectedAt: 2026-11-05
 dateNote: "文档不标日期；按规则取收集日期"
 tags: [功能更新, 设备, 记忆与上下文]

@@ -8,6 +8,7 @@ author: "Takashi Fujino"
 publisher: "Future Stack Reviews（FSR）"
 language: en
 fidelity: 节选
+translation: 已翻译
 collectedAt: 2026-11-04
 dateNote: "页面元数据发布时间 2026-10-09T02:31:15Z；页面自标「Last updated: October 8, 2026」（日本时间）；测试于 2026 年 10 月 4 日至 7 日（日本时间）进行"
 tags: [实测评测, 持续执行]

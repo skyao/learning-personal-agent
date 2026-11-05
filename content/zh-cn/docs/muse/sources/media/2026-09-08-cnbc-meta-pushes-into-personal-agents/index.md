@@ -8,6 +8,7 @@ author: "Jonathan Vanian"
 publisher: "CNBC"
 language: en
 fidelity: 全文翻译
+translation: 已翻译
 collectedAt: 2026-11-04
 dateNote: "页面显示 Published Tue, Sep 8 2026 3:00 PM EDT，Updated 3:09 PM EDT"
 tags: [发布, 开放与价格, 商业与规模]

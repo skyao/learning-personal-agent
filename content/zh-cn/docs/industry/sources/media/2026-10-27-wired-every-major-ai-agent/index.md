@@ -9,6 +9,7 @@ author: "Reece Rogers"
 publisher: "WIRED（经 DNYUZ 转载）"
 language: en
 fidelity: 仅链接
+translation: 待翻译
 collectedAt: 2026-11-04
 dateNote: "WIRED 原文链接待补，目前只找到 DNYUZ 的转载"
 tags: [实测评测]

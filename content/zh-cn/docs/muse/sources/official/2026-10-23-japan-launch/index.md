@@ -7,6 +7,7 @@ sourceUrl: "https://about.fb.com/ja/news/2026/10/muse-personal-ai-agent-launches
 publisher: "Meta（日本）"
 language: ja
 fidelity: 全文翻译
+translation: 已翻译
 collectedAt: 2026-11-04
 updatedAt: 2026-10-23
 dateNote: "取页面显示日期 2026年10月23日；页面元数据为 2026-10-22T23:40:23+00:00（UTC）"

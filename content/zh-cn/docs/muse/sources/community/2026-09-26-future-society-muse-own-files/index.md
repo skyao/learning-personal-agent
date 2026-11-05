@@ -8,6 +8,7 @@ author: "Jannis Strecker(-Bischoff), Luka Bekavac, Simon Mayer, Aurelia Tamò-La
 publisher: "futuresociety.ch"
 language: en
 fidelity: 全文翻译
+translation: 已翻译
 collectedAt: 2026-11-05
 updatedAt: 2026-10-03
 dateNote: "页面显示发布于 26.09.2026，文末标注 rev. 2026-10-03；作者名单取自页面数据文件 report_data.json"

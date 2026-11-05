@@ -8,6 +8,7 @@ author: "Jonathan Vanian"
 publisher: "CNBC"
 language: en
 fidelity: 仅链接
+translation: 待翻译
 collectedAt: 2026-11-04
 tags: [商业与规模]
 products: [muse]

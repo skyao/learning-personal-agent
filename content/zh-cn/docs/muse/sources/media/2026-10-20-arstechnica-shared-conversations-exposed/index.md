@@ -8,6 +8,7 @@ author: "Dan Goodin"
 publisher: "Ars Technica"
 language: en
 fidelity: 全文翻译
+translation: 已翻译
 collectedAt: 2026-11-04
 dateNote: "页面时间为 2026-10-20 08:33（美国东部时间）"
 tags: [安全, 隐私]

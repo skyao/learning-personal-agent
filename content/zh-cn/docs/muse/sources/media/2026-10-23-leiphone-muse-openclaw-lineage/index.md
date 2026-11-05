@@ -7,6 +7,7 @@ author: "Rhea（编辑：李娜、岑峰）"
 publisher: "雷峰网（网易号）"
 language: zh
 fidelity: 原文
+translation: 不需要
 collectedAt: 2026-11-04
 dateNote: "网易号页面显示 2026-10-23 12:45:54，来源雷峰网"
 tags: [运行环境, 记忆与上下文, 商业与规模]

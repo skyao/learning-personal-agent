@@ -7,6 +7,7 @@ sourceUrl: "https://gadgets.muse.ai/"
 publisher: "Meta（Muse Gadgets）"
 language: en
 fidelity: 全文翻译
+translation: 已翻译
 collectedAt: 2026-11-04
 dateNote: "站点不标日期，页面中也没有结构化日期；按规则取收集日期。配套代码仓库创建于 2026-10-02"
 tags: [设备]

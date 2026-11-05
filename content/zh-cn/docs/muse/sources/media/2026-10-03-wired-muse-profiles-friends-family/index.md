@@ -8,6 +8,7 @@ author: "Lily Hay Newman, Matt Burgess"
 publisher: "WIRED（Kernel Panic 通讯）"
 language: en
 fidelity: 全文翻译
+translation: 已翻译
 collectedAt: 2026-11-04
 dateNote: "页面显示 Oct 3, 2026 8:00 AM（美国东部时间）"
 tags: [记忆与上下文, 隐私]

@@ -8,6 +8,7 @@ altUrls: ["https://www.meta.com/help/artificial-intelligence/1126304576638594/"]
 publisher: "Meta 帮助中心"
 language: en
 fidelity: 全文翻译
+translation: 已翻译
 collectedAt: 2026-11-04
 dateNote: "帮助文档不标发布日期；日期取页面结构化数据中的最后修改时间，页面创建时间为 2026-09-21，2026-11-04 查看时页面显示 Updated: 3 weeks ago。superintelligence 路径下的页面抓取时只返回标题，正文依据 artificial-intelligence 路径下的同编号页面"
 tags: [设备, 安全]

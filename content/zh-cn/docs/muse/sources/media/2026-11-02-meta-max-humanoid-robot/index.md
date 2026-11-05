@@ -8,6 +8,7 @@ author: "未署名"
 publisher: "NDTV"
 language: en
 fidelity: 全文翻译
+translation: 已翻译
 collectedAt: 2026-11-04
 dateNote: "页面元数据为 2026-11-02T11:21:45+05:30"
 basedOn: "The Information，2026-10-31（一手报道在付费墙后，未直接读取）"

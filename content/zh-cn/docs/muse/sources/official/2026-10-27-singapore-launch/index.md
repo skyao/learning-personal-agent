@@ -7,6 +7,7 @@ sourceUrl: "https://about.fb.com/news/2026/10/muse-is-now-available-in-singapore
 publisher: "Meta"
 language: en
 fidelity: 全文翻译
+translation: 已翻译
 collectedAt: 2026-11-04
 dateNote: "取页面显示日期 October 27, 2026；页面元数据为 2026-10-28T00:00:03+00:00（UTC）"
 tags: [发布, 连接器]

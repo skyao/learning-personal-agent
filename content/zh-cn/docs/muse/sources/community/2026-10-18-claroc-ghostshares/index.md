@@ -8,6 +8,7 @@ author: "Claroc Research Team"
 publisher: "Claroc（安全公司博客）"
 language: en
 fidelity: 全文翻译
+translation: 已翻译
 collectedAt: 2026-11-04
 updatedAt: 2026-10-20
 tags: [安全, 隐私]

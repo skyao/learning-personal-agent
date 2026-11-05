@@ -7,6 +7,7 @@ sourceUrl: "https://www.meta.com/help/subscriptions/1625680452306909/"
 publisher: "Meta 帮助中心"
 language: en
 fidelity: 全文翻译
+translation: 已翻译
 collectedAt: 2026-11-04
 dateNote: "帮助文档不标发布日期；日期取页面结构化数据中的最后修改时间，页面创建时间为 2026-09-08；页面未显示 Updated 字样"
 tags: [开放与价格]

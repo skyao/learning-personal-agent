@@ -8,6 +8,7 @@ author: "dry_towelette99"
 publisher: "Reddit r/OpenAI"
 language: en
 fidelity: 全文翻译
+translation: 已翻译
 collectedAt: 2026-11-05
 dateNote: "发帖日期与作者由用户在页面上查看后提供（2026-11-05）"
 tags: [实测评测, 运行环境, 持续执行]

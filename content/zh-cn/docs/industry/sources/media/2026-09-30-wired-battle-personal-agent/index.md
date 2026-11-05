@@ -8,6 +8,7 @@ author: "Reece Rogers"
 publisher: "WIRED"
 language: en
 fidelity: 仅链接
+translation: 待翻译
 collectedAt: 2026-11-04
 dateNote: "页面元数据发布时间 2026-09-30T19:30:00Z"
 tags: [实测评测, 开放与价格]

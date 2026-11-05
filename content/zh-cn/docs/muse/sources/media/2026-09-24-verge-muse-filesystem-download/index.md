@@ -8,6 +8,7 @@ author: "Terrence O'Brien"
 publisher: "The Verge"
 language: en
 fidelity: 全文翻译
+translation: 已翻译
 collectedAt: 2026-11-04
 dateNote: "页面显示 Sep 24, 2026, 5:14 PM UTC；文末注明当天补充了 Nat Friedman 与 David Singleton 的表态"
 tags: [运行环境, 记忆与上下文, 安全]

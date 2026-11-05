@@ -8,6 +8,7 @@ reprintUrl: "https://web.archive.org/web/20261103175827/https://help.openai.com/
 publisher: "OpenAI 帮助中心"
 language: en
 fidelity: 节选
+translation: 已翻译
 collectedAt: 2026-11-05
 dateNote: "help.openai.com 对自动访问返回 403，依据 Internet Archive 2026-11-03 17:58:27（UTC）的快照；条目位于发布说明「September 29, 2026」日期之下"
 tags: [发布, 开放与价格]

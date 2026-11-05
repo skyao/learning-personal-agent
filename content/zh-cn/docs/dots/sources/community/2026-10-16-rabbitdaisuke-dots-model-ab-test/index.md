@@ -8,6 +8,7 @@ author: "rabbitdaisuke"
 publisher: "OpenAI 开发者社区（community.openai.com）"
 language: en
 fidelity: 全文翻译
+translation: 已翻译
 collectedAt: 2026-11-04
 dateNote: "帖子发布于 2026-10-16T01:34:41Z"
 tags: [模型, 实测评测]

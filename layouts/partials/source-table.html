@@ -9,7 +9,7 @@
       <td class="text-nowrap">{{ .Date.Format "2006-01-02" }}</td>
       <td><a href="{{ .RelPermalink }}">{{ .Title }}</a></td>
       <td>{{ .Params.publisher }}</td>
-      <td class="text-nowrap">{{ .Params.fidelity }}</td>
+      <td class="text-nowrap">{{ .Params.fidelity }}{{ if eq .Params.translation "待翻译" }}，待翻译{{ end }}</td>
       <td>{{ delimit (.Params.tags | default slice) "、" }}</td>
     </tr>
   {{- end }}

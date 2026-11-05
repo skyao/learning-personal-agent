@@ -7,6 +7,7 @@ author: "Patrick Wardle"
 publisher: "Objective by the Sea"
 language: en
 fidelity: 仅链接
+translation: 待翻译
 collectedAt: 2026-11-05
 dateNote: "会议于 2026 年 11 月举行，具体日期、演讲标题和材料地址待补；按规则日期暂取当月 01 日。Ars Technica 2026-09-21 报道 Wardle 计划在该会议上详谈 Muse 漏洞及其他 AI 助手威胁"
 tags: [安全, 设备]

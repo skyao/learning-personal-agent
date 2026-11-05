@@ -9,6 +9,7 @@ author: "OpenAI"
 publisher: "OpenAI 部署安全中心"
 language: en
 fidelity: 节选
+translation: 已翻译
 collectedAt: 2026-11-05
 dateNote: "系统卡本身发布于 2026-09-03；据其变更记录，2026-09-29 新增「附录：dots」，date 取附录加入日期"
 tags: [安全, 模型, 持续执行]

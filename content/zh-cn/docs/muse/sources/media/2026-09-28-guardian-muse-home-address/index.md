@@ -8,6 +8,7 @@ author: "Johana Bhuiyan"
 publisher: "The Guardian"
 language: en
 fidelity: 全文翻译
+translation: 已翻译
 collectedAt: 2026-11-04
 updatedAt: 2026-09-29
 dateNote: "页面显示首次发布于 Mon 28 Sep 2026 19.31 EDT，更新于 Tue 29 Sep 2026 09.58 EDT。同一事件 Business Insider 同日发布报道（付费内容，未读取）"

@@ -8,6 +8,7 @@ author: "Dan Goodin"
 publisher: "Ars Technica"
 language: en
 fidelity: 全文翻译
+translation: 已翻译
 collectedAt: 2026-11-04
 dateNote: "页面显示 Sep 21, 2026 6:24 pm（美国东部时间）；文末注明后来补充了 Meta 的回应"
 tags: [安全, 设备]

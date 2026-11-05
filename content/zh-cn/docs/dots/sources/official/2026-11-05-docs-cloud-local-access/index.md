@@ -8,6 +8,7 @@ altUrls: ["https://learn.chatgpt.com/codex/enterprise/cloud-local-access"]
 publisher: "OpenAI（ChatGPT Learn）"
 language: en
 fidelity: 全文翻译
+translation: 已翻译
 collectedAt: 2026-11-05
 dateNote: "文档不标日期；按规则取收集日期"
 tags: [运行环境, 安全, 隐私]

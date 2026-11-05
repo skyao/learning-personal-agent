@@ -8,6 +8,7 @@ author: "池中悟"
 publisher: "池中悟（微信公众号），经 53AI 转载"
 language: zh
 fidelity: 节选
+translation: 不需要
 collectedAt: 2026-11-04
 dateNote: "日期取 53AI 转载页显示的发布日期 2026-10-04 07:07:21；微信原文无法直接读取，原文链接待补"
 tags: [开放与价格, 实测评测]

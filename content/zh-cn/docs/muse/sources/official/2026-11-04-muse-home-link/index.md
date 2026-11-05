@@ -7,6 +7,7 @@ sourceUrl: "https://gadgets.muse.ai/home-link"
 publisher: "Meta（Muse Gadgets）"
 language: en
 fidelity: 全文翻译
+translation: 已翻译
 collectedAt: 2026-11-04
 dateNote: "产品页不标日期，页面中也没有结构化日期；按规则取收集日期。页面写明「10 月发货」"
 tags: [设备]

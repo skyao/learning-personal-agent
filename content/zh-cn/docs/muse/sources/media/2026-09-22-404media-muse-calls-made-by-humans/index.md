@@ -8,6 +8,7 @@ author: "Jason Koebler"
 publisher: "404 Media"
 language: en
 fidelity: 全文翻译
+translation: 已翻译
 collectedAt: 2026-11-04
 tags: [功能更新, 隐私]
 products: [muse]

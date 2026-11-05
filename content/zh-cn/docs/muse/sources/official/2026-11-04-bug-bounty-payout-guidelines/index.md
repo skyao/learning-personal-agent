@@ -7,6 +7,7 @@ sourceUrl: "https://bugbounty.meta.com/payout-guidelines/muse/"
 publisher: "Meta Bug Bounty"
 language: en
 fidelity: 全文翻译
+translation: 已翻译
 collectedAt: 2026-11-04
 dateNote: "页面不标日期，也没有结构化日期；按规则取收集日期"
 tags: [安全]

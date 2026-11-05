@@ -7,6 +7,7 @@ sourceUrl: "https://about.fb.com/news/2026/09/the-biggest-news-from-connect-2026
 publisher: "Meta"
 language: en
 fidelity: 全文翻译
+translation: 已翻译
 collectedAt: 2026-11-04
 tags: [设备, 连接器, 功能更新]
 products: [muse]

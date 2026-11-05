@@ -8,6 +8,7 @@ author: "David Singleton"
 publisher: "Meta（Muse 博客）"
 language: en
 fidelity: 全文翻译
+translation: 已翻译
 collectedAt: 2026-11-04
 tags: [安全]
 products: [muse]

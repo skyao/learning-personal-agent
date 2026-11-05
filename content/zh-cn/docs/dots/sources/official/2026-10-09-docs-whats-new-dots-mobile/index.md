@@ -8,6 +8,7 @@ altUrls: ["https://learn.chatgpt.com/codex/whats-new/dots-october-9-2026"]
 publisher: "OpenAI（ChatGPT Learn）"
 language: en
 fidelity: 全文翻译
+translation: 已翻译
 collectedAt: 2026-11-04
 dateNote: "页面只标「October 5–9, 2026」这一周；slug 中的日期为 10 月 9 日，date 取该日"
 tags: [功能更新, 设备]

@@ -8,6 +8,7 @@ author: "Reece Rogers"
 publisher: "WIRED"
 language: en
 fidelity: 全文翻译
+translation: 已翻译
 collectedAt: 2026-11-04
 dateNote: "页面显示 Sep 20, 2026 6:30 AM（美国东部时间）"
 tags: [实测评测, 隐私, 记忆与上下文]

@@ -7,6 +7,7 @@ sourceUrl: "https://www.axios.com/2026/10/20/battle-of-bots-openai-meta-ai-agent
 publisher: "Axios"
 language: en
 fidelity: 仅链接
+translation: 待翻译
 collectedAt: 2026-11-04
 dateNote: "原文页面被反爬拦截，标题依据网址整理，作者待补"
 tags: [实测评测]

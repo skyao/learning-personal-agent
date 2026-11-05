@@ -8,6 +8,7 @@ author: "Claire Vo"
 publisher: "Lenny's Newsletter"
 language: en
 fidelity: 仅链接
+translation: 待翻译
 collectedAt: 2026-11-04
 tags: [实测评测]
 products: [grok-bot, dots, muse, claude-duet]

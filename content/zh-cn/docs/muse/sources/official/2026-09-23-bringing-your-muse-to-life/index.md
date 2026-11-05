@@ -7,6 +7,7 @@ sourceUrl: "https://research.meta.ai/blog/bringing-your-muse-to-life"
 publisher: "Meta（研究博客）"
 language: en
 fidelity: 全文翻译
+translation: 已翻译
 collectedAt: 2026-11-04
 tags: [功能更新, 模型]
 products: [muse]

@@ -8,6 +8,7 @@ author: "Jean Wang, Michelle Cera, Blake Spendley（编辑：Jim Impoco、Vikas 
 publisher: "Hunterbrook Media"
 language: en
 fidelity: 全文翻译
+translation: 已翻译
 collectedAt: 2026-11-04
 tags: [安全, 隐私]
 products: [muse]

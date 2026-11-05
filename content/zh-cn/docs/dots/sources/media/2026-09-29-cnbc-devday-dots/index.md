@@ -8,6 +8,7 @@ author: "Ashley Capoot"
 publisher: "CNBC"
 language: en
 fidelity: 节选
+translation: 已翻译
 collectedAt: 2026-11-04
 dateNote: "直播稿，页面元数据发布时间 2026-09-29T12:00:02Z，最后修改 2026-09-30T13:03:24Z；所收两条的时间戳分别为美东时间 13:10 与 14:57"
 tags: [发布, 商业与规模]

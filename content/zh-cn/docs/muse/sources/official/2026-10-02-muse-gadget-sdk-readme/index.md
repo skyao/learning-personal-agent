@@ -7,6 +7,7 @@ sourceUrl: "https://github.com/facebookincubator/muse-gadget-sdk"
 publisher: "Meta（facebookincubator）"
 language: en
 fidelity: 全文翻译
+translation: 已翻译
 collectedAt: 2026-11-04
 updatedAt: 2026-11-02
 dateNote: "日期取仓库创建时间（GitHub API created_at）；updatedAt 为 README.md 最近一次提交的日期"

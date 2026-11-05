@@ -7,6 +7,7 @@ sourceUrl: "https://www.meta.com/blog/muse-personal-agent-ai-glasses/"
 publisher: "Meta"
 language: en
 fidelity: 全文翻译
+translation: 已翻译
 collectedAt: 2026-11-04
 dateNote: "取页面显示日期 Sep 23, 2026；页面元数据修改时间为 2026-09-24T00:05:31+00:00（UTC）"
 tags: [设备]

@@ -7,6 +7,7 @@ sourceUrl: "https://www.meta.com/blog/meta-connect-2026-everything-we-announced/
 publisher: "Meta"
 language: en
 fidelity: 全文翻译
+translation: 已翻译
 collectedAt: 2026-11-04
 dateNote: "取页面显示日期 Sep 23, 2026"
 tags: [设备, 功能更新, 连接器]

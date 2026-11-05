@@ -8,6 +8,7 @@ altUrls: ["https://learn.chatgpt.com/codex/enterprise/dots-security"]
 publisher: "OpenAI（ChatGPT Learn）"
 language: en
 fidelity: 全文翻译
+translation: 已翻译
 collectedAt: 2026-11-05
 dateNote: "文档不标日期；按规则取收集日期。文中评估数据引自 2026-10-26 的 GPT-6.1 Terra 系统卡附录"
 tags: [安全, 隐私, 运行环境, 模型]

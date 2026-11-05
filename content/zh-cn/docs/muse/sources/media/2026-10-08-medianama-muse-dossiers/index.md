@@ -8,6 +8,7 @@ author: "Prabhanu Kumar Das"
 publisher: "Medianama"
 language: en
 fidelity: 全文翻译
+translation: 已翻译
 collectedAt: 2026-11-04
 updatedAt: 2026-10-09
 basedOn: "TIME，2026-10-06"

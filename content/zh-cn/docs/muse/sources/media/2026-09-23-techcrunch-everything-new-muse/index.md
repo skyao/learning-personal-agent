@@ -8,6 +8,7 @@ author: "Kirsten Korosec, Lucas Ropek"
 publisher: "TechCrunch"
 language: en
 fidelity: 全文翻译
+translation: 已翻译
 collectedAt: 2026-11-04
 dateNote: "页面时间为 2026-09-23T18:13:32-07:00（太平洋时间）"
 tags: [功能更新, 商业与规模, 设备]

@@ -8,6 +8,7 @@ author: "Mark Nguyen"
 publisher: "SLIDEFACTORY（波特兰的互动代理公司博客）"
 language: en
 fidelity: 全文翻译
+translation: 已翻译
 collectedAt: 2026-11-04
 dateNote: "页面元数据发布时间 2026-10-03T00:41:21Z，修改时间 2026-10-03T01:14:45Z"
 tags: [实测评测, 运行环境, 连接器, 持续执行]

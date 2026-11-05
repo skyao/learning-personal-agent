@@ -8,6 +8,7 @@ author: "Jay Peters"
 publisher: "The Verge"
 language: en
 fidelity: 全文翻译
+translation: 已翻译
 collectedAt: 2026-11-04
 dateNote: "页面显示 Oct 22, 2026, 8:24 PM UTC"
 tags: [安全, 隐私]

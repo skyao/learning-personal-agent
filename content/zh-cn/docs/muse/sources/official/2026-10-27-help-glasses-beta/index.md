@@ -7,6 +7,7 @@ sourceUrl: "https://www.meta.com/help/ai-glasses/1391796469223757/"
 publisher: "Meta 帮助中心"
 language: en
 fidelity: 全文翻译
+translation: 已翻译
 collectedAt: 2026-11-04
 dateNote: "帮助文档不标发布日期；日期取页面结构化数据中的创建与最后修改时间（同为 2026-10-27），2026-11-04 查看时页面显示 Updated: a week ago"
 tags: [设备, 开放与价格, 隐私]

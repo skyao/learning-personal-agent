@@ -7,6 +7,7 @@ author: "skyao"
 publisher: "本人实测"
 language: zh
 fidelity: 实测记录
+translation: 不需要
 collectedAt: 2026-11-05
 dateNote: "迁移自旧笔记 learning-ai-agent 的 agents/personal/muse/practice/analysis/，正文原样保留；date 沿用旧笔记的整理日期。sourceUrl 为旧笔记地址"
 tags: [运行环境, 记忆与上下文, 持续执行, 连接器]

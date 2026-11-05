@@ -7,6 +7,7 @@ sourceUrl: "https://about.fb.com/news/2026/09/introducing-muse-personal-ai-agent
 publisher: "Meta"
 language: en
 fidelity: 全文翻译
+translation: 已翻译
 collectedAt: 2026-11-04
 updatedAt: 2026-09-30
 tags: [发布, 运行环境, 安全, 开放与价格]

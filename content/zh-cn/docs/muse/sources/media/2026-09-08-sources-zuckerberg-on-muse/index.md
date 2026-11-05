@@ -8,6 +8,7 @@ author: "Alex Heath"
 publisher: "Sources（Alex Heath 的通讯与播客）"
 language: en
 fidelity: 全文翻译
+translation: 已翻译
 collectedAt: 2026-11-04
 dateNote: "本页为播客节目页的文字部分（导语与节目要点），不含完整访谈文字稿；访谈音频见原文页面"
 tags: [商业与规模, 安全, 发布]

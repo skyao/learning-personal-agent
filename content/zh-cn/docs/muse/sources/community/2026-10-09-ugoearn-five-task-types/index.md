@@ -7,6 +7,7 @@ author: "优哥"
 publisher: "优哥跨境（个人博客）"
 language: zh
 fidelity: 原文
+translation: 不需要
 collectedAt: 2026-11-04
 dateNote: "作者注明本文依据同名视频（YouTube）口播改写"
 tags: [实测评测, 持续执行]
