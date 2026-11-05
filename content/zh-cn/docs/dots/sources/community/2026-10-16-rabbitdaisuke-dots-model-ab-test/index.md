@@ -17,7 +17,7 @@ products: [dots]
 
 {{< source-info >}}
 
-（收集说明：论坛帖子，作者是普通用户。帖子没有 OpenAI 人员回复，24 小时后由系统自动关闭。标题中的 A/B 测试与「100 美元用户」是作者的说法。）
+**收录说明**：论坛帖子，作者是普通用户。帖子没有 OpenAI 人员回复，24 小时后由系统自动关闭。标题中的 A/B 测试与「100 美元用户」是作者的说法。
 
 过去几天里，我通过 Chrome DevTools 中的内部 WebSocket 响应发现，分配给我的模型是 GPT-6.1 Sol Low，而且 Work 并没有在后台运行。这导致了一次退化。
 
@@ -36,4 +36,4 @@ GPT-6.1 Sol Low 表现出以下行为：
 
 ![DevTools 中的响应字段截图](images/devtools-model.png)
 
-（收集说明：截图内容照录如下，部分字段在原图中被裁切或遮挡：`model: "gpt-6.1-sol"`、`modelProvider: "local"`、`name:`（值被遮挡）、`originator: "codex_cloud"`、`parentThreadId: null`、`path: null`、`preview: ""`、`projectId: null`、`reasoningEffort: "low"`。）
+（收录说明：截图内容照录如下，部分字段在原图中被裁切或遮挡：`model: "gpt-6.1-sol"`、`modelProvider: "local"`、`name:`（值被遮挡）、`originator: "codex_cloud"`、`parentThreadId: null`、`path: null`、`preview: ""`、`projectId: null`、`reasoningEffort: "low"`。）

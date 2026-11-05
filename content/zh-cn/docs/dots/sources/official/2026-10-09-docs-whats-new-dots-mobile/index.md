@@ -17,7 +17,7 @@ products: [dots]
 
 {{< source-info >}}
 
-（收集说明：这是 ChatGPT Learn「What's new」栏目中的 dots 专稿。页首的「返回 What's new」链接和页尾的「开始与你的 dot 一起工作」推荐卡片未收入。原文两段演示视频以封面图加视频链接保留。）
+**收录说明**：这是 ChatGPT Learn「What's new」栏目中的 dots 专稿。页首的「返回 What's new」链接和页尾的「开始与你的 dot 一起工作」推荐卡片未收入。原文两段演示视频以封面图加视频链接保留。
 
 2026 年 10 月 5 日至 9 日
 

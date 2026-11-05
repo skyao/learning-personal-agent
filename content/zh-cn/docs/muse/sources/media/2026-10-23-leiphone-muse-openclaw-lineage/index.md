@@ -16,7 +16,7 @@ products: [muse]
 
 {{< source-info >}}
 
-（收集说明：原页面文末「点击关键词查看对应实测内容」的站内导航未收入。）
+**收录说明**：原页面文末「点击关键词查看对应实测内容」的站内导航未收入。
 
 ![](images/img-01-f50bc6.jpg)
 
@@ -182,7 +182,7 @@ Muse 让用户给 agent 起名、换装
 
 刚开始用 Muse 的时候，我被它引导着设置头像。它不仅做好了几个可以选择的风格，而且会默默在后台帮你把头像做成一个会动的动漫卡通形象，这个体验非常超预期。一次直出的效果已经非常非常惊艳了。
 
-[动图：录屏](https://nimg.ws.126.net/?url=http%3A%2F%2Fdingyue.ws.126.net%2F2026%2F1023%2F15d14cd9g00tncfw30750d200go0108g00go0108.gif&thumbnail=660x2147483647&quality=80&type=gif)（收集说明：原图为约 9 MB 的动图，未下载，链接指向原图。）
+[动图：录屏](https://nimg.ws.126.net/?url=http%3A%2F%2Fdingyue.ws.126.net%2F2026%2F1023%2F15d14cd9g00tncfw30750d200go0108g00go0108.gif&thumbnail=660x2147483647&quality=80&type=gif)（收录说明：原图为约 9 MB 的动图，未下载，链接指向原图。）
 
 **监看成本：抱着笔记本的 Jolly**
 

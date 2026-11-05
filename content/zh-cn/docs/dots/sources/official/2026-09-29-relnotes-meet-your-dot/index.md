@@ -17,7 +17,7 @@ products: [dots]
 
 {{< source-info >}}
 
-（收集说明：ChatGPT 发布说明是一个持续更新的长页面，这里只收 2026-09-29 日期下的「Meet your dot」一条。）
+**收录说明**：ChatGPT 发布说明是一个持续更新的长页面，这里只收 2026-09-29 日期下的「Meet your dot」一条。
 
 ## 认识你的 dot
 

@@ -17,7 +17,7 @@ products: [muse]
 
 {{< source-info >}}
 
-（收集说明：原页面的赞助商广告、订阅提示、往期节目列表和评论区未收入。）
+**收录说明**：原页面的赞助商广告、订阅提示、往期节目列表和评论区未收入。
 
 [音频：Sources 播客第二期，Mark Zuckerberg 访谈](https://sources.news/p/mark-zuckerberg-meta-muse-ai-podcast-interview)
 

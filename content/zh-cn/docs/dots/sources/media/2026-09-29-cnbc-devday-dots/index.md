@@ -17,7 +17,7 @@ products: [dots]
 
 {{< source-info >}}
 
-（收集说明：原文是 DevDay 当天的滚动直播稿，涉及 IPO、融资、GPT-6.1 Sol、Ultrafast、新 Pro 档位、GPT-6.1 Astra 不发布等二十多条。这里只收两条直接关于 dots 的条目，按原文从早到晚排列。两条均署名 Ashley Capoot。视频与图片未收入。）
+**收录说明**：原文是 DevDay 当天的滚动直播稿，涉及 IPO、融资、GPT-6.1 Sol、Ultrafast、新 Pro 档位、GPT-6.1 Astra 不发布等二十多条。这里只收两条直接关于 dots 的条目，按原文从早到晚排列。两条均署名 Ashley Capoot。视频与图片未收入。
 
 ## OpenAI 推出 dots，全新的「始终在线」AI 智能体
 
