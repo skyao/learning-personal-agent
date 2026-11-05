@@ -41,6 +41,25 @@ description: 收集 OpenAI dots（ChatGPT 中始终在线的个人智能体）�
 | 部署安全中心 | `deploymentsafety.openai.com` | 模型系统卡 | 直接下载 |
 | 开发者社区 | `community.openai.com`，有「Dots」分类；搜索接口 `/search.json?q=...`，帖子 `/t/<id>.json` | 用户的 bug 报告、功能请求；OpenAI_Support 的回复；版主 VeitB（Leader，非员工）转帖官方更新 | 直接下载；用户主页 `/u/<name>.json` 的 `title` 可区分「OpenAI Staff」与社区版主 |
 
+## 社区论坛的收录规则
+
+community.openai.com 的 Dots 分类帖子量大，以 bug 报告和功能请求为主。用户 2026-11-04 决定：
+
+- 只收与模型原则直接相关的帖子，即用户实测观察到 dots 运行时使用了哪个模型、模型如何切换的帖子。归 `community/`，全文翻译，收集说明写明作者身份、有无官方回复。
+- 其余 bug 报告、功能请求一律不收，即使其中透露了实现机制（工具名、授权规则、子智能体上限等）。这类机制等媒体或研究者写成文章后再收。
+- 版主或员工转帖的官方更新不收，改收原始出处。
+
+已判断的帖子：
+
+| 帖子 | 判断 |
+| --- | --- |
+| rabbitdaisuke「OpenAI is A/B testing a downgrade of dots to GPT-6.1 Sol Low」（10-16，1406784） | 收 |
+| cryptocean「Written dot-to-Work instructions blocked as untrusted delegated authorization」（10-19，1407667） | 不收：机制类 bug 报告 |
+| SylvesterX「Subagent Limits, Task Cleanup, and Permission Recovery Issues」（10-01，1402568） | 不收：机制类 bug 报告 |
+| 2018wzh「Dot cannot resume after safety pause: HTTP 409」（10-02，1402937） | 不收：bug 报告 |
+| speedbot「Verifying ChatGPT Dot provenance in MCP requests」（10-02） | 不收：提问，无回复 |
+| theweathersobreezy「Scaling Dots to 1B users & some tips」（10-27） | 不收：功能建议 |
+
 ## 媒体与社区检索
 
 - 英文检索词：`OpenAI dots agent`、`ChatGPT dots always-on agent`、`"your dot" ChatGPT`
