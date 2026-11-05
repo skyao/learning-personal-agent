@@ -13,7 +13,7 @@ description: 收集 Meta Muse（Meta 的个人 AI 智能体）的资料时使用
 | --- | --- |
 | 产品目录 | `content/zh-cn/docs/muse/` |
 | 发布日期 | 2026-09-08（美国） |
-| 最后收集日期 | 2026-11-05（第一阶段完成：官方、媒体、社区、实测；行业综合横评为「仅链接」占位） |
+| 最后收集日期 | 2026-11-05（第一阶段完成：官方、媒体、社区、实测；行业综合横评为「仅链接」占位）。下一轮起按新流程：原文存 `original.md`，资料页只写摘要与保留理由，不翻译 |
 
 ## 收录范围
 
@@ -48,7 +48,7 @@ description: 收集 Meta Muse（Meta 的个人 AI 智能体）的资料时使用
 | --- | --- | --- | --- |
 | Meta Newsroom | `about.fb.com/news/`（AI 标签：`about.fb.com/news/tag/ai/`） | 发布、地区上线、Connect、小企业 | 直接下载 |
 | Meta 消费者博客 | `www.meta.com/blog/` | 眼镜端、Connect 汇总等面向消费者的公告 | 直接下载；日期取页面显示日期 |
-| Meta Newsroom 日文版 | `about.fb.com/ja/news/` | 日本上线等日本专属公告 | 直接下载；日文资料同样全文翻译 |
+| Meta Newsroom 日文版 | `about.fb.com/ja/news/` | 日本上线等日本专属公告 | 直接下载；日文资料与英文一样按外文资料处理 |
 | Muse 博客 | `muse.ai/blog` | 设计、安全、赏金回顾 | 直接下载；列表页可取全部文章链接 |
 | 设计文章 | `introducing.muse.ai` | 我们如何设计 Muse | 直接下载 |
 | 安全文章 | `security.muse.ai` | 我们如何将安全构建进 Muse | 直接下载 |
@@ -118,7 +118,7 @@ description: 收集 Meta Muse（Meta 的个人 AI 智能体）的资料时使用
 - 页首的「要点」（Takeaways）框不在 `<article>` 容器内，只抽 `<article>` 会漏掉；要单独抽取，放在正文之前。
 - 页面顺序为：标题、头部视频、要点框、正文。视频是 `<video>` 标签，`<source>` 中有 mp4 地址，按占位行保存。
 - `date` 取页面标题下显示的日期。`article:published_time` 是 UTC 时间，可能比显示日期晚一天（例如新加坡上线稿显示 October 27，元数据为 10-28T00:00 UTC），两者不一致时在 `dateNote` 记下元数据。`article:modified_time` 对应 `updatedAt`。
-- 正文中的幻灯片（`div.jetpack-slideshow`）把引语做成图片，文字在 `data-gallery` 属性的 JSON 里（每项的 `alt`）。逐张下载图片，引语按替代文本翻译成引用块；替代文本为空的，看图转录，并加译注说明。
+- 正文中的幻灯片（`div.jetpack-slideshow`）把引语做成图片，文字在 `data-gallery` 属性的 JSON 里（每项的 `alt`）。逐张下载图片，在 `original.md` 中按替代文本写成引用块；替代文本为空的，看图转录，并在收集说明中写明。
 - 图片下载时在地址后加 `?w=960` 取缩小版，原图通常每张数百 KB 到 1 MB。
 - 链接中的跟踪参数（如 `srsltid=`）去掉，其余照录。
 - 作者字段为站点编辑账号（如 heathera），不是署名作者，不填入 `author`。
