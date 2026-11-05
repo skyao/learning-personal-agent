@@ -49,6 +49,7 @@
 | 目录 | 产品 | 厂商 | 产品 skill |
 | --- | --- | --- | --- |
 | muse | Meta Muse | Meta | `skills/collect-muse/SKILL.md` |
+| dots | OpenAI dots | OpenAI | `skills/collect-dots/SKILL.md` |
 
 新增产品时：用户同意纳入后，按 [product-skill-template.md](product-skill-template.md) 新建 `skills/collect-<product>/SKILL.md`，在上表加一行，再按 section-templates.md 建目录。
 
