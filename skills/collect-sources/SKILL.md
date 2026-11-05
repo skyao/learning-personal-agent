@@ -22,7 +22,7 @@ content/zh-cn/docs/
       community/               社区
       exploration/             实测
         YYYY-MM-DD-<slug>/     一篇资料一个目录
-          index.md             资料页：来源信息、摘要、保留理由（翻译后加译文）
+          index.md             资料页：来源信息、摘要、保留理由（翻译后在分隔线下加译文）
           original.md          外文原文全文存档；不生成页面，网站上不可见
           images/
     analysis/                  资料分析和总结（本 skill 不写；以后按标签分目录）
