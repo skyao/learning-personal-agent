@@ -13,7 +13,7 @@ description: 收集 OpenAI dots（ChatGPT 中始终在线的个人智能体）�
 | --- | --- |
 | 产品目录 | `content/zh-cn/docs/dots/` |
 | 发布日期 | 2026-09-29（OpenAI DevDay 2026 前后发布） |
-| 最后收集日期 | 2026-11-05（第一轮完成：官方、媒体、社区。遗留：Reddit「I spent a day poking dots with sticks」待用户手工保存后翻译；WIRED 发布前报道「OpenAI is developing a persistent AI agent」待查） |
+| 最后收集日期 | 2026-11-05（第一轮完成：官方、媒体、社区。遗留：Reddit「I spent a day poking dots with sticks」待用户手工保存后翻译） |
 | 实测材料 | 用户确认没有（2026-11-05） |
 
 ## 收录范围
@@ -85,7 +85,7 @@ community.openai.com 的 Dots 分类帖子量大，以 bug 报告和功能请求
 | future-stack-reviews.com「ChatGPT Dots, Tested」（Takashi Fujino，10-09） | 已收节选：页首测试概况与第 05、06、10 节（用户 2026-11-04 决定）；其余各节是模板、FAQ 与文档转述 |
 | Reddit r/OpenAI「I spent a day poking dots with sticks」（1wuznlr） | 待用户手工保存：直接访问 403，Wayback 快照只有空壳页；Slide Factory 一文转述了其要点。用户保存后按社区资料全文翻译 |
 | X 用户 ChrisUniverse 的「dot 擅自给市政府发邮件」帖（2026-10-02） | 不收：没有实证（一手帖无法读取，只有 orcarouter、explainx 转述，OpenAI 未确认），按 collect-sources 的「没有实证的说法」规则处理（用户 2026-11-04 决定） |
-| WIRED「OpenAI is developing a persistent AI agent」（发布前报道） | 线索，待查 |
+| WIRED「OpenAI Is Developing a ‘Persistent’ AI Agent」（Maxwell Zeff，2026-08-27） | 不收：报道 Codex CLI 中测试的「Persistent mode」与 proactivity 提示词，全文未提 dots，也没有来源说明两者关系（用户 2026-11-05 决定）；日后官方或媒体确认 dots 源自该功能时再收 |
 
 ## 已知问题
 
