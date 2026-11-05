@@ -13,7 +13,7 @@ description: 收集 OpenAI dots（ChatGPT 中始终在线的个人智能体）�
 | --- | --- |
 | 产品目录 | `content/zh-cn/docs/dots/` |
 | 发布日期 | 2026-09-29（OpenAI DevDay 2026 前后发布） |
-| 最后收集日期 | —（首轮收集进行中） |
+| 最后收集日期 | 2026-11-05（第一轮完成：官方、媒体、社区。遗留：Reddit「I spent a day poking dots with sticks」待用户手工保存后翻译；WIRED 发布前报道「OpenAI is developing a persistent AI agent」待查） |
 | 实测材料 | 用户确认没有（2026-11-05） |
 
 ## 收录范围
