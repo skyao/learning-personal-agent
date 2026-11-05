@@ -87,12 +87,15 @@ description: 收集 Meta Muse（Meta 的个人 AI 智能体）的资料时使用
 | Q3 2026 财报电话会 | 不收（用户 2026-11-04 决定） |
 | CNBC「Humans are still doing the work behind some AI agents」（2026-10-31） | 放入行业综合（仅链接）：主体是 Dazzle、Duckbill 等创业公司，Muse 只有一段 |
 | 多产品横评（WIRED、纽约时报、Axios、Claire Vo、Pat Simmons、AI Agents Library、CNBC 2026-09-30） | 已放入行业综合，暂为「仅链接」，待统一补全文 |
-| David Senra 播客对 Alexandr Wang 的访谈 | 待查：原始音频，需找文字稿 |
-| Zuckerberg 在 Sources 播客的访谈（sources.news） | 待查：谈到交易抽成的商业模式 |
-| 纽约时报 The Daily 播客「Call My A.I. Agent」（Eli Tan） | 待查：Muse 实测，需找文字稿 |
-| The Verge 关于 Muse 文件系统与夜间回顾的报道（theverge.com/ai-artificial-intelligence/1000222/…） | 待查 |
-| Hunter Brook「Dox for me, O Muse」（newsletter.hntrbrk.com） | 待查：用 Muse 汇编弱势群体个人信息的测试 |
-| Malwarebytes 关于 Marketplace 买家被引到卖家家中的报道、EPIC 影子档案评论、Surfshark 数据收集分析 | 待查 |
+| David Senra 播客对 Alexandr Wang 的访谈 | 不收：无文字稿（音视频规则，用户 2026-11-05 决定） |
+| Zuckerberg 在 Sources 播客的访谈（sources.news） | 已收：按节目页文字收录，不含完整访谈 |
+| 纽约时报 The Daily 播客「Call My A.I. Agent」（Eli Tan） | 不收：无文字稿 |
+| The Verge 关于 Muse 文件系统与夜间回顾的报道 | 已收；同时收了一手来源 mouse.dev（Peter James）和后续「分享功能恢复」 |
+| Hunter Brook「Dox for me, O Muse」 | 已收 |
+| Marketplace 住址事件 | 已收卫报报道（Business Insider 首发但有付费墙）；Malwarebytes 转述、EPIC 评论不收；Surfshark 数据收集分析页日期异常，不收 |
+| 人物档案事件 | WIRED 2026-10-03 原文已收；Medianama 二手报道保留（用户 2026-11-05 决定；其转述的是 TIME，内容不完全重合）；TIME 原文仍无法读取 |
+| Future Society「Muse, in its own files」（futuresociety.ch/muse-findings） | 已收：页面自标「由 AI 生成」，但每条发现附 VM 文件引文；发现列表取自 report_data.json |
+| Wardle 在 Objective by the Sea v9 的演讲 | 已建「仅链接」占位页，会后补全 |
 | Tom's Guide、Engadget、DataCamp 等 Muse 与 Dots 对比文 | 行业综合候选，待统一处理 |
 
 ## 已知问题
