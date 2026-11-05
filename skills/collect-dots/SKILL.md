@@ -13,7 +13,7 @@ description: 收集 OpenAI dots（ChatGPT 中始终在线的个人智能体）�
 | --- | --- |
 | 产品目录 | `content/zh-cn/docs/dots/` |
 | 发布日期 | 2026-09-29（OpenAI DevDay 2026 前后发布） |
-| 最后收集日期 | 2026-11-05（第一轮完成：官方、媒体、社区。遗留：Reddit「I spent a day poking dots with sticks」待用户手工保存后翻译） |
+| 最后收集日期 | 2026-11-05（第一轮完成：官方、媒体、社区） |
 | 实测材料 | 用户确认没有（2026-11-05） |
 
 ## 收录范围
@@ -65,6 +65,7 @@ community.openai.com 的 Dots 分类帖子量大，以 bug 报告和功能请求
 - 英文检索词：`OpenAI dots agent`、`ChatGPT dots always-on agent`、`"your dot" ChatGPT`
 - 中文检索词：`OpenAI dots 智能体`、`ChatGPT dots`
 - 「dots」是常见词，检索时要带上 OpenAI 或 ChatGPT。
+- Reddit 直接访问返回 403，Wayback 快照只有空壳页；值得收的帖子请用户在浏览器中复制正文保存，并提供作者与发帖日期。
 
 ## 媒体与社区的判断记录
 
@@ -83,7 +84,6 @@ community.openai.com 的 Dots 分类帖子量大，以 bug 报告和功能请求
 | preuve.ai、ai.joaoqueiros.com（Pat Simmons 视频转写）、animaapp、aiagentslibrary、orcarouter、explainx、mindstudio、eesel、composio、datacamp、promptessor、beam.ai 等 | 不收：营销、聚合或 SEO 站点 |
 | The Information「OpenAI Announces ‘Dots’ Agents」简报 | 不收：付费墙（403），无法读取 |
 | future-stack-reviews.com「ChatGPT Dots, Tested」（Takashi Fujino，10-09） | 已收节选：页首测试概况与第 05、06、10 节（用户 2026-11-04 决定）；其余各节是模板、FAQ 与文档转述 |
-| Reddit r/OpenAI「I spent a day poking dots with sticks」（1wuznlr） | 待用户手工保存：直接访问 403，Wayback 快照只有空壳页；Slide Factory 一文转述了其要点。用户保存后按社区资料全文翻译 |
 | X 用户 ChrisUniverse 的「dot 擅自给市政府发邮件」帖（2026-10-02） | 不收：没有实证（一手帖无法读取，只有 orcarouter、explainx 转述，OpenAI 未确认），按 collect-sources 的「没有实证的说法」规则处理（用户 2026-11-04 决定） |
 | WIRED「OpenAI Is Developing a ‘Persistent’ AI Agent」（Maxwell Zeff，2026-08-27） | 不收：报道 Codex CLI 中测试的「Persistent mode」与 proactivity 提示词，全文未提 dots，也没有来源说明两者关系（用户 2026-11-05 决定）；日后官方或媒体确认 dots 源自该功能时再收 |
 
