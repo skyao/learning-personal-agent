@@ -20,7 +20,7 @@ grep -rl "^translation: 待翻译" content/zh-cn/docs --include=index.md
 ## 步骤
 
 1. 读 `original.md`。开头两行是来源与取文信息，不翻译；空行之后是正文。
-2. 读 `index.md`，了解 frontmatter 与收集说明（其中可能写了原文的删节、结构还原等处理）。
+2. 读 `index.md`，了解 frontmatter 与收录说明（其中可能写了原文的删节、结构还原等处理）。
 3. 在 `index.md` 末尾（「保留理由」那一段之后）追加一条分隔线和译文：
    ```
 
@@ -30,7 +30,7 @@ grep -rl "^translation: 待翻译" content/zh-cn/docs --include=index.md
    ```
    分隔线前后各空一行。不加「译文」之类的标题；译文的标题层级与原文相同，原文的 `##` 在译文中仍是 `##`。
 4. 把 frontmatter 的 `translation: 待翻译` 改为 `translation: 已翻译`。
-5. 不改动 `index.md` 已有的其他内容（frontmatter 其他字段、收集说明、收集者摘要、保留理由），不改动 `original.md`。
+5. 不改动 `index.md` 已有的其他内容（frontmatter 其他字段、收录说明、内容摘要、保留理由），不改动 `original.md`。
 6. 在仓库根目录运行 `npm run build`，退出码必须为 0。
 
 ## 翻译规则

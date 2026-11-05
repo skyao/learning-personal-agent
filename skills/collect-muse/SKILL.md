@@ -120,7 +120,7 @@ description: 收集 Meta Muse（Meta 的个人 AI 智能体）的资料时使用
 - 页首的「要点」（Takeaways）框不在 `<article>` 容器内，只抽 `<article>` 会漏掉；要单独抽取，放在正文之前。
 - 页面顺序为：标题、头部视频、要点框、正文。视频是 `<video>` 标签，`<source>` 中有 mp4 地址，按占位行保存。
 - `date` 取页面标题下显示的日期。`article:published_time` 是 UTC 时间，可能比显示日期晚一天（例如新加坡上线稿显示 October 27，元数据为 10-28T00:00 UTC），两者不一致时在 `dateNote` 记下元数据。`article:modified_time` 对应 `updatedAt`。
-- 正文中的幻灯片（`div.jetpack-slideshow`）把引语做成图片，文字在 `data-gallery` 属性的 JSON 里（每项的 `alt`）。逐张下载图片，在 `original.md` 中按替代文本写成引用块；替代文本为空的，看图转录，并在收集说明中写明。
+- 正文中的幻灯片（`div.jetpack-slideshow`）把引语做成图片，文字在 `data-gallery` 属性的 JSON 里（每项的 `alt`）。逐张下载图片，在 `original.md` 中按替代文本写成引用块；替代文本为空的，看图转录，并在收录说明中写明。
 - 图片下载时在地址后加 `?w=960` 取缩小版，原图通常每张数百 KB 到 1 MB。
 - 链接中的跟踪参数（如 `srsltid=`）去掉，其余照录。
 - 作者字段为站点编辑账号（如 heathera），不是署名作者，不填入 `author`。
