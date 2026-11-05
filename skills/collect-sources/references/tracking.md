@@ -51,6 +51,7 @@
 | --- | --- | --- | --- |
 | muse | Meta Muse | Meta | `skills/collect-muse/SKILL.md` |
 | dots | OpenAI dots | OpenAI | `skills/collect-dots/SKILL.md` |
+| claude-duet | Claude Duet | Anthropic | `skills/collect-claude-duet/SKILL.md` |
 
 新增产品时：用户同意纳入后，按 [product-skill-template.md](product-skill-template.md) 新建 `skills/collect-<product>/SKILL.md`，在上表加一行，再按 section-templates.md 建目录。
 
@@ -58,4 +59,4 @@
 
 - 检索词：`personal AI agent comparison`、`AI agent tested`、`个人智能体 对比`、`个人智能体 评测`
 - 收录条件：比较或评测两个及以上跟踪产品，或讨论 Personal Agent 整体的形态、架构与安全。
-- 最后收集日期：2026-11-04（9 篇「仅链接」占位，全文待补）
+- 最后收集日期：2026-11-05（9 篇「仅链接」占位已补抓原文，CNBC 2026-10-31 仍取不到；新收 Tom's Guide、Engadget 对比文）
