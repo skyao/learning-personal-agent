@@ -16,6 +16,6 @@ products: [muse]
 
 {{< source-info >}}
 
-（收集说明：本页暂只记录原文链接与基本信息，尚未取得全文。之后统一收集行业综合资料时补全。）
+（收集说明：本页暂只记录原文链接与基本信息，尚未取得全文。2026-11-05 补抓未成功：原站拒绝自动访问，Internet Archive 没有快照，也没有找到完整转载。之后再试，或请用户在浏览器中复制正文。）
 
 [原文](https://www.cnbc.com/2026/10/31/ai-agents-humans-dazzle-duckbill-meta.html)
