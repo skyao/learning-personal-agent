@@ -97,6 +97,8 @@ description: 收集 Meta Muse（Meta 的个人 AI 智能体）的资料时使用
 | Future Society「Muse, in its own files」（futuresociety.ch/muse-findings） | 已收：页面自标「由 AI 生成」，但每条发现附 VM 文件引文；发现列表取自 report_data.json |
 | Wardle 在 Objective by the Sea v9 的演讲 | 已建「仅链接」占位页，会后补全 |
 | Tom's Guide、Engadget、DataCamp 等 Muse 与 Dots 对比文 | 行业综合候选，待统一处理 |
+| The Information 人形机器人 Max 报道（2026-10-31，付费墙）与 Engadget 转述（2026-11-01） | Engadget 版不收：抓取到的正文未提及 Muse；一手报道付费墙未读，改收下行 NDTV 版 |
+| NDTV「Zuckerberg Wants To Give AI A Body」（2026-11-02） | 收：媒体类，全文翻译，basedOn 填 The Information；Max 定位为 Muse 的潜在实体形态，Max 2 自 9 月开发中，Meta 称仅内部研究、无销售计划 |
 
 ## 已知问题
 
