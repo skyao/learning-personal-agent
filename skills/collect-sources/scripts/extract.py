@@ -22,6 +22,8 @@ if sel == "auto":
     node = max(cands, key=lambda n: len(n.get_text()))
 else:
     node = s.select_one(sel)
+# 折叠式 FAQ 的问题文字常放在标题里的 <button> 中（如 Radix accordion），先拆掉 button 外壳保留文字
+for b in node.select("h1 button,h2 button,h3 button,h4 button,h5 button,h6 button,summary button,[data-slot=accordion-trigger]"): b.unwrap()
 for t in node.select("script,style,noscript,nav,footer,form,button,svg"): t.decompose()
 out = md(str(node), heading_style="ATX", bullets="-")
 out = re.sub(r"\n{3,}", "\n\n", out)
