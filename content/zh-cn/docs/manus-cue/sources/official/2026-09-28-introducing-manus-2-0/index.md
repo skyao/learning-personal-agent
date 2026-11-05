@@ -4,6 +4,7 @@ linkTitle: "发布：Manus 2.0 与 Cue"
 date: 2026-09-28
 originalTitle: "Introducing Manus 2.0"
 sourceUrl: "https://manus.im/blog/introducing-manus-2-0"
+altUrls: ["https://www.manus.im/blog/introducing-manus-2-0", "https://manus.im/zh-cn/blog/introducing-manus-2-0"]
 author: "未署名"
 publisher: "Manus"
 language: en
