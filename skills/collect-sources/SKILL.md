@@ -37,6 +37,7 @@ content/zh-cn/docs/
 - 只涉及一个产品：放在 `<product>/sources/<类型>/`。
 - 比较或评测两个及以上产品，或讨论 Personal Agent 整体：放在 `industry/sources/<类型>/`，frontmatter 的 `products` 列出涉及的产品。只存这一份，不在各产品目录下复制。
 - 用户自己的上手实测：放在 `exploration/`。实测记录只能来自用户提供的原始记录或用户明确要求执行的操作，不得自行编写或补全观察结果。
+- 新建产品目录时，先问用户是否已有该产品的实测材料（包括旧笔记 learning-ai-agent 中的原创记录）需要迁入 `exploration/`；迁入时正文原样保留，图片和附件一并复制，`fidelity: 实测记录`，在 `dateNote` 写明迁移来源。
 - 不在跟踪清单中的产品：不建目录，写入本轮报告的「候选产品」，由用户决定是否纳入。
 
 ## 每轮收集的流程
