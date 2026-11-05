@@ -53,6 +53,7 @@
 | dots | OpenAI dots | OpenAI | `skills/collect-dots/SKILL.md` |
 | claude-duet | Claude Duet | Anthropic | `skills/collect-claude-duet/SKILL.md` |
 | grok-bot | Grok Bot | SpaceXAI（xAI），经 Cursor 交付 | `skills/collect-grok-bot/SKILL.md` |
+| manus-cue | Manus Cue | Manus（Butterfly Effect） | `skills/collect-manus-cue/SKILL.md` |
 
 新增产品时：用户同意纳入后，按 [product-skill-template.md](product-skill-template.md) 新建 `skills/collect-<product>/SKILL.md`，在上表加一行，再按 section-templates.md 建目录。
 
