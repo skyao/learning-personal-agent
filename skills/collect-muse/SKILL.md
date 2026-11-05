@@ -86,7 +86,7 @@ description: 收集 Meta Muse（Meta 的个人 AI 智能体）的资料时使用
 | Fox News 情感陪伴报道、Subscription Insider 订阅管理分析 | 不收（用户 2026-11-04 决定） |
 | Q3 2026 财报电话会 | 不收（用户 2026-11-04 决定） |
 | CNBC「Humans are still doing the work behind some AI agents」（2026-10-31） | 放入行业综合（仅链接）：主体是 Dazzle、Duckbill 等创业公司，Muse 只有一段 |
-| 多产品横评（WIRED、纽约时报、Axios、Claire Vo、Pat Simmons、AI Agents Library、CNBC 2026-09-30） | 已放入行业综合，暂为「仅链接」，待统一补全文 |
+| 多产品横评（WIRED、纽约时报、Axios、Claire Vo、Pat Simmons、AI Agents Library、CNBC 2026-09-30） | 已放入行业综合；2026-11-05 已补抓原文（original.md，待翻译），Claire Vo 只有节目页，缺访谈文字稿 |
 | David Senra 播客对 Alexandr Wang 的访谈 | 不收：无文字稿（音视频规则，用户 2026-11-05 决定） |
 | Zuckerberg 在 Sources 播客的访谈（sources.news） | 已收：按节目页文字收录，不含完整访谈 |
 | 纽约时报 The Daily 播客「Call My A.I. Agent」（Eli Tan） | 不收：无文字稿 |
