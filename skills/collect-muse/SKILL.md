@@ -96,7 +96,9 @@ description: 收集 Meta Muse（Meta 的个人 AI 智能体）的资料时使用
 | 人物档案事件 | WIRED 2026-10-03 原文已收；Medianama 二手报道保留（用户 2026-11-05 决定；其转述的是 TIME，内容不完全重合）；TIME 原文仍无法读取 |
 | Future Society「Muse, in its own files」（futuresociety.ch/muse-findings） | 已收：页面自标「由 AI 生成」，但每条发现附 VM 文件引文；发现列表取自 report_data.json |
 | Wardle 在 Objective by the Sea v9 的演讲 | 已建「仅链接」占位页，会后补全 |
-| Tom's Guide、Engadget、DataCamp 等 Muse 与 Dots 对比文 | 行业综合候选，待统一处理 |
+| Tom's Guide「Meta Muse vs ChatGPT Dots」（2026-09-30）、Engadget「OpenAI Dot vs. Meta Muse」（2026-10-11） | 已收入行业综合（2026-11-05） |
+| DataCamp「OpenAI Dots vs Meta Muse」（`datacamp.com/blog/openai-dots-vs-meta-muse`） | 暂不收：原站对自动访问返回 403，Wayback 没有快照；需要时请用户在浏览器中复制正文 |
+| Engadget 的 Muse 上手指南（`engadget.com/2256577/how-to-get-started-with-meta-s-new-ai-agent-muse/`）、Tom's Guide「I tested Meta Muse vs ChatGPT-6 with 5 prompts」 | 候选，未判断：对比文中提到，下一轮检查 |
 | The Information 人形机器人 Max 报道（2026-10-31，付费墙）与 Engadget 转述（2026-11-01） | Engadget 版不收：抓取到的正文未提及 Muse；一手报道付费墙未读，改收下行 NDTV 版 |
 | NDTV「Zuckerberg Wants To Give AI A Body」（2026-11-02） | 收：媒体类，全文翻译，basedOn 填 The Information；Max 定位为 Muse 的潜在实体形态，Max 2 自 9 月开发中，Meta 称仅内部研究、无销售计划 |
 
