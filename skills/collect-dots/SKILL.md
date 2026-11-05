@@ -25,7 +25,8 @@ description: 收集 OpenAI dots（ChatGPT 中始终在线的个人智能体）�
 | dots 的发布、帮助文档、learn.chatgpt.com 上的 dots 文档、安全设计 | 收录 |
 | 企业文档中专门针对 dots 的页面：dots-security、dots-admin-guide、cloud-local-access（标题含 dots） | 收录 |
 | ChatGPT Work 的通用企业文档（agent-security、chatgpt-work-cloud-security、chatgpt-work-local-security、usage-and-cost 等） | 不收：几乎不涉及 dots |
-| 模型资料（GPT-6 Astra、GPT-6.1 Terra 的发布文与系统卡） | 按 collect-sources 的「模型资料的收录原则」逐篇判断；dots 文档写明 dots 会在不同工作部分调用不同模型 |
+| 模型资料（GPT-6 Astra、GPT-6.1 Terra 的发布文与系统卡） | 按 collect-sources 的「模型资料的收录原则」逐篇判断；dots 文档写明 dots 会在不同工作部分调用不同模型。判断结果见下文「逐篇判断」 |
+| ChatGPT 发布说明 | 只按「节选」收其中的 dots 条目，每条一页，date 取条目所在日期 |
 | Codex、ChatGPT Work、ChatGPT agent 本身 | 不收 |
 
 ## 官方渠道
@@ -55,7 +56,20 @@ description: 收集 OpenAI dots（ChatGPT 中始终在线的个人智能体）�
 - 页内相对链接 `/codex/...` 改为 `https://learn.chatgpt.com/codex/...`。
 - 图片在 `/images/codex/dots/` 下，直接下载。
 
+## 逐篇判断
+
+| 资料 | 结论 | 理由 |
+| --- | --- | --- |
+| GPT-6 Astra 系统卡（deploymentsafety.openai.com/gpt-6-astra） | 节选收第 12 节「Dots」 | 2026-09-29 新增的 dots 专章，评估 dots 运行框架、时间预算、确认策略与自动审查；正文其余部分是模型本身的评估，不收 |
+| GPT-6.1 Terra 发布文 | 不收 | 全文不提 dots |
+| DevDay 2026 回顾 | 不收 | 20 多条公告中 dots 只有一条两句话，内容与发布文开头重复 |
+| 发布说明「Meet your dot」（09-29）与「Texting your dot」（10-28） | 节选收 | 前者含首月用量不计额度的说明；后者是短信功能上线，含第三方服务商 Linq |
+| 系统卡正文中的模型评估、Sol、Luna 附录 | 不收 | 模型资料，与 dots 无直接关系 |
+
+系统卡页面是单页长文，正文链接用 `#section.N` 锚点和 `/gpt-6-astra/<章节>` 路径，收录时都改为 `https://deploymentsafety.openai.com/...` 绝对地址；图在 `/data/eval-sets/gpt-6-astra/assets/images/dots-N.png`，可直接下载。
+
 ## 命名约定
 
 - learn.chatgpt.com 的文档 slug 以 `docs-` 开头，例如 `2026-11-05-docs-meet-dots`。
 - 帮助中心文章 slug 以 `help-` 开头。
+- 发布说明节选 slug 以 `relnotes-` 开头，例如 `2026-10-28-relnotes-texting-your-dot`。
