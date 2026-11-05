@@ -118,9 +118,15 @@ basedOnUrl: ""                           # 二手报道：原始报道的地址
   - `figures.py <html>`：按文档顺序列出 figure、img、video、table 及其前一段文字，用于核对漏抽的媒体。
   - `rsc_media.py <html>`：从 Next.js 页面内嵌的 RSC 数据中提取图片路径、替代文本、视频地址与图注。
   - `container.py <html> <开头短语> <结尾短语>`：找出同时包含两个短语的最小元素，用于自动抽取失败、需要定位正文容器的页面。
-  - `localize_images.py <md> <页面目录> [基准URL]`：下载 Markdown 中的图片到 `images/` 并改写链接。
+  - `localize_images.py <md> <页面目录> [基准URL]`：下载 Markdown 中的图片到 `images/` 并改写链接；改写后的 Markdown 输出到标准输出，要重定向到文件再替换原文件。
   - `shrink_images.py <images目录> [上限KB]`：缩小超过上限的图片（需要 Pillow）。
 - 下载的网页放在临时目录，不放进仓库。
+- 直接下载时用 curl 默认的客户端标识，不伪装成浏览器；被拒绝（403）时按下面的 Wayback 方法处理。
+- 常见情况（2026-11-05 补抓行业综合资料时整理）：
+  - 图片延迟加载的站点（如 WordPress 的 `data-lazy-src`），`src` 只是 `data:image/svg` 占位，抽取前先把真实地址换回 `src`。
+  - Substack 文章可用 `<站点>/api/v1/posts/<slug>` 取得 JSON，正文在 `body_html`；播客文字稿由页面脚本加载，静态页面和该接口都拿不到。
+  - 转载页（如 DNYUZ）背后的原文地址，可以在引用该文的其他文章里用 `grep` 找 `wired.com/story/` 之类的链接。
+  - Wayback 的 `available` 接口偶尔返回空结果；没有快照时可以再用 CDX 接口（`/cdx/search/cdx?url=<地址>`）确认。
 - 各产品渠道的具体抓取方法与已知问题，写在该产品的 skill 中。
 
 ## 二手报道
