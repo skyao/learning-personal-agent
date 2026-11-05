@@ -34,11 +34,12 @@ description: 收集 OpenAI dots（ChatGPT 中始终在线的个人智能体）�
 | 渠道 | 地址 | 内容 | 抓取方法 |
 | --- | --- | --- | --- |
 | ChatGPT Learn 文档 | `learn.chatgpt.com/docs/dots`、`/docs/dots/<子页>`；同一页面也可经 `/codex/dots/...` 和 `developers.openai.com/codex/dots` 访问 | 用户文档 6 页：认识 dots、入门、任务与记忆、控制、计算机与应用、消息渠道 | 直接下载；`sourceUrl` 用 canonical 的 `/docs/...` 地址，其余写入 `altUrls` |
+| ChatGPT Learn「What's new」 | `learn.chatgpt.com/docs/whats-new/dots-<月>-<日>-2026`；栏目首页 `/docs/whats-new` | dots 专稿（每篇一页）；另有每周汇总和 DevDay 页 | 直接下载；每周汇总与 DevDay 页中的 dots 部分只是专稿和发布文的摘要，不收 |
 | ChatGPT Learn 企业文档 | `learn.chatgpt.com/codex/enterprise/<页>` | dots-security、dots-admin-guide、cloud-local-access | 直接下载 |
 | OpenAI 官网 | `openai.com/index/` | 发布文、安全文、DevDay 回顾、模型发布 | 直接下载和网页抓取工具都返回 403；改用 Wayback 快照（见 collect-sources 的 source-page.md） |
 | 帮助中心 | `help.openai.com/en/articles/<编号>`；有官方简体中文版 `/zh-hans-cn/` | 入门 20001530、隐私安全 FAQ 20001529、工作区管理 20001554；发布说明中的 dots 条目 | 直接下载和网页抓取工具都返回 403；改用 Wayback 快照 |
 | 部署安全中心 | `deploymentsafety.openai.com` | 模型系统卡 | 直接下载 |
-| 开发者社区 | `community.openai.com` | OpenAI 员工发布的更新帖 | 待查 |
+| 开发者社区 | `community.openai.com`，有「Dots」分类；搜索接口 `/search.json?q=...`，帖子 `/t/<id>.json` | 用户的 bug 报告、功能请求；OpenAI_Support 的回复；版主 VeitB（Leader，非员工）转帖官方更新 | 直接下载；用户主页 `/u/<name>.json` 的 `title` 可区分「OpenAI Staff」与社区版主 |
 
 ## 媒体与社区检索
 
@@ -65,6 +66,11 @@ description: 收集 OpenAI dots（ChatGPT 中始终在线的个人智能体）�
 | DevDay 2026 回顾 | 不收 | 20 多条公告中 dots 只有一条两句话，内容与发布文开头重复 |
 | 发布说明「Meet your dot」（09-29）与「Texting your dot」（10-28） | 节选收 | 前者含首月用量不计额度的说明；后者是短信功能上线，含第三方服务商 Linq |
 | 系统卡正文中的模型评估、Sol、Luna 附录 | 不收 | 模型资料，与 dots 无直接关系 |
+| learn.chatgpt.com/docs/changelog | 不收 | 正文没有 dots 条目，只在导航中出现 |
+| What's new 专稿 dots-october-9-2026、dots-october-28-2026 | 收 | 官方更新；10-28 篇比发布说明多出渠道选择与批准链接的说明 |
+| 社区论坛 VeitB「Fresh dots updates」（10-09） | 不收 | 版主转帖，原文即 What's new 专稿 |
+| 社区论坛 VeitB「Dots are now available in the EU on Business and Enterprise plans」（10-28） | 不收 | 转引 X 上 Thomas Ricouard 的帖子；learn 文档 Access 一节已写明 Business Premium 与 Enterprise「正在全球推出」 |
+| 社区论坛 vc-openai「About the Dots category」 | 不收 | 分类说明，无内容 |
 
 系统卡页面是单页长文，正文链接用 `#section.N` 锚点和 `/gpt-6-astra/<章节>` 路径，收录时都改为 `https://deploymentsafety.openai.com/...` 绝对地址；图在 `/data/eval-sets/gpt-6-astra/assets/images/dots-N.png`，可直接下载。
 
@@ -72,4 +78,5 @@ description: 收集 OpenAI dots（ChatGPT 中始终在线的个人智能体）�
 
 - learn.chatgpt.com 的文档 slug 以 `docs-` 开头，例如 `2026-11-05-docs-meet-dots`。
 - 帮助中心文章 slug 以 `help-` 开头。
+- What's new 专稿 slug 以 `docs-whats-new-` 开头，日期取 slug 中的日期。
 - 发布说明节选 slug 以 `relnotes-` 开头，例如 `2026-10-28-relnotes-texting-your-dot`。
