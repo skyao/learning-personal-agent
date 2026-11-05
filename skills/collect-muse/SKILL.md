@@ -101,6 +101,16 @@ description: 收集 Meta Muse（Meta 的个人 AI 智能体）的资料时使用
 | Engadget 的 Muse 上手指南（`engadget.com/2256577/how-to-get-started-with-meta-s-new-ai-agent-muse/`）、Tom's Guide「I tested Meta Muse vs ChatGPT-6 with 5 prompts」 | 候选，未判断：对比文中提到，下一轮检查 |
 | The Information 人形机器人 Max 报道（2026-10-31，付费墙）与 Engadget 转述（2026-11-01） | Engadget 版不收：抓取到的正文未提及 Muse；一手报道付费墙未读，改收下行 NDTV 版 |
 | NDTV「Zuckerberg Wants To Give AI A Body」（2026-11-02） | 收：媒体类，全文翻译，basedOn 填 The Information；Max 定位为 Muse 的潜在实体形态，Max 2 自 9 月开发中，Meta 称仅内部研究、无销售计划 |
+| Engadget 上手指南「How to get started with Meta's new AI agent, Muse」（Karissa Bell，2026-09-12） | 已收（2026-11-05）：媒体类一手上手实测，含设置、权限、连接器操作细节与菜谱整理、旅行规划两项真实任务；三张作者截图已本地化，首图插画未收 |
+| Tom's Guide「I used Muse to automate 10 tasks」（Elton Jones，2026-10-07） | 已收（2026-11-05）：媒体类，为期一周的 10 项持续执行实测，逐项给出提示词原文与结果；配图均为图库装饰图，未收 |
+| Tom's Guide「I tested Meta Muse vs ChatGPT-6 with 5 prompts」（Amanda Caswell，2026-09-27，更新 09-28） | 已收（2026-11-05）：放入 industry，逐轮打分的实测对比，Muse 3-2 胜；配图均为图库装饰图，未收 |
+| Sitedex「Meta Muse agent and your website」（2026-11-01） | 已收（2026-11-05）：社区类，独立核查 Meta 爬虫清单与 Web Bot Auth 密钥目录；文末推广自家 fetchcheck 的两处已去掉 |
+| Medium「Meta Muse for Startups」（MyNextDeveloper，2026-11-05） | 不收：二手汇总，无新信息；提到的 Claroc、404 Media、Wardle、Marketplace 事件均已收 |
+| AllThingsMuse 人形机器人 Max 报道（2026-11-02） | 不收：NDTV 已收的同一事件二手转述，无新信息 |
+| Zacks「META Q3 Earnings Call Put Spotlight on Muse Growth」（2026-11-03） | 不收：财报电话会已决定不收（用户 2026-11-04 决定）；文中 1000 万用户、25% 日活等数据出自该电话会 |
+| aiagentslibrary「Meta Muse Wonder: Who Gets Access」（约 2026-10-31） | 暂不收：聚合站；其中「Wonder 已用于 Muse 付费档、免费档仍为 Spark」一事源自 10 月 21 日财报电话会（已决定不收），是否记录这一模型切换事实待 Sky 决定 |
+| 谢华健翻译资讯网 Muse Charm 稿（2026-11-05） | 不收：9 月 23 日 Connect 发布内容的滞后转述，Charm 已收于 Connect 官方页；该站为翻译聚合站 |
+| johnmaartifacts Substack 四产品对比「Meta Muse vs. Grok Bot vs. Instinct vs. ChatGPT Dots」（约 2026-10-26） | 候选，未判断：同一周真实任务跑四款产品，但涉及 dots、Grok Bot、Instinct 等未纳入跟踪的产品，是否收 industry 待 Sky 决定 |
 
 ## 已知问题
 
@@ -146,6 +156,7 @@ description: 收集 Meta Muse（Meta 的个人 AI 智能体）的资料时使用
 - 标签页式演示（多个演示共用一个占位）写成一行占位加列表，列出每个标签和图注。
 - 视频地址是带过期签名的 fbcdn 链接，占位行链接到文章页面。
 - 文章页显示的日期和 `article:published_time` 一致。
+- 2026-11-05：研究博客列表页（`research.meta.ai/blog/`）直接下载返回 403，浏览器因组织策略拦截；本轮改用检索核对，未发现 11 月 2 日之后的新文章。
 
 ### about.fb.com 抽取脚本
 
