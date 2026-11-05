@@ -34,8 +34,8 @@ description: 收集 OpenAI dots（ChatGPT 中始终在线的个人智能体）�
 | --- | --- | --- | --- |
 | ChatGPT Learn 文档 | `learn.chatgpt.com/docs/dots`、`/docs/dots/<子页>`；同一页面也可经 `/codex/dots/...` 和 `developers.openai.com/codex/dots` 访问 | 用户文档 6 页：认识 dots、入门、任务与记忆、控制、计算机与应用、消息渠道 | 直接下载；`sourceUrl` 用 canonical 的 `/docs/...` 地址，其余写入 `altUrls` |
 | ChatGPT Learn 企业文档 | `learn.chatgpt.com/codex/enterprise/<页>` | dots-security、dots-admin-guide、cloud-local-access | 直接下载 |
-| OpenAI 官网 | `openai.com/index/` | 发布文、安全文、DevDay 回顾、模型发布 | 直接下载和网页抓取工具都返回 403（2026-11-05）；不得绕过，暂建「仅链接」占位页，等用户决定获取方式 |
-| 帮助中心 | `help.openai.com/en/articles/<编号>`；有官方简体中文版 `/zh-hans-cn/` | 入门 20001530、隐私安全 FAQ 20001529、工作区管理 20001554；发布说明中的 dots 条目 | 直接下载和网页抓取工具都返回 403（2026-11-05）；不得绕过，暂建「仅链接」占位页 |
+| OpenAI 官网 | `openai.com/index/` | 发布文、安全文、DevDay 回顾、模型发布 | 直接下载和网页抓取工具都返回 403；改用 Wayback 快照（见 collect-sources 的 source-page.md） |
+| 帮助中心 | `help.openai.com/en/articles/<编号>`；有官方简体中文版 `/zh-hans-cn/` | 入门 20001530、隐私安全 FAQ 20001529、工作区管理 20001554；发布说明中的 dots 条目 | 直接下载和网页抓取工具都返回 403；改用 Wayback 快照 |
 | 部署安全中心 | `deploymentsafety.openai.com` | 模型系统卡 | 直接下载 |
 | 开发者社区 | `community.openai.com` | OpenAI 员工发布的更新帖 | 待查 |
 
