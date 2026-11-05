@@ -26,7 +26,7 @@ description: 收集 Meta Muse（Meta 的个人 AI 智能体）的资料时使用
 | 模型资料 | 按 collect-sources 的「模型资料的收录原则」逐篇判断：明确说明为 Muse 优化、用于驱动 Muse，或说明 Muse 运行时如何选择模型的才收 |
 | Muse Code（终端编程智能体）、Muse Image / Muse Video（生成模型）、Meta Enterprise Platform | 不收 |
 | 法律文档：Muse 服务条款、Muse 隐私政策、连接器平台条款、Gadget SDK 条款、眼镜自定义唤醒名隐私声明 | 不收（用户 2026-11-04 决定，见 collect-sources 的「不收的资料类型」） |
-| 边缘资料：订阅中心的 6 篇子文章、Wonder 模型卡 PDF、Gadget SDK 子目录 README | 不收（用户 2026-11-04 决定） |
+| 边缘资料：订阅中心的 6 篇子文章、Gadget SDK 子目录 README | 不收（用户 2026-11-04 决定） |
 
 模型家族中各篇的判断结果记在下面，避免下一轮重复判断：
 
@@ -34,7 +34,7 @@ description: 收集 Meta Muse（Meta 的个人 AI 智能体）的资料时使用
 | --- | --- |
 | Muse Wonder 新闻稿（about.fb.com，2026-10-12） | 收：说明将驱动 Muse，并为个人智能体处理私人信息做了训练 |
 | Muse Wonder 研究博客（research.meta.ai，2026-10-12） | 收：同上，另说明将用于 artifact 生成 |
-| Muse Wonder 模型卡 PDF | 待定：评估以模型为主，含 MemoryBench、FocusBench；待用户确认 |
+| Muse Wonder 模型卡 PDF（`research.meta.ai/static/muse-wonder-model-card`，研究博客链接） | 收节选（用户 2026-11-05 决定）：只收模型概况、预期用途、个人与专业智能体一组基准的方法与分数、局限与使用条件；不收编码与通用基准、前沿风险评估、Trust and Safety、附录。分数表是 PDF 内嵌图片，用 pypdf 提取后转录 |
 | Muse Realtime Avatar（research.meta.ai，2026-09-23） | 收：Muse 应用中的头像功能 |
 | Muse Spark Open（research.meta.ai，2026-10-15） | 不收：全文未提及 Muse 产品 |
 | Muse Glimmer（research.meta.ai，2026-08-10） | 不收：端侧开放模型，全文未提及 Muse 产品 |
