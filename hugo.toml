@@ -13,6 +13,9 @@ enableRobotsTXT = true
 # Will give values to .Lastmod etc.
 enableGitInfo = false
 
+# 资料目录中的 original.md 是原文存档，只供收集与翻译 agent 读写，不生成页面
+ignoreFiles = ['original\.md$']
+
 # Comment out to enable taxonomies in Docsy
 # disableKinds = ["taxonomy", "taxonomyTerm"]
 

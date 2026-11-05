@@ -9,7 +9,7 @@ YYYY-MM-DD-<slug>/
   images/       图片
 ```
 
-`original.md` 放在页面目录（leaf bundle）中，Hugo 只把它当作页面资源，不生成页面、不发布到网站（2026-11-05 实测确认）。它只供收集 agent 写入、翻译 agent 读取。
+`original.md` 不生成页面、不发布到网站：`hugo.toml` 的 `ignoreFiles` 排除了它（2026-11-05 加入；只靠 leaf bundle 不够，目录里先写 `original.md`、后写 `index.md` 时，正在运行的 `hugo server` 会把它当成普通页面，侧边栏出现一个空标题条目）。它只供收集 agent 写入、翻译 agent 读取。
 
 ## 目录命名
 
