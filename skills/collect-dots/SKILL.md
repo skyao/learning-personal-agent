@@ -66,6 +66,27 @@ community.openai.com 的 Dots 分类帖子量大，以 bug 报告和功能请求
 - 中文检索词：`OpenAI dots 智能体`、`ChatGPT dots`
 - 「dots」是常见词，检索时要带上 OpenAI 或 ChatGPT。
 
+## 媒体与社区的判断记录
+
+已收的不再列出（以 `sourceUrl` 去重）。以下是判断过、没有收或待处理的，避免下一轮重复判断。
+
+| 资料 | 判断 |
+| --- | --- |
+| TechCrunch、TechRadar、BGR、PYMNTS、Decrypt、INSIDE（繁中）等发布报道 | 不收：复述发布文；发布报道只收 CNBC 直播稿中的 dots 条目（有 Altman、Friar 原话） |
+| WIRED「OpenAI’s Dots Are Always-On AI Agents」（09-29） | 不收：复述发布文，新信息仅订餐演示与短信候补名单 |
+| WIRED「The Battle to Be Your Personal AI Agent Is Here」（09-30） | 跨产品，已在 industry 建仅链接页 |
+| GPT-6.1 Astra 被搁置（WSJ 一手，Engadget、Yahoo、Zvi、The Hacker News、CNBC 转述） | 不收：报道称该模型原计划用于 ChatGPT 与 Codex，未说明与 dots 的关系；把两者挂钩的只有 SEO 站点 |
+| IT之家「dots 首次公开演示卡壳」（经凤凰网） | 不收：现场事件短讯，不涉及技术实现 |
+| Flavio Copes「A deep dive into OpenAI dots」 | 不收：逐节复述官方文档，无实测 |
+| cedrickchee 的 GitHub gist「I tried OpenAI Dots」 | 不收：简短观点，实测信息只有一条（云端计算机为 Linux，预装 Blender） |
+| The Neuron「My First Day With OpenAI Dots」（Corey Noles） | 不收：主观体验为主，技术细节转引官方文档 |
+| preuve.ai、ai.joaoqueiros.com（Pat Simmons 视频转写）、animaapp、aiagentslibrary、orcarouter、explainx、mindstudio、eesel、composio、datacamp、promptessor、beam.ai 等 | 不收：营销、聚合或 SEO 站点 |
+| The Information「OpenAI Announces ‘Dots’ Agents」简报 | 不收：付费墙（403），无法读取 |
+| future-stack-reviews.com「ChatGPT Dots, Tested」（Takashi Fujino，10-09） | 待用户决定：有测试方法与日志（10 月 4 日至 7 日，日本 Pro 账号），但全文约 1.5 万词，大半是使用模板与 FAQ |
+| Reddit r/OpenAI「I spent a day poking dots with sticks」（1wuznlr） | 待处理：直接访问 403，Wayback 快照只有空壳页；Slide Factory 一文转述了其要点 |
+| X 用户 ChrisUniverse 的「dot 擅自给市政府发邮件」帖（2026-10-02） | 待处理：一手帖在 X 上，无法读取；只有 orcarouter、explainx 的转述，OpenAI 未确认 |
+| WIRED「OpenAI is developing a persistent AI agent」（发布前报道） | 线索，待查 |
+
 ## 已知问题
 
 ### learn.chatgpt.com
