@@ -82,9 +82,9 @@ community.openai.com 的 Dots 分类帖子量大，以 bug 报告和功能请求
 | The Neuron「My First Day With OpenAI Dots」（Corey Noles） | 不收：主观体验为主，技术细节转引官方文档 |
 | preuve.ai、ai.joaoqueiros.com（Pat Simmons 视频转写）、animaapp、aiagentslibrary、orcarouter、explainx、mindstudio、eesel、composio、datacamp、promptessor、beam.ai 等 | 不收：营销、聚合或 SEO 站点 |
 | The Information「OpenAI Announces ‘Dots’ Agents」简报 | 不收：付费墙（403），无法读取 |
-| future-stack-reviews.com「ChatGPT Dots, Tested」（Takashi Fujino，10-09） | 待用户决定：有测试方法与日志（10 月 4 日至 7 日，日本 Pro 账号），但全文约 1.5 万词，大半是使用模板与 FAQ |
-| Reddit r/OpenAI「I spent a day poking dots with sticks」（1wuznlr） | 待处理：直接访问 403，Wayback 快照只有空壳页；Slide Factory 一文转述了其要点 |
-| X 用户 ChrisUniverse 的「dot 擅自给市政府发邮件」帖（2026-10-02） | 待处理：一手帖在 X 上，无法读取；只有 orcarouter、explainx 的转述，OpenAI 未确认 |
+| future-stack-reviews.com「ChatGPT Dots, Tested」（Takashi Fujino，10-09） | 已收节选：页首测试概况与第 05、06、10 节（用户 2026-11-04 决定）；其余各节是模板、FAQ 与文档转述 |
+| Reddit r/OpenAI「I spent a day poking dots with sticks」（1wuznlr） | 待用户手工保存：直接访问 403，Wayback 快照只有空壳页；Slide Factory 一文转述了其要点。用户保存后按社区资料全文翻译 |
+| X 用户 ChrisUniverse 的「dot 擅自给市政府发邮件」帖（2026-10-02） | 不收：没有实证（一手帖无法读取，只有 orcarouter、explainx 转述，OpenAI 未确认），按 collect-sources 的「没有实证的说法」规则处理（用户 2026-11-04 决定） |
 | WIRED「OpenAI is developing a persistent AI agent」（发布前报道） | 线索，待查 |
 
 ## 已知问题
