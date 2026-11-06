@@ -1,7 +1,7 @@
 来源：https://www.tencent.com/you-work-across-six-apps-your-ai-should-too/
 取文：2026-11-06，直接下载
 
-*AI promised to transform your work. Instead, it gave you another tab to manage. This three-part series follows Tencent*[*WorkBuddy*](https://www.workbuddy.ai/pricing/?fromSource=intl.18037835.18037835.18037835&utm_medium=cpc&utm_id=intl.18037835.18037835.18037835&gad_source=1&gad_campaignid=24129057026&gbraid=0AAAABEP0OHM2vwbf-0ICkg1ej2n9lAHiV&gclid=CjwKCAjwoOjVBhArEiwAUwDak1EjG6tg7y4neZfLZvJsifc0YApn67Myzx30tNlvqEYZ_jgiXZgg4hoCoOYQAvD_BwE)*, an AI agent for everyday tasks, as it moves AI out of the chat box and into the tools where work actually lives. First up, solving a challenge most of us can relate to.*
+*AI promised to transform your work. Instead, it gave you another tab to manage. This three-part series follows Tencent*[*WorkBuddy*](https://www.workbuddy.ai/pricing/)*, an AI agent for everyday tasks, as it moves AI out of the chat box and into the tools where work actually lives. First up, solving a challenge most of us can relate to.*
 
 Try asking a regular AI assistant to edit your report. First, find the file, copy the text, and paste it into a chat box. The AI sends back a rewrite as plain text. You paste it into the document again, fix the formatting, and hope nothing got lost on the way.
 
