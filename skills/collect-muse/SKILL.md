@@ -13,7 +13,7 @@ description: 收集 Meta Muse（Meta 的个人 AI 智能体）的资料时使用
 | --- | --- |
 | 产品目录 | `content/zh-cn/docs/muse/` |
 | 发布日期 | 2026-09-08（美国） |
-| 最后收集日期 | 2026-11-06（对照旧笔记补收媒体 1 篇：Bloomberg 嘉信理财拦截 Muse）；2026-11-05（第一阶段完成：官方、媒体、社区、实测；行业综合横评为「仅链接」占位）。下一轮起按新流程：原文存 `original.md`，资料页只写摘要与保留理由，不翻译 |
+| 最后收集日期 | 2026-11-06（对照旧笔记补收媒体 1 篇：Bloomberg 嘉信理财拦截 Muse；22:16 轮次补跑：官方语音稿、墨西哥上线、TechCrunch、The Verge、DataCamp 横评、Medium Muse 101 与六产品横评（仅链接待补原文）、coderlegion、PYMNTS Expedia、语音悄悄上线回填）；2026-11-05（第一阶段完成：官方、媒体、社区、实测；行业综合横评为「仅链接」占位）。下一轮起按新流程：原文存 `original.md`，资料页只写摘要与保留理由，不翻译 |
 | 页面格式 | 与所有产品一致，见 collect-sources 的 source-page.md「页面正文」。第一阶段直接翻译的旧页面已于 2026-11-06 补上内容摘要、保留理由和分隔线（用户 2026-11-06 要求） |
 
 ## 收录范围
@@ -98,8 +98,19 @@ description: 收集 Meta Muse（Meta 的个人 AI 智能体）的资料时使用
 | Future Society「Muse, in its own files」（futuresociety.ch/muse-findings） | 已收：页面自标「由 AI 生成」，但每条发现附 VM 文件引文；发现列表取自 report_data.json |
 | Wardle 在 Objective by the Sea v9 的演讲 | 已建「仅链接」占位页，会后补全 |
 | Tom's Guide「Meta Muse vs ChatGPT Dots」（2026-09-30）、Engadget「OpenAI Dot vs. Meta Muse」（2026-10-11） | 已收入行业综合（2026-11-05） |
-| DataCamp「OpenAI Dots vs Meta Muse」（`datacamp.com/blog/openai-dots-vs-meta-muse`） | 暂不收：原站对自动访问返回 403，Wayback 没有快照；需要时请用户在浏览器中复制正文 |
-| Engadget 的 Muse 上手指南（`engadget.com/2256577/how-to-get-started-with-meta-s-new-ai-agent-muse/`）、Tom's Guide「I tested Meta Muse vs ChatGPT-6 with 5 prompts」 | 候选，未判断：对比文中提到，下一轮检查 |
+| DataCamp「OpenAI Dots vs Meta Muse」（`datacamp.com/blog/openai-dots-vs-meta-muse`） | 已收（2026-11-05 补跑）：原站 403 已解除，直接下载全文；价格表称 Muse「仅限美国」，与 10 月 23 日日本、10 月 27 日新加坡上线不符，照录原文 |
+| Meta Newsroom「Give Your Muse a Voice」（2026-11-05） | 已收（2026-11-05）：官方，实时语音与表情化身美国上线 |
+| allthingsmuse「Muse Launches in Mexico」（2026-11-05） | 已收（2026-11-05）：媒体，墨西哥上线；官方首发为 Wang 与 @Muse 的 X 帖，未见 Newsroom 专门稿 |
+| TechCrunch「Meta says US users can now video chat with their Muse AI avatar」（Sarah Perez，2026-11-05） | 已收（2026-11-05）：媒体，语音视频聊天美国上线；补充 Wang 的 X 演示、Jolly 昵称、Charm 年底前发布 |
+| The Verge「Muse has a voice mode now」（Jay Peters，2026-11-05） | 已收（2026-11-05）：媒体，iOS 上手实测；原文地址经站内搜索定位（theverge.com/tech/1028015/…），Daily Guardian 转载与原文逐段一致 |
+| Medium「Muse 101」（Tim de Rosen，AIVO，2026-11-04） | 已收「仅链接」（2026-11-05）：社区，独立分析（Three Gates 框架、投行预测验算）；Medium 403 且 Wayback 无快照，原文待补抓；文末约 15% 为自家产品推广 |
+| Medium「Proactive AI Agents in 2026」（Lightning Developer，2026-11-03） | 已收「仅链接」（2026-11-05）：industry 六产品横评，OpenClaw/Hermes 两节为实测；Medium 403 且 Wayback 无快照，原文待补抓 |
+| Medium「Claude Duet vs Muse vs dots」（Mike Written，AI Trends 24，2026-11-05） | 不收：二手拼贴、非实测；Muse 准入写成仅限美国，与 11-05 墨西哥上线冲突；无可核查出处，含占位符与自售广告 |
+| coderlegion「One Config Key Was Enough」（Alessandro Pignati，2026-11-02） | 已收（2026-11-05）：社区，Wardle macOS 漏洞的独立分析（企业可见性缺口）；作者为 NeuralTrust 研究员，VentureBeat 引述为二手转述；默认抽取漏正文，取 div.qa-q-view-content 容器 |
+| PYMNTS「Expedia Says Travelers Plan With AI Agents but Book Direct」（2026-11-04） | 已收节选（2026-11-05）：媒体，Expedia-Muse 集成预计美国上线；全文主题为 Expedia 财报，仅摘录 Muse 相关四段 |
+| allthingsmuse「Live Voice Conversations With Muse Start Reaching Users」（2026-10-25） | 已收（2026-11-05）：媒体回填，10-24 语音悄悄上线首报；一手来源为 TestingCatalog 10-25 帖与 Gambrill 10-24 帖，本文据 FourWeekMBA 转述 |
+| eWeek「Meta Muse $300,000 Bug Bounty Security Flaw Explained」（2026-11-05） | 不收：复述已收官方 11-02 赏金回顾，无新信息 |
+| Lenny's Newsletter「How I AI: Grok vs. Dot vs. Muse vs. Duet」（2026-11-02） | 与已收 industry 条目 2026-10-28 Claire Vo 同一期节目，记为该条目的 altUrls，不另收；11-02 页含完整书面结论，日后可用于补全该条目 |
 | The Information 人形机器人 Max 报道（2026-10-31，付费墙）与 Engadget 转述（2026-11-01） | Engadget 版不收：抓取到的正文未提及 Muse；一手报道付费墙未读，改收下行 NDTV 版 |
 | NDTV「Zuckerberg Wants To Give AI A Body」（2026-11-02） | 收：媒体类，全文翻译，basedOn 填 The Information；Max 定位为 Muse 的潜在实体形态，Max 2 自 9 月开发中，Meta 称仅内部研究、无销售计划 |
 | Engadget 上手指南「How to get started with Meta's new AI agent, Muse」（Karissa Bell，2026-09-12） | 已收（2026-11-05）：媒体类一手上手实测，含设置、权限、连接器操作细节与菜谱整理、旅行规划两项真实任务；三张作者截图已本地化，首图插画未收 |
@@ -177,6 +188,7 @@ description: 收集 Meta Muse（Meta 的个人 AI 智能体）的资料时使用
 - 视频地址是带过期签名的 fbcdn 链接，占位行链接到文章页面。
 - 文章页显示的日期和 `article:published_time` 一致。
 - 2026-11-05：研究博客列表页（`research.meta.ai/blog/`）直接下载返回 403，浏览器因组织策略拦截；本轮改用检索核对，未发现 11 月 2 日之后的新文章。
+- 2026-11-05 补跑：muse.ai/blog 列表页无新文章（最新仍为 11-02 赏金回顾）；Newsroom AI 标签页 11 月仅语音稿一篇。
 
 ### about.fb.com 抽取脚本
 
