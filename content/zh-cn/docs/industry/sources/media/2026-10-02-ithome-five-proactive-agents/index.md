@@ -11,7 +11,7 @@ translation: 不需要
 collectedAt: 2026-11-06
 dateNote: "比较表标注资料截至 2026-10-01"
 tags: [实测评测, 开放与价格, 运行环境]
-products: [dots, muse, grok-bot]
+products: [dots, muse, grok-bot, gemini-spark]
 ---
 
 {{< source-info >}}
