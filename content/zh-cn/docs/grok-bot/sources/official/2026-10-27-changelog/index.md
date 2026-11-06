@@ -4,6 +4,7 @@ linkTitle: "更新日志"
 date: 2026-10-27
 originalTitle: "Grok Bot Changelog"
 sourceUrl: "https://x.ai/changelog/bot"
+reprintUrl: "https://web.archive.org/web/20261104071343/https://x.ai/changelog/bot"
 author: "未署名"
 publisher: "SpaceXAI（x.ai）"
 language: en
