@@ -1,7 +1,7 @@
 来源：https://docs.x.ai/grok-bot/settings-and-notifications
 取文：2026-11-06，直接下载（站点提供的 Markdown 版本 https://docs.x.ai/grok-bot/settings-and-notifications.md）
 
-# Settings and notifications
+Settings and notifications
 
 Grok Bot settings cover app-wide and desktop-local behavior. Each Bot's name,
 picture, and label live in its conversation details.

@@ -1,7 +1,7 @@
 来源：https://docs.x.ai/grok-bot/files-and-results
 取文：2026-11-06，直接下载（站点提供的 Markdown 版本 https://docs.x.ai/grok-bot/files-and-results.md）
 
-# Files and results
+Files and results
 
 Attach source material to a request and ask the Bot to return work in a form you
 can inspect, edit, and hand off.

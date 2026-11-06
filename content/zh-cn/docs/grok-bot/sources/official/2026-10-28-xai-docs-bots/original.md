@@ -1,7 +1,7 @@
 来源：https://docs.x.ai/grok-bot/bots
 取文：2026-11-06，直接下载（站点提供的 Markdown 版本 https://docs.x.ai/grok-bot/bots.md）
 
-# Create and manage Bots
+Create and manage Bots
 
 A Bot is a durable AI teammate with a name, a job, its own conversation, and
 working context that develops over time.

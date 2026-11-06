@@ -1,7 +1,7 @@
 来源：https://docs.x.ai/grok-bot/approvals-security-and-privacy
 取文：2026-11-06，直接下载（站点提供的 Markdown 版本 https://docs.x.ai/grok-bot/approvals-security-and-privacy.md）
 
-# Approvals, security, and privacy
+Approvals, security, and privacy
 
 Grok Bot is designed to complete work while keeping sensitive inputs and
 consequential actions under your control. Use approvals, secure handoffs, and

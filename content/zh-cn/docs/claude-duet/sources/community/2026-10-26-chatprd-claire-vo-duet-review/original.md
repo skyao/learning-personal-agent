@@ -1,7 +1,7 @@
 来源：https://www.chatprd.ai/how-i-ai/claude-duet-review
 取文：2026-11-06，直接下载
 
-# Claude Duet Is Beautiful. That Doesn’t Make It My Go-To Agent.
+Claude Duet Is Beautiful. That Doesn’t Make It My Go-To Agent.
 
 Claire tests Anthropic’s Claude Duet on inbox triage, Warriors tickets, sales work, and a launch video. The design stands out; slow responses, weak follow-through, and missing desktop and team support make it harder to keep using.
 
@@ -140,4 +140,3 @@ My verdict: **Duet is worth trying for Claude users who want a polished, phone-f
 It did not earn a place as my primary agent in this test. Slow task completion, quiet follow-up, the missing desktop experience, and the lack of team sharing kept it below tools already embedded in my day.
 
 Human judgment still mattered at every consequential point: deciding whether inbox priorities were right, whether a deck met the brand standard, whether a workflow had the skills it needed, and whether the agent actually helped finish the job. The standard is not how elegantly an agent accepts a request. It is whether I can trust the work to come back, make the next decision, and close the loop.
-

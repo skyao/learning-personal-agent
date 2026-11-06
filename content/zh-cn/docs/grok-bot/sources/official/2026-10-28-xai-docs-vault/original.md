@@ -1,7 +1,7 @@
 来源：https://docs.x.ai/grok-bot/vault
 取文：2026-11-06，直接下载（站点提供的 Markdown 版本 https://docs.x.ai/grok-bot/vault.md）
 
-# Vault and secure sign-in
+Vault and secure sign-in
 
 Keep passwords, cards, API keys, and other credentials out of chat and ordinary
 files. Save logins, cards, and contact info in **Vault** so your Bots can sign

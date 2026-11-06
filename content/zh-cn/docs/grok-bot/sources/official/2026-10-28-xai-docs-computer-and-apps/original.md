@@ -1,7 +1,7 @@
 来源：https://docs.x.ai/grok-bot/computer-and-apps
 取文：2026-11-06，直接下载（站点提供的 Markdown 版本 https://docs.x.ai/grok-bot/computer-and-apps.md）
 
-# Use the computer and apps
+Use the computer and apps
 
 Your Bots work from a persistent cloud computer with a browser, command line,
 and filesystem. Work continues while your laptop is closed, and files,

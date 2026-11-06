@@ -11,30 +11,15 @@ But once I found 10 of those tasks and used the right prompt to make Muse as pro
 
 Once I was ready to see what else Muse could do for me, I came to it with this request: “Give me 10 things you could automate for me right now.” Amani laid out a few actions it could take on my behalf, as long as it could gain access to my Gmail account. I passed on those and decided to test out each of the tasks that benefited my personal and professional lifestyles the most. This is how Muse explained what it could do for me, the prompt that activated it to tackle a specific task and how I ended up using each one.
 
-Latest Videos FromTom's Guide
-
-Watch full video here:
-
 **The task:** *Weekly digest of new game drops, wrestling PLEs, or sneaker/merch released in your lane.*
 
 **The prompt:** *Every [day], send me a digest of new releases this week: [products]. One line each, skip anything obvious.*
-
-You may like
-
-- [![muse ai](https://cdn.mos.cms.futurecdn.net/o2Y2xLEFNw6e35jKhzKCvj.jpg)
-  I scoured Reddit for Muse AI use cases — 10 that will actually save you time](https://www.tomsguide.com/ai/i-scoured-reddit-for-muse-ai-use-cases-10-that-will-actually-save-you-time)
-- [![family fridge](https://cdn.mos.cms.futurecdn.net/LSwPp74zfByJU9pqegQYKn.png)
-  I used Meta Muse to run our 5-person household — and it beats Alexa+ at the hardest task](https://www.tomsguide.com/ai/i-used-meta-muse-as-an-ai-house-manager-for-my-family-of-five-heres-what-happened)
-- [![muse ai](https://cdn.mos.cms.futurecdn.net/UktiUVbvwctRfHFdW4FtSn.jpg)
-  I tried turning Meta’s Muse AI into my personal shopper — only 3 of 7 prompts actually worked](https://www.tomsguide.com/ai/i-tried-turning-metas-muse-ai-into-my-personal-shopper-only-3-of-7-prompts-actually-worked)
 
 I commanded Muse to send me a weekly digest of all the new video game, graphic novel and autobiography releases every Sunday at 12 pm, which helped me decide what I wanted to pick up that week. I’m not much of a big spender, but I did treat myself last week when Ace Combat 8: Wings of Theve and Marvel Comics’ Dungeons of Doom graphic novel both came out within days of each other (Muse didn’t put any new autobiographies onto my radar, sadly).
 
 ## 2. Price alerts
 
 **The task:** *I already know your deal-hunting taste (DualSense, Garou PS4, Batman Omnibus). I can check listings daily and ping you when an item drops below your target or a good in-stock listing appears.*
-
-Want more AI news?
 
 **The prompt:** *Watch [item name] and ping me when it’s in stock under [price], all in. Check once a day. Here’s the item: [paste link or describe it].*
 
@@ -43,15 +28,6 @@ My price watch alert for a Blu-ray version of WWE: Wrestling’s Greatest Factio
 ## 3. A morning briefing
 
 **The task:** *Weather (nor'easter season, after all), your day from your iPhone calendar, and anything relevant in gaming/wrestling/hip-hop news, delivered each morning.*
-
-What to read next
-
-- [![Meta vs. ChatGPT](https://cdn.mos.cms.futurecdn.net/nnPwJhHeEVXBar4cMM8JnP.png)
-  7 boring jobs you can hand to an AI agent tonight — number 4 is my personal favorite](https://www.tomsguide.com/ai/7-boring-jobs-you-can-hand-to-an-ai-agent-tonight-number-4-is-my-personal-favorite)
-- [![meta muse ai](https://cdn.mos.cms.futurecdn.net/pRhPLfMhEqkjUXAbsK9hpc.jpg)
-  I asked Meta’s Muse AI for productivity hacks — these 7 unconventional ideas surprised me the most](https://www.tomsguide.com/ai/i-asked-metas-muse-ai-for-productivity-hacks-these-7-unconventional-ideas-surprised-me-the-most)
-- [![Meta ai](https://cdn.mos.cms.futurecdn.net/9n4mvPYVkgeAEdNokoJwv5.png)
-  Meta just launched an AI that can actually run your life online — here's what Muse can do](https://www.tomsguide.com/ai/meta-just-launched-an-ai-that-can-actually-run-your-life-online-heres-what-muse-can-do)
 
 **The prompt:** *Every weekday around [time], send me a briefing: the weather for today, my iPhone calendar events, and anything new in [topics].*
 

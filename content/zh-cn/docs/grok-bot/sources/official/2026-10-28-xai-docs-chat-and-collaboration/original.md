@@ -1,7 +1,7 @@
 来源：https://docs.x.ai/grok-bot/chat-and-collaboration
 取文：2026-11-06，直接下载（站点提供的 Markdown 版本 https://docs.x.ai/grok-bot/chat-and-collaboration.md）
 
-# Message and collaborate
+Message and collaborate
 
 Grok Bot is designed to feel like messaging a teammate. Keep requests natural,
 but make the outcome and the decision boundary explicit: what the Bot may

@@ -1,7 +1,7 @@
 来源：https://stripe.com/newsroom/news/anthropic-and-stripe
 取文：2026-11-06，直接下载
 
-# [Stripe and Anthropic help entrepreneurs run their business inside Claude Duet](/newsroom/news/anthropic-and-stripe)
+[Stripe and Anthropic help entrepreneurs run their business inside Claude Duet](/newsroom/news/anthropic-and-stripe)
 
 [October 21, 2026](/newsroom/news/anthropic-and-stripe)
 

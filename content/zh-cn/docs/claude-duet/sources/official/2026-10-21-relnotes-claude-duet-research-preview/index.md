@@ -8,7 +8,7 @@ author: "未署名"
 publisher: "Anthropic"
 language: en
 fidelity: 节选
-translation: 待翻译
+translation: 已翻译
 collectedAt: 2026-11-05
 tags: [发布]
 products: [claude-duet]
@@ -16,8 +16,16 @@ products: [claude-duet]
 
 {{< source-info >}}
 
-**收录说明**：Claude 发布说明是一个持续更新的长页面，这里只收 2026-10-21 日期下的 Claude Duet 一条。原文全文存于本目录的 original.md，网站上不显示，待翻译。
+**收录说明**：Claude 发布说明是一个持续更新的长页面，这里只收 2026-10-21 日期下的 Claude Duet 一条。原文全文存于本目录的 original.md，网站上不显示，已翻译。
 
 **内容摘要**：2026-10-21 的发布说明条目宣布向 Pro 和 Max 套餐用户开放 Claude Duet 研究预览，称其为让 Claude 作为主动型智能体工作的新应用，并链接到发布文。条目只提到 Pro 和 Max，没有提 Ultra。
 
 **保留理由**：官方发布说明中的上线记录，可确认上线日期；条目只提 Pro 和 Max，而发布文和帮助文档都写 Pro、Max 和 Ultra，这一出入值得留意。
+
+---
+
+## 2026 年 10 月 21 日
+
+**面向 Pro 和 Max 套餐的 Claude Duet 研究预览**
+
+我们刚刚向 Pro 和 Max 套餐用户开放了研究预览（research preview）：Claude Duet，这是一款让 Claude 作为主动型智能体（proactive agent）工作的新应用。更多信息请见我们的博客文章：**[Introducing Claude Duet](https://claude.com/resources/articles/claude-duet)**。

@@ -1,7 +1,7 @@
 来源：https://docs.x.ai/grok-bot/faq
 取文：2026-11-06，直接下载（站点提供的 Markdown 版本 https://docs.x.ai/grok-bot/faq.md）
 
-# Frequently asked questions
+Frequently asked questions
 
 ## How is Grok Bot different from an AI assistant?
 

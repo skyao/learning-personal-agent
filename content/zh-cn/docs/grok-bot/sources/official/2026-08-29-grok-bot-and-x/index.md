@@ -9,7 +9,7 @@ author: "未署名"
 publisher: "SpaceXAI（xAI）"
 language: en
 fidelity: 转载全文
-translation: 待翻译
+translation: 已翻译
 collectedAt: 2026-11-05
 dateNote: "x.ai 对自动访问返回 403，依据 Wayback 快照 20261003080202；日期取页面结构化数据的 datePublished"
 tags: [连接器, 功能更新]
@@ -18,8 +18,20 @@ products: [grok-bot]
 
 {{< source-info >}}
 
-**收录说明**：x.ai 对自动访问返回 403，原文依据 Internet Archive 快照存档；去掉了「Back to news」链接、下载与联系销售按钮和文末「Try Grok Bot today」推广区，视频改为一行链接。去掉了文末无正文的「Meet your first Bot」推广标题。原文全文存于本目录的 original.md，网站上不显示，待翻译。
+**收录说明**：x.ai 对自动访问返回 403，原文依据 Internet Archive 快照存档；去掉了「Back to news」链接、下载与联系销售按钮和文末「Try Grok Bot today」推广区，视频改为一行链接。去掉了文末无正文的「Meet your first Bot」推广标题。原文全文存于本目录的 original.md，网站上不显示，已翻译。
 
 **内容摘要**：用户在 Grok Bot 中连接 X 账号，若没有开发者账号，系统会代为创建。付费的 Grok Bot 用户可获得免费的 X API 额度。通过 X 连接器登录后，可让 Bot 搜索帖子、读取时间线、查看提及，或汇总 X 上正在发生的事。文中称这是该集成的第一版。另有一个 X 插件，可搜索帖子、读取时间线、拉取趋势和管理书签。
 
 **保留理由**：记录 Grok Bot 与 xAI 自家平台 X 的连接器怎么接入、送什么额度，是连接器一类资料里体现生态联动的一条。
+
+---
+
+Grok Bot 现在与 X 有了更紧密的集成。
+
+在 Grok Bot 中连接你的 X 账号，如果你还没有开发者账号，我们会为你创建一个。付费的 Grok Bot 用户一开始就能获得免费的 X API 额度。
+
+要开始使用，打开 Grok Bot 并使用 X 连接器（connector）登录。
+
+然后让 Bot 搜索帖子、读取你的时间线、查看提及，或汇总 X 上正在发生的事。这是此集成的第一个版本，我们很期待继续让 Grok Bot 在 X 上完成实际工作变得更容易。
+
+此外还有一个 [X 插件（plugin）](https://x.ai/bot/plugin/49086599)，用于搜索帖子、读取时间线、拉取趋势和管理书签。

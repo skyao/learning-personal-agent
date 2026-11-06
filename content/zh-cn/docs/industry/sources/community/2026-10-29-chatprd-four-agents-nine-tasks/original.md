@@ -1,7 +1,7 @@
 来源：https://www.chatprd.ai/how-i-ai/grok-vs-dot-vs-muse-vs-claude-duet-nine-tasks-four-agents-no-universal-winner
 取文：2026-11-06，直接下载
 
-# Grok vs. Dot vs. Muse vs. Claude Duet: Nine Tasks, Four Agents, No Universal Winner
+Grok vs. Dot vs. Muse vs. Claude Duet: Nine Tasks, Four Agents, No Universal Winner
 
 Claire Vo puts four personal agents through nine real tasks. Grok Bot wins the broad work test, Muse handles personal and creative jobs, and the coding favorites expose the limits of an overall score.
 
@@ -160,4 +160,3 @@ Duet was also slow and asked for permission four times, compared with once for e
 What is worth copying is the method: test agents on your own recurring jobs, check access before judging, and compare the finished artifacts. For broad work coordination, I would start with Grok Bot. For household tasks and lightweight creative work, I would start with Muse. For coding, I would still go directly to Codex or Claude.
 
 Human judgment remains at the handoff: checking whether a fix preserves validation, whether a video invents product claims, whether a shopping result matches the requested color, and whether an artifact is something you can actually use. The best agent is the one that reduces that burden for the particular job—not the one that merely finishes first.
-

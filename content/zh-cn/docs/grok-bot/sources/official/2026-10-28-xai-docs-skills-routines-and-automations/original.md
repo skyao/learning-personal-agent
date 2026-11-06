@@ -1,7 +1,7 @@
 来源：https://docs.x.ai/grok-bot/skills-routines-and-automations
 取文：2026-11-06，直接下载（站点提供的 Markdown 版本 https://docs.x.ai/grok-bot/skills-routines-and-automations.md）
 
-# Skills and routines
+Skills and routines
 
 Turn a successful task into a repeatable process. Grok Bot uses two building
 blocks:

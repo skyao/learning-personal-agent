@@ -3535,7 +3535,7 @@ metadata: { "includeInPrompt": false }
 **证据 2**（file（文件））：`opt/hatch/runtime-cell/bin-scopes.conf` 第 50–51 行
 
 > Hiding the cell binary is visibility gating, not
-# a capability boundary.
+a capability boundary.
 
 ~~~~text
 # -- see the SCOPE note above. Hiding the cell binary is visibility gating, not

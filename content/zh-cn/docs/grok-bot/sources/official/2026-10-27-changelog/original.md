@@ -1,7 +1,7 @@
 来源：https://x.ai/changelog/bot
 取文：2026-11-06，原站对自动访问返回 403，取自 Wayback 快照 http://web.archive.org/web/20261104071343/https://x.ai/changelog/bot
 
-# Grok Bot Changelog
+Grok Bot Changelog
 
 Latest v0.78.1·Oct 27, 2026·[RSS](https://x.ai/changelog/bot/rss.xml)
 

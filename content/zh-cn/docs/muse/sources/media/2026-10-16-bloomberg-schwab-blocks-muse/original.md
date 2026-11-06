@@ -1,7 +1,7 @@
 来源：https://www.moneycontrol.com/news/business/after-jpmorgan-charles-schwab-blocks-unauthorised-ai-agents-from-accessing-customer-accounts-14054121.html
 取文：2026-11-06，直接下载。Moneycontrol 署名转载的 Bloomberg 稿件
 
-# After JPMorgan, Charles Schwab blocks unauthorised AI agents from accessing customer accounts
+After JPMorgan, Charles Schwab blocks unauthorised AI agents from accessing customer accounts
 
 Charles Schwab CEO Rick Wurster said the firm is blocking unauthorised AI agents, including Meta's Muse, while developing secure access for external AI tools to view balances and conduct research.
 
@@ -20,4 +20,3 @@ Wurster acknowledged that AI is helping consumers’ finances, but instead of di
 “What that allows us to do is control the authentication process and also control what they can access,” Wurster said. “We’re not going to allow them to move money, but if they want to come in and see their account balances and do research, they will be able to do that through their LLMs.”
 
 Bloomberg
-

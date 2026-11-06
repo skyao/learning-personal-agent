@@ -1,7 +1,7 @@
 来源：https://docs.x.ai/grok-bot/tag-on-x
 取文：2026-11-06，直接下载（站点提供的 Markdown 版本 https://docs.x.ai/grok-bot/tag-on-x.md）
 
-# Tag @bot on X
+Tag @bot on X
 
 Tag [@bot](https://x.com/bot) in a post or reply on X to hand that post to your
 Grok Bot as a task. For example, reply to a thread with:

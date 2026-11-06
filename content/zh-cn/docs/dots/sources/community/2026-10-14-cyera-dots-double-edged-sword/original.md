@@ -1,7 +1,7 @@
 来源：https://www.cyera.com/research/dots-a-double-edged-sword-in-the-workplace
 取文：2026-11-06，直接下载
 
-# Dots: A Double-Edged Sword in the Workplace
+Dots: A Double-Edged Sword in the Workplace
 
 OpenAI’s dot is an always-on agent with your inbox, code, and a computer. See the real risks, from prompt injection to agent drift, and how to contain them.
 
