@@ -1,5 +1,5 @@
 ---
-title: "Dots 实测记录"
+title: "OpenAI Dots 实测记录"
 linkTitle: "实测"
 weight: 40
 no_list: true

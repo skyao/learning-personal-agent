@@ -1,5 +1,5 @@
 ---
-title: "Muse 资料分析和总结"
+title: "Meta Muse 资料分析和总结"
 linkTitle: "分析总结"
 weight: 20
 description: >

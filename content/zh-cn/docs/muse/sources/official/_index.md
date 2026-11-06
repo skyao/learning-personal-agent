@@ -1,5 +1,5 @@
 ---
-title: "Muse 官方资料"
+title: "Meta Muse 官方资料"
 linkTitle: "官方"
 weight: 10
 no_list: true

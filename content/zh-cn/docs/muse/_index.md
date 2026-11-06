@@ -1,9 +1,9 @@
 ---
-title: "Muse"
-linkTitle: "Muse"
+title: "Meta Muse"
+linkTitle: "Meta Muse"
 weight: 100
 description: >
-  Muse 的资料收集与分析
+  Meta Muse 的资料收集与分析
 ---
 
 - [资料收集](sources/)

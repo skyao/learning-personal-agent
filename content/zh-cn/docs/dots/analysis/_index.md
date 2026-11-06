@@ -1,5 +1,5 @@
 ---
-title: "Dots 资料分析和总结"
+title: "OpenAI Dots 资料分析和总结"
 linkTitle: "分析总结"
 weight: 20
 description: >
