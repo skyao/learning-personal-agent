@@ -62,6 +62,14 @@
 
 新增产品时：用户同意纳入后，按 [product-skill-template.md](product-skill-template.md) 新建 `skills/collect-<product>/SKILL.md`，在上表加一行，再按 section-templates.md 建目录。
 
+## 已评估、未纳入的产品
+
+用户判定不收的产品记在这里，避免重复评估。产品形态有重大变化时再重新判断。
+
+| 产品 | 厂商 | 决定日期 | 原因 |
+| --- | --- | --- | --- |
+| Super-agent | DeepSeek（Harness 团队） | 2026-11-06 | 研发向的 Agent 架构设计与开源原型（dsh-superagent），面向代码仓库与团队，无个人上下文，非面向个人的产品 |
+
 ## 行业综合（industry）
 
 - 检索词：`personal AI agent comparison`、`AI agent tested`、`个人智能体 对比`、`个人智能体 评测`
