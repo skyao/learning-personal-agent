@@ -197,7 +197,7 @@ Persom 新版产品还有一个“订阅”功能，你可以让你最亲密的�
 
 如果有一个像 Persom 这样，能了解双方背景的 Personal Agent，它能充当中间人，帮助两位当事人梳理自己的感受、理解彼此的表达方式。
 
-![](images/img-12.png)
+![](images/img-12.jpg)
 
 ![](images/img-13.jpg)
 
