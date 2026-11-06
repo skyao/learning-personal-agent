@@ -13,7 +13,7 @@ description: 收集 Meta Muse（Meta 的个人 AI 智能体）的资料时使用
 | --- | --- |
 | 产品目录 | `content/zh-cn/docs/muse/` |
 | 发布日期 | 2026-09-08（美国） |
-| 最后收集日期 | 2026-11-06（另收用户发来的公众号文章：社区 1 篇，橘AI；对照旧笔记补收媒体 1 篇：Bloomberg 嘉信理财拦截 Muse；22:16 轮次补跑：官方语音稿、墨西哥上线、TechCrunch、The Verge、DataCamp 横评、Medium Muse 101 与六产品横评（仅链接待补原文）、coderlegion、PYMNTS Expedia、语音悄悄上线回填）；2026-11-05（第一阶段完成：官方、媒体、社区、实测；行业综合横评为「仅链接」占位）。下一轮起按新流程：原文存 `original.md`，资料页只写摘要与保留理由，不翻译 |
+| 最后收集日期 | 2026-11-06（另收用户发来的公众号文章：社区 1 篇，橘AI；对照旧笔记补收媒体 1 篇：Bloomberg 嘉信理财拦截 Muse；22:16 轮次补跑：官方语音稿、墨西哥上线、TechCrunch、The Verge、DataCamp 横评、Medium Muse 101 与六产品横评（仅链接待补原文）、coderlegion、PYMNTS Expedia、语音悄悄上线回填；本轮补跑：Yahoo 理财评测、iFynx Secure VM 解析，industry 收 freistyle 六产品横评、老张入门成本对比、Kunal 收件箱实测（仅链接）；发布稿西语版 11-05 墨西哥更新记入 altUrls；Medium Muse 101 与六产品横评已改用转载全文）；2026-11-05（第一阶段完成：官方、媒体、社区、实测；行业综合横评为「仅链接」占位）。下一轮起按新流程：原文存 `original.md`，资料页只写摘要与保留理由，不翻译 |
 | 页面格式 | 与所有产品一致，见 collect-sources 的 source-page.md「页面正文」。第一阶段直接翻译的旧页面已于 2026-11-06 补上内容摘要、保留理由和分隔线（用户 2026-11-06 要求） |
 
 ## 收录范围
@@ -100,11 +100,11 @@ description: 收集 Meta Muse（Meta 的个人 AI 智能体）的资料时使用
 | Tom's Guide「Meta Muse vs ChatGPT Dots」（2026-09-30）、Engadget「OpenAI Dot vs. Meta Muse」（2026-10-11） | 已收入行业综合（2026-11-05） |
 | DataCamp「OpenAI Dots vs Meta Muse」（`datacamp.com/blog/openai-dots-vs-meta-muse`） | 已收（2026-11-05 补跑）：原站 403 已解除，直接下载全文；价格表称 Muse「仅限美国」，与 10 月 23 日日本、10 月 27 日新加坡上线不符，照录原文 |
 | Meta Newsroom「Give Your Muse a Voice」（2026-11-05） | 已收（2026-11-05）：官方，实时语音与表情化身美国上线 |
-| allthingsmuse「Muse Launches in Mexico」（2026-11-05） | 已收（2026-11-05）：媒体，墨西哥上线；官方首发为 Wang 与 @Muse 的 X 帖，未见 Newsroom 专门稿 |
+| allthingsmuse「Muse Launches in Mexico」（2026-11-05） | 已收（2026-11-05）：媒体，墨西哥上线；官方首发为 Wang 与 @Muse 的 X 帖，Newsroom 英文站未见专门稿，但西语新闻中心 11 月 5 日在发布稿西语版追加了墨西哥上线更新（本地连接器另含 Walmart México），已记入发布稿页 altUrls 与本页收录说明 |
 | TechCrunch「Meta says US users can now video chat with their Muse AI avatar」（Sarah Perez，2026-11-05） | 已收（2026-11-05）：媒体，语音视频聊天美国上线；补充 Wang 的 X 演示、Jolly 昵称、Charm 年底前发布 |
 | The Verge「Muse has a voice mode now」（Jay Peters，2026-11-05） | 已收（2026-11-05）：媒体，iOS 上手实测；原文地址经站内搜索定位（theverge.com/tech/1028015/…），Daily Guardian 转载与原文逐段一致 |
-| Medium「Muse 101」（Tim de Rosen，AIVO，2026-11-04） | 已收「仅链接」（2026-11-05）：社区，独立分析（Three Gates 框架、投行预测验算）；Medium 403 且 Wayback 无快照，原文待补抓；文末约 15% 为自家产品推广 |
-| Medium「Proactive AI Agents in 2026」（Lightning Developer，2026-11-03） | 已收「仅链接」（2026-11-05）：industry 六产品横评，OpenClaw/Hermes 两节为实测；Medium 403 且 Wayback 无快照，原文待补抓 |
+| Medium「Muse 101」（Tim de Rosen，AIVO，2026-11-04） | 已收（2026-11-06 改用 AIVO Journal 全文转载，fidelity 转载全文，翻译已完成）：社区，独立分析（Three Gates 框架、投行预测验算）；Medium 403 且 Wayback 无快照；文末约 15% 为自家产品推广 |
+| Medium「Proactive AI Agents in 2026」（Bishakh Ghosh，2026-11-03） | 已收（2026-11-06 改用 AIWithGhost 全文转载，fidelity 转载全文，翻译已完成）：industry 六产品横评，OpenClaw/Hermes 两节为实测；Medium 403 且 Wayback 无快照 |
 | Medium「Claude Duet vs Muse vs dots」（Mike Written，AI Trends 24，2026-11-05） | 不收：二手拼贴、非实测；Muse 准入写成仅限美国，与 11-05 墨西哥上线冲突；无可核查出处，含占位符与自售广告 |
 | coderlegion「One Config Key Was Enough」（Alessandro Pignati，2026-11-02） | 已收（2026-11-05）：社区，Wardle macOS 漏洞的独立分析（企业可见性缺口）；作者为 NeuralTrust 研究员，VentureBeat 引述为二手转述；默认抽取漏正文，取 div.qa-q-view-content 容器 |
 | PYMNTS「Expedia Says Travelers Plan With AI Agents but Book Direct」（2026-11-04） | 已收节选（2026-11-05）：媒体，Expedia-Muse 集成预计美国上线；全文主题为 Expedia 财报，仅摘录 Muse 相关四段 |
@@ -123,6 +123,21 @@ description: 收集 Meta Muse（Meta 的个人 AI 智能体）的资料时使用
 | aiagentslibrary「Meta Muse Wonder: Who Gets Access」（约 2026-10-31） | 暂不收：聚合站；其中「Wonder 已用于 Muse 付费档、免费档仍为 Spark」一事源自 10 月 21 日财报电话会（已决定不收），是否记录这一模型切换事实待 Sky 决定 |
 | 谢华健翻译资讯网 Muse Charm 稿（2026-11-05） | 不收：9 月 23 日 Connect 发布内容的滞后转述，Charm 已收于 Connect 官方页；该站为翻译聚合站 |
 | johnmaartifacts Substack 四产品对比「Meta Muse vs. Grok Bot vs. Instinct vs. ChatGPT Dots」（约 2026-10-26） | 候选，未判断：同一周真实任务跑四款产品，但涉及 dots、Grok Bot、Instinct 等未纳入跟踪的产品，是否收 industry 待 Sky 决定 |
+| Yahoo Finance「Meta's Muse says it can manage your money. Should you let it?」（Kendall Little，2026-09-25，更新 10-22） | 已收（2026-11-06）：媒体，理财功能评测 + ITRC 采访；Yahoo 直接访问被策略拦截，改用 Wayback 10-06 快照（9 月 25 日原版）转载全文；线上版 10-22 更新内容未收录，核对确认其中无 Schwab 相关内容 |
+| iFynx「Meta Muse Secure VM & Confidential VM Explained」（2026-09-16，更新 11-02） | 已收（2026-11-06）：社区，Secure VM/Confidential VM 独立技术分析；直接下载 403，改用网页抓取工具取文；含 10 月 20 日 Confidential VM 设置页传闻 |
+| Freistyle「AI Agents Compared: Dots, Duet, Gemini, Muse, Grok」（Dominic Frei，2026-11-05） | 已收（2026-11-06）：industry 社区，六产品横评（准入、价格、数据治理）；文中称 Muse「仅限美国」与事实不符，照录；作者声明参加 Anthropic 创业计划 |
+| 老张「ChatGPT Dots vs Meta Muse vs Grok Bot vs Claude Duet: Entry Costs」（2026-10-01，更新 11-02） | 已收（2026-11-06）：industry 社区，四产品入门成本与用量规则对照；明言未做同任务实测，结论均据厂商公开文档 |
+| Medium「Grokbot X Muse: The Inbox Test」（Kunal Ugale，2026-10-29，更新 10-31） | 已收「仅链接」（2026-11-06）：industry 社区，真实收件箱对照实测；Medium 403 且 Wayback 无快照，未找到完整转载；摘要依据搜索索引摘录，原文待补抓 |
+| Meta 收购 Conductor（2026-11-04，Axios 首报） | 不收：编码智能体方向，团队加入 Meta Superintelligence Labs 做新界面，属 Muse Code，不收 |
+| ontheground「Personal AI Agents Compared」（Haojun See，2026-11-03） | 不收：内容浅，仅复述厂商公告，无实测与独立分析；同类横评已有更详尽的 freistyle 与老张两篇 |
+| Todd Phillips Substack「Agentic AI Factoid #3A: Indirect Prompt Injection」（2026-10-16） | 不收：法律伦理评论为主，Muse 内容（Marketplace 地址、#MuseMoneyChallenge）已收；提示注入分析在 3B 篇，不在本文 |
+| X 单帖盲测四智能体（@AnalystAIlab，2026-10-27） | 不收：X 单帖，无全文页面；分数摘要（Grok Bot 邮件 96 分领先，Muse 四项均落后于 Grok Bot）记入本轮报告 |
+| YouTube「Muse vs dots vs Grok Bot: The FREE One Almost Won」（2026-10-13） | 不收：视频，无文字稿（Grok Bot 44.5、dots 43.5、Muse 42.5，满分 47） |
+| basinautomations「How I use Grok Bot to run my inbox and calendar」（2026-10-20） | 不收：以 Grok Bot 为主，Muse 仅据官方资料简述，不在跟踪清单 |
+| 语音稿转述（Unite.AI、IT之家、BlockTempo、ezone、蕃新闻、techjuice 等，2026-11-05/06） | 不收：只复述官方 11-05 语音公告，无新信息 |
+| secnews.co.uk 赏金转述（2026-11-04） | 不收：复述已收官方 11-02 赏金回顾，无新信息 |
+| Infobae、Milenio、Expansión 等墨西哥上线西语转述（2026-11-05） | 不收：与已收 allthingsmuse 同事件，无新信息 |
+| Muse Spark 1.1 发布博客（ai.meta.com，2026-11-05 前后） | 不收：模型发布，只说可在 Meta AI 应用中使用，没有说明与 Muse 产品的关系（已有判断，见对照旧笔记） |
 
 ## 对照旧笔记的判断（2026-11-06）
 
