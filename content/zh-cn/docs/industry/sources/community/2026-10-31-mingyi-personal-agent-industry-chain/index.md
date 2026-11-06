@@ -17,7 +17,7 @@ products: [muse, instinct, claude-duet, dots, grok-bot]
 
 {{< source-info >}}
 
-**收录说明**：用户提供链接。原文在微信公众号，用浏览器的客户端标识直接下载页面，从 `#js_content` 抽取正文，图片地址取自 `data-src`。原文没有图片。
+**收录说明**：用户提供链接。原文在微信公众号，用浏览器的客户端标识直接下载页面，从 `#js_content` 抽取正文，图片地址取自 `data-src`。原文没有图片；原文多个一级标题按规则降为二级。
 
 **内容摘要**：文章引用 Meta 10 月 21 日 Q3 财报电话会议的数据（Muse 已突破 1000 万用户、日活超 250 万、两周留存率 23%），把生成式 AI 产品梳理为 chatbot、work agent、personal agent 三个阶段。作者分析 Muse 爆火的原因：Meta 的流量分发能力、7x24 小时云端虚拟机、主动发消息、长期记忆、多任务并行，以及「凭证隔离、独立授权、网络出口控制及人类审批」的安全架构。文章比较 Instinct、Karpo、dots、Duet、Grok Bot 的定位，称 Instinct 在用户量不多的情况下交易额已达 10 亿美金、约 50% 来自旅行场景。最后引用 WIRED 10 月 27 日的六款产品体验与朱啸虎 10 月 21 日的质疑，认为是否需要 Personal Agent，要看它是否帮人省钱、省时间、省精力，是否拓展了能力边界。
 
@@ -27,11 +27,11 @@ products: [muse, instinct, claude-duet, dots, grok-bot]
 
 生成式AI的风终于刮到了C端用户场景。Muse 26年9月份才上线，10月21日Meta在Q3财报电话会议上就披露，已突破1000万用户，日活超250万，两周留存率达到23%，这组增长数据即使跟早期的ChatGPT对比也不遑多让。
 
-# 一、personal agent 是什么
+## 一、personal agent 是什么
 
 在尝试理解这种迅猛增长的原因之前，让我们先简单梳理一下这波生成式AI浪潮，从产品视角经历了哪几个阶段：
 
-## （一）chatbot 阶段
+### （一）chatbot 阶段
 
 以ChatGPT在2022.11月上线为起点，DeepSeek首次把思维链展示给用户为重要节点。这一阶段的AI产品是一种问答引擎。它既能像朋友一样跟用户闲聊（Character.AI是这类产品的代表），又能借助RAG技术替代Google这类通用搜索引擎，回答用户各种知识类问题。
 
@@ -43,7 +43,7 @@ Character.AI作为陪聊类AI产品的代表，前不久刚刚申请破产了，
 
 即使Google目前仍凭借自身海量用户、强大的商业生态，目前也只能勉励维持营收，下滑只是时间问题。唯一的疑问是，以后Google是作为用户的选择之一，还是彻底被AI产品取代。当然Google也在积极推进自己的AI问答产品Gemini。
 
-## （二）work agent 阶段
+### （二）work agent 阶段
 
 chapgpt上线之后大获成功，让很多从业者包括openai自己都相信，生成式AI将首先带来C端应用的全面开花。openai在随后的1-2年内发布了文生视频模型sora及其社区、AI浏览器ChatGPT Atlas、Agent应用市场agent store等。目前这些项目都已经被取消或整合。反而另一条线上，长期被认为是openai的跟随者Anthropic异军突起，主要原因就是Anthropic推出的大模型Claude在coding上能力非常强，彻底打穿了coding这个场景。在这之前，AI编程普遍被认为只能做一些代码智能填充的任务，但是Claude真的做到了可以让AI帮你大段写逻辑代码，甚至整个项目的coding都可以让Claude来完成，用户只需要用自然语言不断给Claude提需求就可以了。
 
@@ -53,7 +53,7 @@ Claude很快在程序员群体传播开来，且由于编程是高价值场景�
 
 除了编程，AI作为work agent目前在以下领域都有产品年度营收ARR达到了1亿美金以上，包括，多媒体影像生成：视频（Seedance、Kling、Runway）、音乐（Suno）、图像与设计（Midjourney、lovart）、短剧（libtv）、数字人（HeyGen）；智能客服（Sierra）；通用办公（Manus、Genspark）；企业知识管理（Glean）；法律（Harvey、Legora）；医疗（EliseAI、Abridge）。
 
-## （三）personal agent 阶段
+### （三）personal agent 阶段
 
 如果说 work agent 偏重于在一般人的工作场景替代或者帮助用户执行工作任务，那么 personal agent 就是在生活场景帮用户安排生活计划、处理琐事、节省时间等。人类对AI早期的想像其实都是类似个人助理的形态，例如诺兰电影《星际穿越》中幽默能干的TARS、《钢铁侠》中的Jarvis等。所以personal Agent其实是更容易被普通用户接受的AI形态，一个能陪你聊天、能解答你问题、在必要时还能帮你干活的助理。但是现在面向C端消费者的personal agent产品发展却远远落后于B端的work agent，显然是因为C端产品在寻找高频强需求场景时遇到了挫折，没有激发用户比较强的付费意愿。
 
@@ -61,9 +61,9 @@ Claude很快在程序员群体传播开来，且由于编程是高价值场景�
 
 “龙虾热”没有持续很长时间，但是OpenCLaw却给后续的personal agent产品打开了新的思路。大家就在想，能不能克服OpenCLaw推广遭遇的问题，给C端用户带来一款受欢迎并且价值可持续的产品？
 
-# 二、那些有热度的 personal agent 产品
+## 二、那些有热度的 personal agent 产品
 
-## （一）Muse
+### （一）Muse
 
 Muse是Meta于26年9月份上线的一款 personal agent 产品。这波 personal agent 的热潮如果说OpenCLaw是起始点，那么Muse就是引爆点。Muse的爆火个人觉得主要是以下几个原因：
 
@@ -91,7 +91,7 @@ OpenClaw之所以没有被大众长期接受，我觉得安全性是个很重要
 
 根据管理层在最新财报会议上透露，Muse目前已经有清晰的PMF（Product Market Fit）。目前最常见的用例是购物，超过四分之一的Muse用户参与其中，平均客单价超过200美元。除购物之外，最常见的用例是个人生产力工具，以及将Muse连接到邮箱和日历等服务。下一步，除了继续打磨产品，就是将Muse普及，形成规模化的网络。
 
-## （二）Instinct
+### （二）Instinct
 
 如果说Muse是大公司personal agent的产品代表，那么Instinct就是创业公司的产品代表。相比Muse，Instinct没有Meta强大的分发渠道，也没有那么多GPU卡。现实的选择就是循序渐进的增长，过程中不断迭代产品。Instinct在营销上是0花费，主要靠邀请制和口碑在传播，每天能够保持10%的速度增长。在营销和功能丰富程度上，Instinct显然无法与Muse竞争。看创始人Noah Shinn的访谈，目前Instinct的迭代非常重视产品设计和用户体验。
 
@@ -103,7 +103,7 @@ Instinct在功能丰富度上不及Muse，它更追求在一些被验证的场�
 
 Instinct相比Muse更早上线的一个功能是Instinct网络，即agent网络。这个功能设计的出发点是让agent代替人，去与朋友同事家人沟通协作。例如，你和朋友们想约一个聚餐，但是你周一有空，小明周二有空，小王周三有空，来回沟通好几次也不一定能敲定合适的聚餐时间。这个时候如果你和朋友都是用Instinct，且都加入了Trusted Person Network（可信联系人网络），那作为每个人代理的Instinct就可以先在日历上查日程确定每个人的空闲时间，然后把这个信息传给其他受信任的Instinct，最终协商确定时间，整个过程不需要人亲自参与。同理，如果需要组织活动，就可以让Instinct在网络上交流每个人平时的爱好，然后由agent网络达成共识。Instinct网络的目的就是把社交、协商、合作中机械重复人不想参与的部分全部交给agent去完成，人只需要享受自己真正感兴趣那部分。这中间比较麻烦的是数据安全，如何设计能让Instinct知道社交的边界，不会泄露允许之外的隐私数据给其他Instinct agent。
 
-## （三）Karpo
+### （三）Karpo
 
 Karpo是国内创业者开发的一款面向海外用户的personal agent产品。对比Muse和Instinct这种通用型personal agent，Karpo的定位就是本地生活垂类场景的personal agent. Karpo创始人也解释了路线选择的原因：一是因为通用agent是大厂的特权，创业公司只有在部分垂类场景把用户体验做的更好才有机会，而不是像大厂在通用agent赛道无差异化的竞争。总结来说，Karpo想做的是用户意图的捕获，以及供给的个性化生成。对Karpo来讲，创造一个能持续捕获用户意图的环境，比费劲去提升模型或者 Browser Use 能力的杠杆更高，因为后者会随着模型进步自然得到解决。
 
@@ -115,17 +115,17 @@ Karpo认为personal agent最重要的是获取意图。Muse和Instinct更强调�
 
 在商业化方面，Karpo目前还没有形成清晰的路径，可能会类似于Instinct的交易抽成。在使用场景上，从26年3月上线iMessage版本到现在，大约50%到60%的用户，主要需求是享受生活、探索、社交和交友，差不多20%是照顾家庭，还有10%是自我提升。
 
-## （四）Dots
+### （四）Dots
 
 Dots是OpenAI在9月底推出的personal agent，依托于自研的强大基座模型GPT-6 Astra，Dots执行任务的成功率、稳定性相比Muse、Instinct更胜一筹，因此更适合需要agent解决复杂长期的任务目标的时候。和Muse一样，Dots同样有云端虚拟机、长期记忆和后台任务7x24小时“aways-on”的特点。
 
 和Muse不同的是，Dots的野心不仅是personal agent，同样想做最好的work agent。目前已推出个人Dot，企业专用Dot，完整的多Dot团队也会逐步开放。考虑是openai推出的产品，它的竞争力来自于GPT-6 Astra、现有ChatGPT用户关系、超过4000个跨应用连接，以及与Codex执行能力的整合。因此，Dots有潜力成为最受欢迎的面向知识工作者的通用personal agent。
 
-## （五）Duet
+### （五）Duet
 
 Duet是Anthropic团队推出的产品，同样依托自研的强大基座大模型Claude Opus 5.5。Duet的目标用户是专业人士和小企业主，为他们提供一个有判断力、能够主动发现问题的AI助理。Duet同样有独立的云端虚拟机、长期记忆、6000多个连接器和插件和后台任务“aways-on”。Duet目前定位偏work agent，尚不允许用户查看它的浏览器支持过程，对订票等个人生活任务的适配也不如专业工作任务成熟。
 
-## （六）Grok Bot
+### （六）Grok Bot
 
 Grok Bot是由原SpaceXAI和Cursor团队合作开发的agent产品，定位也更偏向知识工作、企业运营和数字员工协作，与Muse、Instinct等个人生活Agent有区别。由于Cursor团队在编程agent产品研发方面经验较丰富，多个自主agent协同完成工作是Cursor在编程产品上的最新形态，可以把Grok bot的多bot并行协作看成是这个理念在非编程场景的推广。
 
@@ -144,7 +144,7 @@ Duet：交互界面最佳。任务跟进体验受到好评，但部分实际结�
 
 Instinct：短信交互存在争议。极简交互对部分人有吸引力，但认为不容易观察Agent正在做什么。
 
-# 三、我们真的需要personal agent吗
+## 三、我们真的需要personal agent吗
 
 10月21日，朱啸虎就在一场AI论坛上明确质疑，看不明白personal agent“到底能用来干嘛”。他的质疑基于以下四点：
 
