@@ -4,11 +4,12 @@ linkTitle: "推出 Muse"
 date: 2026-09-08
 originalTitle: "Introducing Muse: The World’s First Personal AI Agent Built for Everyone"
 sourceUrl: "https://about.fb.com/news/2026/09/introducing-muse-personal-ai-agent/"
+altUrls: ["https://about.fb.com/ltam/news/2026/09/presentamos-muse-el-primer-agente-de-ia-personal-del-mundo-creado-para-todos/"]
 publisher: "Meta"
 language: en
 fidelity: 全文翻译
 translation: 已翻译
-collectedAt: 2026-11-04
+collectedAt: 2026-11-06
 updatedAt: 2026-09-30
 tags: [发布, 运行环境, 安全, 开放与价格]
 products: [muse]
@@ -16,7 +17,7 @@ products: [muse]
 
 {{< source-info >}}
 
-**收录说明**：Meta 在 about.fb.com 发布的新闻稿，页面标注 2026-09-30 更新。全文翻译。页面中的视频只保留了标题和链接，链接指向原页面。早期收集时直接翻译，原文未单独存档。
+**收录说明**：Meta 在 about.fb.com 发布的新闻稿，页面标注 2026-09-30 更新。全文翻译。页面中的视频只保留了标题和链接，链接指向原页面。早期收集时直接翻译，原文未单独存档。西语版 11 月 5 日追加更新，确认 Muse 在墨西哥上线（本地连接器另含 Walmart México，见墨西哥上线媒体页）；英文原稿核对于 2026-11-06，未见此更新。
 
 **内容摘要**：Meta 推出 Muse，一个由 Muse Spark 模型驱动、主动帮助用户实现目标的个人 AI 智能体。它运行在每人专用的 Muse Secure VM 上，带有自己的浏览器，关闭应用后继续工作，并在发送电子邮件或购买前回来请求批准。同一台机器上的 Sentinel 智能体与 Muse 在系统层面隔开，Muse 所做的事除非经 Sentinel 批准，否则不会到达互联网。付款可使用 Stripe 的 Link，Muse 看不到密码或付款方式。Muse Confidential VM 今年晚些时候推出，Muse 在美国的 iOS、Android 和 muse.ai 上陆续推出，大部分功能免费，并有订阅方案。
 
