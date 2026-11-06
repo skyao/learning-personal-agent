@@ -17,6 +17,14 @@ products: [dots]
 
 {{< source-info >}}
 
+**收录说明**：这是 OpenAI 在 ChatGPT Learn 发布的文档，全文翻译。文档不标日期，date 取收集日期 2026-11-05。早期收集时直接翻译，原文未单独存档。
+
+**内容摘要**：dot 可以同时跟踪多项职责，在对话之间持续工作，自己决定何时暂停和醒来，也可以把工作分给并行的后台智能体。任务分四类：新的本地任务、已有的本地 Codex 任务、新的云端编程任务和 dot 自己创建的任务，本地任务需要计算机在线并打开 ChatGPT 应用。上下文来自当前对话、检索到的 ChatGPT 对话和 ChatGPT 记忆，持久记忆则是 dot 自己维护的笔记，独立于 ChatGPT 的记忆。在 ChatGPT、Slack、Teams 之间切换不会创建新的 dot，但在私人对话中得到的信息要分享给团队频道仍需许可。主动研究只读取和做私人笔记，不发消息、不改应用、不控制浏览器。
+
+**保留理由**：这篇给出了 dot 的任务类型、记忆分层和主动研究边界的官方说法，其中「dot 的笔记独立于 ChatGPT 记忆」这类细节在别处不容易找到。
+
+---
+
 你的 dot 可以同时跟踪不止一项职责。你可以在同一次对话中切换任务、补充一个细节或调整优先级。描述你需要的结果以及它应该使用的来源。内置的安全防护和应用权限会自动适用；你可以补充更具体的说明。
 
 （界面示意：今天 1:22 PM。用户：「Investigate the checkout feedback. Prepare a fix and a test video for review.」（调查关于结账的反馈。准备一个修复和一段测试视频供审阅。）dot：「I’m investigating the issue and related reports in these tasks:」（我正在以下任务中调查这个问题和相关报告：）任务卡片「Fix mobile checkout」（修复移动端结账，7）、「Investigate related reports」（调查相关报告）。用户：「Focus on mobile first. Keep the desktop behavior.」（先专注移动端。保持桌面端的行为不变。）dot：「The mobile fix is ready in a draft PR. Tests pass, and the task includes a video for your review. I’m still checking the related reports.」（移动端的修复已在一个草稿 PR 中准备好。测试通过，任务中附有一段视频供你审阅。我还在检查相关报告。）输入框：发送消息。右侧面板：Alfred，当前在线；通话；计算机：Alfred 的计算机，已连接；最近活动：修复移动端结账、调查相关报告；产出：修复移动端结账。）

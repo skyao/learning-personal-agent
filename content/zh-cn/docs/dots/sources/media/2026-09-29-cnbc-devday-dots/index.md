@@ -19,6 +19,12 @@ products: [dots]
 
 **收录说明**：原文是 DevDay 当天的滚动直播稿，涉及 IPO、融资、GPT-6.1 Sol、Ultrafast、新 Pro 档位、GPT-6.1 Astra 不发布等二十多条。这里只收两条直接关于 dots 的条目，按原文从早到晚排列。两条均署名 Ashley Capoot。视频与图片未收入。
 
+**内容摘要**：OpenAI 在 DevDay 上推出 dots，一种「始终在线」的 AI 智能体，由 GPT-6 Astra 驱动。dots 有自己的云端计算机，可连接 4,000 多个应用，能从反馈中学习；用户可在 ChatGPT、Slack 和 Teams 中给它发消息，短信功能「即将推出」。dots 先向 ChatGPT 的 Pro 和 Business Premium 用户推出，Enterprise 用户需工作区管理员启用。第二条中，OpenAI 首席财务官 Friar 把 dots 形容为「可以拍拍你肩膀」的智能体。
+
+**保留理由**：这是 DevDay 当天的媒体记录，保留了发布时的推出范围（Pro 和 Business Premium）、4,000 多个应用等数字，以及短信当时仍是「即将推出」的时间点。
+
+---
+
 ## OpenAI 推出 dots，全新的「始终在线」AI 智能体
 
 （美东时间 2026 年 9 月 29 日 13:10）

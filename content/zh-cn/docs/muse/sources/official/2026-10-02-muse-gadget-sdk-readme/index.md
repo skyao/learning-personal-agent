@@ -17,6 +17,14 @@ products: [muse]
 
 {{< source-info >}}
 
+**收录说明**：Meta 在 GitHub（facebookincubator）上的 Gadget SDK 仓库根目录 README.md。全文翻译，文件开头的 Apache 2.0 许可证注释未译出，仓库内各子目录另有 README，未收入本页。日期取仓库创建时间（GitHub API created_at），更新日期为 README.md 最近一次提交的日期。早期收集时直接翻译，原文未单独存档。
+
+**内容摘要**：Muse 小设备是用户自己动手打造的开源设备。仓库提供 ESP32 Device SDK、Linux Device SDK 和手机上的 Muse Gadgets Test 三部分，可用来给 ESP32 开发板或 Raspberry Pi 编程，接入显示屏、按钮、传感器等。刷写或配对前需要获取 SDK 令牌并阅读 SDK 条款，设备通过 Muse 应用的「设置 > 设备」配对，需先打开开发者模式。仓库采用 Apache License 2.0，列出了第三方文件的各自许可证，Jollybot 头像不在许可范围内。
+
+**保留理由**：这是 Muse 开放硬件接入方式的官方出处，写明了 SDK 的构成、配对路径和许可证边界。
+
+---
+
 （译注：本页为仓库根目录 README.md 的全文翻译。文件开头的 Apache 2.0 许可证注释未译出。仓库内各子目录另有 README，未收入本页。）
 
 ![Muse 小设备：一块 Waveshare 圆形 AMOLED 屏、一台 M5Stack StickS3、Muse Home Link、一台 Raspberry Pi 和一块 Seeed reTerminal 电子墨水屏](images/muse-gadgets.png)

@@ -17,6 +17,14 @@ products: [muse]
 
 {{< source-info >}}
 
+**收录说明**：Meta 日本发布的新闻稿，原文为日语，页面显示日期为 2026 年 10 月 23 日，页面元数据为 2026-10-22T23:40:23+00:00（UTC）。全文翻译，原文有一句残缺，已在正文中以译注说明。早期收集时直接翻译，原文未单独存档。
+
+**内容摘要**：Meta 自 10 月 23 日起在日本提供 Muse，是继 9 月的北美之后第一个上线的地区，通过 iOS、Android 和 muse.ai 使用，多数基本功能免费。连接器包括 Gmail、Google 日历、Instagram，以及 Stripe、Shopify、Trip.com、Agoda、Klook；日本本地的 Mercari、Money Forward ME 和 Ticket Pia 的连接正在推进。Muse 运行在每位用户隔离的专用虚拟机 Muse Secure VM 上，由独立的 Sentinel 智能体管理上网，看不到用户的密码和付款方式，发送邮件、购买前会向用户确认。Meta Connect 上发布的高级语音模式、头像和 Muse 专属邮箱，在日本的提供情况将另行通知。
+
+**保留理由**：首个海外上线地区的官方说明，写明了日本的连接器合作伙伴和安全设计的官方表述。
+
+---
+
 [视频：Meta Muse 日本宣传片（30 秒）](https://about.fb.com/ja/wp-content/uploads/sites/15/2026/10/1_Meta_Muse-Campaign_JP_16x9_30sec-2.mp4)
 
 Meta 自 10 月 23 日（日本时间）起，在日本开始提供个人 AI 智能体「Muse」。日本是继今年 9 月率先开始提供服务的北美之外，第一个提供服务的地区。Muse 是全球首个为让任何人都能轻松使用而设计的个人 AI 智能体。它在重视安全性和隐私的同时，不仅回答问题，还能主动支持用户实现目标，并实际推进任务。

@@ -15,6 +15,14 @@ products: [muse]
 
 {{< source-info >}}
 
+**收录说明**：这是 Meta 研究博客的文章，页面标注日期为 2026-10-12。页首的动态标题和交互演示只保留了标题与链接，图表在原文中为图片，按原样引用。早期收集时直接翻译，原文未单独存档。
+
+**内容摘要**：Meta 推出 Muse Wonder 系列，包括 Muse Wonder 和 Muse Wonder Full，称其在个人和职业智能体、记忆和编程基准上达到最先进水平。Muse Wonder 通过 Meta Model API 和 Muse Code 使用，Muse Wonder Full 向 Muse Code 订阅用户开放，Muse 中的体验将很快由它支持，先向订阅用户推出。文章介绍了主动记忆和主动专注两个能力，并列出 MemoryBench、FocusBench、SWE-Marathon、DeepSWE 等评估。安全部分比较了未经授权代码执行、个人信息处理、生物与网络滥用拒绝等指标。
+
+**保留理由**：这是 Muse 底层模型的官方发布说明，说明了它与 Muse 产品的关系和上线顺序。基准结果都是 Meta 自己报告的。
+
+---
+
 [交互演示：页首动态标题（Step-and-repeat typographic hero）](https://research.meta.ai/blog/muse-wonder)
 
 2026 年 10 月 12 日 · 6 分钟阅读

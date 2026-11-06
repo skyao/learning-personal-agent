@@ -16,7 +16,13 @@ products: [muse]
 
 {{< source-info >}}
 
-（译注：原页面以网格排版，各节编号为 01 至 05，网页源码中的顺序为 01、03、04、02、05；以下按编号顺序排列。页首右侧有一幅由字符组成的 Muse 角色图，以下用占位行代替。）
+**收录说明**：这是 Meta 的 Muse Gadgets 站点首页，站点不标日期，页面中也没有结构化日期，日期取收集日期，配套代码仓库创建于 2026-10-02。原页面以网格排版，各节编号为 01 至 05，译文按编号顺序排列。页首右侧的字符画用占位行代替。早期收集时直接翻译，原文未单独存档。
+
+**内容摘要**：Muse Gadgets 是自己动手制作的开源设备。可以给 ESP32 开发板编程，或用 SDK 配置 Raspberry Pi，把 Muse 连接到显示屏、按钮和传感器。Meta 自己做了一款 Muse Home Link，可让 Muse 通过本地 HTTP API 访问家中兼容设备，仅限美国，随有效的 Muse 订阅附赠，每位订阅用户限领一个，10 月发货。设备 SDK 和固件以 Apache 2.0 许可证开源。页面列出了多款项目创意，如 Raspberry Pi 5、Waveshare 圆形 AMOLED 屏、Seeed reTerminal E1002、M5Stack StickS3 等。
+
+**保留理由**：这一页是 Muse 硬件扩展的官方说明，包含 Home Link 的领取条件和开源许可，可与 Peter James 文中发现的 Home Link 文档对照。
+
+---
 
 ## 为你的 [Muse](https://muse.ai) 打造的开源硬件
 

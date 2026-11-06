@@ -16,6 +16,14 @@ products: [muse]
 
 {{< source-info >}}
 
+**收录说明**：这是 Meta 官方新闻稿，全文翻译。原文中的视频和引语图片以链接或图片保留。早期收集时直接翻译，原文未单独存档。
+
+**内容摘要**：Meta 推出 Muse for Small Business，给 Muse 一个目标，比如经营生意或寻找新客户，它就去完成。用户点击几下就能连接 Asana、Box、Canva、Dropbox、Figma、Notion、Shopify、Slack、Stripe、Zoom 等工具，以及 Facebook 和 Instagram 的商业账户。Muse 也支持自定义连接器，有兴趣的合作伙伴可以在 muse.ai/platform 申请。文章给出五个用例的提示词，涉及增长计划、邮件和日历整理、广告改进、财务检查。文中引用了店主和合作伙伴的早期反馈，Meta 强调未经批准不会发布、发送或花费。
+
+**保留理由**：这篇给出了 Muse 面向小企业的官方连接器名单和用例提示词，也能看出 Meta 把 Muse 往商业场景延伸的方向。
+
+---
+
 ## 要点
 
 - 今天，我们宣布推出 [Muse for Small Business](http://muse.ai/business)。Muse 是我们为个人超级智能时代打造的最重要的产品之一。现在，我们正在扩展它能做的事情。

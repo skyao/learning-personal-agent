@@ -16,6 +16,14 @@ products: [muse]
 
 {{< source-info >}}
 
+**收录说明**：Meta 在 about.fb.com 发布的新闻稿，页面标注 2026-09-30 更新。全文翻译。页面中的视频只保留了标题和链接，链接指向原页面。早期收集时直接翻译，原文未单独存档。
+
+**内容摘要**：Meta 推出 Muse，一个由 Muse Spark 模型驱动、主动帮助用户实现目标的个人 AI 智能体。它运行在每人专用的 Muse Secure VM 上，带有自己的浏览器，关闭应用后继续工作，并在发送电子邮件或购买前回来请求批准。同一台机器上的 Sentinel 智能体与 Muse 在系统层面隔开，Muse 所做的事除非经 Sentinel 批准，否则不会到达互联网。付款可使用 Stripe 的 Link，Muse 看不到密码或付款方式。Muse Confidential VM 今年晚些时候推出，Muse 在美国的 iOS、Android 和 muse.ai 上陆续推出，大部分功能免费，并有订阅方案。
+
+**保留理由**：这是 Muse 的官方发布稿，写明了产品形态、安全机制、上线范围和 Confidential VM 的计划。其他资料的官方依据多数可回到这里。
+
+---
+
 [视频：Introducing Muse（发布视频）](https://about.fb.com/wp-content/uploads/2026/09/Introducing-Muse_Sizzle-Video.mp4)
 
 ## 要点

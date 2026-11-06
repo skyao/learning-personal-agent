@@ -19,6 +19,12 @@ products: [dots]
 
 **收录说明**：这是 ChatGPT Learn「What's new」栏目中的 dots 专稿。页首的「返回 What's new」链接未收入。
 
+**内容摘要**：短信功能以测试版向美国的 ChatGPT Pro 用户推出。用户可以通过 iMessage 或 Android 上的 RCS 与 dot 一对一对话，支持文字、照片和语音消息。dot 会根据对话上下文选择联系用户的渠道，用户也可以指定渠道，例如有事才发短信、日常更新留在 ChatGPT。需要批准时，dot 会发一个链接，让用户在 ChatGPT 中审阅请求。
+
+**保留理由**：官方对短信渠道的说明，写明了测试版范围（美国 Pro 用户）、支持的消息类型和批准请求走 ChatGPT 链接的机制，可与 DevDay 时「短信即将推出」的说法对照。
+
+---
+
 2026 年 10 月 26 日至 30 日
 
 短信功能正在以测试版形式向美国的 ChatGPT Pro 用户推出。你可以通过 iMessage 或 Android 上的 RCS 联系你的 dot，进行包含文字、照片和语音消息的一对一对话。

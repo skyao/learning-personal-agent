@@ -17,6 +17,14 @@ products: [dots]
 
 {{< source-info >}}
 
+**收录说明**：这是 OpenAI 在 ChatGPT Learn 发布的企业管理文档，全文翻译。文档不标日期，date 取收集日期 2026-11-05。早期收集时直接翻译，原文未单独存档。
+
+**内容摘要**：面向工作区所有者和管理员，说明如何管理 dots。先用自定义角色给选定群组开通「使用 dots」，并分别控制 Slack 与 Teams 接入、本地计算机访问和自定义规则。只要有一个角色授予访问权限，在另一个角色里关闭并不会移除访问。文档列出了云端和本地计算机、应用访问等管理控制，以及暂停、恢复、删除某个 dot 的方法。监控用工作区分析和 Analytics API，调查用 Compliance API 和审计日志，dots 的记录用 client_id = DOTS 标识。文末说明了成员换岗或离职时移除访问的步骤。
+
+**保留理由**：这是 dots 在企业工作区里权限怎么配、记录去哪里查的官方说明，包含角色叠加规则、client_id = DOTS 这类具体标识，适合和隐私 FAQ、工作区帮助页对照。
+
+---
+
 dot 是 ChatGPT 中的一个个人智能体，可以承担长期工作、使用已连接的应用，并把任务委派给 Work 或 Codex。由你决定谁可以使用 dots、配置它们的能力，并管理整个工作区中的个人 dots。成员们连接自己的账户，并告诉自己的 dot 要做什么。
 
 **[dots 安全指南](https://learn.chatgpt.com/codex/enterprise/dots-security)**

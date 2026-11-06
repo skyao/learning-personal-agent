@@ -16,6 +16,14 @@ products: [muse]
 
 {{< source-info >}}
 
+**收录说明**：这是 Meta 官方新闻稿，全文翻译。原文中的视频以链接保留。早期收集时直接翻译，原文未单独存档。
+
+**内容摘要**：Meta 推出 Muse Wonder 和 Muse Wonder Full，称是迄今能力最强的模型，面向智能体任务，覆盖法律、金融、健康等专业领域和编程。Muse Wonder 从发布当天起通过 Meta Model API 和 Muse Code 向开发者开放，Muse Wonder Full 向 Muse Code 订阅用户开放。Muse Wonder 将很快为 Muse 提供支持，首先面向订阅用户。新模型有主动记忆和主动专注能力，训练上要求避免在未经许可时分享私人信息，并拒绝协助有害请求。
+
+**保留理由**：这篇是 Muse 背后新模型的官方发布稿，写明了开放对象和 Muse 订阅用户优先的安排。
+
+---
+
 ## 要点
 
 - Meta 推出 Muse Wonder 和 Muse Wonder Full，这是我们迄今能力最强的模型，旨在个人和职业领域的智能体任务上提供最先进的性能：从处理保险理赔、理解租约，到构建一个可用的应用。

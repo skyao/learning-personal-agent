@@ -16,6 +16,14 @@ products: [muse]
 
 {{< source-info >}}
 
+**收录说明**：Meta 旗下 Muse Gadgets 网站的产品页，页面不标日期，也没有结构化日期，按规则取收集日期 2026-11-04；页面写明「10 月发货」。全文翻译。早期收集时直接翻译，原文未单独存档。
+
+**内容摘要**：Muse Home Link 是基于 ESP32-C5 芯片的 USB-C 小设备，让 Muse 通过家里的 Wi-Fi 访问兼容设备或本地 HTTP API。硬件为 8 MB PSRAM、8 MB 闪存、Wi-Fi 6，尺寸 35 × 42 × 10 mm，只运行官方固件，不能重新刷写。设置时插上电源，在 Muse 应用中通过低功耗蓝牙配对并选择 Wi-Fi，再添加技能。社区技能支持 Philips Hue、Sonos、Apple TV、Google Nest 音箱和 Samsung 电视等；仅限美国，随有效的 Muse 订阅附赠，每位订阅用户限领一个。
+
+**保留理由**：官方对 Muse 控制家中设备方式的说明，有硬件规格、配对流程和社区技能的免责声明（不要用于安防、紧急和医疗）。
+
+---
+
 [← Muse Gadgets](https://gadgets.muse.ai/)
 
 把 Muse 连接到你家的 Wi-Fi，让它能够访问你已经拥有的兼容设备，或者你用本地 HTTP API 构建的任何东西。社区构建的技能可以让 Muse 打开一盏灯、控制你的电视、把文档发送到打印机等等，具体取决于你的配置。

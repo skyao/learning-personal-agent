@@ -19,6 +19,12 @@ products: [muse]
 
 **收录说明**：原页面的赞助商广告、订阅提示、往期节目列表和评论区未收入。
 
+**内容摘要**：Alex Heath 在 Sources 播客第二期访谈 Mark Zuckerberg 的节目页文字，发布于 2026 年 9 月 8 日。Heath 称 Muse 本质上是给普通人用的 OpenClaw，并强调重视安全。Zuckerberg 说他和 Nat Friedman 招募了 Moxie Marlinspike 来开发 Muse 背后的机密虚拟机，目标是连 Meta 也看不到 Muse 在代表用户做什么。Muse 上线时每周免费提供最多 1 亿个令牌，Zuckerberg 认为 Muse 最终会靠从交易中抽取少量费用来实现收支平衡。节目还谈到数据中心的反对声音、青少年安全和解和智能眼镜的隐私担忧。
+
+**保留理由**：这是 Zuckerberg 本人关于 Muse 定位、免费额度和机密虚拟机来历的说法，其他报道中的相关引述可以回到这里核对。页面只含导语和要点，完整访谈要听音频。
+
+---
+
 [音频：Sources 播客第二期，Mark Zuckerberg 访谈](https://sources.news/p/mark-zuckerberg-meta-muse-ai-podcast-interview)
 
 ## Mark Zuckerberg 谈 Muse：Meta 迄今最大的 AI 押注

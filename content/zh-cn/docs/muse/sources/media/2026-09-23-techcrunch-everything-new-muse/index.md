@@ -17,7 +17,13 @@ products: [muse]
 
 {{< source-info >}}
 
-（译注：文末的作者简介、活动广告和「最受欢迎」列表未译出。）
+**收录说明**：TechCrunch 的报道，作者 Kirsten Korosec 和 Lucas Ropek，页面时间为 2026 年 9 月 23 日（太平洋时间）。全文翻译，文末的作者简介、活动广告和「最受欢迎」列表未译出。内容整理自 Meta Connect 大会上 Zuckerberg 和 Alexandr Wang 的主题演讲。早期收集时直接翻译，原文未单独存档。
+
+**内容摘要**：Meta 在 Connect 大会上宣布了 Muse 的一批新能力。用户可以为 Muse 生成数字头像并实时视频聊天，由新模型 Muse Realtime Avatar 支持；Muse 将登陆 Meta 智能眼镜，Mac 上的计算机操作也会推出，Muse 还将有自己的电子邮件地址。购物方面，Muse 可以访问 Shopify 商品目录，使用 Stripe 的 Link 和 Shop Pay，并新增 PayPal 支持，新的零售商连接器包括 Best Buy、Gap、Sephora、Walmart 和 Wayfair。Meta 开放开发者构建连接器，不到一周收到超过 1,500 份申请。眼镜、Mac 和电子邮件地址都没有给出确切的上线时间。
+
+**保留理由**：这篇汇总了 Connect 大会上宣布的 Muse 新功能和合作方名单，可作为这些功能首次公布的出处和时间参照。
+
+---
 
 Meta 的个人 AI 智能体 Muse 才问世几周，这家社交网络巨头就毫不耽搁地扩建这个可能是它迄今在消费级 AI 上[最大的一次押注](https://techcrunch.com/2026/09/08/meta-debuts-its-muse-ai-agent-will-consumers-trust-it/)。
 

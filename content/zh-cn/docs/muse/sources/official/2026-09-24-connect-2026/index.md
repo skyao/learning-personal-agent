@@ -15,6 +15,14 @@ products: [muse]
 
 {{< source-info >}}
 
+**收录说明**：这是 Meta 官方新闻稿，全文翻译。原文中的视频以链接保留。早期收集时直接翻译，原文未单独存档。
+
+**内容摘要**：Meta 在 Connect 2026 上宣布将在未来几个月把 Muse 带到 AI 眼镜上，用户可以说出智能体的名字，让它针对正在看的东西采取行动，并提供语音模式。Muse 将增加 Walmart、Best Buy 等购物类连接器，并拥有自己的电子邮件地址。Meta 还介绍了口袋设备 Muse Charm，称今年晚些时候公布更多信息。同时发布的有约 100 克重的 Meta VR Glasses、Ray-Ban Meta Audio 眼镜和 Ray-Ban Meta 第三代，到年底 Ray-Ban、Oakley 和 Meta Glasses 的 AI 眼镜款式将超过 100 款。
+
+**保留理由**：这篇汇总了 Connect 当天与 Muse 有关的所有硬件和功能预告，包括 Muse Charm 和 Muse 专属邮箱，可以作为这些说法的最早出处。
+
+---
+
 ## 要点
 
 - 昨天在 Connect 2026 上，我们宣布将把 Muse 带到我们的 AI 眼镜上，让你在一天中都可以免手持地与你的智能体联系，同时还推出了让你的 Muse 变得更好的新功能和连接器。
