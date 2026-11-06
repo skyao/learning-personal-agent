@@ -13,7 +13,7 @@ description: 收集 OpenAI dots（ChatGPT 中始终在线的个人智能体）�
 | --- | --- |
 | 产品目录 | `content/zh-cn/docs/dots/` |
 | 发布日期 | 2026-09-29（OpenAI DevDay 2026 前后发布） |
-| 最后收集日期 | 2026-11-05（第一轮完成：官方、媒体、社区）。第二轮起按新流程：原文存 `original.md`，资料页只写摘要与保留理由，不翻译 |
+| 最后收集日期 | 2026-11-06（对照旧笔记补收社区 1 篇：Cyera）；2026-11-05（第一轮完成：官方、媒体、社区）。第二轮起按新流程：原文存 `original.md`，资料页只写摘要与保留理由，不翻译 |
 | 实测材料 | 用户确认没有（2026-11-05） |
 
 ## 收录范围
@@ -86,6 +86,18 @@ community.openai.com 的 Dots 分类帖子量大，以 bug 报告和功能请求
 | future-stack-reviews.com「ChatGPT Dots, Tested」（Takashi Fujino，10-09） | 已收节选：页首测试概况与第 05、06、10 节（用户 2026-11-04 决定）；其余各节是模板、FAQ 与文档转述 |
 | X 用户 ChrisUniverse 的「dot 擅自给市政府发邮件」帖（2026-10-02） | 不收：没有实证（一手帖无法读取，只有 orcarouter、explainx 转述，OpenAI 未确认），按 collect-sources 的「没有实证的说法」规则处理（用户 2026-11-04 决定） |
 | WIRED「OpenAI Is Developing a ‘Persistent’ AI Agent」（Maxwell Zeff，2026-08-27） | 不收：报道 Codex CLI 中测试的「Persistent mode」与 proactivity 提示词，全文未提 dots，也没有来源说明两者关系（用户 2026-11-05 决定）；日后官方或媒体确认 dots 源自该功能时再收 |
+
+## 对照旧笔记的判断（2026-11-06）
+
+旧笔记 learning-ai-agent 的 dots 部分引用而本笔记没有的来源，逐条判断如下（上文已判断的 1407667、changelog、explainx、aiagentslibrary 不重复）：
+
+| 资料 | 判断 |
+| --- | --- |
+| Cyera「Dots: A Double-Edged Sword in the Workplace」（Yaakov Shpigelman，2026-10-14） | 收入 community：安全研究团队的一手检查，列出约 270 个工具和云端电脑的隔离层次（Debian 13、Kata 虚拟机、bubblewrap、HTTP 代理） |
+| 社区论坛 VeitB「Dots received another round of updates」（10-13，1405896） | 不收：版主转帖。内容（手机端创建、Codex 接续、编辑 Scheduled Tasks、一批修复）在已收的 What's new 专稿和 ChatGPT 发布说明快照中都没有，原始出处未找到；找到后改收原始出处 |
+| GitHub openai/codex issues 55795（Windows 上 Dots 入口消失）、56358（云端 HTTPS 代理证书不含 IPv4 SAN） | 不收：bug 报告，按社区论坛规则处理 |
+| 澎湃新闻「首秀演示意外卡壳」 | 不收：与 IT之家同一事件短讯 |
+| Medium @aiindustrytoday「OpenAI says 1 million dots are working for users」 | 暂不收：原站返回 Cloudflare 验证页；聚合型账号，一百万这个数字的一手出处待查 |
 
 ## 已知问题
 

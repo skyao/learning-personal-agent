@@ -13,7 +13,7 @@ description: 收集 Meta Muse（Meta 的个人 AI 智能体）的资料时使用
 | --- | --- |
 | 产品目录 | `content/zh-cn/docs/muse/` |
 | 发布日期 | 2026-09-08（美国） |
-| 最后收集日期 | 2026-11-05（第一阶段完成：官方、媒体、社区、实测；行业综合横评为「仅链接」占位）。下一轮起按新流程：原文存 `original.md`，资料页只写摘要与保留理由，不翻译 |
+| 最后收集日期 | 2026-11-06（对照旧笔记补收媒体 1 篇：Bloomberg 嘉信理财拦截 Muse）；2026-11-05（第一阶段完成：官方、媒体、社区、实测；行业综合横评为「仅链接」占位）。下一轮起按新流程：原文存 `original.md`，资料页只写摘要与保留理由，不翻译 |
 
 ## 收录范围
 
@@ -111,6 +111,25 @@ description: 收集 Meta Muse（Meta 的个人 AI 智能体）的资料时使用
 | aiagentslibrary「Meta Muse Wonder: Who Gets Access」（约 2026-10-31） | 暂不收：聚合站；其中「Wonder 已用于 Muse 付费档、免费档仍为 Spark」一事源自 10 月 21 日财报电话会（已决定不收），是否记录这一模型切换事实待 Sky 决定 |
 | 谢华健翻译资讯网 Muse Charm 稿（2026-11-05） | 不收：9 月 23 日 Connect 发布内容的滞后转述，Charm 已收于 Connect 官方页；该站为翻译聚合站 |
 | johnmaartifacts Substack 四产品对比「Meta Muse vs. Grok Bot vs. Instinct vs. ChatGPT Dots」（约 2026-10-26） | 候选，未判断：同一周真实任务跑四款产品，但涉及 dots、Grok Bot、Instinct 等未纳入跟踪的产品，是否收 industry 待 Sky 决定 |
+
+## 对照旧笔记的判断（2026-11-06）
+
+旧笔记 learning-ai-agent 的 Muse 部分引用而本笔记没有的来源，逐条判断如下（上表已判断的 Forkast、aiweekly、Tech Jacks、Gizmodo、TNW、IT之家转述、DigitalToday、Malwarebytes、dig.watch、Fox News、Subscription Insider、Reuters 人工客服、Muse Spark Open、Windows 博客、David Senra 访谈不重复）：
+
+| 资料 | 判断 |
+| --- | --- |
+| Bloomberg「After JPMorgan, Charles Schwab blocks unauthorised AI agents…」（2026-10-16，经 Moneycontrol 转载） | 收入 media：嘉信理财 CEO 点名拦截 Muse；IT之家 10-19 的转述不收 |
+| Muse Spark 1.1 发布博客（ai.meta.com） | 不收：模型发布，只说可在 Meta AI 应用中使用，没有说明与 Muse 产品的关系 |
+| ai.meta.com/tools/muse | 不收：页面由脚本渲染，只有标题 |
+| mathrubhumi「Muse AI agent faced security scare before launch」（10-08） | 不收：一手报道是已收的 404 Media |
+| runtimewire「Muse has paid $1.2M in bug bounties」、David Singleton 的 X 帖（11-03） | 不收：官方赏金回顾已收 |
+| OfficeChai 合作伙伴报道（Shopify、PayPal、Instacart、Expedia，09-23） | 不收：Connect 官方页已收 |
+| Times of India、NewsBytes 的 Bill Gates 评价 | 不收：名人观点，无产品信息 |
+| trade2spike「Muse Agent Says It Can Manage Your Money」（10-24） | 不收：转述 Yahoo Finance 10-22 的评测和身份盗窃资源中心的评论；Yahoo Finance 原文值得找，下一轮检索 |
+| alphaforgeusa「An Agent's Memory Is a Database」 | 不收：评论 TIME 报道的观点文 |
+| dev.to ifynx_studio 的 Secure VM 文章 | 不收：已删除（404） |
+| 微信公众号文章 1 篇 | 按 source-types 的规则暂不处理 |
+| IT之家其余 6 篇（亚马逊封禁、真人代拨电话、小企业版、Gadgets、Windows、Wonder） | 不收：均为转述，对应的一手资料已收 |
 
 ## 已知问题
 
