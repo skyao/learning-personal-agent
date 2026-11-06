@@ -15,12 +15,17 @@ def fetch(url):
     except Exception as e:
         print(f"WARN 下载失败 {full}: {e}", file=sys.stderr); done[full] = url; return url
     ext = {b"\x89PNG": ".png", b"GIF8": ".gif", b"RIFF": ".webp", b"\xff\xd8\xff": ".jpg"}
-    suffix = next((v for k, v in ext.items() if data.startswith(k)), ".img")
+    suffix = next((v for k, v in ext.items() if data.startswith(k)), None)
+    if suffix is None:
+        if data[4:12] in (b"ftypavif", b"ftypavis"): suffix = ".avif"
+        elif data.lstrip()[:5] in (b"<svg ", b"<?xml") and b"<svg" in data[:1000]: suffix = ".svg"
+        else: suffix = ".img"
     name = f"img-{len(done)+1:02d}-{hashlib.md5(full.encode()).hexdigest()[:6]}{suffix}"
     open(os.path.join(page_dir, "images", name), "wb").write(data)
     print(f"{name} {len(data)//1024}KB <- {full[:100]}", file=sys.stderr)
     done[full] = "images/" + name; return done[full]
 def repl(m):
     return f"![{m.group(1)}]({fetch(m.group(2))})"
-text = re.sub(r"!\[([^\]]*)\]\(<?([^)\s>]+)>?(?:\s+\"[^\"]*\")?\)", repl, text)
+# 地址里允许出现成对的括号，例如 unnamed%20(10).png
+text = re.sub(r"!\[([^\]]*)\]\(<?((?:[^()\s>]|\([^()\s]*\))+)>?(?:\s+\"[^\"]*\")?\)", repl, text)
 sys.stdout.write(text)
