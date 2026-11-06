@@ -27,7 +27,7 @@ products: [today]
 
 Today 能力
 
-# 一个理解上下文，也能把事情继续推进的 Personal Agent。
+一个理解上下文，也能把事情继续推进的 Personal Agent。
 
 Today 将长期记忆、主动协助和任务执行结合起来，让你无需每次从零开始，就能研究、整理并完成工作。
 
