@@ -137,7 +137,7 @@ basedOnUrl: ""                           # 二手报道：原始报道的地址
   - `localize_images.py <md> <页面目录> [基准URL]`：下载 Markdown 中的图片到 `images/` 并改写链接；改写后的 Markdown 输出到标准输出，要重定向到文件再替换原文件。
   - `shrink_images.py <images目录> [上限KB]`：缩小超过上限的图片（需要 Pillow）。
 - 下载的网页放在临时目录，不放进仓库。
-- 直接下载时用 curl 默认的客户端标识，不伪装成浏览器；被拒绝（403）时按下面的 Wayback 方法处理。
+- 直接下载时可以灵活选择客户端标识（用户 2026-11-06 同意）：先用 curl 默认的标识，返回验证页、403 或内容不全时，换成浏览器的标识（如 `-A "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/120 Safari/537.36"`）。仍被拒绝时按下面的 Wayback 方法处理。不破解验证码、不登录、不使用他人账号。
 - 常见情况（2026-11-05 补抓行业综合资料时整理）：
   - 图片延迟加载的站点（如 WordPress 的 `data-lazy-src`），`src` 只是 `data:image/svg` 占位，抽取前先把真实地址换回 `src`。
   - Substack 文章可用 `<站点>/api/v1/posts/<slug>` 取得 JSON，正文在 `body_html`；播客文字稿由页面脚本加载，静态页面和该接口都拿不到。
@@ -151,14 +151,24 @@ basedOnUrl: ""                           # 二手报道：原始报道的地址
 
 ## 原站拒绝自动访问时：使用 Internet Archive 存档
 
-原站对直接下载和网页抓取工具都返回 403 等拒绝时，不得绕过（不伪装客户端、不破解验证）。可以改用 Internet Archive（Wayback Machine）的公开快照（用户 2026-11-05 同意）：
+原站对直接下载（包括换用浏览器的客户端标识）和网页抓取工具都返回 403 等拒绝时，不得绕过（不破解验证、不登录）。可以改用 Internet Archive（Wayback Machine）的公开快照（用户 2026-11-05 同意）：
 
 1. 查询是否有快照：`https://archive.org/wayback/available?url=<不带协议的地址>`，返回最近一次快照的时间戳。
 2. 下载原始页面：`https://web.archive.org/web/<时间戳>id_/https://<地址>`（`id_` 返回不带存档工具栏的原始 HTML）。响应可能是 gzip 压缩的，先解压再抽取。
 3. 页面按转载处理：`fidelity` 用「转载全文翻译」或「转载全文」，`sourceUrl` 仍填原站地址，`reprintUrl` 填快照地址，`dateNote` 写明快照时间。快照可能比原站当前版本旧，以后原站可访问时以原站为准。
 4. 页面中的图片可同样通过 `https://web.archive.org/web/<时间戳>im_/<图片地址>` 下载。
 
-微信公众号不适用此方法（暂不收集，见 source-types.md）。
+微信公众号不适用此方法（Wayback 一般没有快照），按下一节直接下载。
+
+## 微信公众号
+
+用户 2026-11-06 决定收公众号原文，链接多由用户手工发来（见 source-types.md）。
+
+1. 下载：`curl -sL -A "<浏览器标识>" "<链接>"`。curl 默认标识只拿到约 18 KB 的验证页；正常页面有数 MB，含 `id="js_content"`。
+2. 元数据从页面脚本取：`var nickname = htmlDecode("…")` 是公众号名，`<meta name="author">` 是作者，`create_time = "<Unix 时间>"` 是发布时间（换算成北京时间取日期，写进 `dateNote`），`biz`、`mid`、`idx`、`sn` 拼出长地址 `https://mp.weixin.qq.com/s?__biz=<biz>&mid=<mid>&idx=<idx>&sn=<sn>`。用户发来的短地址（`/s/<id>`）填 `sourceUrl`，长地址填 `altUrls`，去重时两种都比对。
+3. 正文容器是 `#js_content`，带 `visibility: hidden` 样式；图片是延迟加载，真实地址在 `data-src`。抽取前先把 `data-src` 换成 `src`，再 `extract.py <html> '#js_content'`。
+4. 图片在 `mmbiz.qpic.cn`，`localize_images.py` 以原文链接作 Referer 可以下载。文末常有作者名片、二维码、往期推荐、关注引导，属于推广，删去并在收录说明写明。
+5. `publisher` 写公众号名，所属媒体不同名时加括注，如「亿邦AI（亿邦动力）」；类型目录按发布方判断：媒体的公众号放 `media/`，个人公众号放 `community/`。
 
 ## 原文更新
 
