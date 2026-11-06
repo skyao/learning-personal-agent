@@ -49,7 +49,7 @@ content/zh-cn/docs/
    ```bash
    grep -rhE "^(sourceUrl|altUrls):" content/zh-cn/docs --include=index.md | sort
    ```
-2. **检索。** 按产品 skill 列出的渠道，先查官方，再查媒体与社区，时间范围从「最后收集日期」前三天起（覆盖时区与延迟收录）。首次收集不限起始日期，并对照旧笔记 learning-ai-agent（`../learning-ai-agent/content/zh-cn/agents/personal/<产品>/`，尤其是资料索引页）中引用过的来源，逐条判断是否收录：旧笔记常引用通用帮助页里的产品小节和应用商店页，单靠检索容易漏掉（用户 2026-11-05 建议）。行业综合按 tracking.md 中的关键词检索。
+2. **检索。** 按产品 skill 列出的渠道，先查官方，再查媒体与社区，时间范围从「最后收集日期」前三天起（覆盖时区与延迟收录）。首次收集不限起始日期，并对照旧笔记 learning-ai-agent（`../learning-ai-agent/content/zh-cn/agents/personal/<产品>/`，尤其是资料索引页）中引用过的来源，逐条判断是否收录：旧笔记常引用通用帮助页里的产品小节、应用商店页和厂商的另一套文档站（如 Grok Bot 在 cursor.com 之外还有 docs.x.ai），单靠检索容易漏掉（用户 2026-11-05 建议）。行业综合按 tracking.md 中的关键词检索。
 3. **筛选。** 逐条判断：
    - 是否与 Personal Agent 相关（标准见 tracking.md）。模型类资料按 tracking.md 的「模型资料的收录原则」判断：只收明确与 Personal Agent 相关的。
    - 是否重复：同一 URL、`altUrls` 中的地址、同一文章的转载、同一内容的不同语言版本，都算重复。发现已收资料的新地址时，补进它的 `altUrls`。已有转载版而找到原文时，用原文替换，更新 `fidelity`。

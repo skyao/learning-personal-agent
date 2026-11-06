@@ -13,7 +13,7 @@ description: 收集 Claude Duet（Anthropic）的资料时使用：Claude Duet �
 | --- | --- |
 | 产品目录 | `content/zh-cn/docs/claude-duet/` |
 | 发布日期 | 2026-10-21（研究预览，美国 Pro、Max、Ultra，候补名单） |
-| 最后收集日期 | 2026-11-05（第一轮完成：官方 7 篇、社区 2 篇；媒体没有符合条件的；行业综合中另有 4 篇涉及 Claude Duet） |
+| 最后收集日期 | 2026-11-06（第一轮 2026-11-05：官方 7 篇、社区 2 篇；2026-11-06 对照旧笔记补收官方 1 篇、社区 2 篇，行业综合 2 篇；媒体仍没有符合条件的） |
 | 实测材料 | 用户确认没有（2026-11-05） |
 
 从一开始就按新流程：原文存 `original.md`，资料页只写摘要与保留理由，不翻译。
@@ -32,6 +32,7 @@ description: 收集 Claude Duet（Anthropic）的资料时使用：Claude Duet �
 | claude.com 文章 | `claude.com/resources/articles/<slug>`；用 `claude.com/sitemap.xml` 查找含 duet 的地址 | 发布文、安全隐私文 | 直接下载；正文到「## Related articles」为止，去掉分类、日期、阅读时长信息栏 |
 | 产品页 | `claude.com/product/claude-duet` | 定位、连接器、模拟对话、FAQ | 直接下载；FAQ 的问题在 `<button>` 中，`extract.py` 会删掉 button，抽取前先 unwrap |
 | 帮助中心 | `support.claude.com/en/articles/<id>`；搜索 `support.claude.com/en/?q=duet` | 入门、Link、Shop Pay 等 | 直接下载；日期取结构化数据的 `dateModified` |
+| 合作方新闻稿 | 如 `stripe.com/newsroom/news/anthropic-and-stripe` | 合作方为 Claude Duet 发布的集成公告，含 Anthropic 方的引语 | 直接下载；放 `official/`，`publisher` 写合作方 |
 | 发布说明 | `support.claude.com/en/articles/12138966-release-notes` | 只收 Claude Duet 条目，每条一页，`fidelity: 节选` | 直接下载 |
 
 anthropic.com 的 news 下没有 Claude Duet 页面（`/news/claude-duet` 返回 404），发布文在 claude.com。
@@ -62,6 +63,28 @@ anthropic.com 的 news 下没有 Claude Duet 页面（`/news/claude-duet` 返回
 | 中文、日文媒体（INSIDE、iThome、TechNews 科技新报、财联社、凤凰科技、Gizmodo Japan 等）与各语言转述站 | 暂不收：据检索摘要判断为复述发布文，未逐篇打开核实；下一轮如有时间可抽查 |
 | botsinproduction.com「I built a Claude Duet by hand a year ago」 | 未细看：Hacker News 上 1 分，暂不收 |
 | myclaw.ai、eesel.ai、mindstudio.ai、DataCamp 等的「review」「explained」文章 | 不收：厂商或工具站的博客；myclaw.ai 自述依据发布周材料而非实测，其余据检索摘要判断，未逐篇打开 |
+
+## 对照旧笔记的判断（2026-11-06）
+
+旧笔记 learning-ai-agent 的 Claude Duet 部分引用而本笔记没有的来源，逐条判断如下（上表已列的 Inc.、MacRumors 不重复）：
+
+| 资料 | 判断 |
+| --- | --- |
+| Stripe「Stripe and Anthropic help entrepreneurs run their business inside Claude Duet」（2026-10-21） | 收：Link 钱包与 Stripe MCP 接入 Claude Duet 的官方说明 |
+| Chris Alarcon「Claude Duet (2026): My First Day, Access, and Your Limits」（2026-10-29） | 收：Max 套餐第一天的上手记录；文首记有 10-30 的套餐改名（Max 5x 改为 Max，Max 20x 改为 Ultra） |
+| ChatPRD「Claude Duet Is Beautiful. That Doesn't Make It My Go-To Agent.」（Claire Vo，2026-10-26） | 收：多项任务实测。Lenny's Newsletter 的同期节目页只是节目列表，不另收 |
+| coocolab「Claude Duet 實測：我花 10 小時玩透」（Jimmy，2026-11-03） | 不收：标题说九件事，正文只列五点，大量卡片式套话，具体操作少，判断为 SEO 写法 |
+| ChatPRD「Grok vs. Dot vs. Muse vs. Claude Duet」（Claire Vo，2026-10-29） | 收入 industry/community |
+| 掘金「六周四家巨头入场：主动式 Agent 的架构长什么样？」 | 不收：转述官方说明，无实测 |
+| TechTimes「Claude Duet Passed Safety Review, Then Accessed Georgia Paywall…」（2026-10-26） | 不收：事件出自 Axios，原文说是 Anthropic 内部统计项目中的 Claude，并非 Claude Duet，标题把两者混在一起；其余是对官方安全文的转述 |
+| 帮助中心的记忆、用量限制、limit reset、连接器、Cowork 与 chat 页 | 不收：通用帮助页，讲 Claude Duet 的只有一两句，入门帮助页已写明（可搜索过往对话、共用记忆） |
+| dnyuz「I tested every major AI agent for a day」 | 已收：是 WIRED 原文的转载，industry 中已收 WIRED 原文 |
+| 帮助中心入门页的中文版 | 补进入门帮助页的 `altUrls` |
+| claude.com/pricing、LinkedIn 套餐改名帖 | 不收：定价页没有提到 Claude Duet；改名的事实见 Chris Alarcon 一文 |
+| Anthropic research 的 auto mode、Managed Agents、prompt injection、trustworthy agents 文章 | 不收：按收录范围只作背景 |
+| Hacker News 讨论（item 50186455） | 不收：讨论区，所讨论的是已收的发布文 |
+| nerdschalk、VentureBeast first-look、aiagentslibrary 的 Duet 评测、HUMAN Security「Sightline detects Claude Duet」 | 暂不收：原站 403 或只由脚本加载，Wayback 没有快照；HUMAN Security 的文章可能有新信息，需要时请用户在浏览器中复制 |
+| YouTube 视频 3 个 | 不收：没有文字稿 |
 
 ## 命名约定
 
