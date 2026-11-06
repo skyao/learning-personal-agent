@@ -7,7 +7,7 @@
 把一篇外文资料的原文译为中文，写入它的资料页。
 
 - 输入：资料目录下的 `original.md`（原文全文存档）。
-- 输出：同目录的 `index.md`，在文件末尾追加「译文」一节，并修改 frontmatter 的 `translation`。
+- 输出：同目录的 `index.md`，在文件末尾的分隔线下追加译文（不加「译文」标题），并修改 frontmatter 的 `translation`。
 
 ## 找出待翻译的资料
 

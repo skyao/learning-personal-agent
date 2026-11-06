@@ -56,7 +56,7 @@ content/zh-cn/docs/
    - 是否可信：按 source-types.md 判断；SEO 聚合站、内容农场、无署名的搬运站直接放弃。
    - 是否有实质内容：只复述官方公告、没有新信息的媒体稿不收；同一事件优先收官方原文和一手报道。
 4. **取全文并判断。** 按 source-page.md 的「取全文」一节和产品 skill 中的抓取方法取得原文全文，抽取结果直接由脚本写入临时文件，再决定收不收（读法见「省用量的做法」）。原文无法读取（付费墙、反爬）时，找完整转载并在 `fidelity` 注明；只能取得部分内容时标为节选。取不到可信全文的资料不收，记入本轮报告。
-5. **保存。** 按 [references/source-page.md](references/source-page.md) 的规则：外文原文由脚本整理后存为 `original.md`，图片下载到 `images/`；写 `index.md`（frontmatter、收录说明、摘要、保留理由），`translation` 填「待翻译」。放入对应类型目录，打标签。
+5. **保存。** 资料页的结构所有产品一致：来源信息块，收录说明、内容摘要、保留理由三段，分隔线，正文（见 source-page.md 的「页面正文」）。按 [references/source-page.md](references/source-page.md) 的规则：外文原文由脚本整理后存为 `original.md`，图片下载到 `images/`；写 `index.md`（frontmatter、收录说明、摘要、保留理由），`translation` 填「待翻译」。放入对应类型目录，打标签。
 6. **校验。** 运行 `npm run build`，退出码必须为 0；确认新页面出现在 `sources/` 清单中。
 7. **更新状态。** 在产品 skill 中更新「最后收集日期」；行业综合的日期在 tracking.md 中更新。收集中发现的新渠道、抓取方法或页面结构问题，补进产品 skill 的对应小节。
 8. **提交。** 资料收集单独提交，不与其他修改混在一起。提交信息写明产品与篇数，例如 `collect: muse 3 篇，industry 2 篇`。
