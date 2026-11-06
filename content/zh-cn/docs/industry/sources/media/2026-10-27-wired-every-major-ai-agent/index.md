@@ -13,7 +13,7 @@ translation: 已翻译
 collectedAt: 2026-11-05
 dateNote: "页面元数据发布时间 2026-10-27T05:30:00-04:00"
 tags: [实测评测]
-products: [muse, dots, claude-duet, gemini-spark, grok-bot]
+products: [muse, dots, claude-duet, gemini-spark, grok-bot, instinct]
 ---
 
 {{< source-info >}}

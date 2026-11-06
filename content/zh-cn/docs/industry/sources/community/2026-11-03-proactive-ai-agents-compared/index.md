@@ -12,7 +12,7 @@ translation: 待翻译
 collectedAt: 2026-11-05
 dateNote: "页面元数据为 2026-11-03T05:26:36Z；文中自述事实核查于 2026-10-31"
 tags: [实测评测, 安全, 持续执行, 运行环境]
-products: [dots, muse, grok-bot]
+products: [dots, muse, grok-bot, instinct]
 ---
 
 {{< source-info >}}
