@@ -58,6 +58,7 @@
 | today | Today AI | 齐俊元创办的初创公司（汇翮智能 / TODAY AI PTE. LTD.） | `skills/collect-today/SKILL.md` |
 | gemini-spark | Gemini Spark（2026-10 起称 Task） | Google | `skills/collect-gemini-spark/SKILL.md` |
 | instinct | Instinct | Spear Street Technology（创始人 Noah Shinn） | `skills/collect-instinct/SKILL.md` |
+| workbuddy | WorkBuddy | 腾讯（CodeBuddy 团队） | `skills/collect-workbuddy/SKILL.md` |
 
 新增产品时：用户同意纳入后，按 [product-skill-template.md](product-skill-template.md) 新建 `skills/collect-<product>/SKILL.md`，在上表加一行，再按 section-templates.md 建目录。
 
