@@ -19,6 +19,9 @@ def fetch(url):
     if suffix is None:
         if data[4:12] in (b"ftypavif", b"ftypavis"): suffix = ".avif"
         elif data.lstrip()[:5] in (b"<svg ", b"<?xml") and b"<svg" in data[:1000]: suffix = ".svg"
+        elif data.lstrip()[:1] in (b"{", b"[", b"<"):
+            # 返回的是 JSON 或 HTML 错误页（如过期的临时图片地址），不当图片保存
+            print(f"WARN 不是图片 {full}: {data[:80]!r}", file=sys.stderr); done[full] = url; return url
         else: suffix = ".img"
     name = f"img-{len(done)+1:02d}-{hashlib.md5(full.encode()).hexdigest()[:6]}{suffix}"
     open(os.path.join(page_dir, "images", name), "wb").write(data)
