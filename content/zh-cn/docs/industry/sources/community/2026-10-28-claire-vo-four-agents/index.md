@@ -4,6 +4,7 @@ linkTitle: "Claire Vo：四个智能体九项任务"
 date: 2026-10-28
 originalTitle: "Grok vs. Dot vs. Muse vs. Claude Duet: which one crushes the competition?"
 sourceUrl: "https://www.lennysnewsletter.com/p/grok-vs-dot-vs-muse-vs-claude-duet"
+altUrls: ["https://www.lennysnewsletter.com/p/how-i-ai-grok-vs-dot-vs-muse-vs-duet"]
 author: "Claire Vo"
 publisher: "Lenny's Newsletter"
 language: en
