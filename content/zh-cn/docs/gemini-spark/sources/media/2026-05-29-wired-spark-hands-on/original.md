@@ -3,7 +3,7 @@
 
 Google’s new AI agent combed through my emails, documents, and calendar to plan a birthday party and still didn’t clock the person most important to me.
 
-![Photo Illustration of multiple hands on an Iphone](images/img-01-93edf1.webp)
+![Photo Illustration of multiple hands on an Iphone](images/img-01-93edf1.jpg)
 
 Photo-Illustration: Jobanny Cabrera; Getty Images
 
