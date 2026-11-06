@@ -168,7 +168,9 @@ basedOnUrl: ""                           # 二手报道：原始报道的地址
 2. 元数据从页面脚本取：`var nickname = htmlDecode("…")` 是公众号名，`<meta name="author">` 是作者，`create_time = "<Unix 时间>"` 是发布时间（换算成北京时间取日期，写进 `dateNote`），`biz`、`mid`、`idx`、`sn` 拼出长地址 `https://mp.weixin.qq.com/s?__biz=<biz>&mid=<mid>&idx=<idx>&sn=<sn>`。用户发来的短地址（`/s/<id>`）填 `sourceUrl`，长地址填 `altUrls`，去重时两种都比对。
 3. 正文容器是 `#js_content`，带 `visibility: hidden` 样式；图片是延迟加载，真实地址在 `data-src`。抽取前先把 `data-src` 换成 `src`，再 `extract.py <html> '#js_content'`。
 4. 图片在 `mmbiz.qpic.cn`，`localize_images.py` 以原文链接作 Referer 可以下载。文末常有作者名片、二维码、往期推荐、关注引导，属于推广，删去并在收录说明写明。
-5. `publisher` 写公众号名，所属媒体不同名时加括注，如「亿邦AI（亿邦动力）」；类型目录按发布方判断：媒体的公众号放 `media/`，个人公众号放 `community/`。
+5. 标题层级：公众号常把一级标题当小节标题用，抽取后先删去只有 `#` 的空标题行，再按「正文规则」的标题层级规则降级（多个一级标题时全部降一级）。正文整体用一级标题字号排版的（几十上百段都是 `#`），按普通段落保存，在收录说明写明。文末的 `---` 分隔线若只是引出推广内容，随推广一起删去。
+6. 文章主要写某个跟踪产品时（例如写 Today 创始人的融资），仍按用户指定的位置放；用户要求放行业综合的，`products` 里列出该产品。
+7. `publisher` 写公众号名，所属媒体不同名时加括注，如「亿邦AI（亿邦动力）」；类型目录按发布方判断：媒体的公众号放 `media/`，个人公众号放 `community/`。
 
 ## 原文更新
 
