@@ -4,6 +4,7 @@ linkTitle: "文档：Teams 与 Enterprise"
 date: 2026-11-05
 originalTitle: "Grok Bot for Teams and Enterprise"
 sourceUrl: "https://cursor.com/docs/grok-bot/teams"
+altUrls: ["https://docs.x.ai/grok-bot/teams-and-enterprises"]
 author: "未署名"
 publisher: "Cursor（Grok Bot 文档）"
 language: en

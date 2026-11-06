@@ -4,6 +4,7 @@ linkTitle: "文档：使用场景"
 date: 2026-11-05
 originalTitle: "Grok Bot use cases"
 sourceUrl: "https://cursor.com/docs/grok-bot/use-cases"
+altUrls: ["https://docs.x.ai/grok-bot/use-cases"]
 author: "未署名"
 publisher: "Cursor（Grok Bot 文档）"
 language: en

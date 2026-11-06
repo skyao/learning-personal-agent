@@ -4,6 +4,7 @@ linkTitle: "文档：概览"
 date: 2026-11-05
 originalTitle: "Grok Bot"
 sourceUrl: "https://cursor.com/docs/grok-bot"
+altUrls: ["https://docs.x.ai/grok-bot/overview"]
 author: "未署名"
 publisher: "Cursor（Grok Bot 文档）"
 language: en

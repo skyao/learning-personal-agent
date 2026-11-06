@@ -4,6 +4,7 @@ linkTitle: "文档：管理计算机"
 date: 2026-11-05
 originalTitle: "Manage Grok Bot computers"
 sourceUrl: "https://cursor.com/docs/grok-bot/computers"
+altUrls: ["https://docs.x.ai/grok-bot/computers"]
 author: "未署名"
 publisher: "Cursor（Grok Bot 文档）"
 language: en

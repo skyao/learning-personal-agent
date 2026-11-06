@@ -4,6 +4,7 @@ linkTitle: "文档：组织部署"
 date: 2026-11-05
 originalTitle: "Deploy Grok Bot to your organization"
 sourceUrl: "https://cursor.com/docs/grok-bot/deployment"
+altUrls: ["https://docs.x.ai/grok-bot/deployment"]
 author: "未署名"
 publisher: "Cursor（Grok Bot 文档）"
 language: en

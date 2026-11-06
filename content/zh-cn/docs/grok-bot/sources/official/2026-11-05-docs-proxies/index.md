@@ -4,6 +4,7 @@ linkTitle: "文档：TLS 检查代理"
 date: 2026-11-05
 originalTitle: "Configure TLS-inspecting proxies"
 sourceUrl: "https://cursor.com/docs/grok-bot/proxies"
+altUrls: ["https://docs.x.ai/grok-bot/proxies"]
 author: "未署名"
 publisher: "Cursor（Grok Bot 文档）"
 language: en

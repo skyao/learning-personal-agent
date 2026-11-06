@@ -4,6 +4,7 @@ linkTitle: "文档：推理钩子"
 date: 2026-11-05
 originalTitle: "Grok Bot inference hooks"
 sourceUrl: "https://cursor.com/docs/grok-bot/inference-hooks"
+altUrls: ["https://docs.x.ai/grok-bot/inference-hooks"]
 author: "未署名"
 publisher: "Cursor（Grok Bot 文档）"
 language: en

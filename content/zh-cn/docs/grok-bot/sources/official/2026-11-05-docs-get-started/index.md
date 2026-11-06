@@ -4,6 +4,7 @@ linkTitle: "文档：开始使用"
 date: 2026-11-05
 originalTitle: "Get started with Grok Bot"
 sourceUrl: "https://cursor.com/docs/grok-bot/get-started"
+altUrls: ["https://docs.x.ai/grok-bot/get-started"]
 author: "未署名"
 publisher: "Cursor（Grok Bot 文档）"
 language: en

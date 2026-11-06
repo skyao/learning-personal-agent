@@ -4,6 +4,7 @@ linkTitle: "文档：安全"
 date: 2026-11-05
 originalTitle: "Grok Bot security"
 sourceUrl: "https://cursor.com/docs/grok-bot/security"
+altUrls: ["https://docs.x.ai/grok-bot/security"]
 author: "未署名"
 publisher: "Cursor（Grok Bot 文档）"
 language: en

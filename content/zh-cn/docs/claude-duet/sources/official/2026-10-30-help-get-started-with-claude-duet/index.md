@@ -4,6 +4,7 @@ linkTitle: "帮助：入门"
 date: 2026-10-30
 originalTitle: "Get started with Claude Duet"
 sourceUrl: "https://support.claude.com/en/articles/17631495-get-started-with-claude-duet"
+altUrls: ["https://support.claude.com/zh-CN/articles/17631495-开始使用-claude-duet"]
 author: "未署名"
 publisher: "Anthropic"
 language: en

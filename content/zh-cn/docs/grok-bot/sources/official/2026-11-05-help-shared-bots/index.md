@@ -4,6 +4,7 @@ linkTitle: "帮助：共享 Bot"
 date: 2026-11-05
 originalTitle: "Shared Bots"
 sourceUrl: "https://cursor.com/help/grok-bot/shared-bots"
+altUrls: ["https://docs.x.ai/grok-bot/shared-bots"]
 author: "未署名"
 publisher: "Cursor（Grok Bot 文档）"
 language: en

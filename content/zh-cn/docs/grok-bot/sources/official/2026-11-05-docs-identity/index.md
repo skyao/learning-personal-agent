@@ -4,6 +4,7 @@ linkTitle: "文档：身份与访问"
 date: 2026-11-05
 originalTitle: "Configure identity and access"
 sourceUrl: "https://cursor.com/docs/grok-bot/identity"
+altUrls: ["https://docs.x.ai/grok-bot/identity-and-access"]
 author: "未署名"
 publisher: "Cursor（Grok Bot 文档）"
 language: en

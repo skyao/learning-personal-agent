@@ -4,6 +4,7 @@ linkTitle: "文档：私有网络"
 date: 2026-11-05
 originalTitle: "Connect to private networks"
 sourceUrl: "https://cursor.com/docs/grok-bot/private-networks"
+altUrls: ["https://docs.x.ai/grok-bot/private-networks"]
 author: "未署名"
 publisher: "Cursor（Grok Bot 文档）"
 language: en
