@@ -13,7 +13,7 @@ description: 收集 Meta Muse（Meta 的个人 AI 智能体）的资料时使用
 | --- | --- |
 | 产品目录 | `content/zh-cn/docs/muse/` |
 | 发布日期 | 2026-09-08（美国） |
-| 最后收集日期 | 2026-11-06（另收用户发来的公众号文章：社区 1 篇，橘AI；对照旧笔记补收媒体 1 篇：Bloomberg 嘉信理财拦截 Muse；22:16 轮次补跑：官方语音稿、墨西哥上线、TechCrunch、The Verge、DataCamp 横评、Medium Muse 101 与六产品横评（仅链接待补原文）、coderlegion、PYMNTS Expedia、语音悄悄上线回填；本轮补跑：Yahoo 理财评测、iFynx Secure VM 解析，industry 收 freistyle 六产品横评、老张入门成本对比、Kunal 收件箱实测（仅链接）；发布稿西语版 11-05 墨西哥更新记入 altUrls；Medium Muse 101 与六产品横评已改用转载全文）；2026-11-05（第一阶段完成：官方、媒体、社区、实测；行业综合横评为「仅链接」占位）。下一轮起按新流程：原文存 `original.md`，资料页只写摘要与保留理由，不翻译 |
+| 最后收集日期 | 2026-11-06（22:16 轮次补跑：官方 Spaces 稿、研究博客特化模型（Active Memory/Focus，PSI 47%），媒体 TechCrunch 与 The Verge 的 Spaces 报道、allthingsmuse Instacart 自绘购物车报道（11-04），industry 收 Enterpret 12 款智能体用户排名（11-03）；另收用户发来的公众号文章：社区 1 篇，橘AI；对照旧笔记补收媒体 1 篇：Bloomberg 嘉信理财拦截 Muse；22:16 轮次补跑：官方语音稿、墨西哥上线、TechCrunch、The Verge、DataCamp 横评、Medium Muse 101 与六产品横评（仅链接待补原文）、coderlegion、PYMNTS Expedia、语音悄悄上线回填；本轮补跑：Yahoo 理财评测、iFynx Secure VM 解析，industry 收 freistyle 六产品横评、老张入门成本对比、Kunal 收件箱实测（仅链接）；发布稿西语版 11-05 墨西哥更新记入 altUrls；Medium Muse 101 与六产品横评已改用转载全文）；2026-11-05（第一阶段完成：官方、媒体、社区、实测；行业综合横评为「仅链接」占位）。下一轮起按新流程：原文存 `original.md`，资料页只写摘要与保留理由，不翻译 |
 | 页面格式 | 与所有产品一致，见 collect-sources 的 source-page.md「页面正文」。第一阶段直接翻译的旧页面已于 2026-11-06 补上内容摘要、保留理由和分隔线（用户 2026-11-06 要求） |
 
 ## 收录范围
@@ -138,6 +138,24 @@ description: 收集 Meta Muse（Meta 的个人 AI 智能体）的资料时使用
 | secnews.co.uk 赏金转述（2026-11-04） | 不收：复述已收官方 11-02 赏金回顾，无新信息 |
 | Infobae、Milenio、Expansión 等墨西哥上线西语转述（2026-11-05） | 不收：与已收 allthingsmuse 同事件，无新信息 |
 | Muse Spark 1.1 发布博客（ai.meta.com，2026-11-05 前后） | 不收：模型发布，只说可在 Meta AI 应用中使用，没有说明与 Muse 产品的关系（已有判断，见对照旧笔记） |
+| Meta Newsroom「Design the Muse App, Just for You」（2026-11-06） | 已收（2026-11-06）：官方，Spaces 上线；同时提到向 Muse 推送以 Wonder 训练的特化模型 |
+| research.meta.ai「Bringing Specialized Models to Muse and Meta AI」（2026-11-06） | 已收（2026-11-06）：官方，特化模型推送；Active Memory/Focus 定义与三组对照数据（PSI 47% 对 38%、Active Memory 评估 90% 对 76%、日常任务完成率 +67%）；两张图表以 HTML 数据表形式呈现，已还原为简表 |
+| TechCrunch「Meta introduces Spaces, a new way to collaborate with your Muse agent」（Lucas Ropek，2026-11-06） | 已收（2026-11-06）：媒体，Spaces 报道；含 Zuckerberg 的 X 帖与 1000 万用户（财报电话会）出处 |
+| The Verge「Meta’s Muse AI can create custom ‘spaces’ for the version of the app you need right now」（Emma Roth，2026-11-06） | 已收（2026-11-06）：媒体，Spaces 报道；原站禁止直接下载，改由浏览器读取全文，关键句已用转载对照；文中无 Zuckerberg 引言；原站地址 theverge.com/tech/1028871/ |
+| allthingsmuse「Muse Is Getting Shopping Carts It Renders Itself, Starting With Instacart, Report Says」（Icarus，2026-11-04） | 已收（2026-11-06）：媒体，据 Kaziukėnas 的 X 帖与连接器文档截图，Instacart 首批自绘购物车；明确标注未经 Meta 证实、无上线日期 |
+| Enterpret「The 12 Personal AI Agents Users Actually Prefer in 2026, Ranked by 277,038 Posts」（2026-11-03） | 已收 industry 社区（2026-11-06）：27.7 万帖子的用户偏好排名，Muse 第一；Hermes Agent、Hark、Wabi、Fo 为新出现的产品名，列入候选产品等 Sky 决定 |
+| Unite.AI Spaces 稿与 47% 稿、siliconreport、emergent.sh、technobezz、aiweekly、Digital Trends、iphoneincanada.ca、techsavvyed、theoutpost.ai 等（2026-11-06） | 不收：复述官方 11-06 两篇公告，无新信息 |
+| 语音稿转述新增（etvbharat、News18、搜狐、2026-11-06） | 不收：只复述官方 11-05 语音公告（已收），无新信息；与表中已有语音稿转述行同判 |
+| hrlens.io 两篇（mock interview、Spaces 求职，2026-11-06） | 不收：SEO 内容农场风格，无实测 |
+| dev.to「Muse's 2nd feature in 2 days builds your apps for you」（frankchu，2026-11-06） | 不收：观点评论，无实测、无新事实 |
+| explainx.ai Spaces 文与 Wonder 价格页（2026-11-06） | 不收：个人博客观点/价格整理，无实测；其中「67% 无方法」一点已由多家媒体指出，不另收 |
+| zappiqai、squad.so、ansezz、analyticsmadesimple（Muse 解说/对比，10–11 月） | 不收：复述官方文档的解说/对比站，无实测与新信息 |
+| monolithdesign.agency 三产品对比（2026-11-03） | 不收：复述厂商公告的商业对比，无实测；与已判不收的 ontheground 同类 |
+| TechCrunch「After blocking Muse, Amazon now lets users text Alexa to help them shop」（2026-11-06） | 不收：Alexa 购物新闻，Muse 仅在标题背景中提及 |
+| aiagentswatch、agentstacklist（价格/功能聚合页） | 不收：聚合页，无新报道 |
+| aidedex 日本/海外指南、powerads 新加坡稿、halmob 商业指南（10–11 月） | 不收：复述官方文档的指南，无新信息 |
+| Muse Spark 1.3 研究博客（2026-09-02） | 不收：模型发布，未说明与 Muse 产品的关系（与 Spark 1.1 同判） |
+| 特化模型推送博客（research.meta.ai，2026-11-06） | 收：明确说明向 Muse 与 Meta AI 推送以 Wonder 训练的特化模型，含 Active Memory/Focus 在 Muse 中的表现与分数；注意：推送的是特化版而非 Wonder 本身，Wonder 本身仍按 10-12 公告先供订阅档。待 Sky 决定的「Wonder 模型切换事实」（aiagentslibrary 条目）仍悬而未决，不与此混同 |
 
 ## 对照旧笔记的判断（2026-11-06）
 
@@ -203,6 +221,7 @@ description: 收集 Meta Muse（Meta 的个人 AI 智能体）的资料时使用
 - 视频地址是带过期签名的 fbcdn 链接，占位行链接到文章页面。
 - 文章页显示的日期和 `article:published_time` 一致。
 - 2026-11-05：研究博客列表页（`research.meta.ai/blog/`）直接下载返回 403，浏览器因组织策略拦截；本轮改用检索核对，未发现 11 月 2 日之后的新文章。
+- 2026-11-06：研究博客列表页直接下载恢复（200），新帖 `/blog/specialized-models-for-muse-and-metaai`；文中图表以 HTML 数据表形式呈现，可直接抽取还原。
 - 2026-11-05 补跑：muse.ai/blog 列表页无新文章（最新仍为 11-02 赏金回顾）；Newsroom AI 标签页 11 月仅语音稿一篇。
 
 ### about.fb.com 抽取脚本
