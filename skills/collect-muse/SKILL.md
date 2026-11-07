@@ -13,7 +13,7 @@ description: 收集 Meta Muse（Meta 的个人 AI 智能体）的资料时使用
 | --- | --- |
 | 产品目录 | `content/zh-cn/docs/muse/` |
 | 发布日期 | 2026-09-08（美国） |
-| 最后收集日期 | 2026-11-06（22:16 轮次补跑：官方 Spaces 稿、研究博客特化模型（Active Memory/Focus，PSI 47%），媒体 TechCrunch 与 The Verge 的 Spaces 报道、allthingsmuse Instacart 自绘购物车报道（11-04），industry 收 Enterpret 12 款智能体用户排名（11-03）；另收用户发来的公众号文章：社区 1 篇，橘AI；对照旧笔记补收媒体 1 篇：Bloomberg 嘉信理财拦截 Muse；22:16 轮次补跑：官方语音稿、墨西哥上线、TechCrunch、The Verge、DataCamp 横评、Medium Muse 101 与六产品横评（仅链接待补原文）、coderlegion、PYMNTS Expedia、语音悄悄上线回填；本轮补跑：Yahoo 理财评测、iFynx Secure VM 解析，industry 收 freistyle 六产品横评、老张入门成本对比、Kunal 收件箱实测（仅链接）；发布稿西语版 11-05 墨西哥更新记入 altUrls；Medium Muse 101 与六产品横评已改用转载全文）；2026-11-05（第一阶段完成：官方、媒体、社区、实测；行业综合横评为「仅链接」占位）。下一轮起按新流程：原文存 `original.md`，资料页只写摘要与保留理由，不翻译 |
+| 最后收集日期 | 2026-11-07（22:16 轮次补跑：官方 Spaces 稿、研究博客特化模型（Active Memory/Focus，PSI 47%），媒体 TechCrunch 与 The Verge 的 Spaces 报道、allthingsmuse Instacart 自绘购物车报道（11-04），industry 收 Enterpret 12 款智能体用户排名（11-03）；另收用户发来的公众号文章：社区 1 篇，橘AI；对照旧笔记补收媒体 1 篇：Bloomberg 嘉信理财拦截 Muse；22:16 轮次补跑：官方语音稿、墨西哥上线、TechCrunch、The Verge、DataCamp 横评、Medium Muse 101 与六产品横评（仅链接待补原文）、coderlegion、PYMNTS Expedia、语音悄悄上线回填；本轮补跑：Yahoo 理财评测、iFynx Secure VM 解析，industry 收 freistyle 六产品横评、老张入门成本对比、Kunal 收件箱实测（仅链接）；发布稿西语版 11-05 墨西哥更新记入 altUrls；Medium Muse 101 与六产品横评已改用转载全文）；2026-11-07（10:16 轮次补跑：社区 personalagentbench Muse 开源逐层核查、museexplained 11 月 4 日 11 小时停运记录，媒体 allthingsmuse 下载量 1.7:1 第三方对比；官方无新稿）；2026-11-05（第一阶段完成：官方、媒体、社区、实测；行业综合横评为「仅链接」占位）。下一轮起按新流程：原文存 `original.md`，资料页只写摘要与保留理由，不翻译 |
 | 页面格式 | 与所有产品一致，见 collect-sources 的 source-page.md「页面正文」。第一阶段直接翻译的旧页面已于 2026-11-06 补上内容摘要、保留理由和分隔线（用户 2026-11-06 要求） |
 
 ## 收录范围
@@ -156,6 +156,18 @@ description: 收集 Meta Muse（Meta 的个人 AI 智能体）的资料时使用
 | aidedex 日本/海外指南、powerads 新加坡稿、halmob 商业指南（10–11 月） | 不收：复述官方文档的指南，无新信息 |
 | Muse Spark 1.3 研究博客（2026-09-02） | 不收：模型发布，未说明与 Muse 产品的关系（与 Spark 1.1 同判） |
 | 特化模型推送博客（research.meta.ai，2026-11-06） | 收：明确说明向 Muse 与 Meta AI 推送以 Wonder 训练的特化模型，含 Active Memory/Focus 在 Muse 中的表现与分数；注意：推送的是特化版而非 Wonder 本身，Wonder 本身仍按 10-12 公告先供订阅档。待 Sky 决定的「Wonder 模型切换事实」（aiagentslibrary 条目）仍悬而未决，不与此混同 |
+| personalagentbench「Is Meta Muse open source? What is open, and what is not」（2026-11-05） | 已收（2026-11-07）：社区，独立分析；逐层核查 agent／应用／云端 VM、Spark／Spark Open、Wonder、Glimmer、Gadgets 的开源状态，含自家 teardown 实测（246 个方法的权限表）与 Hugging Face 假冒 muse-wonder 账号核查；简体中文版记入 altUrls。文中「自 9 月 17 日有 Mac 应用」一说未附发布公告或版本号，照录 |
+| allthingsmuse「Muse Out-Downloaded ChatGPT 1.7 to 1 on the US App Store Last Week, Estimates Show」（Icarus，2026-11-04） | 已收（2026-11-07）：媒体，Wang 转发 Pablo Marti 图表，截至 10-29 当周 Muse 美国 App Store 预估下载 942K，ChatGPT 556K，约 1.7:1；数据为 FoxData 第三方预估（经 ASO World 印证），非 Meta 官方口径，文中已注明，不触发 ★（★ 要求官方披露的用户规模数据）。下载量对比图表已本地化 |
+| museexplained.com「Is Muse Down? The Nov 4 Outage: 11 Hours, No Official Meta Post」（Marvin Jones，2026-11-06） | 已收（2026-11-07）：社区，服务异常记录；据 Instatus 追踪数据，11-04 14:00 UTC 至 11-05 01:00 UTC 停运 11 小时，峰值 304 报告/小时（101 倍于常态），生成故障加延迟，Meta 未发任何公告；另记 11-03 23:00 UTC 起 3 小时停运；以 IsItDownRightNow 交叉核对；全文明确标注数字为追踪器数据而非 Meta 数据，停运影响范围（多少账户）追踪器无法给出 |
+| etvbharat / pondero.ai / kompozy.io / xenospectrum / asumetech 的 Spaces 与 Voice 稿（2026-11-06/07） | 不收：只复述官方 11-05/11-06 公告，无新信息 |
+| shiftdelete.net 特化模型稿、joho-todai.com 特化模型日文稿（2026-11-06/07） | 不收：复述官方 11-06 研究博客，无新信息。（joho-todai 文中提到 10-26 MoneyForward ME 与 Muse 連携，该消息在窗口外（10-26），且为日本本地连接器公告，未另行追查） |
+| aicoder.com Realtime Avatar 中文稿（2026-11-05） | 不收：复述研究博客与 @AIatMeta，无新信息；Realtime Avatar 研究博客本身已收（2026-09-23） |
+| everyinfra.com「Muse Wonder API 做达人尽调」（2026-11-05） | 不收：Wonder 模型 API 的实测与定价核查，主题是模型 API 用法，与 Muse 个人智能体产品无直接关联，按模型资料收录原则不收 |
+| agentsthatwork.ai「Cloud agent computers compared」（last verified 2026-11-07） | 不收：多产品云端 agent 电脑对照，为无固定发布日期的常更页面；Muse 一节只复述官方资料，且可用地区漏写日本（10-23）与墨西哥（11-05） |
+| winzheng.com Spaces 稿（2026-11-07） | 不收：TechCrunch Spaces 报道的全文转载，原文已收 |
+| newsbytesapp.com 特化模型稿（2026-11-07） | 不收：复述官方 11-06 研究博客，无新信息 |
+| aiagentstore.ai / theanswerengine.news 每日 AI 新闻汇总（2026-11-07） | 不收：汇总页，无一手内容 |
+| TIKR「Lisa Su: Meta's Muse Drew "Over 10 Million People" in 45 Days. Can Meta Charge Them?」（2026-11-07） | 不收：核心数据（1000 万用户、25% 日活、周活用户购物占比与客单价）出自已决定不收的 Q3 财报电话会；Lisa Su 在 Yahoo Finance 采访中的「45 天超 1000 万激活」为第三方转述，无超出电话会口径的新产品事实；余下为 Meta 股票估值分析。线索：文中称 Wang 对 Nikkei 表示 Muse 内无广告计划，下轮可找 Nikkei 一手报道核对 |
 
 ## 对照旧笔记的判断（2026-11-06）
 
