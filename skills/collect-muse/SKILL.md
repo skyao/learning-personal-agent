@@ -13,7 +13,7 @@ description: 收集 Meta Muse（Meta 的个人 AI 智能体）的资料时使用
 | --- | --- |
 | 产品目录 | `content/zh-cn/docs/muse/` |
 | 发布日期 | 2026-09-08（美国） |
-| 最后收集日期 | 2026-11-07（22:16 轮次补跑：官方 Spaces 稿、研究博客特化模型（Active Memory/Focus，PSI 47%），媒体 TechCrunch 与 The Verge 的 Spaces 报道、allthingsmuse Instacart 自绘购物车报道（11-04），industry 收 Enterpret 12 款智能体用户排名（11-03）；另收用户发来的公众号文章：社区 1 篇，橘AI；对照旧笔记补收媒体 1 篇：Bloomberg 嘉信理财拦截 Muse；22:16 轮次补跑：官方语音稿、墨西哥上线、TechCrunch、The Verge、DataCamp 横评、Medium Muse 101 与六产品横评（仅链接待补原文）、coderlegion、PYMNTS Expedia、语音悄悄上线回填；本轮补跑：Yahoo 理财评测、iFynx Secure VM 解析，industry 收 freistyle 六产品横评、老张入门成本对比、Kunal 收件箱实测（仅链接）；发布稿西语版 11-05 墨西哥更新记入 altUrls；Medium Muse 101 与六产品横评已改用转载全文）；2026-11-07（10:16 轮次补跑：社区 personalagentbench Muse 开源逐层核查、museexplained 11 月 4 日 11 小时停运记录，媒体 allthingsmuse 下载量 1.7:1 第三方对比；官方无新稿）；2026-11-07（22:16 轮次补跑：社区 BetterClaw 隐私分析、Top5Apps 语音开启指南；媒体 FourWeekMBA Nikkei 无广告二手报道（10-24，Nikkei 原文付费墙）；industry 收 Top5Apps 五款实测横评（11-01）；官方渠道本轮无新稿）；2026-11-05（第一阶段完成：官方、媒体、社区、实测；行业综合横评为「仅链接」占位）。下一轮起按新流程：原文存 `original.md`，资料页只写摘要与保留理由，不翻译 |
+| 最后收集日期 | 2026-11-08（10:16 轮次补跑：媒体 9 篇——ChainCatcher Wang 访谈整理（11-03）、36氪 Muse 商业化分析（10-27）、The Verge 50 美元自制 Muse Charm（10-31）、allthingsmuse 6 篇：Muse Mail 推出（11-06）与设置指南（11-07）、Spaces 演示详解（11-06）、封堵综述（11-06）与加拿大银行（11-02）、CNBC 零售商审计（11-02）；官方渠道本轮无新稿）；2026-11-07（22:16 轮次补跑：官方 Spaces 稿、研究博客特化模型（Active Memory/Focus，PSI 47%），媒体 TechCrunch 与 The Verge 的 Spaces 报道、allthingsmuse Instacart 自绘购物车报道（11-04），industry 收 Enterpret 12 款智能体用户排名（11-03）；另收用户发来的公众号文章：社区 1 篇，橘AI；对照旧笔记补收媒体 1 篇：Bloomberg 嘉信理财拦截 Muse；22:16 轮次补跑：官方语音稿、墨西哥上线、TechCrunch、The Verge、DataCamp 横评、Medium Muse 101 与六产品横评（仅链接待补原文）、coderlegion、PYMNTS Expedia、语音悄悄上线回填；本轮补跑：Yahoo 理财评测、iFynx Secure VM 解析，industry 收 freistyle 六产品横评、老张入门成本对比、Kunal 收件箱实测（仅链接）；发布稿西语版 11-05 墨西哥更新记入 altUrls；Medium Muse 101 与六产品横评已改用转载全文）；2026-11-07（10:16 轮次补跑：社区 personalagentbench Muse 开源逐层核查、museexplained 11 月 4 日 11 小时停运记录，媒体 allthingsmuse 下载量 1.7:1 第三方对比；官方无新稿）；2026-11-07（22:16 轮次补跑：社区 BetterClaw 隐私分析、Top5Apps 语音开启指南；媒体 FourWeekMBA Nikkei 无广告二手报道（10-24，Nikkei 原文付费墙）；industry 收 Top5Apps 五款实测横评（11-01）；官方渠道本轮无新稿）；2026-11-05（第一阶段完成：官方、媒体、社区、实测；行业综合横评为「仅链接」占位）。下一轮起按新流程：原文存 `original.md`，资料页只写摘要与保留理由，不翻译 |
 | 页面格式 | 与所有产品一致，见 collect-sources 的 source-page.md「页面正文」。第一阶段直接翻译的旧页面已于 2026-11-06 补上内容摘要、保留理由和分隔线（用户 2026-11-06 要求） |
 
 ## 收录范围
@@ -183,6 +183,31 @@ description: 收集 Meta Muse（Meta 的个人 AI 智能体）的资料时使用
 | asumetech.com Spaces 稿（2026-11-07） | 不收：复述官方 11-06 Spaces 公告，无新信息 |
 | smzdm.com「小扎『西瓜』模型口碑翻车实测」（2026-10-13）、虎嗅「花了几百亿美金……栽在一盏灯上」（2026-10-14） | 不收：Muse Wonder 模型资料，与 Muse 产品无直接关联；且在窗口外 |
 | airosetta.com WIRED 六款横测中文转述（2026-10-29） | 不收：已收 WIRED 原文的转述，且在窗口外 |
+| ChainCatcher「Meta 首席 AI 官：Muse 是怎麼做出來的？」（2026-11-03） | 收：媒体类，David Senra 访谈 Alexandr Wang 的繁体中文书面整理；访谈本身因无文字稿不收，本文含大量直接引语与新事实（2026 年 2 月一两周做出原型、七个月打磨、100 多项评估清单与发布门槛、模型与产品合计不到 200 人）；发表日期在窗口外一日，本轮检索新发现 |
+| 36氪「Meta之后，大厂期待“Muse时刻”」（商业新研社商靖，2026-10-27） | 收：媒体类，Muse 商业化独立分析（AI ROI/交易抽佣模式）与国内大厂对照；核心数据引自财报电话会但文章本身为原创分析；原文为微信公众号「商业新研社」文章，36氪经授权转载，微信原文记入 altUrls；发表日期在窗口外，本轮检索新发现 |
+| The Verge「I built an AI Tamagotchi before Meta could」（Sean Hollister，2026-10-31） | 收：媒体类，50 美元 Waveshare 开发板 + Claude Code 自制 Muse Charm 平替的一手实测；发表日期在窗口外，本轮经 allthingsmuse 周记线索发现；文中嵌入视频未在静态页面中找到地址，未收录 |
+| allthingsmuse「Muse Mail, the Dedicated Email Address for Your Muse, Is Reaching More Users」（Icarus，2026-11-06） | 收：媒体类，Muse Mail 开始向更多用户推出的首报，用户截图为证；此前 TestingCatalog 9 月 18 日已发现未发布的 Mail 标签 |
+| allthingsmuse「How to Set Up Your Muse Email」（Professor Muse，2026-11-07） | 收：媒体类，Muse Mail 设置指南；据 Aaron Makelky 的 X 帖截图核对流程，@muse.ai 地址格式引自 RuntimeWire 的应用静态检查，未经 Meta 证实 |
+| allthingsmuse「Muse Spaces in Depth: What Meta's Demos Actually Show」（Icarus，2026-11-06） | 收：媒体类，逐段解析 Meta 的 Spaces 演示视频内容（家庭仪表盘、Jolly Mall、周末模式、花园笔记本）；演示视频以占位行保存，家庭仪表盘截图已本地化 |
+| allthingsmuse「Your AI Agent Hits a Wall: Who Is Blocking Agents, and What Still Works」（Icarus，2026-11-06） | 收：媒体类，银行与零售商封堵智能体的综述；含 Billions Network 51 家零售商审计（37 家属误伤、零家提供可验证的智能体结账通道）、加拿大五大银行序列、Cequence 与 DataDome 的发现 |
+| allthingsmuse「Canada's Biggest Banks Block AI Agents Like Muse From Customer Accounts」（Icarus，2026-11-02） | 收：媒体类，加拿大五大银行封堵的单篇首报；RBC 备忘录细节（Kazmi 与 Nielsen 署名、「不可接受的客户风险」、发言人证实）与各家表态；发表日期在窗口外，本轮经 blocking guide 内链发现 |
+| allthingsmuse「Most Big Retailers Block AI Agents Without Meaning to, Audit Finds」（Icarus，2026-11-02） | 收：媒体类，CNBC 11 月 1 日报道的转述（basedOn 填 CNBC）；Billions Network 审计的完整数字与方法限定、JPMorgan 向 Plaid 收费、Warner 与 Sanders 的立法呼吁；发表日期在窗口外，本轮经 blocking guide 内链发现 |
+| allthingsmuse「What Are Muse Spaces?」（Icarus，2026-11-06） | 不收：与已收的 Spaces 详解同主题、内容基本重合（官方公告与演示复述），FAQ 无新增信息 |
+| allthingsmuse「What to Actually Do With Your Muse Email Once It's Live」（Professor Muse，2026-11-07） | 不收：与已收的设置指南同主题的用法建议，示例为虚构场景（Sam 装修厨房），无实测记录 |
+| allthingsmuse「Muse for People Ops」（Professor Muse，2026-11-08）、「Muse for Creators and Podcasters」（2026-11-07） | 不收：提示词模板式用法课（Academy 系列），无真实执行记录，占位提示词与假设场景为主 |
+| allthingsmuse「Building a Media Brand with Muse: Issue #6」（Icarus，2026-11-06） | 不收：站点自身运营周记，与 Muse 产品本身关系弱；提到的新闻均已收或另有来源 |
+| 掘金「我让 AI 智能体替我干活的 30 个高频用法」（2026-10-27） | 不收：以推广邀请码为目的的用法清单，无可核查的实测过程与结果；所列功能多为官方已知功能的改写，部分说法（如 Muse Home Link 智能家居）无法核实 |
+| Zacks 财报稿、etvbharat / pondero.ai / kompozy.io / asumetech 的 Spaces 与语音稿、mundoia.com.ar 特化模型稿、secnews.co.uk 赏金稿、datastudios.org Spaces 稿、storyboard18 Spaces 稿、toolscout-e2i.pages.dev 三公告汇总、trueseeker.com 语音核查页、global1.news 墨西哥上线稿（2026-11-06/07/08） | 不收：均为已收官方公告的复述或同一事件的二手报道，无新信息；global1.news 为 AI 辅助撰写的墨西哥新闻日报转述 |
+| sumus.im「OpenAI Dots vs Meta Muse vs Grok Bot」（2026-11-04） | 不收：厂商自家产品对比页，内容据官方资料整理，无实测；Sumus 本身为团队向产品，列入候选产品等 Sky 决定 |
+| metaflow.life「Dots vs Muse vs Grok Bot for Marketing」、openaimaster.com「Muse AI vs ChatGPT」（2026-11-07） | 不收：营销场景对比与案头整理，无实测，内容据官方资料；openaimaster 作者自承非实测、无 Muse 账号 |
+| shipwithmuse.live「Meta Muse Email Triage」（约 9 月 27 日） | 不收：Connect 时期的连接器指南，邮件分诊内容已被帮助文档覆盖；Muse Mail 部分写于上线前 |
+| deadsimple.email、agentmail.to、emailbump.com 的第三方 agent 邮箱指南（9 月） | 不收：第三方服务的自家产品指南，写于原生 Muse Mail 上线前；原生上线现由 allthingsmuse 覆盖 |
+| allthingsmuse「Expedia Says Its Muse Integration Is Set to Go Live in the US」（2026-11-05） | 不收：与已收 PYMNTS 11-04 稿同一事件的转述；电话会实录称集成在电话会期间上线 |
+| 研究博客新帖「Accelerating Scientific Research in Health Data Science with Muse Models」（10-28）、「Addressing Third-Party Testing Misconfiguration: Muse Spark 1.1」、「Introducing Muse Voice Transcribe」 | 不收：模型资料，与 Muse 产品无直接关联，按模型资料收录原则不收 |
+| aiagentslibrary「Meta Muse Charm: Availability and Release」（2026-10-31） | 不收：Charm 未发售的状态整理页，无一手内容；其中「Meta 未公布价格与发售日」一点已由多方证实 |
+| 新浪财经 9 月 11 日扎克伯格专访转述 | 不收：窗口外，Heath 专访原文已收 |
+| dev.to「Meta's Muse Charm is a shell — the AI companion moat is the loop」（2026-11-01） | 不收：对 Hollister 一文的观点评论，无新事实 |
+| hamidun.com、mylistingo.com、newsy-today.com、printingpressai.com、apexnews.com 等 Hollister 一文的转述（2026-10-31/11-01） | 不收：The Verge 原文已收的转述 |
 
 ## 对照旧笔记的判断（2026-11-06）
 
