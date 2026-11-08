@@ -13,7 +13,7 @@ description: 收集 Meta Muse（Meta 的个人 AI 智能体）的资料时使用
 | --- | --- |
 | 产品目录 | `content/zh-cn/docs/muse/` |
 | 发布日期 | 2026-09-08（美国） |
-| 最后收集日期 | 2026-11-07（22:16 轮次补跑：官方 Spaces 稿、研究博客特化模型（Active Memory/Focus，PSI 47%），媒体 TechCrunch 与 The Verge 的 Spaces 报道、allthingsmuse Instacart 自绘购物车报道（11-04），industry 收 Enterpret 12 款智能体用户排名（11-03）；另收用户发来的公众号文章：社区 1 篇，橘AI；对照旧笔记补收媒体 1 篇：Bloomberg 嘉信理财拦截 Muse；22:16 轮次补跑：官方语音稿、墨西哥上线、TechCrunch、The Verge、DataCamp 横评、Medium Muse 101 与六产品横评（仅链接待补原文）、coderlegion、PYMNTS Expedia、语音悄悄上线回填；本轮补跑：Yahoo 理财评测、iFynx Secure VM 解析，industry 收 freistyle 六产品横评、老张入门成本对比、Kunal 收件箱实测（仅链接）；发布稿西语版 11-05 墨西哥更新记入 altUrls；Medium Muse 101 与六产品横评已改用转载全文）；2026-11-07（10:16 轮次补跑：社区 personalagentbench Muse 开源逐层核查、museexplained 11 月 4 日 11 小时停运记录，媒体 allthingsmuse 下载量 1.7:1 第三方对比；官方无新稿）；2026-11-05（第一阶段完成：官方、媒体、社区、实测；行业综合横评为「仅链接」占位）。下一轮起按新流程：原文存 `original.md`，资料页只写摘要与保留理由，不翻译 |
+| 最后收集日期 | 2026-11-07（22:16 轮次补跑：官方 Spaces 稿、研究博客特化模型（Active Memory/Focus，PSI 47%），媒体 TechCrunch 与 The Verge 的 Spaces 报道、allthingsmuse Instacart 自绘购物车报道（11-04），industry 收 Enterpret 12 款智能体用户排名（11-03）；另收用户发来的公众号文章：社区 1 篇，橘AI；对照旧笔记补收媒体 1 篇：Bloomberg 嘉信理财拦截 Muse；22:16 轮次补跑：官方语音稿、墨西哥上线、TechCrunch、The Verge、DataCamp 横评、Medium Muse 101 与六产品横评（仅链接待补原文）、coderlegion、PYMNTS Expedia、语音悄悄上线回填；本轮补跑：Yahoo 理财评测、iFynx Secure VM 解析，industry 收 freistyle 六产品横评、老张入门成本对比、Kunal 收件箱实测（仅链接）；发布稿西语版 11-05 墨西哥更新记入 altUrls；Medium Muse 101 与六产品横评已改用转载全文）；2026-11-07（10:16 轮次补跑：社区 personalagentbench Muse 开源逐层核查、museexplained 11 月 4 日 11 小时停运记录，媒体 allthingsmuse 下载量 1.7:1 第三方对比；官方无新稿）；2026-11-07（22:16 轮次补跑：社区 BetterClaw 隐私分析、Top5Apps 语音开启指南；媒体 FourWeekMBA Nikkei 无广告二手报道（10-24，Nikkei 原文付费墙）；industry 收 Top5Apps 五款实测横评（11-01）；官方渠道本轮无新稿）；2026-11-05（第一阶段完成：官方、媒体、社区、实测；行业综合横评为「仅链接」占位）。下一轮起按新流程：原文存 `original.md`，资料页只写摘要与保留理由，不翻译 |
 | 页面格式 | 与所有产品一致，见 collect-sources 的 source-page.md「页面正文」。第一阶段直接翻译的旧页面已于 2026-11-06 补上内容摘要、保留理由和分隔线（用户 2026-11-06 要求） |
 
 ## 收录范围
@@ -167,7 +167,22 @@ description: 收集 Meta Muse（Meta 的个人 AI 智能体）的资料时使用
 | winzheng.com Spaces 稿（2026-11-07） | 不收：TechCrunch Spaces 报道的全文转载，原文已收 |
 | newsbytesapp.com 特化模型稿（2026-11-07） | 不收：复述官方 11-06 研究博客，无新信息 |
 | aiagentstore.ai / theanswerengine.news 每日 AI 新闻汇总（2026-11-07） | 不收：汇总页，无一手内容 |
-| TIKR「Lisa Su: Meta's Muse Drew "Over 10 Million People" in 45 Days. Can Meta Charge Them?」（2026-11-07） | 不收：核心数据（1000 万用户、25% 日活、周活用户购物占比与客单价）出自已决定不收的 Q3 财报电话会；Lisa Su 在 Yahoo Finance 采访中的「45 天超 1000 万激活」为第三方转述，无超出电话会口径的新产品事实；余下为 Meta 股票估值分析。线索：文中称 Wang 对 Nikkei 表示 Muse 内无广告计划，下轮可找 Nikkei 一手报道核对 |
+| TIKR「Lisa Su: Meta's Muse Drew "Over 10 Million People" in 45 Days. Can Meta Charge Them?」（2026-11-07） | 不收：核心数据（1000 万用户、25% 日活、周活用户购物占比与客单价）出自已决定不收的 Q3 财报电话会；Lisa Su 在 Yahoo Finance 采访中的「45 天超 1000 万激活」为第三方转述，无超出电话会口径的新产品事实；余下为 Meta 股票估值分析。线索：文中称 Wang 对 Nikkei 表示 Muse 内无广告计划，下轮可找 Nikkei 一手报道核对（已核对：Nikkei 原文付费墙，改收 FourWeekMBA 二手报道，见本表） |
+| BetterClaw「Is Meta Muse Safe? What the AI Agent Sees and Stores」（2026-11-06） | 已收（2026-11-07）：社区，隐私分析；对照 Meta 官方页面逐项核查权限、数据去向与训练默认设置，逐条检验 Paul Walsh 批评的成立程度，附 8 项收紧设置；发布方为竞品托管智能体厂商，文末有自家产品推广；5 张信息图已本地化 |
+| Top5Apps「How to Turn On Muse Voice Mode」（2026-11-06） | 已收（2026-11-07）：社区，语音模式分步开启指南；iPhone 需 14.3 版，区分新旧语音图标与五种易混淆的语音功能，列出未能核实之处；两处 YouTube 嵌入改为视频占位行 |
+| FourWeekMBA「Meta Takes Muse to Japan and Says It Will Stay Ad-Free」（2026-10-24，更新 10-27） | 已收（2026-11-07）：媒体，二手报道，basedOn Nikkei Asia 2026-10-23；Nikkei 原文付费墙，作者只读到英日两版开头，企业服务与购买佣金来自 Badawi 的 X 帖总结；原站对 curl 返回 JS 验证页 403，改用 WordPress REST API 取文；发表日期在窗口外，按上轮 TIKR 线索核对收录 |
+| Top5Apps「Best Personal AI Agents: 5 Worth Trying [Reviewed Nov 2026]」（更新 2026-11-01） | 已收 industry 社区（2026-11-07）：同账号、同任务实测五款并打分，Muse 4.6 第一，另有 dots 等暂列；文中称 Muse 仅美加与免费额度每周 1 亿 tokens，已过时，照录；配图为 logo 与官网截图，未收；更新日在窗口外，属本轮检索发现的 11 月评测回填 |
+| tofuads.com「Is Muse for Small Business worth connecting to my Meta ad account?」（约 2026-11-01/02） | 不收：更新日在窗口外（11-04 起）；内容为小企业广告账户分析，Meta 未说明 Muse 能否改广告账户，含 ads MCP server 信息 |
+| hokai.io「Muse Review (2026)」（更新 2026-11-01） | 不收：常更页面，更新日在窗口外；内容主要为已收官方资料的整理，无一手实测 |
+| BetterClaw「OpenAI Dots vs Meta Muse vs Grok Bot」（信息截至 2026-10-05） | 不收：内容已滞后，Muse 可用地区仍写仅美加，与 10-23 日本、10-27 新加坡、11-05 墨西哥上线不符；常更页面；同类三产品对照已有 freistyle 与老张两篇 |
+| obpai.com「Best Personal Agents 2026」（2026-11-04） | 不收：编辑主观排名，无实测、无新信息 |
+| magnets.tg「AI assistant ranking 2026」（2026-11-05） | 不收：评测对象为通用助手（ChatGPT、Gemini、Claude、Perplexity、DeepSeek、WAM Agents），不含跟踪产品；自家产品排第一 |
+| bloks.dev「The best AI agent apps」（2026-11-06 前后） | 不收：以本地自托管应用为主，自家产品排第一；Muse 仅在 FAQ 提及 |
+| life-topics.jp、finance.biggo.jp、neworder.co.jp、gihyo.jp 的 Spaces 与语音稿（2026-11-06/07） | 不收：只复述官方 11-05/11-06 两篇公告，无新信息 |
+| derringtoncollaborativeai.com「Muse gets a voice, custom spaces, and a better memory」（2026-11-07） | 不收：三篇官方公告的简讯汇总，无新信息 |
+| asumetech.com Spaces 稿（2026-11-07） | 不收：复述官方 11-06 Spaces 公告，无新信息 |
+| smzdm.com「小扎『西瓜』模型口碑翻车实测」（2026-10-13）、虎嗅「花了几百亿美金……栽在一盏灯上」（2026-10-14） | 不收：Muse Wonder 模型资料，与 Muse 产品无直接关联；且在窗口外 |
+| airosetta.com WIRED 六款横测中文转述（2026-10-29） | 不收：已收 WIRED 原文的转述，且在窗口外 |
 
 ## 对照旧笔记的判断（2026-11-06）
 
