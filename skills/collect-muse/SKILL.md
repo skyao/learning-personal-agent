@@ -13,7 +13,7 @@ description: 收集 Meta Muse（Meta 的个人 AI 智能体）的资料时使用
 | --- | --- |
 | 产品目录 | `content/zh-cn/docs/muse/` |
 | 发布日期 | 2026-09-08（美国） |
-| 最后收集日期 | 2026-11-08（10:16 轮次补跑：媒体 9 篇——ChainCatcher Wang 访谈整理（11-03）、36氪 Muse 商业化分析（10-27）、The Verge 50 美元自制 Muse Charm（10-31）、allthingsmuse 6 篇：Muse Mail 推出（11-06）与设置指南（11-07）、Spaces 演示详解（11-06）、封堵综述（11-06）与加拿大银行（11-02）、CNBC 零售商审计（11-02）；官方渠道本轮无新稿）；2026-11-07（22:16 轮次补跑：官方 Spaces 稿、研究博客特化模型（Active Memory/Focus，PSI 47%），媒体 TechCrunch 与 The Verge 的 Spaces 报道、allthingsmuse Instacart 自绘购物车报道（11-04），industry 收 Enterpret 12 款智能体用户排名（11-03）；另收用户发来的公众号文章：社区 1 篇，橘AI；对照旧笔记补收媒体 1 篇：Bloomberg 嘉信理财拦截 Muse；22:16 轮次补跑：官方语音稿、墨西哥上线、TechCrunch、The Verge、DataCamp 横评、Medium Muse 101 与六产品横评（仅链接待补原文）、coderlegion、PYMNTS Expedia、语音悄悄上线回填；本轮补跑：Yahoo 理财评测、iFynx Secure VM 解析，industry 收 freistyle 六产品横评、老张入门成本对比、Kunal 收件箱实测（仅链接）；发布稿西语版 11-05 墨西哥更新记入 altUrls；Medium Muse 101 与六产品横评已改用转载全文）；2026-11-07（10:16 轮次补跑：社区 personalagentbench Muse 开源逐层核查、museexplained 11 月 4 日 11 小时停运记录，媒体 allthingsmuse 下载量 1.7:1 第三方对比；官方无新稿）；2026-11-07（22:16 轮次补跑：社区 BetterClaw 隐私分析、Top5Apps 语音开启指南；媒体 FourWeekMBA Nikkei 无广告二手报道（10-24，Nikkei 原文付费墙）；industry 收 Top5Apps 五款实测横评（11-01）；官方渠道本轮无新稿）；2026-11-05（第一阶段完成：官方、媒体、社区、实测；行业综合横评为「仅链接」占位）。下一轮起按新流程：原文存 `original.md`，资料页只写摘要与保留理由，不翻译 |
+| 最后收集日期 | 2026-11-08（22:16 轮次：媒体 3 篇——allthingsmuse Threads 内置助手在开发（11-08）、头像跳舞分享（11-08）、头像分享现身网页端回填（10-25）；官方渠道本轮无新稿）；2026-11-08（10:16 轮次补跑：媒体 9 篇——ChainCatcher Wang 访谈整理（11-03）、36氪 Muse 商业化分析（10-27）、The Verge 50 美元自制 Muse Charm（10-31）、allthingsmuse 6 篇：Muse Mail 推出（11-06）与设置指南（11-07）、Spaces 演示详解（11-06）、封堵综述（11-06）与加拿大银行（11-02）、CNBC 零售商审计（11-02）；官方渠道本轮无新稿）；2026-11-07（22:16 轮次补跑：官方 Spaces 稿、研究博客特化模型（Active Memory/Focus，PSI 47%），媒体 TechCrunch 与 The Verge 的 Spaces 报道、allthingsmuse Instacart 自绘购物车报道（11-04），industry 收 Enterpret 12 款智能体用户排名（11-03）；另收用户发来的公众号文章：社区 1 篇，橘AI；对照旧笔记补收媒体 1 篇：Bloomberg 嘉信理财拦截 Muse；22:16 轮次补跑：官方语音稿、墨西哥上线、TechCrunch、The Verge、DataCamp 横评、Medium Muse 101 与六产品横评（仅链接待补原文）、coderlegion、PYMNTS Expedia、语音悄悄上线回填；本轮补跑：Yahoo 理财评测、iFynx Secure VM 解析，industry 收 freistyle 六产品横评、老张入门成本对比、Kunal 收件箱实测（仅链接）；发布稿西语版 11-05 墨西哥更新记入 altUrls；Medium Muse 101 与六产品横评已改用转载全文）；2026-11-07（10:16 轮次补跑：社区 personalagentbench Muse 开源逐层核查、museexplained 11 月 4 日 11 小时停运记录，媒体 allthingsmuse 下载量 1.7:1 第三方对比；官方无新稿）；2026-11-07（22:16 轮次补跑：社区 BetterClaw 隐私分析、Top5Apps 语音开启指南；媒体 FourWeekMBA Nikkei 无广告二手报道（10-24，Nikkei 原文付费墙）；industry 收 Top5Apps 五款实测横评（11-01）；官方渠道本轮无新稿）；2026-11-05（第一阶段完成：官方、媒体、社区、实测；行业综合横评为「仅链接」占位）。下一轮起按新流程：原文存 `original.md`，资料页只写摘要与保留理由，不翻译 |
 | 页面格式 | 与所有产品一致，见 collect-sources 的 source-page.md「页面正文」。第一阶段直接翻译的旧页面已于 2026-11-06 补上内容摘要、保留理由和分隔线（用户 2026-11-06 要求） |
 
 ## 收录范围
@@ -208,6 +208,20 @@ description: 收集 Meta Muse（Meta 的个人 AI 智能体）的资料时使用
 | 新浪财经 9 月 11 日扎克伯格专访转述 | 不收：窗口外，Heath 专访原文已收 |
 | dev.to「Meta's Muse Charm is a shell — the AI companion moat is the loop」（2026-11-01） | 不收：对 Hollister 一文的观点评论，无新事实 |
 | hamidun.com、mylistingo.com、newsy-today.com、printingpressai.com、apexnews.com 等 Hollister 一文的转述（2026-10-31/11-01） | 不收：The Verge 原文已收的转述 |
+| allthingsmuse「Threads Is Working on an In-App Muse Assistant, Researcher Reports」（Icarus，2026-11-08） | 收：媒体类，Jane Manchun Wong 在 X 上发布 Threads 内置 Muse 助手的开发线索（附界面截图），RuntimeWire 同日亦有报道；功能未发布、Meta 未宣布，文中已注明；已收资料中尚无 Threads 条目 |
+| allthingsmuse「Muse Avatars Can Now Dance, and You Can Share the Clip to Instagram and WhatsApp」（Icarus，2026-11-08） | 收：媒体类，Alexandr Wang 在 X 上宣布头像跳舞与分享功能已上线；含完整操作流程、五段演示舞蹈曲目与分享渠道；头像分享选项 10 月下旬现身网页端的前情见同轮回填的 10-25 一篇 |
+| allthingsmuse「Muse Avatar Sharing Surfaces in Web App, but It Is Not Live Yet」（Icarus，2026-10-25） | 收：媒体类，TestingCatalog 首报网页端未发布的头像 Share 选项（动态预览、可复制链接、四种预览状态）；发表日期在窗口外，本轮经 11-08 跳舞一文内链发现，属首报回填；该功能现已随跳舞流程上线 |
+| RuntimeWire「Threads Muse assistant」同日报道（2026-11-08） | 不收：与已收 allthingsmuse 同事件、同为 Wong 的 X 帖的报道，不另收 |
+| ppc.land 语音稿（2026-11-08 前后） | 不收：只复述官方 11-05 语音公告，无新信息 |
+| blog.toolsnetwork.ai 语音稿（2026-11-05） | 不收：AI 生成的新闻简报，复述官方 11-05 语音公告，无新信息 |
+| nieuws.llmnet.nl 特化模型稿（Ivo Donker，2026-11-08） | 不收：复述官方 11-06 研究博客，无新信息；文末注明由 Claude 撰写、据来源核对 |
+| freshsynapse.com 特化模型稿（2026-11-07） | 不收：复述官方 11-06 研究博客，无实测 |
+| agenticcommons.xyz 特化模型繁体稿（2026-11-08） | 不收：复述官方 11-06 研究博客的繁体中文解说，无新信息 |
+| ventureatlas.org「Meta adds Spaces and specialized models to Muse」（2026-11-06） | 不收：自承为 AI 辅助汇编的二手汇总，非原创报道 |
+| sofarbot.com 语音稿（2026-11-08） | 不收：AI 新闻站复述官方 11-05 语音公告，无新信息 |
+| yayafa.com Unite.AI 特化模型日文稿（2026-11-07） | 不收：Unite.AI 复述稿的日文转述 |
+| TechSifted「Meta Muse Review 2026」（2026-11-03） | 不收：案头整理式评测，打分与优缺点均据官方资料与财报电话会，无实测、无新事实；Wonder 消费者档情况已由官方 11-06 博客覆盖 |
+| AIToolsReview「Meta Muse Agent Review: Secure VM, Sentinel, Pricing」（首发 2026-09-11，更新 10-13） | 不收：窗口外；案头整理、无实测；部分说法已过时（称仅限美国、无国际上线日期）或无法核实（称免费档需绑卡激活、Spark 1.3 顶级推理模式被扣留） |
 
 ## 对照旧笔记的判断（2026-11-06）
 
@@ -274,6 +288,7 @@ description: 收集 Meta Muse（Meta 的个人 AI 智能体）的资料时使用
 - 文章页显示的日期和 `article:published_time` 一致。
 - 2026-11-05：研究博客列表页（`research.meta.ai/blog/`）直接下载返回 403，浏览器因组织策略拦截；本轮改用检索核对，未发现 11 月 2 日之后的新文章。
 - 2026-11-06：研究博客列表页直接下载恢复（200），新帖 `/blog/specialized-models-for-muse-and-metaai`；文中图表以 HTML 数据表形式呈现，可直接抽取还原。
+- 2026-11-08：研究博客列表页直接下载又返回 403，浏览器读取确认 11 月仅 11-06 特化模型一篇，无新帖。
 - 2026-11-05 补跑：muse.ai/blog 列表页无新文章（最新仍为 11-02 赏金回顾）；Newsroom AI 标签页 11 月仅语音稿一篇。
 
 ### about.fb.com 抽取脚本
