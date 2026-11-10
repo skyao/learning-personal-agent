@@ -11,9 +11,9 @@ description: 收集 Microsoft Autopilot（原 Microsoft Scout，微软）的资�
 
 | 项目 | 值 |
 | --- | --- |
-| 产品目录 | `content/zh-cn/docs/microsoft-autopilot/`（尚未建立，第一轮收集时按 section-templates.md 建） |
+| 产品目录 | `content/zh-cn/docs/microsoft-autopilot/`（2026-11-10 建立） |
 | 时间线 | 2026-06-02 Build 2026 以 Microsoft Scout 之名发布，是微软首个「Autopilot」类智能体，经 Frontier 计划实验性提供；2026-09-25 微软博客称其为 Autopilot（formerly Scout），同月底扩大私有预览 |
-| 最后收集日期 | —（2026-11-06 用户同意纳入，尚未收集） |
+| 最后收集日期 | 2026-11-10（美东；第一轮：官方 17 篇、媒体 6 篇、社区 4 篇；Learn 文档 12 篇全收，旧笔记 learning-ai-agent 的 copilot-autopilot 引用来源已逐条对照） |
 
 ## 背景
 
@@ -33,12 +33,13 @@ description: 收集 Microsoft Autopilot（原 Microsoft Scout，微软）的资�
 
 | 渠道 | 地址 | 内容 | 抓取方法 |
 | --- | --- | --- | --- |
-| Microsoft Copilot 博客 | `microsoft.com/en-us/copilot/blog/2026/06/02/introducing-microsoft-scout-your-always-on-personal-agent/` | 发布文章，页顶有改名横幅 | 2026-11-06 用 WebFetch 可读，下载方法待第一轮确认 |
-| The Official Microsoft Blog | `blogs.microsoft.com/blog/2026/09/25/introducing-the-new-copilot-with-home-code-and-autopilot/` | 改名后的介绍与私有预览扩大 | 同上 |
-| Microsoft Learn | `learn.microsoft.com/en-us/microsoft-scout/`（如 `use-microsoft-scout`） | 产品文档 | 待确认；Learn 文档一般可直接下载，并有 GitHub 源 |
-| Microsoft 365 消息中心 | MC1332811「Introducing Microsoft Scout, an always-on personal agent」 | 管理员公告 | 需要登录；只能经第三方镜像（m365admin.handsontek.net、cloudscout.one 等）读取，第一轮判断是否收 |
+| Microsoft Copilot 博客 | `microsoft.com/en-us/copilot/blog/2026/06/02/introducing-microsoft-scout-your-always-on-personal-agent/` | 发布文章，页顶有改名横幅 | curl 加浏览器标识可直接下载；`microsoft-365/blog/2026/06/02/introducing-microsoft-scout/` 重定向到此（记 altUrls）。博客图片对 curl 返回 403，要带浏览器标识单独下载；题图是约 1 MB 的动图，改为链接 |
+| The Official Microsoft Blog | `blogs.microsoft.com/blog/2026/09/25/introducing-the-new-copilot-with-home-code-and-autopilot/` | 改名后的介绍与私有预览扩大 | 直接下载；`extract.py` 把内嵌视频抽成「YouTube Video」，按 HTML 中 `youtube-nocookie.com/embed/<id>` 的顺序换成占位行。微软亚洲新闻中心 2026-09-29 的简体中文版是同文译本，记 altUrls |
+| Microsoft Learn | `learn.microsoft.com/en-us/microsoft-scout/`（目录见 `toc.json`） | 产品文档，12 篇（另有一个只有链接的首页，不收） | 直接下载；`extract.py <html> main`，从 `# 标题` 起到 `## Feedback` 前止。日期取 `updated_at`（页面显示的 Last updated），`ms.date` 写进 dateNote。源仓库 `MicrosoftDocs/microsoft-scout-pr` 是私有仓库，读不到。增量收集时比对 toc.json 与各页 `updated_at`，有更新按「原文更新」覆盖 |
+| Microsoft 365 消息中心 | MC1332811「Introducing Microsoft Scout, an always-on personal agent」 | 管理员公告 | 需要登录；已依据 `mc.merill.net/message/MC1332811` 收为「转载全文」（handsontek 返回 Cloudflare 验证页）。该公告 2026-10-30 过期。以后的新 MC 公告同样到 mc.merill.net 按编号查 |
 | Tech Community | `techcommunity.microsoft.com`（Microsoft 365 Copilot 讨论区、Partner News 博客） | 官方帖与合作伙伴文章 | 待确认 |
-| Build 2026 | `news.microsoft.com/build-2026-live-blog/` | 发布现场 | 待确认是否有 Scout 相关段落；视频只在有文字稿时收 |
+| Build 2026 | `news.microsoft.com/build-2026-live-blog/` | 发布现场 | 有一条 Scout 条目（已收）。条目页直接访问返回 404，正文在直播页 HTML 内嵌的 WordPress 条目 JSON 里（按 `link` 定位，`content.rendered`） |
+| Command Line | `commandline.microsoft.com` | 微软官方的人物与工程故事博客 | 直接下载；Project Lobster 一文已收（aka.ms/ProjectLobster-Blog） |
 
 ## 媒体与社区检索
 
@@ -47,9 +48,18 @@ description: 收集 Microsoft Autopilot（原 Microsoft Scout，微软）的资�
 - 「Autopilot」「Scout」都是常见词，检索时要带 Microsoft 和 agent，并排除 Windows Autopilot。
 - 检索结果中有大量咨询公司与合作伙伴博客（bismart、powerapps911、innfactory、digitalapplied、robquickenden 等），第一轮逐个判断，只转述官方内容的不收。
 
+## 第一轮判断记录（2026-11-10）
+
+- 已收媒体：GeekWire（Mary Jo Foley，2026-05-04，发布前的 ClawPilot 报道）、Computerworld（Forrester 分析师评论）、Semafor（Shahine 采访，预览期计费）、TechRadar Pro（Nadella 主题演讲引语）、TestingCatalog（桌面客户端界面观察）、The Neuron（Shahine 采访与演示）。
+- 已收社区：copilotatwork（Danny de Vries，上手使用）、OpenClaw 博客（微软上游贡献清单）、CIAOPS（模型调用经 GitHub Copilot 的数据边界分析）、dsebastien（时间线与参考来源汇总）。
+- 放弃（只复述公告或文档、无新信息）：Decrypt、Help Net Security、The Register、PCWorld、Neowin、Gigazine、Office Watch、Redmond Magazine（9-25 改名稿）、IT之家（转述 TestingCatalog，经凤凰网转载）、The New Stack（6-07 评论，无一手来源；原站 403，Wayback 快照 20260608170812 可读）、Futurum、aicybr（SEO）、hubsite365（Shane Young 视频的 AI 摘要；原视频无文字稿）。
+- 未收、可再看：Shane Young 的 YouTube 上手视频（有字幕时可按「字幕整理」收）；cgtech-au 的个人体验文章（站点返回「Web App - Unavailable」，Wayback 无快照）；Omar Shahine 个人的 Lobster 项目站 lobster.shahine.com（家用 OpenClaw 智能体，是 Scout 的前身而非产品本身，暂不收）。
+
 ## 已知问题
 
 - 改名：2026-06 的资料称 Scout，2026-09 起称 Autopilot。资料页标题按原文，摘要中注明是同一产品。
+- 截至 2026-11-10，Learn 文档与 MC 公告仍用 Scout 之名、仍描述桌面应用；9-25 起的 Autopilot 是云端托管，文档尚未跟上。增量收集时留意 Learn 是否出现 Autopilot 文档集或改名。
+- 行业综合中有两篇比较涉及本产品（ithome 五款主动型 Agent、ai-agents-compared-small-business），已在 `products` 补上 `microsoft-autopilot`。
 
 ## 命名约定
 
