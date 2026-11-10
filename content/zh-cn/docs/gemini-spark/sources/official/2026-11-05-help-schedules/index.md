@@ -9,8 +9,9 @@ publisher: "Google（Gemini Apps 帮助中心）"
 language: en
 fidelity: 全文
 translation: 已翻译
-collectedAt: 2026-11-05
-dateNote: "帮助页不标日期，结构化数据中也没有；日期取收集日期（美东时间）。2026-10 Spark 改名为 Task 后，帮助页的用词已改为 tasks / task mode"
+collectedAt: 2026-11-10
+updatedAt: 2026-11-10
+dateNote: "帮助页不标日期，结构化数据中也没有；日期取收集日期（美东时间）。2026-10 Spark 改名为 Task 后，帮助页的用词已改为 tasks / task mode；2026-11-10 发现原文更新：「What you need」删去了「选择加入 Personal Intelligence」一条，原文存档与译文同步删除，其余未变"
 tags: [持续执行, 运行环境]
 products: [gemini-spark]
 ---
@@ -39,7 +40,6 @@ products: [gemini-spark]
 - **使用个人 Google 账号登录 Gemini 应用。** 目前，如果你使用工作或学校 Google 账号登录，此功能不可用。[了解如何登录 Gemini 应用](https://support.google.com/gemini/answer/13278668)。
 - **拥有 Google AI Pro 或 Ultra 订阅。** [了解如何升级](https://support.google.com/gemini/answer/14517446)。
 - **开启 [保留活动记录（Keep Activity）](https://myactivity.google.com/product/gemini?utm_source=help)**。
-- **选择加入个人智能（Personal Intelligence）。** [详细了解个人智能](https://support.google.com/gemini/answer/16598406)。
 
 **重要：** 目前，Gemini 中的任务：
 

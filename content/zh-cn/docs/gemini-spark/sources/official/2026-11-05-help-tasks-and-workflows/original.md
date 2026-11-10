@@ -1,5 +1,5 @@
 来源：https://support.google.com/gemini/answer/17094507?hl=en
-取文：2026-11-06，直接下载
+取文：2026-11-10，直接下载
 
 You can now start tasks in the same place you start a chat. Assign Gemini tasks to automate complex workflows and manage schedules for ongoing tasks. Gemini can help handle tasks, using info from sources like Connected Apps, skills, chats, websites you’re signed into, Personal Intelligence, location, and more. Just tell Gemini your specific goals and when you want tasks completed.
 
@@ -19,7 +19,6 @@ To assign Gemini tasks, you must:
 - **Sign in to the Gemini app with a personal Google Account.** For now, this feature isn’t available if you sign in with a work or school Google Account. [Learn how to sign in to Gemini Apps](https://support.google.com/gemini/answer/13278668).
 - **Have a Google AI Pro or Ultra subscription.** [Learn how to upgrade](https://support.google.com/gemini/answer/14517446).
 - **Have [Keep Activity](https://myactivity.google.com/product/gemini?utm_source=help) on**.
-- **Opt in to Personal Intelligence.** [Learn more about Personal Intelligence](https://support.google.com/gemini/answer/16598406).
 
 **Important:** For now, tasks in Gemini are:
 

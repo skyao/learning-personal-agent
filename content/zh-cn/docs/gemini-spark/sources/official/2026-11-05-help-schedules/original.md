@@ -1,5 +1,5 @@
 来源：https://support.google.com/gemini/answer/17094710?hl=en
-取文：2026-11-06，直接下载
+取文：2026-11-10，直接下载
 
 You can put your workflows on autopilot by adding schedules to your tasks. A schedule acts as the automated trigger for a task, telling Gemini exactly when to step in and execute your instructions. You can set these triggers based on time intervals, like every Monday morning, or based on certain conditions, like when an email arrives in your inbox.
 
@@ -15,7 +15,6 @@ To assign Gemini tasks, you must:
 - **Sign in to the Gemini app with a personal Google Account.** For now, this feature isn’t available if you sign in with a work or school Google Account. [Learn how to sign in to Gemini Apps](https://support.google.com/gemini/answer/13278668).
 - **Have a Google AI Pro or Ultra subscription.** [Learn how to upgrade](https://support.google.com/gemini/answer/14517446).
 - **Have [Keep Activity](https://myactivity.google.com/product/gemini?utm_source=help) on**.
-- **Opt in to Personal Intelligence.** [Learn more about Personal Intelligence](https://support.google.com/gemini/answer/16598406).
 
 **Important:** For now, tasks in Gemini are:
 
