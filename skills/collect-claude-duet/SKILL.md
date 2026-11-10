@@ -13,7 +13,7 @@ description: 收集 Claude Duet（Anthropic）的资料时使用：Claude Duet �
 | --- | --- |
 | 产品目录 | `content/zh-cn/docs/claude-duet/` |
 | 发布日期 | 2026-10-21（研究预览，美国 Pro、Max、Ultra，候补名单） |
-| 最后收集日期 | 2026-11-06（第一轮 2026-11-05：官方 7 篇、社区 2 篇；2026-11-06 对照旧笔记补收官方 1 篇、社区 2 篇，行业综合 2 篇；媒体仍没有符合条件的） |
+| 最后收集日期 | 2026-11-10（增量：官方渠道无新稿，发布说明 11 月没有 Duet 条目；入门帮助页原文更新，按新版覆盖，旧译文移除待重译；媒体与社区未见新资料）；2026-11-06（第一轮 2026-11-05：官方 7 篇、社区 2 篇；2026-11-06 对照旧笔记补收官方 1 篇、社区 2 篇，行业综合 2 篇；媒体仍没有符合条件的） |
 | 实测材料 | 用户确认没有（2026-11-05） |
 
 从一开始就按新流程：原文存 `original.md`，资料页只写摘要与保留理由，不翻译。
@@ -85,6 +85,16 @@ anthropic.com 的 news 下没有 Claude Duet 页面（`/news/claude-duet` 返回
 | Hacker News 讨论（item 50186455） | 不收：讨论区，所讨论的是已收的发布文 |
 | nerdschalk、VentureBeast first-look、aiagentslibrary 的 Duet 评测、HUMAN Security「Sightline detects Claude Duet」 | 暂不收：原站 403 或只由脚本加载，Wayback 没有快照；HUMAN Security 的文章可能有新信息，需要时请用户在浏览器中复制 |
 | YouTube 视频 3 个 | 不收：没有文字稿 |
+
+## 2026-11-10 增量收集
+
+12 个产品在同一会话里一次跑完（用户 2026-11-10 要求；「一个产品一个会话」的规则保留）。
+
+| 资料 | 判断 |
+| --- | --- |
+| 入门帮助页 17631495 | 原文更新：限额重置改为按套餐发放（Pro 三次，Max 与 Ultra 一次），有效期改到 2026-12-15，新增「Claude Duet 中不提供 Personal Finance」 |
+| 产品页 | 比对只差连接器 logo 文字，未覆盖 |
+| Link by Stripe、Shop Pay 帮助页 | 未变 |
 
 ## 命名约定
 

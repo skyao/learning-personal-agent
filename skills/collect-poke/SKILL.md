@@ -13,7 +13,7 @@ description: 收集 Poke（The Interaction Company of California，2026-07 起�
 | --- | --- |
 | 产品目录 | `content/zh-cn/docs/poke/`（2026-11-09 建立） |
 | 时间线 | 2025-09-08 公开发布并宣布 1500 万美元种子轮（General Catalyst 领投，估值 1 亿美元；据官方新闻稿与领投方文章）；2026-03 TechCrunch 称「publicly launched in March」，与 2025-09 的发布说法并存，按原文照录不作判断；2026-04-08 TechCrunch 报道追加 1000 万美元、投后估值 3 亿美元；2026-06-04 成为首个获准上 Apple Messages for Business 的 AI 智能体；2026-07-23 Cognition 宣布「welcoming」The Interaction Company，产品照常运营 |
-| 最后收集日期 | 2026-11-09（美东；第一轮：官方 13 篇、媒体 4 篇、社区 1 篇，industry 1 篇；旧笔记 learning-ai-agent 的 Poke 资料索引已逐条对照，隐私声明按 tracking.md 不收） |
+| 最后收集日期 | 2026-11-10（增量：官网、价格页与文档比对无实质变化；媒体未见 11 月新报道）；2026-11-09（美东；第一轮：官方 13 篇、媒体 4 篇、社区 1 篇，industry 1 篇；旧笔记 learning-ai-agent 的 Poke 资料索引已逐条对照，隐私声明按 tracking.md 不收） |
 
 ## 背景
 

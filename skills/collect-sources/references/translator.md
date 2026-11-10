@@ -15,7 +15,7 @@
 grep -rl "^translation: 待翻译" content/zh-cn/docs --include=index.md
 ```
 
-只处理同目录下有 `original.md` 的页面；没有的（`fidelity: 仅链接`）跳过，报告给用户。
+收录说明里有加粗的「译文只覆盖到……，……待补译」时，只翻译新增部分，插到说明的位置，完成后删掉这句说明。其余页面只处理同目录下有 `original.md` 的页面；没有的（`fidelity: 仅链接`）跳过，报告给用户。
 
 ## 步骤
 

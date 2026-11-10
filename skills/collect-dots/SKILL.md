@@ -13,7 +13,7 @@ description: 收集 OpenAI dots（ChatGPT 中始终在线的个人智能体）�
 | --- | --- |
 | 产品目录 | `content/zh-cn/docs/dots/` |
 | 发布日期 | 2026-09-29（OpenAI DevDay 2026 前后发布） |
-| 最后收集日期 | 2026-11-06（对照旧笔记补收社区 1 篇：Cyera）；2026-11-05（第一轮完成：官方、媒体、社区）。第二轮起按新流程：原文存 `original.md`，资料页只写摘要与保留理由，不翻译 |
+| 最后收集日期 | 2026-11-10（增量：What’s new 11 月 2–6 日周汇总 1 篇，全文就是一条 dots 更新：GPT-6.1 Terra 成为驱动模型之一、Enterprise/Edu/Healthcare 可开启、11-18 起计费）；2026-11-06（对照旧笔记补收社区 1 篇：Cyera）；2026-11-05（第一轮完成：官方、媒体、社区）。第二轮起按新流程：原文存 `original.md`，资料页只写摘要与保留理由，不翻译 |
 | 页面格式 | 与所有产品一致，见 collect-sources 的 source-page.md「页面正文」。第一轮直接翻译的旧页面已于 2026-11-06 补上内容摘要、保留理由和分隔线（用户 2026-11-06 要求） |
 | 实测材料 | 用户确认没有（2026-11-05） |
 
@@ -126,6 +126,16 @@ community.openai.com 的 Dots 分类帖子量大，以 bug 报告和功能请求
 | 社区论坛 vc-openai「About the Dots category」 | 不收 | 分类说明，无内容 |
 
 系统卡页面是单页长文，正文链接用 `#section.N` 锚点和 `/gpt-6-astra/<章节>` 路径，收录时都改为 `https://deploymentsafety.openai.com/...` 绝对地址；图在 `/data/eval-sets/gpt-6-astra/assets/images/dots-N.png`，可直接下载。
+
+## 2026-11-10 增量收集
+
+12 个产品在同一会话里一次跑完（用户 2026-11-10 要求；「一个产品一个会话」的规则保留）。
+
+| 资料 | 判断 |
+| --- | --- |
+| What’s new「November 2–6, 2026」 | 收：本周没有 dots 专稿，周汇总全文就是 11-04 的 dots 更新。今后周汇总里的 dots 条目没有对应专稿时，按官方资料收（整页只有 dots 时收全文，否则节选） |
+| learn.chatgpt.com 的 dots 文档 6 页与企业文档 3 页 | 待用户决定：第一轮直接翻译的旧页面没有 `original.md`，无法自动比对；周汇总提到的 Terra、iOS 通知回复、标注、Enterprise 预览与计费都链接到这些文档，很可能已更新。要更新需按新流程补存 `original.md` 并重译 |
+| GPT-6.1 Terra 发布报道（BleepingComputer、InfoWorld 等，10-26/27） | 不收：模型发布，不提 dots |
 
 ## 命名约定
 

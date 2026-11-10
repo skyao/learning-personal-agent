@@ -13,7 +13,7 @@ description: 收集 Grok Bot（SpaceXAI / xAI，经 Cursor 交付）的资料时
 | --- | --- |
 | 产品目录 | `content/zh-cn/docs/grok-bot/` |
 | 发布日期 | 2026-08-11（beta） |
-| 最后收集日期 | 2026-11-06（第一轮 2026-11-05：官方 36 篇、媒体 3 篇、社区 5 篇；2026-11-06 对照旧笔记补收官方 11 篇：docs.x.ai 文档 10 篇、更新日志 1 篇） |
+| 最后收集日期 | 2026-11-10（增量：更新日志更新到 v0.79.3（11-06），目录改为 2026-11-06-changelog，译文只覆盖到 v0.78.1、新增部分待补译；Cursor 文档 teams 与帮助页 shared-bots 原文更新，旧译文移除待重译；x.ai 新闻无新的 Grok Bot 稿件）；2026-11-06（第一轮 2026-11-05：官方 36 篇、媒体 3 篇、社区 5 篇；2026-11-06 对照旧笔记补收官方 11 篇：docs.x.ai 文档 10 篇、更新日志 1 篇） |
 | 实测材料 | 用户确认没有（2026-11-05） |
 
 从一开始就按新流程：原文存 `original.md`，资料页只写摘要与保留理由，不翻译。
@@ -81,6 +81,18 @@ description: 收集 Grok Bot（SpaceXAI / xAI，经 Cursor 交付）的资料时
 | iThome「五大科技巨頭主動型Agent大比較」（王宏仁，2026-10-02） | 收入 industry/media：比较 Spark、Autopilot、dots、Grok Bot、Muse 五款 |
 | Dash Security「Dash Launches Runtime Protection for Grok Bot」（2026-10-19） | 不收：安全厂商推广自家产品，Grok Bot 一侧的机制在已收的 inference hooks 文档中 |
 | Stripe 与 Anthropic 的新闻稿 | 讲 Claude Duet，收在 claude-duet 目录 |
+
+## 2026-11-10 增量收集
+
+12 个产品在同一会话里一次跑完（用户 2026-11-10 要求；「一个产品一个会话」的规则保留）。
+
+| 资料 | 判断 |
+| --- | --- |
+| x.ai 直接下载 | 2026-11-10 起 `x.ai/news`、`x.ai/changelog/bot` 与 RSS 用浏览器标识可以直接下载（200），不再需要 Wayback。更新日志抽取后要整理：日期行「November 6, 2026Nov 6, 2026」去重；条目末尾的「Teams」「Enterprise」角标改为「[Teams]」；「0.75.2+Requires Grok Bot 0.75.2 or later」改为「(Requires Grok Bot 0.75.2 or later)」 |
+| Cursor 文档 teams | 原文更新：新增管理员的 Bot sharing 设置（Everyone / Admins only），以及 Slack 中未关联账号的成员使用共享 Bot |
+| 帮助页 shared-bots | 原文更新：共享范围扩到组织，新增发布草稿、复制链接、浏览共享 Bot、学到的内容需审核、共享连接器 |
+| 其余 Cursor 文档与帮助页 | 比对只差页尾链接，未覆盖 |
+| ryandoser.com「Best Personal AI Agent: Grok Bot vs Muse vs Dots vs Duet」（10-28，更新 11-09） | 不收：在已收的 Claire Vo 基准测试上整理，无自己的实测 |
 
 ## 命名约定
 

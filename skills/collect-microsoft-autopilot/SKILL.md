@@ -13,7 +13,7 @@ description: 收集 Microsoft Autopilot（原 Microsoft Scout，微软）的资�
 | --- | --- |
 | 产品目录 | `content/zh-cn/docs/microsoft-autopilot/`（2026-11-10 建立） |
 | 时间线 | 2026-06-02 Build 2026 以 Microsoft Scout 之名发布，是微软首个「Autopilot」类智能体，经 Frontier 计划实验性提供；2026-09-25 微软博客称其为 Autopilot（formerly Scout），同月底扩大私有预览 |
-| 最后收集日期 | 2026-11-10（美东；第一轮：官方 17 篇、媒体 6 篇、社区 4 篇；Learn 文档 12 篇全收，旧笔记 learning-ai-agent 的 copilot-autopilot 引用来源已逐条对照） |
+| 最后收集日期 | 2026-11-10（增量复查：无新资料；Ignite 2026-11-17 至 20 举行，下一轮重点看 Autopilot 公告）；2026-11-10（美东；第一轮：官方 17 篇、媒体 6 篇、社区 4 篇；Learn 文档 12 篇全收，旧笔记 learning-ai-agent 的 copilot-autopilot 引用来源已逐条对照） |
 
 ## 背景
 

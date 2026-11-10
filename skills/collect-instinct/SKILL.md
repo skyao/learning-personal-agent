@@ -13,7 +13,7 @@ description: 收集 Instinct（Spear Street Technology，创始人 Noah Shinn）
 | --- | --- |
 | 产品目录 | `content/zh-cn/docs/instinct/` |
 | 时间线 | 2025 年创立；2026-02 起私人测试（邀请制，至 2026-11 仍未公开开放）；2026-08 下旬在湾区走红，08-27 前后 2.5 亿美元 B 轮（25 亿美元估值）；09-28 宣布 10 亿美元 C 轮（100 亿美元估值） |
-| 最后收集日期 | 2026-11-05（美东；第一轮：官方 1 篇、媒体 5 篇） |
+| 最后收集日期 | 2026-11-10（增量：补收媒体 1 篇——TechCrunch 群聊上线（10-05）；社区 1 篇——Z Finance 的 Noah Shinn 访谈中文整理（09-30），两篇都是第一轮检索漏掉的）；2026-11-05（美东；第一轮：官方 1 篇、媒体 5 篇） |
 | 实测材料 | 没有：旧笔记 learning-ai-agent 没有 Instinct 目录 |
 
 ## 背景
@@ -65,6 +65,21 @@ description: 收集 Instinct（Spear Street Technology，创始人 Noah Shinn）
 
 - 融资数字各家说法不一（例如 Dealroom 写 64.7 亿美元估值），以公司公告和可靠媒体为准。
 - C 轮公告原文待补：取得后收为官方资料，SiliconANGLE 一篇保留。
+
+## 2026-11-10 增量收集
+
+12 个产品在同一会话里一次跑完（用户 2026-11-10 要求；「一个产品一个会话」的规则保留）。
+
+| 资料 | 判断 |
+| --- | --- |
+| TechCrunch「Instinct brings its AI agent to group chats」（Sarah Perez，10-05） | 收：群聊功能的一手报道，含 Noah Shinn 关于授权与隔离的说明 |
+| Z Finance「对话 Instinct 创始人」（人人都是产品经理，09-30） | 收：Colossus 访谈的中文整理，是能读到的最完整文字版本 |
+| Skift「A Viral AI Bot Just Showed Travel What Frictionless Actually Means」（09-04） | 不收：旅游业评论，约 400 词 |
+| Built In「What Is Instinct AI?」（10-21） | 不收：解说文，复述公开资料 |
+| Cybernews「Instinct AI agent invites hit eBay」（09-30） | 不收：邀请码在 eBay 卖 93 至 200 多美元，其余是对隐私问题的转述 |
+| the-ai-corner「Instinct Went From $2.5B to $10B in a Month」（10-09） | 不收：增长评论 |
+| runtimewire 的 Mac 应用、共享文件稿，aiweekly 的 BI 人物报道转述 | 不收：聚合站 |
+| App Store id6761189540（检索结果中与 Instinct 同列） | 未核实：美区 iTunes 查询为空 |
 
 ## 命名约定
 

@@ -13,7 +13,7 @@ description: 收集 Manus Cue（Manus / Butterfly Effect）的资料时使用：
 | --- | --- |
 | 产品目录 | `content/zh-cn/docs/manus-cue/` |
 | 发布日期 | 2026-09-28（与 Manus 2.0 同日，抢先体验，凭邀请码） |
-| 最后收集日期 | 2026-11-05（第一轮：官方 7 篇、媒体 2 篇、社区 1 篇；其中 5 篇是对照旧笔记 learning-ai-agent 的 Cue 资料索引补收的） |
+| 最后收集日期 | 2026-11-10（增量：博客 sitemap 与帮助中心无新 Cue 资料；App Store 26.18.14（11-08）只是修复；媒体未见 11 月新报道）；2026-11-05（第一轮：官方 7 篇、媒体 2 篇、社区 1 篇；其中 5 篇是对照旧笔记 learning-ai-agent 的 Cue 资料索引补收的） |
 | 实测材料 | 没有：旧笔记 learning-ai-agent 的 `agents/personal/cue/` 是 2026-10-21 至 10-26 的资料阅读与实验方案，作者注明没有账号实测，不迁入 |
 
 从一开始就按新流程：外文原文存 `original.md`，资料页只写摘要与保留理由，不翻译。

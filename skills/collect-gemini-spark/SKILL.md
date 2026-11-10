@@ -14,7 +14,7 @@ description: 收集 Gemini Spark（Google，2026-10 起改称 Gemini 的 Task �
 | 产品目录 | `content/zh-cn/docs/gemini-spark/` |
 | 发布日期 | 2026-05-19（Google I/O；先给受信测试者，随后美国 AI Ultra Beta） |
 | 改名 | 2026-10 起界面改称「Task」：网页版约 10-01（Chrome Unboxed），Android 约 10-12（9to5Google）；Google 没有发正式公告，产品页和 Spark 更新日志随后下线或跳转 |
-| 最后收集日期 | 2026-11-05（美东；第一轮：官方 14 篇、媒体 5 篇、社区 1 篇，其中 12 篇是旧笔记 learning-ai-agent 的 Gemini Spark 资料索引引用过的） |
+| 最后收集日期 | 2026-11-10（增量：博客 RSS 无 Spark/Task 新文章；帮助页 tasks 与 schedules 删去「选择加入 Personal Intelligence」一条，原文与译文同步删除；媒体未见新资料）；2026-11-05（美东；第一轮：官方 14 篇、媒体 5 篇、社区 1 篇，其中 12 篇是旧笔记 learning-ai-agent 的 Gemini Spark 资料索引引用过的） |
 | 实测材料 | 没有：旧笔记的 `agents/personal/gemini-spark/` 是 2026-10-21 至 10-26 的资料阅读与验证方案，没有账号实测，不迁入 |
 
 ## 收录范围
@@ -67,6 +67,17 @@ description: 收集 Gemini Spark（Google，2026-10 起改称 Gemini 的 Task �
 - 2026-10 改名后，帮助页的用词从「Gemini Spark」改为「tasks / task mode」，旧链接中的锚点（如 `#gs_spark`）可能失效；收集时以当前页面为准，在 `dateNote` 注明改名。
 - 价格说法不一：WIRED 写 AI Ultra「起价每月 100 美元」，The Verge 写「99.99 美元」，照录。
 - 9to5Google 正文中有「Advertisement - scroll for more content」行，要删。
+
+## 2026-11-10 增量收集
+
+12 个产品在同一会话里一次跑完（用户 2026-11-10 要求；「一个产品一个会话」的规则保留）。
+
+| 资料 | 判断 |
+| --- | --- |
+| 帮助页 tasks-and-workflows、schedules | 原文更新：「What you need」删去「Opt in to Personal Intelligence」 |
+| 帮助页 gemini-models 等 | 未变。注意：帮助中心按客户端标识返回不同平台的步骤（curl 默认标识得到 Android 版，浏览器标识得到 Computer 版），比对时要用与第一次相同的标识 |
+| android.com.pl「Gemini łączy Sparka z głównym czatem」（2026-10-13，波兰文） | 不收：改名观察，已有 9to5Google 与 Chrome Unboxed 两篇一手报道 |
+| layer3labs、findskill、scaler 的改名解说 | 不收：SEO 指南 |
 
 ## 命名约定
 
