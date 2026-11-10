@@ -13,7 +13,7 @@ description: 收集 Meta Muse（Meta 的个人 AI 智能体）的资料时使用
 | --- | --- |
 | 产品目录 | `content/zh-cn/docs/muse/` |
 | 发布日期 | 2026-09-08（美国） |
-| 最后收集日期 | 2026-11-09（10:16 轮次：媒体 6 篇——The Times 英国上线首报（11-09）、allthingsmuse Cloudflare 立场文件（11-09）与 Fingerprint 检测（11-06），回填 3 篇：Web Bot Auth 签名（10-31）、DataDome 29M 请求（10-15）、The RealReal 收紧防御（10-30）；社区 1 篇——dev.to 特化模型解读（11-09）；官方渠道本轮无新稿）；2026-11-08（22:16 轮次：媒体 3 篇——allthingsmuse Threads 内置助手在开发（11-08）、头像跳舞分享（11-08）、头像分享现身网页端回填（10-25）；官方渠道本轮无新稿）；2026-11-08（10:16 轮次补跑：媒体 9 篇——ChainCatcher Wang 访谈整理（11-03）、36氪 Muse 商业化分析（10-27）、The Verge 50 美元自制 Muse Charm（10-31）、allthingsmuse 6 篇：Muse Mail 推出（11-06）与设置指南（11-07）、Spaces 演示详解（11-06）、封堵综述（11-06）与加拿大银行（11-02）、CNBC 零售商审计（11-02）；官方渠道本轮无新稿）；2026-11-07（22:16 轮次补跑：官方 Spaces 稿、研究博客特化模型（Active Memory/Focus，PSI 47%），媒体 TechCrunch 与 The Verge 的 Spaces 报道、allthingsmuse Instacart 自绘购物车报道（11-04），industry 收 Enterpret 12 款智能体用户排名（11-03）；另收用户发来的公众号文章：社区 1 篇，橘AI；对照旧笔记补收媒体 1 篇：Bloomberg 嘉信理财拦截 Muse；22:16 轮次补跑：官方语音稿、墨西哥上线、TechCrunch、The Verge、DataCamp 横评、Medium Muse 101 与六产品横评（仅链接待补原文）、coderlegion、PYMNTS Expedia、语音悄悄上线回填；本轮补跑：Yahoo 理财评测、iFynx Secure VM 解析，industry 收 freistyle 六产品横评、老张入门成本对比、Kunal 收件箱实测（仅链接）；发布稿西语版 11-05 墨西哥更新记入 altUrls；Medium Muse 101 与六产品横评已改用转载全文）；2026-11-07（10:16 轮次补跑：社区 personalagentbench Muse 开源逐层核查、museexplained 11 月 4 日 11 小时停运记录，媒体 allthingsmuse 下载量 1.7:1 第三方对比；官方无新稿）；2026-11-07（22:16 轮次补跑：社区 BetterClaw 隐私分析、Top5Apps 语音开启指南；媒体 FourWeekMBA Nikkei 无广告二手报道（10-24，Nikkei 原文付费墙）；industry 收 Top5Apps 五款实测横评（11-01）；官方渠道本轮无新稿）；2026-11-05（第一阶段完成：官方、媒体、社区、实测；行业综合横评为「仅链接」占位）。下一轮起按新流程：原文存 `original.md`，资料页只写摘要与保留理由，不翻译 |
+| 最后收集日期 | 2026-11-09（22:16 轮次：媒体 7 篇——The Hindu 印度订阅价首报（11-09）、MacRumors Apple Watch 首报（11-09）与 allthingsmuse 手表双平台（11-09），回填 4 篇：HUMAN 智能体流量 40%（11-05）、GameQuant 连续 32 天榜首（11-05）、撤下的取消关注广告（11-05，据 BI）、Barron's 购物智能体信任落差（11-05，二手）；官方渠道本轮无新稿）；2026-11-09（10:16 轮次：媒体 6 篇——The Times 英国上线首报（11-09）、allthingsmuse Cloudflare 立场文件（11-09）与 Fingerprint 检测（11-06），回填 3 篇：Web Bot Auth 签名（10-31）、DataDome 29M 请求（10-15）、The RealReal 收紧防御（10-30）；社区 1 篇——dev.to 特化模型解读（11-09）；官方渠道本轮无新稿）；2026-11-08（22:16 轮次：媒体 3 篇——allthingsmuse Threads 内置助手在开发（11-08）、头像跳舞分享（11-08）、头像分享现身网页端回填（10-25）；官方渠道本轮无新稿）；2026-11-08（10:16 轮次补跑：媒体 9 篇——ChainCatcher Wang 访谈整理（11-03）、36氪 Muse 商业化分析（10-27）、The Verge 50 美元自制 Muse Charm（10-31）、allthingsmuse 6 篇：Muse Mail 推出（11-06）与设置指南（11-07）、Spaces 演示详解（11-06）、封堵综述（11-06）与加拿大银行（11-02）、CNBC 零售商审计（11-02）；官方渠道本轮无新稿）；2026-11-07（22:16 轮次补跑：官方 Spaces 稿、研究博客特化模型（Active Memory/Focus，PSI 47%），媒体 TechCrunch 与 The Verge 的 Spaces 报道、allthingsmuse Instacart 自绘购物车报道（11-04），industry 收 Enterpret 12 款智能体用户排名（11-03）；另收用户发来的公众号文章：社区 1 篇，橘AI；对照旧笔记补收媒体 1 篇：Bloomberg 嘉信理财拦截 Muse；22:16 轮次补跑：官方语音稿、墨西哥上线、TechCrunch、The Verge、DataCamp 横评、Medium Muse 101 与六产品横评（仅链接待补原文）、coderlegion、PYMNTS Expedia、语音悄悄上线回填；本轮补跑：Yahoo 理财评测、iFynx Secure VM 解析，industry 收 freistyle 六产品横评、老张入门成本对比、Kunal 收件箱实测（仅链接）；发布稿西语版 11-05 墨西哥更新记入 altUrls；Medium Muse 101 与六产品横评已改用转载全文）；2026-11-07（10:16 轮次补跑：社区 personalagentbench Muse 开源逐层核查、museexplained 11 月 4 日 11 小时停运记录，媒体 allthingsmuse 下载量 1.7:1 第三方对比；官方无新稿）；2026-11-07（22:16 轮次补跑：社区 BetterClaw 隐私分析、Top5Apps 语音开启指南；媒体 FourWeekMBA Nikkei 无广告二手报道（10-24，Nikkei 原文付费墙）；industry 收 Top5Apps 五款实测横评（11-01）；官方渠道本轮无新稿）；2026-11-05（第一阶段完成：官方、媒体、社区、实测；行业综合横评为「仅链接」占位）。下一轮起按新流程：原文存 `original.md`，资料页只写摘要与保留理由，不翻译 |
 | 页面格式 | 与所有产品一致，见 collect-sources 的 source-page.md「页面正文」。第一阶段直接翻译的旧页面已于 2026-11-06 补上内容摘要、保留理由和分隔线（用户 2026-11-06 要求） |
 
 ## 收录范围
@@ -237,6 +237,27 @@ description: 收集 Meta Muse（Meta 的个人 AI 智能体）的资料时使用
 | surff.io、breakorbit.ai、aidedex.com、aiwiz.uk、mausbot.com 英国可用性指南（9–10 月） | 不收：案头整理，均写于英国上线消息之前，现已过时 |
 | IT之家/搜狐语音稿（2026-11-06）、IT之家特化模型稿（2026-11-07）、gihyo.jp、life-topics.jp、1ccf.com（2026-11-07） | 不收：只复述官方 11-05/11-06 两篇公告，无新信息 |
 | etvbharat、pondero.ai、trueseeker.com 语音/Spaces 稿（2026-11-06/07） | 不收：复述官方 11-05/11-06 公告，无新信息（与表中已有同类行同判） |
+| The Hindu「Meta sets India pricing for Muse AI agent ahead of launch」（Aroon Deep，2026-11-09） | 收：媒体类，印度订阅价首报（Power ₹1,799、Maximum ₹8,999），Meta 未回应询价；印度用户现处等候名单、经 VPN 注册与代付受限等当地准入细节；★（新地区定价，价格为 The Hindu 的发现、未经 Meta 证实） |
+| MacRumors「Meta's Muse AI Agent Comes to Apple Watch」（Juli Clover，2026-11-09） | 收：媒体类，iOS 15.0 上线 Apple Watch 首报（发消息、听写、通话、表盘复杂功能）；★（新平台） |
+| allthingsmuse「Muse Comes to Apple Watch and Wear OS」（Icarus，2026-11-09） | 收：媒体类，补 Wear OS 同步上线（Wang 的 X 帖）、15.0 版发布说明原文与订票截图；★（与 MacRumors 同一事件的新平台事实） |
+| allthingsmuse「Muse Drove 40% of the Agentic Traffic One Security Firm Saw in September」（Icarus，2026-11-05） | 收回填：媒体类，Advertising Week 小组讨论，HUMAN 称 9 月 Muse 占其观测智能体流量的 40%，另有 209% 环比增长、62% 流向零售与旅游、结账更快与 DoorDash 咖啡实例 |
+| allthingsmuse「Muse Held the No. 1 Spot on the US App Store for 32 Straight Days」（Icarus，2026-11-05） | 收回填：媒体类，GameQuant 日排名数据（9-18 至 10-19 连冠 32 天、评分与下载量估计）；GameQuant 的 Medium 原文直接下载失败、Wayback 无快照，basedOn 填 GameQuant |
+| allthingsmuse「Meta Pulled a Muse Ad Promising to Show Who Unfollowed You on Instagram」（Icarus，2026-11-05） | 收回填：媒体类，据 Business Insider 2026-10-29 报道，Meta 撤下承诺可查 Instagram 取消关注者的广告，发言人证实已下架；BI 原文付费墙未读，basedOn 填 BI，原文地址未核实 |
+| allthingsmuse「AI Shopping Agents Are Growing Fast. Most Shoppers Still Aren't Sold.」（Icarus，2026-11-05） | 收回填：媒体类，据 Barron's 报道，UBS 信任调查（17% 认为好主意、43% 认为不是）、Bain 5000 亿美元预测与推荐不透明等机制；Barron's 原文返回 401、Wayback 无快照，basedOn 填 Barron's |
+| Muse Ember 研究博客（research.meta.ai，2026-11-09） | 不收：模型发布，全文未提及 Muse 产品（仅 Muse Code 与 Meta Model API 上线，`muse-ember-1.0`）；与 Spark 1.1/1.3 同判 |
+| TechCrunch、Unite.AI、SiliconANGLE、AlphaSignal、CellCog、Interesting Engineering、cryptobriefing 的 Ember 稿（2026-11-09/10） | 不收：模型发布的媒体转述；Ember 本身不收 |
+| allthingsmuse「Meta Releases Muse Ember」「Muse Ember, Wonder, and Spark 1.3 Arrive on Google Cloud」（2026-11-09） | 不收：模型发布与模型上云，均无 Muse 产品关联 |
+| allthingsmuse「Muse to Launch in the UK Within Weeks」（2026-11-09）、bmmagazine、Pivot News 英国上线稿（2026-11-09） | 不收：已收 The Times 英国首报的转述，无新信息 |
+| AppleInsider、world-today-journal.com、thedailytechfeed.com 的 Apple Watch 稿（2026-11-09/10） | 不收：与已收 MacRumors、allthingsmuse 同事件的转述（AppleInsider 兼带不建议安装的评论） |
+| tryagentsonic.com「Meta Muse on Apple Watch or Galaxy Watch」（2026-09-27） | 不收：写于手表上线前，称无手表应用，已过时 |
+| ppc.land Cloudflare 综述、unite.ai 语音稿、olly.social、CoAI、etvbharat、Sohu IT之家语音稿、blog.toolsnetwork.ai、pondero.ai（2026-11-05/08） | 不收：只复述官方 11-05/11-06 公告，无新信息 |
+| IT之家/网易号、rollout.sagus.io 的 Muse Ember 中文与日文稿（2026-11-09/10） | 不收：模型发布的转述；Ember 本身不收 |
+| drchaos.com「Meta Muse Wonder Review」（2026-11-05 前后） | 不收：Wonder 模型评测，与 Muse 产品无直接关联 |
+| museexplained.com「Muse Voice is live」指南、agentcomparison.net 权限与安全整理（2026-11-06/07） | 不收：官方语音公告与帮助文档的整理，无实测、无新信息 |
+| aitoolsreview.co.uk Spark 1.2 与 Glimmer 评测（2026-11 月） | 不收：模型与 Muse Code 内容，不在收录范围 |
+| allthingsmuse Academy 系列新增：个人理财、招聘、求职（10 月底至 11 月初） | 不收：提示词模板式用法课，无真实执行记录（与 People Ops、Creators、Event Planners 同判） |
+| allthingsmuse「Muse vs Meta AI」（2026-10-21） | 不收：产品对照解说，部分说法已过时（称仅美加），且在窗口外 |
+| allthingsmuse「Agentic Commerce, Explained: How Muse Checks Out With Shop Pay」（2026-10-21） | 不收：购物结账解说，作者自购实例只有一段，其余为已收官方资料的整理；发表日在窗口外 |
 | 微博 Sensor Tower 下载/留存帖（2026-10-21） | 不收：社交媒体单帖转述；下载量已有 FoxData 报道覆盖，留存数据无一手出处；且在窗口外 |
 
 ## 对照旧笔记的判断（2026-11-06）
@@ -306,6 +327,7 @@ description: 收集 Meta Muse（Meta 的个人 AI 智能体）的资料时使用
 - 2026-11-06：研究博客列表页直接下载恢复（200），新帖 `/blog/specialized-models-for-muse-and-metaai`；文中图表以 HTML 数据表形式呈现，可直接抽取还原。
 - 2026-11-08：研究博客列表页直接下载又返回 403，浏览器读取确认 11 月仅 11-06 特化模型一篇，无新帖。
 - 2026-11-09：同上，直接下载 403，浏览器读取确认 11 月仅 11-06 特化模型一篇，无新帖。
+- 2026-11-09（22:16 轮次）：列表页直接下载与 browser.open 均返回 403；经检索核对，11 月 9 日新帖仅 Muse Ember 一篇（模型发布，不收，见判断记录）。
 - 2026-11-05 补跑：muse.ai/blog 列表页无新文章（最新仍为 11-02 赏金回顾）；Newsroom AI 标签页 11 月仅语音稿一篇。
 
 ### about.fb.com 抽取脚本
