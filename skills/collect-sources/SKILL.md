@@ -45,7 +45,7 @@ content/zh-cn/docs/
 
 ## 每轮收集的流程
 
-1. **读现状。** 先按「省用量的做法」第 1 条确认当前会话里没有做过别的产品，做过就停下建议开新会话。然后读 `references/tracking.md` 和本轮要收集的产品 skill；列出已有资料的 `sourceUrl` 与 `altUrls`：
+1. **读现状。** 先按「省用量的做法」第 1 条确认当前会话里没有做过别的产品，做过就停下建议开新会话。再确认抽取脚本的运行环境可用（见 source-page.md 的「取全文」）：Python、pip 等基本运行条件有问题时，停下来提醒用户修复，不由收集 agent 自行折腾，用户修好后再继续（用户 2026-11-09 决定）。然后读 `references/tracking.md` 和本轮要收集的产品 skill；列出已有资料的 `sourceUrl` 与 `altUrls`：
    ```bash
    grep -rhE "^(sourceUrl|altUrls):" content/zh-cn/docs --include=index.md | sort
    ```
