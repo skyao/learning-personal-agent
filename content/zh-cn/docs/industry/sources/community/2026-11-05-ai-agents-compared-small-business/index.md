@@ -11,7 +11,7 @@ fidelity: 全文
 translation: 待翻译
 collectedAt: 2026-11-06
 tags: [开放与价格, 安全, 实测评测]
-products: [dots, claude-duet, muse, grok-bot, gemini-spark]
+products: [dots, claude-duet, muse, grok-bot, gemini-spark, microsoft-autopilot]
 ---
 
 {{< source-info >}}
