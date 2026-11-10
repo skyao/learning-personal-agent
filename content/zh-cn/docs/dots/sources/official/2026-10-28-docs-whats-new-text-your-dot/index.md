@@ -11,7 +11,7 @@ fidelity: 全文翻译
 translation: 已翻译
 collectedAt: 2026-11-04
 dateNote: "页面只标「October 26–30, 2026」这一周；slug 中的日期为 10 月 28 日，与 ChatGPT 发布说明中该条目的日期一致，date 取该日"
-tags: [功能更新, 设备]
+tags: [功能更新, 设备, 交互渠道]
 products: [dots]
 ---
 

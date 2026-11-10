@@ -10,7 +10,7 @@ language: en
 fidelity: 全文
 translation: 已翻译
 collectedAt: 2026-11-08
-tags: [功能更新]
+tags: [功能更新, 交互渠道]
 ---
 
 {{< source-info >}}

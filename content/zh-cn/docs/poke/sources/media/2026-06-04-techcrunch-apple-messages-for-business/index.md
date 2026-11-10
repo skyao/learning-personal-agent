@@ -10,7 +10,7 @@ language: en
 fidelity: 全文
 translation: 待翻译
 collectedAt: 2026-11-09
-tags: [发布, 商业与规模]
+tags: [交互渠道, 发布, 商业与规模]
 products: [poke]
 updatedAt: "2026-06-06"
 dateNote: "发布于 2026-06-04T19:20:58（UTC），2026-06-06 修改"

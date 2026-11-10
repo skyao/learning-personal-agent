@@ -11,7 +11,7 @@ fidelity: 全文
 translation: 已翻译
 collectedAt: 2026-11-05
 dateNote: "文档不标日期，取收集日期"
-tags: [功能更新, 安全, 连接器]
+tags: [功能更新, 安全, 连接器, 交互渠道]
 products: [grok-bot]
 ---
 

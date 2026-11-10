@@ -11,7 +11,7 @@ fidelity: 节选
 translation: 已翻译
 collectedAt: 2026-11-05
 dateNote: "help.openai.com 对自动访问返回 403，依据 Internet Archive 2026-11-03 17:58:27（UTC）的快照；条目位于发布说明「October 28, 2026」日期之下"
-tags: [功能更新, 安全]
+tags: [功能更新, 安全, 交互渠道]
 products: [dots]
 ---
 

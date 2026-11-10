@@ -11,7 +11,7 @@ translation: 不需要
 collectedAt: 2026-11-05
 updatedAt: 2026-07-27
 dateNote: "页面不标发布日期，日期取页面显示的「最后更新」时间（2026-07-27，UTC）"
-tags: [连接器, 安全, 持续执行]
+tags: [连接器, 安全, 持续执行, 交互渠道]
 products: [workbuddy]
 ---
 

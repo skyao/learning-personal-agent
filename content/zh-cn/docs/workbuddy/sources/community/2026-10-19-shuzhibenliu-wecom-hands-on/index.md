@@ -11,7 +11,7 @@ fidelity: 全文
 translation: 不需要
 collectedAt: 2026-11-05
 dateNote: "界面新闻页面的配图日期为 2026-10-19；人人都是产品经理 2026-10-20 发布同文（数智奔流原创发布），记入 altUrls"
-tags: [实测评测, 持续执行, 连接器]
+tags: [实测评测, 持续执行, 连接器, 交互渠道]
 products: [workbuddy]
 ---
 

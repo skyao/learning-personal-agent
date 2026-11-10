@@ -11,7 +11,7 @@ language: en
 fidelity: 转载全文
 translation: 待翻译
 collectedAt: 2026-11-09
-tags: [发布, 商业与规模]
+tags: [交互渠道, 发布, 商业与规模]
 products: [poke, instinct]
 reprintUrl: "https://web.archive.org/web/20261101075904/https://techcrunch.com/2026/10/24/all-the-ai-agents-that-can-live-in-your-text-messages/"
 updatedAt: "2026-10-26"

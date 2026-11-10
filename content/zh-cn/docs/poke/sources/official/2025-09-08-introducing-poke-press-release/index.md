@@ -10,7 +10,7 @@ language: en
 fidelity: 全文
 translation: 待翻译
 collectedAt: 2026-11-09
-tags: [发布, 商业与规模]
+tags: [发布, 交互渠道, 商业与规模]
 products: [poke]
 dateNote: "正文写明发布日期为 Monday, September 8, 2025"
 ---

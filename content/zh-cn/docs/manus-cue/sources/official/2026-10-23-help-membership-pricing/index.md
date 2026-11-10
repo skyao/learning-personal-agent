@@ -11,7 +11,7 @@ fidelity: 节选
 translation: 已翻译
 collectedAt: 2026-11-05
 dateNote: "帮助文档不标发布日期；日期取页面结构化数据中的最后修改时间（2026-10-23T06:10:50Z）"
-tags: [开放与价格]
+tags: [开放与价格, 交互渠道]
 products: [manus-cue]
 ---
 

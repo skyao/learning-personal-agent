@@ -10,7 +10,7 @@ language: en
 fidelity: 全文
 translation: 待翻译
 collectedAt: 2026-11-09
-tags: [连接器]
+tags: [交互渠道, 连接器]
 products: [poke]
 dateNote: "帮助文档页没有标注发布或更新日期，取收集日期（美东）"
 ---

@@ -10,7 +10,7 @@ language: en
 fidelity: 全文
 translation: 待翻译
 collectedAt: 2026-11-09
-tags: [功能更新]
+tags: [功能更新, 交互渠道]
 products: [poke]
 dateNote: "发布说明持续追加；日期取最新条目 July 23, 2026。收录 November 3, 2025 至 July 23, 2026 的条目"
 ---
