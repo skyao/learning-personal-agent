@@ -136,6 +136,15 @@ basedOnUrl: ""                           # 二手报道：原始报道的地址
   - `container.py <html> <开头短语> <结尾短语>`：找出同时包含两个短语的最小元素，用于自动抽取失败、需要定位正文容器的页面。
   - `localize_images.py <md> <页面目录> [基准URL]`：下载 Markdown 中的图片到 `images/` 并改写链接；改写后的 Markdown 输出到标准输出，要重定向到文件再替换原文件。
   - `shrink_images.py <images目录> [上限KB]`：缩小超过上限的图片（需要 Pillow）。PNG 压缩后仍超限时会改存为 `.jpg`（输出行写明新文件名），要同步改正文里的引用；收尾时逐个检查正文引用的图片文件都存在。
+- 准备抽取环境（2026-11-09 收集 Poke 时整理）：系统的 `python3` 没有 pip，也没有 ensurepip，`python3 -m venv venv` 建出的环境缺 pip，会直接失败。做法如下，虚拟环境与 `get-pip.py` 都放在会话的临时目录里，不放进仓库：
+  ```bash
+  cd <临时目录>
+  python3 -m venv --without-pip venv
+  curl -sSLo get-pip.py https://bootstrap.pypa.io/get-pip.py
+  ./venv/bin/python get-pip.py -q
+  ./venv/bin/python -m pip install -q beautifulsoup4 markdownify pillow
+  ```
+  之前会话的临时目录里如果已经有 `get-pip.py`，可以直接复制过来用。shell 是 zsh：把「解释器 + 脚本路径」存进一个变量再 `$P file.html` 调用时不会按空格拆开，命令会静默失败、输出为空。解释器和脚本路径要分别存变量，例如 `$PY $X/extract.py file.html`。
 - 下载的网页放在临时目录，不放进仓库。
 - 直接下载时可以灵活选择客户端标识（用户 2026-11-06 同意）：先用 curl 默认的标识，返回验证页、403 或内容不全时，换成浏览器的标识（如 `-A "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/120 Safari/537.36"`）。仍被拒绝时按下面的 Wayback 方法处理。不破解验证码、不登录、不使用他人账号。
 - 常见情况（2026-11-05 补抓行业综合资料时整理）：
