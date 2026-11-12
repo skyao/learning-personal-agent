@@ -13,7 +13,7 @@ description: 收集 Meta Muse（Meta 的个人 AI 智能体）的资料时使用
 | --- | --- |
 | 产品目录 | `content/zh-cn/docs/muse/` |
 | 发布日期 | 2026-09-08（美国） |
-| 最后收集日期 | 2026-11-10（10:16 轮次：muse 3 篇——雷峰网 OpenClaw 拆解（11-04，社区，★）、海峡时报新加坡上线（10-28，媒体）、36氪/字母榜汪滔访谈（10-12，媒体）；industry 2 篇——中国新闻周刊个人智能体综述（11-08）、36氪/智东西封堵专文（10-21）；官方渠道本轮无新稿：Newsroom AI 标签最新仍为 11-06 Spaces 稿，muse.ai/blog 最新仍为 11-02 赏金回顾，研究博客 11 月仅 11-09 Ember（模型发布，不收）与 11-06 特化模型两篇）；2026-11-10（增量：Newsroom AI 标签与 muse.ai/blog 无新稿；媒体只做了一次检索，未见 11-09 22:16 轮次之后的新报道）；2026-11-09（22:16 轮次：媒体 7 篇——The Hindu 印度订阅价首报（11-09）、MacRumors Apple Watch 首报（11-09）与 allthingsmuse 手表双平台（11-09），回填 4 篇：HUMAN 智能体流量 40%（11-05）、GameQuant 连续 32 天榜首（11-05）、撤下的取消关注广告（11-05，据 BI）、Barron's 购物智能体信任落差（11-05，二手）；官方渠道本轮无新稿）；2026-11-09（10:16 轮次：媒体 6 篇——The Times 英国上线首报（11-09）、allthingsmuse Cloudflare 立场文件（11-09）与 Fingerprint 检测（11-06），回填 3 篇：Web Bot Auth 签名（10-31）、DataDome 29M 请求（10-15）、The RealReal 收紧防御（10-30）；社区 1 篇——dev.to 特化模型解读（11-09）；官方渠道本轮无新稿）；2026-11-08（22:16 轮次：媒体 3 篇——allthingsmuse Threads 内置助手在开发（11-08）、头像跳舞分享（11-08）、头像分享现身网页端回填（10-25）；官方渠道本轮无新稿）；2026-11-08（10:16 轮次补跑：媒体 9 篇——ChainCatcher Wang 访谈整理（11-03）、36氪 Muse 商业化分析（10-27）、The Verge 50 美元自制 Muse Charm（10-31）、allthingsmuse 6 篇：Muse Mail 推出（11-06）与设置指南（11-07）、Spaces 演示详解（11-06）、封堵综述（11-06）与加拿大银行（11-02）、CNBC 零售商审计（11-02）；官方渠道本轮无新稿）；2026-11-07（22:16 轮次补跑：官方 Spaces 稿、研究博客特化模型（Active Memory/Focus，PSI 47%），媒体 TechCrunch 与 The Verge 的 Spaces 报道、allthingsmuse Instacart 自绘购物车报道（11-04），industry 收 Enterpret 12 款智能体用户排名（11-03）；另收用户发来的公众号文章：社区 1 篇，橘AI；对照旧笔记补收媒体 1 篇：Bloomberg 嘉信理财拦截 Muse；22:16 轮次补跑：官方语音稿、墨西哥上线、TechCrunch、The Verge、DataCamp 横评、Medium Muse 101 与六产品横评（仅链接待补原文）、coderlegion、PYMNTS Expedia、语音悄悄上线回填；本轮补跑：Yahoo 理财评测、iFynx Secure VM 解析，industry 收 freistyle 六产品横评、老张入门成本对比、Kunal 收件箱实测（仅链接）；发布稿西语版 11-05 墨西哥更新记入 altUrls；Medium Muse 101 与六产品横评已改用转载全文）；2026-11-07（10:16 轮次补跑：社区 personalagentbench Muse 开源逐层核查、museexplained 11 月 4 日 11 小时停运记录，媒体 allthingsmuse 下载量 1.7:1 第三方对比；官方无新稿）；2026-11-07（22:16 轮次补跑：社区 BetterClaw 隐私分析、Top5Apps 语音开启指南；媒体 FourWeekMBA Nikkei 无广告二手报道（10-24，Nikkei 原文付费墙）；industry 收 Top5Apps 五款实测横评（11-01）；官方渠道本轮无新稿）；2026-11-05（第一阶段完成：官方、媒体、社区、实测；行业综合横评为「仅链接」占位）。下一轮起按新流程：原文存 `original.md`，资料页只写摘要与保留理由，不翻译 |
+| 最后收集日期 | 2026-11-11（22:16 轮次：muse 7 篇——媒体 6 篇：Skift Expedia 接入上线实测（11-09，节选，Skift Pro 付费墙截断）、TechCrunch 手表双平台（11-10，补 Sensor Tower 40 天 1000 万下载数据）、allthingsmuse Muse Mail 付费开放（11-10）、Uber Courier 接入（11-10）、Muse Mail 将全量开放（11-11，Wang 表态）、WIRED 购物商家侧核查（10-31，回填，★，经 DNYUZ 全文转载）；社区 1 篇：museexplained 非用户消息隐私（11-04，回填）；industry 1 篇：Skift 温德姆向 AI 订房智能体开放库存（10-22，节选，Skift Pro 付费墙截断）；官方渠道本轮无新稿：Newsroom AI 标签最新仍为 11-06 Spaces 稿，muse.ai/blog 最新仍为 11-02 赏金回顾，研究博客 11 月仅 11-09 Ember（模型发布，不收）与 11-06 特化模型两篇）；2026-11-10（10:16 轮次：muse 3 篇——雷峰网 OpenClaw 拆解（11-04，社区，★）、海峡时报新加坡上线（10-28，媒体）、36氪/字母榜汪滔访谈（10-12，媒体）；industry 2 篇——中国新闻周刊个人智能体综述（11-08）、36氪/智东西封堵专文（10-21）；官方渠道本轮无新稿：Newsroom AI 标签最新仍为 11-06 Spaces 稿，muse.ai/blog 最新仍为 11-02 赏金回顾，研究博客 11 月仅 11-09 Ember（模型发布，不收）与 11-06 特化模型两篇）；2026-11-10（增量：Newsroom AI 标签与 muse.ai/blog 无新稿；媒体只做了一次检索，未见 11-09 22:16 轮次之后的新报道）；2026-11-09（22:16 轮次：媒体 7 篇——The Hindu 印度订阅价首报（11-09）、MacRumors Apple Watch 首报（11-09）与 allthingsmuse 手表双平台（11-09），回填 4 篇：HUMAN 智能体流量 40%（11-05）、GameQuant 连续 32 天榜首（11-05）、撤下的取消关注广告（11-05，据 BI）、Barron's 购物智能体信任落差（11-05，二手）；官方渠道本轮无新稿）；2026-11-09（10:16 轮次：媒体 6 篇——The Times 英国上线首报（11-09）、allthingsmuse Cloudflare 立场文件（11-09）与 Fingerprint 检测（11-06），回填 3 篇：Web Bot Auth 签名（10-31）、DataDome 29M 请求（10-15）、The RealReal 收紧防御（10-30）；社区 1 篇——dev.to 特化模型解读（11-09）；官方渠道本轮无新稿）；2026-11-08（22:16 轮次：媒体 3 篇——allthingsmuse Threads 内置助手在开发（11-08）、头像跳舞分享（11-08）、头像分享现身网页端回填（10-25）；官方渠道本轮无新稿）；2026-11-08（10:16 轮次补跑：媒体 9 篇——ChainCatcher Wang 访谈整理（11-03）、36氪 Muse 商业化分析（10-27）、The Verge 50 美元自制 Muse Charm（10-31）、allthingsmuse 6 篇：Muse Mail 推出（11-06）与设置指南（11-07）、Spaces 演示详解（11-06）、封堵综述（11-06）与加拿大银行（11-02）、CNBC 零售商审计（11-02）；官方渠道本轮无新稿）；2026-11-07（22:16 轮次补跑：官方 Spaces 稿、研究博客特化模型（Active Memory/Focus，PSI 47%），媒体 TechCrunch 与 The Verge 的 Spaces 报道、allthingsmuse Instacart 自绘购物车报道（11-04），industry 收 Enterpret 12 款智能体用户排名（11-03）；另收用户发来的公众号文章：社区 1 篇，橘AI；对照旧笔记补收媒体 1 篇：Bloomberg 嘉信理财拦截 Muse；22:16 轮次补跑：官方语音稿、墨西哥上线、TechCrunch、The Verge、DataCamp 横评、Medium Muse 101 与六产品横评（仅链接待补原文）、coderlegion、PYMNTS Expedia、语音悄悄上线回填；本轮补跑：Yahoo 理财评测、iFynx Secure VM 解析，industry 收 freistyle 六产品横评、老张入门成本对比、Kunal 收件箱实测（仅链接）；发布稿西语版 11-05 墨西哥更新记入 altUrls；Medium Muse 101 与六产品横评已改用转载全文）；2026-11-07（10:16 轮次补跑：社区 personalagentbench Muse 开源逐层核查、museexplained 11 月 4 日 11 小时停运记录，媒体 allthingsmuse 下载量 1.7:1 第三方对比；官方无新稿）；2026-11-07（22:16 轮次补跑：社区 BetterClaw 隐私分析、Top5Apps 语音开启指南；媒体 FourWeekMBA Nikkei 无广告二手报道（10-24，Nikkei 原文付费墙）；industry 收 Top5Apps 五款实测横评（11-01）；官方渠道本轮无新稿）；2026-11-05（第一阶段完成：官方、媒体、社区、实测；行业综合横评为「仅链接」占位）。下一轮起按新流程：原文存 `original.md`，资料页只写摘要与保留理由，不翻译 |
 | 页面格式 | 与所有产品一致，见 collect-sources 的 source-page.md「页面正文」。第一阶段直接翻译的旧页面已于 2026-11-06 补上内容摘要、保留理由和分隔线（用户 2026-11-06 要求） |
 
 ## 收录范围
@@ -272,6 +272,19 @@ description: 收集 Meta Muse（Meta 的个人 AI 智能体）的资料时使用
 | allthingsmuse「Muse India Pricing Surfaces」（2026-11-10） | 不收：已收 The Hindu 印度定价首报的转述，无新信息 |
 | allthingsmuse「Muse for Nonprofits and Fundraising」（2026-11-10）、「What to Build with Muse Spaces: 12 Ideas」（2026-11-07） | 不收：Academy 提示词模板式用法课与点子清单，无真实执行记录（与 People Ops、Creators、Event Planners 同判） |
 | etvbharat 两篇（2026-11-10 AI 汇总、2026-11-07 Spaces 稿）、zeniteq 与 madrobot 的 Ember 稿（2026-11-09/10）、pondero.ai 语音稿、aiagentswatch 价格聚合页 | 不收：复述官方公告或模型发布转述，无新信息；Ember 按模型资料收录原则不收 |
+| Skift 两篇（Expedia 接入 11-09、温德姆开放库存 10-22） | 收为「节选」：Skift Pro 付费墙截断，Wayback 无快照；缺失处已在原文标出 |
+| WIRED「Muse 本可颠覆各行各业，但目前还没有」（2026-10-31） | 收为「转载全文」：WIRED 原文付费墙不可读，改用 DNYUZ 全文转载；Technologist Mag 转载缺 5 段，未采用；★（商家侧核查对照财报口径） |
+| allthingsmuse「Coached by Muse: An 80-Point Goodbye」（2026-11-10） | 不收：幻想足球日记，无可核查的 Muse 执行记录（提示词/输出未展示） |
+| allthingsmuse「Muse for Travel Pros」（2026-11-11） | 不收：Academy 提示词模板课，虚构客户（Alvarez 一家），无真实执行记录 |
+| allthingsmuse 日本合作伙伴篇（2026-10-24） | 不收：合作为计划未上线，状态已由官方 10-23 日本上线页覆盖 |
+| Medium「Is ShopBack available in Muse?」（Ronald，2026-11-10） | 不收：单用户未核实说法，称 ShopBack 连接器已在新加坡上线 |
+| Mac Messages 同步事件（Inc. 专栏 Jason Aten，2026-09；187,462 行数据；Meta 否认；苹果 10-02 收紧 Full Disk Access） | 待补：本轮未收；一手 Inc. 专栏未直接读到，TechCrunch 有争议报道；库内尚无覆盖，列为后续回填候选 |
+| Mercari 连接器（museexplained 10-31） | 不收：2026-11-12 是 Mercari 财报日，不是连接器上线日；Meta 与 Mercari 未给连接器日期 |
+| Ember 模型报道（madrobot、zeniteq、orcarouter Google Cloud 篇、dev.to 两篇、museexplained Ember 评分篇，11-09/10） | 不收：模型发布，无 Muse 产品关联，按模型资料收录原则不收 |
+| Apple Watch 转述稿（aiweekly、pondero、nakoda、androidpure、aiaffairs、AppleInsider、world-today-journal、thedailytechfeed、ai-club.cn、搜狐/IT之家） | 不收：与已收 MacRumors、allthingsmuse、TechCrunch 同一事件，无新信息 |
+| Zacks Q3 财报稿 | 不收：2026-11-04 已决定不收（用户决定） |
+| explainx.ai Spaces「67% 宣称核查」 | 不收：2026-11-06 已判断不收 |
+| ai.advalorem.io Muse 中小企业 playbook（2026-11-04） | 不收：播客配套文，无超出官方的新事实 |
 
 ## 对照旧笔记的判断（2026-11-06）
 
@@ -341,6 +354,7 @@ description: 收集 Meta Muse（Meta 的个人 AI 智能体）的资料时使用
 - 2026-11-08：研究博客列表页直接下载又返回 403，浏览器读取确认 11 月仅 11-06 特化模型一篇，无新帖。
 - 2026-11-09：同上，直接下载 403，浏览器读取确认 11 月仅 11-06 特化模型一篇，无新帖。
 - 2026-11-09（22:16 轮次）：列表页直接下载与 browser.open 均返回 403；经检索核对，11 月 9 日新帖仅 Muse Ember 一篇（模型发布，不收，见判断记录）。
+- 2026-11-11（22:16 轮次）：同上，直接下载 403，browser.open 返回 403 后改用 live browser 读取，确认 11 月仅 11-09 Ember（模型发布，不收）与 11-06 特化模型两篇，无新帖。
 - 2026-11-05 补跑：muse.ai/blog 列表页无新文章（最新仍为 11-02 赏金回顾）；Newsroom AI 标签页 11 月仅语音稿一篇。
 
 ### about.fb.com 抽取脚本
