@@ -8,8 +8,15 @@
 
 | 产品 | 总览 | runtime | memory | continuous-execution | connectors | channels | devices | models | security | privacy | access-pricing | business | reliability |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| 2026-11-12 | dots | 首月期满后的用量条款、Pro 100/200/500 在 dots 上的差别 | 官方帮助中心与 ChatGPT 发布说明后续更新 |
+| 2026-11-12 | dots | 「100 万个 dots 在运行」的一手出处 | Thibault Sottiaux 2026-10-11 的发言（目前只有黑咖啡全景解读转述） |
+| 2026-11-12 | dots | CNBC DevDay 直播稿中 IPO、融资部分 | /docs/dots/sources/media/2026-09-29-cnbc-devday-dots 只收了两条 |
+| 2026-11-12 | dots | FSR 实测未收的第 04、07、08 节 | /docs/dots/sources/community/2026-10-09-fsr-dots-tested |
+| 2026-11-12 | dots | 短信渠道、Windows、移动端的独立实测；数周以上的计划任务稳定性 | Slide Factory 曾说一周后更新 |
+| 2026-11-12 | dots | OpenAI 对 GPT-6.1 Sol 报告、计划任务状态、亚马逊拦截的回应 | — |
+| 2026-11-12 | dots | Cyera 引用的提示注入竞技场 8.5% 出自系统卡哪一部分 | 系统卡附录只收了节选 |
 | muse | | | | | | | | | | | | | |
-| dots | | | | | | | | | | | | | |
+| dots | 11-11 | 11-11 | 11-11 | 11-11 | 11-11 | 11-11 | 11-11 | 11-11 | 11-11 | 11-11 | 11-11 | 11-11 | 11-11 |
 | claude-duet | | | | | | | | | | | | | |
 | grok-bot | | | | | | | | | | | | | |
 | manus-cue | | | | | | | | | | | | | |
@@ -45,3 +52,10 @@
 
 | 日期 | 产品 / 主题 | 缺什么 | 线索 |
 | --- | --- | --- | --- |
+| 2026-11-12 | dots | 首月期满后的用量条款、Pro 100/200/500 在 dots 上的差别 | 官方帮助中心与 ChatGPT 发布说明后续更新 |
+| 2026-11-12 | dots | 「100 万个 dots 在运行」的一手出处 | Thibault Sottiaux 2026-10-11 的发言（目前只有黑咖啡全景解读转述） |
+| 2026-11-12 | dots | CNBC DevDay 直播稿中 IPO、融资部分 | /docs/dots/sources/media/2026-09-29-cnbc-devday-dots 只收了两条 |
+| 2026-11-12 | dots | FSR 实测未收的第 04、07、08 节 | /docs/dots/sources/community/2026-10-09-fsr-dots-tested |
+| 2026-11-12 | dots | 短信渠道、Windows、移动端的独立实测；数周以上的计划任务稳定性 | Slide Factory 曾说一周后更新 |
+| 2026-11-12 | dots | OpenAI 对 GPT-6.1 Sol 报告、计划任务状态、亚马逊拦截的回应 | — |
+| 2026-11-12 | dots | Cyera 引用的提示注入竞技场 8.5% 出自系统卡哪一部分 | 系统卡附录只收了节选 |
