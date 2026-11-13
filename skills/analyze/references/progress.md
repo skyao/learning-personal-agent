@@ -115,9 +115,9 @@
 | 2026-11-13 | /docs/muse/sources/media/2026-11-09-times-muse-uk-launch | 「用户超过 1100 万」与 Meta 口径（美加 1000 万人设置）不一致；/docs/muse/sources/media/2026-11-09-india-pricing-ahead-of-launch 写「两个月下载超 1000 万次」 | 无需改：原文如此；分析中并列口径 |
 | 2026-11-13 | /docs/muse/sources/community/2026-11-12-tuya-cloud-devices-skill | 11-12 仍称 Muse 仅在美国和加拿大可用，已过时 | 无需改：厂商原话；分析中以官方为准 |
 | 2026-11-13 | /docs/muse/sources/media/2026-11-05-muse-launches-mexico | 正文称眼镜「已经运行由 Muse 驱动的助手」，又转述 Meta「计划增加」眼镜兼容，前后矛盾 | 无需改：原文如此；分析中写明说法不一 |
-| 2026-11-13 | /docs/claude-duet/sources/official/2026-10-21-introducing-claude-duet | 正文写「Pro、Max 和 Ultra」，而 10-21 的发布说明只写 Pro 和 Max，Ultra 是 10-30 由 Max 20x 改名而来；正文在 10-30 之后被改过，updatedAt（10-23）与 dateNote 未反映 | 待处理 |
-| 2026-11-13 | /docs/claude-duet/sources/official/2026-10-30-help-get-started-with-claude-duet | dateNote 称旧译文「已移除，待重新翻译」，但正文已是 11-10 新版译文、translation 为已翻译，dateNote 过时 | 待处理 |
+| 2026-11-13 | /docs/claude-duet/sources/official/2026-10-21-introducing-claude-duet | 正文写「Pro、Max 和 Ultra」，而 10-21 的发布说明只写 Pro 和 Max，Ultra 是 10-30 由 Max 20x 改名而来；正文在 10-30 之后被改过，updatedAt（10-23）与 dateNote 未反映 | 2026-11-13 dateNote 补记 Ultra 改名与正文改动，updatedAt 不变 |
+| 2026-11-13 | /docs/claude-duet/sources/official/2026-10-30-help-get-started-with-claude-duet | dateNote 称旧译文「已移除，待重新翻译」，但正文已是 11-10 新版译文、translation 为已翻译，dateNote 过时 | 2026-11-13 dateNote 改为「2026-11-10 按新版重新翻译」 |
 | 2026-11-13 | /docs/claude-duet/sources/official/2026-11-05-product-page | 连接器列表含 Microsoft/Office 365，帮助文档称 Microsoft 365 尚不可用 | 无需改：官方两处说法不一，分析中并列 |
-| 2026-11-13 | /docs/industry/sources/community/2026-11-03-turingmiloy-deepseek-super-agent | 对 Duet 只在产品罗列中提到一句，products 列入 claude-duet 依据弱 | 待处理 |
+| 2026-11-13 | /docs/industry/sources/community/2026-11-03-turingmiloy-deepseek-super-agent | 对 Duet 只在产品罗列中提到一句，products 列入 claude-duet 依据弱 | 2026-11-13 products 删去 claude-duet；muse、dots、grok-bot 同样只被罗列，待用户决定 |
 | 2026-11-13 | /docs/industry/sources/media/2026-11-08-china-newsweek-personal-agents | 11-08 仍称 Muse 只向美国和加拿大开放，已过时 | 无需改：原文如此；分析中以官方为准 |
 | 2026-11-13 | /docs/industry/sources/media/2026-10-31-allthingsmuse-shop-pay-off-platform | 待翻译 | 留给翻译 agent |
