@@ -11,7 +11,7 @@ fidelity: 全文
 translation: 已翻译
 collectedAt: 2026-11-05
 updatedAt: "2026-10-23"
-dateNote: "页面显示 October 21, 2026；文首有一条 2026-10-23 加入的说明，链接到当日发布的安全、隐私与安全性一文"
+dateNote: "页面显示 October 21, 2026；文首有一条 2026-10-23 加入的说明，链接到当日发布的安全、隐私与安全性一文；正文的「Pro、Max 和 Ultra」中，Ultra 是 2026-10-30 由 Max 20x 改名而来，10-21 的发布说明只写 Pro 和 Max，可见收集时（11-05）的正文在 10-30 之后改过，原文未标注这次修改，updatedAt 仍按原文标注的 10-23"
 tags: [发布, 开放与价格, 持续执行, 连接器]
 products: [claude-duet]
 ---

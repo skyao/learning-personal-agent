@@ -12,7 +12,7 @@ translation: 不需要
 collectedAt: 2026-11-06
 dateNote: "微信公众号「图灵米洛伊」，发布时间取页面内嵌的 create_time：2026-11-03 08:38（北京时间）。"
 tags: [持续执行, 运行环境]
-products: [muse, claude-duet, dots, grok-bot]
+products: [muse, dots, grok-bot]
 ---
 
 {{< source-info >}}
