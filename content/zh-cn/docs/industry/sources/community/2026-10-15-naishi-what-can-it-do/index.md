@@ -17,7 +17,7 @@ products: [dots, grok-bot, lingguang]
 
 {{< source-info >}}
 
-**收录说明**：用户提供链接。原文在微信公众号，用浏览器的客户端标识直接下载页面，从 `#js_content` 抽取正文，图片地址取自 `data-src`。文首装饰动图、文末进群二维码未收入。文中 Dots 的 MacBook 比价和大西北 7 天自驾规划两个案例，与鲸选AI 的[深度体验 Dots 11 天]({{< relref "/docs/industry/sources/community/2026-10-10-jingxuan-dots-11-days" >}})中的案例一致，措辞和配图说明也基本相同，应转述自该文；本文未注明出处，不能当作独立案例（2026-11-13 分析 dots 时发现）。
+**收录说明**：用户提供链接。原文在微信公众号，用浏览器的客户端标识直接下载页面，从 `#js_content` 抽取正文，图片地址取自 `data-src`。文首装饰动图、文末进群二维码未收入。文中 Dots 的 MacBook 比价和大西北 7 天自驾规划两个案例，与鲸选AI 的[深度体验 Dots 11 天]({{< relref "/docs/industry/sources/community/2026-10-10-jingxuan-dots-11-days" >}})中的案例一致，措辞和配图说明也基本相同，应转述自该文；本文未注明出处，不能当作独立案例（2026-11-13 分析 dots 时发现）。灵光「接管电脑上的 Agent」「在云电脑里下载 Claude Code 当子代理」两例，与特工宇宙的[内测体验]({{< relref "/docs/lingguang/sources/community/2026-10-13-tegongyuzhou-beta-hands-on" >}})一致，同样未注出处（2026-11-13 分析 lingguang 时发现）。
 
 **内容摘要**：奈势AI 梳理大厂陆续推出 Personal Agent 的动向：8 月 Grok Bot 公测，9 月初 Meta 推出 Muse，9 月底 OpenAI 发布 Dots，蚂蚁灵光开启新版内测，10 月 13 日阿里放出千问Go 快发布的消息。文章用几组内测案例说明它能做什么：千问Go 内测用户为一趟延误航班谈下 70 元赔偿，另为一笔淘宝价保查询退回 52 元；Dots 为大西北 7 天自驾生成规划图并记住用户不吃辣；灵光可调用本机的 Claude Code。文章还指出，淘宝在云端浏览器里被拦、拼多多无法自动刷新价格，Agent 能做什么取决于平台是否开放。
 
