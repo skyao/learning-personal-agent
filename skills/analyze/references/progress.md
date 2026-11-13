@@ -132,12 +132,12 @@
 | 2026-11-13 | /docs/industry/sources/media/2026-11-08-china-newsweek-personal-agents | 11-08 仍称 Muse 只向美国和加拿大开放，已过时 | 无需改：原文如此；分析中以官方为准 |
 | 2026-11-13 | /docs/industry/sources/media/2026-10-31-allthingsmuse-shop-pay-off-platform | 待翻译 | 留给翻译 agent |
 | 2026-11-13 | /docs/muse/sources/media/2026-10-27-allthingsmuse-nvidia-muse-partnership | 内容转述 NVIDIA、AMD 公告和路透社（975 亿美元），与 /docs/muse/sources/media/2026-10-28-allthingsmuse-amd-epyc-powers-muse 一样没有 basedOn | 待处理 |
-| 2026-11-13 | /docs/grok-bot/sources/official/2026-11-05-docs-teams、/docs/grok-bot/sources/official/2026-11-05-help-shared-bots | dateNote 称旧译文「已移除，待重新翻译」，但 translation 为已翻译，正文已含 11-10 新增内容（Bot sharing、发布草稿等），dateNote 过时 | 待处理 |
-| 2026-11-13 | /docs/grok-bot/sources/official/2026-11-05-help-connect-apps | 译文「让每个 Bot 拥有自己的电子邮件地址」，原文是「gives your Bots their own email address」；agent-email 页写明地址属于用户、不属于某一个 Bot，译文易误读 | 待处理 |
-| 2026-11-13 | /docs/grok-bot/sources/official/2026-09-04-grok-bot-procurement、/docs/grok-bot/sources/official/2026-09-22-grok-bot-customer-support、/docs/grok-bot/sources/official/2026-10-20-incident-sweep、/docs/grok-bot/sources/official/2026-10-27-grok-bot-sales、/docs/grok-bot/sources/official/2026-11-02-data-bot | 标签「实测评测」，内容是厂商自述的内部用例，数字（节省金额、70 小时等）无独立验证，不是第三方实测 | 待处理 |
-| 2026-11-13 | /docs/grok-bot/sources/official/2026-11-05-docs-use-cases | 标签「功能更新」，正文只是按岗位给出的提示建议，没有功能更新或日期 | 待处理 |
-| 2026-11-13 | /docs/grok-bot/sources/community/2026-10-04-james-pember-grok-bot-is-really-good | 只打了「实测评测」，正文还涉及连接器、持续执行和竞争格局 | 待处理 |
-| 2026-11-13 | /docs/grok-bot/sources/media/2026-10-07-cybernews-bank-data-slack | 正文第 52 行残留网页的「广告」字样 | 待处理 |
-| 2026-11-13 | /docs/grok-bot/sources/community/2026-11-09-weilaiyilai-what-is-grok-bot | 标题「Grok Bot  / Personal Agent   是什么？」含多余空格，疑为原文替换产品名的残留，收录说明未提 | 待处理 |
+| 2026-11-13 | /docs/grok-bot/sources/official/2026-11-05-docs-teams、/docs/grok-bot/sources/official/2026-11-05-help-shared-bots | dateNote 称旧译文「已移除，待重新翻译」，但 translation 为已翻译，正文已含 11-10 新增内容（Bot sharing、发布草稿等），dateNote 过时 | 2026-11-13 dateNote 改为「2026-11-10 按新版重新翻译」 |
+| 2026-11-13 | /docs/grok-bot/sources/official/2026-11-05-help-connect-apps | 译文「让每个 Bot 拥有自己的电子邮件地址」，原文是「gives your Bots their own email address」；agent-email 页写明地址属于用户、不属于某一个 Bot，译文易误读 | 2026-11-13 译文改为「让你的 Bot 拥有自己的电子邮件地址」 |
+| 2026-11-13 | /docs/grok-bot/sources/official/2026-09-04-grok-bot-procurement、/docs/grok-bot/sources/official/2026-09-22-grok-bot-customer-support、/docs/grok-bot/sources/official/2026-10-20-incident-sweep、/docs/grok-bot/sources/official/2026-10-27-grok-bot-sales、/docs/grok-bot/sources/official/2026-11-02-data-bot | 标签「实测评测」，内容是厂商自述的内部用例，数字（节省金额、70 小时等）无独立验证，不是第三方实测 | 2026-11-13 删去「实测评测」；采购一篇补「商业与规模」 |
+| 2026-11-13 | /docs/grok-bot/sources/official/2026-11-05-docs-use-cases | 标签「功能更新」，正文只是按岗位给出的提示建议，没有功能更新或日期 | 2026-11-13 删去「功能更新」 |
+| 2026-11-13 | /docs/grok-bot/sources/community/2026-10-04-james-pember-grok-bot-is-really-good | 只打了「实测评测」，正文还涉及连接器、持续执行和竞争格局 | 2026-11-13 补「连接器」「持续执行」 |
+| 2026-11-13 | /docs/grok-bot/sources/media/2026-10-07-cybernews-bank-data-slack | 正文第 52 行残留网页的「广告」字样 | 2026-11-13 删去 |
+| 2026-11-13 | /docs/grok-bot/sources/community/2026-11-09-weilaiyilai-what-is-grok-bot | 标题「Grok Bot  / Personal Agent   是什么？」含多余空格，疑为原文替换产品名的残留，收录说明未提 | 2026-11-13 标题合并空格，收录说明记下原标题与正文开头标题 |
 | 2026-11-13 | /docs/grok-bot/sources/official/2026-11-05-docs-overview | 小标题「每个 Bot 都有一台计算机」与下一节「你的 Bot 共用一台计算机」措辞不一；发布稿（/docs/grok-bot/sources/official/2026-08-11-introducing-grok-bot）也写「有自己的计算机」与「共用一台」，多篇社区资料据此写成每个 Bot 一台 | 无需改：原文如此；分析中以「同一账号共用一台、每个 Bot 有自己的屏幕」为准并说明说法来源 |
 | 2026-11-13 | /docs/grok-bot/sources/official/2026-10-28-xai-docs-settings-and-notifications | 称应用有「20 多种语言」，同批 FAQ（/docs/grok-bot/sources/official/2026-10-28-xai-docs-faq）称桌面端 37 种、手机端 12 种 | 无需改：官方两处说法不一，分析中并列 |
