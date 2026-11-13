@@ -22,6 +22,7 @@ content/zh-cn/
 - 主题清单、slug、各主题要回答的问题见 [references/topics.md](references/topics.md)。共 13 个主题；「行业格局」只在主题维度。
 - 页面模板见 [references/page-templates.md](references/page-templates.md)。
 - 进度见 [references/progress.md](references/progress.md)：开始前先读，完成后更新。
+- 各产品「已读、有意不引用」的资料记在 `references/uncited/<product>.tsv`，由 `inventory.py --new` 读取（见「增量更新」）。
 - **先产品，后主题**（用户 2026-11-12 决定）。产品分析直接读资料；主题分析主要读各产品的主题页，再补读 industry 资料和少量原文核对，不重读全部资料。
 - 分工：产品页讲深度（这个产品怎么做、为什么、证据、问题）；主题页讲比较（对照表、分歧、共性、趋势），产品细节只写一两句并链接到产品页，不重复展开。
 - 资料少的主题（一般少于 3 篇相关资料，或资料只有一句话的信息）不单独成页，在产品总览的「主题分析」表里写一两句并注明资料不足，`progress.md` 填「—」。
@@ -67,7 +68,7 @@ content/zh-cn/
    资料页问题另交一个 fork：读合并后的 `source-issues` 笔记，逐条回资料页核对，输出 `progress.md` 资料页问题表的行（不成立的写「无需改」及理由）。
 5. **写产品总览。** 主对话根据各 fork 的回报和时间线、定位两份笔记，改写 `docs/<product>/analysis/_index.md`：时间线取自「发布」「功能更新」标签的资料，概要从各主题页的结论中提炼；上线日期、用户数、价格等总览里的关键数字由主对话自己 `grep` 核对。
 6. **校验。** `npm run build` 退出码为 0（relref 全部有效）；新页面出现在侧边栏；抽查每页 3–5 个事实与资料一致。
-7. **更新进度与提交。** 更新 `progress.md`（各格填 `sourcesUntil`、资料缺口、资料页问题）；单独提交，提交信息如 `analysis: muse 总览与 12 个主题`；推送。
+7. **更新进度与提交。** 更新 `progress.md`（各格填 `sourcesUntil`、资料缺口、资料页问题）。运行 `inventory.py product <product> --new`，列出的是读过但页面没有用 relref 引用的资料；确认它们确实不需要引用后，加 `--record "<日期> 初次分析时已读，页面未引用"` 记入 `references/uncited/<product>.tsv`，供增量更新排除。单独提交，提交信息如 `analysis: muse 总览与 12 个主题`；推送。
 8. **报告。** 向用户报告：写了哪些页、每页的主要结论（一两句）、资料不足的主题、资料缺口、需要用户判断的问题（如矛盾的说法、标签打得不准的资料）。
 
 ## 主题维度的流程
@@ -80,7 +81,13 @@ content/zh-cn/
 
 ## 增量更新
 
-新资料入库后：`inventory.py product <product> --since <页面的 sourcesUntil>` 列出新增资料，判断影响哪些主题页，只更新受影响的页面并改 `analyzedAt`、`sourcesUntil`。结论改变时，在页面相应位置写明变化与日期，不悄悄改写。产品页更新后，检查对应主题页是否需要跟着改。
+新资料入库后：
+
+1. `inventory.py product <product> --new` 列出未分析的资料。判断依据是引用，不是日期：没有被 `docs/<product>/analysis/` 下任何页面用 relref 引用，也不在 `references/uncited/<product>.tsv` 中的，才算未分析。不用 `--since <sourcesUntil>`，因为同一天收集的资料可能一部分已分析、一部分没有（2026-11-13 Muse 增量更新时遇到过）。
+2. 读这些资料，判断影响哪些主题页，只更新受影响的页面并改 `analyzedAt`、`sourcesUntil`。
+3. 再运行一次 `--new`：剩下的是读过但不需要引用的资料（内容已被其他资料覆盖、与该产品关系弱等），确认后加 `--record "<日期> 增量更新时已读，<不引用的理由>"` 记入记录文件。之后 `--new` 应为 0 篇。
+
+`uncited/<product>.tsv` 只记「已读、有意不引用」的资料；以后页面改为引用其中某篇时，不必删记录。结论改变时，在页面相应位置写明变化与日期，不悄悄改写。产品页更新后，检查对应主题页是否需要跟着改。
 
 ## 省用量
 
