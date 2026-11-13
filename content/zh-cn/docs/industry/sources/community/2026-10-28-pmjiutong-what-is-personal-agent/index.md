@@ -12,7 +12,7 @@ translation: 不需要
 collectedAt: 2026-11-06
 dateNote: "微信公众号「PM九筒」，发布时间取页面内嵌的 create_time：2026-10-28 15:53（北京时间）。"
 tags: [运行环境, 安全, 记忆与上下文]
-products: [muse, manus-cue, dots, grok-bot, gemini-spark, claude-duet]
+products: [muse, dots, grok-bot, gemini-spark, claude-duet]
 ---
 
 {{< source-info >}}

@@ -12,7 +12,7 @@ translation: 不需要
 collectedAt: 2026-11-06
 dateNote: "微信公众号「湾区OPC指南」，发布时间取页面内嵌的 create_time：2026-10-23 18:00（北京时间）。"
 tags: [开放与价格, 运行环境, 模型]
-products: [manus-cue, grok-bot]
+products: [grok-bot]
 ---
 
 {{< source-info >}}

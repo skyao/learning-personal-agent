@@ -12,7 +12,7 @@ translation: 不需要
 collectedAt: 2026-11-06
 dateNote: "微信公众号「灵螺创新」，发布时间取页面内嵌的 create_time：2026-11-04 18:00（北京时间）。"
 tags: [记忆与上下文, 安全]
-products: [muse, instinct, manus-cue, dots]
+products: [muse, instinct, dots]
 ---
 
 {{< source-info >}}

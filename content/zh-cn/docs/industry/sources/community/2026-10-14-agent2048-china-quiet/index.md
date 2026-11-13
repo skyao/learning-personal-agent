@@ -12,7 +12,7 @@ translation: 不需要
 collectedAt: 2026-11-06
 dateNote: "微信公众号「AGENT2048」，发布时间取页面内嵌的 create_time：2026-10-14 19:30（北京时间）。"
 tags: [商业与规模, 连接器, 开放与价格]
-products: [muse, manus-cue]
+products: [muse]
 ---
 
 {{< source-info >}}
