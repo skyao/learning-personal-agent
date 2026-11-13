@@ -14,7 +14,7 @@ description: >
 - 记忆以 Markdown 文件为源头，由每小时、每晚的后台任务形成，用户可以查看和编辑。接入的个人数据比同类产品宽，Meta 自家社交数据是最大的区别。但删除内容后 Muse 可能仍然记得，记忆没有关闭开关，为联系人（包括非用户）维护的「人物页」是最大的争议。（[记忆与上下文](memory/)、[隐私](privacy/)）
 - 「主动」止于发现、准备、提醒：周期任务、目标、后台更新的 Spaces 可以在用户离开后运行，但购买、发送等写操作不能预先或批量批准。（[持续执行](continuous-execution/)）
 - 外部服务有四条接入路径：审核上架的目录连接器、Muse 现场生成的自定义连接器、虚拟机内的浏览器、Mac/安卓/Gadget 本地接入。生态扩张快，第三方申请不到一周超过 1,500 份；浏览器路线则招来亚马逊、摩根大通、嘉信和加拿大五大银行的封堵。（[连接器](connectors/)）
-- 入口是独立的 Muse App、网页和 WhatsApp，之后扩展到 Mac、眼镜 Beta、语音与化身、手表和自有邮箱 Muse Mail；专用硬件 Muse Charm 已宣布未发货。（[交互渠道](channels/)、[设备](devices/)）
+- 入口是独立的 Muse App、网页和 WhatsApp，之后扩展到 Mac、眼镜 Beta、语音与化身、手表、自有邮箱 Muse Mail，以及仅限美国付费用户的商家电话；专用硬件 Muse Charm 已宣布未发货。（[交互渠道](channels/)、[设备](devices/)）
 - 门槛在跟踪产品中最低：一个 Meta 账户即可免费使用，付费档 Power 每月 20 美元、Maximum 每月 100 美元，按每周令牌额度区分。截至 2026-11-12 已开放美国、加拿大、日本、新加坡、墨西哥五国。（[开放与价格](access-pricing/)）
 - 规模领先、单位经济未证实：据 Meta Q3 财报电话会，上线约六周美加超过 1000 万人完成设置；长期收入押在向商家收取交易费上，费率未公布，第三方估算的单用户成本高于 20 美元的订阅价。（[商业与规模](business/)）
 - 官方的安全架构在同类产品中公开得最系统，但没有独立审计；上线两个月内资料记录了至少六起漏洞和事件。实测评价分歧大，日常杂事表现好，多步骤业务流程和「说做了实际没做」是反复出现的问题。（[安全](security/)、[实际效果与可靠性](reliability/)）
@@ -46,7 +46,7 @@ Wired 的六款同场评测把 Muse 评为「最易上手」，Dots 为「最佳
 | 2026-04 | 漏洞赏金计划开始非公开覆盖 Muse | [漏洞赏金回顾]({{< relref "/docs/muse/sources/official/2026-11-02-securing-muse-bug-bounties" >}}) |
 | 2026-08-27 | 据 404 Media，Meta 内部启动针对 KVM 逃逸的加固冲刺 | [404 Media：上线前的 VM 逃逸]({{< relref "/docs/muse/sources/media/2026-10-05-404media-vm-escape-before-launch" >}}) |
 | 2026-09-08 | 发布：美国，iOS、Android、muse.ai、WhatsApp；Muse Spark 驱动，Secure VM、Sentinel，漏洞赏金公开；Confidential VM「今年晚些时候」 | [推出 Muse]({{< relref "/docs/muse/sources/official/2026-09-08-introducing-muse" >}})、[安全博客]({{< relref "/docs/muse/sources/official/2026-09-08-how-we-built-safety-into-muse" >}}) |
-| 2026-09-18 | 加拿大上线（据墨西哥上线报道；海峡时报称美加 9-08 同时首发）；登顶美国 App Store 免费榜 | [墨西哥上线]({{< relref "/docs/muse/sources/media/2026-11-05-muse-launches-mexico" >}})、[海峡时报]({{< relref "/docs/muse/sources/media/2026-10-28-straits-times-muse-singapore" >}}) |
+| 2026-09-18 | 加拿大上线（据墨西哥上线报道和 All Things Muse 榜单文章；海峡时报称美加 9-08 同时首发）；登顶美国 App Store 免费榜 | [墨西哥上线]({{< relref "/docs/muse/sources/media/2026-11-05-muse-launches-mexico" >}})、[海峡时报]({{< relref "/docs/muse/sources/media/2026-10-28-straits-times-muse-singapore" >}}) |
 | 2026-09-20 | 亚马逊屏蔽 Muse 购物 | [GeekWire]({{< relref "/docs/muse/sources/media/2026-09-20-geekwire-amazon-blocks-muse" >}}) |
 | 2026-09-21 | Patrick Wardle 披露 macOS 客户端零日，Meta 约一天内修复 | [Wardle]({{< relref "/docs/muse/sources/community/2026-09-21-wardle-not-a-mused" >}})、[Ars Technica]({{< relref "/docs/muse/sources/media/2026-09-21-arstechnica-muse-zero-day" >}}) |
 | 2026-09-23 | Connect：语音与实时化身、Mac 计算机操作、Muse Mail、AI 眼镜、更多连接器，展示 Muse Charm | [Connect 发布汇总]({{< relref "/docs/muse/sources/official/2026-09-23-connect-2026-everything-announced" >}})、[让你的 Muse 栩栩如生]({{< relref "/docs/muse/sources/official/2026-09-23-bringing-your-muse-to-life" >}}) |
@@ -58,13 +58,15 @@ Wired 的六款同场评测把 Muse 评为「最易上手」，Dots 为「最佳
 | 2026-10-20 至 10-22 | 分享链接可经被动 DNS 枚举，分享功能暂停后恢复 | [Ars Technica]({{< relref "/docs/muse/sources/media/2026-10-20-arstechnica-shared-conversations-exposed" >}})、[Verge]({{< relref "/docs/muse/sources/media/2026-10-22-verge-muse-sharing-back-on" >}}) |
 | 2026-10-21 | Meta Q3 财报电话会：美加超 1000 万人设置 Muse（转述） | [Muse 101]({{< relref "/docs/muse/sources/community/2026-11-04-muse-101-agentic-commerce" >}}) |
 | 2026-10-23 | 日本上线 | [日本上线]({{< relref "/docs/muse/sources/official/2026-10-23-japan-launch" >}}) |
-| 2026-10-27 | 新加坡上线（官方稿日期；海峡时报写 10-28）；眼镜 Beta 帮助页 | [新加坡上线]({{< relref "/docs/muse/sources/official/2026-10-27-singapore-launch" >}})、[眼镜 Beta]({{< relref "/docs/muse/sources/official/2026-10-27-help-glasses-beta" >}}) |
+| 2026-10-27 | 新加坡上线（官方稿日期；海峡时报和 All Things Muse 写 10-28）；眼镜 Beta 帮助页；NVIDIA、AMD 分别宣布与 Meta 扩大 Muse 相关的算力合作（转述） | [新加坡上线]({{< relref "/docs/muse/sources/official/2026-10-27-singapore-launch" >}})、[眼镜 Beta]({{< relref "/docs/muse/sources/official/2026-10-27-help-glasses-beta" >}})、[NVIDIA 合作]({{< relref "/docs/muse/sources/media/2026-10-27-allthingsmuse-nvidia-muse-partnership" >}})、[AMD EPYC]({{< relref "/docs/muse/sources/media/2026-10-28-allthingsmuse-amd-epyc-powers-muse" >}}) |
+| 2026-10-28 | Shopify Fall '26：Shop Pay 结账进入 Muse 等智能体，并延伸到 Shopify 之外的商店（转述） | [Shop Pay 进入 Muse]({{< relref "/docs/industry/sources/media/2026-10-31-allthingsmuse-shop-pay-off-platform" >}}) |
 | 2026-11-02 | 漏洞赏金回顾：630 多份提交、64 项有效发现、已付超过 100 万美元 | [漏洞赏金回顾]({{< relref "/docs/muse/sources/official/2026-11-02-securing-muse-bug-bounties" >}}) |
 | 2026-11-04 | 连接器开发者指南、Gadgets、Home Link 页面（收集日期） | [连接器指南]({{< relref "/docs/muse/sources/official/2026-11-04-connector-guidelines" >}})、[Home Link]({{< relref "/docs/muse/sources/official/2026-11-04-muse-home-link" >}}) |
 | 2026-11-05 | 语音与化身向美国全体用户推出；墨西哥上线 | [给你的 Muse 一个声音]({{< relref "/docs/muse/sources/official/2026-11-05-give-your-muse-a-voice" >}})、[墨西哥上线]({{< relref "/docs/muse/sources/media/2026-11-05-muse-launches-mexico" >}}) |
 | 2026-11-06 | Spaces 上线；向 Muse 与 Meta AI 推送用 Wonder 训练的特化模型 | [Spaces]({{< relref "/docs/muse/sources/official/2026-11-06-design-muse-app-spaces" >}})、[特化模型]({{< relref "/docs/muse/sources/official/2026-11-06-specialized-models-muse-meta-ai" >}}) |
 | 2026-11-09 | Apple Watch 与 Wear OS；The Times 称数周内进入英国；印度卢比定价 | [TechCrunch]({{< relref "/docs/muse/sources/media/2026-11-10-techcrunch-muse-apple-watch-wear-os" >}})、[The Times]({{< relref "/docs/muse/sources/media/2026-11-09-times-muse-uk-launch" >}})、[印度定价]({{< relref "/docs/muse/sources/media/2026-11-09-india-pricing-ahead-of-launch" >}}) |
 | 2026-11-10 至 11-11 | Muse Mail 向美加付费用户开放，Wang 称将开放给免费档；Uber Courier 接入 | [Muse Mail 付费用户]({{< relref "/docs/muse/sources/media/2026-11-10-muse-mail-paid-subscribers" >}})、[Muse Mail 免费档]({{< relref "/docs/muse/sources/media/2026-11-11-muse-mail-free-plans-soon" >}})、[Uber Courier]({{< relref "/docs/muse/sources/media/2026-11-10-uber-courier-deliveries" >}}) |
+| 2026-11-12 | 给商家打电话结束测试，向美国付费用户开放（09-16 起测试） | [TechCrunch：付费可打电话]({{< relref "/docs/muse/sources/media/2026-11-12-techcrunch-muse-phone-calls-paid" >}})、[Engadget]({{< relref "/docs/muse/sources/media/2026-11-12-engadget-muse-phone-calls-paid" >}}) |
 
 ## 整体架构
 

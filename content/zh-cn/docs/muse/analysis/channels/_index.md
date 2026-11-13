@@ -13,7 +13,7 @@ description: >
 - 官方称与 Muse 交谈「就像给另一个人发消息」。入口是 iOS、Android 应用、muse.ai 网页和 WhatsApp，之后加入 Mac 应用；Muse 应用与 Meta AI 应用相互独立。
 - 所有入口围绕一个不可删除的主对话展开，智能体像通讯录里的一个联系人。据 Wang，WhatsApp 版与应用版的主对话功能一致，但没有信息流和创意工具。日本、新加坡上线时未提供 WhatsApp。
 - 2026-09 至 11 月新增的渠道依次是：眼镜 Beta、实时语音与化身（11-05 向美国全体用户开放）、Apple Watch 与 Wear OS（11-09/10）、自有邮箱 Muse Mail（11-10 向美加付费用户开放，Wang 称免费档「很快」开放）。
-- Muse 对外以用户的名义沟通：在 Marketplace 代用户回复时未标明是 AI；商家通话测试中曾由真人代打；据 TIME 查阅的内部指令，语音模式下被要求不称自己为「AI」。这些都来自媒体报道。
+- Muse 对外以用户的名义沟通：在 Marketplace 代用户回复时未标明是 AI；商家通话测试中曾由真人代打，2026-11-12 通话功能向美国付费用户正式开放后，媒体引用的一段用户通话中 Muse 也没有明说自己是 AI；据 TIME 查阅的内部指令，语音模式下被要求不称自己为「AI」。这些都来自媒体报道。
 - 除 Muse Mail 外，Muse 没有自己的号码或身份；安卓端的拨号与短信借用用户手机，并按对象（商家或亲友）区分能做到哪一步。
 
 ## 一个主对话，多个入口
@@ -57,7 +57,9 @@ Muse Mail 是唯一属于智能体本身、而不是借用户账户的渠道。C
 
 **按对象区分的手机权限。** 对安卓安装包的静态分析显示，替用户开口的通话工具只用于商家，打给亲友时 Muse「只负责拨号」；群发或带附件的短信只起草，由用户点发送；普通短信弹窗确认，可设为始终允许（[Muse 拆解]({{< relref "/docs/muse/sources/community/2026-11-04-muse-openclaw-teardown" >}})）。这是媒体分析，不是官方说明；授权设计见[安全]({{< relref "/docs/muse/analysis/security" >}})。
 
-**给商家打电话，测试中由真人代打。** 404 Media 报道，09-16 Muse 首席工程师 Ryan Fox 宣布扩大美国商家通话测试；据内部帖子，这项功能「增加了一个人工客服层」，由受训的真人拨打，有测试员工事后才知道。Meta 发言人称只有在「配有适当的披露」时才会推出（[404 Media]({{< relref "/docs/muse/sources/media/2026-09-22-404media-muse-calls-made-by-humans" >}})）。
+**给商家打电话：测试中由真人代打，11-12 向付费用户开放。** 404 Media 报道，09-16 Muse 首席工程师 Ryan Fox 宣布扩大美国商家通话测试；据内部帖子，这项功能「增加了一个人工客服层」，由受训的真人拨打，有测试员工事后才知道。Meta 发言人称只有在「配有适当的披露」时才会推出（[404 Media]({{< relref "/docs/muse/sources/media/2026-09-22-404media-muse-calls-made-by-humans" >}})）。TechCrunch 同期报道，测试先开放给主动向 Muse 提出想用的用户，Meta 称新功能都会先给问起它的人（[TechCrunch：Instinct 与 Muse 都能打电话]({{< relref "/docs/industry/sources/media/2026-09-17-techcrunch-instinct-muse-phone-calls" >}})）。
+
+2026-11-12，Alexandr Wang 在 X 上宣布通话功能「out now to paid subs in the US」，用途是打给保险、有线电视、车管所、餐厅等商家，结束测试（[TechCrunch：付费可打电话]({{< relref "/docs/muse/sources/media/2026-11-12-techcrunch-muse-phone-calls-paid" >}})、[All Things Muse：对外拨号]({{< relref "/docs/muse/sources/media/2026-11-12-allthingsmuse-outbound-calling-paid" >}})）。据 All Things Muse，测试阶段 Muse 打给商家做预订、问库存、询价，结束后给用户转写稿和摘要。三篇报道都没有提到真人代打是否已经取消，也没有 Meta 的披露规则。Engadget 引用 Meta 员工 Matt Schlicht 分享的一次 10 月通话（打给 Volvo 经销商、等候约 15 分钟）：Muse 说明是代他打电话、正在转写通话，但「doesn't explicitly identify itself as an AI agent」（[Engadget：付费可打电话]({{< relref "/docs/muse/sources/media/2026-11-12-engadget-muse-phone-calls-paid" >}})）。TechCrunch 提到许多商家识别出是 AI 就会挂断。
 
 **在 Marketplace 代用户回复，未标明是 AI。** 据《卫报》，用户 Robb 点了「始终允许」后，Muse 以他的名义回复所有买家消息，并把他的家庭住址发给了买家；Robb 说它「几乎是在模仿我」，Meta 称会把这一选项说明得更清楚（[卫报]({{< relref "/docs/muse/sources/media/2026-09-28-guardian-muse-home-address" >}})）。
 
@@ -71,7 +73,7 @@ Muse Mail 是唯一属于智能体本身、而不是借用户账户的渠道。C
 
 - WhatsApp 版与应用版的具体差异（审批、卡片、语音能否在 WhatsApp 中使用），目前只有 Wang 的一句话；WhatsApp 在日本、新加坡未开放的原因。
 - Mac 应用的官方上线日期。
-- 商家通话功能的现状：是否仍由真人代打，正式推出时如何披露。
+- 商家通话功能的官方说明：11-12 正式开放后是否仍有真人代打，通话开头如何披露 AI 身份，是否计入每周额度。
 - 对外沟通（Marketplace、短信、邮件）是否标明 AI 身份，Meta 有无统一规则；Meta 对 TIME 所述语音模式指令的回应。
 - Muse Mail 的官方帮助文档（地址格式、发信限制）。
 - 「Muse 内置于 Instagram、Facebook」说法的一手出处。
@@ -79,6 +81,6 @@ Muse Mail 是唯一属于智能体本身、而不是借用户账户的渠道。C
 ## 主要资料
 
 - 官方：[推出 Muse]({{< relref "/docs/muse/sources/official/2026-09-08-introducing-muse" >}})（应用与 WhatsApp）；[Connect 2026 发布汇总]({{< relref "/docs/muse/sources/official/2026-09-23-connect-2026-everything-announced" >}})（入口清单、邮箱预告）；[给你的 Muse 一个声音]({{< relref "/docs/muse/sources/official/2026-11-05-give-your-muse-a-voice" >}})（实时语音）；[帮助：眼镜 Beta]({{< relref "/docs/muse/sources/official/2026-10-27-help-glasses-beta" >}})（眼镜限制）。
-- 媒体：[CNBC]({{< relref "/docs/muse/sources/media/2026-09-08-cnbc-meta-pushes-into-personal-agents" >}})（WhatsApp 版差异）；[404 Media]({{< relref "/docs/muse/sources/media/2026-09-22-404media-muse-calls-made-by-humans" >}})（真人代打电话）；[卫报]({{< relref "/docs/muse/sources/media/2026-09-28-guardian-muse-home-address" >}})（Marketplace 代回复）；[MediaNama 转述 TIME]({{< relref "/docs/muse/sources/media/2026-10-08-medianama-muse-dossiers" >}})（语音模式指令）；[Muse Mail 向付费用户开放]({{< relref "/docs/muse/sources/media/2026-11-10-muse-mail-paid-subscribers" >}})（邮箱上线）；[MacRumors]({{< relref "/docs/muse/sources/media/2026-11-09-muse-apple-watch" >}})（「内置于 Meta 应用」的说法）。
+- 媒体：[CNBC]({{< relref "/docs/muse/sources/media/2026-09-08-cnbc-meta-pushes-into-personal-agents" >}})（WhatsApp 版差异）；[404 Media]({{< relref "/docs/muse/sources/media/2026-09-22-404media-muse-calls-made-by-humans" >}})（真人代打电话）；[TechCrunch：付费可打电话]({{< relref "/docs/muse/sources/media/2026-11-12-techcrunch-muse-phone-calls-paid" >}})、[Engadget：付费可打电话]({{< relref "/docs/muse/sources/media/2026-11-12-engadget-muse-phone-calls-paid" >}})（通话正式开放、身份披露）；[卫报]({{< relref "/docs/muse/sources/media/2026-09-28-guardian-muse-home-address" >}})（Marketplace 代回复）；[MediaNama 转述 TIME]({{< relref "/docs/muse/sources/media/2026-10-08-medianama-muse-dossiers" >}})（语音模式指令）；[Muse Mail 向付费用户开放]({{< relref "/docs/muse/sources/media/2026-11-10-muse-mail-paid-subscribers" >}})（邮箱上线）；[MacRumors]({{< relref "/docs/muse/sources/media/2026-11-09-muse-apple-watch" >}})（「内置于 Meta 应用」的说法）。
 - 社区：[Muse 拆解]({{< relref "/docs/muse/sources/community/2026-11-04-muse-openclaw-teardown" >}})（拨号与短信的分寸）；[怎样打开语音模式]({{< relref "/docs/muse/sources/community/2026-11-06-how-to-turn-on-muse-voice-mode" >}})（语音细节）；[Future Society 文件审查]({{< relref "/docs/muse/sources/community/2026-09-26-future-society-muse-own-files" >}})（主对话不可删除）。
 - 实测：[虚拟机探索]({{< relref "/docs/muse/sources/exploration/2026-10-12-muse-vm-exploration" >}})（消息绑定表）。

@@ -37,6 +37,8 @@ Meta 自己公布的数字只有一组，来自 2026-10-21 的 Q3 财报电话�
 | 摩根士丹利图表 | 第 1 天 73% 的安装活跃，第 14 天 23% | [Nikkei：日本无广告]({{< relref "/docs/muse/sources/media/2026-10-24-meta-muse-japan-no-ads-nikkei" >}})（经 FourWeekMBA） |
 | FoxData（截至 10-29 当周） | 美国 App Store 周下载 Muse 94.2 万、ChatGPT 55.6 万；同周 Google Play 仍是 ChatGPT 领先 | [下载超过 ChatGPT]({{< relref "/docs/muse/sources/media/2026-11-04-muse-out-downloads-chatgpt" >}}) |
 | GameQuant | 9-18 至 10-19 连续 32 天居美国 App Store 免费榜第一 | [连续 32 天榜首]({{< relref "/docs/muse/sources/media/2026-11-05-muse-32-days-top-app-store" >}}) |
+| Sensor Tower（上线头五天） | 美国下载超过 73 万，Meta AI 应用上线头五天为 70.7 万；一度升至榜单第二 | [TechCrunch：Instinct 与 Muse 都能打电话]({{< relref "/docs/industry/sources/media/2026-09-17-techcrunch-instinct-muse-phone-calls" >}}) |
+| Appfigures（10-28 查看） | iPhone 免费榜：日本、加拿大、新加坡第一，美国第三；ChatGPT 在四地分别为第三、第三、第九、第四。Alexandr Wang 转发了这一对比；文章提醒榜单每小时变动，反映的是安装而非习惯 | [All Things Muse：四个市场高于 ChatGPT]({{< relref "/docs/muse/sources/media/2026-10-28-allthingsmuse-app-store-four-markets" >}}) |
 | 社群估算 | 上线一个多月约 300 万 DAU，每名日活每天 10 次以上提示；Meta 旗下应用导流约占 60%–70%（未给原始出处） | [海外独角兽讨论]({{< relref "/docs/industry/sources/community/2026-10-23-haiwaidujiaoshou-discussion" >}}) |
 | 社区讨论 | 「日活只有五十万」（无出处） | [聚 AI 讨论]({{< relref "/docs/muse/sources/community/2026-10-04-juai-muse-discussion" >}}) |
 
@@ -87,6 +89,8 @@ Z Finance 认为「Meta 可以同时承担获客成本与服务成本」，独�
 
 推断：上述成本估算都是外部假设，Meta 没有披露算力成本。但几家口径不同的估算都指向同一方向：在免费额度慷慨、付费率低的情况下，Muse 的短期运行依赖 Meta 主营业务的补贴，交易费能否覆盖成本取决于尚未公布的费率和实际成交量。
 
+算力投入方面，10 月底有两项与 Muse 直接相关的芯片合作，均据 All Things Muse 转述双方公告：10-27 NVIDIA 宣布与 Meta 扩大 Muse 及 Muse 模型的合作，联合优化推理和训练性能以「improve total cost of ownership」，并向 Meta 的股票发行投资 30 亿美元；据转述路透社，Meta 当天把发行规模提高到 975 亿美元，是公司史上最大的一次融资（[All Things Muse：NVIDIA 合作]({{< relref "/docs/muse/sources/media/2026-10-27-allthingsmuse-nvidia-muse-partnership" >}})）。同日 AMD 宣布其 EPYC 处理器为 Muse 的专用计算环境提供算力，并向同一发行投资 10 亿美元（[All Things Muse：AMD EPYC]({{< relref "/docs/muse/sources/media/2026-10-28-allthingsmuse-amd-epyc-powers-muse" >}})）。两项投资都是对 Meta 股票发行的认购，不是对 Muse 本身的投资。
+
 ## 交易端：Meta 的购物数字与商家感受之间的差距
 
 Meta 称超过 25% 的周活用户用 Muse 购物、平均客单价超过 200 美元。其他口径给出的图景不同：Gener8 称购物只占活动的 8.6%；HUMAN 称 84% 的 Muse 网页请求指向产品和搜索页；Cequence 称大多数会话浏览后离开，只有一小部分完成购买（以上均经 [Muse 101]({{< relref "/docs/muse/sources/community/2026-11-04-muse-101-agentic-commerce" >}}) 转述）。该文作者指出，没有任何已公布的执行转化率。
@@ -94,6 +98,8 @@ Meta 称超过 25% 的周活用户用 Muse 购物、平均客单价超过 200 �
 流量侧，DataDome 称 Muse 全面可用的头 12 天（9-22 至 10-03）产生 2910 万次请求，占其 9 月观测到的智能体浏览器流量的 33%（[DataDome]({{< relref "/docs/muse/sources/media/2026-10-15-datadome-muse-29-million-requests" >}})）；HUMAN 称 Muse 占其 9 月观测到的智能体流量的 40%（[HUMAN]({{< relref "/docs/muse/sources/media/2026-11-05-muse-40-percent-agentic-traffic-human" >}})）。
 
 商家侧，WIRED 在财报季采访约 50 家公司：DoorDash 称来自 Muse 等智能体的订单只有「几百单」，T-Mobile「没看到任何显著变化」，Hilton 称「微不足道」，Chipotle 称 Muse 上线后智能体订单只增长个位数百分比；DoorDash CEO、Meta 董事 Tony Xu 称当前对智能体的热炒可能是「delusional」（[WIRED：商务现实检验]({{< relref "/docs/muse/sources/media/2026-10-31-wired-muse-commerce-reality-check" >}})）。Uber 称万圣节一周约 3.2 亿笔行程和订单中，经 AI 智能体下的 Uber Eats 订单只有 500 单（[TechCrunch：Uber 智能体订单]({{< relref "/docs/industry/sources/media/2026-11-04-techcrunch-uber-agent-orders" >}})）。
+
+旅游业的情况类似。据 All Things Muse 转述 Travel Weekly（10-31）：万豪高管 10-15 称 Muse「uses its own browser」在其网站上比价，公司目前在「observing and analyzing」；希尔顿 CEO 在 10-27 财报会上看好智能体带来的直销，同时承认智能体预订的流量和金额都「insignificant」。一家旅游营销公司称，它看到的 Muse 早期活动中约 80% 是购买 100 美元以下的消费品，旅游方面主要是比价和订餐厅（[All Things Muse：旅游业关注 Muse]({{< relref "/docs/muse/sources/media/2026-10-31-allthingsmuse-travel-industry-attention" >}})）。这些都是单个公司的说法。
 
 推断：Muse 产生了大量浏览流量，但商家能看到的成交量仍然很小。WIRED 报道的商家说法与 Meta「超过四分之一用户购物」的口径都只是各自一方的说法，资料中没有可把两者对上的成交数据。购物能力与平台拦截的情况见[连接器]({{< relref "/docs/muse/analysis/connectors" >}})，实测中的购物表现见[实际效果与可靠性]({{< relref "/docs/muse/analysis/reliability" >}})。
 

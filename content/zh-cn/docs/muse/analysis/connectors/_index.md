@@ -35,6 +35,7 @@ description: >
 | 2026-09-29 | Muse for Small Business：Asana、Box、Canva、Dropbox、Figma、Granola、HighLevel、Intuit QuickBooks、Klaviyo、Lovable、Notion、Shopify、Slack、Stripe、Zoom，及 Facebook 公共主页、Instagram 专业账户、Meta 广告账户 | [小企业版]({{< relref "/docs/muse/sources/official/2026-09-29-muse-for-small-business" >}}) |
 | 2026-10-23 | 日本：Gmail、Google 日历、Instagram、Stripe、Shopify、Trip.com、Agoda、Klook；Mercari、Money Forward ME、Ticket Pia「正在推进」 | [日本上线]({{< relref "/docs/muse/sources/official/2026-10-23-japan-launch" >}}) |
 | 2026-10-27 | 新加坡：Shopee、Lazada、Grab、ShopBack、新加坡航空、Agoda、Klook、Trip.com，「逐步推出」 | [新加坡上线]({{< relref "/docs/muse/sources/official/2026-10-27-singapore-launch" >}}) |
+| 2026-10-28 | Shopify Fall '26 发布：Shop Pay 结账可在 Muse 内完成，并首次延伸到 Shopify 之外的商店，用 Visa、Mastercard、Discover 的卡组织令牌付款，商家无需新集成；据转述 The Defiant，首批接入的智能体是 Muse、Claude Duet、Grok Bot、Instinct；每笔购买由用户点「允许」，Shopify 称卡号不交给智能体 | [All Things Muse：Shop Pay 进入 Muse]({{< relref "/docs/industry/sources/media/2026-10-31-allthingsmuse-shop-pay-off-platform" >}}) |
 | 2026-11-05 | 墨西哥：Cinépolis、Coppel、Despegar、Kavak、Kueski、Liverpool、Rappi，将逐步启用 | [墨西哥上线]({{< relref "/docs/muse/sources/media/2026-11-05-muse-launches-mexico" >}}) |
 | 约 2026-11-04 | Expedia 连接在美国上线，距宣布约六周；支持自然语言搜索和预订酒店，不支持取消或改订 | [Skift：Expedia]({{< relref "/docs/muse/sources/media/2026-11-09-skift-expedia-live-on-muse" >}}) |
 | 2026-11-10 | Uber 称 Muse 可在聊天内安排 Uber Courier 快递 | [Uber Courier]({{< relref "/docs/muse/sources/media/2026-11-10-uber-courier-deliveries" >}}) |

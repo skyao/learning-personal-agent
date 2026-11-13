@@ -55,6 +55,8 @@ CodePick 的分析提醒，容器里看不到某个服务不能证明它在另�
 
 作者据此推断：VM 暂停和恢复是冷启动新实例，不是内存快照（跨 CPU 厂商无法恢复内存快照）；100 GB 用户盘是「唯一跨 VM 替换存活的盘」，即状态与计算分离；释放没有固定阈值，可能与宿主资源紧张有关。这些是单一用户在一个时间段的观察，Meta 未公布回收策略。Future Society 与 Peter James 的导出测到根文件系统约 7–7.9 GB（解压），与实测的系统盘量级一致（[Future Society]({{< relref "/docs/muse/sources/community/2026-09-26-future-society-muse-own-files" >}})、[Peter James]({{< relref "/docs/muse/sources/community/2026-09-22-peter-james-muse-filesystem-export" >}})）。
 
+硬件方面，AMD 在 2026-10-27 的公告中称其 EPYC 处理器为 Muse 的「dedicated computing environments」提供算力（据 [All Things Muse：AMD EPYC]({{< relref "/docs/muse/sources/media/2026-10-28-allthingsmuse-amd-epyc-powers-muse" >}}) 转述），与上表实测看到的 EPYC 型号相符；实测中也出现过 Intel Xeon，说明并非全部是 AMD。模型推理和训练则在 NVIDIA 平台上（[All Things Muse：NVIDIA 合作]({{< relref "/docs/muse/sources/media/2026-10-27-allthingsmuse-nvidia-muse-partnership" >}})）。
+
 推断：「App 关了它还在干」与「空闲几分钟就释放」并不矛盾。从实测看，持续存在的是用户盘上的状态和调度，计算实例按需拉起。成本侧的测算也支持这种做法：ZFinance 转引摩根士丹利研报，假设每用户一台 2 vCPU、8 GB 的隔离沙箱，按 AWS 约每小时 0.1217 美元计价；文章另外推演 24/7 常驻与「按需拉起＋状态快照休眠」的成本差距，这是文章作者的推演，不是 Muse 的披露（[ZFinance：齐俊元融资]({{< relref "/docs/industry/sources/media/2026-10-21-zfinance-qi-junyuan-today" >}})）。单用户成本数字见[商业与规模]({{< relref "/docs/muse/analysis/business" >}})。
 
 ## 环境里有什么

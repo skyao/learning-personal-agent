@@ -71,6 +71,7 @@
 | 2026-11-13 | claude-duet | Slack 的具体限制、Microsoft 365 上线计划；1Password 登录、Team/Enterprise、美国以外的时间表 | 产品页列有 Microsoft/Office 365，帮助文档称尚不可用 |
 | 2026-11-13 | claude-duet | Max、Ultra 限额倍数与 API 额度的官方出处 | 目前只有 Alarcon 2026-11-01 的核对 |
 | 2026-11-13 | claude-duet | 发布一个月以上的长期使用与复测；Claire Vo 四智能体节目的评分 | /docs/industry/sources/community/2026-10-28-claire-vo-four-agents 只有任务清单 |
+| 2026-11-13 | muse | 商家电话的官方说明：正式开放后是否仍有真人代打、如何披露 AI 身份、是否计入每周额度 | 11-12 只有 Wang 的 X 帖与 TechCrunch、Engadget、All Things Muse 报道 |
 
 ## 分析中发现的资料页问题
 
@@ -121,3 +122,4 @@
 | 2026-11-13 | /docs/industry/sources/community/2026-11-03-turingmiloy-deepseek-super-agent | 对 Duet 只在产品罗列中提到一句，products 列入 claude-duet 依据弱 | 2026-11-13 用户决定移出资料库，资料页已删除（主要讲 DeepSeek，跟踪产品只被罗列） |
 | 2026-11-13 | /docs/industry/sources/media/2026-11-08-china-newsweek-personal-agents | 11-08 仍称 Muse 只向美国和加拿大开放，已过时 | 无需改：原文如此；分析中以官方为准 |
 | 2026-11-13 | /docs/industry/sources/media/2026-10-31-allthingsmuse-shop-pay-off-platform | 待翻译 | 留给翻译 agent |
+| 2026-11-13 | /docs/muse/sources/media/2026-10-27-allthingsmuse-nvidia-muse-partnership | 内容转述 NVIDIA、AMD 公告和路透社（975 亿美元），与 /docs/muse/sources/media/2026-10-28-allthingsmuse-amd-epyc-powers-muse 一样没有 basedOn | 待处理 |
