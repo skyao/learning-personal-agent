@@ -118,6 +118,6 @@
 | 2026-11-13 | /docs/claude-duet/sources/official/2026-10-21-introducing-claude-duet | 正文写「Pro、Max 和 Ultra」，而 10-21 的发布说明只写 Pro 和 Max，Ultra 是 10-30 由 Max 20x 改名而来；正文在 10-30 之后被改过，updatedAt（10-23）与 dateNote 未反映 | 2026-11-13 dateNote 补记 Ultra 改名与正文改动，updatedAt 不变 |
 | 2026-11-13 | /docs/claude-duet/sources/official/2026-10-30-help-get-started-with-claude-duet | dateNote 称旧译文「已移除，待重新翻译」，但正文已是 11-10 新版译文、translation 为已翻译，dateNote 过时 | 2026-11-13 dateNote 改为「2026-11-10 按新版重新翻译」 |
 | 2026-11-13 | /docs/claude-duet/sources/official/2026-11-05-product-page | 连接器列表含 Microsoft/Office 365，帮助文档称 Microsoft 365 尚不可用 | 无需改：官方两处说法不一，分析中并列 |
-| 2026-11-13 | /docs/industry/sources/community/2026-11-03-turingmiloy-deepseek-super-agent | 对 Duet 只在产品罗列中提到一句，products 列入 claude-duet 依据弱 | 2026-11-13 products 删去 claude-duet；muse、dots、grok-bot 同样只被罗列，待用户决定 |
+| 2026-11-13 | /docs/industry/sources/community/2026-11-03-turingmiloy-deepseek-super-agent | 对 Duet 只在产品罗列中提到一句，products 列入 claude-duet 依据弱 | 2026-11-13 用户决定移出资料库，资料页已删除（主要讲 DeepSeek，跟踪产品只被罗列） |
 | 2026-11-13 | /docs/industry/sources/media/2026-11-08-china-newsweek-personal-agents | 11-08 仍称 Muse 只向美国和加拿大开放，已过时 | 无需改：原文如此；分析中以官方为准 |
 | 2026-11-13 | /docs/industry/sources/media/2026-10-31-allthingsmuse-shop-pay-off-platform | 待翻译 | 留给翻译 agent |
