@@ -17,7 +17,7 @@ products: [muse, grok-bot, dots, claude-duet]
 
 {{< source-info >}}
 
-**收录说明**：用户提供链接。原文在微信公众号，用浏览器的客户端标识直接下载页面，从 `#js_content` 抽取正文，图片地址取自 `data-src`。原文没有图片。
+**收录说明**：用户提供链接。原文在微信公众号，用浏览器的客户端标识直接下载页面，从 `#js_content` 抽取正文，图片地址取自 `data-src`。原文没有图片。文中把 Marketplace 键盘事件的当事人写作「测评博主」，没有出处；卫报报道的当事人是多伦多的普通用户 Matt Robb（见[卫报：Muse 发出住址]({{< relref "/docs/muse/sources/media/2026-09-28-guardian-muse-home-address" >}})），照录原文。
 
 **内容摘要**：热带草的文章把「问题、任务、身份」作为聊天机器人、Agent、Personal Agent 三代的分界，并用工位、记忆、手、主动、刹车五条标准辨认。文章按日期列出 Grok Bot（8 月 11 日）、Muse（9 月 8 日）、dots（9 月 29 日）、Claude Duet（10 月 21 日）的发布，并引 Gartner 称该市场支出 2025 年 165 亿美金、2027 年 655 亿。文中列了三件翻车事件，如有机构测试中 Grok 十五天发了 187 封邮件，并给出三条使用建议：先给低权限的活、把「始终允许」改成逐次确认、给单独的邮箱和账号。
 

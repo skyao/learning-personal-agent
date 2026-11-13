@@ -17,7 +17,7 @@ products: [muse, instinct, claude-duet, dots, grok-bot]
 
 {{< source-info >}}
 
-**收录说明**：用户提供链接。原文在微信公众号，用浏览器的客户端标识直接下载页面，从 `#js_content` 抽取正文，图片地址取自 `data-src`。原文没有图片；原文多个一级标题按规则降为二级。
+**收录说明**：用户提供链接。原文在微信公众号，用浏览器的客户端标识直接下载页面，从 `#js_content` 抽取正文，图片地址取自 `data-src`。原文没有图片；原文多个一级标题按规则降为二级。文中称「日活超 250 万、两周留存率 23%」由 Meta 10 月 21 日 Q3 财报电话会披露，库中没有一手记录；Z Finance 一文写明日活约 250 万出自 Sensor Tower 10 月 20 日的数据（见[Z Finance：Today 齐俊元]({{< relref "/docs/industry/sources/media/2026-10-21-zfinance-qi-junyuan-today" >}})），照录原文。
 
 **内容摘要**：文章引用 Meta 10 月 21 日 Q3 财报电话会议的数据（Muse 已突破 1000 万用户、日活超 250 万、两周留存率 23%），把生成式 AI 产品梳理为 chatbot、work agent、personal agent 三个阶段。作者分析 Muse 爆火的原因：Meta 的流量分发能力、7x24 小时云端虚拟机、主动发消息、长期记忆、多任务并行，以及「凭证隔离、独立授权、网络出口控制及人类审批」的安全架构。文章比较 Instinct、Karpo、dots、Duet、Grok Bot 的定位，称 Instinct 在用户量不多的情况下交易额已达 10 亿美金、约 50% 来自旅行场景。最后引用 WIRED 10 月 27 日的六款产品体验与朱啸虎 10 月 21 日的质疑，认为是否需要 Personal Agent，要看它是否帮人省钱、省时间、省精力，是否拓展了能力边界。
 

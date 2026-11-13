@@ -17,7 +17,7 @@ products: [muse, manus-cue, today, gemini-spark, dots, grok-bot, instinct]
 
 {{< source-info >}}
 
-**收录说明**：用户提供链接。原文在微信公众号，用浏览器的客户端标识直接下载页面，从 `#js_content` 抽取正文，图片地址取自 `data-src`。作者是阿里云 Agent 技术专家，文首注明本文已收录于 Alibaba Cloud AI Agent Handbook（github.com/aliyun/ai-agent-handbook）。文首「Datawhale干货」栏目名与文末「一起点赞三连」图未收入。
+**收录说明**：用户提供链接。原文在微信公众号，用浏览器的客户端标识直接下载页面，从 `#js_content` 抽取正文，图片地址取自 `data-src`。作者是阿里云 Agent 技术专家，文首注明本文已收录于 Alibaba Cloud AI Agent Handbook（github.com/aliyun/ai-agent-handbook）。文首「Datawhale干货」栏目名与文末「一起点赞三连」图未收入。文中「拒绝 Messages 权限后仍被同步超过 18.7 万条 iMessage」「内部测试暴露用户 iCloud 照片」两事没有注明出处，库中也没有一手资料。
 
 **内容摘要**：文章梳理 2026 年 9 月 Personal Agent 产品的集中发布（Meta Muse 9 月 8 日，Manus 2.0 与 Cue 9 月 28 日，OpenAI dots 9 月 29 日），认为模型、云端执行环境、应用连接和长期任务管理正在被打包成面向用户的完整产品。作者把当前的 Personal Agent 分为运行内核、独立执行环境、工具与服务生态、进入现实社会所需的数字身份四个部分，并观察十款产品的设计路线，结论是「海外高度同质化，国内还未破局」；就个人体验而言，作者认为目前 Grok Bot 的能力完整度最高。后半部分讨论全天候（Always On Agent）在状态保存、触发器、长任务恢复、权限与记忆上的技术挑战，最后给出作者对中国 Personal Agent 路径的判断。
 

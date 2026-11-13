@@ -17,7 +17,7 @@ products: [grok-bot, muse, manus-cue, dots, instinct]
 
 {{< source-info >}}
 
-**收录说明**：用户提供链接。原文在微信公众号，用浏览器的客户端标识直接下载页面，从 `#js_content` 抽取正文，图片地址取自 `data-src`。文首「先点个关注」一行未收入；原文多个一级标题按规则降为二级。
+**收录说明**：用户提供链接。原文在微信公众号，用浏览器的客户端标识直接下载页面，从 `#js_content` 抽取正文，图片地址取自 `data-src`。文首「先点个关注」一行未收入；原文多个一级标题按规则降为二级。文中称 Muse「可以在 Meta 的各种社交软件中使用」，官方资料提到的 Meta 应用入口只有 WhatsApp，照录原文。
 
 **内容摘要**：文章梳理 Personal Agent 的发布历程：6 月 Anthropic 发布 Claude Tag，8 月 Grok Bot，9 月初 Meta Muse，9 月底 Manus Cue，随后 OpenAI 在 DevDay 发布 Dots，另有 Instinct 等跟进。文中对比各产品定位，例如 Claude Tag 面向团队上下文与多人协作，Cue 拥有「自己的数字身份和相应的云资源」，Dots 可读取 ChatGPT 与 Codex 中的上下文，Instinct「不需要下载 APP」。作者认为 Personal Agent 与 OpenClaw、Hermes Agent 等开源 Agent「差距已经没有那么大了」，最大区别在用户心智和成本；文末给出一个非官方定义、六大能力提升和七点未来趋势「畅想」。
 

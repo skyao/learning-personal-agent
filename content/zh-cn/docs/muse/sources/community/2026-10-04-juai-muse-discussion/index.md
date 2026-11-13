@@ -17,7 +17,7 @@ products: [muse]
 
 {{< source-info >}}
 
-**收录说明**：用户提供链接。原文在微信公众号，用浏览器的客户端标识直接下载页面，从 `#js_content` 抽取正文，图片地址取自 `data-src`。文章整理自播客 Next Token 第四期。
+**收录说明**：用户提供链接。原文在微信公众号，用浏览器的客户端标识直接下载页面，从 `#js_content` 抽取正文，图片地址取自 `data-src`。文章整理自播客 Next Token 第四期。讨论者称 Muse「没有 Subagent」，与官方安全文章所说 Muse 使用「专门的浏览器子智能体」不符（见[我们如何把安全做进 Muse]({{< relref "/docs/muse/sources/official/2026-09-08-how-we-built-safety-into-muse" >}})），照录原文。
 
 **内容摘要**：橘AI 整理自播客 Next Token 第四期的讨论，主题是 Muse 的产品设计、商业表现与硬件。文中称，任何软件加入 Muse 的连接器商店后股价一天涨百分之十起步，多的时候涨百分之十三，而 Muse 的日活只有五十万。讨论认为 Muse 等产品让 Agent 走向大众的两点是云端与易用性，连接器在需要时才渐进弹出，用户还可以在手机 App 中查看和下载云端虚拟机的文件。硬件 Muse Charm 的参数为两英寸屏幕、前后摄像头、语音输入、视频输入输出、5G 和 eSIM，文中称其赶在圣诞节发货。
 

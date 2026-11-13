@@ -11,7 +11,7 @@ fidelity: 全文
 translation: 已翻译
 collectedAt: 2026-11-06
 updatedAt: 2026-11-02
-tags: [开放与价格, 实测评测]
+tags: [开放与价格]
 products: [dots, muse, grok-bot, claude-duet]
 ---
 

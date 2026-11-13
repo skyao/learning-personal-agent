@@ -16,7 +16,7 @@ products: [muse]
 
 {{< source-info >}}
 
-**收录说明**：直接下载。去掉了文末的 Related Roundup、Tag、Buyer's Guide 与论坛评论链接；配图已本地化。原文全文存于本目录的 original.md，网站上不显示，已翻译。
+**收录说明**：直接下载。去掉了文末的 Related Roundup、Tag、Buyer's Guide 与论坛评论链接；配图已本地化。原文全文存于本目录的 original.md，网站上不显示，已翻译。文中称 Muse「内置于 Instagram、Facebook 和其他 Meta 应用」，官方资料提到的 Meta 应用入口只有 WhatsApp，疑与 Meta AI 混淆，照录原文。
 
 **内容摘要**：2026 年 11 月 9 日，Meta 更新 iOS 版 Muse 应用，新增 Apple Watch 支持，用户可从手表上使用这一主动式 AI 智能体。手表应用把 Muse 形象放在表上，可发消息、语音听写或打电话，还有 Muse 表盘复杂功能可快速打开。Muse 是 Meta 的个人 AI 智能体，可替用户完成任务，既有独立应用，也内置于 Instagram、Facebook 等 Meta 应用；Meta 设计的雪人形象颇受欢迎，在 Apple Watch 上处于显眼位置。手表应用的设计与 Meta 于 9 月发布的配套设备 Muse Charm 相似。
 

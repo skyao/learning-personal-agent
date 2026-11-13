@@ -18,7 +18,7 @@ products: [dots, muse, grok-bot, instinct]
 
 {{< source-info >}}
 
-**收录说明**：Medium 对直接下载返回 403，2026-11-06 改用 AIWithGhost 的全文转载（reprintUrl）；去掉了站点头部、阅读时长、文末推荐与分享按钮。判断依据为通读全文后的记录：Dots、Muse、Grok Bot、Instinct 四节为案头梳理，OpenClaw 与 Hermes 两节为作者动手实测（含真实命令与输出）；文内无逐条出处链接，个别数字（如 Dots 起价、Instinct 估值）未核实，摘要中未照抄存疑数字；结尾所谓「Google Gemini Spark」名称存疑，未写入摘要。原文全文存于本目录的 original.md，网站上不显示，已翻译。
+**收录说明**：Medium 对直接下载返回 403，2026-11-06 改用 AIWithGhost 的全文转载（reprintUrl）；去掉了站点头部、阅读时长、文末推荐与分享按钮。判断依据为通读全文后的记录：Dots、Muse、Grok Bot、Instinct 四节为案头梳理，OpenClaw 与 Hermes 两节为作者动手实测（含真实命令与输出）；文内无逐条出处链接，个别数字（如 Dots 起价、Instinct 估值）未核实，摘要中未照抄存疑数字；结尾所谓「Google Gemini Spark」名称存疑，未写入摘要。原文全文存于本目录的 original.md，网站上不显示，已翻译。文中称 Muse「没有事件触发」「仅限美国」，与其他资料不符：官方帮助文档有基于位置的提醒（见[帮助：提醒与定时任务]({{< relref "/docs/muse/sources/official/2026-09-08-help-reminders-scheduled-tasks" >}})），NYT 实测中 Muse 在作者到达攀岩馆时发来训练计划（见[NYT 五项任务]({{< relref "/docs/industry/sources/media/2026-10-25-nyt-five-killer-tasks" >}})），Muse 已于 10-23 在日本、10-27 在新加坡上线（见[日本上线]({{< relref "/docs/muse/sources/official/2026-10-23-japan-launch" >}})、[新加坡上线]({{< relref "/docs/muse/sources/official/2026-10-27-singapore-launch" >}})），照录原文。
 
 **内容摘要**：作者以触发方式（定时、事件、自唤醒）与「静默路径」（无事可不说话）为框架，对比六款主动型智能体。Dots 跑在 OpenAI 云、后台研究只读，无 webhook 触发；Muse 每用户一个专用云 VM，提案代理与持真实凭证的 Sentinel 分离，支付用一次性 Stripe Link 卡，美国限定；Grok Bot 是六款中唯一能即时响应 GitHub issue 的托管产品，但所有 bot 共享 Cursor 云上一台电脑。OpenClaw 与 Hermes 两节为作者实测：建 cron 任务、测 webhook 签名验证并发现时区 bug。结论是分层建立信任，先只读研究、再定时简报、最后接 webhook 任务。
 

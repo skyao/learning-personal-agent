@@ -10,7 +10,7 @@ language: en
 fidelity: 全文
 translation: 已翻译
 collectedAt: 2026-11-08
-tags: [发布]
+tags: [功能更新, 交互渠道]
 dateNote: "页面元数据为 2026-11-09T00:25Z（美东时间 11 月 8 日 19:25），站内显示 11 月 8 日。"
 ---
 
