@@ -10,7 +10,7 @@
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | muse | 11-12 | 11-12 | 11-12 | 11-12 | 11-12 | 11-12 | 11-12 | 11-12 | 11-12 | 11-12 | 11-12 | 11-12 | 11-12 |
 | dots | 11-11 | 11-11 | 11-11 | 11-11 | 11-11 | 11-11 | 11-11 | 11-11 | 11-11 | 11-11 | 11-11 | 11-11 | 11-11 |
-| claude-duet | | | | | | | | | | | | | |
+| claude-duet | 11-12 | 11-12 | 11-12 | 11-12 | 11-12 | 11-12 | — | — | 11-12 | — | 11-12 | — | 11-12 |
 | grok-bot | | | | | | | | | | | | | |
 | manus-cue | | | | | | | | | | | | | |
 | lingguang | | | | | | | | | | | | | |
@@ -63,6 +63,14 @@
 | 2026-11-13 | muse | Wardle OBTS 演讲（11-20）、Gmail 收件箱实测原文、Claire Vo 基准评分、Skift 对 Expedia 测试全文 | 前两篇仅链接，后两篇节选或截断 |
 | 2026-11-13 | muse | Personal Agent Protocol 规范与一手公告；Meta 对 Web Bot Auth 测试的确认 | /docs/muse/sources/media/2026-10-31-web-bot-auth-signed-requests |
 | 2026-11-13 | muse | Marketplace 住址事件的 AP、Fortune、Business Insider 原文 | 各篇转述细节不一，目前以卫报为准 |
+| 2026-11-13 | claude-duet | 以 Duet 为主题的媒体报道（`media/` 为空）和用户自己的实测（`exploration/` 为空） | 目前只在 WIRED、AIX财经、中国新闻周刊等多产品文章中出现 |
+| 2026-11-13 | claude-duet | 用户数、邀请发放进度、留存；研究预览结束后的定价；每档套餐能跑多少简报和任务 | 官方未公布；Reddit 用户称用量「大得离谱」，见 /docs/claude-duet/sources/community/2026-10-29-chris-alarcon-first-day |
+| 2026-11-13 | claude-duet | 云端计算机与浏览器虚拟机的规格、持久化、回收、并发与超时；桌面应用是否正式提供 | fig.blue 提到桌面应用与本地主机访问，Claire Vo 的 TestFlight 版没有 |
+| 2026-11-13 | claude-duet | 是否用于训练、保存期限、他人信息处理的官方说明 | 安全文章不谈训练；第三方说法不一（LaoZhang、Freistyle AI） |
+| 2026-11-13 | claude-duet | 外部渗透测试结论、分类器误判率、上线前选择阻止 Duet 的网站名单 | /docs/claude-duet/sources/official/2026-10-23-claude-duet-safety-privacy-security |
+| 2026-11-13 | claude-duet | Slack 的具体限制、Microsoft 365 上线计划；1Password 登录、Team/Enterprise、美国以外的时间表 | 产品页列有 Microsoft/Office 365，帮助文档称尚不可用 |
+| 2026-11-13 | claude-duet | Max、Ultra 限额倍数与 API 额度的官方出处 | 目前只有 Alarcon 2026-11-01 的核对 |
+| 2026-11-13 | claude-duet | 发布一个月以上的长期使用与复测；Claire Vo 四智能体节目的评分 | /docs/industry/sources/community/2026-10-28-claire-vo-four-agents 只有任务清单 |
 
 ## 分析中发现的资料页问题
 
@@ -107,3 +115,9 @@
 | 2026-11-13 | /docs/muse/sources/media/2026-11-09-times-muse-uk-launch | 「用户超过 1100 万」与 Meta 口径（美加 1000 万人设置）不一致；/docs/muse/sources/media/2026-11-09-india-pricing-ahead-of-launch 写「两个月下载超 1000 万次」 | 无需改：原文如此；分析中并列口径 |
 | 2026-11-13 | /docs/muse/sources/community/2026-11-12-tuya-cloud-devices-skill | 11-12 仍称 Muse 仅在美国和加拿大可用，已过时 | 无需改：厂商原话；分析中以官方为准 |
 | 2026-11-13 | /docs/muse/sources/media/2026-11-05-muse-launches-mexico | 正文称眼镜「已经运行由 Muse 驱动的助手」，又转述 Meta「计划增加」眼镜兼容，前后矛盾 | 无需改：原文如此；分析中写明说法不一 |
+| 2026-11-13 | /docs/claude-duet/sources/official/2026-10-21-introducing-claude-duet | 正文写「Pro、Max 和 Ultra」，而 10-21 的发布说明只写 Pro 和 Max，Ultra 是 10-30 由 Max 20x 改名而来；正文在 10-30 之后被改过，updatedAt（10-23）与 dateNote 未反映 | 待处理 |
+| 2026-11-13 | /docs/claude-duet/sources/official/2026-10-30-help-get-started-with-claude-duet | dateNote 称旧译文「已移除，待重新翻译」，但正文已是 11-10 新版译文、translation 为已翻译，dateNote 过时 | 待处理 |
+| 2026-11-13 | /docs/claude-duet/sources/official/2026-11-05-product-page | 连接器列表含 Microsoft/Office 365，帮助文档称 Microsoft 365 尚不可用 | 无需改：官方两处说法不一，分析中并列 |
+| 2026-11-13 | /docs/industry/sources/community/2026-11-03-turingmiloy-deepseek-super-agent | 对 Duet 只在产品罗列中提到一句，products 列入 claude-duet 依据弱 | 待处理 |
+| 2026-11-13 | /docs/industry/sources/media/2026-11-08-china-newsweek-personal-agents | 11-08 仍称 Muse 只向美国和加拿大开放，已过时 | 无需改：原文如此；分析中以官方为准 |
+| 2026-11-13 | /docs/industry/sources/media/2026-10-31-allthingsmuse-shop-pay-off-platform | 待翻译 | 留给翻译 agent |
