@@ -10,7 +10,7 @@ language: en
 fidelity: 全文
 translation: 已翻译
 collectedAt: 2026-11-05
-tags: [实测评测]
+tags: [实测评测, 连接器, 持续执行]
 products: [grok-bot]
 ---
 

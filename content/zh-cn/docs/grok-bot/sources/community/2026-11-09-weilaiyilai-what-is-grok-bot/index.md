@@ -1,5 +1,5 @@
 ---
-title: "Grok Bot  / Personal Agent   是什么？"
+title: "Grok Bot / Personal Agent 是什么？"
 linkTitle: "未来已来：Grok Bot 是什么"
 date: 2026-11-09
 sourceUrl: "https://mp.weixin.qq.com/s/4PJu-QmKdUiA-o2jtQl2EA"
@@ -17,7 +17,7 @@ products: [grok-bot]
 
 {{< source-info >}}
 
-**收录说明**：用户提供链接。原文在微信公众号，用浏览器的客户端标识直接下载页面，从 `#js_content` 抽取正文，图片地址取自 `data-src`。正文开头的一级标题降为普通文本。文末参考资料照录。
+**收录说明**：用户提供链接。原文在微信公众号，用浏览器的客户端标识直接下载页面，从 `#js_content` 抽取正文，图片地址取自 `data-src`。正文开头的一级标题降为普通文本。页面标题原文为「Grok Bot  / Personal Agent   是什么？」，含多余空格，已合并为单个空格；正文开头的标题是「Grok Bot 最近很火：搞懂 Personal Agent 是什么」。文末参考资料照录。
 
 **内容摘要**：未来已来AI物语的文章以 Grok Bot 为例解释 Personal Agent，依据 xAI 官方文档介绍它在云端电脑上工作，可连接 Gmail、Google Calendar、Slack、Notion，支持定时或事件触发的例行任务和可复用 Skill。文章指出同一账号下多个 Bot 共用一台云端电脑，文件、浏览器登录状态和命令行凭证可能共享，并建议对发邮件、付款、删除等操作先请求批准。文末给出上手步骤，并与自部署的 OpenClaw 做了对比。
 

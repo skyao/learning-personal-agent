@@ -12,7 +12,7 @@ fidelity: 全文
 translation: 已翻译
 collectedAt: 2026-11-05
 dateNote: "文档不标日期，取收集日期"
-tags: [功能更新, 持续执行]
+tags: [持续执行]
 products: [grok-bot]
 ---
 

@@ -12,7 +12,7 @@ fidelity: 全文
 translation: 已翻译
 collectedAt: 2026-11-10
 updatedAt: 2026-11-10
-dateNote: "文档不标日期，取收集日期；2026-11-10 发现原文更新，按新版覆盖原文存档：新增管理员的「Bot sharing」设置（Everyone / Admins only）、Slack 中未关联账号的成员使用共享 Bot 及其用量归属等内容；旧译文对应 11-05 版，已移除，待重新翻译"
+dateNote: "文档不标日期，取收集日期；2026-11-10 发现原文更新，按新版覆盖原文存档：新增管理员的「Bot sharing」设置（Everyone / Admins only）、Slack 中未关联账号的成员使用共享 Bot 及其用量归属等内容；2026-11-10 按新版重新翻译"
 tags: [安全, 开放与价格, 运行环境, 商业与规模]
 products: [grok-bot]
 ---

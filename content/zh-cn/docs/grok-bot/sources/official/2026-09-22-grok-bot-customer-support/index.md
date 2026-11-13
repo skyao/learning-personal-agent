@@ -12,7 +12,7 @@ fidelity: 转载全文
 translation: 已翻译
 collectedAt: 2026-11-05
 dateNote: "x.ai 对自动访问返回 403，依据 Wayback 快照 20261027044706；日期取页面结构化数据的 datePublished"
-tags: [实测评测, 商业与规模, 持续执行]
+tags: [商业与规模, 持续执行]
 products: [grok-bot]
 ---
 

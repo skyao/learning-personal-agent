@@ -31,7 +31,7 @@ products: [grok-bot]
 
 应用让 Bot 能够使用外部服务。应用连接属于你登录 Grok Bot 时使用的**同一账户**。
 
-**电子邮件（Email）** 应用不同：它让每个 Bot 拥有自己的电子邮件地址，而不是连接你已有的账户。见[给你的 Bot 一个电子邮件地址](https://cursor.com/help/grok-bot/agent-email)。
+**电子邮件（Email）** 应用不同：它让你的 Bot 拥有自己的电子邮件地址，而不是连接你已有的账户。见[给你的 Bot 一个电子邮件地址](https://cursor.com/help/grok-bot/agent-email)。
 
 ## 如何添加应用？
 
