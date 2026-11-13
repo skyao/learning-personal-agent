@@ -15,7 +15,7 @@
 | manus-cue | 11-10 | 11-10 | — | 11-10 | 11-10 | 11-10 | — | — | 11-10 | — | 11-10 | 11-10 | 11-10 |
 | lingguang | 11-10 | 11-10 | 11-10 | 11-10 | 11-10 | — | — | — | 11-10 | — | — | 11-10 | 11-10 |
 | today | 11-10 | 11-10 | 11-10 | 11-10 | 11-10 | 11-10 | 11-10 | 11-10 | 11-10 | 11-10 | 11-10 | 11-10 | 11-10 |
-| gemini-spark | | | | | | | | | | | | | |
+| gemini-spark | 11-10 | 11-10 | 11-10 | 11-10 | 11-10 | 11-10 | 11-10 | 11-10 | 11-10 | 11-10 | 11-10 | — | 11-10 |
 | instinct | | | | | | | | | | | | | |
 | workbuddy | | | | | | | | | | | | | |
 | microsoft-autopilot | | | | | | | | | | | | | |
@@ -99,6 +99,12 @@
 | 2026-11-13 | today | 云端执行环境的形态与规格；云端与本机的任务分工；模型路由与自研模型进展 | 「云电脑只是沙箱」「扫描本地磁盘」只见 Datawhale、鸿煊两篇，无出处 |
 | 2026-11-13 | today | 国际版的英文媒体与用户实测（目前 22 篇全部为中文）；一个月以上的长期使用；任何口径的完成率 | 评测框架 v0.1 发布时未打分 |
 | 2026-11-13 | today | 国际版与国内版的平台、连接器、上线时间对照；微信绑定的实现与限制 | 官方 08-03 称已上线，晚点称全球版 09-08 上线；国际站把飞书、钉钉标 Soon，国内版已接入 |
+| 2026-11-13 | gemini-spark | 任何规模数据：用户数、使用量、付费转化；Google 财报是否提及 Spark / Task | 本库只有 Enterpret 的发帖用户数（2,960）和 Gemini 整体「9 亿多」月用户 |
+| 2026-11-13 | gemini-spark | 云端环境规格与隔离方式；各档位计算量额度 | 「Google Cloud 专用虚拟机」「每任务临时 VM」只出自 Datawhale、iThome，未注出处 |
+| 2026-11-13 | gemini-spark | Gemini 隐私政策与 Keep Activity 说明原文：任务数据是否训练、人工审核、保存期限；排除 EEA、英国、瑞士、尼日利亚的原因 | 目前只有 Freistyle AI 引帮助页、The Verge 转述 |
+| 2026-11-13 | gemini-spark | 改名 Task 的官方说明与日期；I/O 预告的短信与邮件入口、自定义子智能体是否落地；Argon 推出日期 | 帮助页只写「2026-10」；Chrome Unboxed、9to5Google 为界面观察 |
+| 2026-11-13 | gemini-spark | 8 月以后（3.7 Flash、Argon、Chrome 自动浏览）的独立实测；计划与话题监控的长期实测；用户自己的实测（`exploration/` 为空） | 深度实测集中在 5–8 月 |
+| 2026-11-13 | gemini-spark | 「部分企业用户」的含义与 Workspace 版计划；10 月表格写入故障的官方说明；漏洞赏金与第三方安全研究 | /docs/gemini-spark/sources/official/2026-10-11-spark-product-page、/docs/gemini-spark/sources/community/2026-10-13-google-dev-forum-sheets-blocked |
 
 ## 分析中发现的资料页问题
 
@@ -180,3 +186,6 @@
 | 2026-11-13 | /docs/today/sources/media/2026-10-24-zhinengyongxian-today-ten-questions | 正文称「自 9 月 9 日起陆续上线了国际版和国内版本」，摘要称「9 月先在美区上线，两周后国内版跟上」；竞品数字（Muse 活跃约 400 万等）为团队口述无出处 | 无需改：原文如此；分析中并列并标为团队口述 |
 | 2026-11-13 | /docs/industry/sources/community/2026-10-18-datawhale-personal-agent-overview | 关于 Today 的「扫描本地磁盘」「海外用户批评」「云电脑只是沙箱」三处断言均无出处 | 无需改：作者观点；分析中注明无出处 |
 | 2026-11-13 | /docs/today/sources/media/2026-10-08-geekpark-today-ten-days | 「Muse 被曝近 19 万条用户对话记录遭泄露」无出处，与鸿煊综述「18.7 万条 iMessage」说法不同 | 无需改：原文如此；Today 分析未采用 |
+| 2026-11-13 | /docs/industry/sources/community/2026-11-06-hongxuan-what-is-new | 关于 Gemini Spark 的段落（Antigravity、Google Cloud 专用虚拟机、50 个活动计划等）与 Datawhale 综述几乎逐句相同，参考文献 [1] 即该文；收录说明没有提示，容易被当作两个独立来源 | 待用户决定：建议在收录说明中注明 |
+| 2026-11-13 | /docs/industry/sources/community/2026-11-01-best-personal-ai-agents-top5apps | 把 Daily Brief 算作 Spark 的功能（I/O 发布稿中是另一个智能体）；「最多 15 个定时或事件触发的任务」与官方口径（同时运行 15 个、活跃计划 50 个）不同；「默认用收件箱衍生的摘要训练」无出处 | 无需改：原文如此；Gemini Spark 分析中注明 |
+| 2026-11-13 | /docs/industry/sources/media/2026-10-02-ithome-five-proactive-agents | 「资料截至 2026-10-01」的比较表仍把 Spark 的模型列为 Gemini 3.5 系列，8-13 起已改用 3.7 Flash；「每项任务一台临时 VM」未注出处 | 无需改：原文如此；Gemini Spark 分析中注明 |
