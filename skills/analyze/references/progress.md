@@ -12,7 +12,7 @@
 | dots | 11-11 | 11-11 | 11-11 | 11-11 | 11-11 | 11-11 | 11-11 | 11-11 | 11-11 | 11-11 | 11-11 | 11-11 | 11-11 |
 | claude-duet | 11-12 | 11-12 | 11-12 | 11-12 | 11-12 | 11-12 | — | — | 11-12 | — | 11-12 | — | 11-12 |
 | grok-bot | 11-12 | 11-12 | 11-12 | 11-12 | 11-12 | 11-12 | 11-12 | 11-12 | 11-12 | 11-12 | 11-12 | 11-12 | 11-12 |
-| manus-cue | | | | | | | | | | | | | |
+| manus-cue | 11-10 | 11-10 | — | 11-10 | 11-10 | 11-10 | — | — | 11-10 | — | 11-10 | 11-10 | 11-10 |
 | lingguang | | | | | | | | | | | | | |
 | today | | | | | | | | | | | | | |
 | gemini-spark | | | | | | | | | | | | | |
@@ -81,6 +81,12 @@
 | 2026-11-13 | grok-bot | 存卡付款是否逐笔批准 | Vault 文档与帮助文档称无此设置，更新日志 v0.75.8、v0.78.1 称每笔购买需批准 |
 | 2026-11-13 | grok-bot | 电话功能官方说明、Microsoft Teams 渠道帮助文档、Tesla 车载集成形态 | 更新日志 11-06 有通话卡片；特工宇宙 11-10 称不能打电话 |
 | 2026-11-13 | grok-bot | 用户自己的实测（`exploration/` 为空）、数周以上长期使用记录；电商上架、6 Bot 团队两篇 Reddit 原帖 | 目前只有施言转述 |
+| 2026-11-13 | manus-cue | 发布一个月以上的实测与复测；用户自己的实测（`exploration/` 为空）；电话代接、扫码点单、付款、iMessage 等四个消息平台的实测 | 目前只有 2026-09-29 的 xiangxiang103 与硅星人两份 |
+| 2026-11-13 | manus-cue | cue.im 官网首页与常见问题（六十多个示例任务、审批设置说明） | 单页应用，文字在 `/assets/home-*.js` 包里，需浏览器取文；目前只能经 xiangxiang103 转述 |
+| 2026-11-13 | manus-cue | 官方定价页；Plus、Pro、Max 档位的额度与计费周期；电话号码 0.99 与 9.99 美元的变化说明 | App Store 内购列表是唯一官方标价，不写周期 |
+| 2026-11-13 | manus-cue | 云电脑规格、持久化与回收、出口 IP 分配规则；免费附带的电脑与 39 美元 Cloud Computer 的区别；使用的模型 | 环境数据只有 xiangxiang103 自报；IP 反馈出自 Datawhale、鸿煊转述 |
+| 2026-11-13 | manus-cue | 隐私政策、数据用途与保存期限、通话对象信息处理；官方安全说明；针对 Cue 的漏洞报道 | App Store 的 App Privacy 栏收集时未收；帮助中心账号删除、数据保留中的 Cue 小节判为不收 |
+| 2026-11-13 | manus-cue | Cue 的用户数、邀请发放进度、收入；Manus ARR、估值、融资的一手出处 | 目前只有潮涌、AIX财经、硅星人转述 |
 
 ## 分析中发现的资料页问题
 
@@ -141,3 +147,7 @@
 | 2026-11-13 | /docs/grok-bot/sources/community/2026-11-09-weilaiyilai-what-is-grok-bot | 标题「Grok Bot  / Personal Agent   是什么？」含多余空格，疑为原文替换产品名的残留，收录说明未提 | 2026-11-13 标题合并空格，收录说明记下原标题与正文开头标题 |
 | 2026-11-13 | /docs/grok-bot/sources/official/2026-11-05-docs-overview | 小标题「每个 Bot 都有一台计算机」与下一节「你的 Bot 共用一台计算机」措辞不一；发布稿（/docs/grok-bot/sources/official/2026-08-11-introducing-grok-bot）也写「有自己的计算机」与「共用一台」，多篇社区资料据此写成每个 Bot 一台 | 无需改：原文如此；分析中以「同一账号共用一台、每个 Bot 有自己的屏幕」为准并说明说法来源 |
 | 2026-11-13 | /docs/grok-bot/sources/official/2026-10-28-xai-docs-settings-and-notifications | 称应用有「20 多种语言」，同批 FAQ（/docs/grok-bot/sources/official/2026-10-28-xai-docs-faq）称桌面端 37 种、手机端 12 种 | 无需改：官方两处说法不一，分析中并列 |
+| 2026-11-13 | /docs/industry/sources/community/2026-10-10-jingxuan-dots-11-days、/docs/industry/sources/community/2026-10-14-agent2048-china-quiet、/docs/industry/sources/community/2026-10-23-wanqu-opc-how-to-choose、/docs/industry/sources/community/2026-10-28-pmjiutong-what-is-personal-agent、/docs/industry/sources/community/2026-11-04-lingluo-personal-ai-center | 对 Cue 只有一句罗列（wanqu 那句说的是早期网页版 Manus，不是 Cue；jingxuan 那句「Manus说你抄我的Cue」无出处），products 列入 manus-cue 依据弱 | |
+| 2026-11-13 | /docs/industry/sources/community/2026-10-16-feixue-personal-agent-comparison | 称 Cue「可以读取你的邮箱、电话、钱包以及电脑数据」，官方是智能体自己的邮箱、电话、钱包和电脑，收录说明未加注 | |
+| 2026-11-13 | /docs/industry/sources/community/2026-10-18-datawhale-personal-agent-overview、/docs/industry/sources/community/2026-11-06-hongxuan-what-is-new | Cue 小节的用户反馈（电话 9.9 美元/月、「先免费一个月，之后起价约 20 美元」、重启容器换住宅 IP、号码绑定代理 IP）没有注明出处，鸿煊照搬；「约 20 美元」指套餐还是电话不明。收录说明只注了 Muse 相关的无出处说法 | |
+| 2026-11-13 | /docs/manus-cue/sources/community/2026-09-29-xiangxiang103-manus-2-cue-hands-on | 「公开码据报道只给前 1000 名」「Meta 收购二十多亿美元」「Plus 19.99 美元、云电脑 39 美元（网友实测）」没有出处；把肖弘谈 Manus 本体云上 Computer Use 的话用在 Cue 上。收录说明未提 | |
