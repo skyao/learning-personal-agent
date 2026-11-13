@@ -16,7 +16,7 @@ products: [dots, muse, grok-bot, gemini-spark, microsoft-autopilot]
 
 {{< source-info >}}
 
-**收录说明**：直接下载，题图收入 images/。正文以一张比较表为主，原文表格照录。比较的五款产品中 Google Gemini Spark 和 Microsoft Autopilot 不在跟踪清单内。旧笔记 learning-ai-agent 的 Grok Bot 部分引用过这一篇，2026-11-06 复核后收入。
+**收录说明**：直接下载，题图收入 images/。正文以一张比较表为主，原文表格照录。比较的五款产品中 Google Gemini Spark 和 Microsoft Autopilot 收录时不在跟踪清单内，之后已加入。旧笔记 learning-ai-agent 的 Grok Bot 部分引用过这一篇，2026-11-06 复核后收入。
 
 **内容摘要**：文章先梳理时间线：Google 在 5 月发布 Gemini Spark，微软 6 月发布 Scout、9 月改名 Autopilot，Grok Bot 8 月上线，Meta Muse 9 月 8 日、OpenAI dots 9 月 29 日发布。随后用一张表从 11 个方面比较这五款产品，包括产品定位、自主工作能力、模型、部署和执行、本机存取、协作、控管机制、扩充性、计费、版本和取用管道。表中记录 Grok Bot 不绑定单一模型、由 Cursor 管理模型选择，dots 用 GPT-6 Astra，Muse 用 Muse Spark；计费方面 Grok Bot 包含在 SuperGrok 和 Cursor 套餐中，Muse 有免费版和 20 美元、100 美元两档。资料来源注明为 iThome 整理，比较截至 10-01，不含后来发布的 Claude Duet。
 

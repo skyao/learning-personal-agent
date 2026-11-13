@@ -12,7 +12,7 @@ translation: 不需要
 collectedAt: 2026-11-06
 dateNote: "微信公众号「易论AI」，发布时间取页面内嵌的 create_time：2026-11-03 14:43（北京时间）。"
 tags: [模型, 安全]
-products: [grok-bot, dots, manus-cue, workbuddy]
+products: [grok-bot, workbuddy]
 ---
 
 {{< source-info >}}
