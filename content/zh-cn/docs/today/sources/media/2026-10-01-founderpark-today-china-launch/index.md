@@ -10,7 +10,7 @@ fidelity: 转载全文
 translation: 不需要
 collectedAt: 2026-11-05
 dateNote: "原文发于微信公众号 Founder Park（极客公园旗下），原文地址未取得；依据智源社区的转载，页面显示 2026-10-01 10:40，转载页把来源标为「极客公园」，文末写「转载原创文章请添加微信：founderparker」"
-tags: [实测评测, 记忆与上下文, 连接器]
+tags: [实测评测, 记忆与上下文, 连接器, 开放与价格]
 products: [today]
 ---
 

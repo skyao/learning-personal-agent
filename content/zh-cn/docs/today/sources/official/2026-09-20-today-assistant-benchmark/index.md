@@ -11,7 +11,7 @@ fidelity: 全文
 translation: 不需要
 collectedAt: 2026-11-05
 dateNote: "日期取页面结构化数据（datePublished、dateModified 均为 2026-09-20）"
-tags: [模型, 实测评测]
+tags: [模型]
 products: [today]
 ---
 
