@@ -8,14 +8,7 @@
 
 | 产品 | 总览 | runtime | memory | continuous-execution | connectors | channels | devices | models | security | privacy | access-pricing | business | reliability |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| 2026-11-12 | dots | 首月期满后的用量条款、Pro 100/200/500 在 dots 上的差别 | 官方帮助中心与 ChatGPT 发布说明后续更新 |
-| 2026-11-12 | dots | 「100 万个 dots 在运行」的一手出处 | Thibault Sottiaux 2026-10-11 的发言（目前只有黑咖啡全景解读转述） |
-| 2026-11-12 | dots | CNBC DevDay 直播稿中 IPO、融资部分 | /docs/dots/sources/media/2026-09-29-cnbc-devday-dots 只收了两条 |
-| 2026-11-12 | dots | FSR 实测未收的第 04、07、08 节 | /docs/dots/sources/community/2026-10-09-fsr-dots-tested |
-| 2026-11-12 | dots | 短信渠道、Windows、移动端的独立实测；数周以上的计划任务稳定性 | Slide Factory 曾说一周后更新 |
-| 2026-11-12 | dots | OpenAI 对 GPT-6.1 Sol 报告、计划任务状态、亚马逊拦截的回应 | — |
-| 2026-11-12 | dots | Cyera 引用的提示注入竞技场 8.5% 出自系统卡哪一部分 | 系统卡附录只收了节选 |
-| muse | | | | | | | | | | | | | |
+| muse | 11-12 | 11-12 | 11-12 | 11-12 | 11-12 | 11-12 | 11-12 | 11-12 | 11-12 | 11-12 | 11-12 | 11-12 | 11-12 |
 | dots | 11-11 | 11-11 | 11-11 | 11-11 | 11-11 | 11-11 | 11-11 | 11-11 | 11-11 | 11-11 | 11-11 | 11-11 | 11-11 |
 | claude-duet | | | | | | | | | | | | | |
 | grok-bot | | | | | | | | | | | | | |
@@ -59,6 +52,17 @@
 | 2026-11-12 | dots | 短信渠道、Windows、移动端的独立实测；数周以上的计划任务稳定性 | Slide Factory 曾说一周后更新 |
 | 2026-11-12 | dots | OpenAI 对 GPT-6.1 Sol 报告、计划任务状态、亚马逊拦截的回应 | — |
 | 2026-11-12 | dots | Cyera 引用的提示注入竞技场 8.5% 出自系统卡哪一部分 | 系统卡附录只收了节选 |
+| 2026-11-13 | muse | Meta 官方 DAU、MAU、付费人数、订阅收入；「1000 万」口径；Q3 财报电话会一手记录 | 本库只有 Muse 101、明亿等转述 |
+| 2026-11-13 | muse | 交易费费率、适用商家、推出时间；Muse 促成的成交额 | Zuckerberg 称交易收入可能超过广告；Expedia 称经济模式仍在制定 |
+| 2026-11-13 | muse | 隐私政策原文（2026-09-17 生效）、各类数据保存期限、各地区条款与监管 | 目前只有 Wired、BetterClaw 等转述 |
+| 2026-11-13 | muse | Muse Confidential VM 上线时间与方案；独立安全审计 | 发布稿称「今年晚些时候」 |
+| 2026-11-13 | muse | 免费档官方额度、额外令牌价格、日本与墨西哥本币价格、新加坡价格对应档位 | 「每周 1 亿令牌」只出自 Sources 节目 |
+| 2026-11-13 | muse | 官方完成率、出错率、可用性或状态页；11-04 停运的官方说明；数周以上长期使用稳定性 | /docs/muse/sources/community/2026-11-06-is-muse-down-nov-4-outage |
+| 2026-11-13 | muse | 眼镜 Beta 开放范围、Muse Charm 规格价格发货；iPad、Wear OS 官方说明 | 媒体称 Charm 年底或 12 月发货 |
+| 2026-11-13 | muse | Relationships 任务的官方说明、非用户删除人物页的实际结果 | Wired、TIME 报道；/docs/muse/sources/community/2026-11-04-muse-non-user-messages |
+| 2026-11-13 | muse | Wardle OBTS 演讲（11-20）、Gmail 收件箱实测原文、Claire Vo 基准评分、Skift 对 Expedia 测试全文 | 前两篇仅链接，后两篇节选或截断 |
+| 2026-11-13 | muse | Personal Agent Protocol 规范与一手公告；Meta 对 Web Bot Auth 测试的确认 | /docs/muse/sources/media/2026-10-31-web-bot-auth-signed-requests |
+| 2026-11-13 | muse | Marketplace 住址事件的 AP、Fortune、Business Insider 原文 | 各篇转述细节不一，目前以卫报为准 |
 
 ## 分析中发现的资料页问题
 
@@ -78,3 +82,28 @@
 | 2026-11-12 | /docs/industry/sources/community/2026-11-10-shiyan-ten-overseas-cases | 标「实测评测」，实为转述 Reddit 截图 | 无需改：收录说明已写明二手、无原帖链接 |
 | 2026-11-12 | /docs/industry/sources/media/2026-10-21-36kr-agents-blocked | 页面元数据日期与显示日期不一致 | 无需改：dateNote 已说明 |
 | 2026-11-12 | /docs/industry/sources/media/2026-10-22-skift-wyndham-ai-booking-agents | 待翻译 | 留给翻译 agent |
+| 2026-11-13 | /docs/muse/sources/community/2026-11-04-muse-101-agentic-commerce | 内容摘要称 Personal Agent Protocol「由 Sierra 与 Meta 于 10 月 6 日宣布」，正文没有这个日期；正文的 10 月 6 日对应 Citi 报告见报日 | 待处理 |
+| 2026-11-13 | /docs/muse/sources/media/2026-11-05-muse-40-percent-agentic-traffic-human | 正文称「Instacart 率先在 Muse 内提供原生购物车」，而 Instacart 那篇写明购物车组件未经 Meta 证实、没有上线日期，说法比来源更确定 | 无需改：原文如此；分析中以 Instacart 页为准 |
+| 2026-11-13 | /docs/muse/sources/media/2026-11-06-who-blocks-agents | All Things Muse 汇总 CNBC、WSJ、Bloomberg 等的报道，属二手，但收录说明没有写明，也没有 basedOn；只打了「安全」标签，内容主要是平台拦截与零售合作（连接器、商业） | 待处理 |
+| 2026-11-13 | /docs/muse/sources/media/2026-11-09-cloudflare-agent-identity-paper | 同为 All Things Muse 转述，数字（72%、33%）是二手，收录说明未注明转述、没有 basedOn | 待处理 |
+| 2026-11-13 | /docs/muse/sources/media/2026-11-08-threads-muse-assistant | 标签「发布」，内容是研究者发现的未发布功能 | 待处理 |
+| 2026-11-13 | /docs/muse/sources/media/2026-11-09-india-pricing-ahead-of-launch | 标签「发布」，内容是印度上线前的定价前瞻，价格来源（The Hindu）未说明消息源 | 待处理 |
+| 2026-11-13 | /docs/muse/sources/media/2026-09-25-yahoo-finance-muse-manage-money | 标签「实测评测」不准：理财能力的描述多来自 Meta 宣传，不是实测；收录的是 10-06 存档快照，10-22 更新未收 | 待处理 |
+| 2026-11-13 | /docs/industry/sources/community/2026-10-01-dots-muse-grok-bot-duet-costs | 标签「实测评测」，作者说明未做同任务实测，全部依据厂商文档 | 待处理 |
+| 2026-11-13 | /docs/industry/sources/community/2026-10-28-claire-vo-four-agents | 节选只有任务清单和时间轴，没有评分和结论，「实测评测」标签下对 Muse 没有可用结果 | 无需改：收录说明已写明文字稿未取得；记入资料缺口 |
+| 2026-11-13 | /docs/industry/sources/community/2026-10-22-aiagentslibrary-duet-vs-muse | 正文称 Muse 测试在 9 月 27 日和 10 月 10 日，技能一段又写「10 月 8 日的一次测试」 | 无需改：原文（original.md 第 127 行）如此，译文忠实 |
+| 2026-11-13 | /docs/industry/sources/community/2026-10-18-datawhale-personal-agent-overview | 「单论价格来说 Muse 更划算」出现在 Cue 小节（电话 9.9 美元/月、起价约 20 美元之后），比较对象不明 | 无需改：原文如此；分析不引用这句 |
+| 2026-11-13 | /docs/industry/sources/community/2026-11-03-xiaowang-ai-0-1-percent | 作者自称没用过 Muse，对 Muse 只有概念讨论，products 列入 muse 依据弱 | 待处理 |
+| 2026-11-13 | /docs/muse/sources/media/2026-10-12-36kr-wang-openclaw-origin | 与另一篇 36 氪 Wang 访谈整理同源（David Senra 访谈），两篇不是独立证据 | 无需改：分析中按同一来源引用 |
+| 2026-11-13 | /docs/muse/sources/media/2026-10-12-36kr-wang-openclaw-origin | 正文把 Alexandr Wang 写作「汪滔」（36 氪原文译名），收录说明未注明，易误读为另一人 | 待处理 |
+| 2026-11-13 | /docs/industry/sources/community/2026-10-31-mingyi-personal-agent-industry-chain | 把「日活超 250 万、两周留存 23%」写成 Q3 财报电话会披露；Z Finance 同组数字注明出自 Sensor Tower | 待处理 |
+| 2026-11-13 | /docs/muse/sources/community/2026-10-04-juai-muse-discussion | 讨论者称 Muse「没有 Subagent」，与官方安全文章和文件导出不符，资料页未加注 | 待处理 |
+| 2026-11-13 | /docs/muse/sources/media/2026-11-09-muse-apple-watch | MacRumors 称 Muse「内置于 Instagram、Facebook 等 Meta 应用」，官方只提 WhatsApp，疑与 Meta AI 混淆，摘要照录未注；/docs/industry/sources/community/2026-10-16-feixue-personal-agent-comparison 有同样说法 | 待处理 |
+| 2026-11-13 | /docs/industry/sources/community/2026-10-18-datawhale-personal-agent-overview | iCloud 相册暴露、「拒绝 Messages 权限后仍同步 18.7 万条 iMessage」无出处，库中无一手资料；/docs/industry/sources/community/2026-11-06-hongxuan-what-is-new 重复此说，且「记忆无关闭开关」未注出处 | 待处理 |
+| 2026-11-13 | /docs/industry/sources/community/2026-11-03-proactive-ai-agents-compared | 称 Muse「没有事件触发」「仅限美国」，与官方帮助文档、NYT 实测和已开放地区不符；为案头综述无实测 | 待处理 |
+| 2026-11-13 | /docs/industry/sources/community/2026-11-05-ai-agents-compared-small-business | 称 Muse「仅限美国」，与官方不符 | 待处理 |
+| 2026-11-13 | /docs/industry/sources/community/2026-11-01-best-personal-ai-agents-top5apps | Marketplace 事件写成 Muse「接受了他从未批准的低价」、日期 9 月 26 日，与卫报（双方谈定价格、9-28 报道）细节不符 | 待处理 |
+| 2026-11-13 | /docs/industry/sources/community/2026-11-10-redaicao-personal-agent-explainer | 称当事人为「测评博主」，无出处；卫报为普通用户 Matt Robb。/docs/muse/sources/community/2026-10-09-ugoearn-five-task-types 的同一事件也未注出处 | 待处理 |
+| 2026-11-13 | /docs/muse/sources/media/2026-11-09-times-muse-uk-launch | 「用户超过 1100 万」与 Meta 口径（美加 1000 万人设置）不一致；/docs/muse/sources/media/2026-11-09-india-pricing-ahead-of-launch 写「两个月下载超 1000 万次」 | 无需改：原文如此；分析中并列口径 |
+| 2026-11-13 | /docs/muse/sources/community/2026-11-12-tuya-cloud-devices-skill | 11-12 仍称 Muse 仅在美国和加拿大可用，已过时 | 无需改：厂商原话；分析中以官方为准 |
+| 2026-11-13 | /docs/muse/sources/media/2026-11-05-muse-launches-mexico | 正文称眼镜「已经运行由 Muse 驱动的助手」，又转述 Meta「计划增加」眼镜兼容，前后矛盾 | 无需改：原文如此；分析中写明说法不一 |
