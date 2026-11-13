@@ -17,7 +17,7 @@
 | today | 11-10 | 11-10 | 11-10 | 11-10 | 11-10 | 11-10 | 11-10 | 11-10 | 11-10 | 11-10 | 11-10 | 11-10 | 11-10 |
 | gemini-spark | 11-10 | 11-10 | 11-10 | 11-10 | 11-10 | 11-10 | 11-10 | 11-10 | 11-10 | 11-10 | 11-10 | — | 11-10 |
 | instinct | | | | | | | | | | | | | |
-| workbuddy | | | | | | | | | | | | | |
+| workbuddy | 11-10 | 11-10 | 11-10 | 11-10 | 11-10 | 11-10 | — | 11-10 | 11-10 | 11-10 | 11-10 | 11-10 | 11-10 |
 | microsoft-autopilot | | | | | | | | | | | | | |
 | poke | | | | | | | | | | | | | |
 
@@ -105,6 +105,14 @@
 | 2026-11-13 | gemini-spark | 改名 Task 的官方说明与日期；I/O 预告的短信与邮件入口、自定义子智能体是否落地；Argon 推出日期 | 帮助页只写「2026-10」；Chrome Unboxed、9to5Google 为界面观察 |
 | 2026-11-13 | gemini-spark | 8 月以后（3.7 Flash、Argon、Chrome 自动浏览）的独立实测；计划与话题监控的长期实测；用户自己的实测（`exploration/` 为空） | 深度实测集中在 5–8 月 |
 | 2026-11-13 | gemini-spark | 「部分企业用户」的含义与 Workspace 版计划；10 月表格写入故障的官方说明；漏洞赏金与第三方安全研究 | /docs/gemini-spark/sources/official/2026-10-11-spark-product-page、/docs/gemini-spark/sources/community/2026-10-13-google-dev-forum-sheets-blocked |
+| 2026-11-13 | workbuddy | 用户数、付费数、收入；「累计 90 亿次任务请求」的一手出处、截止日期与定义 | 目前只有《中国新闻周刊》转述「腾讯官方数据」 |
+| 2026-11-13 | workbuddy | Buddy One VIP 价格、企业版价格；价格页「限时」「限免」的截止日期；海外版价格与开放地区 | /docs/workbuddy/sources/official/2026-10-28-help-buddy-one-benefits |
+| 2026-11-13 | workbuddy | 云电脑、云助理、云端沙箱的规格与额度；定时任务频率、时长、并发上限的数值 | 更新日志只在修复项中提到云电脑、云助理 |
+| 2026-11-13 | workbuddy | 隐私政策与服务协议原文：训练用途、保存期限、导出与注销、群聊中他人信息 | 帮助中心各页只有功能层面的收集项说明 |
+| 2026-11-13 | workbuddy | 外部安全审计、漏洞赏金；5.1.0 沙箱逃逸攻击链的发现经过与影响 | 更新日志 5.1.0、5.1.1 |
+| 2026-11-13 | workbuddy | 桌面客户端、微信助理、PPT/表格生成的独立实测；长期使用反馈；腾讯对排队与日期错误的回应 | 目前只有 /docs/workbuddy/sources/community/2026-10-19-shuzhibenliu-wecom-hands-on |
+| 2026-11-13 | workbuddy | 国际版连接器清单（Canva、GitHub、Morningstar、Notion）的出处；腾讯官网 WorkBuddy 系列后两篇 | /docs/workbuddy/sources/official/2026-10-12-tencent-six-apps |
+| 2026-11-13 | workbuddy | 腾讯 Handy Bot 与 WorkBuddy 的关系；移动端 App 的平台与上线时间 | 黑咖啡全景解读提到 Handy Bot 在微信内测试 |
 
 ## 分析中发现的资料页问题
 
@@ -189,3 +197,9 @@
 | 2026-11-13 | /docs/industry/sources/community/2026-11-06-hongxuan-what-is-new | 关于 Gemini Spark 的段落（Antigravity、Google Cloud 专用虚拟机、50 个活动计划等）与 Datawhale 综述几乎逐句相同，参考文献 [1] 即该文；收录说明没有提示，容易被当作两个独立来源 | 已改：收录说明注明 Spark 段落与 Datawhale 综述几乎逐句相同（2026-11-13） |
 | 2026-11-13 | /docs/industry/sources/community/2026-11-01-best-personal-ai-agents-top5apps | 把 Daily Brief 算作 Spark 的功能（I/O 发布稿中是另一个智能体）；「最多 15 个定时或事件触发的任务」与官方口径（同时运行 15 个、活跃计划 50 个）不同；「默认用收件箱衍生的摘要训练」无出处 | 无需改：原文如此；Gemini Spark 分析中注明 |
 | 2026-11-13 | /docs/industry/sources/media/2026-10-02-ithome-five-proactive-agents | 「资料截至 2026-10-01」的比较表仍把 Spark 的模型列为 Gemini 3.5 系列，8-13 起已改用 3.7 Flash；「每项任务一台临时 VM」未注出处 | 无需改：原文如此；Gemini Spark 分析中注明 |
+| 2026-11-13 | /docs/workbuddy/sources/official/2026-11-02-help-assistant-guide | 正文主体是微信、企业微信、QQ、飞书、钉钉六种渠道的接入步骤，tags 只有连接器、运行环境、安全，缺「交互渠道」 | |
+| 2026-11-13 | /docs/workbuddy/sources/official/2026-11-02-help-assistant | 讲助理（即时通讯远程控制）的定位与接入平台，tags 缺「交互渠道」 | |
+| 2026-11-13 | /docs/workbuddy/sources/official/2026-09-24-help-overview | tags 含「发布」，但正文只是产品简介，没有发布日期或事件 | |
+| 2026-11-13 | /docs/workbuddy/sources/official/2026-11-02-help-model | 正文写 `workbuddy/models.json`，提示框又写 `~/.codebuddy/models.json`，路径口径不一 | 无需改：原文如此，模型页已并列写出 |
+| 2026-11-13 | /docs/industry/sources/media/2026-11-08-china-newsweek-personal-agents | 称 Buddy One 是 10 月底发布的「协同体系智能体」，帮助中心写的是跨腾讯办公产品的会员与积分体系 | 无需改：原文如此，开放与价格页并列两种说法 |
+| 2026-11-13 | /docs/industry/sources/community/2026-10-12-yupi-why-big-tech-personal-agent | 称 WorkBuddy 这类桌面端 Agent「下次找它还得重新交代」，与官方记忆页不符；文中未实测 WorkBuddy | 无需改：作者观点，记忆页已注明以官方为准 |
