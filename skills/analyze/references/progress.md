@@ -158,10 +158,10 @@
 | 2026-11-13 | /docs/industry/sources/community/2026-10-16-feixue-personal-agent-comparison | 称 Cue「可以读取你的邮箱、电话、钱包以及电脑数据」，官方是智能体自己的邮箱、电话、钱包和电脑，收录说明未加注 | 2026-11-13 收录说明加注，原文照录 |
 | 2026-11-13 | /docs/industry/sources/community/2026-10-18-datawhale-personal-agent-overview、/docs/industry/sources/community/2026-11-06-hongxuan-what-is-new | Cue 小节的用户反馈（电话 9.9 美元/月、「先免费一个月，之后起价约 20 美元」、重启容器换住宅 IP、号码绑定代理 IP）没有注明出处，鸿煊照搬；「约 20 美元」指套餐还是电话不明。收录说明只注了 Muse 相关的无出处说法 | 2026-11-13 两篇收录说明加注 |
 | 2026-11-13 | /docs/manus-cue/sources/community/2026-09-29-xiangxiang103-manus-2-cue-hands-on | 「公开码据报道只给前 1000 名」「Meta 收购二十多亿美元」「Plus 19.99 美元、云电脑 39 美元（网友实测）」没有出处；把肖弘谈 Manus 本体云上 Computer Use 的话用在 Cue 上。收录说明未提 | 2026-11-13 收录说明加注 |
-| 2026-11-13 | /docs/industry/sources/community/2026-11-10-qianzai-answer-to-follow-up | 内容摘要称「灵光断开应用不删除记忆」，正文中这一点说的是 OpenAI Dots（「断开应用只停止新的信息共享」），没有关于灵光的对应句 | 待处理 |
-| 2026-11-13 | /docs/industry/sources/community/2026-10-15-naishi-what-can-it-do | 与灵光有关的只有「调用本机 Claude Code」一例，且转述自特工宇宙内测文、未注出处；products 列入 lingguang 依据弱 | 待处理 |
-| 2026-11-13 | /docs/industry/sources/community/2026-11-01-heikafei-personal-agent-panorama | 对灵光只有一小节三行介绍，products 列入 lingguang 依据弱 | 待处理 |
-| 2026-11-13 | /docs/industry/sources/community/2026-10-30-shenghuoyoubianliang-big-tech-defense | 关于灵光仅两段；「设备」标签对应的是手机入口的论述，与设备主题关系弱 | 待处理 |
+| 2026-11-13 | /docs/industry/sources/community/2026-11-10-qianzai-answer-to-follow-up | 内容摘要称「灵光断开应用不删除记忆」，正文中这一点说的是 OpenAI Dots（「断开应用只停止新的信息共享」），没有关于灵光的对应句 | 2026-11-13 内容摘要改为正文所述的 OpenAI 与 LightVela 设置 |
+| 2026-11-13 | /docs/industry/sources/community/2026-10-15-naishi-what-can-it-do | 与灵光有关的只有「调用本机 Claude Code」一例，且转述自特工宇宙内测文、未注出处；products 列入 lingguang 依据弱 | 2026-11-13 收录说明加注灵光两例转述自特工宇宙；products 保留（文中有专门段落） |
+| 2026-11-13 | /docs/industry/sources/community/2026-11-01-heikafei-personal-agent-panorama | 对灵光只有一小节三行介绍，products 列入 lingguang 依据弱 | 无需改：有专门小节，全景介绍中列入合理；分析未引用，已记入 uncited |
+| 2026-11-13 | /docs/industry/sources/community/2026-10-30-shenghuoyoubianliang-big-tech-defense | 关于灵光仅两段；「设备」标签对应的是手机入口的论述，与设备主题关系弱 | 无需改：复核后「设备」对应第四节手机入口与端云分工，属设备主题 |
 | 2026-11-13 | /docs/lingguang/sources/community/2026-10-28-xiaoxiang-lingguang-2-hands-on | 称灵光「背后站着整个阿里生态」，与极客公园、AI故事计划所述蚂蚁与阿里接口隔离、淘宝无法接入不符 | 无需改：作者观点；分析中以实测为准 |
 | 2026-11-13 | /docs/lingguang/sources/community/2026-10-13-tegongyuzhou-beta-hands-on | 「Linux 云电脑」「第三方 Harness」等细节为内测期作者观察，含推测，官方只写「独立云端实例」 | 无需改：收录说明已写明含推测；分析中注明 |
 | 2026-11-13 | /docs/lingguang/sources/community/2026-11-01-zfinance-lingguang-2-vs-muse | 11-01 称打车、外卖未覆盖，11-04 已新增哈啰打车连接器；韩歆毅判断、「10%」无出处 | 无需改：原文如此；分析中注明时间差与无出处 |
