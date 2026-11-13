@@ -13,7 +13,7 @@
 | claude-duet | 11-12 | 11-12 | 11-12 | 11-12 | 11-12 | 11-12 | — | — | 11-12 | — | 11-12 | — | 11-12 |
 | grok-bot | 11-12 | 11-12 | 11-12 | 11-12 | 11-12 | 11-12 | 11-12 | 11-12 | 11-12 | 11-12 | 11-12 | 11-12 | 11-12 |
 | manus-cue | 11-10 | 11-10 | — | 11-10 | 11-10 | 11-10 | — | — | 11-10 | — | 11-10 | 11-10 | 11-10 |
-| lingguang | | | | | | | | | | | | | |
+| lingguang | 11-10 | 11-10 | 11-10 | 11-10 | 11-10 | — | — | — | 11-10 | — | — | 11-10 | 11-10 |
 | today | | | | | | | | | | | | | |
 | gemini-spark | | | | | | | | | | | | | |
 | instinct | | | | | | | | | | | | | |
@@ -87,6 +87,13 @@
 | 2026-11-13 | manus-cue | 云电脑规格、持久化与回收、出口 IP 分配规则；免费附带的电脑与 39 美元 Cloud Computer 的区别；使用的模型 | 环境数据只有 xiangxiang103 自报；IP 反馈出自 Datawhale、鸿煊转述 |
 | 2026-11-13 | manus-cue | 隐私政策、数据用途与保存期限、通话对象信息处理；官方安全说明；针对 Cue 的漏洞报道 | App Store 的 App Privacy 栏收集时未收；帮助中心账号删除、数据保留中的 Cue 小节判为不收 |
 | 2026-11-13 | manus-cue | Cue 的用户数、邀请发放进度、收入；Manus ARR、估值、融资的一手出处 | 目前只有潮涌、AIX财经、硅星人转述 |
+| 2026-11-13 | lingguang | 官方一手资料：帮助文档、隐私政策、《灵光用户服务协议》原文（2026-05-29 版）、APASS 技术说明 | 目前官方只有 Business Wire 发布稿和 App Store 页；协议条款转引自极客公园 |
+| 2026-11-13 | lingguang | 「用户超 2000 万」的口径（是否含 1.0）；2.0 活跃、留存；「事务」「任务」定义；IT之家 11-08 报道原文 | /docs/lingguang/sources/media/2026-11-05-ebrun-lingguang-weekly-tasks、潜在工作室引 IT之家 |
+| 2026-11-13 | lingguang | 底层模型 | 资料均未提及；AI故事计划只提蚂蚁有百灵 |
+| 2026-11-13 | lingguang | 收费计划、App 内购买内容；是否引入交易佣金 | 「对 C 端免费」只出自白鲸技术栈，无官方出处 |
+| 2026-11-13 | lingguang | 40 项连接器清单与读写范围；11-04 新增哈啰打车、麦当劳等的实测；支付宝 AI付 向灵光开放的计划 | /docs/lingguang/sources/media/2026-11-05-ebrun-lingguang-weekly-tasks |
+| 2026-11-13 | lingguang | 云端实例规格、可见性与接管、并发与额度；记忆的查看、编辑、删除；断开授权后的数据处理；训练用途与保存期限 | 内测期 Linux 云电脑说法只出自特工宇宙 |
+| 2026-11-13 | lingguang | 发布一个月以上的长期使用记录（双十一盯价、养车周报的结果）；用户自己的实测（exploration/ 为空） | /docs/lingguang/sources/media/2026-10-30-baijing-lingguang-super-app 称几周后再验证 |
 
 ## 分析中发现的资料页问题
 
@@ -151,3 +158,12 @@
 | 2026-11-13 | /docs/industry/sources/community/2026-10-16-feixue-personal-agent-comparison | 称 Cue「可以读取你的邮箱、电话、钱包以及电脑数据」，官方是智能体自己的邮箱、电话、钱包和电脑，收录说明未加注 | 2026-11-13 收录说明加注，原文照录 |
 | 2026-11-13 | /docs/industry/sources/community/2026-10-18-datawhale-personal-agent-overview、/docs/industry/sources/community/2026-11-06-hongxuan-what-is-new | Cue 小节的用户反馈（电话 9.9 美元/月、「先免费一个月，之后起价约 20 美元」、重启容器换住宅 IP、号码绑定代理 IP）没有注明出处，鸿煊照搬；「约 20 美元」指套餐还是电话不明。收录说明只注了 Muse 相关的无出处说法 | 2026-11-13 两篇收录说明加注 |
 | 2026-11-13 | /docs/manus-cue/sources/community/2026-09-29-xiangxiang103-manus-2-cue-hands-on | 「公开码据报道只给前 1000 名」「Meta 收购二十多亿美元」「Plus 19.99 美元、云电脑 39 美元（网友实测）」没有出处；把肖弘谈 Manus 本体云上 Computer Use 的话用在 Cue 上。收录说明未提 | 2026-11-13 收录说明加注 |
+| 2026-11-13 | /docs/industry/sources/community/2026-11-10-qianzai-answer-to-follow-up | 内容摘要称「灵光断开应用不删除记忆」，正文中这一点说的是 OpenAI Dots（「断开应用只停止新的信息共享」），没有关于灵光的对应句 | 待处理 |
+| 2026-11-13 | /docs/industry/sources/community/2026-10-15-naishi-what-can-it-do | 与灵光有关的只有「调用本机 Claude Code」一例，且转述自特工宇宙内测文、未注出处；products 列入 lingguang 依据弱 | 待处理 |
+| 2026-11-13 | /docs/industry/sources/community/2026-11-01-heikafei-personal-agent-panorama | 对灵光只有一小节三行介绍，products 列入 lingguang 依据弱 | 待处理 |
+| 2026-11-13 | /docs/industry/sources/community/2026-10-30-shenghuoyoubianliang-big-tech-defense | 关于灵光仅两段；「设备」标签对应的是手机入口的论述，与设备主题关系弱 | 待处理 |
+| 2026-11-13 | /docs/lingguang/sources/community/2026-10-28-xiaoxiang-lingguang-2-hands-on | 称灵光「背后站着整个阿里生态」，与极客公园、AI故事计划所述蚂蚁与阿里接口隔离、淘宝无法接入不符 | 无需改：作者观点；分析中以实测为准 |
+| 2026-11-13 | /docs/lingguang/sources/community/2026-10-13-tegongyuzhou-beta-hands-on | 「Linux 云电脑」「第三方 Harness」等细节为内测期作者观察，含推测，官方只写「独立云端实例」 | 无需改：收录说明已写明含推测；分析中注明 |
+| 2026-11-13 | /docs/lingguang/sources/community/2026-11-01-zfinance-lingguang-2-vs-muse | 11-01 称打车、外卖未覆盖，11-04 已新增哈啰打车连接器；韩歆毅判断、「10%」无出处 | 无需改：原文如此；分析中注明时间差与无出处 |
+| 2026-11-13 | /docs/lingguang/sources/community/2026-10-27-kaerdeaiwozi-lingguang-15-apps | 支付宝前称无通用接口、后称「原生打通」；米家 18 台设备与极客公园的限流失败不一致 | 无需改：内测期版本变化与不同账号；分析中并列 |
+| 2026-11-13 | /docs/lingguang/sources/media/2026-11-05-ebrun-lingguang-weekly-tasks | 运营数据与请求分类占比未注明出自哪份官方材料；中金研报未给报告名 | 无需改：原文如此；分析中标为厂商自报、二手 |
