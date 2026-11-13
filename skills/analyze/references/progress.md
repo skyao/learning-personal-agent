@@ -172,8 +172,8 @@
 | 2026-11-13 | /docs/lingguang/sources/community/2026-11-01-zfinance-lingguang-2-vs-muse | 11-01 称打车、外卖未覆盖，11-04 已新增哈啰打车连接器；韩歆毅判断、「10%」无出处 | 无需改：原文如此；分析中注明时间差与无出处 |
 | 2026-11-13 | /docs/lingguang/sources/community/2026-10-27-kaerdeaiwozi-lingguang-15-apps | 支付宝前称无通用接口、后称「原生打通」；米家 18 台设备与极客公园的限流失败不一致 | 无需改：内测期版本变化与不同账号；分析中并列 |
 | 2026-11-13 | /docs/lingguang/sources/media/2026-11-05-ebrun-lingguang-weekly-tasks | 运营数据与请求分类占比未注明出自哪份官方材料；中金研报未给报告名 | 无需改：原文如此；分析中标为厂商自报、二手 |
-| 2026-11-13 | /docs/today/sources/official/2026-09-20-today-assistant-benchmark | tags 含「实测评测」，但正文是评测框架方法论，写明「目前什么都还没测」，没有任何实测数据 | |
-| 2026-11-13 | /docs/today/sources/media/2026-10-01-founderpark-today-china-launch | tags 未含「开放与价格」，正文有基础版永久免费、注册送 1 亿 Tokens + 1 个月 Pro | |
+| 2026-11-13 | /docs/today/sources/official/2026-09-20-today-assistant-benchmark | tags 含「实测评测」，但正文是评测框架方法论，写明「目前什么都还没测」，没有任何实测数据 | 2026-11-13 tags 去掉「实测评测」，改为 [模型] |
+| 2026-11-13 | /docs/today/sources/media/2026-10-01-founderpark-today-china-launch | tags 未含「开放与价格」，正文有基础版永久免费、注册送 1 亿 Tokens + 1 个月 Pro | 2026-11-13 tags 加「开放与价格」 |
 | 2026-11-13 | /docs/industry/sources/media/2026-10-21-zfinance-qi-junyuan-today | 「模型」「运行环境」标签对应的是 Muse 与行业成本测算，Today 只有融资一段；Muse 单用户成本前文「3 至 130 美元」、后文「3 至 128 美元」 | 无需改成本数字：原文如此；标签请收集一侧判断 |
 | 2026-11-13 | /docs/industry/sources/community/2026-10-19-chaoyong-top15 | 标签含「安全」，但 Today 部分几乎全部转引晚点访谈，没有独立的安全信息 | 无需改：安全标签可能对应其他产品；分析中以晚点原文为准 |
 | 2026-11-13 | /docs/today/sources/official/2026-08-03-what-is-today | 页面日期 2026-08-03 已称在 Mac、iOS、Android「正式上线」「目前免费」，与晚点「全球版 9 月 8 日上线」、品玩「9 月 9 日开启公测」及后来的 20/200 美元订阅不一致；页面 dateModified 2026-09-15 | 无需改：原文如此；分析中并列各说法 |
