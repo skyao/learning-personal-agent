@@ -11,7 +11,7 @@
 | muse | 11-12 | 11-12 | 11-12 | 11-12 | 11-12 | 11-12 | 11-12 | 11-12 | 11-12 | 11-12 | 11-12 | 11-12 | 11-12 |
 | dots | 11-11 | 11-11 | 11-11 | 11-11 | 11-11 | 11-11 | 11-11 | 11-11 | 11-11 | 11-11 | 11-11 | 11-11 | 11-11 |
 | claude-duet | 11-12 | 11-12 | 11-12 | 11-12 | 11-12 | 11-12 | — | — | 11-12 | — | 11-12 | — | 11-12 |
-| grok-bot | | | | | | | | | | | | | |
+| grok-bot | 11-12 | 11-12 | 11-12 | 11-12 | 11-12 | 11-12 | 11-12 | 11-12 | 11-12 | 11-12 | 11-12 | 11-12 | 11-12 |
 | manus-cue | | | | | | | | | | | | | |
 | lingguang | | | | | | | | | | | | | |
 | today | | | | | | | | | | | | | |
@@ -72,6 +72,15 @@
 | 2026-11-13 | claude-duet | Max、Ultra 限额倍数与 API 额度的官方出处 | 目前只有 Alarcon 2026-11-01 的核对 |
 | 2026-11-13 | claude-duet | 发布一个月以上的长期使用与复测；Claire Vo 四智能体节目的评分 | /docs/industry/sources/community/2026-10-28-claire-vo-four-agents 只有任务清单 |
 | 2026-11-13 | muse | 商家电话的官方说明：正式开放后是否仍有真人代打、如何披露 AI 身份、是否计入每周额度 | 11-12 只有 Wang 的 X 帖与 TechCrunch、Engadget、All Things Muse 报道 |
+| 2026-11-13 | grok-bot | 官方用户数、付费人数、收入；日活「超过 60 万」的一手出处 | 目前只有财联社经黑咖啡全景转述；官方只说「数千家组织」「数百万个 Bot」 |
+| 2026-11-13 | grok-bot | The X Subscription 官方价格页、各档 Grok Bot 额度、11-01 收紧后的新限额 | /docs/grok-bot/sources/media/2026-11-02-techcrunch-throttles-limits；第三方价格口径不一 |
+| 2026-11-13 | grok-bot | 计算机规格、休眠阈值、并发上限；「每个 Bot 一台」改为「按用户一台」是措辞还是架构变化 | 发布稿与 11-05 文档说法不一 |
+| 2026-11-13 | grok-bot | 第一方模型名称与路由规则、子处理方名单；马斯克 10-07 X 帖原文 | 第三方说法有 Grok 4.7 与 Claude Opus 5.5 两种 |
+| 2026-11-13 | grok-bot | xAI 与 Cursor 之间的数据流向；个人用户默认训练设置与保存期限 | 隐私条款都指向 Cursor |
+| 2026-11-13 | grok-bot | 厂商对 Slack 银行数据事件、Web Bot Auth 签名问题、亚马逊拦截的回应；漏洞赏金与独立审计 | /docs/grok-bot/sources/media/2026-10-07-cybernews-bank-data-slack、/docs/grok-bot/sources/community/2026-10-07-nightd-impersonating-grok-bot |
+| 2026-11-13 | grok-bot | 存卡付款是否逐笔批准 | Vault 文档与帮助文档称无此设置，更新日志 v0.75.8、v0.78.1 称每笔购买需批准 |
+| 2026-11-13 | grok-bot | 电话功能官方说明、Microsoft Teams 渠道帮助文档、Tesla 车载集成形态 | 更新日志 11-06 有通话卡片；特工宇宙 11-10 称不能打电话 |
+| 2026-11-13 | grok-bot | 用户自己的实测（`exploration/` 为空）、数周以上长期使用记录；电商上架、6 Bot 团队两篇 Reddit 原帖 | 目前只有施言转述 |
 
 ## 分析中发现的资料页问题
 
@@ -123,3 +132,12 @@
 | 2026-11-13 | /docs/industry/sources/media/2026-11-08-china-newsweek-personal-agents | 11-08 仍称 Muse 只向美国和加拿大开放，已过时 | 无需改：原文如此；分析中以官方为准 |
 | 2026-11-13 | /docs/industry/sources/media/2026-10-31-allthingsmuse-shop-pay-off-platform | 待翻译 | 留给翻译 agent |
 | 2026-11-13 | /docs/muse/sources/media/2026-10-27-allthingsmuse-nvidia-muse-partnership | 内容转述 NVIDIA、AMD 公告和路透社（975 亿美元），与 /docs/muse/sources/media/2026-10-28-allthingsmuse-amd-epyc-powers-muse 一样没有 basedOn | 待处理 |
+| 2026-11-13 | /docs/grok-bot/sources/official/2026-11-05-docs-teams、/docs/grok-bot/sources/official/2026-11-05-help-shared-bots | dateNote 称旧译文「已移除，待重新翻译」，但 translation 为已翻译，正文已含 11-10 新增内容（Bot sharing、发布草稿等），dateNote 过时 | 待处理 |
+| 2026-11-13 | /docs/grok-bot/sources/official/2026-11-05-help-connect-apps | 译文「让每个 Bot 拥有自己的电子邮件地址」，原文是「gives your Bots their own email address」；agent-email 页写明地址属于用户、不属于某一个 Bot，译文易误读 | 待处理 |
+| 2026-11-13 | /docs/grok-bot/sources/official/2026-09-04-grok-bot-procurement、/docs/grok-bot/sources/official/2026-09-22-grok-bot-customer-support、/docs/grok-bot/sources/official/2026-10-20-incident-sweep、/docs/grok-bot/sources/official/2026-10-27-grok-bot-sales、/docs/grok-bot/sources/official/2026-11-02-data-bot | 标签「实测评测」，内容是厂商自述的内部用例，数字（节省金额、70 小时等）无独立验证，不是第三方实测 | 待处理 |
+| 2026-11-13 | /docs/grok-bot/sources/official/2026-11-05-docs-use-cases | 标签「功能更新」，正文只是按岗位给出的提示建议，没有功能更新或日期 | 待处理 |
+| 2026-11-13 | /docs/grok-bot/sources/community/2026-10-04-james-pember-grok-bot-is-really-good | 只打了「实测评测」，正文还涉及连接器、持续执行和竞争格局 | 待处理 |
+| 2026-11-13 | /docs/grok-bot/sources/media/2026-10-07-cybernews-bank-data-slack | 正文第 52 行残留网页的「广告」字样 | 待处理 |
+| 2026-11-13 | /docs/grok-bot/sources/community/2026-11-09-weilaiyilai-what-is-grok-bot | 标题「Grok Bot  / Personal Agent   是什么？」含多余空格，疑为原文替换产品名的残留，收录说明未提 | 待处理 |
+| 2026-11-13 | /docs/grok-bot/sources/official/2026-11-05-docs-overview | 小标题「每个 Bot 都有一台计算机」与下一节「你的 Bot 共用一台计算机」措辞不一；发布稿（/docs/grok-bot/sources/official/2026-08-11-introducing-grok-bot）也写「有自己的计算机」与「共用一台」，多篇社区资料据此写成每个 Bot 一台 | 无需改：原文如此；分析中以「同一账号共用一台、每个 Bot 有自己的屏幕」为准并说明说法来源 |
+| 2026-11-13 | /docs/grok-bot/sources/official/2026-10-28-xai-docs-settings-and-notifications | 称应用有「20 多种语言」，同批 FAQ（/docs/grok-bot/sources/official/2026-10-28-xai-docs-faq）称桌面端 37 种、手机端 12 种 | 无需改：官方两处说法不一，分析中并列 |
