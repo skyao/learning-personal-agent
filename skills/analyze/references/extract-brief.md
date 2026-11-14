@@ -6,7 +6,7 @@
 
 # 子 agent 任务：从 <产品> 资料中提取分析要点
 
-仓库根目录：/home/claude/work/code/learning/learning-personal-agent
+仓库根目录：`$HOME/work/code/learning/learning-personal-agent`（用 `$HOME`，不写具体用户名的 home 路径）
 资料页文件：`content/zh-cn<路径>/index.md`（没有时读 `_index.md`）。frontmatter 之后是中文正文（外文资料已是译文）。不要读 `original.md`，除非 translation=待翻译。fidelity=仅链接 的资料没有正文，只记基本信息。
 主题定义与问题：`skills/analyze/references/topics.md`（先读「各主题要回答的问题」部分）。
 
