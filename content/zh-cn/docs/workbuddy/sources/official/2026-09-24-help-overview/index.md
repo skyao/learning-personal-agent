@@ -11,7 +11,7 @@ translation: 不需要
 collectedAt: 2026-11-05
 updatedAt: 2026-09-24
 dateNote: "页面不标发布日期，日期取页面显示的「最后更新」时间（2026-09-24，UTC）"
-tags: [发布, 运行环境]
+tags: [运行环境]
 products: [workbuddy]
 ---
 
