@@ -199,7 +199,7 @@
 | 2026-11-13 | /docs/industry/sources/media/2026-10-02-ithome-five-proactive-agents | 「资料截至 2026-10-01」的比较表仍把 Spark 的模型列为 Gemini 3.5 系列，8-13 起已改用 3.7 Flash；「每项任务一台临时 VM」未注出处 | 无需改：原文如此；Gemini Spark 分析中注明 |
 | 2026-11-13 | /docs/workbuddy/sources/official/2026-11-02-help-assistant-guide | 正文主体是微信、企业微信、QQ、飞书、钉钉六种渠道的接入步骤，tags 只有连接器、运行环境、安全，缺「交互渠道」 || 2026-11-13 tags 补「交互渠道」 |
 | 2026-11-13 | /docs/workbuddy/sources/official/2026-11-02-help-assistant | 讲助理（即时通讯远程控制）的定位与接入平台，tags 缺「交互渠道」 || 2026-11-13 tags 补「交互渠道」 |
-| 2026-11-13 | /docs/workbuddy/sources/official/2026-09-24-help-overview | tags 含「发布」，但正文只是产品简介，没有发布日期或事件 | |
+| 2026-11-13 | /docs/workbuddy/sources/official/2026-09-24-help-overview | tags 含「发布」，但正文只是产品简介，没有发布日期或事件 || 2026-11-14 删去「发布」标签 |
 | 2026-11-13 | /docs/workbuddy/sources/official/2026-11-02-help-model | 正文写 `workbuddy/models.json`，提示框又写 `~/.codebuddy/models.json`，路径口径不一 | 无需改：原文如此，模型页已并列写出 |
 | 2026-11-13 | /docs/industry/sources/media/2026-11-08-china-newsweek-personal-agents | 称 Buddy One 是 10 月底发布的「协同体系智能体」，帮助中心写的是跨腾讯办公产品的会员与积分体系 | 无需改：原文如此，开放与价格页并列两种说法 |
 | 2026-11-13 | /docs/industry/sources/community/2026-10-12-yupi-why-big-tech-personal-agent | 称 WorkBuddy 这类桌面端 Agent「下次找它还得重新交代」，与官方记忆页不符；文中未实测 WorkBuddy | 无需改：作者观点，记忆页已注明以官方为准 |
