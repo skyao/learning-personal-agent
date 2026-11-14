@@ -27,4 +27,5 @@ description: Personal Agent 学习笔记仓库的通用约定：git 提交与推
 
 - **临时函数别用一两个字母的名字。** 用户的 zsh profile 把 `g` 等短名字定义成了别名，写 `g(){ ...; }` 会报 `defining function based on alias 'g'` 和 `parse error near '()'`，整条命令都不执行。用 `chk`、`vrf` 这类名字（2026-11-13 WorkBuddy 分析中遇到）。
 - **`grep` 是 ugrep。** 带长上下文的中文正则会超出复杂度限制；核对用 `/usr/bin/grep` 或 Python（2026-11-12 Muse 分析中遇到）。
-- 这两条取决于机器配置，换机器后不一定成立；遇到新的差异就补在这里。
+- **zsh 里单独的 `=` 开头的词会被展开。** `echo ===` 报 `=== not found`，整条命令中止（zsh 把 `=word` 当成命令路径展开）。分隔线写 `echo ---` 或加引号 `echo '==='`（2026-11-14 Poke 分析中遇到）。
+- 这几条取决于机器配置，换机器后不一定成立；遇到新的差异就补在这里。
