@@ -209,6 +209,6 @@
 | 2026-11-13 | /docs/workbuddy/sources/official/2026-11-02-help-model | 正文写 `workbuddy/models.json`，提示框又写 `~/.codebuddy/models.json`，路径口径不一 | 无需改：原文如此，模型页已并列写出 |
 | 2026-11-13 | /docs/industry/sources/media/2026-11-08-china-newsweek-personal-agents | 称 Buddy One 是 10 月底发布的「协同体系智能体」，帮助中心写的是跨腾讯办公产品的会员与积分体系 | 无需改：原文如此，开放与价格页并列两种说法 |
 | 2026-11-13 | /docs/industry/sources/community/2026-10-12-yupi-why-big-tech-personal-agent | 称 WorkBuddy 这类桌面端 Agent「下次找它还得重新交代」，与官方记忆页不符；文中未实测 WorkBuddy | 无需改：作者观点，记忆页已注明以官方为准 |
-| 2026-11-14 | /docs/poke/sources/media/2026-04-08-techcrunch-agents-easy-as-text | 内容摘要称客户数「两个月内增长 10 倍」，正文是「过去几个月里增长了 10 倍」 | |
+| 2026-11-14 | /docs/poke/sources/media/2026-04-08-techcrunch-agents-easy-as-text | 内容摘要称客户数「两个月内增长 10 倍」，正文是「过去几个月里增长了 10 倍」 | 2026-11-14 摘要改为「过去几个月」，与译文一致（原文 original.md 第 107 行为 past couple of months） |
 | 2026-11-14 | /docs/poke/sources/official/2026-07-23-docs-release-notes、/docs/poke/sources/official/2026-11-09-faq | 发布说明 2026-06-18 写网站地址 yourname.poke.com，FAQ 写 yourname.poke.site | 无需改：官方两处说法不一，分析中并列 |
 | 2026-11-14 | /docs/poke/sources/official/2026-11-09-faq、/docs/poke/sources/official/2026-11-09-docs-creating-recipes | FAQ 称「还没有推荐计划」，Creating Recipes 有 Payouts 与拉新收益，两处未交代关系 | 无需改：原文如此，连接器页注明 |
