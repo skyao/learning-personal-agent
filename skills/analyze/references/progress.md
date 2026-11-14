@@ -19,7 +19,7 @@
 | instinct | | | | | | | | | | | | | |
 | workbuddy | 11-10 | 11-10 | 11-10 | 11-10 | 11-10 | 11-10 | — | 11-10 | 11-10 | 11-10 | 11-10 | 11-10 | 11-10 |
 | microsoft-autopilot | | | | | | | | | | | | | |
-| poke | | | | | | | | | | | | | |
+| poke | 11-09 | — | — | 11-09 | 11-09 | 11-09 | — | — | 11-09 | — | 11-09 | 11-09 | 11-09 |
 
 ## 主题维度
 
@@ -113,6 +113,12 @@
 | 2026-11-13 | workbuddy | 桌面客户端、微信助理、PPT/表格生成的独立实测；长期使用反馈；腾讯对排队与日期错误的回应 | 目前只有 /docs/workbuddy/sources/community/2026-10-19-shuzhibenliu-wecom-hands-on |
 | 2026-11-13 | workbuddy | 国际版连接器清单（Canva、GitHub、Morningstar、Notion）的出处；腾讯官网 WorkBuddy 系列后两篇 | /docs/workbuddy/sources/official/2026-10-12-tencent-six-apps |
 | 2026-11-13 | workbuddy | 腾讯 Handy Bot 与 WorkBuddy 的关系；移动端 App 的平台与上线时间 | 黑咖啡全景解读提到 Handy Bot 在微信内测试 |
+| 2026-11-14 | poke | 用户数、付费人数、收入；「数十万人」与两种「1 亿条消息」口径的一手说明；Cognition 交易金额与结构 | /docs/poke/sources/official/2026-07-23-cognition-welcoming-interaction、/docs/poke/sources/media/2026-06-04-techcrunch-apple-messages-for-business |
+| 2026-11-14 | poke | 运行环境、具体模型、记忆的形成与查看删除；数据是否用于训练、保存期限 | 资料只有「always-on cloud agents」「按任务选模型」等一句话说法；隐私政策按 tracking.md 未收 |
+| 2026-11-14 | poke | 审批模型（哪些动作需批准、Poke Human 代付是否逐笔确认）、提示注入防护；SOC 2 范围与日期；漏洞赏金 | 新闻稿只列认证名称；发布说明 2025-11-03 有「反复批准循环」修复 |
+| 2026-11-14 | poke | 第二份独立实测、用户自己的实测（`exploration/` 为空）、长期使用记录；2026-03-19 之后的问题记录；Product Hunt 一周评测 | 目前只有 /docs/poke/sources/media/2026-09-09-unite-ai-poke-review；发布说明 03-19 起只记重大更新 |
+| 2026-11-14 | poke | Free、Pro 额度数值；各渠道的地区可用性（WhatsApp 在何处恢复、RCS 与 SMS 的关系）；Apple 迁移比例 | /docs/poke/sources/official/2026-11-09-docs-usage-and-resets、/docs/poke/sources/official/2026-07-23-docs-release-notes |
+| 2026-11-14 | poke | 加入 Cognition 后的变化（SWE-1.7、与 Devin 整合）；2026-08 以后的媒体报道 | /docs/poke/sources/media/2026-07-24-techcrunch-why-cognition-bought-poke |
 
 ## 分析中发现的资料页问题
 
@@ -203,3 +209,6 @@
 | 2026-11-13 | /docs/workbuddy/sources/official/2026-11-02-help-model | 正文写 `workbuddy/models.json`，提示框又写 `~/.codebuddy/models.json`，路径口径不一 | 无需改：原文如此，模型页已并列写出 |
 | 2026-11-13 | /docs/industry/sources/media/2026-11-08-china-newsweek-personal-agents | 称 Buddy One 是 10 月底发布的「协同体系智能体」，帮助中心写的是跨腾讯办公产品的会员与积分体系 | 无需改：原文如此，开放与价格页并列两种说法 |
 | 2026-11-13 | /docs/industry/sources/community/2026-10-12-yupi-why-big-tech-personal-agent | 称 WorkBuddy 这类桌面端 Agent「下次找它还得重新交代」，与官方记忆页不符；文中未实测 WorkBuddy | 无需改：作者观点，记忆页已注明以官方为准 |
+| 2026-11-14 | /docs/poke/sources/media/2026-04-08-techcrunch-agents-easy-as-text | 内容摘要称客户数「两个月内增长 10 倍」，正文是「过去几个月里增长了 10 倍」 | |
+| 2026-11-14 | /docs/poke/sources/official/2026-07-23-docs-release-notes、/docs/poke/sources/official/2026-11-09-faq | 发布说明 2026-06-18 写网站地址 yourname.poke.com，FAQ 写 yourname.poke.site | 无需改：官方两处说法不一，分析中并列 |
+| 2026-11-14 | /docs/poke/sources/official/2026-11-09-faq、/docs/poke/sources/official/2026-11-09-docs-creating-recipes | FAQ 称「还没有推荐计划」，Creating Recipes 有 Payouts 与拉新收益，两处未交代关系 | 无需改：原文如此，连接器页注明 |
