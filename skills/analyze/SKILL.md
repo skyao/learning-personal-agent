@@ -5,6 +5,8 @@ description: 分析 Personal Agent 学习笔记已收集的资料，写分析页
 
 # 分析 Personal Agent 资料
 
+开始前先读 [skills/repo-conventions/SKILL.md](../repo-conventions/SKILL.md)：提交推送、路径写法、本机 shell 的坑等通用约定写在那里。
+
 这个 skill 负责笔记的「分析」一侧，与 `skills/collect-sources/` 的收集一侧分开：**素材归素材，分析归分析。** 资料页（`docs/*/sources/`）只由收集 skill 写；本 skill 只写分析页，不改资料页。
 
 ## 两个维度（用户 2026-11-12 决定）
@@ -60,7 +62,7 @@ content/zh-cn/
    - 每组交给一个使用较便宜模型（Sonnet）的子 agent，并行运行。任务说明用 [references/extract-brief.md](references/extract-brief.md)，附上该组清单和笔记的输出路径。每篇资料只读一次，按全部主题（另加时间线、定位、资料页问题）分节写笔记；每条要点附资料路径、证据类型和不超过 40 字的原文短引。子 agent 不回传原文，只回一行路径和条数。
    - 全部完成后，用脚本核对清单中每篇资料的路径都出现在笔记里，漏掉的补派。
    - 用脚本把各组笔记按小节合并成每个主题一个文件（如 `bytopic/runtime.md`）。
-4. **写主题页。** 主题笔记合计主对话读得下时，主对话自己读笔记写页面。读不下时（Muse 合并后约 34 万字），每个主题交给一个 fork 并行写（fork 继承本 skill 和模板等上下文），要求它：
+4. **写主题页。** 主题笔记合计主对话读得下时，主对话自己读笔记写页面。写法（2026-11-13 WorkBuddy 分析时使用，用户确认保留）：草稿里的引用不写完整的 relref，写短宏：资料用 `[[AU]]`、`[[AU|自定义文字]]`，主题页互链用 `[[t:runtime]]`；键与资料的对照写在草稿目录的 `refs.tsv`（键、资料路径、链接文字三列，清点资料后先定好）。草稿按 `<slug>.md`、`_overview.md` 命名放在临时目录，写完用 `python3 skills/analyze/scripts/expand_drafts.py <product> <草稿目录>` 展开写入，未知的键会报错、不写文件。一个产品几百处引用，完整 relref 每处约 80 字符，短宏能省下大部分输出。读不下时（Muse 合并后约 34 万字），每个主题交给一个 fork 并行写（fork 继承本 skill 和模板等上下文），要求它：
    - 只读该主题的合并笔记，按模板写 `docs/<product>/analysis/<slug>/_index.md`。
    - 关键数字、日期、引语、媒体名用 `grep` 回资料页核对后再写；笔记里查不到出处的说法不写，并在回报中列出。笔记是子 agent 写的，会有张冠李戴（Muse 分析中出现过媒体名写错、引用了资料里没有的说法）。
    - 核对用的临时脚本和文件名带上主题名（如 `chk_runtime.py`）：并行的 fork 共用同一个临时目录，同名文件会互相覆盖。本机的 `grep` 是 ugrep，带长上下文的中文正则会超出复杂度限制，核对用 `/usr/bin/grep` 或 Python。
@@ -97,7 +99,8 @@ content/zh-cn/
 ## 不做的事
 
 - 不修改 `docs/*/sources/` 下的资料页，不改资料的标签和摘要；发现资料页有问题（标签不准、摘要有误）时记入 `progress.md` 的「资料页问题」表并报告用户，由收集一侧处理；用户要求当场处理时，按 collect-sources 的规则改，资料页的修改单独提交。
+- 判断资料页标签准不准，按整篇资料的主要内容判断，不按当前产品的相关段落判断：industry 资料多是多产品文章，与当前产品无关的标签可能仍然成立。记录前先看小节结构（`grep '^#'`）；只是与当前产品关系弱的，记成 products 依据弱，不记成标签错误（2026-11-13 Today 分析中把 Z Finance 一文的「模型」「运行环境」误记为问题，复核后全文有专门章节，用户同意不改）。
 - 不在分析阶段上网检索或引入资料库以外的信息；常识性背景（如公司是谁）可以写，但不写资料库里没有出处的具体事实和数字。
 - 不分析未纳入跟踪的产品；它们只在「行业格局」中作为参照提及。
 - 不为了填满矩阵硬写资料不足的主题页。
-- 不在 skill、任务说明、脚本里写死 home 路径（如 `/home/sky`、`/home/claude`）；写 `$HOME/...` 或相对仓库根目录的路径，脚本里用 `os.path.expanduser("~")` 或 `$HOME`（用户 2026-11-14 决定，此前 home 路径变动导致子 agent 读错目录）。
+- 不在 skill、任务说明、脚本里写死 home 路径，写 `$HOME/...` 或相对路径；这条和推送、shell 等通用约定见 [skills/repo-conventions/SKILL.md](../repo-conventions/SKILL.md)。

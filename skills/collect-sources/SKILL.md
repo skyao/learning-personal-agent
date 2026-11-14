@@ -5,6 +5,8 @@ description: 为 Personal Agent 学习笔记收集资料：检索各跟踪产品
 
 # 收集 Personal Agent 资料
 
+开始前先读 [skills/repo-conventions/SKILL.md](../repo-conventions/SKILL.md)：提交推送、路径写法、本机 shell 的坑等通用约定写在那里。
+
 这个 skill 负责笔记的「资料收集」一侧。核心原则：**素材归素材，分析归分析。** 收集阶段只保证信息准确、完整、可追溯。资料页上收集者自己写的内容只有两小节：简短的摘要和保留理由，都标明是收集者所写，不写分析或评价。
 
 **收集与翻译分开（用户 2026-11-05 决定）。** 收集 agent 负责检索、抓取、判断和写资料页，不做翻译；原文全文由脚本存为资料目录下的 `original.md`（网站上不可见）。外文资料的翻译由另外的翻译 agent 按 [references/translator.md](references/translator.md) 完成。
@@ -89,5 +91,5 @@ content/zh-cn/docs/
 - 不合并多篇资料为一页，不把一篇资料拆成多页。
 - 不修改 `analysis/` 下的任何页面。
 - 不使用词表以外的标签。
-- 不在 skill、任务说明、脚本里写死 home 路径（如 `/home/sky`、`/home/claude`）；写 `$HOME/...` 或相对仓库根目录的路径，脚本里用 `os.path.expanduser("~")` 或 `$HOME`（用户 2026-11-14 决定，此前 home 路径变动导致子 agent 读错目录）。
+- 不在 skill、任务说明、脚本里写死 home 路径，写 `$HOME/...` 或相对路径；这条和推送、shell 等通用约定见 [skills/repo-conventions/SKILL.md](../repo-conventions/SKILL.md)。
 - 不为了凑数收录低质量资料；一轮没有新资料是正常结果。
