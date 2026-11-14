@@ -18,7 +18,7 @@
 | gemini-spark | 11-10 | 11-10 | 11-10 | 11-10 | 11-10 | 11-10 | 11-10 | 11-10 | 11-10 | 11-10 | 11-10 | — | 11-10 |
 | instinct | | | | | | | | | | | | | |
 | workbuddy | 11-10 | 11-10 | 11-10 | 11-10 | 11-10 | 11-10 | — | 11-10 | 11-10 | 11-10 | 11-10 | 11-10 | 11-10 |
-| microsoft-autopilot | | | | | | | | | | | | | |
+| microsoft-autopilot | 11-10 | 11-10 | 11-10 | 11-10 | 11-10 | 11-10 | — | 11-10 | 11-10 | 11-10 | 11-10 | 11-10 | 11-10 |
 | poke | 11-09 | — | — | 11-09 | 11-09 | 11-09 | — | — | 11-09 | — | 11-09 | 11-09 | 11-09 |
 
 ## 主题维度
@@ -119,6 +119,10 @@
 | 2026-11-14 | poke | 第二份独立实测、用户自己的实测（`exploration/` 为空）、长期使用记录；2026-03-19 之后的问题记录；Product Hunt 一周评测 | 目前只有 /docs/poke/sources/media/2026-09-09-unite-ai-poke-review；发布说明 03-19 起只记重大更新 |
 | 2026-11-14 | poke | Free、Pro 额度数值；各渠道的地区可用性（WhatsApp 在何处恢复、RCS 与 SMS 的关系）；Apple 迁移比例 | /docs/poke/sources/official/2026-11-09-docs-usage-and-resets、/docs/poke/sources/official/2026-07-23-docs-release-notes |
 | 2026-11-14 | poke | 加入 Cognition 后的变化（SWE-1.7、与 Devin 整合）；2026-08 以后的媒体报道 | /docs/poke/sources/media/2026-07-24-techcrunch-why-cognition-bought-poke |
+| 2026-11-14 | microsoft-autopilot | 更名后 Autopilot 本身的文档：云端计算机规格与持久化、权限模型、隐私与数据驻留条款、默认模型；桌面应用是否保留 | Learn 文档截至 11-10 仍全部描述 Scout 桌面应用；只有 /docs/microsoft-autopilot/sources/official/2026-09-25-new-copilot-home-code-autopilot；Ignite 11-17 至 20 |
+| 2026-11-14 | microsoft-autopilot | 按用量计费（UBB）的单价；是否仍需 GitHub Copilot 席位与 Microsoft 365 Copilot 许可证 | 9 月博文的定价链接 aka.ms/Sept25/EvolvingModel 未收；各方列出的前提不一 |
+| 2026-11-14 | microsoft-autopilot | 对外开放后的用户数、组织数；完成率等量化数据；9 月后的实测与长期使用报告 | 规模只有 GeekWire 05-01 的内部数字；实测只有 /docs/microsoft-autopilot/sources/community/2026-06-06-copilotatwork-scout-not-just-assistant |
+| 2026-11-14 | microsoft-autopilot | 提示注入防护的测试或独立审计；The Register、Fortune、Gizmodo 等原文 | dSebastien 综述中均为转述，见 /docs/microsoft-autopilot/sources/community/2026-11-04-dsebastien-microsoft-autopilot |
 
 ## 分析中发现的资料页问题
 
@@ -212,3 +216,6 @@
 | 2026-11-14 | /docs/poke/sources/media/2026-04-08-techcrunch-agents-easy-as-text | 内容摘要称客户数「两个月内增长 10 倍」，正文是「过去几个月里增长了 10 倍」 | 2026-11-14 摘要改为「过去几个月」，与译文一致（原文 original.md 第 107 行为 past couple of months） |
 | 2026-11-14 | /docs/poke/sources/official/2026-07-23-docs-release-notes、/docs/poke/sources/official/2026-11-09-faq | 发布说明 2026-06-18 写网站地址 yourname.poke.com，FAQ 写 yourname.poke.site | 无需改：官方两处说法不一，分析中并列 |
 | 2026-11-14 | /docs/poke/sources/official/2026-11-09-faq、/docs/poke/sources/official/2026-11-09-docs-creating-recipes | FAQ 称「还没有推荐计划」，Creating Recipes 有 Payouts 与拉新收益，两处未交代关系 | 无需改：原文如此，连接器页注明 |
+| 2026-11-14 | /docs/industry/sources/community/2026-11-05-ai-agents-compared-small-business | products 含 microsoft-autopilot，但正文实际比较的是 Copilot Cowork，Autopilot 只在两三处提及（引用的是微软 6 月博文） | 无需改：products 依据弱，不是标签错误；分析中只用作 Cowork 价格对照 |
+| 2026-11-14 | /docs/industry/sources/media/2026-10-02-ithome-five-proactive-agents | 比较表称 Autopilot 为云端托管、「官方未公布直接存取本机文件」、2026 年 9 月进入私有预览，与 Learn 文档的 Scout 桌面应用和 6 月 Frontier 实验版不同 | 无需改：原文如此，描述的是 9 月后的 Autopilot；运行环境与开放页并列两种说法 |
+| 2026-11-14 | /docs/microsoft-autopilot/sources/media/2026-06-05-testingcatalog-scout-frontier、/docs/microsoft-autopilot/sources/community/2026-06-06-copilotatwork-scout-not-just-assistant | 模型版本一处为 GPT 5.5，一处为「最高到 5.4 的 GPT 变体」 | 无需改：两篇原文不同，模型页并列 |
