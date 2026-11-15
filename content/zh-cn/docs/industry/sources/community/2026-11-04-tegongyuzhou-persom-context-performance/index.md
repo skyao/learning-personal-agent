@@ -12,7 +12,7 @@ translation: 不需要
 collectedAt: 2026-11-06
 dateNote: "微信公众号「特工宇宙」，发布时间取页面内嵌的 create_time：2026-11-04 21:23（北京时间）。"
 tags: [记忆与上下文, 隐私, 连接器]
-products: [muse, instinct]
+products: [muse]
 ---
 
 {{< source-info >}}
