@@ -10,7 +10,7 @@ language: en
 fidelity: 全文
 translation: 待翻译
 collectedAt: 2026-11-14
-tags: [安全]
+tags: [连接器, 商业与规模, 安全]
 products: [muse]
 updatedAt: 2026-11-12
 dateNote: "发表时标题为 eBay appears to have shut the door on third-party AI agents，11 月 12 日更新后改为现标题；更新说明见原文末尾。"
