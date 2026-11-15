@@ -1,7 +1,14 @@
 来源：https://ifynx.com/blog/meta-muse-personal-ai-agent-secure-vm/
 取文：2026-11-06，网页抓取工具（直接下载返回 403）
+补取：2026-11-14，直接下载（文首新增的更新说明与回顾段）
 
-Meta Muse Secure VM & Confidential VM Explained | iFynx
+Muse Secure VM vs Muse Confidential VM: How Meta Muse Runs Agents | iFynx
+
+Update, 10 November 2026, 16:07 Asia/Gaza
+
+Updated 2 November 2026
+
+Since this piece first ran, Meta published a [detailed security write-up on Muse](https://research.meta.ai/blog/security-and-safety-for-ai-agents-our-approach-with-muse), a settings section for **Muse Confidential VM** [was spotted in Muse’s web app](https://www.allthingsmuse.com/articles/muse-confidential-vm-surfaces-in-web-settings/) on 20 October (still unreleased), and [Ars Technica reported](https://arstechnica.com/security/2026/09/muse-metas-extraordinarily-privileged-ai-assistant-has-a-serious-0-day/) a macOS vulnerability in Muse that Meta fixed with a hotfix. We added sections on how Secure VM works, what Confidential VM changes, and an FAQ.
 
 ## A personal agent that does the work—inside its own computer
 
