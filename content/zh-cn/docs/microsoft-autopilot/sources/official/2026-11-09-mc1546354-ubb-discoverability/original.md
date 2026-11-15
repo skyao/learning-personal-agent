@@ -39,7 +39,7 @@ Admin impact
 
 ****What and why:****
 
-As previously announced in [MC1479277](/message/MC1479277), we are making usage-based experiences in the Microsoft Copilot app easier to discover. Usage-based billing experiences like Cowork, Code, and Autopilot, will be visible by default to users with a Microsoft 365 Copilot license, even if their organization has not enabled access. Users without an applicable spending policy will see an option to request access or learn more, based on their organization's settings.
+As previously announced in [MC1479277](https://mc.merill.net/message/MC1479277), we are making usage-based experiences in the Microsoft Copilot app easier to discover. Usage-based billing experiences like Cowork, Code, and Autopilot, will be visible by default to users with a Microsoft 365 Copilot license, even if their organization has not enabled access. Users without an applicable spending policy will see an option to request access or learn more, based on their organization's settings.
 
 **Based on customer feedback, we are extending the rollout timeline and introducing an additional admin control that will allow organizations to provide custom guidance to users.** These changes give administrators more time to prepare and greater flexibility to manage how users discover and request access to usage-based experiences.
 

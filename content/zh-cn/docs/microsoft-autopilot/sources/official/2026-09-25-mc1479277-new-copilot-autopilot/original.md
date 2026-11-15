@@ -43,7 +43,7 @@ Admin impact
 
 501451
 
-View roadmap details](/message/RM501451)
+View roadmap details](https://mc.merill.net/message/RM501451)
 
 ### Platforms
 

@@ -3,8 +3,6 @@
 
 Always-on agent promises to keep work moving, provided you trust it with practically everything
 
-[Brandon
-
 Move over, Copilot: Microsoft is introducing a new category of agentic AI called "Autopilot," starting with Scout, its first agent. And it doesn't take much guessing to understand how Microsoft expects these things to operate: By constantly watching your every move and taking action in the background to ostensibly streamline your workday.
 
 Microsoft [announced](https://www.microsoft.com/en-us/microsoft-365/blog/2026/06/02/introducing-microsoft-scout-your-always-on-personal-agent/) Autopilot, and the first Autopilot agent, Scout, at Microsoft Build on Tuesday, describing it and other future Autopilots as “always-on agents that work autonomously,” stay active in the background to “understand how work gets done across your apps and systems,” and can “take action without needing to be prompted each time.”
