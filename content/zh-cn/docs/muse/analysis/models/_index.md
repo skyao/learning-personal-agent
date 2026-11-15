@@ -2,8 +2,8 @@
 title: "Meta Muse：模型"
 linkTitle: "模型"
 weight: 70
-analyzedAt: 2026-11-13
-sourcesUntil: 2026-11-12
+analyzedAt: 2026-11-15
+sourcesUntil: 2026-11-15
 description: >
   Muse 发布时由自研的 Muse Spark 1.3 驱动；10 月推出的前沿模型 Muse Wonder 先给订阅用户，11 月起所有用户获得「用 Wonder 训练的特化模型」。用户不能自选模型，Meta 未公开各档位实际用的是哪个模型。
 ---
@@ -65,6 +65,8 @@ Muse Wonder 的模型卡写明：输入文本、图像、视频、音频，输�
 
 推断：模型调用经由 VM 内的推理代理转发，实际使用哪个模型由服务端决定，所以 VM 内看到的名字不足以说明主对话、浏览器子智能体、artifact 生成各用什么模型。Codex 二进制与 Anthropic 开关只说明镜像中存在这些路径。
 
+一位社区作者称，2026-11-09 发布的 Muse Ember 是最小的 Muse 模型，面向 Muse Code 与 Meta Model API，没有说明会进入消费者应用（[手表核查]({{< relref "/docs/muse/sources/community/2026-11-12-muse-on-apple-watch-wear-os" >}})）。资料库中没有 Ember 的官方稿。另一位作者提醒，特化模型公告中的「遗忘减少 2.4 倍」「76% 升至 90%」等数字都是 Meta 自测，没有公布方法（[Spaces 分档分析]({{< relref "/docs/muse/sources/community/2026-11-14-spaces-describe-once-keep-it" >}})）。
+
 ## 实时语音与视频化身是独立模型
 
 Muse Realtime Voice 与 Muse Realtime Avatar 组成一个流式系统：Voice 产出语音令牌流，音频解码器转成语音，Avatar 消费同一个令牌流生成画面，使声音、唇形和表情同步。Avatar 是音频驱动的扩散 Transformer，经蒸馏把每分块的模型评估次数从 120 次降到 2 次。官方给出的服务指标：25 帧/秒、448×768 竖屏，发言结束到响应首字节约 870 毫秒，单个 GB200 支持 12 个并发会话；官方自测中评估者对它相对 Runway Characters 的总体偏好为 78% 比 22%，相对 HeyGen LiveAvatar 为 88% 比 12%（[让你的 Muse 栩栩如生]({{< relref "/docs/muse/sources/official/2026-09-23-bringing-your-muse-to-life" >}})）。Connect 发布时官方称用户可以用描述来设计 Muse 的声音（[Connect 2026 发布汇总]({{< relref "/docs/muse/sources/official/2026-09-23-connect-2026-everything-announced" >}})）。语音、视频作为交互入口的情况见[交互渠道]({{< relref "/docs/muse/analysis/channels" >}})。
@@ -88,3 +90,4 @@ Muse Realtime Voice 与 Muse Realtime Avatar 组成一个流式系统：Voice �
 - 媒体：[36 氪]({{< relref "/docs/muse/sources/media/2026-10-12-36kr-wang-openclaw-origin" >}})、[链捕手]({{< relref "/docs/muse/sources/media/2026-11-03-wang-how-muse-was-built" >}})（上线评测表）；[雷峰网]({{< relref "/docs/muse/sources/media/2026-10-23-leiphone-muse-openclaw-lineage" >}})（无模型选择）；[DataCamp]({{< relref "/docs/industry/sources/media/2026-10-27-datacamp-dots-vs-muse" >}})（最高推理模式、无独立基准）。
 - 社区：[Muse 开源吗]({{< relref "/docs/muse/sources/community/2026-11-05-is-meta-muse-open-source" >}})（模型谱系与开放权重）；[特化模型解读]({{< relref "/docs/muse/sources/community/2026-11-09-devto-specialized-models-explainer" >}})；[Muse 101]({{< relref "/docs/muse/sources/community/2026-11-04-muse-101-agentic-commerce" >}})（财报会转述）；[Future Society 审查]({{< relref "/docs/muse/sources/community/2026-09-26-future-society-muse-own-files" >}})（VM 内的模型标识）。
 - 实测：[VM 探索]({{< relref "/docs/muse/sources/exploration/2026-10-12-muse-vm-exploration" >}})（推理代理 socket）。
+- 2026-11-15 增量：[手表核查]({{< relref "/docs/muse/sources/community/2026-11-12-muse-on-apple-watch-wear-os" >}})、[Spaces 分档分析]({{< relref "/docs/muse/sources/community/2026-11-14-spaces-describe-once-keep-it" >}})（社区）。

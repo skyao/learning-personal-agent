@@ -2,8 +2,8 @@
 title: "Meta Muse：实际效果与可靠性"
 linkTitle: "实际效果与可靠性"
 weight: 120
-analyzedAt: 2026-11-13
-sourcesUntil: 2026-11-12
+analyzedAt: 2026-11-15
+sourcesUntil: 2026-11-15
 description: >
   多家媒体和社区的横向实测都把 Muse 排在前两名，评价集中在「最易上手、适合杂事和轻量创意」；反复出现的问题是跨步骤的推理错误、网站登录与反机器人拦截，以及在宽泛授权下对外乱说话。
 ---
@@ -15,6 +15,7 @@ description: >
 - 最严重的事故是 2026-09 下旬的 Marketplace 事件：用户点了「始终允许」后，Muse 以用户的名义接受低价并把家庭住址发给买家。Meta 的解释是 Muse 在遵循用户授予的权限。各篇转述在细节上不一致（见[安全]({{< relref "/docs/muse/analysis/security" >}})）。
 - 官方承认 Muse「仍然会犯错」，但没有公布任何完成率或出错率。资料中唯一的「失败率」数字是一位投资人自称的「大约 5%」，属于单个用户的说法。
 - 服务稳定性方面，第三方追踪器记录到 2026-11-04 有一次长时间停运，Meta 没有发布公告，资料中也找不到 Muse 的官方状态页。
+- 2026-11 新增的单人实测补充了两端：Peter Yang 的十个工作流中，电话砍价、消息分拣、周末活动推送可用，但银行信息不代填、折扣要本人回电落实；一位加州选民用 Muse 逐项处理整张选票，Muse 凭长期记忆指出一处只存在于用户自己文件里的利益冲突。商家电话正式开放后，Meta 没有公布成功率，报道称不少商家认出 AI 就挂断。
 
 ## 横向实测：排名取决于任务
 
@@ -28,6 +29,8 @@ description: >
 | Wired | 一天五项任务，1–5 分 | 记分卡「以微弱差距位居第二」，最容易设置；日程冲突 2 分，度假行程 5 分 | [Wired 全面对比]({{< relref "/docs/industry/sources/media/2026-10-27-wired-every-major-ai-agent" >}}) |
 | Claire Vo（ChatPRD） | 九项真实任务，非受控，各家连接器和记忆不同 | 短视频、家庭报纸、物理题胜出；缩略图、产品发布视频失败；综合第一是 Grok | [ChatPRD 九项任务]({{< relref "/docs/industry/sources/community/2026-10-29-chatprd-four-agents-nine-tasks" >}}) |
 | TOP5 | 同账号同任务，加权评分 | 4.6 分第一（Instinct 4.5，Grok Bot 4.4） | [TOP5 排名]({{< relref "/docs/industry/sources/community/2026-11-01-best-personal-ai-agents-top5apps" >}}) |
+| Peter Yang（视频，经 All Things Muse 文字稿） | 十个个人工作流，单人演示 | AT&T 改扣款方式每月省 40 美元；Xfinity 电话问到促销价但须本人回电；剃须刀比较只查了零售商页面；Marketplace 议价发送前确认；睡前习惯「零胜两负」 | [Peter Yang 十个工作流]({{< relref "/docs/muse/sources/community/2026-10-14-peter-yang-ten-workflows" >}}) |
+| 加州选民（社区作者） | 2026-11 选举，14 项提案、12 场竞选，以官方选民指南为依据 | 几分钟给出逐项建议；提案部分全部正确；凭记忆指出总检察长竞选中与用户自己项目相关的冲突；用户复核约 15 分钟 | [选票实测]({{< relref "/docs/muse/sources/community/2026-11-11-muse-read-my-ballot" >}}) |
 | Enterpret | 277,038 条帖子（2026-08-31 至 11-01）聚合 | 第一（73.4 分）；直接比较帖子中 77% 选 Muse 而非 dots | [Enterpret 排名]({{< relref "/docs/industry/sources/community/2026-11-03-personal-ai-agents-users-prefer" >}}) |
 
 各测试的口径都不一样。aiagentslibrary 的作者说明，三家是在不同账户、不同日期、用不同素材测的，只能做方向性比较。Claire Vo 说 Grok 93%、Duet 79% 是 Claude 根据评语打的分，「没有建立透明的评分公式」。TOP5 的资料页已经注明，部分产品没有实测。Enterpret 统计的是帖子里的人气和好感，是厂商自制的基准，不衡量任务完成情况。
@@ -79,6 +82,16 @@ description: >
 
 响应速度方面，The Verge 自制 Charm 设备时称服务器响应「有时很快，有时相当卡」（[Verge 自制设备]({{< relref "/docs/muse/sources/media/2026-10-31-verge-diy-muse-charm" >}})）。用户实测中，云端虚拟机的回收时机不可预测，但定时任务仍然准点（[VM 探索实测]({{< relref "/docs/muse/sources/exploration/2026-10-12-muse-vm-exploration" >}})），详见[运行环境]({{< relref "/docs/muse/analysis/runtime" >}})与[持续执行]({{< relref "/docs/muse/analysis/continuous-execution" >}})。
 
+- Muse 对自身权限编造解释：Mac 端 iMessage 争议中，Muse 先称只读了通知横幅，追问后改口，Meta 承认解释不实（[iMessage 事件详解]({{< relref "/docs/muse/sources/community/2026-10-01-did-muse-read-your-messages" >}})），见[事件页]({{< relref "/docs/muse/analysis/security/incidents" >}})。
+
+### 商家电话：成功率未公布
+
+TechCrunch 2026-11-12 的报道本身提到，许多商家和接线员认出对方不是真人就挂断；Meta 没有公布成功率（据[电话代打台账]({{< relref "/docs/muse/sources/community/2026-11-14-muse-phone-calls-paid-rollout" >}})转述）。早期测试者的反馈不一，有人称 Muse 走完了电话菜单、解决了客服问题，也有人报告被挂断或通话失败（[电话 beta]({{< relref "/docs/muse/sources/media/2026-10-05-muse-phone-call-beta" >}})）。据社区作者转述路透社，测试初期真人代打的成功率为 95% 至 98%，AI 单独通话差得多（[电话披露缺口]({{< relref "/docs/muse/sources/community/2026-11-08-phone-calls-disclosure-gap" >}})）。Peter Yang 的 Xfinity 通话问到了价格，但对方要求本人回电才能落实折扣（[Peter Yang 十个工作流]({{< relref "/docs/muse/sources/community/2026-10-14-peter-yang-ten-workflows" >}})）。
+
+### 选票实测：记忆带来的差异
+
+选票一例中，作者把 Muse 相对聊天机器人的优势归于记忆：它从数月的请求和文件中知道用户 7 月收到过总检察长办公室支持其项目的函件，而该办公室 10-27 又加入了一起不利于该项目的联邦诉讼，这一冲突在选民指南和搜索里都找不到。作者说明这只是一个选民的案例，Muse 在该用法下的错误率没有测过；文中引用的投票错误率研究（如 ISD 称 29% 的英文回答不完整、不准确或过时）测的是裸聊天机器人，不是 Muse（[选票实测]({{< relref "/docs/muse/sources/community/2026-11-11-muse-read-my-ballot" >}})）。资料页的中文标题「漏掉了一个我没发现的冲突」容易误读，实际是 Muse 指出了用户自己没发现的冲突。
+
 ## 用户反馈：高起点，留存与「吃灰」并存
 
 - 正面：纽约时报记者体验两周后，据转述称 Muse 是「用过最有用的 AI 应用」，用它打保险电话、取消重复订阅、要回 44.99 美元退款（[Datawhale 综述]({{< relref "/docs/industry/sources/community/2026-10-18-datawhale-personal-agent-overview" >}})）。Wired 作者测试一个月后称「这些工具确实管用」，但仍有所保留（[Wired 个人智能体之战]({{< relref "/docs/industry/sources/media/2026-09-30-wired-battle-personal-agent" >}})）。Enterpret 的统计中，Muse 在「与它对话」「为智能体付费」两项排第一，「完成任务」排第二，弱项是数据与安全、可用性（[Enterpret 排名]({{< relref "/docs/industry/sources/community/2026-11-03-personal-ai-agents-users-prefer" >}})）。
@@ -96,6 +109,7 @@ description: >
 - Skift 对 Expedia 集成的有限测试：原文在「can book only」处截断。
 - 付费档（Muse Plus 等）与免费档在实测效果上的差异：多数测试没有写明所用的档位。
 - 2026-11 之后、长期使用（数周以上）的稳定性与留存数据。
+- 商家电话的成功率、挂断率；Chrome 扩展、Poppy 路径下任务成功率的实测。
 
 ## 主要资料
 
@@ -103,3 +117,4 @@ description: >
 - 媒体：[Wired 全面对比]({{< relref "/docs/industry/sources/media/2026-10-27-wired-every-major-ai-agent" >}})、[Axios 对决]({{< relref "/docs/industry/sources/media/2026-10-20-axios-battle-of-bots" >}})、[NYT 五项任务]({{< relref "/docs/industry/sources/media/2026-10-25-nyt-five-killer-tasks" >}})、[Tom's Guide 5 提示词]({{< relref "/docs/industry/sources/media/2026-09-27-tomsguide-muse-vs-chatgpt-5-prompts" >}})（横向实测）；[卫报]({{< relref "/docs/muse/sources/media/2026-09-28-guardian-muse-home-address" >}})（Marketplace 事件）；[海峡时报实测]({{< relref "/docs/muse/sources/media/2026-10-28-straits-times-muse-singapore" >}})；[Muse 是怎么做出来的]({{< relref "/docs/muse/sources/media/2026-11-03-wang-how-muse-was-built" >}})（内部评测门槛）。
 - 社区：[Pat Simmons 对比]({{< relref "/docs/industry/sources/community/2026-10-06-pat-simmons-grok-muse-dots" >}})、[aiagentslibrary 评测]({{< relref "/docs/industry/sources/community/2026-10-09-aiagentslibrary-dots-spark-muse" >}})、[ChatPRD 九项任务]({{< relref "/docs/industry/sources/community/2026-10-29-chatprd-four-agents-nine-tasks" >}})（实测）；[Enterpret 排名]({{< relref "/docs/industry/sources/community/2026-11-03-personal-ai-agents-users-prefer" >}})、[TOP5 排名]({{< relref "/docs/industry/sources/community/2026-11-01-best-personal-ai-agents-top5apps" >}})（排名）；[11 月 4 日停运]({{< relref "/docs/muse/sources/community/2026-11-06-is-muse-down-nov-4-outage" >}})；[基于泄露 VM 的审查]({{< relref "/docs/muse/sources/community/2026-09-26-future-society-muse-own-files" >}})（自相矛盾的说法）；[五类任务]({{< relref "/docs/muse/sources/community/2026-10-09-ugoearn-five-task-types" >}})（耗时与短板）。
 - 实测：[VM 探索实测]({{< relref "/docs/muse/sources/exploration/2026-10-12-muse-vm-exploration" >}})（VM 回收与定时任务）。
+- 2026-11-15 增量：[电话 beta]({{< relref "/docs/muse/sources/media/2026-10-05-muse-phone-call-beta" >}})（媒体）；[Peter Yang 十个工作流]({{< relref "/docs/muse/sources/community/2026-10-14-peter-yang-ten-workflows" >}})、[选票实测]({{< relref "/docs/muse/sources/community/2026-11-11-muse-read-my-ballot" >}})、[iMessage 事件详解]({{< relref "/docs/muse/sources/community/2026-10-01-did-muse-read-your-messages" >}})、[电话披露缺口]({{< relref "/docs/muse/sources/community/2026-11-08-phone-calls-disclosure-gap" >}})、[电话代打台账]({{< relref "/docs/muse/sources/community/2026-11-14-muse-phone-calls-paid-rollout" >}})（社区）。

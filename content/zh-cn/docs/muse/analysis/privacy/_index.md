@@ -2,8 +2,8 @@
 title: "Meta Muse：隐私"
 linkTitle: "隐私"
 weight: 90
-analyzedAt: 2026-11-13
-sourcesUntil: 2026-11-12
+analyzedAt: 2026-11-15
+sourcesUntil: 2026-11-15
 description: >
   Muse 默认用用户互动训练 Meta 的模型，可以关闭；Meta 承诺对话和 VM 数据不进广告系统，但承认 Muse 的上网行为可能间接影响广告。截至 2026-11-12，让 Meta 也看不到数据的 Confidential VM 仍未上线，争议集中在 Muse 为用户联系人建立的「人物页面」。
 ---
@@ -15,7 +15,8 @@ description: >
 - 当前的 Secure VM 只靠运营政策限制 Meta 员工访问用户数据，官方写明这「并不能阻止 Meta 在……必要时访问数据」。用户自持密钥的 Confidential VM 在发布时预告为「今年晚些时候」交付，截至 2026-11 的资料仍未上线。
 - 删除和导出的入口齐全，包括删除消息、删除文件、下载数据和不可撤销的「重置 Muse」。但官方也写明，删除内容后 Muse 仍可能记得从中学到的信息。社区对泄露 VM 文件的审查认为，「遗忘」只删除对话派生的副本，聊天记录本身仍在。
 - 最大的争议在第三方：Muse 为用户的联系人（包括从未用过 Muse 的人）维护人物页面。Hunterbrook 的测试显示，Muse 可以按群体汇编 Facebook 和 Instagram 账户名单。Meta 为非用户设了帮助页和表单，但承认只能对可关联到账户的信息落实数据权利。
-- 已发生的隐私事件有：分享链接可经被动 DNS 被枚举（2026-10-20 暂停分享，10-22 恢复），以及内部测试中由真人客服代拨「AI 电话」（404 Media 报道）。
+- 已发生的隐私事件有：分享链接可经被动 DNS 被枚举（2026-10-20 暂停分享，10-22 恢复），以及内部测试中由真人客服代拨「AI 电话」（404 Media 报道）。Mac 端 iMessage 同步争议有了专门的社区详解：Meta 承认 Muse 对自己如何取得消息的解释不实，但否认访问未经授权。
+- 2026-11 的新问题：眼镜换用 Muse 后语音数据适用 Muse 隐私政策；商家电话的被叫方不知情也未同意；Chrome 扩展让 Muse 的活动记在用户的 Google 账户和浏览历史中，可能影响 Meta 内外的广告与推荐。
 
 ## 默认用于训练，可以关闭
 
@@ -94,6 +95,10 @@ Hunterbrook 的调查测试走得更远：Muse 每条提示交出 10 到 100 个
 
 2026 年 10 月，Meta 在 Instagram 投放广告，称 Muse 每周告诉用户谁取消了关注。据 Business Insider，Meta 在被问询后撤下了广告；Instagram 负责人 Adam Mosseri 此前解释过，公司希望人们能放心地取消关注（[撤下取消关注广告]({{< relref "/docs/muse/sources/media/2026-11-05-meta-pulls-muse-unfollow-ad" >}})）。
 
+2026-11-13，开发 WhatsApp 替代品的 Paul Walsh 撰文称，用户把私信、邮件、联系人交给 Muse，会连带暴露从未用过 Muse 的人；Muse 在加密前或解密后于设备上取得完整对话，端到端加密只保护传输过程（[Walsh：非用户隐私]({{< relref "/docs/muse/sources/community/2026-11-13-walsh-muse-non-user-privacy" >}})）。这是作者观点，没有技术证据，作者承认有商业利益；他所引的 WIRED、TIME 报道针对的是用户联系人的人物页，不是对从未接触 Muse 的人单独建档。同类的「第二方」问题也见于 iMessage 争议：朋友若开启 Muse 的 Messages 访问，发给他的那一半对话也在其本地数据库内，这是 AppleInsider 等媒体的表述，不是 Meta 确认的事实；Meta 没有公布同步数据的保存位置和保留期，断开连接只停止后续访问（[iMessage 事件详解]({{< relref "/docs/muse/sources/community/2026-10-01-did-muse-read-your-messages" >}})）。
+
+商家电话把同样的问题带到了电话另一端：被叫方没有同意，也可能不知道对方是 AI，详见[交互渠道]({{< relref "/docs/muse/analysis/channels" >}})（[电话披露缺口]({{< relref "/docs/muse/sources/community/2026-11-08-phone-calls-disclosure-gap" >}})）。
+
 推断：Muse 的个人化来自用户的社交关系，第三方数据因此是它在结构上的隐私问题，不是个别缺陷。Meta 目前的应对是政策措辞和事后表单，资料中没有面向联系人的事前告知或同意机制。
 
 ## 已发生的隐私事件
@@ -103,13 +108,16 @@ Hunterbrook 的调查测试走得更远：Muse 每条提示交出 10 到 100 个
 | 2026-09-22 | 404 Media 报道：内部测试中 Muse 的电话由呼叫中心真人代拨，有测试员工事后才知道。员工称培训「不是一种［安全］机制」，要求至少做成用户偏好设置；Meta 称这是内部测试 | [404 Media]({{< relref "/docs/muse/sources/media/2026-09-22-404media-muse-calls-made-by-humans" >}}) |
 | 2026-10-08 至 10-22 | Claroc 发现所有分享链接都在 cf.metaaiusercontent.com 下，对话标题放在子域名中，用被动 DNS 能枚举出 6,800 个，不登录即可打开；10-08 经漏洞赏金报告，没有回复；Ars Technica 问询后，Meta 于 10-20 暂停分享；10-22 Singleton 称底层问题已修复，旧 artifact 换了新网址 | [Claroc]({{< relref "/docs/muse/sources/community/2026-10-18-claroc-ghostshares" >}})、[Ars Technica]({{< relref "/docs/muse/sources/media/2026-10-20-arstechnica-shared-conversations-exposed" >}})、[The Verge]({{< relref "/docs/muse/sources/media/2026-10-22-verge-muse-sharing-back-on" >}}) |
 
-Facebook Marketplace 上 Muse 把用户住址发给买家的事件，属于权限与审批问题，见[安全]({{< relref "/docs/muse/analysis/security" >}})。社区综述中「拒绝 Messages 权限后仍被同步 18.7 万条 iMessage」的说法没有给出处，资料库中没有一手报道（[Datawhale 综述]({{< relref "/docs/industry/sources/community/2026-10-18-datawhale-personal-agent-overview" >}})），这里不当作事实。
+Facebook Marketplace 上 Muse 把用户住址发给买家的事件，属于权限与审批问题，见[安全]({{< relref "/docs/muse/analysis/security" >}})。社区综述中「拒绝 Messages 权限后仍被同步 18.7 万条 iMessage」的说法起初没有给出处（[Datawhale 综述]({{< relref "/docs/industry/sources/community/2026-10-18-datawhale-personal-agent-overview" >}})）。2026-11-15 增量：已收一篇社区详解，事件出自 Inc 撰稿人 Jason Aten，Meta 的 Singleton 公开致歉并解释为用户明确启用后的同步，Meta 发言人称集成「entirely opt-in」；权限开关如何被打开仍有争议，Inc 原文未收（[iMessage 事件详解]({{< relref "/docs/muse/sources/community/2026-10-01-did-muse-read-your-messages" >}})、[Secure VM 攻击面]({{< relref "/docs/muse/sources/community/2026-11-05-muse-secure-vm-attack-surface" >}})），详见[事件页]({{< relref "/docs/muse/analysis/security/incidents" >}})。
 
 ## 设备、年龄与地区
 
 - Muse 面向 18 岁及以上的用户（[让 Muse 栩栩如生]({{< relref "/docs/muse/sources/official/2026-09-23-bringing-your-muse-to-life" >}})）。有用户实测，年龄验证通过银行卡 1 美元预授权完成（[国内注册实测]({{< relref "/docs/muse/sources/community/2026-10-04-chizhongwu-china-registration" >}})）。
 - Mac：完全磁盘访问权限覆盖整台电脑的文件，官方称智能体「只使用你让它处理的文件和应用信息」；本地应用可以分别设为关闭、只读、读取并交互（[帮助中心：Mac]({{< relref "/docs/muse/sources/official/2026-10-08-help-mac" >}})）。
-- 眼镜：使用 Muse 时，录音和转写按 Muse 隐私政策处理，切回 Meta AI 后按眼镜的语音隐私声明处理；检测到的误唤醒语音交互在 90 天内删除（[帮助中心：眼镜测试版]({{< relref "/docs/muse/sources/official/2026-10-27-help-glasses-beta" >}})）。
+- 眼镜：使用 Muse 时，录音和转写按 Muse 隐私政策处理，切回 Meta AI 后按眼镜的语音隐私声明处理；检测到的误唤醒语音交互在 90 天内删除（[帮助中心：眼镜测试版]({{< relref "/docs/muse/sources/official/2026-10-27-help-glasses-beta" >}})）。社区核查补充：其他语音转录和音频最长保存一年；美国版 AI 眼镜语音隐私声明称录音默认存储、没有关闭设置，英国版称用户可选择，Meta 没有说明这一差异；10-13 有 Reddit 用户报告眼镜在未唤醒时保存了日常对话，Meta 称已解决，Android Authority 未复现（[眼镜 Beta 核查]({{< relref "/docs/muse/sources/community/2026-11-09-muse-on-glasses-beta" >}})）。
+- Chrome 扩展：Meta 帮助页提醒，被访问的网站可能把 Muse 的活动归到用户名下，活动可能出现在用户的 Google 账户和浏览历史中，并可能影响 Meta 内外的广告与推荐（[Chrome 扩展]({{< relref "/docs/muse/sources/media/2026-11-13-muse-chrome-extension" >}})）。这与安全博客所说的广告「间接影响」是同一类问题。
+- Spaces：截至 2026-11-14，分享未上线，也没有导出、嵌入或 API 访问，在 Muse 中建的内容只能留在 Muse 内（[Spaces 分档分析]({{< relref "/docs/muse/sources/community/2026-11-14-spaces-describe-once-keep-it" >}})）。
+- Poppy：协议为每个用户在每个商家生成独立的假名 ID，商家不能凭用户标识跨商家关联；用户在商家页面登录，智能体不经手密码（[Chang：PAP 拆解]({{< relref "/docs/industry/sources/community/2026-10-10-pap-personal-agent-protocol-deep-dive" >}})、[Poppy 官方稿]({{< relref "/docs/muse/sources/official/2026-11-13-poppy-personal-agent-protocol" >}})）。
 - 英国：据 The Times，CMA、ICO 等监管机构称智能体可能放大风险，包括「不符合用户预期的个人信息分享」；ICO 已就 agentic AI 的数据保护风险征集证据（[The Times]({{< relref "/docs/muse/sources/media/2026-11-09-times-muse-uk-launch" >}})）。资料中没有欧盟上线或监管介入的记录。各地开放情况见[开放与价格]({{< relref "/docs/muse/analysis/access-pricing" >}})。
 
 ## 资料缺口
@@ -120,10 +128,12 @@ Facebook Marketplace 上 Muse 把用户住址发给买家的事件，属于权�
 - 人物页面：用户能否查看、删除关于他人的页面；断开连接器或删除联系人后页面是否清除；非用户表单的实际处理结果。
 - Confidential VM 的上线时间、适用范围（是否付费、是否覆盖语音和眼镜）和审计报告。
 - 欧盟、英国、日本、新加坡等地区的隐私条款差异和监管动态。
-- 「拒绝 Messages 权限仍同步 18.7 万条 iMessage」的一手出处。
+- iMessage 同步事件中 Aten 的 Inc 原文；Messages 同步数据的保存位置、保留期与删除方式。
+- 眼镜语音隐私声明美国版与英国版的差异是否属实及原因。
 
 ## 主要资料
 
 - 官方：[安全博客]({{< relref "/docs/muse/sources/official/2026-09-08-how-we-built-safety-into-muse" >}})（训练轨迹、广告间接影响、员工访问、Confidential VM）；[帮助中心：隐私与安全]({{< relref "/docs/muse/sources/official/2026-09-08-help-privacy-safety-security" >}})（默认开启、去除的个人信息类别、广告承诺）；[帮助中心：管理数据]({{< relref "/docs/muse/sources/official/2026-09-10-help-manage-data" >}})（删除、重置、导出）；[帮助中心：连接器]({{< relref "/docs/muse/sources/official/2026-09-08-help-connectors" >}})（数据最小化、断开后留存）；[帮助中心：Mac]({{< relref "/docs/muse/sources/official/2026-10-08-help-mac" >}})（截图、完全磁盘访问）；[帮助中心：眼镜测试版]({{< relref "/docs/muse/sources/official/2026-10-27-help-glasses-beta" >}})（语音政策、90 天删除）。
 - 媒体：[Wired：更擅长监视]({{< relref "/docs/muse/sources/media/2026-09-20-wired-muse-better-at-surveilling" >}})（默认训练、记忆无关闭开关、专家意见）；[Hunterbrook]({{< relref "/docs/muse/sources/media/2026-09-28-hunterbrook-dox-for-me-muse" >}})（按群体汇编账户名单）；[404 Media]({{< relref "/docs/muse/sources/media/2026-09-22-404media-muse-calls-made-by-humans" >}})（真人代拨电话）；[Medianama 转述 TIME]({{< relref "/docs/muse/sources/media/2026-10-08-medianama-muse-dossiers" >}})（联系人档案、遗忘指令）；[Ars Technica]({{< relref "/docs/muse/sources/media/2026-10-20-arstechnica-shared-conversations-exposed" >}})、[The Verge]({{< relref "/docs/muse/sources/media/2026-10-22-verge-muse-sharing-back-on" >}})（分享链接暂停与恢复）；[The Times]({{< relref "/docs/muse/sources/media/2026-11-09-times-muse-uk-launch" >}})（英国监管）。
 - 社区：[Future Society 审查]({{< relref "/docs/muse/sources/community/2026-09-26-future-society-muse-own-files" >}})（外发数据、遗忘、人物页面）；[非用户的消息]({{< relref "/docs/muse/sources/community/2026-11-04-muse-non-user-messages" >}})（Meta 非用户帮助页与缺口）；[Claroc]({{< relref "/docs/muse/sources/community/2026-10-18-claroc-ghostshares" >}})（GhostShares）；[Muse 安全吗]({{< relref "/docs/muse/sources/community/2026-11-06-is-meta-muse-safe-privacy" >}})（隐私政策转述、Confidential VM 进度）。
+- 2026-11-15 增量：[Chrome 扩展]({{< relref "/docs/muse/sources/media/2026-11-13-muse-chrome-extension" >}})、[Poppy 官方稿]({{< relref "/docs/muse/sources/official/2026-11-13-poppy-personal-agent-protocol" >}})（媒体、官方）；[iMessage 事件详解]({{< relref "/docs/muse/sources/community/2026-10-01-did-muse-read-your-messages" >}})、[Secure VM 攻击面]({{< relref "/docs/muse/sources/community/2026-11-05-muse-secure-vm-attack-surface" >}})、[Walsh：非用户隐私]({{< relref "/docs/muse/sources/community/2026-11-13-walsh-muse-non-user-privacy" >}})、[眼镜 Beta 核查]({{< relref "/docs/muse/sources/community/2026-11-09-muse-on-glasses-beta" >}})、[电话披露缺口]({{< relref "/docs/muse/sources/community/2026-11-08-phone-calls-disclosure-gap" >}})、[Spaces 分档分析]({{< relref "/docs/muse/sources/community/2026-11-14-spaces-describe-once-keep-it" >}})、[Chang：PAP 拆解]({{< relref "/docs/industry/sources/community/2026-10-10-pap-personal-agent-protocol-deep-dive" >}})（社区）。

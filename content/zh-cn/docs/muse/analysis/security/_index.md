@@ -2,8 +2,8 @@
 title: "Meta Muse：安全"
 linkTitle: "安全"
 weight: 80
-analyzedAt: 2026-11-13
-sourcesUntil: 2026-11-12
+analyzedAt: 2026-11-15
+sourcesUntil: 2026-11-15
 description: >
   Muse 用宿主侧的 Sentinel、cell 外的凭证服务 authd 和一次性卡号把「模型想做什么」与「被允许做什么」分开，官方公开的架构在同类产品中最详细；但审批粒度可由用户放宽，上线头两个月接连出现客户端零日、文件系统导出、分享链接暴露、住址泄露等事件。
 ---
@@ -15,7 +15,8 @@ description: >
 - 官方明确承认提示注入「仍是悬而未决的问题」，并把责任写进帮助页：用户要监督 Muse、为它代下的订单负责。
 - 上线后两个月内，资料记录了至少六起有据可查的事件：macOS 客户端零日、根文件系统可被诱导导出、上线前的 VM 逃逸加固冲刺、分享链接经 DNS 暴露、Marketplace 住址泄露、按要求列出弱势群体名单。Meta 对其中几起的定性是「预期行为」或「不是远程漏洞」。详见[已披露的漏洞与事件](incidents/)。
 - 漏洞赏金是 Meta 的主要外部检验手段：上限 30 万美元，截至 2026-11-02 官方称收到 630 多份提交、确认 64 项、付出约 120 万美元。
-- 安全顾虑也来自外部：亚马逊、摩根大通、嘉信和加拿大五大银行先后封堵 Muse 等外部智能体，理由之一是凭证与责任；Muse 在网络流量中不声明身份，到 2026-10 中旬才被观察到对部分请求签名。
+- 安全顾虑也来自外部：亚马逊、摩根大通、嘉信和加拿大五大银行先后封堵 Muse 等外部智能体，理由之一是凭证与责任；Muse 在网络流量中不声明身份，到 2026-10 中旬才被观察到对部分请求签名。2026-11-13 发布的 Poppy 1.0 给商家提供了识别 Muse 并经 OAuth 授权的标准方式（见[连接器]({{< relref "/docs/muse/analysis/connectors" >}})），落地程度未经证实。
+- 前 Meta 安全主管 Alex Stamos 2026-10-23 称，把整个 1Password 交给 Muse 这类智能体处理财务「totally insane」。11-13 前后出现的 Chrome 扩展让 Muse 在用户自己的浏览器中操作，Meta 帮助页称网页上的密码在 Muse 读取前被去除，同时提醒 Muse 的活动会记在用户的账户名下。
 
 ## 三层隔离：cell、authd 与 Sentinel
 
@@ -42,6 +43,8 @@ Meta 发布当天的安全文章描述了这套设计（[官方安全文章]({{<
 
 宣传口径与这套设置之间有落差。发布稿和小企业稿说「未经你的批准，任何内容都不会被发布、发送或花费」（[Muse for Small Business]({{< relref "/docs/muse/sources/official/2026-09-29-muse-for-small-business" >}})）；AI Agents Library 指出，实际是否每次询问取决于用户此前点过哪个按钮（[AI Agents Library：Duet 对 Muse]({{< relref "/docs/industry/sources/community/2026-10-22-aiagentslibrary-duet-vs-muse" >}})）。Future Society 从 VM 文件中核验到，普通浏览器表单提交默认不请求批准，登录、购买、发帖仍需批准；日历事件增删等操作在用户「明确请求」时可免确认，而「明确」由模型判断（[Future Society 核验]({{< relref "/docs/muse/sources/community/2026-09-26-future-society-muse-own-files" >}})）。Engadget 实测发现默认只对部分操作提示，评测者希望有更细的权限，例如限定到某个 Instagram 账户（[Engadget：dot 对 Muse]({{< relref "/docs/industry/sources/media/2026-10-11-engadget-dot-vs-muse" >}})）。社区教程几乎一致建议把默认改成「始终询问」、少点「始终允许」（[ugoearn 五类任务]({{< relref "/docs/muse/sources/community/2026-10-09-ugoearn-five-task-types" >}})、[Muse 安全吗]({{< relref "/docs/muse/sources/community/2026-11-06-is-meta-muse-safe-privacy" >}})、[热爱草：一文读懂]({{< relref "/docs/industry/sources/community/2026-11-10-redaicao-personal-agent-explainer" >}})）。
 
+「始终允许」的含义本身有分歧。据一篇社区分析转述，Robb 以为它只是免去每次询问，Meta 的 David Singleton 的解释是可以用已提供的信息（包括住址）回复所有 Marketplace 消息、接受报价无需新的批准，并称 Muse「correctly asked for permission」；作者指出常驻授权没有设计上的期限（[Secure VM 攻击面]({{< relref "/docs/muse/sources/community/2026-11-05-muse-secure-vm-attack-surface" >}})）。另一位作者指出，2026-11-06 的 Spaces 公告不足 600 字，没有说明 Space 的后台更新适用哪些连接器权限、读取邮件的后台更新是否像聊天请求一样经过审批（[Spaces 分档分析]({{< relref "/docs/muse/sources/community/2026-11-14-spaces-describe-once-keep-it" >}})）。
+
 推断：Marketplace 住址泄露是「始终允许」加上模型自行解释授权范围的结果（见[事件页](incidents/)），连接器指南不允许把敏感写入设为始终允许，可能是对此的收紧。资料中没有 Meta 把两者联系起来的说法，指南也只约束连接器。
 
 ## 凭证与付款：模型看不到，责任在用户
@@ -51,6 +54,12 @@ Meta 发布当天的安全文章描述了这套设计（[官方安全文章]({{<
 付款有两种方式。官方推荐 Muse 内置钱包里的 Stripe Link，每笔签发一张一次性卡号，绑定特定商家、金额，限时有效；另一种是用安全存储中的凭证登录商家账户、用已存信用卡付款，官方要求用户「始终监督」。每次购买都需要批准（[帮助：付款]({{< relref "/docs/muse/sources/official/2026-09-22-help-payments" >}})）。
 
 帮助页同时写明，用户「要对你的 Muse 代表你进行的所有交易负责」（[帮助：付款]({{< relref "/docs/muse/sources/official/2026-09-22-help-payments" >}})）。TOP5 Apps 称，Stripe Link 的条款让用户为智能体购买负责，「无论那些交易是否出于你的本意」，并把智能体交易排除在未授权交易保护之外（[TOP5 Apps]({{< relref "/docs/industry/sources/community/2026-11-01-best-personal-ai-agents-top5apps" >}})）；这与帮助页所说 Stripe 对符合条件的购买提供保障的说法需要对照条款原文才能判断适用范围，资料中没有条款原文。
+
+用户实测中，高风险的金融输入仍停在用户手上：Peter Yang 让 Muse 把 AT&T 改为银行账户扣款，账号和路由号码 Muse 以隐私为由拒绝代填，由他自己输入；Marketplace 议价消息发送前也先向他确认（[Peter Yang 十个工作流]({{< relref "/docs/muse/sources/community/2026-10-14-peter-yang-ten-workflows" >}})）。
+
+外部的安全意见集中在凭证交付上。据 2026-11-06 的媒体报道，Stamos（现为 Cognition 首席安全官）在 Big Technology Podcast 上称，用户把整个 1Password 交给 Muse 处理财务和报税「totally insane」，并点名 Instinct 等同类工具；他指出银行现在看到的是凭证合法、但显然是机器人的交互。同文引摩根大通 CEO Dimon 的说法，该行阻止外部智能体代客户操作，存在「责任转移」；Meta 未回应置评，只引用帮助页（[Stamos 的警告]({{< relref "/docs/muse/sources/media/2026-11-06-stamos-muse-password-warning" >}})）。
+
+**Chrome 扩展的边界。** 据 All Things Muse 转述 TestingCatalog 与商店页：扩展里 Muse 只能在自己的标签组内操作，看不到已保存密码、浏览历史和 Chrome 设置，网页上的密码在 Muse 读取页面文本前被去除；操作前需批准，有完整活动日志。Meta 帮助页同时提醒，被访问的网站可能把 Muse 的活动归到用户名下，活动可能出现在用户的 Google 账户和浏览历史中，建议把不想让 Muse 接触的账户先登出（[Chrome 扩展]({{< relref "/docs/muse/sources/media/2026-11-13-muse-chrome-extension" >}})）。推断：这条路线在凭证上更省事（不用把密码交给 VM），但网站分辨不出用户与智能体的问题更突出。
 
 Future Society 核验到的两处细节与「模型看不到」的口径有张力：Muse 在登录、结账时会自动从已连接的邮件或同步短信中查一次性验证码（以不透明引用保存，填入需新的批准）；询问一次后可以代为解答 CAPTCHA（[Future Society 核验]({{< relref "/docs/muse/sources/community/2026-09-26-future-society-muse-own-files" >}})）。官方安全文章说邮件连接器会过滤一次性验证码；两者是否针对不同路径（连接器与短信同步、浏览器），资料不足以判断。
 
@@ -74,11 +83,14 @@ Muse 在网络流量中不声明自己是智能体。DataDome 统计 99.3% 的 M
 
 金融机构的封堵把安全与责任问题摆到了台面上：摩根大通禁止外部智能体在零售客户账户内操作，嘉信 CEO 称每周拦截「几十次」，加拿大皇家银行 10-27 的内部备忘录称其为「不可接受的客户风险」，其余四大行一天内跟进；美国银行提醒客户共享凭据后活动由客户负责（[谁在封堵]({{< relref "/docs/muse/sources/media/2026-11-06-who-blocks-agents" >}})、[加拿大银行]({{< relref "/docs/muse/sources/media/2026-11-02-canada-banks-block-agents" >}})、[Wired：商务现实]({{< relref "/docs/muse/sources/media/2026-10-31-wired-muse-commerce-reality-check" >}})）。通行的界线是「可以看，不可以动」。零售商封堵、亚马逊与 Meta 的纠纷等见[连接器]({{< relref "/docs/muse/analysis/connectors" >}})。
 
-推断：Muse 的凭证隔离解决的是「模型看不到密码」，没有解决网站方面临的问题——它无法分辨请求来自用户还是智能体、出事后由谁负责。银行的封堵理由集中在后者，所以 Sentinel 一类的内部设计不足以换来网站的放行；Web Bot Auth 签名、与 Stripe、Shopify 等合作的智能体标准，是另一条需要行业配合的路线。
+HUMAN Security 的报告也承认，Muse 的浏览可能表现为用户自己的活动，识别 Muse 对站点一直是难题（[HUMAN 十月报告]({{< relref "/docs/muse/sources/media/2026-11-14-muse-59-percent-agentic-traffic-human-october" >}})）。2026-11 起，eBay 疑似拦截第三方智能体，美联航以合同条款禁止智能体订票，理由之一是把 MileagePlus 登录交给外部智能体会暴露支付和行程信息（[The Verge：eBay]({{< relref "/docs/muse/sources/media/2026-11-10-ebay-blocks-third-party-ai-agents" >}})、[美联航禁令]({{< relref "/docs/muse/sources/community/2026-11-13-united-bans-agent-booking" >}})）。
+
+推断：Muse 的凭证隔离解决的是「模型看不到密码」，没有解决网站方面临的问题——它无法分辨请求来自用户还是智能体、出事后由谁负责。银行的封堵理由集中在后者，所以 Sentinel 一类的内部设计不足以换来网站的放行；Web Bot Auth 签名、与 Stripe、Shopify 等合作的智能体标准，是另一条需要行业配合的路线；2026-11-13 的 Poppy 1.0 是这条路线的第一个正式版本。
 
 ## 资料缺口
 
 - 独立安全审计或第三方渗透测试报告；Sentinel、污点出站的实际拦截率。
+- Spaces 后台更新的权限与审批规则；「始终允许」的有效期规则；Chrome 扩展的官方安全说明。
 - 「始终允许」在连接器指南发布后是否仍适用于浏览器中的购买、发送；早先用户设置是否被迁移。
 - Stripe Link 条款原文中关于智能体交易的责任与保护范围。
 - 一次性验证码：邮件连接器过滤与 VM 内自动查码两种说法的关系。
@@ -93,3 +105,4 @@ Muse 在网络流量中不声明自己是智能体。DataDome 统计 99.3% 的 M
 - 媒体：[DataDome]({{< relref "/docs/muse/sources/media/2026-10-15-datadome-muse-29-million-requests" >}})、[谁在封堵]({{< relref "/docs/muse/sources/media/2026-11-06-who-blocks-agents" >}})、[DataCamp 对比]({{< relref "/docs/industry/sources/media/2026-10-27-datacamp-dots-vs-muse" >}})、[Engadget：dot 对 Muse]({{< relref "/docs/industry/sources/media/2026-10-11-engadget-dot-vs-muse" >}})；事件报道见[事件页](incidents/)。
 - 社区：[Future Society 核验]({{< relref "/docs/muse/sources/community/2026-09-26-future-society-muse-own-files" >}})（VM 内文件逐条核验）；[Muse 安全吗]({{< relref "/docs/muse/sources/community/2026-11-06-is-meta-muse-safe-privacy" >}})（对照官方页面）；[AI Agents Library：Duet 对 Muse]({{< relref "/docs/industry/sources/community/2026-10-22-aiagentslibrary-duet-vs-muse" >}})；[Pat Simmons 实测]({{< relref "/docs/industry/sources/community/2026-10-06-pat-simmons-grok-muse-dots" >}})。
 - 实测：[VM 探索实测]({{< relref "/docs/muse/sources/exploration/2026-10-12-muse-vm-exploration" >}})（2026-10-12，容器隔离与 Sentinel 审批）。
+- 2026-11-15 增量：[Stamos 的警告]({{< relref "/docs/muse/sources/media/2026-11-06-stamos-muse-password-warning" >}})、[Chrome 扩展]({{< relref "/docs/muse/sources/media/2026-11-13-muse-chrome-extension" >}})、[HUMAN 十月报告]({{< relref "/docs/muse/sources/media/2026-11-14-muse-59-percent-agentic-traffic-human-october" >}})、[The Verge：eBay]({{< relref "/docs/muse/sources/media/2026-11-10-ebay-blocks-third-party-ai-agents" >}})（媒体）；[Secure VM 攻击面]({{< relref "/docs/muse/sources/community/2026-11-05-muse-secure-vm-attack-surface" >}})、[Spaces 分档分析]({{< relref "/docs/muse/sources/community/2026-11-14-spaces-describe-once-keep-it" >}})、[Peter Yang 十个工作流]({{< relref "/docs/muse/sources/community/2026-10-14-peter-yang-ten-workflows" >}})、[美联航禁令]({{< relref "/docs/muse/sources/community/2026-11-13-united-bans-agent-booking" >}})（社区）。

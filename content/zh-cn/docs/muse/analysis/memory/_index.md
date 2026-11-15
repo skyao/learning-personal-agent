@@ -2,8 +2,8 @@
 title: "Meta Muse：记忆与上下文"
 linkTitle: "记忆与上下文"
 weight: 20
-analyzedAt: 2026-11-13
-sourcesUntil: 2026-11-12
+analyzedAt: 2026-11-15
+sourcesUntil: 2026-11-15
 description: >
   Muse 的记忆是放在用户云端虚拟机里的 Markdown 文件，加一个 Postgres 索引，由每小时、每晚的后台任务维护。用户能看、能改、能下载，但「遗忘」只是尽力而为，记忆没有关闭开关，另外还会为用户身边的人建页。
 ---
@@ -86,9 +86,15 @@ Meta 的回应：发言人称 Muse 根据公开信息和用户选择分享的内
 
 一个社群讨论指出，Muse 目前用搜索等常规工具读取记忆，再交给模型（[海外独角兽社群讨论]({{< relref "/docs/industry/sources/community/2026-10-23-haiwaidujiaoshou-discussion" >}})）；dev.to 的作者认为，记忆是检索与判断问题，而不是存储问题（[dev.to 解读]({{< relref "/docs/muse/sources/community/2026-11-09-devto-specialized-models-explainer" >}})）。
 
+一位社区作者指出，Meta 的这些数字都是自测，没有公布方法，「少遗忘」仍意味着会遗忘（[Spaces 分档分析]({{< relref "/docs/muse/sources/community/2026-11-14-spaces-describe-once-keep-it" >}})）。
+
 ## 用户反馈：记忆是公认的长处
 
 据 Enterpret 对用户帖子的聚合统计，Muse 在邮件分拣、提醒、记忆、不半途而废这几项上得分最高（[用户偏好统计]({{< relref "/docs/industry/sources/community/2026-11-03-personal-ai-agents-users-prefer" >}})）。几个单个用户的报告：有用户在出门旅游前说要开始减肥，Muse 等旅游回来才提醒（[智消前沿：家谱]({{< relref "/docs/industry/sources/community/2026-11-09-aiwenxiao-personal-agent-family-tree" >}})）；有用户因为说过首页很关键，Muse 在改 WordPress 前先做了备份（[投资人日常]({{< relref "/docs/industry/sources/community/2026-11-10-tegongyuzhou-investor-daily-life" >}})）。这些都是单个用户的报告，没有独立验证。DataCamp 对比时指出，Muse 可以「忘记」特定内容，而 Dots 发布时无法查看或编辑单条记忆（[DataCamp]({{< relref "/docs/industry/sources/media/2026-10-27-datacamp-dots-vs-muse" >}})）。记忆在实际任务中的表现见[实际效果与可靠性]({{< relref "/docs/muse/analysis/reliability" >}})。
+
+2026-11 的单人实测给出了记忆起作用的具体例子：一位加州选民让 Muse 按官方选民指南处理整张选票，Muse 凭数月请求和文件形成的记忆指出，总检察长办公室 7 月曾发函支持选民自己的项目，10 月又加入一起不利于该项目的联邦诉讼；这一冲突只存在于选民自己的文件里。作者认为个人智能体的优势在于「knows the voter」，同时提醒同一份记忆要以信任为前提（[选票实测]({{< relref "/docs/muse/sources/community/2026-11-11-muse-read-my-ballot" >}})）。Peter Yang 的「目标」页演示中，Muse 先访谈触发点、替代行为和就寝时间，再建立习惯计划并从对话中生成待办（[Peter Yang 十个工作流]({{< relref "/docs/muse/sources/community/2026-10-14-peter-yang-ten-workflows" >}})）。
+
+Spaces 也是一种「描述一次、长期保存」的上下文：社区作者把 2026-11-06 Meta 公布的九个示例按所需权限分档，四个无需实时数据，三个依赖已连接应用的数据新鲜度，两个（小商家订单追踪、自由职业客户中心）读取他人的消息和订单（[Spaces 分档分析]({{< relref "/docs/muse/sources/community/2026-11-14-spaces-describe-once-keep-it" >}})）。
 
 ## 资料缺口
 
@@ -104,3 +110,4 @@ Meta 的回应：发言人称 Muse 根据公开信息和用户选择分享的内
 - 媒体：[WIRED：为亲友建档]({{< relref "/docs/muse/sources/media/2026-10-03-wired-muse-profiles-friends-family" >}})、[MediaNama 转述 TIME]({{< relref "/docs/muse/sources/media/2026-10-08-medianama-muse-dossiers" >}})（Relationships 任务）；[WIRED：更擅长监视]({{< relref "/docs/muse/sources/media/2026-09-20-wired-muse-better-at-surveilling" >}})（无关闭开关）；[雷峰网]({{< relref "/docs/muse/sources/media/2026-10-23-leiphone-muse-openclaw-lineage" >}})（USER.md、记忆迁移）；[Hunterbrook]({{< relref "/docs/muse/sources/media/2026-09-28-hunterbrook-dox-for-me-muse" >}})（社交数据汇编）。
 - 社区：[Future Society 审查]({{< relref "/docs/muse/sources/community/2026-09-26-future-society-muse-own-files" >}})（遗忘缺口、Relationships 提示词）；[Peter James 导出]({{< relref "/docs/muse/sources/community/2026-09-22-peter-james-muse-filesystem-export" >}})（文件、索引、做梦）；[CodePick 架构分析]({{< relref "/docs/muse/sources/community/2026-09-24-codepick-muse-architecture" >}})（压缩与权重不变）；[用户偏好统计]({{< relref "/docs/industry/sources/community/2026-11-03-personal-ai-agents-users-prefer" >}})。
 - 实测：[VM 探索]({{< relref "/docs/muse/sources/exploration/2026-10-12-muse-vm-exploration" >}})（2026-10-12，Muse 自述的数据库结构）。
+- 2026-11-15 增量：[选票实测]({{< relref "/docs/muse/sources/community/2026-11-11-muse-read-my-ballot" >}})、[Peter Yang 十个工作流]({{< relref "/docs/muse/sources/community/2026-10-14-peter-yang-ten-workflows" >}})、[Spaces 分档分析]({{< relref "/docs/muse/sources/community/2026-11-14-spaces-describe-once-keep-it" >}})（社区）。

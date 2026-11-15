@@ -2,10 +2,10 @@
 title: "Meta Muse 资料分析和总结"
 linkTitle: "分析总结"
 weight: 20
-analyzedAt: 2026-11-13
-sourcesUntil: 2026-11-12
+analyzedAt: 2026-11-15
+sourcesUntil: 2026-11-15
 description: >
-  Meta Muse 是独立 App 形态、免费起步、每个用户一台云端虚拟机的消费级个人智能体，主攻生活杂事和购物；分析覆盖截至 2026-11-12 收集的 125 篇 Muse 资料和 64 篇涉及 Muse 的行业资料。
+  Meta Muse 是独立 App 形态、免费起步、每个用户一台云端虚拟机的消费级个人智能体，主攻生活杂事和购物；分析覆盖截至 2026-11-15 收集的 152 篇 Muse 资料和 67 篇涉及 Muse 的行业资料（2026-11-15 增量更新 23 篇）。
 ---
 
 ## 概要
@@ -13,10 +13,10 @@ description: >
 - Muse 给每个用户一台隔离的云端 Linux 虚拟机（Muse Secure VM），智能体框架和工具跑在虚拟机内的运行时单元里，凭证、Sentinel 审查等服务放在单元之外。这套环境对用户相当透明，可以查看文件、接管浏览器，甚至打包导出整个文件系统，相应也带来了安全问题。（[运行环境](runtime/)）
 - 记忆以 Markdown 文件为源头，由每小时、每晚的后台任务形成，用户可以查看和编辑。接入的个人数据比同类产品宽，Meta 自家社交数据是最大的区别。但删除内容后 Muse 可能仍然记得，记忆没有关闭开关，为联系人（包括非用户）维护的「人物页」是最大的争议。（[记忆与上下文](memory/)、[隐私](privacy/)）
 - 「主动」止于发现、准备、提醒：周期任务、目标、后台更新的 Spaces 可以在用户离开后运行，但购买、发送等写操作不能预先或批量批准。（[持续执行](continuous-execution/)）
-- 外部服务有四条接入路径：审核上架的目录连接器、Muse 现场生成的自定义连接器、虚拟机内的浏览器、Mac/安卓/Gadget 本地接入。生态扩张快，第三方申请不到一周超过 1,500 份；浏览器路线则招来亚马逊、摩根大通、嘉信和加拿大五大银行的封堵。（[连接器](connectors/)）
-- 入口是独立的 Muse App、网页和 WhatsApp，之后扩展到 Mac、眼镜 Beta、语音与化身、手表、自有邮箱 Muse Mail，以及仅限美国付费用户的商家电话；专用硬件 Muse Charm 已宣布未发货。（[交互渠道](channels/)、[设备](devices/)）
+- 外部服务有四条接入路径：审核上架的目录连接器、Muse 现场生成的自定义连接器、虚拟机内的浏览器、Mac/安卓/Gadget 本地接入。生态扩张快，第三方申请不到一周超过 1,500 份；浏览器路线则招来亚马逊、摩根大通、嘉信和加拿大五大银行的封堵，11 月又有 eBay 拦截、美联航以合同禁止智能体订票。Meta 的回应是与 Sierra 共同制定的 Poppy（Personal Agent Protocol），2026-11-13 发布 1.0，Muse 称首个支持，但截至 11-14 没有应用内落地的证据；同日出现的 Chrome 扩展则让 Muse 在用户自己的浏览器里操作。（[连接器](connectors/)）
+- 入口是独立的 Muse App、网页和 WhatsApp，之后扩展到 Mac、眼镜 Beta、语音与化身、手表、自有邮箱 Muse Mail，以及仅限美国付费用户的商家电话（单价、上限、是否披露 AI 身份均未公布）；专用硬件 Muse Charm 已宣布未发货。（[交互渠道](channels/)、[设备](devices/)）
 - 门槛在跟踪产品中最低：一个 Meta 账户即可免费使用，付费档 Power 每月 20 美元、Maximum 每月 100 美元，按每周令牌额度区分。截至 2026-11-12 已开放美国、加拿大、日本、新加坡、墨西哥五国。（[开放与价格](access-pricing/)）
-- 规模领先、单位经济未证实：据 Meta Q3 财报电话会，上线约六周美加超过 1000 万人完成设置；长期收入押在向商家收取交易费上，费率未公布，第三方估算的单用户成本高于 20 美元的订阅价。（[商业与规模](business/)）
+- 规模领先、单位经济未证实：据 Meta Q3 财报电话会，上线约六周美加超过 1000 万人完成设置；长期收入押在向商家收取交易费上，费率未公布，第三方估算的单用户成本高于 20 美元的订阅价。浏览流量高度集中（HUMAN 称 10 月 Muse 占其观测智能体请求的 59%），成交仍小（Uber 称第三季度经第三方智能体只完成 4 单出行）。（[商业与规模](business/)）
 - 官方的安全架构在同类产品中公开得最系统，但没有独立审计；上线两个月内资料记录了至少六起漏洞和事件。实测评价分歧大，日常杂事表现好，多步骤业务流程和「说做了实际没做」是反复出现的问题。（[安全](security/)、[实际效果与可靠性](reliability/)）
 
 ## 定位
@@ -54,6 +54,7 @@ Wired 的六款同场评测把 Muse 评为「最易上手」，Dots 为「最佳
 | 2026-09 下旬 | Marketplace 住址泄露事件 | [卫报]({{< relref "/docs/muse/sources/media/2026-09-28-guardian-muse-home-address" >}}) |
 | 2026-09-29 | Muse for Small Business | [Muse for Small Business]({{< relref "/docs/muse/sources/official/2026-09-29-muse-for-small-business" >}}) |
 | 2026-10-03 | Wired 报道 Muse 为亲友建档（Relationships 任务） | [Wired]({{< relref "/docs/muse/sources/media/2026-10-03-wired-muse-profiles-friends-family" >}}) |
+| 2026-10-06 | Sierra 与 Meta 宣布共同制定 Personal Agent Protocol（后称 Poppy），10-09 公布草案 | [Sierra：协议发布]({{< relref "/docs/industry/sources/community/2026-10-06-introducing-personal-agent-protocol" >}}) |
 | 2026-10-12 | Muse Wonder 与 Muse Wonder Full 发布，Wonder「首先面向订阅用户」 | [推出 Muse Wonder]({{< relref "/docs/muse/sources/official/2026-10-12-introducing-muse-wonder-models" >}}) |
 | 2026-10-20 至 10-22 | 分享链接可经被动 DNS 枚举，分享功能暂停后恢复 | [Ars Technica]({{< relref "/docs/muse/sources/media/2026-10-20-arstechnica-shared-conversations-exposed" >}})、[Verge]({{< relref "/docs/muse/sources/media/2026-10-22-verge-muse-sharing-back-on" >}}) |
 | 2026-10-21 | Meta Q3 财报电话会：美加超 1000 万人设置 Muse（转述） | [Muse 101]({{< relref "/docs/muse/sources/community/2026-11-04-muse-101-agentic-commerce" >}}) |
@@ -66,11 +67,16 @@ Wired 的六款同场评测把 Muse 评为「最易上手」，Dots 为「最佳
 | 2026-11-06 | Spaces 上线；向 Muse 与 Meta AI 推送用 Wonder 训练的特化模型 | [Spaces]({{< relref "/docs/muse/sources/official/2026-11-06-design-muse-app-spaces" >}})、[特化模型]({{< relref "/docs/muse/sources/official/2026-11-06-specialized-models-muse-meta-ai" >}}) |
 | 2026-11-09 | Apple Watch 与 Wear OS；The Times 称数周内进入英国；印度卢比定价 | [TechCrunch]({{< relref "/docs/muse/sources/media/2026-11-10-techcrunch-muse-apple-watch-wear-os" >}})、[The Times]({{< relref "/docs/muse/sources/media/2026-11-09-times-muse-uk-launch" >}})、[印度定价]({{< relref "/docs/muse/sources/media/2026-11-09-india-pricing-ahead-of-launch" >}}) |
 | 2026-11-10 至 11-11 | Muse Mail 向美加付费用户开放，Wang 称将开放给免费档；Uber Courier 接入 | [Muse Mail 付费用户]({{< relref "/docs/muse/sources/media/2026-11-10-muse-mail-paid-subscribers" >}})、[Muse Mail 免费档]({{< relref "/docs/muse/sources/media/2026-11-11-muse-mail-free-plans-soon" >}})、[Uber Courier]({{< relref "/docs/muse/sources/media/2026-11-10-uber-courier-deliveries" >}}) |
+| 2026-11-06 | 可在 Meta AI 眼镜上开启 Muse Beta（替换 Meta AI，据社区核查） | [眼镜 Beta 核查]({{< relref "/docs/muse/sources/community/2026-11-09-muse-on-glasses-beta" >}}) |
+| 2026-11-08 前后 | eBay 疑似拦截第三方智能体，11-12 时好时坏 | [The Verge：eBay]({{< relref "/docs/muse/sources/media/2026-11-10-ebay-blocks-third-party-ai-agents" >}}) |
+| 2026-11-11 | 美联航修订运输合同，禁止 AI 智能体订票（据社区评论转述） | [美联航禁令]({{< relref "/docs/muse/sources/community/2026-11-13-united-bans-agent-booking" >}}) |
 | 2026-11-12 | 给商家打电话结束测试，向美国付费用户开放（09-16 起测试） | [TechCrunch：付费可打电话]({{< relref "/docs/muse/sources/media/2026-11-12-techcrunch-muse-phone-calls-paid" >}})、[Engadget]({{< relref "/docs/muse/sources/media/2026-11-12-engadget-muse-phone-calls-paid" >}}) |
+
+| 2026-11-13 | Poppy（Personal Agent Protocol）1.0 发布，Muse 称首个支持，设计伙伴超过 100 家，Shopify 全部商店自动发布 Poppy 文件；Chrome 扩展「Muse from Meta」上架（Meta 未宣布） | [Poppy 官方稿]({{< relref "/docs/muse/sources/official/2026-11-13-poppy-personal-agent-protocol" >}})、[Sierra：Poppy 1.0]({{< relref "/docs/industry/sources/community/2026-11-13-releasing-personal-agent-protocol-1-0" >}})、[Chrome 扩展]({{< relref "/docs/muse/sources/media/2026-11-13-muse-chrome-extension" >}}) |
 
 ## 整体架构
 
-每个用户的 Muse 运行在一台 Meta 托管的云端虚拟机上：智能体框架和工具在运行时单元内，凭证服务、安全分类器、Sentinel 和推理代理在单元外。Mac 应用和安卓手机可以作为本地执行端，Gadgets SDK 和 Home Link 用来接入家中设备。
+每个用户的 Muse 运行在一台 Meta 托管的云端虚拟机上：智能体框架和工具在运行时单元内，凭证服务、安全分类器、Sentinel 和推理代理在单元外。2026-11 起，Chrome 扩展让 Muse 也能在用户自己的浏览器中执行。Mac 应用和安卓手机可以作为本地执行端，Gadgets SDK 和 Home Link 用来接入家中设备。
 
 上下文来自主对话、记忆文件和后台任务整理出的人物页；数据通过目录连接器、自定义连接器、浏览器登录和本地设备接入，Meta 自家的 Facebook、Instagram、Marketplace 数据是一大来源。
 
@@ -87,14 +93,14 @@ Wired 的六款同场评测把 Muse 评为「最易上手」，Dots 为「最佳
 | [运行环境](runtime/) | 每个用户一台隔离的云端虚拟机，用户实测为 2 vCPU、8 GB，空闲即回收，只有用户盘保留；Confidential VM 截至 2026-11-12 未上线 |
 | [记忆与上下文](memory/) | 记忆是可查看、可编辑的 Markdown 文件，由后台任务形成；遗忘有限，只能重置清空 |
 | [持续执行](continuous-execution/) | 提醒、周期任务、目标、Spaces 在后台运行；写操作不能预先批准，复杂任务有「报告已做实际没做」的情况 |
-| [连接器](connectors/) | 四条接入路径，生态扩张快；浏览器路线招致亚马逊和多家银行封堵，Meta 推动 Personal Agent Protocol |
-| [交互渠道](channels/) | 独立 App、网页、WhatsApp 加语音、手表、Muse Mail；对外以用户名义沟通，多处未标明是 AI |
+| [连接器](connectors/) | 四条接入路径，生态扩张快；浏览器路线招致亚马逊、银行、eBay、美联航限制；Poppy 1.0 于 11-13 发布，落地待证 |
+| [交互渠道](channels/) | 独立 App、网页、WhatsApp 加语音、手表、Muse Mail、Chrome 扩展；对外以用户名义沟通，商家电话的披露规则未公布 |
 | [设备](devices/) | 手机、Mac、手表已上线，眼镜处于 Beta，Muse Charm 未发货；Gadgets SDK 开源 |
 | [模型](models/) | 由自研 Muse Spark 驱动，Muse Wonder 先给订阅用户，11 月起推送特化模型；用户不能自选 |
 | [安全](security/) | Sentinel、凭证隔离、一次性卡号，架构公开最系统但无独立审计；两个月内至少六起事件（[事件详情](security/incidents/)） |
 | [隐私](privacy/) | 默认用于训练、可关闭；承诺不进广告系统；为非用户建人物页是最大争议 |
 | [开放与价格](access-pricing/) | 免费起步，Power 20 美元、Maximum 100 美元；五国开放，英国、印度在即 |
-| [商业与规模](business/) | 美加超 1000 万人设置；押注交易费，单位经济未证实，交易流量尚小 |
+| [商业与规模](business/) | 美加超 1000 万人设置；押注交易费，单位经济未证实；浏览流量份额高（HUMAN 10 月 59%），成交尚小 |
 | [实际效果与可靠性](reliability/) | 排名分歧大，生活杂事好、多步骤业务流程差；没有官方完成率，11-04 有一次未公告的停运 |
 
 ## 资料缺口
@@ -106,4 +112,5 @@ Wired 的六款同场评测把 Muse 评为「最易上手」，Dots 为「最佳
 - 免费档的官方额度，额外令牌的价格，日本和墨西哥的本币价格。
 - 官方的完成率、出错率、可用性数据或状态页；数周以上长期使用的稳定性。
 - 眼镜 Beta 的开放范围、Muse Charm 的规格和发货时间。
+- Poppy 在应用内的实际表现和经 Poppy 完成的交易；Chrome 扩展的官方说明；商家电话的单价、上限、AI 身份披露和成功率。
 - 部分重要资料只收到链接或节选：Wardle 的 OBTS 演讲、Gmail 收件箱实测、Skift 对 Expedia 的测试（原文截断）。

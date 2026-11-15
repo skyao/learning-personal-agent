@@ -2,8 +2,8 @@
 title: "Meta Muse：开放与价格"
 linkTitle: "开放与价格"
 weight: 100
-analyzedAt: 2026-11-13
-sourcesUntil: 2026-11-12
+analyzedAt: 2026-11-15
+sourcesUntil: 2026-11-15
 description: >
   Muse 是跟踪产品中唯一免费起步的：只要 Meta 账户、年满 18 岁，没有候补名单；付费档 Power 每月 20 美元、Maximum 每月 100 美元，按每周令牌额度区分。截至 2026-11-12 开放美国、加拿大、日本、新加坡、墨西哥五个市场，欧盟、英国尚未开放。
 ---
@@ -12,7 +12,7 @@ description: >
 
 - 门槛低：使用 Muse 只需一个 Meta 账户（不必有 Facebook 或 Instagram 账户），年满 18 岁，在已开放的地区通过 iOS、Android、muse.ai 使用，没有候补名单。有两篇第三方资料称免费档注册也要绑定支付卡，官方资料中没有这一要求。
 - 价格按每周令牌额度分档：免费档有用量上限，用完后升级或等额度刷新；Power 每月 20 美元、每周 5 亿 Muse 令牌，Maximum 每月 100 美元、每周 30 亿令牌。帮助中心另有「购买额外的 Muse 令牌」入口。免费档的具体额度官方没有公布，媒体报道的「每周最多 1 亿令牌」出自 Sources 节目。
-- 开放顺序：美国（09-08）、加拿大（09-18）、日本（10-23）、新加坡（10-27）、墨西哥（11-05）。The Times 报道将在数周内进入英国，印度已有卢比标价，但尚在等候名单阶段。欧盟没有时间表。
+- 开放顺序：美国（09-08）、加拿大（09-18）、日本（10-23）、新加坡（10-27）、墨西哥（11-05）。The Times 报道将在数周内进入英国，印度已有卢比标价，但尚在等候名单阶段；据印度媒体 11-12 转述 Meta 印度负责人，Muse 将于 2027 年初进入印度。欧盟没有时间表。
 - 新功能常常先给付费用户：Muse Wonder 模型先面向订阅用户，Muse Mail 先向美加付费用户开放，给商家打电话 11-12 起仅向美国付费用户开放，Home Link 硬件随订阅附赠。语音、视频聊天、Spaces 则向所有档位开放。
 - 订阅在官方帮助中心仍标为「有限测试阶段」，权益与可用性因地区和账户而异。媒体普遍把「免费起步」视为 Muse 相对 Dots（100 美元起）、Grok Bot、Claude Duet 的主要优势。用户反馈中，Muse 在「国家可用性」一项垫底。
 
@@ -56,6 +56,7 @@ AI Agents Library 据官方页面整理称 Muse「没有候补名单，也不用
 | 2026-11-05 | 墨西哥上线：第五个市场，拉美和西语地区的第一个；iOS、Android、muse.ai、WhatsApp，18 岁以上，免费版加可选订阅 | [墨西哥上线]({{< relref "/docs/muse/sources/media/2026-11-05-muse-launches-mexico" >}}) |
 | 2026-11-09 | 印度订阅价曝光：Power ₹1,799、Maximum ₹8,999，经 Google Play、Apple 购买略贵；印度用户仍在等候名单上 | [印度定价]({{< relref "/docs/muse/sources/media/2026-11-09-india-pricing-ahead-of-launch" >}}) |
 | 2026-11-09 | The Times 称 Meta 准备在数周内于英国推出 Muse，「对大多数人免费」 | [泰晤士报：英国]({{< relref "/docs/muse/sources/media/2026-11-09-times-muse-uk-launch" >}}) |
+| 2026-11-12 | 据社区台账转述《经济时报》、Livemint 对 Meta 印度负责人 Arun Srinivas 的采访，Muse 将于 2027 年初进入印度；作者只读到片段，没有 Meta 的一手确认和确切日期 | [电话代打台账]({{< relref "/docs/muse/sources/community/2026-11-14-muse-phone-calls-paid-rollout" >}}) |
 
 截至 2026-11-05，英国、欧盟和拉美其他地区都没有公布日期（[墨西哥上线]({{< relref "/docs/muse/sources/media/2026-11-05-muse-launches-mexico" >}})）。有第三方资料称，Meta 不公布完整的国家清单（[入门成本对比]({{< relref "/docs/industry/sources/community/2026-10-01-dots-muse-grok-bot-duet-costs" >}})）。印度稿只列了美国、加拿大、日本、新加坡四地提供免费档，不含墨西哥；同期的手表报道则称 Muse 已在五个市场提供（[手表报道]({{< relref "/docs/muse/sources/media/2026-11-09-muse-apple-watch-wear-os" >}})）。两者口径不同，原因不明。
 
@@ -75,7 +76,11 @@ AI Agents Library 据官方页面整理称 Muse「没有候补名单，也不用
 | Spaces | 全部 Muse 用户，「凡是提供 Muse 的地方」 | 2026-11-06 | [Spaces 演示]({{< relref "/docs/muse/sources/media/2026-11-06-muse-spaces-demos" >}}) |
 | Muse Mail | 先向美国、加拿大付费订阅用户开放；11-11 Wang 称很快向所有人开放，「including free plans」，没有给日期 | 2026-11-10 / 11-11 | [Muse Mail 付费用户]({{< relref "/docs/muse/sources/media/2026-11-10-muse-mail-paid-subscribers" >}})、[免费档即将开放]({{< relref "/docs/muse/sources/media/2026-11-11-muse-mail-free-plans-soon" >}}) |
 | 给商家打电话 | 测试期先给主动向 Muse 要求的用户；正式开放后仅限美国付费订阅用户 | 2026-09-16 测试 / 2026-11-12 | [TechCrunch：Instinct 与 Muse 都能打电话]({{< relref "/docs/industry/sources/media/2026-09-17-techcrunch-instinct-muse-phone-calls" >}})、[TechCrunch：付费可打电话]({{< relref "/docs/muse/sources/media/2026-11-12-techcrunch-muse-phone-calls-paid" >}}) |
+| 手表应用 | 不额外收费（据 The Gadgeteer）；用量如何计入令牌额度未说明 | 2026-11-09 | [手表核查]({{< relref "/docs/muse/sources/community/2026-11-12-muse-on-apple-watch-wear-os" >}}) |
+| Poppy | Sierra 称对「所有 Muse 用户」开启；两份官方稿都没有提开关、套餐要求或价格 | 2026-11-13 | [Poppy 落地核查]({{< relref "/docs/muse/sources/community/2026-11-14-poppy-first-sierra-ledger" >}}) |
 | AI 眼镜 Beta | Muse 免费但有用量限制；Beta 参与者获得额外用量，不可转让，Beta 结束时未兑换的优惠失效 | 2026-10-27 | [帮助：眼镜 Beta]({{< relref "/docs/muse/sources/official/2026-10-27-help-glasses-beta" >}}) |
+
+商家电话正式开放时没有新设档位或单次附加价，也没有说明长时间等候如何计入每周令牌；开放范围只限美国订阅用户打给美国商家，比 App 本身的开放地区小（[电话代打台账]({{< relref "/docs/muse/sources/community/2026-11-14-muse-phone-calls-paid-rollout" >}})）。日本的日元订阅价在发布报道和应用截图中出现过两套互相矛盾的数字，Meta 都没有确认（[日本 11-12 核查]({{< relref "/docs/muse/sources/community/2026-11-13-japan-november-12-check" >}})）。Spaces 公告没有说明价格和用量限制（[Spaces 分档分析]({{< relref "/docs/muse/sources/community/2026-11-14-spaces-describe-once-keep-it" >}})）。
 
 语音模式是否从同一份每周额度中扣除，Meta 的订阅页没有说明；有作者假定从同一份额度扣除（[打开语音模式]({{< relref "/docs/muse/sources/community/2026-11-06-how-to-turn-on-muse-voice-mode" >}})）。各渠道和设备见[交互渠道]({{< relref "/docs/muse/analysis/channels" >}})、[设备]({{< relref "/docs/muse/analysis/devices" >}})。
 
@@ -114,3 +119,4 @@ NYT 的结论是，考虑价格与能力，选 Muse「是显而易见的选择�
 - 官方：[帮助：关于订阅]({{< relref "/docs/muse/sources/official/2026-09-08-help-about-subscriptions" >}})（档位、额度、条件）；[帮助：订阅目录]({{< relref "/docs/muse/sources/official/2026-10-20-help-subscriptions-hub" >}})（额外令牌入口）；[推出 Muse]({{< relref "/docs/muse/sources/official/2026-09-08-introducing-muse" >}})、[日本上线]({{< relref "/docs/muse/sources/official/2026-10-23-japan-launch" >}})、[新加坡上线]({{< relref "/docs/muse/sources/official/2026-10-27-singapore-launch" >}})（地区）；[推出 Muse Wonder]({{< relref "/docs/muse/sources/official/2026-10-12-introducing-muse-wonder-models" >}})、[Home Link]({{< relref "/docs/muse/sources/official/2026-11-04-muse-home-link" >}})（订阅权益）。
 - 媒体：[Sources：Zuckerberg 谈 Muse]({{< relref "/docs/muse/sources/media/2026-09-08-sources-zuckerberg-on-muse" >}})（免费额度、收费思路）；[海峡时报]({{< relref "/docs/muse/sources/media/2026-10-28-straits-times-muse-singapore" >}})、[印度定价]({{< relref "/docs/muse/sources/media/2026-11-09-india-pricing-ahead-of-launch" >}})（本币价格）；[TechCrunch：付费可打电话]({{< relref "/docs/muse/sources/media/2026-11-12-techcrunch-muse-phone-calls-paid" >}})（通话仅限付费）；[墨西哥上线]({{< relref "/docs/muse/sources/media/2026-11-05-muse-launches-mexico" >}})（开放顺序）；[日经：日本不投广告]({{< relref "/docs/muse/sources/media/2026-10-24-meta-muse-japan-no-ads-nikkei" >}})（Muse Code 价格）；[Tom's Guide：Muse 对 Dots]({{< relref "/docs/industry/sources/media/2026-09-30-tomsguide-muse-vs-dots" >}})（价格对比）。
 - 社区：[入门成本对比]({{< relref "/docs/industry/sources/community/2026-10-01-dots-muse-grok-bot-duet-costs" >}})、[AI Agents Library：Duet 对 Muse]({{< relref "/docs/industry/sources/community/2026-10-22-aiagentslibrary-duet-vs-muse" >}})（据官方页面整理）；[池中物：国内注册]({{< relref "/docs/muse/sources/community/2026-10-04-chizhongwu-china-registration" >}})（邀请码）；[用户偏好统计]({{< relref "/docs/industry/sources/community/2026-11-03-personal-ai-agents-users-prefer" >}})（用户诉求）。
+- 2026-11-15 增量：[电话代打台账]({{< relref "/docs/muse/sources/community/2026-11-14-muse-phone-calls-paid-rollout" >}})、[手表核查]({{< relref "/docs/muse/sources/community/2026-11-12-muse-on-apple-watch-wear-os" >}})、[日本 11-12 核查]({{< relref "/docs/muse/sources/community/2026-11-13-japan-november-12-check" >}})、[Spaces 分档分析]({{< relref "/docs/muse/sources/community/2026-11-14-spaces-describe-once-keep-it" >}})、[Poppy 落地核查]({{< relref "/docs/muse/sources/community/2026-11-14-poppy-first-sierra-ledger" >}})（社区）。

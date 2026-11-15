@@ -2,8 +2,8 @@
 title: "Meta Muse：持续执行"
 linkTitle: "持续执行"
 weight: 30
-analyzedAt: 2026-11-13
-sourcesUntil: 2026-11-12
+analyzedAt: 2026-11-15
+sourcesUntil: 2026-11-15
 description: >
   Muse 关闭应用后仍在云端按计划、随事件继续工作，用户侧有提醒、周期任务、位置提醒、目标和 Spaces；调度器在虚拟机之外，写操作仍逐次等用户批准；实测中定时类任务较稳，「声称在做却没做」是反复出现的问题。
 ---
@@ -48,6 +48,10 @@ description: >
 
 推断：从调度器在虚拟机之外、虚拟机按空闲情况回收这两点看，Muse 的持续执行可能是「外部调度 + 按需拉起执行环境」，而不是让每台虚拟机常驻。这能解释「关掉应用仍在工作」与虚拟机频繁回收为何能同时成立。依据只有一位用户的实测，官方没有说明。
 
+Peter Yang 演示的几种常设任务：每天检查 Messenger、WhatsApp、iMessage 的未读消息并标出需跟进的人；每周推送本地活动的「weekend scout」；每天汇总 AI 动态的晨间信息流；Goals 习惯计划每晚提醒、次早检查并画连续天数图（他的记录是零胜两负）（[Peter Yang 十个工作流]({{< relref "/docs/muse/sources/community/2026-10-14-peter-yang-ten-workflows" >}})）。眼镜上的 Muse 同样在用户说完后继续执行（[眼镜 Beta 核查]({{< relref "/docs/muse/sources/community/2026-11-09-muse-on-glasses-beta" >}})）。
+
+Spaces 的后台更新带来新的问题：社区作者指出 Meta 没有说明后台刷新频率、连接断开时的行为，也没有说明读取邮件的后台更新是否像聊天请求一样经过审批（[Spaces 分档分析]({{< relref "/docs/muse/sources/community/2026-11-14-spaces-describe-once-keep-it" >}})）。
+
 ## 主动联系：门槛、频率与实际感受
 
 设计文称主动消息「发送一条消息的门槛必须很高」，默认设置适合大多数人，用户可以让 Muse 关掉、调低或调高（[设计 Muse]({{< relref "/docs/muse/sources/official/2026-09-08-how-we-designed-muse" >}})）。泄露文件显示的是另一面：没有免打扰时段设置，用户不能控制审批消息的路由；用户要求少发消息时，智能体按规定只能更新偏好文件，不能承诺管道会安静下来；同一份文档规定普通主动推送大约每天一次；信息流关不掉，「活跃读者得到更多帖子」（[Future Society：泄露 VM 审查]({{< relref "/docs/muse/sources/community/2026-09-26-future-society-muse-own-files" >}})）。
@@ -87,6 +91,7 @@ description: >
 - 调度器的实现：官方没有说明，只有单个用户的推断。
 - 特化模型上线（2026-11-06）后，长时间、多步任务的独立复测。
 - 不同订阅档位在后台任务上的差别（额度、频率）。
+- Spaces 后台更新的刷新频率、权限范围和审批规则。
 
 ## 主要资料
 
@@ -94,3 +99,4 @@ description: >
 - 媒体：[Tom's Guide：10 项自动化]({{< relref "/docs/muse/sources/media/2026-10-07-tomsguide-automate-10-tasks" >}})；[NYT 五项任务]({{< relref "/docs/industry/sources/media/2026-10-25-nyt-five-killer-tasks" >}})（位置触发、招聘帖）；[Axios]({{< relref "/docs/industry/sources/media/2026-10-20-axios-battle-of-bots" >}})；[量子位]({{< relref "/docs/industry/sources/media/2026-11-03-qbitai-orilo-voice-personal-agent" >}})（打扰体验）。
 - 社区：[Future Society：泄露 VM 审查]({{< relref "/docs/muse/sources/community/2026-09-26-future-society-muse-own-files" >}})（后台作业、通知控制、购买不可预批）；[CodePick：Muse 架构]({{< relref "/docs/muse/sources/community/2026-09-24-codepick-muse-architecture" >}})；[村长：七天自动化]({{< relref "/docs/muse/sources/community/2026-10-03-cunzhang-seven-day-automation" >}})；[Pat Simmons]({{< relref "/docs/industry/sources/community/2026-10-06-pat-simmons-grok-muse-dots" >}})；[AI Agents Library]({{< relref "/docs/industry/sources/community/2026-10-09-aiagentslibrary-dots-spark-muse" >}})。
 - 实测：[Muse VM 探索]({{< relref "/docs/muse/sources/exploration/2026-10-12-muse-vm-exploration" >}})（2026-10-12，`scheduler.jobs` 29 行，外部调度器推断，心跳与回收）。
+- 2026-11-15 增量：[Peter Yang 十个工作流]({{< relref "/docs/muse/sources/community/2026-10-14-peter-yang-ten-workflows" >}})、[眼镜 Beta 核查]({{< relref "/docs/muse/sources/community/2026-11-09-muse-on-glasses-beta" >}})、[Spaces 分档分析]({{< relref "/docs/muse/sources/community/2026-11-14-spaces-describe-once-keep-it" >}})（社区）。

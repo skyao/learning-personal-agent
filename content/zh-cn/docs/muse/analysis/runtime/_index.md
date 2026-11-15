@@ -2,8 +2,8 @@
 title: "Meta Muse：运行环境"
 linkTitle: "运行环境"
 weight: 10
-analyzedAt: 2026-11-13
-sourcesUntil: 2026-11-12
+analyzedAt: 2026-11-15
+sourcesUntil: 2026-11-15
 description: >
   每位 Muse 用户有一台 Meta 云端的专用 Linux 虚拟机（Muse Secure VM），智能体本体 Hatch 跑在其中的 systemd-nspawn 容器里，凭证、审批与出站控制放在容器之外；实测显示虚拟机空闲即回收、按需冷启动，只有 100 GB 的用户盘跨实例保留。
 ---
@@ -14,7 +14,7 @@ description: >
 - 虚拟机内部是两层边界：智能体框架 Hatch 和所有工具运行在 systemd-nspawn「运行时单元」（runtime cell）里，凭证服务、安全分类器、Sentinel、数据库、推理代理作为独立服务放在单元之外。官方安全文章、漏洞赏金指南和用户实测三方说法一致。
 - 用户实测（2026-10）看到的规格是 2 vCPU、8 GB 内存、100 GB 用户盘、无显卡，但内存气球回收了大部分内存；两天内 VM 被替换 9 次，空闲几分钟到半小时即释放，靠冷启动恢复，只有挂在 `/home/hatch` 的用户盘跨实例保留。官方没有公布这些机制。
 - 环境对用户相当透明：用户可以看系统文件、活动日志，打开、接管或停止浏览器；多名用户和记者让 Muse 把整个根文件系统打包导出，Meta 称这不涉及基础设施或他人数据。这也引出了 VM 逃逸、文件导出等安全问题（见[安全]({{< relref "/docs/muse/analysis/security" >}})）。
-- 云端运行的代价是机房 IP 被部分网站屏蔽、文件不在用户本机。Meta 宣布过「机密虚拟机」（Muse Confidential VM），截至 2026-11-12 的资料仍是未来时。Mac 应用是另一条在用户本机执行的路径。
+- 云端运行的代价是机房 IP 被部分网站屏蔽、文件不在用户本机。Meta 宣布过「机密虚拟机」（Muse Confidential VM），截至 2026-11-12 的资料仍是未来时。Mac 应用是另一条在用户本机执行的路径；2026-11-13 前后上架的 Chrome 扩展让 Muse 在用户自己的浏览器里操作，是第三条。
 
 ## 每个用户一台云端虚拟机
 
@@ -93,13 +93,18 @@ CodePick 的分析提醒，容器里看不到某个服务不能证明它在另�
 
 Mac 应用是云端 VM 之外的执行路径：帮助中心称 Muse 可在用户电脑上查找、整理文件，读取 iMessage、备忘录、提醒事项、邮件、日历等本地应用（[帮助：Mac]({{< relref "/docs/muse/sources/official/2026-10-08-help-mac" >}})）。Muse Gadgets 的 Linux Device SDK 也能把树莓派等机器变成执行自定义命令的「小设备」（[Gadget SDK]({{< relref "/docs/muse/sources/official/2026-10-02-muse-gadget-sdk-readme" >}})）。本地设备的分工见[设备]({{< relref "/docs/muse/analysis/devices" >}})。
 
+**Chrome 扩展：在用户的浏览器里执行。** 据 All Things Muse 转述 TestingCatalog，Muse 对话内的浏览器与用户自己的浏览器分开运行，而 Chrome 扩展让 Muse 直接使用用户的 Chrome 和已登录的网站，无需再给登录信息。Muse 的标签页归入单独的标签组，只能在组内操作；用户可以观看、暂停，或点击页面、按 Esc、把标签页拖出组来接管，任务完成后控制权交还 Chrome。扩展中 Muse 看不到已保存的密码、浏览历史和 Chrome 设置（[Chrome 扩展]({{< relref "/docs/muse/sources/media/2026-11-13-muse-chrome-extension" >}})）。推断：这绕开了「机房 IP 被网站屏蔽」的问题，代价是执行离开了 Secure VM 的边界，安全与隐私上的影响见[安全]({{< relref "/docs/muse/analysis/security" >}})、[隐私]({{< relref "/docs/muse/analysis/privacy" >}})。Meta 没有正式宣布这一扩展。
+
+截至 2026-11-13 的社区资料，Confidential VM 仍未普遍可用，当前设计下 Meta 仍可出于运营需要访问 VM 中的数据（[Secure VM 攻击面]({{< relref "/docs/muse/sources/community/2026-11-05-muse-secure-vm-attack-surface" >}})、[Walsh：非用户隐私]({{< relref "/docs/muse/sources/community/2026-11-13-walsh-muse-non-user-privacy" >}})）。
+
 ## 资料缺口
 
 - 官方的 VM 规格、配额、回收与恢复策略；单用户实测之外的独立验证。
 - Muse Confidential VM 的上线时间、技术方案和是否默认开启。
 - Mac 本地执行与云端 VM 之间如何分工、数据是否回传云端。
 - 文件系统导出后 Meta 实际做了哪些限制（Verge 只有「会随更新变化」的表态）。
-- 机房 IP 被网站屏蔽的范围，以及 Meta 是否有出口 IP 或身份声明方面的应对。
+- 机房 IP 被网站屏蔽的范围，以及 Meta 是否有出口 IP 或身份声明方面的应对（Poppy 1.0 见[连接器]({{< relref "/docs/muse/analysis/connectors" >}})）。
+- Chrome 扩展的官方说明：任务何时走 VM 浏览器、何时走用户浏览器。
 
 ## 主要资料
 
@@ -107,3 +112,4 @@ Mac 应用是云端 VM 之外的执行路径：帮助中心称 Muse 可在用户
 - 媒体：[Verge：文件系统下载]({{< relref "/docs/muse/sources/media/2026-09-24-verge-muse-filesystem-download" >}})（复现与 Meta 回应）；[雷峰网：OpenClaw 血缘]({{< relref "/docs/muse/sources/media/2026-10-23-leiphone-muse-openclaw-lineage" >}})（静态分析）；[ZFinance]({{< relref "/docs/industry/sources/media/2026-10-21-zfinance-qi-junyuan-today" >}})（沙箱成本假设）。
 - 社区：[Peter James：文件系统导出]({{< relref "/docs/muse/sources/community/2026-09-22-peter-james-muse-filesystem-export" >}})；[Future Society：泄露 VM 审查]({{< relref "/docs/muse/sources/community/2026-09-26-future-society-muse-own-files" >}})；[CodePick：架构分析]({{< relref "/docs/muse/sources/community/2026-09-24-codepick-muse-architecture" >}})；[村长：七天自动化]({{< relref "/docs/muse/sources/community/2026-10-03-cunzhang-seven-day-automation" >}})（IP 封禁、文件中转）；[Pat Simmons 实测]({{< relref "/docs/industry/sources/community/2026-10-06-pat-simmons-grok-muse-dots" >}})（透明度、反爬）。
 - 实测：[Muse VM 调研]({{< relref "/docs/muse/sources/exploration/2026-10-12-muse-vm-exploration" >}})（规格、VM 替换与释放、用户盘）。
+- 2026-11-15 增量：[Chrome 扩展]({{< relref "/docs/muse/sources/media/2026-11-13-muse-chrome-extension" >}})（媒体）；[Secure VM 攻击面]({{< relref "/docs/muse/sources/community/2026-11-05-muse-secure-vm-attack-surface" >}})、[Walsh：非用户隐私]({{< relref "/docs/muse/sources/community/2026-11-13-walsh-muse-non-user-privacy" >}})（社区）。

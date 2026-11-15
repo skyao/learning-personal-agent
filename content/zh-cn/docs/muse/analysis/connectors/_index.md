@@ -2,10 +2,10 @@
 title: "Meta Muse：连接器"
 linkTitle: "连接器"
 weight: 40
-analyzedAt: 2026-11-13
-sourcesUntil: 2026-11-12
+analyzedAt: 2026-11-15
+sourcesUntil: 2026-11-15
 description: >
-  Muse 以 Meta 审核的目录连接器为主，自定义连接器和云端浏览器兜底；生态从发布时的几十家扩展到购物、旅行、小企业和各地区本地服务，但用浏览器代替用户访问网站的路线遭到亚马逊、银行等平台方拦截，Meta 转向协议与定向合作。
+  Muse 以 Meta 审核的目录连接器为主，自定义连接器和云端浏览器兜底；生态从发布时的几十家扩展到购物、旅行、小企业和各地区本地服务，但用浏览器代替用户访问网站的路线遭到亚马逊、银行等平台方拦截，Meta 转向协议与定向合作；2026-11-13 Poppy（Personal Agent Protocol）1.0 发布，Muse 称首个支持。
 ---
 
 ## 概要
@@ -14,7 +14,8 @@ description: >
 - 授权按连接器逐个管理，读写分离，许多连接器可设为只读；平台连接器默认「首次使用时询问」，非敏感工具可改为「始终允许」。官方称凭据由独立服务保管、智能体看不到，连接器操作须经 Sentinel 放行。
 - 生态扩张很快：9 月 8 日发布时「几十家合作伙伴」加整个 Shopify 商品目录；9 月 23 日 Connect 加入 10 家零售商和 Expedia、Instacart 等；9 月 29 日小企业版接入 Slack、QuickBooks 等；日本、新加坡、墨西哥上线时各有本地连接器；11 月 Expedia、Uber Courier 陆续上线。
 - 连接器平台对第三方开放，据 Alexandr Wang 称不到一周收到超过 1,500 份申请。2026-11-04 收集的开发者指南要求连接器在 Muse 内「完成任务」，目前不批准转账、下单等金融资金流动工具。
-- 浏览器路线的代价是与平台方冲突：亚马逊 9 月 20 日屏蔽 Muse，嘉信理财、摩根大通、加拿大五大银行相继拦截；Muse 流量起初不表明身份。Meta 的回应是与 Sierra 等共同开发 Personal Agent Protocol，并定向与零售商合作。
+- 浏览器路线的代价是与平台方冲突：亚马逊 9 月 20 日屏蔽 Muse，嘉信理财、摩根大通、加拿大五大银行相继拦截；Muse 流量起初不表明身份。Meta 的回应是与 Sierra 等共同开发 Personal Agent Protocol，并定向与零售商合作。11 月 eBay 疑似拦截第三方智能体，美联航修订运输合同禁止智能体订票。
+- 2026-11-13 Personal Agent Protocol 以「Poppy」之名发布 1.0：商家在域名下发布 `poppy.json`，智能体据此识别服务、经 OAuth 在商家页面取得授权。Sierra 称 Poppy 对所有 Muse 用户已开启、所有 Shopify 商店自动发布 Poppy 文件；截至 11-14 的社区核查没有找到应用内的证据，Meta 点名的 BYLT、Hertz 仍是将来时。同日出现的 Chrome 扩展则让 Muse 用用户自己已登录的浏览器访问网站，与协议方向相反。
 
 ## 四条接入路径
 
@@ -22,7 +23,7 @@ description: >
 
 **自定义连接器。** 对目录里没有的服务，Muse 会引导用户创建自定义连接器，可能需要获取该服务的 API 信息并存入安全凭证存储（Secure Credentials Store）。帮助中心写明「Meta 不审查自定义连接器，也不审查它们如何使用你的信息」（[帮助：连接器]({{< relref "/docs/muse/sources/official/2026-09-08-help-connectors" >}})）。Engadget 实测中，Notion 就是靠 Muse 分步指引手动接通的（[Engadget 入门]({{< relref "/docs/muse/sources/media/2026-09-12-engadget-getting-started-muse" >}})）。用户 2026-10-12 的 VM 探索记录了 Muse 的自述：自定义连接器用 MCP SDK 或 API 文档现场生成，存为 Skill（[VM 探索]({{< relref "/docs/muse/sources/exploration/2026-10-12-muse-vm-exploration" >}})）。这部分是 Muse 的自述，没有官方文档印证。
 
-**浏览器兜底。** 没有连接器的网站，Muse 用 VM 内的浏览器操作；X、Threads 等由 Muse 用自己的浏览器登录后发布，Instagram 则走官方 API（[村长七天自动化]({{< relref "/docs/muse/sources/community/2026-10-03-cunzhang-seven-day-automation" >}})）。海峡时报称，新加坡没有直接集成的服务，Muse 仍可浏览网页订餐位、比价（[海峡时报]({{< relref "/docs/muse/sources/media/2026-10-28-straits-times-muse-singapore" >}})）。这条路径正是后文平台冲突的来源。
+**浏览器兜底。** 没有连接器的网站，Muse 用 VM 内的浏览器操作；X、Threads 等由 Muse 用自己的浏览器登录后发布，Instagram 则走官方 API（[村长七天自动化]({{< relref "/docs/muse/sources/community/2026-10-03-cunzhang-seven-day-automation" >}})）。海峡时报称，新加坡没有直接集成的服务，Muse 仍可浏览网页订餐位、比价（[海峡时报]({{< relref "/docs/muse/sources/media/2026-10-28-straits-times-muse-singapore" >}})）。Peter Yang 的演示中，Muse 用浏览器订到演出票；Linear 连接不上，他的解读是 Muse 聚焦日常应用（[Peter Yang 十个工作流]({{< relref "/docs/muse/sources/community/2026-10-14-peter-yang-ten-workflows" >}})）。这条路径正是后文平台冲突的来源。2026-11-13 前后 Chrome 应用商店出现「Muse from Meta」扩展，让 Muse 在用户自己的 Chrome 中用已登录的会话操作网站，Muse 的标签页归入单独的标签组，用户可随时接管；据 All Things Muse 转述 TestingCatalog，Meta 未正式宣布，商店页显示 126 名用户（[Chrome 扩展]({{< relref "/docs/muse/sources/media/2026-11-13-muse-chrome-extension" >}})）。这是继 VM 内浏览器之后的第二条网页路线，细节见[运行环境]({{< relref "/docs/muse/analysis/runtime" >}})与[隐私]({{< relref "/docs/muse/analysis/privacy" >}})。
 
 **本地设备。** Mac 上 Muse 可以读取本地应用，帮助文档同样写明「Meta 不审查这些应用」（[帮助：Mac]({{< relref "/docs/muse/sources/official/2026-10-08-help-mac" >}})）；Apple Health、Android SMS 等连接器的权限要在设备设置中管理（[帮助：连接器]({{< relref "/docs/muse/sources/official/2026-09-08-help-connectors" >}})）。硬件方面，Meta 在 GitHub 开源了 muse-gadget-sdk（[The Verge 自制 Gadget]({{< relref "/docs/muse/sources/media/2026-10-31-verge-diy-muse-charm" >}})）；涂鸦的 Tuya Cloud Devices Skill 用一个 API 密钥经涂鸦云控制设备，收录说明称它已于 2026-11-10 合并进该仓库（[涂鸦 Skill]({{< relref "/docs/muse/sources/community/2026-11-12-tuya-cloud-devices-skill" >}})）。设备与渠道的细节见[设备]({{< relref "/docs/muse/analysis/devices" >}})。
 
@@ -36,9 +37,11 @@ description: >
 | 2026-10-23 | 日本：Gmail、Google 日历、Instagram、Stripe、Shopify、Trip.com、Agoda、Klook；Mercari、Money Forward ME、Ticket Pia「正在推进」 | [日本上线]({{< relref "/docs/muse/sources/official/2026-10-23-japan-launch" >}}) |
 | 2026-10-27 | 新加坡：Shopee、Lazada、Grab、ShopBack、新加坡航空、Agoda、Klook、Trip.com，「逐步推出」 | [新加坡上线]({{< relref "/docs/muse/sources/official/2026-10-27-singapore-launch" >}}) |
 | 2026-10-28 | Shopify Fall '26 发布：Shop Pay 结账可在 Muse 内完成，并首次延伸到 Shopify 之外的商店，用 Visa、Mastercard、Discover 的卡组织令牌付款，商家无需新集成；据转述 The Defiant，首批接入的智能体是 Muse、Claude Duet、Grok Bot、Instinct；每笔购买由用户点「允许」，Shopify 称卡号不交给智能体 | [All Things Muse：Shop Pay 进入 Muse]({{< relref "/docs/industry/sources/media/2026-10-31-allthingsmuse-shop-pay-off-platform" >}}) |
+| 2026-10-26 | Money Forward ME 公告与 Muse 的集成开始：只读，Muse 可用其收支与资产数据做支出复核、储蓄计划和资产汇总，不能交易或转账，已关联机构的登录凭证不与 Muse 共享。截至 2026-11-12 的社区核查，日本三家中只有这一家确认上线，Mercari、Ticket Pia 没有开始日期，Mercari 11-12 财报材料未提 Muse | [日本 11-12 核查]({{< relref "/docs/muse/sources/community/2026-11-13-japan-november-12-check" >}}) |
 | 2026-11-05 | 墨西哥：Cinépolis、Coppel、Despegar、Kavak、Kueski、Liverpool、Rappi，将逐步启用 | [墨西哥上线]({{< relref "/docs/muse/sources/media/2026-11-05-muse-launches-mexico" >}}) |
 | 约 2026-11-04 | Expedia 连接在美国上线，距宣布约六周；支持自然语言搜索和预订酒店，不支持取消或改订 | [Skift：Expedia]({{< relref "/docs/muse/sources/media/2026-11-09-skift-expedia-live-on-muse" >}}) |
 | 2026-11-10 | Uber 称 Muse 可在聊天内安排 Uber Courier 快递 | [Uber Courier]({{< relref "/docs/muse/sources/media/2026-11-10-uber-courier-deliveries" >}}) |
+| 2026-11-13 | 随 Poppy 1.0 公布的首批企业：Mercury（经 Sierra，查余额与交易、分类支出、发起付款或转账，须过账户审批策略）；土耳其航空（查票价、航班状态，凭订单号调取订单，Miles&Smiles 会员可找升舱，付款前由客户批准）；BYLT「很快」、Hertz「将能」（经 Decagon 试点）；Synchrony 处于探索阶段 | [Poppy 官方稿]({{< relref "/docs/muse/sources/official/2026-11-13-poppy-personal-agent-protocol" >}})、[Sierra：Poppy 1.0]({{< relref "/docs/industry/sources/community/2026-11-13-releasing-personal-agent-protocol-1-0" >}})、[Poppy 落地核查]({{< relref "/docs/muse/sources/community/2026-11-14-poppy-first-sierra-ledger" >}}) |
 
 清单的「宣布」与「可用」之间有落差。Instacart 帮助中心写明 Muse 订单的支付要回到 Instacart 应用完成，仅限美国，不支持内嵌结账、会员定价、优惠券、自提等（据[Instacart 购物车]({{< relref "/docs/muse/sources/media/2026-11-04-muse-instacart-shopping-cart" >}})转述帮助页）；同一篇转述的连接器文档截图要求 Muse 只显示商品小计、「绝不要编造最终总价」。日本、新加坡、墨西哥的本地连接器都标注逐步推出。有社区作者提醒，合作名单很长不等于每个用户当天都能调用（[ayaner：从产品到架构]({{< relref "/docs/industry/sources/community/2026-11-08-ayaner-product-to-architecture" >}})）。截至 2026-11-12 的资料，Meta 没有公布完整的连接器清单（[Top5Apps 排名]({{< relref "/docs/industry/sources/community/2026-11-01-best-personal-ai-agents-top5apps" >}})）。
 
@@ -88,18 +91,35 @@ Meta 在 9 月向开发者开放连接器构建，入口为 muse.ai/platform（[
 
 **零售商的「无意封堵」。** 据 All Things Muse 转述 CNBC 11 月 1 日报道，Billions Network 审计 51 家美国大型零售商的公开规则：5 家明确限制智能体，37 家因针对爬虫的旧规则无意中封堵购物智能体，没有一家提供经核实的智能体购买渠道（[零售商审计]({{< relref "/docs/muse/sources/media/2026-11-02-retailers-block-agents-audit" >}})）。合作方也有摩擦：沃尔玛是 Meta 点名的合作伙伴，但有用户报告结账环节的人机验证拦住 Muse，沃尔玛对 TechCrunch 称并非有意（[Sitedex：给网站主]({{< relref "/docs/muse/sources/community/2026-11-01-sitedex-muse-for-site-owners" >}})）。36 氪汇总的被限制名单还包括 Yelp、eBay、达美航空、摩根大通等（[36 氪：智能体被拦]({{< relref "/docs/industry/sources/media/2026-10-21-36kr-agents-blocked" >}})）。
 
+**eBay。** 据 The Verge 2026-11-10 的报道（11-12 更新），11 月第一个周末 eBay 疑似拦截包括 Muse 在内的第三方智能体：一名读者此前数周用 Muse 整理 eBay 手表的每日摘要，当周 Muse 称被站点拦截；The Verge 复现时 Muse 有时转而引用镜像 eBay 商品的外部网站，截至 11-12 时好时坏。eBay 此前已在用户协议中禁止不经人工审核下单的「buy-for-me agents」，发言人称对第三方采取「selective approach」，事后澄清不是全面禁令；Meta 拒绝置评。同文称 Amazon 完全阻止外部智能体，Target 部分限制，Shopify 向购物者的智能体开放商品目录（[The Verge：eBay]({{< relref "/docs/muse/sources/media/2026-11-10-ebay-blocks-third-party-ai-agents" >}})）。
+
+**美联航。** 据 AI Home Building 的社区评论，美联航 2026-11-11 修订运输合同，禁止 AI 智能体订票、改签、选座、值机和用里程购票，定义中写明「无论旅客或其他个人是否监督或批准其行为」，11-11 之前智能体完成的预订不取消；这是合同条款而不是技术拦截，如何检测不清楚。同文称达美允许经认证的 AI 助手订票，美航允许部分合作伙伴购票；CBS News 与 CNBC 点名 Muse 和 Dots 是用户实际在用的订票智能体（[美联航禁令]({{< relref "/docs/muse/sources/community/2026-11-13-united-bans-agent-booking" >}})）。合同条款文字来自二手报道。Sierra 10-09 公布的 Personal Agent Protocol 新增设计伙伴中包括联合航空（[Sierra：协议发布]({{< relref "/docs/industry/sources/community/2026-10-06-introducing-personal-agent-protocol" >}})），参与协议设计与禁止智能体订票并不冲突：协议让商家自己决定放行什么。
+
 **身份问题。** 截至 2026-11-01，Meta 没有为 Muse 公布用户代理、IP 段或签名，面向网站主的爬虫清单里也没有 Muse（[Sitedex：给网站主]({{< relref "/docs/muse/sources/community/2026-11-01-sitedex-muse-for-site-owners" >}})）。DataDome 的 Jérôme Segura 称 Meta 自 10 月 12 日前后开始悄悄测试 Web Bot Auth，签名请求覆盖 Muse 等至少两个智能体，但量较小，Meta 未公开确认；DataDome 统计 9 月 22 日至 10 月 3 日 Muse 产生 2910 万次请求，占 9 月智能体浏览器流量的 33%（[DataDome：签名请求]({{< relref "/docs/muse/sources/media/2026-10-31-web-bot-auth-signed-requests" >}})）。
 
-**Meta 的应对。** 一是表态：据 36 氪，Meta 10 月初发表声明称「拒绝个人Agent就等于拒绝其背后的客户」（[36 氪：智能体被拦]({{< relref "/docs/industry/sources/media/2026-10-21-36kr-agents-blocked" >}})）。二是协议：据爱信邦，10 月 7 日 Meta 联合 Sierra、Walmart、Stripe、Shopify 等宣布共同开发 Personal Agent Protocol，基于 OAuth，解决商家如何识别智能体、它代表谁、能做什么（[爱信邦]({{< relref "/docs/industry/sources/media/2026-10-12-aixinbang-do-people-need" >}})）；加拿大银行一文把它视为长期方案。三是定向合作：结账上，Shopify 商品走 Universal Commerce Protocol，其他商家用 Link 访客结账（据 [Muse 101：智能体购物]({{< relref "/docs/muse/sources/community/2026-11-04-muse-101-agentic-commerce" >}}) 转述 Retailgentic 等）；沃尔玛 10 月为智能体开设专门通道，每个智能体单独建档、设消费上限（[中国新闻周刊]({{< relref "/docs/industry/sources/media/2026-11-08-china-newsweek-personal-agents" >}})）。
+**Meta 的应对。** 一是表态：据 36 氪，Meta 10 月初发表声明称「拒绝个人Agent就等于拒绝其背后的客户」（[36 氪：智能体被拦]({{< relref "/docs/industry/sources/media/2026-10-21-36kr-agents-blocked" >}})）。二是协议：据爱信邦，10 月 7 日 Meta 联合 Sierra、Walmart、Stripe、Shopify 等宣布共同开发 Personal Agent Protocol，基于 OAuth，解决商家如何识别智能体、它代表谁、能做什么（[爱信邦]({{< relref "/docs/industry/sources/media/2026-10-12-aixinbang-do-people-need" >}})）；加拿大银行一文把它视为长期方案。截至 2026-11-13 协议已发布 1.0，见下节。三是定向合作：结账上，Shopify 商品走 Universal Commerce Protocol，其他商家用 Link 访客结账（据 [Muse 101：智能体购物]({{< relref "/docs/muse/sources/community/2026-11-04-muse-101-agentic-commerce" >}}) 转述 Retailgentic 等）；沃尔玛 10 月为智能体开设专门通道，每个智能体单独建档、设消费上限（[中国新闻周刊]({{< relref "/docs/industry/sources/media/2026-11-08-china-newsweek-personal-agents" >}})）。
 
-推断：Muse 的连接器策略呈双轨。合作方走目录连接器和协议，非合作方靠浏览器「代用户访问」。后者覆盖面广，但身份不透明、依赖用户凭据，正是亚马逊和银行给出的拦截理由。从 Web Bot Auth 测试和 Personal Agent Protocol 看，Meta 正在把浏览器流量也纳入可识别的体系，但截至 2026-11-12 的资料，两者都没有公开落地。
+## Poppy 1.0：协议发布，落地情况待证
+
+**从草案到 1.0。** Sierra 2026-10-06 的官方博客宣布与 Meta 共同制定开放标准 Personal Agent Protocol，伙伴为 Genesys、Instinct、Rocket、Shopify、Stripe、Walmart，路线图是当月发布 v0.1 规范和参考实现；10-09 更新称新增 35 家设计伙伴（[Sierra：协议发布]({{< relref "/docs/industry/sources/community/2026-10-06-introducing-personal-agent-protocol" >}})）。2026-11-13 协议以「Poppy」之名发布 1.0：Sierra 称它吸收了设计伙伴五周的实测，主要基于 MCP、OpenAPI 和 UCP，认证走 OAuth，支持分阶段采用，新增扩展机制，设计伙伴超过 100 家（[Sierra：Poppy 1.0]({{< relref "/docs/industry/sources/community/2026-11-13-releasing-personal-agent-protocol-1-0" >}})）。Meta 官方稿称「Muse is the first personal agent to support Poppy」（[Poppy 官方稿]({{< relref "/docs/muse/sources/official/2026-11-13-poppy-personal-agent-protocol" >}})）。两份官方稿列的首批伙伴有出入：Sierra 稿有 Instinct，Meta 稿有 Decagon 而没有 Instinct（[Poppy 1.0 上线]({{< relref "/docs/muse/sources/media/2026-11-13-poppy-1-0-live" >}})、[Poppy 落地核查]({{< relref "/docs/muse/sources/community/2026-11-14-poppy-first-sierra-ledger" >}})）。
+
+**机制。** 官方稿写明：商家在域名下发布 `poppy.json`，说明提供什么服务、经网站、API/MCP 还是自有智能体接入；只有网站的商家可以先发布这个文件、不加客户登录；商家据此识别 Muse，不再把它与无用的机器流量一并拦截；网站操作、API 调用和与商家智能体的对话归入同一会话；客户在商家自己的页面经 OAuth 授权，可撤销，Muse 在这一流程中不经手密码（[Poppy 官方稿]({{< relref "/docs/muse/sources/official/2026-11-13-poppy-personal-agent-protocol" >}})）。社区作者 Gaowei Chang 依据规范逐项拆解：身份用 OAuth 2.0 加 CIMD（智能体以 HTTPS URL 作 client_id，商家无需逐家预注册）、JWT 和 DPoP；每个用户在每个商家有独立的假名 ID；默认权限为 `poppy:read` 与 `poppy:write`；跨渠道共用同一会话的权限；可选的 Operations 扩展记录每项操作的确认状态，但确认声明由个人智能体提供，商家无法独立证明用户同意；协议不定义全网搜索商家，也不定义两个个人智能体之间的通信（[Chang：PAP 拆解]({{< relref "/docs/industry/sources/community/2026-10-10-pap-personal-agent-protocol-deep-dive" >}})）。Chang 是 ANP 社区创始人，与协议比较有利益关系；该文日期为 10-10，读的应是 1.0 之前的版本。
+
+**Shopify 与 Meta 验证连接器。** Sierra 称 Shopify 为平台上每个商家启用 Poppy，每家商店默认支持 UCP 并自动发布 Poppy 文件，分工是 UCP 管找商品、购物车、结账，Poppy 管智能体到店后的身份与权限；Shopify 合写的商务扩展允许访客购物或用客户账户登录，部分动作须先问客户（[Sierra：Poppy 1.0]({{< relref "/docs/industry/sources/community/2026-11-13-releasing-personal-agent-protocol-1-0" >}})）。Meta 把 Poppy 与「Meta verified connectors」分为两条轨道：后者经功能、安全、法律审查和端到端测试，有 API 或 MCP 的企业在 platform.muse.ai 申请（[Poppy 官方稿]({{< relref "/docs/muse/sources/official/2026-11-13-poppy-personal-agent-protocol" >}})）。
+
+**落地的证据。** Sierra 称「Poppy is now on for everyone who uses Muse」，Muse 在访问的每个网站上先找 Poppy（[Sierra：Poppy 1.0]({{< relref "/docs/industry/sources/community/2026-11-13-releasing-personal-agent-protocol-1-0" >}})）。社区核查截至 11-14 没有找到应用内截图、设置项或用户报告，两份官方稿都没有说用户在某家 Shopify 商店能做什么，也没有 Shopify 自己的公告；Meta 稿对 BYLT、Hertz 用将来时，对 Mercury 有完整描述（[Poppy 落地核查]({{< relref "/docs/muse/sources/community/2026-11-14-poppy-first-sierra-ledger" >}})）。All Things Muse 的两篇报道称 Sierra「周四」发布、TestingCatalog「周四」报道扩展，而 2026-11-13 是周五，这里以页面日期为准（[Poppy 1.0 上线]({{< relref "/docs/muse/sources/media/2026-11-13-poppy-1-0-live" >}})、[Chrome 扩展]({{< relref "/docs/muse/sources/media/2026-11-13-muse-chrome-extension" >}})）。
+
+推断：Poppy 把此前「网站认不出智能体」的冲突转成商家可选的接入标准。从 Sierra、Shopify 的表态看覆盖面很大，但截至 2026-11-15 的资料，能证明 Muse 用户实际经 Poppy 完成交易的只有官方描述，没有实测。同日出现的 Chrome 扩展走相反方向：网站看到的是用户自己的浏览器。两条路线并行，说明 Meta 在协议普及之前仍保留「代用户访问」的兜底。
+
+推断：Muse 的连接器策略呈双轨。合作方走目录连接器和协议，非合作方靠浏览器「代用户访问」。后者覆盖面广，但身份不透明、依赖用户凭据，正是亚马逊和银行给出的拦截理由。从 Web Bot Auth 测试和 Personal Agent Protocol 看，Meta 正在把浏览器流量也纳入可识别的体系，截至 2026-11-12 的资料两者都没有公开落地；11-13 Poppy 1.0 发布，但应用内落地的证据仍不足（见上节）。
 
 ## 资料缺口
 
 - 完整的连接器清单及各连接器的上线状态、地区可用性；宣布的 10 家零售商中实际已上线的有哪些。
 - 自定义连接器的官方技术说明（是否基于 MCP、是否可分享），目前只有 Muse 的自述和帮助中心的一句话。
 - 连接器平台的审核数据：获批数量、平均审核周期、被拒原因。
-- Personal Agent Protocol 的规范文本、时间表与参与方的一手公告；Meta 对 Web Bot Auth 测试的确认。
+- Poppy 1.0 规范原文、用户在应用内能看到什么、经 Poppy 完成的交易实测；无 Poppy 文件的网站 Muse 如何处理；Meta 对 Web Bot Auth 测试的确认（Sierra 和 Meta 的公告已收，见上节）。
+- Chrome 扩展的官方公告与帮助文档；eBay、美联航限制的后续，美联航合同条款原文。
 - 亚马逊与 Meta 谈判的后续，以及 WIRED 所说亚马逊「预计与外部智能体合作」的一手出处。
 - 交易抽佣或连接器分成：Expedia 称经济模式仍在制定，其他合作方没有披露（见[商业与规模]({{< relref "/docs/muse/analysis/business" >}})）。
 
@@ -108,4 +128,5 @@ Meta 在 9 月向开发者开放连接器构建，入口为 muse.ai/platform（[
 - 官方：[帮助：连接器]({{< relref "/docs/muse/sources/official/2026-09-08-help-connectors" >}})（授权、只读、自定义连接器不审查、断开后数据去向）；[官方安全博客]({{< relref "/docs/muse/sources/official/2026-09-08-how-we-built-safety-into-muse" >}})（privsep、OAuth 令牌存放、读写分离）；[连接器指南]({{< relref "/docs/muse/sources/official/2026-11-04-connector-guidelines" >}})（准入、审核、金融限制）；[Connect 全部发布]({{< relref "/docs/muse/sources/official/2026-09-23-connect-2026-everything-announced" >}})（新增零售商）；[小企业版]({{< relref "/docs/muse/sources/official/2026-09-29-muse-for-small-business" >}})（工作类连接器）；[日本上线]({{< relref "/docs/muse/sources/official/2026-10-23-japan-launch" >}})、[新加坡上线]({{< relref "/docs/muse/sources/official/2026-10-27-singapore-launch" >}})（本地连接器）。
 - 媒体：[GeekWire：亚马逊屏蔽]({{< relref "/docs/muse/sources/media/2026-09-20-geekwire-amazon-blocks-muse" >}})；[WIRED]({{< relref "/docs/muse/sources/media/2026-10-31-wired-muse-commerce-reality-check" >}})（零售商合作与立场变化）；[Bloomberg：嘉信理财]({{< relref "/docs/muse/sources/media/2026-10-16-bloomberg-schwab-blocks-muse" >}})；[加拿大银行封堵]({{< relref "/docs/muse/sources/media/2026-11-02-canada-banks-block-agents" >}})；[零售商审计]({{< relref "/docs/muse/sources/media/2026-11-02-retailers-block-agents-audit" >}})；[DataDome：签名请求]({{< relref "/docs/muse/sources/media/2026-10-31-web-bot-auth-signed-requests" >}})；[Skift：Expedia]({{< relref "/docs/muse/sources/media/2026-11-09-skift-expedia-live-on-muse" >}})；[Instacart 购物车]({{< relref "/docs/muse/sources/media/2026-11-04-muse-instacart-shopping-cart" >}})；[TechCrunch]({{< relref "/docs/muse/sources/media/2026-09-23-techcrunch-everything-new-muse" >}})（1,500 份申请）；[卫报]({{< relref "/docs/muse/sources/media/2026-09-28-guardian-muse-home-address" >}})（「始终允许」案例）；[36 氪：智能体被拦]({{< relref "/docs/industry/sources/media/2026-10-21-36kr-agents-blocked" >}})。
 - 社区：[Sitedex：给网站主]({{< relref "/docs/muse/sources/community/2026-11-01-sitedex-muse-for-site-owners" >}})（身份标识）；[Muse 101：智能体购物]({{< relref "/docs/muse/sources/community/2026-11-04-muse-101-agentic-commerce" >}})（结账协议）；[OpenClaw 拆解]({{< relref "/docs/muse/sources/community/2026-11-04-muse-openclaw-teardown" >}})（安装包中的 skills）；[Peter James 文件系统导出]({{< relref "/docs/muse/sources/community/2026-09-22-peter-james-muse-filesystem-export" >}})、[Future Society 引文核验]({{< relref "/docs/muse/sources/community/2026-09-26-future-society-muse-own-files" >}})（VM 内的技能与未发布连接器）；[AI Agents Library：Duet 对比 Muse]({{< relref "/docs/industry/sources/community/2026-10-22-aiagentslibrary-duet-vs-muse" >}})（实测按需连接）。
+- 2026-11-15 增量：[Poppy 官方稿]({{< relref "/docs/muse/sources/official/2026-11-13-poppy-personal-agent-protocol" >}})、[Sierra：协议发布]({{< relref "/docs/industry/sources/community/2026-10-06-introducing-personal-agent-protocol" >}})、[Sierra：Poppy 1.0]({{< relref "/docs/industry/sources/community/2026-11-13-releasing-personal-agent-protocol-1-0" >}})（Poppy 官方）；[Poppy 1.0 上线]({{< relref "/docs/muse/sources/media/2026-11-13-poppy-1-0-live" >}})、[Chrome 扩展]({{< relref "/docs/muse/sources/media/2026-11-13-muse-chrome-extension" >}})、[The Verge：eBay]({{< relref "/docs/muse/sources/media/2026-11-10-ebay-blocks-third-party-ai-agents" >}})（媒体）；[Poppy 落地核查]({{< relref "/docs/muse/sources/community/2026-11-14-poppy-first-sierra-ledger" >}})、[Chang：PAP 拆解]({{< relref "/docs/industry/sources/community/2026-10-10-pap-personal-agent-protocol-deep-dive" >}})、[日本 11-12 核查]({{< relref "/docs/muse/sources/community/2026-11-13-japan-november-12-check" >}})、[美联航禁令]({{< relref "/docs/muse/sources/community/2026-11-13-united-bans-agent-booking" >}})、[Peter Yang 十个工作流]({{< relref "/docs/muse/sources/community/2026-10-14-peter-yang-ten-workflows" >}})（社区）。
 - 实测：[VM 探索]({{< relref "/docs/muse/sources/exploration/2026-10-12-muse-vm-exploration" >}})（2026-10-12，Gmail 读写权限、自定义连接器自述）。

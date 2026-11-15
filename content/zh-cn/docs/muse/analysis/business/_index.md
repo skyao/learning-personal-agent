@@ -2,8 +2,8 @@
 title: "Meta Muse：商业与规模"
 linkTitle: "商业与规模"
 weight: 110
-analyzedAt: 2026-11-13
-sourcesUntil: 2026-11-12
+analyzedAt: 2026-11-15
+sourcesUntil: 2026-11-15
 description: >
   Muse 上线约六周后，Meta 称美加超过 1000 万人完成设置；目前靠免费额度、Meta 自家流量和广告投放拉动增长，收入方向是向商家收取交易费，但费率未公布，单用户成本的第三方估算普遍高于订阅价。
 ---
@@ -14,7 +14,8 @@ description: >
 - 增长有 Meta 分发和投放的成分：Sensor Tower 估计 Meta 10 月广告支出的 39% 投给了 Muse，Apptopia 称 95% 的 Muse 用户同时是 Facebook 用户。留存是否稳定，资料中说法不一。
 - 商业模式：对大多数人免费，付费订阅服务重度用户，长期收入押在向商家收取交易费上。扎克伯格称这部分收入最终可能超过广告业务。佣金比例、适用商家和推出时间截至 2026-11-12 均未公布。Meta 预计新 AI 业务从 2027 年开始贡献增量收入。
 - 单位经济未经证实：摩根士丹利、中金等估算的单用户月成本（25% 配额下约 37 美元；中金测算的重度用户约 71.5 美元）高于 20 美元的 Power 订阅价。行业访谈纪要估计早期付费用户只有千人量级，Meta 未确认。
-- 交易端的实际流量尚小：WIRED 采访的约 50 家公司中，DoorDash、T-Mobile、Hilton 等称来自 Muse 等智能体的订单「几百单」或「微不足道」；Uber 称万圣节一周经智能体下的 Uber Eats 订单约 500 单。
+- 交易端的实际流量尚小：WIRED 采访的约 50 家公司中，DoorDash、T-Mobile、Hilton 等称来自 Muse 等智能体的订单「几百单」或「微不足道」；Uber 称万圣节一周经智能体下的 Uber Eats 订单约 500 单，第三季度经第三方智能体只完成 4 单出行。浏览流量则继续集中到 Muse：据 HUMAN Security 10 月报告（经 All Things Muse 转述），Muse 占其观测到的智能体请求的 59%，比 9 月高 19 个百分点；到达结账页的请求只占 1.9%。
+- 生态：2026-11-13 Poppy 1.0 发布，设计伙伴超过 100 家，Meta 称这是搭建「Muse 网络」的方式之一；协议不涉及费用，交易费仍未公布。
 - 战略上，Meta 把 Muse 定为「个人超级智能」的第一步、下一波产品和收入线的基础，并借小企业版把它接到 Meta 现有的商家和广告生态。
 
 ## 1000 万的口径：设置、下载、日活
@@ -95,9 +96,11 @@ Z Finance 认为「Meta 可以同时承担获客成本与服务成本」，独�
 
 Meta 称超过 25% 的周活用户用 Muse 购物、平均客单价超过 200 美元。其他口径给出的图景不同：Gener8 称购物只占活动的 8.6%；HUMAN 称 84% 的 Muse 网页请求指向产品和搜索页；Cequence 称大多数会话浏览后离开，只有一小部分完成购买（以上均经 [Muse 101]({{< relref "/docs/muse/sources/community/2026-11-04-muse-101-agentic-commerce" >}}) 转述）。该文作者指出，没有任何已公布的执行转化率。
 
-流量侧，DataDome 称 Muse 全面可用的头 12 天（9-22 至 10-03）产生 2910 万次请求，占其 9 月观测到的智能体浏览器流量的 33%（[DataDome]({{< relref "/docs/muse/sources/media/2026-10-15-datadome-muse-29-million-requests" >}})）；HUMAN 称 Muse 占其 9 月观测到的智能体流量的 40%（[HUMAN]({{< relref "/docs/muse/sources/media/2026-11-05-muse-40-percent-agentic-traffic-human" >}})）。
+流量侧，DataDome 称 Muse 全面可用的头 12 天（9-22 至 10-03）产生 2910 万次请求，占其 9 月观测到的智能体浏览器流量的 33%（[DataDome]({{< relref "/docs/muse/sources/media/2026-10-15-datadome-muse-29-million-requests" >}})）；HUMAN 称 Muse 占其 9 月观测到的智能体流量的 40%（[HUMAN]({{< relref "/docs/muse/sources/media/2026-11-05-muse-40-percent-agentic-traffic-human" >}})）。HUMAN 10 月报告称 Muse 的份额升至 59%，请求量一个月内接近翻两番，是第二名 ChatGPT Agent 的 3.7 倍，Meta 与 OpenAI 合计约 90%；85% 的请求落在商品和搜索页，结账与支付页占 1.9%（9 月 2.4%），但到达结账页的请求量环比增长 117%，HUMAN 注明到达结账页不等于下单。口径只计请求、不计用户，且限于 HUMAN 保护的网站（[HUMAN 十月报告]({{< relref "/docs/muse/sources/media/2026-11-14-muse-59-percent-agentic-traffic-human-october" >}})）。
 
 商家侧，WIRED 在财报季采访约 50 家公司：DoorDash 称来自 Muse 等智能体的订单只有「几百单」，T-Mobile「没看到任何显著变化」，Hilton 称「微不足道」，Chipotle 称 Muse 上线后智能体订单只增长个位数百分比；DoorDash CEO、Meta 董事 Tony Xu 称当前对智能体的热炒可能是「delusional」（[WIRED：商务现实检验]({{< relref "/docs/muse/sources/media/2026-10-31-wired-muse-commerce-reality-check" >}})）。Uber 称万圣节一周约 3.2 亿笔行程和订单中，经 AI 智能体下的 Uber Eats 订单只有 500 单（[TechCrunch：Uber 智能体订单]({{< relref "/docs/industry/sources/media/2026-11-04-techcrunch-uber-agent-orders" >}})）。
+
+The Verge 2026-11-10 的报道给出了更小的数字：Uber 称第三季度经第三方智能体只完成 4 单出行，万圣节当周约 500 单 Uber Eats；DoorDash 称经第三方智能体的订单只有「several hundred」，而它上季度的总订单为 9.93 亿（[The Verge：eBay]({{< relref "/docs/muse/sources/media/2026-11-10-ebay-blocks-third-party-ai-agents" >}})）。
 
 旅游业的情况类似。据 All Things Muse 转述 Travel Weekly（10-31）：万豪高管 10-15 称 Muse「uses its own browser」在其网站上比价，公司目前在「observing and analyzing」；希尔顿 CEO 在 10-27 财报会上看好智能体带来的直销，同时承认智能体预订的流量和金额都「insignificant」。一家旅游营销公司称，它看到的 Muse 早期活动中约 80% 是购买 100 美元以下的消费品，旅游方面主要是比价和订餐厅（[All Things Muse：旅游业关注 Muse]({{< relref "/docs/muse/sources/media/2026-10-31-allthingsmuse-travel-industry-attention" >}})）。这些都是单个公司的说法。
 
@@ -112,6 +115,8 @@ Meta 称超过 25% 的周活用户用 Muse 购物、平均客单价超过 200 �
 - 官方把个人超级智能当作目标，Muse 是「迈向这一目标的第一步」（[日本上线]({{< relref "/docs/muse/sources/official/2026-10-23-japan-launch" >}})）；发布稿称 Muse「为全球数十亿人打造」（[推出 Muse]({{< relref "/docs/muse/sources/official/2026-09-08-introducing-muse" >}})）。扎克伯格在 Connect 称公司「全力押注 Muse」（[TechCrunch：Muse 新功能]({{< relref "/docs/muse/sources/media/2026-09-23-techcrunch-everything-new-muse" >}})）。
 - 小企业：2026-09-29 推出 Muse for Small Business，官方称它是「个人超级智能时代最重要的产品之一」（[小企业版]({{< relref "/docs/muse/sources/official/2026-09-29-muse-for-small-business" >}})）；Meta 在财报会上称看到应用上 5 亿自认小企业的机会（[Muse 101]({{< relref "/docs/muse/sources/community/2026-11-04-muse-101-agentic-commerce" >}})）。中金认为小企业版连接 Facebook、Instagram 和广告账户，有望与广告业务协同（[中金展望]({{< relref "/docs/industry/sources/community/2026-11-04-cicc-personal-agent-outlook" >}})）。
 - 生态：连接器平台向第三方开放，据转述首周收到超过 1,500 份开发者申请（[Uber Courier]({{< relref "/docs/muse/sources/media/2026-11-10-uber-courier-deliveries" >}})）；Expedia 接入后由 Expedia 作为交易主体（merchant of record）（[Skift：Expedia]({{< relref "/docs/muse/sources/media/2026-11-09-skift-expedia-live-on-muse" >}})）。连接器细节见[连接器]({{< relref "/docs/muse/analysis/connectors" >}})。
+- 协议：2026-11-13 Poppy 1.0 发布，Sierra 称新增 60 家设计伙伴、总数超过 100 家，覆盖零售、支付与金融、客服、旅行（[Sierra：Poppy 1.0]({{< relref "/docs/industry/sources/community/2026-11-13-releasing-personal-agent-protocol-1-0" >}})）。Meta 称 Poppy 是搭建「Muse 网络」的方式之一：更多消费者拥有自己的 Muse、更多商家接入，两边互相强化（[Poppy 官方稿]({{< relref "/docs/muse/sources/official/2026-11-13-poppy-personal-agent-protocol" >}})）。社区作者 Gaowei Chang 认为，个人智能体与商家智能体的直连会侵入 Google 和亚马逊的地盘，协议不支持个人智能体之间横向互联，「因为横向连接对它没有好处」（[Chang：PAP 拆解]({{< relref "/docs/industry/sources/community/2026-10-10-pap-personal-agent-protocol-deep-dive" >}})，作者观点，作者有利益关系）。
+- 反向的力量：美联航 CEO Scott Kirby 11-10 称「I don't want to create another middleman」，次日美联航修订合同禁止智能体订票（[美联航禁令]({{< relref "/docs/muse/sources/community/2026-11-13-united-bans-agent-booking" >}})）。推断：交易费模式需要商家接受 Muse 作为中间层，航空公司等掌握直销渠道的商家有理由拒绝。
 - 硬件：Muse 进入 AI 眼镜和手表，Muse Gadgets 的 Home Link 随订阅附赠，见[设备]({{< relref "/docs/muse/analysis/devices" >}})。
 
 推断：从小企业版、连接器平台和交易费方向看，Meta 想让 Muse 同时连接消费者的购买意图和已经在 Meta 投放广告的商家，收入落点是商家而不是用户。这依赖商家愿意为智能体促成的交易付费，而 WIRED 采访中商家的态度目前偏观望。
@@ -124,9 +129,11 @@ Meta 称超过 25% 的周活用户用 Muse 购物、平均客单价超过 200 �
 - Nikkei「Muse 将无广告」报道的原文；Meta 对 Muse 数据与广告系统边界的正式说明。
 - 日本、新加坡、墨西哥等新市场上线后的用户数据。
 - 2026-10-21 电话会的一手记录（本库只有转述）。
+- 经 Poppy 发生的交易量与费用安排；Muse 在 HUMAN 以外的流量份额。
 
 ## 主要资料
 
 - 官方：[推出 Muse]({{< relref "/docs/muse/sources/official/2026-09-08-introducing-muse" >}})（定位）；[小企业版]({{< relref "/docs/muse/sources/official/2026-09-29-muse-for-small-business" >}})（小企业战略）；[日本上线]({{< relref "/docs/muse/sources/official/2026-10-23-japan-launch" >}})（个人超级智能目标）。
 - 媒体：[CNBC：Meta 进军个人智能体]({{< relref "/docs/muse/sources/media/2026-09-08-cnbc-meta-pushes-into-personal-agents" >}})、[Sources：扎克伯格谈 Muse]({{< relref "/docs/muse/sources/media/2026-09-08-sources-zuckerberg-on-muse" >}})（变现设想）；[36 氪：Muse 时刻]({{< relref "/docs/muse/sources/media/2026-10-27-36kr-muse-moment" >}})（财报会转述）；[WIRED：商务现实检验]({{< relref "/docs/muse/sources/media/2026-10-31-wired-muse-commerce-reality-check" >}})（商家反馈、交易费）；[Z Finance：齐俊元]({{< relref "/docs/industry/sources/media/2026-10-21-zfinance-qi-junyuan-today" >}})（成本测算、付费人数）；[DataDome]({{< relref "/docs/muse/sources/media/2026-10-15-datadome-muse-29-million-requests" >}})、[HUMAN]({{< relref "/docs/muse/sources/media/2026-11-05-muse-40-percent-agentic-traffic-human" >}})（流量）；[下载超过 ChatGPT]({{< relref "/docs/muse/sources/media/2026-11-04-muse-out-downloads-chatgpt" >}})（下载估算）；[TechCrunch：Uber 智能体订单]({{< relref "/docs/industry/sources/media/2026-11-04-techcrunch-uber-agent-orders" >}})（平台侧订单量）；[CNBC：OpenAI 跟进]({{< relref "/docs/industry/sources/media/2026-09-30-cnbc-openai-follows-meta" >}})（股价）。
 - 社区：[Muse 101：智能体商务]({{< relref "/docs/muse/sources/community/2026-11-04-muse-101-agentic-commerce" >}})（电话会数字、卖方预测汇总）；[中金展望]({{< relref "/docs/industry/sources/community/2026-11-04-cicc-personal-agent-outlook" >}})（成本测算）；[海外独角兽讨论]({{< relref "/docs/industry/sources/community/2026-10-23-haiwaidujiaoshou-discussion" >}})（DAU 估算、ARPP 对比）；[AppGrowing：买量]({{< relref "/docs/industry/sources/community/2026-10-28-appgrowing-user-acquisition" >}})（广告投放）。
+- 2026-11-15 增量：[HUMAN 十月报告]({{< relref "/docs/muse/sources/media/2026-11-14-muse-59-percent-agentic-traffic-human-october" >}})、[The Verge：eBay]({{< relref "/docs/muse/sources/media/2026-11-10-ebay-blocks-third-party-ai-agents" >}})（媒体）；[Poppy 官方稿]({{< relref "/docs/muse/sources/official/2026-11-13-poppy-personal-agent-protocol" >}})、[Sierra：Poppy 1.0]({{< relref "/docs/industry/sources/community/2026-11-13-releasing-personal-agent-protocol-1-0" >}})（官方）；[Chang：PAP 拆解]({{< relref "/docs/industry/sources/community/2026-10-10-pap-personal-agent-protocol-deep-dive" >}})、[美联航禁令]({{< relref "/docs/muse/sources/community/2026-11-13-united-bans-agent-booking" >}})（社区）。

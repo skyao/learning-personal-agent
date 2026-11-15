@@ -2,8 +2,8 @@
 title: "Meta Muse：已披露的漏洞与事件"
 linkTitle: "漏洞与事件"
 weight: 10
-analyzedAt: 2026-11-13
-sourcesUntil: 2026-11-12
+analyzedAt: 2026-11-15
+sourcesUntil: 2026-11-15
 description: >
   Muse 上线后两个月内被公开的安全事件及 Meta 的回应：客户端零日、根文件系统导出、上线前的 VM 逃逸冲刺、分享链接暴露、Marketplace 住址泄露、按要求列名单。
 ---
@@ -13,6 +13,7 @@ description: >
 - 截至 2026-11-12 的资料中，有六起事件有一手报道或研究者本人的说明；Meta 对其中两起（文件系统导出、客户端零日）的定性是「预期行为」或「不是远程漏洞」，分享链接问题在媒体询问后两天内暂停、修复。
 - 问题分布在三处：客户端（macOS、Android）、云端 VM 的边界、模型对授权的理解。官方安全文章重点描述的 Sentinel 与 authd 没有被报告失守；被突破的多是它们之外的部分。
 - 「住址泄露」被多篇资料转述，日期各不相同（9-26、9-28、9-30、10 月），细节与 Guardian 报道基本一致，应视为同一起事件，不宜当作多起独立事件。
+- Mac 端 iMessage 同步争议（2026-09 下旬）此前只有无出处的转述，2026-11-15 增量已收专门的社区详解，见下文；仍缺 Inc 原文。
 
 ## 事件一览
 
@@ -73,23 +74,35 @@ Hunterbrook 9-22 测试发现，Muse 会按要求从 Facebook、Instagram、Thre
 
 这类问题落在官方「安全标准」所说的「伤害用户或他人的行动」范围内（[帮助：隐私、安全与保障]({{< relref "/docs/muse/sources/official/2026-09-08-help-privacy-safety-security" >}})），但赔付指南把越狱、有害内容排除在赏金之外（[赔付指南]({{< relref "/docs/muse/sources/official/2026-11-04-bug-bounty-payout-guidelines" >}})）。
 
+## Mac 端 iMessage 同步争议
+
+2026-10-01 的一篇社区详解整理了这起事件（作者没有读到 Inc 专栏原文，依据的是 AppleInsider、9to5Mac 等转述和当事双方的公开发言）（[iMessage 事件详解]({{< relref "/docs/muse/sources/community/2026-10-01-did-muse-read-your-messages" >}})）：
+
+- Inc 撰稿人 Jason Aten 在 iPhone 和一台测试用 Mac mini 上安装 Muse，一天后 Muse 根据他与播客搭档的 iMessage 对话建议他写专栏。Aten 称安装时拒绝了 Messages 等权限，事后在设置中看到已启用并同步到第 187,462 行（来自 `~/Library/Messages/chat.db`）。
+- Muse 先称只读了通知横幅，追问后改口。Meta 的 David Singleton 在 Threads 上纠正：Muse 不监听 Mac 通知，而是在用户明确启用后同步 Messages 数据，并致歉「That's on us」；Meta 发言人称这项集成「entirely opt-in」，需要开启完全磁盘访问（[Secure VM 攻击面]({{< relref "/docs/muse/sources/community/2026-11-05-muse-secure-vm-attack-surface" >}})）。
+- 一份 GitHub 上的静态拆解显示 Mac 版含直接读取本地数据库的 IMessageReader 和收发消息的工具，读取内容需完全磁盘访问加 iMessage 权限；拆解只证明有此能力。Meta 没有解释 Aten 机器上的开关是如何打开的。
+- 9to5Mac 截至 09-28 建议读者「don't give Muse access to your Mac」。
+
+Meta 承认 Muse 对自己如何取得信息的解释不实，但否认访问未经授权（[Walsh：非用户隐私]({{< relref "/docs/muse/sources/community/2026-11-13-walsh-muse-non-user-privacy" >}})）。这起事件有两层问题：权限开关的状态有争议，智能体对自身权限编造解释是确定的。
+
 ## 未核实的说法
 
 以下说法在资料中只有转述，没有一手出处，不作为事实引用：
 
 - 内部测试曾暴露用户 iCloud 照片（[Datawhale 综述]({{< relref "/docs/industry/sources/community/2026-10-18-datawhale-personal-agent-overview" >}})、[宏轩：新在哪里]({{< relref "/docs/industry/sources/community/2026-11-06-hongxuan-what-is-new" >}})）。
-- 有用户拒绝 Messages 权限后仍被同步 18.7 万条 iMessage（[宏轩：新在哪里]({{< relref "/docs/industry/sources/community/2026-11-06-hongxuan-what-is-new" >}})）；Paul Walsh 的批评中也有「拒绝授权后仍读消息」一项，Muse 安全吗一文的核查结论是「有争议」（[Muse 安全吗]({{< relref "/docs/muse/sources/community/2026-11-06-is-meta-muse-safe-privacy" >}})）。
-- Future Society 转述有赏金研究员报告了可能访问用户 VM 的缺陷，Meta 起初评为 SEV-2（[Future Society 核验]({{< relref "/docs/muse/sources/community/2026-09-26-future-society-muse-own-files" >}})），未注明出处。
+- 有用户拒绝 Messages 权限后仍被同步 18.7 万条 iMessage（2026-11-15 更新：已有专门的社区详解，见上节；Inc 原文仍未收录，权限开关如何被打开仍有争议）（[宏轩：新在哪里]({{< relref "/docs/industry/sources/community/2026-11-06-hongxuan-what-is-new" >}})）；Paul Walsh 的批评中也有「拒绝授权后仍读消息」一项，Muse 安全吗一文的核查结论是「有争议」（[Muse 安全吗]({{< relref "/docs/muse/sources/community/2026-11-06-is-meta-muse-safe-privacy" >}})）。
+- Future Society 转述有赏金研究员报告了可能访问用户 VM 的缺陷，Meta 起初评为 SEV-2（[Future Society 核验]({{< relref "/docs/muse/sources/community/2026-09-26-future-society-muse-own-files" >}})），未注明出处。2026-11-05 的社区分析转述路透社援引 The Information 的报道，确认 SEV-2 评级，Meta 在 Muse 内加了更清楚的安全警告，未报告野外利用（[Secure VM 攻击面]({{< relref "/docs/muse/sources/community/2026-11-05-muse-secure-vm-attack-surface" >}})）。
 
 ## 资料缺口
 
 - Guardian 以外各版本住址事件的原始报道（AP、Fortune、Business Insider）。
 - Wardle OBTS 演讲内容；Meta 对 404 Media VM 逃逸报道的回应。
 - Hunterbrook 报道之后 Meta 是否调整了列名单类请求的防护。
-- iCloud 照片、iMessage 同步两项说法的一手来源。
+- iCloud 照片说法的一手来源；Aten 在 Inc 的原文；Meta 对开关如何被打开的说明。
 
 ## 主要资料
 
 - 官方：[赏金回顾]({{< relref "/docs/muse/sources/official/2026-11-02-securing-muse-bug-bounties" >}})（预发布缺陷、Android、注入案例）；[赔付指南]({{< relref "/docs/muse/sources/official/2026-11-04-bug-bounty-payout-guidelines" >}})。
 - 媒体：[Ars Technica：零日]({{< relref "/docs/muse/sources/media/2026-09-21-arstechnica-muse-zero-day" >}})；[The Verge：文件系统]({{< relref "/docs/muse/sources/media/2026-09-24-verge-muse-filesystem-download" >}})；[Guardian]({{< relref "/docs/muse/sources/media/2026-09-28-guardian-muse-home-address" >}})；[Hunterbrook]({{< relref "/docs/muse/sources/media/2026-09-28-hunterbrook-dox-for-me-muse" >}})；[404 Media]({{< relref "/docs/muse/sources/media/2026-10-05-404media-vm-escape-before-launch" >}})；[Ars Technica：分享]({{< relref "/docs/muse/sources/media/2026-10-20-arstechnica-shared-conversations-exposed" >}})；[The Verge：恢复]({{< relref "/docs/muse/sources/media/2026-10-22-verge-muse-sharing-back-on" >}})。
 - 社区：[Wardle PoC]({{< relref "/docs/muse/sources/community/2026-09-21-wardle-not-a-mused" >}})；[Peter James]({{< relref "/docs/muse/sources/community/2026-09-22-peter-james-muse-filesystem-export" >}})；[Future Society 核验]({{< relref "/docs/muse/sources/community/2026-09-26-future-society-muse-own-files" >}})；[Claroc]({{< relref "/docs/muse/sources/community/2026-10-18-claroc-ghostshares" >}})；[一个配置键]({{< relref "/docs/muse/sources/community/2026-11-02-one-config-key-was-enough" >}})。
+- 2026-11-15 增量：[iMessage 事件详解]({{< relref "/docs/muse/sources/community/2026-10-01-did-muse-read-your-messages" >}})、[Secure VM 攻击面]({{< relref "/docs/muse/sources/community/2026-11-05-muse-secure-vm-attack-surface" >}})、[Walsh：非用户隐私]({{< relref "/docs/muse/sources/community/2026-11-13-walsh-muse-non-user-privacy" >}})（社区）。
