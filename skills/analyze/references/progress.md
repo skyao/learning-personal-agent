@@ -8,7 +8,7 @@
 
 | 产品 | 总览 | runtime | memory | continuous-execution | connectors | channels | devices | models | security | privacy | access-pricing | business | reliability |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| muse | 11-12 | 11-12 | 11-12 | 11-12 | 11-12 | 11-12 | 11-12 | 11-12 | 11-12 | 11-12 | 11-12 | 11-12 | 11-12 |
+| muse | 11-15 | 11-15 | 11-15 | 11-15 | 11-15 | 11-15 | 11-15 | 11-15 | 11-15 | 11-15 | 11-15 | 11-15 | 11-15 |
 | dots | 11-11 | 11-11 | 11-11 | 11-11 | 11-11 | 11-11 | 11-11 | 11-11 | 11-11 | 11-11 | 11-11 | 11-11 | 11-11 |
 | claude-duet | 11-12 | 11-12 | 11-12 | 11-12 | 11-12 | 11-12 | — | — | 11-12 | — | 11-12 | — | 11-12 |
 | grok-bot | 11-12 | 11-12 | 11-12 | 11-12 | 11-12 | 11-12 | 11-12 | 11-12 | 11-12 | 11-12 | 11-12 | 11-12 | 11-12 |
@@ -61,7 +61,7 @@
 | 2026-11-13 | muse | 眼镜 Beta 开放范围、Muse Charm 规格价格发货；iPad、Wear OS 官方说明 | 媒体称 Charm 年底或 12 月发货 |
 | 2026-11-13 | muse | Relationships 任务的官方说明、非用户删除人物页的实际结果 | Wired、TIME 报道；/docs/muse/sources/community/2026-11-04-muse-non-user-messages |
 | 2026-11-13 | muse | Wardle OBTS 演讲（11-20）、Gmail 收件箱实测原文、Claire Vo 基准评分、Skift 对 Expedia 测试全文 | 前两篇仅链接，后两篇节选或截断 |
-| 2026-11-13 | muse | Personal Agent Protocol 规范与一手公告；Meta 对 Web Bot Auth 测试的确认 | /docs/muse/sources/media/2026-10-31-web-bot-auth-signed-requests |
+| 2026-11-13 | muse | Personal Agent Protocol 规范与一手公告；Meta 对 Web Bot Auth 测试的确认 | /docs/muse/sources/media/2026-10-31-web-bot-auth-signed-requests；2026-11-15 已收 Sierra 与 Meta 的 Poppy 公告，仍缺规范原文与应用内实测 |
 | 2026-11-13 | muse | Marketplace 住址事件的 AP、Fortune、Business Insider 原文 | 各篇转述细节不一，目前以卫报为准 |
 | 2026-11-13 | claude-duet | 以 Duet 为主题的媒体报道（`media/` 为空）和用户自己的实测（`exploration/` 为空） | 目前只在 WIRED、AIX财经、中国新闻周刊等多产品文章中出现 |
 | 2026-11-13 | claude-duet | 用户数、邀请发放进度、留存；研究预览结束后的定价；每档套餐能跑多少简报和任务 | 官方未公布；Reddit 用户称用量「大得离谱」，见 /docs/claude-duet/sources/community/2026-10-29-chris-alarcon-first-day |
@@ -129,6 +129,13 @@
 | 2026-11-15 | instinct | B 轮金额（2.5 亿还是 3.5 亿美元）与公司成立时间（去年、2026-02 还是 2026-04） | TechCrunch 2026-08-26 融资报道、Forbes、The Information |
 | 2026-11-15 | instinct | Selections（2026-09-29，潮涌AI 称第一次收入实验）是什么 | 只有 /docs/industry/sources/community/2026-10-19-chaoyong-top15 一句 |
 | 2026-11-15 | instinct | 2026-09-09 TechCrunch 邮箱与可信网络的原报道 | /docs/industry/sources/media/2026-09-17-techcrunch-instinct-muse-phone-calls 和 2026-10-24 合集都只是回顾 |
+| 2026-11-15 | muse | Poppy 1.0 规范原文；用户在应用内看到什么、经 Poppy 完成交易的实测；Shopify 自己的公告 | personalagentprotocol.org；/docs/muse/sources/community/2026-11-14-poppy-first-sierra-ledger 核查截至 11-14 未见应用内证据 |
+| 2026-11-15 | muse | Chrome 扩展的官方公告与帮助页全文 | /docs/muse/sources/media/2026-11-13-muse-chrome-extension 转述 TestingCatalog 与商店页 |
+| 2026-11-15 | muse | 商家电话正式开放后的单价、上限、来电号码、AI 身份披露、商家退出、成功率 | /docs/muse/sources/community/2026-11-14-muse-phone-calls-paid-rollout 称作者 11-20 复查 |
+| 2026-11-15 | muse | iMessage 同步事件 Jason Aten 的 Inc 原文；Messages 同步数据的保存与删除 | /docs/muse/sources/community/2026-10-01-did-muse-read-your-messages 作者未读到 Inc 原文 |
+| 2026-11-15 | muse | 美联航运输合同修订原文（Rule 1、5.H、6.J.6）与 WSJ 原报道 | /docs/muse/sources/community/2026-11-13-united-bans-agent-booking 称条款文字来自二手报道 |
+| 2026-11-15 | muse | Muse Ember 的官方发布稿；印度 2027 年初上线的 Meta 一手说法 | /docs/muse/sources/community/2026-11-12-muse-on-apple-watch-wear-os、/docs/muse/sources/community/2026-11-14-muse-phone-calls-paid-rollout |
+| 2026-11-15 | muse | AI 眼镜语音隐私声明美国版与英国版原文 | /docs/muse/sources/community/2026-11-09-muse-on-glasses-beta 作者对照阅读 |
 
 ## 分析中发现的资料页问题
 
@@ -228,3 +235,12 @@
 | 2026-11-15 | /docs/industry/sources/community/2026-11-04-tegongyuzhou-persom-context-performance | products 含 instinct，但正文只在开头一句提到 Instinct，其余是 Persom（未跟踪）的介绍；products 依据弱 | 2026-11-15 products 去掉 instinct（用户决定） |
 | 2026-11-15 | /docs/industry/sources/media/2026-10-27-wired-every-major-ai-agent | 标签只有「实测评测」；正文开头有一段列出六款产品的价格，可考虑补「开放与价格」 | 无需改：价格只占一段，不补标签（用户 2026-11-15 决定） |
 | 2026-11-15 | /docs/industry/sources/media/2026-09-17-techcrunch-instinct-muse-phone-calls、/docs/industry/sources/media/2026-10-22-skift-wyndham-ai-booking-agents、/docs/industry/sources/media/2026-10-31-allthingsmuse-shop-pay-off-platform、/docs/industry/sources/community/2026-10-06-introducing-personal-agent-protocol、/docs/industry/sources/community/2026-11-13-releasing-personal-agent-protocol-1-0 | translation 仍为「待翻译」，分析时据 original.md 和摘要 | 待翻译 |
+| 2026-11-15 | /docs/muse/sources/media/2026-11-10-ebay-blocks-third-party-ai-agents | 只打了「安全」标签，内容主要是平台拦截智能体（连接器）和 Uber、DoorDash 的智能体订单数（商业与规模） | 待处理：建议补「连接器」「商业与规模」 |
+| 2026-11-15 | /docs/muse/sources/media/2026-10-05-muse-phone-call-beta、/docs/muse/sources/media/2026-11-14-muse-59-percent-agentic-traffic-human-october、/docs/muse/sources/media/2026-11-13-poppy-1-0-live、/docs/muse/sources/media/2026-11-13-muse-chrome-extension | All Things Muse 的四篇分别转述 404 Media 与 Reuters、HUMAN 报告、Sierra 发布稿、TestingCatalog，收录说明只写「直接下载」，没有注明二手，也没有 basedOn | 待处理：同 2026-11-13 who-blocks-agents 的处理，注明转述并补 basedOn |
+| 2026-11-15 | /docs/muse/sources/media/2026-11-13-poppy-1-0-live、/docs/muse/sources/media/2026-11-13-muse-chrome-extension | 正文称 Sierra「周四」发布、TestingCatalog「周四」报道，2026-11-13 是周五 | 无需改：原文如此；分析以页面日期和官方稿为准，正文已注明 |
+| 2026-11-15 | /docs/muse/sources/community/2026-11-11-muse-read-my-ballot | 中文标题「读回来时漏掉了一个我没发现的冲突」易误读为 Muse 漏掉冲突，实际是 Muse 指出了选民自己没发现的冲突（英文原标题同样含糊） | 待处理：建议 linkTitle 或收录说明加注 |
+| 2026-11-15 | /docs/muse/sources/community/2026-11-08-phone-calls-disclosure-gap | 标题「没人告诉店里那是 AI」比正文强：正文称 Muse 可能已在每通电话中自报身份，只是公开资料无从得知 | 待处理：建议收录说明加注；分析中已写明 |
+| 2026-11-15 | /docs/muse/sources/community/2026-10-14-peter-yang-ten-workflows | 摘要「每年省 800 多美元」是 Yang 自述，含 Xfinity 需本人回电、未落实的部分；文字稿为 All Things Muse 整理，视频未存档 | 待处理：建议摘要注明含未落实部分 |
+| 2026-11-15 | /docs/industry/sources/community/2026-10-10-pap-personal-agent-protocol-deep-dive | 日期 10-10，原文称「规范今天已发布」，读的应是 1.0 之前的预览版，摘要「通读 PAP 规范全文」未注明版本 | 待处理：建议收录说明注明为 1.0 前的版本 |
+| 2026-11-15 | /docs/industry/sources/community/2026-11-13-releasing-personal-agent-protocol-1-0 | products 含 instinct、manus-cue，依据只是设计伙伴名单（Instinct 首批，Cue、Manus 在新增名单中） | 待处理：products 依据弱，可保留并在收录说明注明，或去掉 |
+| 2026-11-15 | /docs/muse/sources/community/2026-11-13-united-bans-agent-booking | 标签「商业与规模」依据弱：正文没有 Muse 的用户或收入数字，与商业相关的只有美联航「不想要中间商」的立场 | 无需改：按整篇判断，航空业对智能体分销的立场属商业话题，可保留 |
