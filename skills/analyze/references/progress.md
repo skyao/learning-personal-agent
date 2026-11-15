@@ -16,7 +16,7 @@
 | lingguang | 11-10 | 11-10 | 11-10 | 11-10 | 11-10 | — | — | — | 11-10 | — | — | 11-10 | 11-10 |
 | today | 11-10 | 11-10 | 11-10 | 11-10 | 11-10 | 11-10 | 11-10 | 11-10 | 11-10 | 11-10 | 11-10 | 11-10 | 11-10 |
 | gemini-spark | 11-10 | 11-10 | 11-10 | 11-10 | 11-10 | 11-10 | 11-10 | 11-10 | 11-10 | 11-10 | 11-10 | — | 11-10 |
-| instinct | | | | | | | | | | | | | |
+| instinct | 11-13 | 11-13 | 11-13 | 11-13 | 11-13 | 11-13 | — | 11-13 | 11-13 | 11-13 | 11-13 | 11-13 | 11-13 |
 | workbuddy | 11-10 | 11-10 | 11-10 | 11-10 | 11-10 | 11-10 | — | 11-10 | 11-10 | 11-10 | 11-10 | 11-10 | 11-10 |
 | microsoft-autopilot | 11-10 | 11-10 | 11-10 | 11-10 | 11-10 | 11-10 | — | 11-10 | 11-10 | 11-10 | 11-10 | 11-10 | 11-10 |
 | poke | 11-09 | — | — | 11-09 | 11-09 | 11-09 | — | — | 11-09 | — | 11-09 | 11-09 | 11-09 |
@@ -123,6 +123,12 @@
 | 2026-11-14 | microsoft-autopilot | 按用量计费（UBB）的单价；是否仍需 GitHub Copilot 席位与 Microsoft 365 Copilot 许可证 | 9 月博文的定价链接 aka.ms/Sept25/EvolvingModel 未收；各方列出的前提不一 |
 | 2026-11-14 | microsoft-autopilot | 对外开放后的用户数、组织数；完成率等量化数据；9 月后的实测与长期使用报告 | 规模只有 GeekWire 05-01 的内部数字；实测只有 /docs/microsoft-autopilot/sources/community/2026-06-06-copilotatwork-scout-not-just-assistant |
 | 2026-11-14 | microsoft-autopilot | 提示注入防护的测试或独立审计；The Register、Fortune、Gizmodo 等原文 | dSebastien 综述中均为转述，见 /docs/microsoft-autopilot/sources/community/2026-11-04-dsebastien-microsoft-autopilot |
+| 2026-11-15 | instinct | 官方资料：只有官网首页，没有帮助中心、文档站；功能、审批规则、安全机制都靠转述 | 创始人和公司在 X 上的公告（群聊、Concierge、邮箱、可信网络的原帖） |
+| 2026-11-15 | instinct | 现行服务条款与隐私政策原文（训练默认设置、退出方式、删除流程、修订历史） | instinct.com 的 Terms / Privacy 页；/docs/industry/sources/community/2026-11-03-proactive-ai-agents-compared 引用过「修订后条款」 |
+| 2026-11-15 | instinct | Colossus 播客（Invest Like the Best 第 493 期）完整文字稿；「产生购买的用户月均消费超过 1300 美元」的一手出处 | /docs/instinct/sources/media/2026-09-28-colossus-invest-like-the-best 只有节选；Z Finance 整理稿查不到 1300 美元 |
+| 2026-11-15 | instinct | B 轮金额（2.5 亿还是 3.5 亿美元）与公司成立时间（去年、2026-02 还是 2026-04） | TechCrunch 2026-08-26 融资报道、Forbes、The Information |
+| 2026-11-15 | instinct | Selections（2026-09-29，潮涌AI 称第一次收入实验）是什么 | 只有 /docs/industry/sources/community/2026-10-19-chaoyong-top15 一句 |
+| 2026-11-15 | instinct | 2026-09-09 TechCrunch 邮箱与可信网络的原报道 | /docs/industry/sources/media/2026-09-17-techcrunch-instinct-muse-phone-calls 和 2026-10-24 合集都只是回顾 |
 
 ## 分析中发现的资料页问题
 
@@ -219,3 +225,6 @@
 | 2026-11-14 | /docs/industry/sources/community/2026-11-05-ai-agents-compared-small-business | products 含 microsoft-autopilot，但正文实际比较的是 Copilot Cowork，Autopilot 只在两三处提及（引用的是微软 6 月博文） | 无需改：products 依据弱，不是标签错误；分析中只用作 Cowork 价格对照 |
 | 2026-11-14 | /docs/industry/sources/media/2026-10-02-ithome-five-proactive-agents | 比较表称 Autopilot 为云端托管、「官方未公布直接存取本机文件」、2026 年 9 月进入私有预览，与 Learn 文档的 Scout 桌面应用和 6 月 Frontier 实验版不同 | 无需改：原文如此，描述的是 9 月后的 Autopilot；运行环境与开放页并列两种说法 |
 | 2026-11-14 | /docs/microsoft-autopilot/sources/media/2026-06-05-testingcatalog-scout-frontier、/docs/microsoft-autopilot/sources/community/2026-06-06-copilotatwork-scout-not-just-assistant | 模型版本一处为 GPT 5.5，一处为「最高到 5.4 的 GPT 变体」 | 无需改：两篇原文不同，模型页并列 |
+| 2026-11-15 | /docs/industry/sources/community/2026-11-04-tegongyuzhou-persom-context-performance | products 含 instinct，但正文只在开头一句提到 Instinct，其余是 Persom（未跟踪）的介绍；products 依据弱 | 待用户决定 |
+| 2026-11-15 | /docs/industry/sources/media/2026-10-27-wired-every-major-ai-agent | 标签只有「实测评测」；正文开头有一段列出六款产品的价格，可考虑补「开放与价格」 | 待用户决定（价格只占一段，不补也说得通） |
+| 2026-11-15 | /docs/industry/sources/media/2026-09-17-techcrunch-instinct-muse-phone-calls、/docs/industry/sources/media/2026-10-22-skift-wyndham-ai-booking-agents、/docs/industry/sources/media/2026-10-31-allthingsmuse-shop-pay-off-platform、/docs/industry/sources/community/2026-10-06-introducing-personal-agent-protocol、/docs/industry/sources/community/2026-11-13-releasing-personal-agent-protocol-1-0 | translation 仍为「待翻译」，分析时据 original.md 和摘要 | 待翻译 |
