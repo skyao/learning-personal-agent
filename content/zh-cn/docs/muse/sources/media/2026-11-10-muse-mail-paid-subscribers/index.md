@@ -17,7 +17,7 @@ dateNote: "元数据 published_time 为 2026-11-10T20:30:00Z（美东 11 月 10 
 
 {{< source-info >}}
 
-**收录说明**：直接下载。去掉了首图 Jolly 插画与文末「Keep reading」栏目。原文全文存于本目录的 original.md，网站上不显示，已翻译。
+**收录说明**：直接下载。去掉了首图 Jolly 插画、文中的站内推荐卡片与文末「Keep reading」栏目。原文全文存于本目录的 original.md，网站上不显示，已翻译。
 
 **内容摘要**：Muse 有了自己的邮箱地址，美国与加拿大的付费用户可让 Muse 代为收发邮件；Muse 官方账号在 X 上宣布「Muse 有了自己的邮箱地址……现已向美国和加拿大的付费用户开放」，Meta 首席 AI 官 Alexandr Wang 稍早发布了同样消息。此次上线不包括免费档用户，此前该功能只是分批出现。用户可点头像、打开邮件标签页或直接向 Muse 提出开通，随后把该地址加入邮件对话或转发邮件给它。Meta 于 9 月 23 日的 Connect 大会上预览了该地址，与头像实时语音视频、Mac 端电脑操作、AI 眼镜接入一同公布，四项能力中它是最后一个正式可用的；语音聊天已于 11 月 5 日覆盖全部美国用户，Mac 端电脑操作已上线，眼镜接入尚未推出；而用户最早于 11 月 6 日就在应用内看到了开通卡片。
 
@@ -42,8 +42,6 @@ Muse 现在有了自己的邮箱地址。美国和加拿大的付费用户可以
 ## 从预览到付费开放
 
 Meta 于 9 月 23 日在其 Connect 大会上预览了该地址，同时公布的还有与头像的实时语音和视频、Mac 上的电脑操作（computer use），以及通过 AI 眼镜接入。在当天宣布的四项能力中，该地址是最后一个正式可用的。语音[于 11 月 5 日覆盖全部美国用户](https://www.allthingsmuse.com/articles/muse-voice-video-chat-us-rollout/)，Mac 上的电脑操作更早已上线，眼镜接入尚未推出。
-
-Muse Mail, the Dedicated Email Address for Your Muse, Is Reaching More Users](https://www.allthingsmuse.com/articles/muse-mail-rollout-wider-availability/)（译注：原文此处为残缺的链接文字，意为“Muse Mail，Muse 的专属邮箱地址，正在覆盖更多用户”）
 
 [用户目击到的上线迹象于 11 月 6 日开始出现](https://www.allthingsmuse.com/articles/muse-mail-rollout-wider-availability/)，当时部分用户的应用中出现了设置卡片，没有公司公告，也没有说明适用对象。
 

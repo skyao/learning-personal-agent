@@ -42,7 +42,7 @@ Claude Chrome 扩展的份额减半，从 7% 降至 3.5%，而其流量增长了
 Perplexity 的 Comet 在 8 月 Muse 上线之前曾占智能体流量的 41%。到 10 月它占 3.6%，并且是前十名智能体中唯一一个当月请求量下降的，自 8 月以来下降约 30%。HUMAN 把这一趋势归因于人们选择内置于自己已在使用的平台中的智能体，而不是独立的智能体浏览器。Genspark 的浏览器掉出了前十名，而 OpenAI 已于 8 月停止了其独立的 ChatGPT Atlas 浏览器。
 
 **往期报道**
-Muse 在 9 月贡献了一家安全公司所见智能体流量的 40%](/articles/muse-40-percent-agentic-traffic-human/)
+[Muse 在 9 月贡献了一家安全公司所见智能体流量的 40%](https://www.allthingsmuse.com/articles/muse-40-percent-agentic-traffic-human/)
 
 ## 智能体浏览的远多于购买的
 

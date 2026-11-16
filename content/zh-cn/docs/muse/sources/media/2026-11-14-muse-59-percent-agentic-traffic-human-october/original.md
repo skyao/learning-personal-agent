@@ -16,7 +16,7 @@ The Claude Chrome extension’s share halved, from 7% to 3.5%, while its traffic
 Perplexity’s Comet held 41% of agentic traffic in August, before Muse launched. By October it held 3.6%, and it was the only top-10 agent whose request volume fell during the month, down about 30% since August. HUMAN attributes the trend to people choosing agents built into platforms they already use over standalone agentic browsers. Genspark’s browser dropped out of the top 10, and OpenAI discontinued its standalone ChatGPT Atlas browser in August.
 
 **Earlier coverage**
-Muse Drove 40% of the Agentic Traffic One Security Firm Saw in September](/articles/muse-40-percent-agentic-traffic-human/)
+[Muse Drove 40% of the Agentic Traffic One Security Firm Saw in September](https://www.allthingsmuse.com/articles/muse-40-percent-agentic-traffic-human/)
 
 ## Agents Browse Far More Than They Buy
 

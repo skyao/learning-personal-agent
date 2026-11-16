@@ -37,8 +37,6 @@ Uber Courier 是 Uber 的包裹配送服务。[Courier](https://www.uber.com/us/
 
 Muse 在对话中准备好配送，用户在 Uber 处理取件之前批准预订。这一批准步骤与 Muse 处理其他敏感操作的方式一致：智能体准备好交易，由人在任何东西被预订或支付之前确认。
 
-Expedia 现已成为 Muse 上的在线连接器](https://www.allthingsmuse.com/articles/expedia-connector-live-on-muse/)
-
 ## 连接器目录中的又一项服务
 
 Uber 加入了一个自 9 月 Meta 向开发者开放以来不断壮大的连接器目录。Meta 的[连接器平台在第一周就收到了 1,500 多份开发者申请](https://www.allthingsmuse.com/articles/muse-connector-platform/)，而这个目录正是 Expedia 以及现在的 Uber Courier 这类服务成为 Muse 可以采取的操作、而不是用户必须另行访问的网站的途径。

@@ -39,8 +39,6 @@ Muse Mail 为用户的 Muse 提供一个它自己的电子邮件地址。其他�
 
 11 月 10 日的推出只覆盖付费档。Wang 的帖子把预期的受众扩展到免费档，但免费用户目前还不能领取地址。Wang 没有给出免费档推出的日期，也没有说扩展是否会超出目前 Muse Mail 可用的美国和加拿大。
 
-Muse Mail 现已向美国和加拿大的付费订阅用户开放](https://www.allthingsmuse.com/articles/muse-mail-available-paid-subscribers/)
-
 ## 现在该做什么
 
 美国和加拿大的付费订阅用户今天就可以领取自己的邮箱名，早于 Wang 所说的更大范围推出。设置通过应用中的头像和邮件标签页进行，也可以直接让 Muse 来做。
