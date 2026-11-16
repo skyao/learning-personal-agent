@@ -17,8 +17,6 @@ That pattern follows from how Muse is built. DataDome notes that Muse is a perso
 
 Muse also does not identify itself as an AI agent in its traffic, DataDome says. Site operators cannot rely on a bot name or user-agent string to spot it.
 
-JPMorgan won't let outside AI agents like Muse operate inside customer accounts](https://www.allthingsmuse.com/articles/jpmorgan-blocks-ai-agents-muse-accounts/)
-
 ## Agents are reaching forms and checkout
 
 The same sample shows what Muse does once it arrives. Of Muse requests, 8.9% touched sensitive flows: roughly 202,600 form requests, 24,800 login requests, 9,600 payment requests, 6,800 account-creation requests, and 5,200 cart requests. Forms accounted for 81% of that sensitive traffic and ran about eight times higher than logins. DataDome reads that as Muse reaching past browsing and reading into forms and checkout, while mostly acting logged out rather than signing in as the user.

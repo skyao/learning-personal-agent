@@ -39,8 +39,6 @@ DataDome 发现，Muse 占 9 月全部智能体浏览器流量的 33%，尽管�
 
 DataDome 还表示，Muse 不在其流量中表明自己是 AI 智能体。网站运营者无法依靠机器人名称或 user-agent 字符串来发现它。
 
-JPMorgan 不会让 Muse 等外部 AI 智能体在客户账户内操作](https://www.allthingsmuse.com/articles/jpmorgan-blocks-ai-agents-muse-accounts/)
-
 ## 智能体正触及表单与结账
 
 同一样本显示了 Muse 到达之后做了什么。在 Muse 请求中，8.9% 触及敏感流程：约 202,600 次表单请求、24,800 次登录请求、9,600 次支付请求、6,800 次账户创建请求和 5,200 次购物车请求。表单占该敏感流量的 81%，约为登录的八倍。DataDome 将此解读为 Muse 已越过浏览和阅读，进入表单与结账，同时大多以未登录状态行动，而不是以用户身份登录。
