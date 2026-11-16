@@ -8,7 +8,7 @@ author: "Adriana Lee"
 publisher: "Skift"
 language: en
 fidelity: 节选
-translation: 待翻译
+translation: 已翻译
 collectedAt: 2026-11-11
 tags: [连接器, 功能更新]
 products: [muse]
@@ -16,8 +16,31 @@ products: [muse]
 
 {{< source-info >}}
 
-**收录说明**：直接下载。Skift 原文后半部分在 Skift Pro 付费墙后，存档在「…can book only」处截断，缺失位置已标出；Wayback 无快照，Event Planner News 只有前两段转载，未采用。配图为 Skift 实测截图，已本地化。原文全文存于本目录的 original.md，网站上不显示，待翻译。
+**收录说明**：直接下载。Skift 原文后半部分在 Skift Pro 付费墙后，存档在「…can book only」处截断，缺失位置已标出；Wayback 无快照，Event Planner News 只有前两段转载，未采用。配图为 Skift 实测截图，已本地化。原文全文存于本目录的 original.md，网站上不显示，已翻译。
 
 **内容摘要**：Expedia 与 Muse 的连接已上线，Skift 称 Muse 现在可以预订 Expedia 的酒店，距双方宣布合作约六周。Expedia 集团 CEO Ariane Gorin 在 11 月 4 日的三季度财报电话会上透露，该连接正在美国上线，「可能就在我们通话期间」。Expedia 向 Skift 确认，该集成覆盖自然语言搜索与预订，但不包括取消或改签；Expedia 作为交易商户，变更需通过其客服处理，与直接预订时相同。Skift 随后做了有限实测，Muse 在对话中进一步说明该集成只能预订的内容，但该段文字在存档中被截断，后续内容无法获取。
 
 **保留理由**：本篇确认了 Expedia 接入从宣布走向实际可用，并给出明确的功能边界——只订不改，还附有 Skift 自身的有限实测记录，这些是仅凭合作宣布稿无法提供的。
+
+
+---
+
+![Expedia Muse Meta AI 智能体](images/img-01-067027.webp) 
+
+图片来源：Expedia 的 Muse 集成已上线 Skift/截图
+
+## Skift 点评
+
+Expedia 与 Muse 的连接已经上线：CEO Ariane Gorin 指出，它甚至可能就是在这家在线旅行社（OTA）本周的财报电话会期间上线的。所以 Skift 上手试了一下，看看它能做什么、不能做什么。
+
+Meta 的 Muse 智能体现在可以预订 Expedia 的酒店了，距两家公司宣布这一集成约六周。但存在限制。
+
+上周三在讨论第三季度业绩时，Expedia Group CEO Ariane Gorin 预告了这一发布，称该连接正在美国上线，「可能就在我们今天通话的时候」。
+
+在后续沟通中，Expedia 向 Skift 确认了该集成能做什么、不能做什么：它涵盖自然语言搜索与预订，但不包括取消或改签。
+
+「旅行者可以用自己的话描述目的地、日期和酒店偏好，Muse 可以从 Expedia 中呈现相关的酒店选项，」一位发言人说。「由于 Expedia 是交易商户（merchant of record），变更可以通过 Expedia 的客服办理，就像直接向我们预订时一样。」
+
+Skift 做有限测试时，Muse 提供了更多细节。在一次对话中，该智能体解释说，这一集成只能预订
+
+（以下内容无法获取）
