@@ -242,5 +242,5 @@
 | 2026-11-15 | /docs/muse/sources/community/2026-11-08-phone-calls-disclosure-gap | 标题「没人告诉店里那是 AI」比正文强：正文称 Muse 可能已在每通电话中自报身份，只是公开资料无从得知 | 2026-11-15 收录说明加注：未公布不等于未披露 |
 | 2026-11-15 | /docs/muse/sources/community/2026-10-14-peter-yang-ten-workflows | 摘要「每年省 800 多美元」是 Yang 自述，含 Xfinity 需本人回电、未落实的部分；文字稿为 All Things Muse 整理，视频未存档 | 2026-11-15 摘要注明 Xfinity 部分未落实，落实的是 AT&T 每年 480 美元 |
 | 2026-11-15 | /docs/industry/sources/community/2026-10-10-pap-personal-agent-protocol-deep-dive | 日期 10-10，原文称「规范今天已发布」，读的应是 1.0 之前的预览版，摘要「通读 PAP 规范全文」未注明版本 | 2026-11-15 收录说明注明读的是 1.0 之前的版本 |
-| 2026-11-15 | /docs/industry/sources/community/2026-11-13-releasing-personal-agent-protocol-1-0 | products 含 instinct、manus-cue，依据只是设计伙伴名单（Instinct 首批，Cue、Manus 在新增名单中） | 2026-11-15 保留 products，收录说明注明只依据设计伙伴名单 |
+| 2026-11-15 | /docs/industry/sources/community/2026-11-13-releasing-personal-agent-protocol-1-0 | products 含 instinct、manus-cue，依据只是设计伙伴名单（Instinct 首批，Cue、Manus 在新增名单中） | 2026-11-16 products 去掉 instinct、manus-cue（用户决定） |
 | 2026-11-15 | /docs/muse/sources/community/2026-11-13-united-bans-agent-booking | 标签「商业与规模」依据弱：正文没有 Muse 的用户或收入数字，与商业相关的只有美联航「不想要中间商」的立场 | 无需改：按整篇判断，航空业对智能体分销的立场属商业话题，可保留 |
