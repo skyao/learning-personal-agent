@@ -61,7 +61,7 @@ description: 收集 Microsoft Autopilot（原 Microsoft Scout，微软）的资�
 - Learn：toc.json 与 12 篇的 `updated_at` 均无变化；`learn.microsoft.com/en-us/microsoft-autopilot/`、`/copilot/autopilot/` 返回 404，尚无 Autopilot 文档集。
 - 已收官方：Tech Community 定价模型博文（09-25）、十月新功能汇总（10-30，11-13 更新）、MC1479277、MC1546354。
 - 已收媒体：Fortune（Sebastian Herrera，09-25，Annie Pearl 采访：模型来源、安全护栏、「更受限的测试阶段」、UBB 范围）；The Register（Brandon Vigliarolo，06-03）。**The Register 第一轮因「只复述公告」放弃，这轮改为收录**：dSebastien 综述转述的「提示注入防御不明确、微软未回应」「盯着你一举一动」出自此文，文中写明向微软询问安全细节未获回复，并指出 Scout 需 GitHub Copilot 订阅，分析一侧需要原文。
-- 未收：Gizmodo 09-25「Microsoft thinks it's finally figured out Copilot this time」原站对 curl 只返回约 6 KB 的空页；Wayback 有快照 20260926122815，但本机权限检查拦下了用 Wayback 取文的命令，未取到，留待用户决定（可手工复制或放行后再取）。
+- 未收：Gizmodo 09-25「Microsoft thinks it's finally figured out Copilot this time」原站对 curl 只返回约 6 KB 的空页；Wayback 有快照 20260926122815，但本机权限检查拦下了用 Wayback 取文的命令，未取到。用户 2026-11-19 决定跳过，不再收（其内容只是对 Copilot 反复改名的怀疑，dSebastien 综述已转述）。
 - 放弃：Fortune 10-28 财报稿（没有 Autopilot，只有 UBB 积分消耗客户增长 75% 一句，属 Copilot 整体）；The Register 10-07「let Copilot loose on your file system」（Windows Copilot，不涉及 Autopilot）；ITPro「expands autonomy of Copilot agents ahead of public preview」（2024-10-21 的旧文，与本产品无关）；mindstudio.ai、eesel.ai、usecarly、pasqualepillitteri、kascade、techjacksolutions 等（厂商或 SEO 博客，转述公告，mindstudio 的「hands-on use suggests」无任何实测细节）；aguidetocloud 11 月汇总（个人汇总、作者自称未测试，只用作 MC 编号线索）。
 
 ## 已知问题
