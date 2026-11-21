@@ -9,6 +9,7 @@ publisher: "Reuters"
 language: en
 fidelity: 转载全文
 reprintUrl: "https://economictimes.indiatimes.com/ai/ai-insights/as-meta-bets-big-on-muse-ai-agent-early-safety-mishaps-surface/articleshow/135961392.cms"
+altUrls: ["https://telecom.economictimes.indiatimes.com/news/internet/as-meta-bets-big-on-muse-ai-agent-early-safety-mishaps-surface/135961350"]
 translation: 待翻译
 collectedAt: 2026-11-18
 tags: [安全, 隐私]
