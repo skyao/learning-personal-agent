@@ -3,7 +3,7 @@ title: "删了聊天，记忆还在：删除的三重缺口"
 linkTitle: "删除聊天记忆仍在"
 date: 2026-10-28
 originalTitle: "Delete the Chat, Keep the Memory: The Three-Layer Deletion Gap"
-sourceUrl: "https://aihomebuilding.com/stories/delete-chat-memory-gap-2026.html"
+sourceUrl: "https://aihomebuilding.com/stories/muse-delete-chat-memory-gap-2026"
 author: "Catherine Chen"
 publisher: "AIHomeBuilding"
 language: en

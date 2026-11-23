@@ -3,7 +3,7 @@ title: "苹果为 Muse 重写了 Mac 权限提示"
 linkTitle: "苹果重写 Mac 权限提示"
 date: 2026-11-19
 originalTitle: "Apple Rewrote a Mac Permission Screen Because of Muse. Read the New Warning Before You Click Allow."
-sourceUrl: "https://aihomebuilding.com/stories/muse-apple-full-disk-access-2026.html"
+sourceUrl: "https://aihomebuilding.com/stories/muse-apple-full-disk-access-2026"
 author: "Catherine Chen"
 publisher: "AI Home Building"
 language: en

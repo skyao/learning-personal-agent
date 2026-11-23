@@ -1,4 +1,4 @@
-来源：https://aihomebuilding.com/stories/muse-token-price-what-a-token-buys-2026.html
+来源：https://aihomebuilding.com/stories/muse-token-price-what-a-token-buys-2026
 取文：2026-11-17，直接下载
 
 Open the Muse app, go to Settings, and look at the meter next to Manage subscription. Say it reads 73% used.

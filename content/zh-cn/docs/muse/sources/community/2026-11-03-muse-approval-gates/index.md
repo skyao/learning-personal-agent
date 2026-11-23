@@ -3,7 +3,7 @@ title: "审批关卡地图：智能体何时停下来"
 linkTitle: "审批关卡地图"
 date: 2026-11-03
 originalTitle: "The Approval Gates Map: When Does the Agent Stop?"
-sourceUrl: "https://aihomebuilding.com/stories/approval-gates-2026.html"
+sourceUrl: "https://aihomebuilding.com/stories/muse-approval-gates-where-your-agent-stops-2026"
 author: "Elena Vasquez"
 publisher: "AIHomeBuilding"
 language: en

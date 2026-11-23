@@ -1,4 +1,4 @@
-来源：https://aihomebuilding.com/stories/muse-on-glasses-accessibility-2026.html
+来源：https://aihomebuilding.com/stories/muse-on-glasses-accessibility-2026
 取文：2026-11-17，直接下载
 
 Stand in front of a grocery shelf and ask, out loud, "What am I looking at?"

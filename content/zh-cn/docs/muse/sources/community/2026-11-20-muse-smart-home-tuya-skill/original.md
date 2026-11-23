@@ -1,4 +1,4 @@
-来源：https://aihomebuilding.com/stories/muse-smart-home-tuya-skill-2026.html
+来源：https://aihomebuilding.com/stories/muse-smart-home-tuya-skill-2026
 取文：2026-11-20，直接下载
 
 You walk into your house at 11 PM, arms full of groceries, and say the obvious thing to the agent that already runs your inbox, your calendar, and your travel. "Turn on the lights." Nothing happens, even though Muse can book your flight to Chicago, read 400 emails, and call your insurance company, and still cannot flip a switch.

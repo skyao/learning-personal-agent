@@ -3,7 +3,7 @@ title: "Muse 的 56 个连接器：一次权限普查"
 linkTitle: "56 个连接器普查"
 date: 2026-10-17
 originalTitle: "The 56-Connector Census: What Muse Can Touch, and What It Can't"
-sourceUrl: "https://aihomebuilding.com/stories/connector-census-56-apps-2026.html"
+sourceUrl: "https://aihomebuilding.com/stories/muse-connector-census-56-apps-2026"
 author: "Jake Kowalski"
 publisher: "AIHomeBuilding"
 language: en

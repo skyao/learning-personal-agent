@@ -1,4 +1,4 @@
-来源：https://aihomebuilding.com/stories/muse-agent-to-agent-mcp-a2a-2026.html
+来源：https://aihomebuilding.com/stories/muse-agent-to-agent-mcp-a2a-2026
 取文：2026-11-18，直接下载
 
 Ask Muse to book a flight to Chicago next Friday, find a hotel near the conference center that fits the flight, pay for both, and put the whole trip on your calendar, all in one message, while you are standing in a grocery store line with a cart full of milk and a phone in one hand. Muse can handle the first part through its own connectors, and it will probably do it well. Everything after that is a relay race between agents that belong to different companies, speak different protocols, and have never met you. Your flight lives with one agent, your hotel with another, your money with a third, and the only thing connecting them is a set of standards most people have never heard of, written in the last two years, that decide who gets to hand work to whom and who vouches for the result.

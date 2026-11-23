@@ -1,4 +1,4 @@
-来源：https://aihomebuilding.com/stories/muse-bought-it-purchase-pipeline-2026.html
+来源：https://aihomebuilding.com/stories/muse-bought-it-purchase-pipeline-2026
 取文：2026-11-17，直接下载
 
 Somebody else's agent already made the mistake. A user of Instinct, one of the shopping agents that launched before Muse, asked it to book a restaurant, and it booked the wrong one, or the wrong night, and the cancellation charge was $200, and the user said the bot should cover it.

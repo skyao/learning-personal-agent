@@ -3,7 +3,7 @@ title: "智能体即将开始互相对话，先问清对面是谁"
 linkTitle: "智能体间互操作"
 date: 2026-11-17
 originalTitle: "Your Agent Is About to Start Talking to Other Agents. Ask Who Is on the Other End"
-sourceUrl: "https://aihomebuilding.com/stories/muse-agent-to-agent-mcp-a2a-2026.html"
+sourceUrl: "https://aihomebuilding.com/stories/muse-agent-to-agent-mcp-a2a-2026"
 author: "Jake Kowalski"
 publisher: "AI Home Building"
 language: en

@@ -3,7 +3,7 @@ title: "描述一次，Muse 记住它：你的智能体成了可以住进去的�
 linkTitle: "Spaces：从对话到居所"
 date: 2026-11-14
 originalTitle: "Describe It Once, and Muse Keeps It: Your Agent Just Became a Place You Live In"
-sourceUrl: "https://aihomebuilding.com/stories/muse-spaces-describe-once-keep-it-2026.html"
+sourceUrl: "https://aihomebuilding.com/stories/muse-spaces-describe-once-keep-it-2026"
 author: "Elena Vasquez"
 publisher: "AI Home Building"
 language: en

@@ -1,4 +1,4 @@
-来源：https://aihomebuilding.com/stories/muse-connector-census-56-apps-2026.html
+来源：https://aihomebuilding.com/stories/muse-connector-census-56-apps-2026
 取文：2026-11-17，直接下载
 
 Everybody asks what model Muse runs on, which is the wrong question, because the model is the engine and the connectors are the hands: an agent with a genius brain and no hands is a chatbot with good PR, while an agent with fifty-six sets of hands is staff.

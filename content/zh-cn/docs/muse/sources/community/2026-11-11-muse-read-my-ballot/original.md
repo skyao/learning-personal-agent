@@ -1,4 +1,4 @@
-来源：https://aihomebuilding.com/stories/muse-read-my-ballot-2026.html
+来源：https://aihomebuilding.com/stories/muse-read-my-ballot-2026
 取文：2026-11-15，直接下载
 
 Ballots arrived in California mailboxes carrying fourteen statewide propositions, twelve statewide races, and a stack of local measures thick enough to prop a door open. One voter in Menlo Park looked at the pile, looked at his calendar, counted the evenings between now and Election Day, and did the math on a free evening he did not have and was not going to find. Then he did something no voter could have done two months earlier: he handed the whole ballot to his agent.

@@ -3,7 +3,7 @@ title: "九秒与九天：无人值守时，你的智能体在做什么"
 linkTitle: "无人值守时的智能体"
 date: 2026-11-02
 originalTitle: "Nine Seconds, Nine Days: What Your Agent Does When You're Not Watching"
-sourceUrl: "https://aihomebuilding.com/stories/muse-while-you-sleep-agent-failures-2026.html"
+sourceUrl: "https://aihomebuilding.com/stories/muse-while-you-sleep-agent-failures-2026"
 author: "Catherine Chen"
 publisher: "AI Home Building"
 language: en

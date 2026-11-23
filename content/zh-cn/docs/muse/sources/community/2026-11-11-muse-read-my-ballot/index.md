@@ -3,7 +3,7 @@ title: "我把整张选票交给了 Muse：它读回来时漏掉了一个我没�
 linkTitle: "Muse 读选票实测"
 date: 2026-11-11
 originalTitle: "I Handed Muse My Whole Ballot. It Read It Back With One Conflict I Had Missed."
-sourceUrl: "https://aihomebuilding.com/stories/muse-read-my-ballot-2026.html"
+sourceUrl: "https://aihomebuilding.com/stories/muse-read-my-ballot-2026"
 author: "Marcus Washington"
 publisher: "AI Home Building"
 language: en

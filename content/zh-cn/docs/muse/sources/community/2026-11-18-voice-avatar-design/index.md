@@ -3,7 +3,7 @@ title: "Muse 学会说话了，它的脸比声音做了更多工作"
 linkTitle: "语音化身设计分析"
 date: 2026-11-18
 originalTitle: "Muse Learned to Talk. Its Face Is Doing More Work Than Its Voice."
-sourceUrl: "https://aihomebuilding.com/stories/muse-voice-mode-2026.html"
+sourceUrl: "https://aihomebuilding.com/stories/muse-voice-mode-2026"
 author: "Elena Vasquez"
 publisher: "AI Home Building"
 language: en

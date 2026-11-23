@@ -1,4 +1,4 @@
-来源：https://aihomebuilding.com/stories/muse-vs-chatgpt-claude-gemini-personal-agent-2026.html
+来源：https://aihomebuilding.com/stories/muse-vs-chatgpt-claude-gemini-personal-agent-2026
 取文：2026-11-22，直接下载
 
 You have twenty dollars. Four companies want it, and all four are selling you the same sentence: a personal agent that works while you sleep. Meta calls it Muse, OpenAI calls it ChatGPT Work, and Anthropic calls it Claude. Google calls it tasks in Gemini, which used to be called Spark, which tells you something about how fast this market is moving before you have even finished reading the price list.

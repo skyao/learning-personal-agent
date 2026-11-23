@@ -3,7 +3,7 @@ title: "一个 token 能买什么：Muse 计价之谜"
 linkTitle: "token 计价不透明"
 date: 2026-10-27
 originalTitle: "What Does One Muse Token Buy? The Pricing Mystery"
-sourceUrl: "https://aihomebuilding.com/stories/token-price-2026.html"
+sourceUrl: "https://aihomebuilding.com/stories/muse-token-price-what-a-token-buys-2026"
 author: "Jake Kowalski"
 publisher: "AIHomeBuilding"
 language: en

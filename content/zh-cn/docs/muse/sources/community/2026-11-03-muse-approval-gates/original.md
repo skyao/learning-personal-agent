@@ -1,4 +1,4 @@
-来源：https://aihomebuilding.com/stories/muse-approval-gates-where-your-agent-stops-2026.html
+来源：https://aihomebuilding.com/stories/muse-approval-gates-where-your-agent-stops-2026
 取文：2026-11-17，直接下载
 
 Picture the moment clearly, because the whole relationship between you and an agent lives inside it. You asked Muse to sort out a trip. It has compared flights, held nothing, spent nothing, and now a small card appears on your screen with a total, a merchant, and three choices. Allow once. Allow for this task. Deny. Your thumb hovers. Everything Muse promised about safety, everything it means to hand real work to a machine that acts while you sleep, narrows to that pause.

@@ -3,7 +3,7 @@ title: "Muse 终于能调灯了，但要借别人的钥匙"
 linkTitle: "智能家居接入"
 date: 2026-11-20
 originalTitle: "Muse Can Finally Dim Your Lights. It Just Has to Borrow Someone Else's Key to Do It."
-sourceUrl: "https://aihomebuilding.com/stories/muse-smart-home-tuya-skill-2026.html"
+sourceUrl: "https://aihomebuilding.com/stories/muse-smart-home-tuya-skill-2026"
 author: "Jake Kowalski"
 publisher: "AI Home Building"
 language: en

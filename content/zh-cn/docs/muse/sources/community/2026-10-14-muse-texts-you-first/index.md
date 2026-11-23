@@ -3,7 +3,7 @@ title: "智能体先开口：主动提醒的礼仪问题"
 linkTitle: "智能体先开口的礼仪"
 date: 2026-10-14
 originalTitle: "When the Agent Texts You First: The Etiquette of Proactive AI"
-sourceUrl: "https://aihomebuilding.com/stories/agent-texts-you-first-2026.html"
+sourceUrl: "https://aihomebuilding.com/stories/muse-agent-texts-you-first-2026"
 author: "Elena Vasquez"
 publisher: "AIHomeBuilding"
 language: en

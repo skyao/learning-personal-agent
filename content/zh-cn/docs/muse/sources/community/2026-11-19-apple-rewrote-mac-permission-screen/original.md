@@ -1,4 +1,4 @@
-来源：https://aihomebuilding.com/stories/muse-apple-full-disk-access-2026.html
+来源：https://aihomebuilding.com/stories/muse-apple-full-disk-access-2026
 取文：2026-11-19，直接下载
 
 Jason Aten keeps a Mac mini for exactly this kind of test. On September 19, he installed Meta's new personal agent, Muse, on the machine, asked it to write a short bio of him, and moved on. Minutes after a phone call with his podcast co-host about the new iPhones, his phone buzzed. Muse had a suggestion: the conversation would make a good column, and it could put together the research. It also flagged a message from his editor about a column due Monday.

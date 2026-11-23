@@ -3,7 +3,7 @@ title: "Muse 买了东西，谁来买单"
 linkTitle: "下单到扣款的责任链"
 date: 2026-11-07
 originalTitle: "Muse Bought It. Who Pays? The Purchase Pipeline"
-sourceUrl: "https://aihomebuilding.com/stories/bought-it-purchase-pipeline-2026.html"
+sourceUrl: "https://aihomebuilding.com/stories/muse-bought-it-purchase-pipeline-2026"
 author: "Marcus Washington"
 publisher: "AIHomeBuilding"
 language: en

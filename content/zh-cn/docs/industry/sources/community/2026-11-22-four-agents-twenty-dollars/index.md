@@ -3,7 +3,7 @@ title: "20 美元，四家智能体，工作量天差地别"
 linkTitle: "20 美元四智能体对比"
 date: 2026-11-22
 originalTitle: "Four Agents, One $20 Bill, and Very Different Amounts of Work"
-sourceUrl: "https://aihomebuilding.com/stories/muse-vs-chatgpt-claude-gemini-personal-agent-2026.html"
+sourceUrl: "https://aihomebuilding.com/stories/muse-vs-chatgpt-claude-gemini-personal-agent-2026"
 author: "Jake Kowalski"
 publisher: "AI Home Building"
 language: en

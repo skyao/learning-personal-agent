@@ -3,7 +3,7 @@ title: "你让 Muse 读的网页，正在给它下指令"
 linkTitle: "提示注入与 Muse"
 date: 2026-11-21
 originalTitle: "The Web Page You Asked Muse to Read Just Gave It Orders."
-sourceUrl: "https://aihomebuilding.com/stories/muse-prompt-injection-web-talks-back-2026.html"
+sourceUrl: "https://aihomebuilding.com/stories/muse-prompt-injection-web-talks-back-2026"
 author: "Catherine Chen"
 publisher: "AI Home Building"
 language: en

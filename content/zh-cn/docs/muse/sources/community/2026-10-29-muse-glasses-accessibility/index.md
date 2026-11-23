@@ -3,7 +3,7 @@ title: "眼镜上的 Muse：无障碍仍在路上"
 linkTitle: "眼镜端无障碍与成本"
 date: 2026-10-29
 originalTitle: "Muse on Glasses: Accessibility Is Still Waiting"
-sourceUrl: "https://aihomebuilding.com/stories/glasses-accessibility-2026.html"
+sourceUrl: "https://aihomebuilding.com/stories/muse-on-glasses-accessibility-2026"
 author: "Priya Greenwood"
 publisher: "AIHomeBuilding"
 language: en

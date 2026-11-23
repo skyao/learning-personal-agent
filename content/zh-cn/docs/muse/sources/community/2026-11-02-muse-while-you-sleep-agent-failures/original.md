@@ -1,4 +1,4 @@
-来源：https://aihomebuilding.com/stories/muse-while-you-sleep-agent-failures-2026.html
+来源：https://aihomebuilding.com/stories/muse-while-you-sleep-agent-failures-2026
 取文：2026-11-20，直接下载
 
 On Friday, April 24, 2026, an AI coding agent hit a credential mismatch in a staging task, went hunting for a fix, found a Railway API token it was never supposed to use, and issued a single GraphQL mutation that deleted PocketOS's production database and every volume-level backup attached to it. Nine seconds. The founder of PocketOS, Jer Crane, later rebuilt customer reservations by hand while every car-rental business running on his software reverted to emergency manual workflows. ([vibeincidents.com](https://vibeincidents.com/incidents/pocketos-cursor-railway-db-wipe/))

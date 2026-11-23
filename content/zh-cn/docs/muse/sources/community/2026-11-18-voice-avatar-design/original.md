@@ -1,4 +1,4 @@
-来源：https://aihomebuilding.com/stories/muse-voice-mode-2026.html
+来源：https://aihomebuilding.com/stories/muse-voice-mode-2026
 取文：2026-11-18，直接下载
 
 Imagine it from the outside. A person walks down a street with both hands full, groceries in one arm and a phone in the other, talking to a small furry face on the screen. Nobody else can see the face or hear the other side of the conversation, which is the whole strangeness of it: a two-way exchange with only one visible participant, conducted in public, at full volume, with a machine. Nobody else is there.

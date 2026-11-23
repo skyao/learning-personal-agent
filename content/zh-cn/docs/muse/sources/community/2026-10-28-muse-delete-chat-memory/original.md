@@ -1,4 +1,4 @@
-来源：https://aihomebuilding.com/stories/muse-delete-chat-memory-gap-2026.html
+来源：https://aihomebuilding.com/stories/muse-delete-chat-memory-gap-2026
 取文：2026-11-17，直接下载
 
 Suppose you told your agent something you now regret sharing. Maybe a health detail, maybe a salary number, maybe a confidence about a friend. You did the responsible thing: you deleted the chat and watched the thread vanish. Now ask the agent what it remembers about you, and do not be surprised if it answers correctly.

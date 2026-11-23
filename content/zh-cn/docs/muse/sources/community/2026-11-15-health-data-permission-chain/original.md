@@ -1,4 +1,4 @@
-来源：https://aihomebuilding.com/stories/muse-health-data-deal-2026.html
+来源：https://aihomebuilding.com/stories/muse-health-data-deal-2026
 取文：2026-11-16，直接下载
 
 It is 9:40 on a Tuesday night, and you have a doctor's appointment in the morning. Your phone already knows how you slept for the last three weeks, how many steps you took, and what your resting heart rate did after that flu in October. Somewhere in the Muse app sits a button that says, in effect, hand all of that to your agent and it will write you a one-page brief for the visit, five questions worth asking in plain language, ready to print, and all it asks in return is access to the most intimate record your phone keeps.

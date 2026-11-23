@@ -1,4 +1,4 @@
-来源：https://aihomebuilding.com/stories/muse-agent-texts-you-first-2026.html
+来源：https://aihomebuilding.com/stories/muse-agent-texts-you-first-2026
 取文：2026-11-17，直接下载
 
 Your phone buzzes at 7:42 in the morning. It is on the nightstand, screen up, the way you left it. You reach for it half-asleep, expecting a person, and find a suggestion instead. Muse noticed a recipe reel you saved last week and turned it into a grocery list. It is thoughtful, and it is also, in the most literal sense, a machine that decided what you should think about before coffee.
