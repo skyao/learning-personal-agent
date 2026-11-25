@@ -1,0 +1,60 @@
+来源：https://aihomebuilding.com/stories/muse-family-inbox-calendar-operator-2026
+取文：2026-11-25，直接下载（article.article-body 容器；回填）
+
+It is 7:12 on a Tuesday morning and your phone lights up with the email that changes the day. Picture day moved to Thursday, pickup is 2:40 instead of 3:15 because of an early dismissal you did not know about, and the reading screener opt-out form, the one with a deadline, is attached to the third message in the thread, the one from the school office, not the teacher.
+
+You have kids, two jobs between the adults in the house, and a calendar that only works when both parents see the same version of it. Somewhere in the pile of unread mail is the difference between a normal school day and a child standing alone at pickup wondering where everyone went. That is not a productivity problem; it is the family operations center, and it runs on email. That is the job.
+
+Muse, Meta's personal AI agent, can operate that inbox. Connect Gmail and Google Calendar, set a scheduled task, and the agent reads the mail, flags the deadlines, forwards the school invites to your spouse, and hands you a morning briefing before the coffee is done. Meta's own help center describes it plainly: Muse "can take actions and get things done with your direction, and can be connected with other apps and services," including reminders and conversations that build on what you have already discussed. Every user guide I read says the same thing in different words. Connect calendar first, because it is the highest-leverage connection you have.
+
+So the question is not whether the agent can do this work. It can. The question is how much of your family's schedule you hand over, in what order, and what you do when the handoff fails, because it will fail eventually, and the failure will arrive disguised as an ordinary quiet morning.
+
+## The ladder, not the leap
+
+Think of delegation as a ladder with four rungs, and climb it in order, because nobody should jump to the top.
+
+Rung one is read-only: your agent reads the inbox and the calendar and reports back each morning with a briefing, every weekday at 7, laying out today's schedule in order, anything that changed overnight, and the messages that actually need you. If the agent gets it wrong, the cost is a bad briefing and nearly nothing else, which is why this is where everyone should start and where a lot of families should stay for a month before climbing any higher.
+
+Rung two is draft-before-send, which means Muse writes the reply to the teacher, the RSVP to the class party, and the note to the other parent about carpool, and you send it. Failure here is an embarrassing draft that you catch because you are still the filter, and Meta's design backs this up, since by default the agent asks before important actions like sending an email, while email itself can be connected read-only to start.
+
+Rung three is rule-based auto-forward: mail matching a rule moves untouched from one parent to the other. In one household I know, every Gmail invite for the kids' events is forwarded to the other parent on a 15-minute scheduled check, as the complete original, full HTML, never a rewritten summary. Failure here is a missed forward, and its cost depends entirely on the cadence you chose, which is the part nobody talks about.
+
+Rung four is full auto-reply, where your agent answers as you, confirming the field trip, declining the volunteer slot, and rescheduling the dentist. Failure here is a commitment you never saw, made in your name, to people who know your children. Climb here only after the lower rungs have run clean for months, and honestly, most families never need to.
+
+## The math, shown in full
+
+Assume a parent triages about 40 family emails a week and spends about 2 minutes on each. That is 80 minutes a week, roughly 70 hours a year, spent deciding which messages matter. A daily briefing compresses all of that to a five-minute read, which saves about 55 minutes a week and about 48 hours a year, and that is the entire pitch in one sentence. Those are my assumptions, and your household will differ, but the shape of the arithmetic holds at any volume: the briefing costs minutes and returns hours.
+
+Now the token cost, because everyone assumes the agent is expensive and nobody checks. A daily briefing runs roughly 2,000 tokens, so seven days a week comes to about 14,000 tokens against a free allowance of 100 million tokens a week, which is about 0.014 percent of the free tier. Your family's entire inbox operation costs effectively nothing. Price is not the constraint here; attention is, and more precisely, the risk is not what the agent charges you but what the agent misses, which costs more than a year of briefings ever could.
+
+## Cadence is the risk
+
+Here is the finding nobody publishes, because every guide treats the check schedule as a convenience setting, when it is a risk decision, and the number you pick decides how late a same-day message can arrive, which is the only thing about the schedule that actually matters.
+
+A 15-minute forward check bounds your worst-case delay at 15 minutes plus delivery time. A daily digest bounds it at 24 hours. School invites carry same-day deadlines, a portrait session, a pickup change, an opt-out form due by Friday, and the household running the 15-minute rule chose that number precisely because a same-day deadline cannot wait for a morning briefing. If your rule checks once a day, you have built a system that can deliver a same-day pickup change a day late, on schedule, exactly as designed, which is not a bug in the agent but a bug in the deal you made with it, and the deal is yours to rewrite.
+
+Pick the cadence by the deadline, not by convenience: fifteen minutes for same-day school events, daily for everything else. And never let the agent summarize a school invite. A summary is a new document, written by software that can be wrong with confidence, especially on prices, times, and niche facts, which is exactly the category a pickup time falls into. Forward the complete original or do not forward it at all. A misread date in a paraphrase is the one failure mode that looks exactly like success until the child is standing alone at pickup.
+
+## The quiet inbox problem
+
+Once the agent forwards mail to your spouse, there are two sources of truth: your inbox and your spouse's forwarded copy. If the forwarding rule breaks silently, your spouse's inbox goes quiet, and silence looks exactly like a week with no school events, which means nobody notices, because there is nothing to notice. Nothing.
+
+Fix it with a heartbeat. Make the agent report "checked, nothing new" on a schedule, so a broken rule shows up as a missing heartbeat instead of a quiet inbox. Silence should be evidence, not absence. This is the same principle that keeps any monitoring system honest, and it applies doubly when the thing being monitored is your children's schedule. A scheduled task that only speaks when something is wrong cannot tell you it stopped working. One that speaks every day can.
+
+Voice notes deserve the same caution. Muse takes voice input, and its transcription model evaluates streaming audio every 80 milliseconds across more than 20 speakers and 25 languages. That is impressive engineering, and it still garbles. A garbled voice note is an unresolved instruction until you restate it cleanly. If you dictate "tell Monica pickup is at 2:40" from the car and the agent hears 2:14, nobody finds out until 2:40. Read the transcript back before the agent acts on it. Every time. Anything with a time in it gets read twice, because a single misheard digit is the difference between 2:40 and 2:14.
+
+## The other side, at full strength
+
+Fairness demands the strongest version of the case against all of this. A shared family calendar and a spouse who reads their own email already solve most of the problem, and adding an agent adds a middleman that can misread, misroute, or silently drop the one message that matters. An hour a week of saved triage is real, but it is small, and the cost of one missed school deadline dwarfs a year of saved minutes. Kids' data flowing through an agent's memory raises its own questions: Muse is an adults-only product, for people 18 and over, and the kids' school email belongs in a parent's agent, not a child's, a boundary that gets blurrier the more capable the agent becomes. More than 10 million people in the US and Canada set up Muse agents in the first six weeks after launch, and about a quarter use it on any given day, so this is not a niche experiment anymore, but popularity is not proof that the delegation is wise. The honest thesis is that the agent is a convenience for low-stakes mail and a liability for high-stakes mail, and the skill is telling the two apart before you hand over the keys, not after.
+
+That argument is strong. It is also incomplete. It assumes the alternative is a parent who reads everything carefully, which is not the alternative anyone actually has. The real alternative is a parent reading email at 7:12 in the morning while making lunches, and missing the third message in the thread anyway. Humans miss school invites too. They miss them constantly. The question was never whether the agent is perfect. It is whether a supervised agent, with a heartbeat and a complete-original rule, misses fewer than a tired parent scanning a phone with one hand. On that comparison, the agent has a real chance, but only if you build the supervision in from the start instead of bolting it on after the first missed pickup.
+
+## What I could not verify
+
+Honesty requires the gaps. I have not tested the read-only email connector setting myself; the read and write split comes from Meta's help documentation as reported by user guides and a beginner tutorial verified against the help center in September, not from my own settings screen. Pricing tiers are consistent across secondary sources, though I did not verify them against Meta's live subscription page in this run, and no published data exists on how often Muse misroutes, drops, or garbles a forwarded email, so the failure modes named here come from the design of the system and one household's operating rules, not from a measured error rate. The household automation I cite is one family's setup, documented in its own standing records, not a study of many households. Voice transcription accuracy figures come from a third-party guide's description of the transcription model, not from Meta's own published benchmarks, and the time-savings math uses assumed volumes, 40 emails a week at 2 minutes each, which your household will not match exactly, so treat the 48 hours a year as an illustration with labeled inputs, not a promise.
+
+## What to do this week
+
+First, connect calendar before email, because every guide agrees it is the highest-leverage connection and it carries the least risk, then start email read-only and keep it that way for a week of accurate digests before you allow sending. Second, set the morning briefing to run every weekday at 7, with today's schedule in order, anything that changed overnight, and the messages that need you, and read it before you read the inbox itself. Third, if you forward school mail to a spouse, forward the complete original, never a summary, and pick the check cadence by the deadline: 15 minutes for same-day events, daily for the rest. Fourth, give the agent a heartbeat, a daily "checked, nothing new" so silence becomes evidence, and fifth, keep draft-before-send for anything that commits a child, a payment, or a reply in your name, reading back any voice note with a time in it before the agent acts on it.
+
+Your family's schedule is the most consequential thing an agent will ever touch, more than your shopping, more than your news, more than your travel. It deserves a better deal than a toggle flipped on a Tuesday morning. Make the deal deliberately, rung by rung, with the failure modes priced in advance. That is the deal. Then let the agent do the reading, and keep the deciding for yourself.
