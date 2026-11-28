@@ -13,7 +13,7 @@ description: 收集 Grok Bot（SpaceXAI / xAI，经 Cursor 交付）的资料时
 | --- | --- |
 | 产品目录 | `content/zh-cn/docs/grok-bot/` |
 | 发布日期 | 2026-08-11（beta） |
-| 最后收集日期 | 2026-11-28（美东；增量：官方新收 11 篇——新闻 3 篇（Grok Bot 1.0、会计团队用例、X Subscription 套餐）、指南 1 篇（multiple teams，原站可下载后补收）、docs.x.ai 新页 7 篇；社区 5 篇——NewCore 越权访问调查、Profero 安全研究、Timeline 作者 2 篇、Latent Space 五天实测；docs.x.ai 20 页原文更新、旧译文删去待重译；更新日志更新到 v1.3.0（11-24），保留旧译文待补译；帮助页迁到 grok.com 被 Cloudflare 拦截，本轮未比对）；2026-11-10（用户发来公众号文章 1 篇：未来已来AI物语「Grok Bot / Personal Agent 是什么？」11-09，收入 community）；2026-11-10（增量：更新日志更新到 v0.79.3（11-06），目录改为 2026-11-06-changelog，译文只覆盖到 v0.78.1、新增部分待补译；Cursor 文档 teams 与帮助页 shared-bots 原文更新，旧译文移除待重译；x.ai 新闻无新的 Grok Bot 稿件）；2026-11-06（第一轮 2026-11-05：官方 36 篇、媒体 3 篇、社区 5 篇；2026-11-06 对照旧笔记补收官方 11 篇：docs.x.ai 文档 10 篇、更新日志 1 篇） |
+| 最后收集日期 | 2026-11-28（10:16 轮次：无新资料；docs.x.ai 侧边栏无新页，HN 无新帖；更新日志未核实——x.ai/changelog/bot 现返回 Cloudflare 验证页，Wayback CDX 临时离线）；2026-11-28（美东；增量：官方新收 11 篇——新闻 3 篇（Grok Bot 1.0、会计团队用例、X Subscription 套餐）、指南 1 篇（multiple teams，原站可下载后补收）、docs.x.ai 新页 7 篇；社区 5 篇——NewCore 越权访问调查、Profero 安全研究、Timeline 作者 2 篇、Latent Space 五天实测；docs.x.ai 20 页原文更新、旧译文删去待重译；更新日志更新到 v1.3.0（11-24），保留旧译文待补译；帮助页迁到 grok.com 被 Cloudflare 拦截，本轮未比对）；2026-11-10（用户发来公众号文章 1 篇：未来已来AI物语「Grok Bot / Personal Agent 是什么？」11-09，收入 community）；2026-11-10（增量：更新日志更新到 v0.79.3（11-06），目录改为 2026-11-06-changelog，译文只覆盖到 v0.78.1、新增部分待补译；Cursor 文档 teams 与帮助页 shared-bots 原文更新，旧译文移除待重译；x.ai 新闻无新的 Grok Bot 稿件）；2026-11-06（第一轮 2026-11-05：官方 36 篇、媒体 3 篇、社区 5 篇；2026-11-06 对照旧笔记补收官方 11 篇：docs.x.ai 文档 10 篇、更新日志 1 篇） |
 | 实测材料 | 用户确认没有（2026-11-05） |
 
 从一开始就按新流程：原文存 `original.md`，资料页只写摘要与保留理由，不翻译。
@@ -96,6 +96,7 @@ description: 收集 Grok Bot（SpaceXAI / xAI，经 Cursor 交付）的资料时
 | 资料 | 判断 |
 | --- | --- |
 | x.ai 直接下载 | 2026-11-10 起 `x.ai/news`、`x.ai/changelog/bot` 与 RSS 用浏览器标识可以直接下载（200），不再需要 Wayback。更新日志抽取后要整理：日期行「November 6, 2026Nov 6, 2026」去重；条目末尾的「Teams」「Enterprise」角标改为「[Teams]」；「0.75.2+Requires Grok Bot 0.75.2 or later」改为「(Requires Grok Bot 0.75.2 or later)」 |
+- 2026-11-28 10:16 轮次：`x.ai/changelog/bot` 与 RSS 改回 Cloudflare 验证页，直接下载失败；Wayback CDX 当时临时离线，更新日志 v1.3.0（11-24）之后未核实。
 | Cursor 文档 teams | 原文更新：新增管理员的 Bot sharing 设置（Everyone / Admins only），以及 Slack 中未关联账号的成员使用共享 Bot |
 | 帮助页 shared-bots | 原文更新：共享范围扩到组织，新增发布草稿、复制链接、浏览共享 Bot、学到的内容需审核、共享连接器 |
 | 其余 Cursor 文档与帮助页 | 比对只差页尾链接，未覆盖 |
