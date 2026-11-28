@@ -23,6 +23,10 @@ description: Personal Agent 学习笔记仓库的通用约定：git 提交与推
 - 不在 skill、任务说明、脚本里写死 home 路径（如 `/home/sky`、`/home/claude`）。写 `$HOME/...` 或相对仓库根目录的路径；Python 脚本里用 `os.path.expanduser("~")`，或者从脚本自身位置推出仓库根目录（用户 2026-11-14 决定，此前 home 路径变动导致子 agent 读错目录）。
 - 临时文件放会话的临时目录（scratchpad），不放进仓库。并行的子 agent 共用同一个临时目录，文件名要带上区分用的前缀。
 
+## 构建
+
+- **`npm run build` 报 `binary with name "npx" not found` 时，先看 `node_modules/` 在不在。** 这个报错来自 Hugo 的 PostCSS 管道：本仓库的 `postcss-cli` 是 devDependency，`node_modules/.bin` 里没有时就退到用 `npx` 装，找不到就报这句，与 npx 本身是否可用无关。在仓库根目录跑 `npm install`（几十秒）后重跑即可，`node_modules/` 不进仓库（2026-11-28 批量翻译后校验时遇到）。
+
 ## 本机 shell 的坑
 
 - **临时函数别用一两个字母的名字。** 用户的 zsh profile 把 `g` 等短名字定义成了别名，写 `g(){ ...; }` 会报 `defining function based on alias 'g'` 和 `parse error near '()'`，整条命令都不执行。用 `chk`、`vrf` 这类名字（2026-11-13 WorkBuddy 分析中遇到）。
