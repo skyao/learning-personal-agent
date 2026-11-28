@@ -12,7 +12,7 @@ description: >
 
 - **四条路径，治理强度依次递减。** 目录连接器由 Meta 与服务方合作集成并审核，在虚拟机外的权限分离进程里运行；自定义连接器由 Muse 按用户给的 API 或 MCP 文档自行接通，Meta 不审核；没有接口的网站由云端浏览器代用户操作；2026-11-20 正式宣布的 Chrome 扩展则借用用户自己已登录的浏览器。另有 Mac、安卓本机权限和 Gadgets 等设备侧接入。
 - **授权粒度在目录连接器上最细。** 官方把工具分成读取、写入、敏感写入三档，购买、发邮件等敏感写入每次都要批准、不能设成「始终允许」；许多连接器可设只读。浏览器路线没有这些控制。
-- **目录扩张快，但宣布不等于可用。** Meta 9-23 宣布十家零售商，9-30 的应用内检查一家都没找到；社区实测 11-21 目录有 143 项，地区限制和「逐步推出」使各国用户看到的并不相同。真正走到对话内结账的，截至 2026-11-28 只有 Shopify、沃尔玛（11-23/24 起）、Gopuff 等少数几家，且尚无已验证的成交报告。
+- **目录扩张快，但宣布不等于可用。** Meta 9-23 宣布十家零售商，9-30 的应用内检查一家都没找到；社区实测 11-21 目录有 143 项，地区限制和「逐步推出」使各国用户看到的并不相同。真正走到对话内结账的，截至 2026-11-28 只有 Shopify、沃尔玛（11-23/24 起）、Gopuff 等少数几家，成交证据只有零星的用户自述：Retailgentic 11-24、AI Salon 作者感恩节夜各在沃尔玛下过单；CNBC 报道的一笔 AutoZone 订单 17 小时后被取消。
 - **平台封堵是这个主题最大的变量。** 亚马逊 9-20 起封堵并让 Muse 的购物技能主动绕开亚马逊；嘉信、摩根大通和加拿大五大银行拒绝智能体用客户凭证进账户；eBay、The RealReal 收紧防御；美联航 11-11 以运输合同禁止智能体订票。亚马逊与 Meta 正在谈判解封，目前只有 Fortune 一家报道。
 - **Meta 的应对是让商家「有门可走」。** Poppy（Personal Agent Protocol）1.0 于 11-13 发布，Shopify 自动为商家发布 poppy.json；沃尔玛用 MCP 网关加自家助手 Sparky 接 Muse。但实地核查显示 Shopify 文件只开放结账一项权限、版本号为 0.4，截至 11-15 也没有 Muse 应用内使用 Poppy 的证据。
 
@@ -81,6 +81,11 @@ description: >
 
 黑五前一天的检索没有找到任何经 Muse 在沃尔玛或 Gopuff 完成的已验证购买；沃尔玛企业公告称 11-24 起可购物，其 Agent Gateway 页面却写着仅限受邀的早期测试版（[黑五购物核查]({{< relref "/docs/muse/sources/community/2026-11-27-museexplained-black-friday-purchase-check" >}})）。
 
+之后出现了两例具名的用户自述，一成一败：
+
+- AI Salon 的作者感恩节夜用约 30 分钟语音对话，让 Muse 在沃尔玛买了两台佳能打印机，税前 168.99 美元。Muse 起初走浏览器结账；作者要求改用能拿到 Muse 首单满 100 返 25 美元优惠的 ShopPay 后，Muse 在扣款前关掉了浏览器结账，请他一键连接 ShopPay，每一步都先征得批准。作者还说明，智能体目前买不了本地门店的优惠，也不能本地配送，订单都经 Walmart.com 从仓库发货（[AI Salon：遛狗时买打印机]({{< relref "/docs/muse/sources/community/2026-11-27-thesalon-muse-walmart-black-friday" >}})）。文中没有写明最终走的是 Agent Gateway 还是 ShopPay 路径。
+- CNBC 报道，一位用户 10 月授权 Muse 在 AutoZone 买雨刮，约 17 小时后订单因未说明的错误被取消，Muse 随后建议她自己去亚马逊下单；同一用户让 Muse 找毛绒玩具，Muse 推荐了一家她没听说过、看不到评价的零售商的七五折商品（[CNBC：购物订单被取消]({{< relref "/docs/muse/sources/media/2026-11-28-allthingsmuse-muse-shopping-order-canceled-cnbc" >}})，All Things Muse 转述 CNBC 11-27 报道）。
+
 ## 向第三方开放：连接器平台
 
 据 TechCrunch，Wang 在 Connect 上称开放开发者构建连接器后「不到一周」收到超过 1,500 份申请（[TechCrunch：Connect 上的 Muse]({{< relref "/docs/muse/sources/media/2026-09-23-techcrunch-everything-new-muse" >}})）。11-04 的开发者指南把准入条件写得很具体（[连接器指南（开发者）]({{< relref "/docs/muse/sources/official/2026-11-04-connector-guidelines" >}})）：
@@ -100,6 +105,8 @@ description: >
 
 - 11 月中旬，Muse 的购物技能写入「除非用户要求，否则不要搜索 Amazon」，一般商品改去 Walmart、Target，由 Marketplace Pulse 前后对比发现、GeekWire 复现（[Muse 默认绕开亚马逊]({{< relref "/docs/muse/sources/media/2026-11-17-do-not-search-amazon" >}})）；
 - 11-25 TechCrunch 转述 Fortune，两家就让 Muse 直连亚马逊举行多轮会谈，未决的是搜索结果呈现和广告，协议需两家 CEO 批准（[亚马逊或解除 Muse 封锁]({{< relref "/docs/muse/sources/media/2026-11-25-techcrunch-amazon-muse-blockade-talks" >}})）；社区核查指出各家报道都以 Fortune 为唯一来源，没有协议、条款或时间表（[亚马逊 Muse 封锁谈判]({{< relref "/docs/muse/sources/community/2026-11-26-amazon-meta-muse-blockade-talks" >}})）。
+
+**零售商规则不一。** CNBC 11-27 汇总：亚马逊、eBay、美联航、Kohl's 限制或直接封堵智能体，Coach、Gap 只许浏览、不许结账，沃尔玛、丝芙兰向智能体开放（[CNBC：购物订单被取消]({{< relref "/docs/muse/sources/media/2026-11-28-allthingsmuse-muse-shopping-order-canceled-cnbc" >}})）。
 
 **银行与券商。** 嘉信 CEO 在 Bloomberg 采访中点名 Muse，称拦截试图转移客户资金的未经授权智能体，同时准备提供只读的 MCP 通道（[Bloomberg：嘉信理财拦截 Muse]({{< relref "/docs/muse/sources/media/2026-10-16-bloomberg-schwab-blocks-muse" >}})）。加拿大皇家银行 10-27 通知员工封堵第三方个人智能体直接访问网银，一天内 TD、BMO、Scotiabank、CIBC 跟进（[加拿大银行封堵智能体]({{< relref "/docs/muse/sources/media/2026-11-02-canada-banks-block-agents" >}})，All Things Muse 汇总 Bloomberg 等报道）。WIRED 记录美国银行提醒客户：把登录信息交给 AI 助手，要对由此产生的活动负责（[WIRED：颠覆尚未发生]({{< relref "/docs/muse/sources/media/2026-10-31-wired-muse-commerce-reality-check" >}})）。
 
@@ -132,7 +139,7 @@ description: >
 ## 资料缺口
 
 - 官方连接器总数和目录页；各国可用清单；「逐步推出」的本地连接器实际上线日期（日本 Mercari、Ticket Pia，英国各合作方）。
-- 经沃尔玛、Gopuff、Loblaw 完成的已验证订单；沃尔玛网关「仅限受邀」与「11-24 起可购物」两种说法的关系。
+- 经沃尔玛、Gopuff、Loblaw 完成的订单，目前只有个别用户自述，没有平台或第三方的统计；AI Salon 那笔订单最终走的是哪条结账路径；沃尔玛网关「仅限受邀」与「11-24 起可购物」两种说法的关系。
 - Poppy 在 Muse 应用内的实际行为；Shopify 何时把 poppy.json 升到 1.0、开放订单类权限；Mercury、土耳其航空、Hertz 的用户实测。
 - 小企业连接器（QuickBooks、Stripe 等）的 OAuth 范围；自定义连接器的安全边界和凭证存放的官方说明。
 - 亚马逊谈判的第二个独立来源；Meta 对亚马逊封堵和「不要搜索 Amazon」技能的正式回应。
@@ -153,6 +160,7 @@ description: >
 
 - [GeekWire：亚马逊屏蔽 Muse]({{< relref "/docs/muse/sources/media/2026-09-20-geekwire-amazon-blocks-muse" >}})、[GeekWire：谁拥有顾客关系]({{< relref "/docs/muse/sources/media/2026-09-22-geekwire-who-owns-customer-relationship" >}})、[Muse 默认绕开亚马逊]({{< relref "/docs/muse/sources/media/2026-11-17-do-not-search-amazon" >}})、[亚马逊或解除 Muse 封锁]({{< relref "/docs/muse/sources/media/2026-11-25-techcrunch-amazon-muse-blockade-talks" >}})：亚马逊封堵的理由、Muse 的绕行与谈判。
 - [Bloomberg：嘉信理财拦截 Muse]({{< relref "/docs/muse/sources/media/2026-10-16-bloomberg-schwab-blocks-muse" >}})、[加拿大银行封堵智能体]({{< relref "/docs/muse/sources/media/2026-11-02-canada-banks-block-agents" >}})：嘉信与加拿大银行的封堵。
+- [CNBC：购物订单被取消]({{< relref "/docs/muse/sources/media/2026-11-28-allthingsmuse-muse-shopping-order-canceled-cnbc" >}})：AutoZone 订单被取消、各零售商的智能体规则。
 - [eBay 限制第三方智能体]({{< relref "/docs/muse/sources/media/2026-11-10-ebay-blocks-third-party-ai-agents" >}})、[RealReal 收紧防御]({{< relref "/docs/muse/sources/media/2026-10-30-realreal-tightens-bot-defenses" >}})：eBay、The RealReal 的限制。
 - [Muse 自绘购物车]({{< relref "/docs/muse/sources/media/2026-11-04-muse-instacart-shopping-cart" >}})、[Expedia 接入 Muse]({{< relref "/docs/muse/sources/media/2026-11-09-skift-expedia-live-on-muse" >}})、[Muse 接入 Gopuff]({{< relref "/docs/muse/sources/media/2026-11-24-muse-gopuff-grocery-delivery" >}})、[沃尔玛与 Muse 的规矩]({{< relref "/docs/muse/sources/media/2026-11-24-walmart-muse-shop-on-its-terms" >}})：Instacart、Expedia、Gopuff、沃尔玛的集成深度。
 - [Chrome 扩展正式宣布]({{< relref "/docs/muse/sources/media/2026-11-20-muse-chrome-extension-official-announcement" >}})：Chrome 扩展。
@@ -162,6 +170,7 @@ description: >
 
 - [56 个连接器普查]({{< relref "/docs/muse/sources/community/2026-10-17-muse-connector-census" >}})、[连接器新增 29 件]({{< relref "/docs/muse/sources/community/2026-11-22-emma-connectors-29-added" >}})：连接器普查与目录新增的实测数。
 - [Muse 黑五购物指南]({{< relref "/docs/muse/sources/community/2026-11-13-muse-black-friday-shopping" >}})、[黑五购物核查]({{< relref "/docs/muse/sources/community/2026-11-27-museexplained-black-friday-purchase-check" >}})：宣布与可用、成交之间的核查。
+- [AI Salon：遛狗时买打印机]({{< relref "/docs/muse/sources/community/2026-11-27-thesalon-muse-walmart-black-friday" >}})：沃尔玛下单的一手自述，浏览器结账与 ShopPay 两条路径的切换。
 - [沃尔玛连接器与 Sparky 分工]({{< relref "/docs/muse/sources/community/2026-11-22-walmart-connector-sparky-cart" >}})、[沃尔玛网关购物核查]({{< relref "/docs/muse/sources/community/2026-11-23-muse-walmart-agent-gateway" >}})、[沃尔玛连接器初体验]({{< relref "/docs/muse/sources/community/2026-11-24-retailgentic-muse-walmart-first-look" >}})：沃尔玛连接器的分工与首次实测。
 - [美联航禁智能体订票]({{< relref "/docs/muse/sources/community/2026-11-13-united-bans-agent-booking" >}})：美联航合同条款。
 - [Poppy 1.0 落地核查]({{< relref "/docs/muse/sources/community/2026-11-14-poppy-first-sierra-ledger" >}})、[poppy.json 内容核查]({{< relref "/docs/muse/sources/community/2026-11-15-poppy-json-inside" >}})、[Poppy 文件实地核查]({{< relref "/docs/industry/sources/community/2026-11-14-shopify-poppy-file-live-check" >}})、[从智能体一侧读 Poppy 1.0]({{< relref "/docs/industry/sources/community/2026-11-20-muleai-poppy-from-agent-side" >}})：Poppy 落地核查与解读。

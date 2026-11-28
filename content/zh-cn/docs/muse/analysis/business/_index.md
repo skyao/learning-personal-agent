@@ -66,6 +66,7 @@ Forter 把 Muse 归为「抓取型」智能体，即通过商店自有页面结�
 
 商家一侧的数字小得多：
 
+- Bain 本月的研究称，智能体购物只占全球电商交易笔数的 0.4%、交易额的 0.2%（[CNBC：购物订单被取消]({{< relref "/docs/muse/sources/media/2026-11-28-allthingsmuse-muse-shopping-order-canceled-cnbc" >}})，转述 CNBC）。
 - Uber 在 Q3 电话会称，万圣节那一周经 AI 智能体下单的出行只有 4 单，Uber Eats 约 500 单；DoorDash 称迄今只有几百单智能体订单（[TechCrunch：Uber 的智能体订单]({{< relref "/docs/industry/sources/media/2026-11-04-techcrunch-uber-agent-orders" >}})、[eBay 限制第三方智能体]({{< relref "/docs/muse/sources/media/2026-11-10-ebay-blocks-third-party-ai-agents" >}})）。
 - WIRED 调查约 50 家公司：DoorDash 称来自 Muse 等智能体的订单有「几百」单，希尔顿称「微不足道」，eBay 称「非常非常小」，Chipotle 称 Muse 上线使智能体订单增加了个位数百分比（[WIRED：颠覆尚未发生]({{< relref "/docs/muse/sources/media/2026-10-31-wired-muse-commerce-reality-check" >}})）。
 - 亚马逊 CEO Jassy 称外部购物智能体尚未对其广告业务造成实质影响，「目前很少有顾客用这种方式大量购物」（[Muse 默认绕开亚马逊]({{< relref "/docs/muse/sources/media/2026-11-17-do-not-search-amazon" >}})）。Expedia 称智能体流量「目前太小，还无法下结论」（[Expedia Muse 集成]({{< relref "/docs/muse/sources/media/2026-11-04-pymnts-expedia-muse-integration" >}})）。
@@ -142,6 +143,7 @@ Forter 把 Muse 归为「抓取型」智能体，即通过商店自有页面结�
 - [Muse 占智能体订单 52%]({{< relref "/docs/muse/sources/media/2026-11-21-forter-muse-shopping-numbers" >}})、[六款购物智能体排名]({{< relref "/docs/industry/sources/media/2026-11-21-forter-ai-shopping-agents-ranked" >}})、[Muse 助推 Instagram 广告]({{< relref "/docs/muse/sources/media/2026-11-24-cnbc-muse-instagram-ad-boost" >}})：Forter 订单份额。
 - [HUMAN 十月报告 Muse 占 59%]({{< relref "/docs/muse/sources/media/2026-11-14-muse-59-percent-agentic-traffic-human-october" >}})、[Muse 占 HUMAN 流量 40%]({{< relref "/docs/muse/sources/media/2026-11-05-muse-40-percent-agentic-traffic-human" >}})、[2910 万次请求]({{< relref "/docs/muse/sources/media/2026-10-15-datadome-muse-29-million-requests" >}})、[网络周流量预计 150 倍]({{< relref "/docs/muse/sources/media/2026-11-25-adweek-agent-traffic-150x-cyber-week" >}})：HUMAN、DataDome 的流量份额。
 - [TechCrunch：Uber 的智能体订单]({{< relref "/docs/industry/sources/media/2026-11-04-techcrunch-uber-agent-orders" >}})、[eBay 限制第三方智能体]({{< relref "/docs/muse/sources/media/2026-11-10-ebay-blocks-third-party-ai-agents" >}})、[Muse 默认绕开亚马逊]({{< relref "/docs/muse/sources/media/2026-11-17-do-not-search-amazon" >}})、[Expedia Muse 集成]({{< relref "/docs/muse/sources/media/2026-11-04-pymnts-expedia-muse-integration" >}})：Uber、DoorDash、亚马逊、Expedia 称智能体订单仍少。
+- [CNBC：购物订单被取消]({{< relref "/docs/muse/sources/media/2026-11-28-allthingsmuse-muse-shopping-order-canceled-cnbc" >}})：Bain 的智能体购物占比、零售商规则。
 - [Muse 助推 Instagram 广告]({{< relref "/docs/muse/sources/media/2026-11-24-cnbc-muse-instagram-ad-boost" >}})、[Muse 跟进广告后行动]({{< relref "/docs/muse/sources/media/2026-11-24-mediapost-muse-post-ad-actions" >}})、[沃尔玛与 Muse 的规矩]({{< relref "/docs/muse/sources/media/2026-11-24-walmart-muse-shop-on-its-terms" >}})、[亚马逊或解除 Muse 封锁]({{< relref "/docs/muse/sources/media/2026-11-25-techcrunch-amazon-muse-blockade-talks" >}})：广告转化、广告主 beta、沃尔玛「赞助考量」、亚马逊谈判。
 - [大厂期待 Muse 时刻]({{< relref "/docs/muse/sources/media/2026-10-27-36kr-muse-moment" >}})：Q3 电话会的商业化表态（经 36 氪）。
 - [Z Finance：齐俊元与伪命题]({{< relref "/docs/industry/sources/media/2026-10-21-zfinance-qi-junyuan-today" >}})：Sensor Tower 下载、日活、投放份额；摩根士丹利成本估算。

@@ -77,6 +77,8 @@ Marketplace 事件说明了「始终允许」的风险。卫报报道，用户 R
 - 社区作者引服务条款第 7.4、7.6 条：用户对 Muse 为推进其指令采取的行动负全部责任，并须进行「有意义的人工监督」（[智能体搞砸了谁买单]({{< relref "/docs/muse/sources/community/2026-10-16-muse-who-pays-when-your-agent-fails" >}})）。
 - 据 TOP5 Apps 转引，Stripe Link 的智能体条款让用户为智能体购买负责，「无论是否出于你的本意」（[5 款智能体 11 月评测]({{< relref "/docs/industry/sources/community/2026-11-01-best-personal-ai-agents-top5apps" >}})）。
 - 同一篇社区文章称，购物保护每宗交易错误索赔最高赔 500 美元（[智能体搞砸了谁买单]({{< relref "/docs/muse/sources/community/2026-10-16-muse-who-pays-when-your-agent-fails" >}})）。
+- 英国条款与美国不同。据社区作者转述 Politico Europe 11-27 的条款对照：美国条款把 Meta 的责任上限定为 250 美元，并在法律允许的最大范围内免除 Muse 执行非本意、错误或未经授权操作造成的损失；英国条款没有金额上限。CMA 对 Politico 称，经数周沟通，Meta 修改了英国条款，使其对消费者更公平。作者 11-27 打开条款页时出错，没有核对条款原文（[下错单谁负责]({{< relref "/docs/muse/sources/community/2026-11-28-museexplained-muse-order-liability-uk-terms" >}})）。
+- 零售商一方由谁承担错单成本，仍没有答案：作者查了《卫报》11-27 的报道和 Sainsbury's、M&S、JD Sports、Currys 的页面，没有一家说明错单成本归谁；Sainsbury's 只说客服会像处理普通订单一样处理问题。作者特别指出，「每次购买前批准」和「错了谁负责」是两个问题（[下错单谁负责]({{< relref "/docs/muse/sources/community/2026-11-28-museexplained-muse-order-liability-uk-terms" >}})）。
 
 据 Moneywise 转述，前 Meta 安全主管 Alex Stamos 在播客中称，把整个 1Password 交给 Muse 这类智能体处理财务「totally insane」（[Stamos 警告密码风险]({{< relref "/docs/muse/sources/media/2026-11-06-stamos-muse-password-warning" >}})）。
 
@@ -155,6 +157,7 @@ Marketplace 事件说明了「始终允许」的风险。卫报报道，用户 R
 - 沃尔玛限额内免审批与连接器指南「敏感写入每次询问」的关系；语音模式、手表上的审批流程；批准的有效期。
 - Wardle 在 Objective by the Sea（11-20）演讲的内容（[Wardle：OBTS 演讲（占位）]({{< relref "/docs/muse/sources/community/2026-11-01-wardle-objective-by-the-sea-talk" >}})）。
 - 路透 11-18 报道中 Signal 读取是否已在公开版本修复；Aten 事件的技术解释。
+- 美英两版服务条款的原文对照（目前只有 Politico 经社区转述）；零售商对 Muse 错单的退款与责任规则。
 
 ## 主要资料
 
@@ -175,6 +178,7 @@ Marketplace 事件说明了「始终允许」的风险。卫报报道，用户 R
 - [“允许一次还是始终允许？”]({{< relref "/docs/muse/sources/community/2026-10-13-muse-approval-dialog-allow-always" >}})：「始终允许」分析。
 - [两种入侵路径]({{< relref "/docs/muse/sources/community/2026-09-25-optimus-muse-two-ways-in" >}})、[粘贴技能文件的风险]({{< relref "/docs/muse/sources/community/2026-11-12-muse-pasted-skill-trust-gap" >}})：技能攻击。
 - [黑进 Muse 窃取对话]({{< relref "/docs/muse/sources/community/2026-11-20-nebusec-hacking-muse-browser-use" >}})、[Muse 内部架构剖析]({{< relref "/docs/muse/sources/community/2026-11-20-nebusec-inside-meta-muse" >}})、[Sentinel 绕过的教训]({{< relref "/docs/muse/sources/community/2026-11-21-csa-sentinel-bypass-lessons" >}})：NebuSec 研究与 CSA 解读。
+- [下错单谁负责]({{< relref "/docs/muse/sources/community/2026-11-28-museexplained-muse-order-liability-uk-terms" >}})：美英条款的责任上限对照、零售商责任的阴性核查。
 - [提示注入与 Muse]({{< relref "/docs/muse/sources/community/2026-11-21-prompt-injection-web-page-orders" >}})：提示注入现状核对。
 
 **实测**

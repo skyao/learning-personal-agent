@@ -274,3 +274,4 @@
 | 2026-11-28 | /docs/muse/sources/community/2026-11-20-muse-smart-home-tuya-skill | 文中称 Tuya PR #61 仍未合并，与 11-10 已合并的核查不符 | 无需改：收录说明已写明，照录原文 |
 | 2026-11-28 | /docs/muse/sources/community/2026-10-14-detect-muse-ai-agent | 页面日期 10-14，正文含 11-14、11-16 的内容 | 无需改：updatedAt 为 2026-11-16，dateNote 已说明 |
 | 2026-11-28 | /docs/muse/sources/media/2026-10-31-verge-diy-muse-charm、/docs/muse/sources/media/2026-10-12-36kr-wang-openclaw-origin 等 muse 目录下 22 篇 | frontmatter 没有 products 字段 | 无需改：collect-sources 只要求 industry 资料列 products，产品目录下的资料按目录归属 |
+| 2026-11-28 | /docs/muse/sources/community/2026-11-27-thesalon-muse-walmart-black-friday | 内容摘要称作者「经沃尔玛 Agent Gateway 买了两台打印机」，正文只写 Muse 关掉浏览器结账、请作者一键连接 ShopPay，没有写明最终走的是 Agent Gateway 还是 ShopPay 路径；保留理由「网关结账两种路径的对照」也据此而来 | 待处理；分析中写作「结账路径未写明」 |

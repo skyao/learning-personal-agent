@@ -14,7 +14,7 @@ description: >
 - **失败集中在四类。** 一是跨来源核对和推理出错；二是卡在网站的登录、验证和拦截上；三是说做了实际没做、编造价格或信息；四是在「始终允许」之类的宽泛授权下对外越界，Marketplace 住址事件是代表。
 - **没有官方完成率。** Meta 只承认 Muse「可能不准确」，内部发布门槛与 Wonder 的自评数字都没有方法说明。第三方数字差异很大：ShellBench 上 Wonder Full 单次通过率为 47.4%；Personal Agent Bench 用重建的运行时测得 19%–58%。两者测的都不是消费级应用本身。
 - **服务稳定性没有官方信息。** 资料记录了 11-04 约 11 小时的停运、生成服务过载、网关上线日期反复变动等情况，Meta 没有状态页，也没有事后说明。
-- **商业侧看，流量和订单份额领先，成交证据仍少。** Forter 称 Muse 占其网络智能体订单的 52%。但截至 11-26，第三方没有找到经 Muse 在 Walmart 或 Gopuff 完成的已验证购买。
+- **商业侧看，流量和订单份额领先，成交证据仍少。** Forter 称 Muse 占其网络智能体订单的 52%。成交一侧只有零星的用户自述：沃尔玛有两笔下单成功，CNBC 另报道一笔 AutoZone 订单 17 小时后被取消；截至 11-26 的第三方检索没有找到经 Muse 在 Walmart 或 Gopuff 完成的已验证购买。
 
 ## 横向实测：排名取决于任务
 
@@ -103,7 +103,8 @@ description: >
 ## 黑五：份额领先，成交证据少
 
 - Forter 网络数据：近 7 天（11-19 至 11-25），Muse 占智能体订单的 52%，平均订单 220 美元（[Muse 占智能体订单 52%]({{< relref "/docs/muse/sources/media/2026-11-21-forter-muse-shopping-numbers" >}})、[六款购物智能体排名]({{< relref "/docs/industry/sources/media/2026-11-21-forter-ai-shopping-agents-ranked" >}})）。这是份额，不代表绝对量。据 TechCrunch，Uber 称万圣节那一周经 AI 智能体下单的打车只有 4 单（[TechCrunch：Uber 的智能体订单]({{< relref "/docs/industry/sources/media/2026-11-04-techcrunch-uber-agent-orders" >}})）。
-- 沃尔玛：Retailgentic 实测一次下单顺利，加购 3 件 24 装 Diet Dr Pepper（[沃尔玛连接器初体验]({{< relref "/docs/muse/sources/community/2026-11-24-retailgentic-muse-walmart-first-look" >}})）。Muse Explained 11-26 检索后，没有找到经 Muse 在 Walmart 或 Gopuff 完成的已验证购买；作者说明「未找到」不等于没有，计划 12-04 复查（[黑五购物核查]({{< relref "/docs/muse/sources/community/2026-11-27-museexplained-black-friday-purchase-check" >}})）。
+- 沃尔玛：Retailgentic 实测一次下单顺利，加购 3 件 24 装 Diet Dr Pepper（[沃尔玛连接器初体验]({{< relref "/docs/muse/sources/community/2026-11-24-retailgentic-muse-walmart-first-look" >}})）。Muse Explained 11-26 检索后，没有找到经 Muse 在 Walmart 或 Gopuff 完成的已验证购买；作者说明「未找到」不等于没有，计划 12-04 复查（[黑五购物核查]({{< relref "/docs/muse/sources/community/2026-11-27-museexplained-black-friday-purchase-check" >}})）。之后 AI Salon 的作者自述，感恩节夜让 Muse 在沃尔玛买了两台打印机，税前 168.99 美元；Muse 起初走浏览器结账，按作者要求改用 ShopPay，扣款前每一步都先征得批准（[AI Salon：遛狗时买打印机]({{< relref "/docs/muse/sources/community/2026-11-27-thesalon-muse-walmart-black-friday" >}})）。
+- 失败的一例：CNBC 报道，一位用户 10 月授权 Muse 在 AutoZone 买雨刮，约 17 小时后订单因未说明的错误被取消，Muse 随后建议她自己去亚马逊下单；她让 Muse 找毛绒玩具时，Muse 推荐了一家看不到评价的陌生零售商（[CNBC：购物订单被取消]({{< relref "/docs/muse/sources/media/2026-11-28-allthingsmuse-muse-shopping-order-canceled-cnbc" >}})，All Things Muse 转述）。同文引 Visa 本月的研究：12 家实验室的 22 个模型执行买电视、笔记本电脑等购物任务，约 43% 的测试失败。这是通用模型测试，不是 Muse 专属数字。
 
 ## 官方说法与实测的差距
 
@@ -129,7 +130,7 @@ description: >
 - 官方的任务完成率、出错率、可用性数据或状态页；11-04 停运的官方说明。
 - 消费级应用的端到端独立测量（现有数字都来自重建运行时或开源框架）；Claire Vo 基准的分数。
 - 商家电话的成功率；付费开放后的独立实测。
-- 黑五期间经 Walmart、Gopuff 的已验证成交（Muse Explained 计划 12-04 复查）。
+- 黑五期间经 Walmart、Gopuff 的成交统计（目前只有个别用户自述；Muse Explained 计划 12-04 复查）；被取消或下错的订单有多少。
 - 一个月以上的长期使用记录，以及定时任务准时性的实测。
 - 英国、澳大利亚上线后，除 BBC 之外的实测。
 
@@ -141,6 +142,7 @@ description: >
   - [BBC 一周试用]({{< relref "/docs/muse/sources/media/2026-11-24-bbc-week-with-muse-uk-launch" >}})、[Muse 当 Zaurus 开发者]({{< relref "/docs/muse/sources/media/2026-11-19-pc-watch-muse-zaurus-developer" >}})、[新加坡上线报道]({{< relref "/docs/muse/sources/media/2026-10-28-straits-times-muse-singapore" >}})、[WIRED：更擅长监视]({{< relref "/docs/muse/sources/media/2026-09-20-wired-muse-better-at-surveilling" >}})（单产品实测）；
   - [卫报：泄露家庭住址]({{< relref "/docs/muse/sources/media/2026-09-28-guardian-muse-home-address" >}})、[路透：Muse 安全事故]({{< relref "/docs/muse/sources/media/2026-11-18-muse-early-safety-mishaps-surface" >}})（Marketplace 事件、员工测试中的错误）；
   - [Muse 占智能体订单 52%]({{< relref "/docs/muse/sources/media/2026-11-21-forter-muse-shopping-numbers" >}})、[六款购物智能体排名]({{< relref "/docs/industry/sources/media/2026-11-21-forter-ai-shopping-agents-ranked" >}})、[TechCrunch：Uber 的智能体订单]({{< relref "/docs/industry/sources/media/2026-11-04-techcrunch-uber-agent-orders" >}})（订单份额与成交规模）；
+  - [CNBC：购物订单被取消]({{< relref "/docs/muse/sources/media/2026-11-28-allthingsmuse-muse-shopping-order-canceled-cnbc" >}})（AutoZone 订单被取消、Visa 购物任务测试）；
   - [Muse 是怎麼做出來的]({{< relref "/docs/muse/sources/media/2026-11-03-wang-how-muse-was-built" >}})（内部发布门槛）。
 - 社区：
   - [Pat Simmons：三方对照]({{< relref "/docs/industry/sources/community/2026-10-06-pat-simmons-grok-muse-dots" >}})、[AI Agents Library：三方对照]({{< relref "/docs/industry/sources/community/2026-10-09-aiagentslibrary-dots-spark-muse" >}})、[Claire Vo：四个智能体九项任务]({{< relref "/docs/industry/sources/community/2026-10-29-chatprd-four-agents-nine-tasks" >}})、[5 款智能体 11 月评测]({{< relref "/docs/industry/sources/community/2026-11-01-best-personal-ai-agents-top5apps" >}})、[12 款个人智能体用户排名]({{< relref "/docs/industry/sources/community/2026-11-03-personal-ai-agents-users-prefer" >}})（横向实测与评分）；
@@ -148,6 +150,6 @@ description: >
   - [Muse 评测核对]({{< relref "/docs/muse/sources/community/2026-11-02-muse-review-personalagentbench" >}})（媒体评测汇总）；
   - [11 月 4 日停运 11 小时]({{< relref "/docs/muse/sources/community/2026-11-06-is-muse-down-nov-4-outage" >}})（停运记录）；
   - [电话代打能做什么]({{< relref "/docs/muse/sources/community/2026-10-12-builtwithmuse-call-customers" >}})（真人代打）；
-  - [黑五购物核查]({{< relref "/docs/muse/sources/community/2026-11-27-museexplained-black-friday-purchase-check" >}})、[沃尔玛连接器初体验]({{< relref "/docs/muse/sources/community/2026-11-24-retailgentic-muse-walmart-first-look" >}})（黑五成交核查）；
+  - [黑五购物核查]({{< relref "/docs/muse/sources/community/2026-11-27-museexplained-black-friday-purchase-check" >}})、[沃尔玛连接器初体验]({{< relref "/docs/muse/sources/community/2026-11-24-retailgentic-muse-walmart-first-look" >}})、[AI Salon：遛狗时买打印机]({{< relref "/docs/muse/sources/community/2026-11-27-thesalon-muse-walmart-black-friday" >}})（黑五成交核查与一手自述）；
   - [Spark 与 Wonder 对比]({{< relref "/docs/muse/sources/community/2026-11-22-emma-spark-vs-wonder" >}})、[长工作对比]({{< relref "/docs/muse/sources/community/2026-11-22-emma-spark-vs-wonder-long-tasks" >}})（Spark 与 Wonder 对比）。
 - 实测：[我的实测：VM 探索]({{< relref "/docs/muse/sources/exploration/2026-10-12-muse-vm-exploration" >}})（虚拟机回收，2026-10-12）。
