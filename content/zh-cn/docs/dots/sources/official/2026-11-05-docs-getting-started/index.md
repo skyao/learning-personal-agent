@@ -7,17 +7,17 @@ sourceUrl: "https://learn.chatgpt.com/docs/dots/getting-started"
 altUrls: ["https://learn.chatgpt.com/codex/dots/getting-started"]
 publisher: "OpenAI（ChatGPT Learn）"
 language: en
-fidelity: 全文翻译
+fidelity: 全文
 translation: 已翻译
-collectedAt: 2026-11-05
-dateNote: "文档不标日期；按规则取收集日期"
+collectedAt: 2026-11-28
+dateNote: "文档不标日期；按规则取收集日期；2026-11-28 补存原文 original.md，与第一轮译文比对没有实质变化"
 tags: [功能更新, 持续执行]
 products: [dots]
 ---
 
 {{< source-info >}}
 
-**收录说明**：示例提示在原页面中以卡片和可复制文本各出现一次，这里只保留一次。
+**收录说明**：示例提示在原页面中以卡片和可复制文本各出现一次，这里只保留一次。第一轮收集时直接翻译，原文未单独存档；2026-11-28 按新流程补存原文于本目录的 original.md（网站上不显示），比对后没有实质变化，译文保留。
 
 **内容摘要**：在 ChatGPT 移动应用、桌面应用或桌面浏览器中都可以创建 dot，不支持移动端网页。创建步骤是起名字、自定义外观、连接插件，插件可以以后再加。连接电脑、应用和联系方式（如 Slack）是三件互相独立的事，连接其中一项不会自动授予其他访问。文档建议从需要持续跟踪的工作开始，而不是把每次对话当成新请求。需要固定时间安排时，请求里要写明时区和持续时长，并让 dot 确认它设置了什么。
 

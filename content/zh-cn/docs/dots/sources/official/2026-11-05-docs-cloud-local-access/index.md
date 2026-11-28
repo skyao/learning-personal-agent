@@ -7,17 +7,17 @@ sourceUrl: "https://learn.chatgpt.com/docs/enterprise/cloud-local-access"
 altUrls: ["https://learn.chatgpt.com/codex/enterprise/cloud-local-access"]
 publisher: "OpenAI（ChatGPT Learn）"
 language: en
-fidelity: 全文翻译
+fidelity: 全文
 translation: 已翻译
-collectedAt: 2026-11-05
-dateNote: "文档不标日期；按规则取收集日期"
+collectedAt: 2026-11-28
+dateNote: "文档不标日期；按规则取收集日期；2026-11-28 补存原文 original.md，与第一轮译文比对没有实质变化"
 tags: [运行环境, 安全, 隐私]
 products: [dots]
 ---
 
 {{< source-info >}}
 
-**收录说明**：OpenAI 在 ChatGPT Learn 上发布的企业管理员文档，讲 Work Cloud 与 dots 如何启用本地计算机访问。全文翻译。文档不标日期，日期取收集日期。正文中有一处「（收录说明：……）」括注：原页面的锚点 #dots-end-user-steps 没有对应的标题，本页把它加在「最终用户体验」下的「Dots」一节上。早期收集时直接翻译，原文未单独存档。
+**收录说明**：OpenAI 在 ChatGPT Learn 上发布的企业管理员文档，讲 Work Cloud 与 dots 如何启用本地计算机访问。全文翻译。文档不标日期，日期取收集日期。正文中有一处「（收录说明：……）」括注：原页面的锚点 #dots-end-user-steps 没有对应的标题，本页把它加在「最终用户体验」下的「Dots」一节上。第一轮收集时直接翻译，原文未单独存档；2026-11-28 按新流程补存原文于本目录的 original.md（网站上不显示），比对后没有实质变化，译文保留。
 
 **内容摘要**：文档说明 Work 和 dots 可以在云端协调任务的同时，使用已连接计算机上被允许的文件和工具，两项功能要分别启用。管理员在「智能体安全」里审查政策，本地执行要求、MDM 和系统 requirements.toml 之间有固定的优先级；云端容器和 dots 的云端计算机使用另外的执行控制。dots 在企业测试期间不支持数据驻留和推理驻留，不适用于 FedRAMP、使用 EKM 和推理驻留设为阿联酋的工作区，两种体验都不提供严格的零数据保留。启用步骤要求工作区所有者在管理控制台的权限页分别打开，用户升级到桌面应用 26.929 或更高版本，云端编排事件不会进入本地 OpenTelemetry 收集器。
 
