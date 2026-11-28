@@ -2,112 +2,131 @@
 title: "Meta Muse：记忆与上下文"
 linkTitle: "记忆与上下文"
 weight: 20
-analyzedAt: 2026-11-15
-sourcesUntil: 2026-11-15
+analyzedAt: 2026-11-28
+sourcesUntil: 2026-11-28
 description: >
-  Muse 的记忆是放在用户云端虚拟机里的 Markdown 文件，加一个 Postgres 索引，由每小时、每晚的后台任务维护。用户能看、能改、能下载，但「遗忘」只是尽力而为，记忆没有关闭开关，另外还会为用户身边的人建页。
+  Muse 的记忆是用户虚拟机里可读可改的 Markdown 文件，由每小时、每晚的后台任务维护，接入的个人数据在跟踪产品中最宽；遗忘只是「尽力而为」，11 月又暴露出记忆可被篡改、疑似串号的问题。
 ---
 
 ## 概要
 
-- Muse 的记忆是文件。官方称记忆文件（Memory.md、Soul.md、Identity.md）用户可以直接查看、编辑、下载。多份独立导出和实测显示，Markdown 是源头，Postgres 只是索引（文本切块、向量、带证据的「说法」）。
-- 记忆主要由后台任务形成：每小时提取事实并与原始消息核对，每晚「做梦」回顾对话，另有每小时为用户生活中每个人维护页面的 Relationships 任务。最后这一项被 WIRED、TIME 报道后，成为 Muse 记忆争议的焦点。
-- 个人数据的来源比同类产品宽：Gmail、日历、Facebook、Instagram、Messenger、Marketplace、手机通讯录与健康数据、Mac 本地应用、银行（Plaid），还可以导入其他 AI 助手的记忆。Meta 自家社交数据是它和其他产品最大的区别。
-- 遗忘的边界在官方文档里写得很清楚：删除内容后 Muse「可能仍然记得」，「遗忘」技能「尽其所能」删除，断开连接器不会清除已取得的信息，记忆也没有关闭开关；唯一完全清除的办法是重置。泄露的指令显示，遗忘技能被要求不告诉用户原始消息可能仍然可见。
-- 模型层面，Meta 用 Muse Wonder 的 Active Memory 宣称改进了记忆。这些数字（MemoryBench 85.6、遗忘关键信息减少 2.4 倍、内部评测从 76% 升到 90%）都是 Meta 自报，没有第三方复测。
+- **记忆是文件。** 官方称记忆文件（Memory.md、Soul.md、Identity.md）可以直接查看、编辑、下载。多份独立导出和本库自己的实测显示，Markdown 文件是源头，Postgres 只做索引，存放文本切块、向量和带证据的「说法」。在跟踪产品中，Muse 的记忆机制公开得最透明。
+- **记忆主要由后台任务形成。** 每小时有一个任务把新说法与原始消息核对，每晚有一次「做梦」回顾对话。另有每小时为用户身边每个人维护页面的 Relationships 任务，被维护的人包括不用 Muse 的人。这个任务经 WIRED（2026-10-03）、TIME（10-06）报道后，一直是记忆争议的焦点。截至 11 月下旬，监管机构的提醒里仍提到这一点。
+- **接入的个人数据最宽。** 同一账户中心下的 Facebook、Instagram、Threads 自动连接。此外可以接 Gmail、日历、银行，手机通讯录、通话记录、健康数据，以及 Mac 本地应用，还能导入其他 AI 助手的记忆。Mac Messages 同步（9 月）和经安卓通知读到 Signal 消息（11 月）两起事件说明，进入记忆的数据不只来自连接器。
+- **遗忘的边界，官方文档自己写明了。** 删除内容后 Muse「可能仍然记得」；「遗忘」技能「尽其所能」删除；断开连接器不会清除已取得的信息；记忆没有关闭开关。完全清除只有两条路：重置 Muse，或删除 Meta 账户。泄露的指令要求遗忘流程不告诉用户原始消息可能仍然可见。
+- **11 月出现两个新问题。** 一是完整性：NebuSec 演示经浏览器漏洞外传并篡改记忆与对话历史，称漏洞已修复。二是疑似串号：路透报道员工称 Muse 说出了「不属于自己的」对话和银行余额，Meta 称是幻觉。模型层面的改进（MemoryBench 85.6、遗忘关键信息减少 2.4 倍）都是 Meta 自报。
 
-## 记忆是虚拟机里的 Markdown 文件
+## 记忆存放在虚拟机里的 Markdown 文件中，数据库只做索引
 
-官方的说法是：VM 中的所有文件，包括「Muse 关于你的记忆」，都存放在用户的 VM 里，可以检查、编辑、下载（[安全设计]({{< relref "/docs/muse/sources/official/2026-09-08-how-we-built-safety-into-muse" >}})）。设计文写明「记忆文件你可以直接阅读和编辑」（[设计文]({{< relref "/docs/muse/sources/official/2026-09-08-how-we-designed-muse" >}})）。帮助中心按位置列出存储的信息：互动在聊天标签；目标在「目标」标签；Artifacts 与系统文件在「资料库」；记忆（Memory.md）、灵魂（Soul.md，含核心信条、边界、个性）、身份（Identity.md，含名字、物种、气质、标语）在「助手图标 > 身份」下，可以直接编辑和删除（[帮助中心：管理数据]({{< relref "/docs/muse/sources/official/2026-09-10-help-manage-data" >}})）。官方列出的记忆来源有四种：用户直接分享、从互动中观察到的偏好与规律、已连接服务的上下文、基于文件的记忆系统（[帮助中心：个性与记忆]({{< relref "/docs/muse/sources/official/2026-09-30-help-personality-memories" >}})）。
+官方说法：记忆在各次对话之间持续保留，记忆文件「你可以直接阅读和编辑」（[设计说明]({{< relref "/docs/muse/sources/official/2026-09-08-how-we-designed-muse" >}})）。帮助文档的存储清单列出了互动、目标、Artifacts、提醒，以及 Memory.md（记忆）、Soul.md（核心信条与个性）、Identity.md（身份），后三者可在「助手图标 > 身份」下直接编辑或清空（[帮助：数据管理]({{< relref "/docs/muse/sources/official/2026-09-10-help-manage-data" >}})）。安全文章称，用户可以检查、编辑、下载虚拟机里的所有文件，「包括 Muse 关于你的记忆」，虚拟机数据持续备份（[我们如何将安全构建进 Muse]({{< relref "/docs/muse/sources/official/2026-09-08-how-we-built-safety-into-muse" >}})）。
 
-三份独立的社区材料与官方说法一致，并补充了实现细节：
+独立资料与官方说法一致，并补充了实现细节：
 
-| 来源 | 记录到的结构 | 资料 |
+| 资料 | 时间 | 看到的结构 |
 | --- | --- | --- |
-| Peter James 的文件系统导出（用户实测，2026-09-22） | `~/MEMORY.md` 是事实、偏好、承诺清单，`~/memory/` 下按日期存文件；Postgres 中 `memory.entries` 存文本块与行引用，`memory.embeddings` 存「384 维的向量」，`memory.claims` 跟踪证据、置信度和状态，新说法可以取代旧说法（`supersedes_claim_id`）；智能体用 `memory_search` 检索、用 `memory_explain` 查证据 | [Peter James 导出]({{< relref "/docs/muse/sources/community/2026-09-22-peter-james-muse-filesystem-export" >}}) |
-| 用户实测（2026-10-12，内容为 Muse 自述） | 「文件是源头，postgres 是索引」；`memory.entries` 136 行、`memory.claims` 44 行，claims 从每日流水中抽取，不索引 MEMORY.md；内部库共「194 张表，18 个 schema」，其中 memory 6 张表，另有 device、health、goals、ideas、self_improvement 等 | [VM 探索]({{< relref "/docs/muse/sources/exploration/2026-10-12-muse-vm-exploration" >}}) |
-| 基于泄露 VM 的审查（社区，2026-09-26） | 除上述文件外还有 USER.md、SOUL.md；遗忘技能的清单中提到一个「集中发布的用户记忆嵌入」 | [Future Society 审查]({{< relref "/docs/muse/sources/community/2026-09-26-future-society-muse-own-files" >}}) |
+| [Peter James：文件系统导出]({{< relref "/docs/muse/sources/community/2026-09-22-peter-james-muse-filesystem-export" >}})（用户导出整个文件系统，[The Verge：下载整个文件系统]({{< relref "/docs/muse/sources/media/2026-09-24-verge-muse-filesystem-download" >}}) 报道） | 2026-09-22 | `~/MEMORY.md` 是简短的事实、偏好、承诺清单；`~/memory/` 下是按日期的日志；`memory/bank/` 按境况、经历、偏好整理，带源文本行引用；Postgres 的 `memory.entries` 存文本块，`memory.embeddings` 存 384 维向量，`memory.claims` 记录证据、置信度和状态，新说法可经 `supersedes_claim_id` 取代旧说法 |
+| [Muse 沙箱剖析]({{< relref "/docs/muse/sources/community/2026-09-01-adwankar-whats-in-a-muse" >}})（个人博客，2026 年 9 月） | 9 月 | 同样是 Markdown 加 Postgres 索引，混合检索加重排；嵌入用盒内 MiniLM，片段不离开加密卷；有后台压缩（compaction）和重启检查点；备份走 btrfs 快照 |
+| [Future Society：Muse 文件审查]({{< relref "/docs/muse/sources/community/2026-09-26-future-society-muse-own-files" >}})（第三方逐条核验报告，页面自注由 AI 生成） | 9 月下旬 | 另有 `USER.md`、人物页 `~/memory/people/`、群组页 `~/memory/groups/`、购物档案 `~/memory/shopping/PROFILE.md`；示例行存了门禁码、卡号后四位、过敏信息 |
+| [我的实测：VM 探索]({{< relref "/docs/muse/sources/exploration/2026-10-12-muse-vm-exploration" >}})（用户实测） | 2026-10-12 | Muse 自述「文件是源头，postgres 是索引」；`memory.entries` 136 行，`memory.claims` 44 行，只从每日流水抽取，不索引 MEMORY.md；数据库有 194 张表、18 个 schema。实测让它「叫我 Sky」后，虚拟机重建、上下文压缩之后它仍这样称呼 |
 
-The Verge 依据 Peter James 的导出做了报道，内容一致（[The Verge]({{< relref "/docs/muse/sources/media/2026-09-24-verge-muse-filesystem-download" >}})）。一篇架构分析依据 Muse 自报的元数据，区分了历史、持久记忆、当前上下文三层，记录到七条 `compaction_checkpoint`（历史压缩）记录，但没有确认向量库和索引算法（[CodePick 架构分析]({{< relref "/docs/muse/sources/community/2026-09-24-codepick-muse-architecture" >}})）。
+CodePick 根据 Muse 自报的元数据提醒：存储、可搜索、被加载是不同的状态，不能假定每轮都把全部记忆文件注入上下文（[CodePick：Muse 架构详解]({{< relref "/docs/muse/sources/community/2026-09-24-codepick-muse-architecture" >}})）。Personal Agent Bench 的拆解没有终端，未能验证用户能否直接打开这些文件（[Muse 拆解实测]({{< relref "/docs/muse/sources/community/2026-11-11-muse-teardown-personalagentbench" >}})）。
 
-Muse 的身份文件沿用 OpenClaw 的做法（名字、气质、签名 emoji），项目代号 Hatch；安卓版目标页从 USER.md 读取用户资料（[雷峰网]({{< relref "/docs/muse/sources/media/2026-10-23-leiphone-muse-openclaw-lineage" >}})）。
+推断：结构上，Muse 把「可读的源头」和「检索用的索引」分开了。用户能看到、能改的是 Markdown；检索和去重由数据库完成。这能解释后面遗忘时遇到的问题：改了文件，索引、对话原文和备份里的副本不一定跟着变。
 
-## 每小时、每晚的后台任务形成记忆
+## 记忆的形成：对话中写入，加上每小时、每晚的后台任务
 
-Peter James 的导出显示，有一个每小时运行的后台任务，把新的说法与原始消息核对，并记录引文、消息 ID 和说法 ID；每晚一次「梦」（dream）回顾最近的对话，把结果写进 `~/dreams/`，再汇总成长期指导。他的梦记录里写着他喜欢简短回复、不喜欢被反复追问。适应靠更新文件实现，「模型的权重保持不变」（[Peter James 导出]({{< relref "/docs/muse/sources/community/2026-09-22-peter-james-muse-filesystem-export" >}})）。CodePick 也写明，没有证据表明 VM 内的自我改进任务会在线更新模型权重（[CodePick 架构分析]({{< relref "/docs/muse/sources/community/2026-09-24-codepick-muse-architecture" >}})）。Future Society 的审查补充了每日 Studying 任务：它会提出用户暗示过、但没有明说的目标（[Future Society 审查]({{< relref "/docs/muse/sources/community/2026-09-26-future-society-muse-own-files" >}})）。一家竞品厂商人士在 InfoQ 访谈中也把「每小时将新记忆与原始对话核对，每晚通过 Dream 整理」当作 Muse 的特点（[InfoQ]({{< relref "/docs/industry/sources/media/2026-11-08-infoq-qwen-personal-agent" >}})）。
-
-官方对这部分的描述较笼统：Muse 会记住对用户重要的事，可以根据「只提到过一次的细节」行动（[推出 Muse]({{< relref "/docs/muse/sources/official/2026-09-08-introducing-muse" >}})），也会「随着时间推移了解哪些决定需要你的签字同意」（[帮助中心：引导与批准]({{< relref "/docs/muse/sources/official/2026-09-08-help-guidance-and-approval" >}})）。记忆还衍生出「目标」和「想法」（Ideas）：目标保存在「目标」标签中，Muse 跟踪进度并发送确认（[帮助中心：管理数据]({{< relref "/docs/muse/sources/official/2026-09-10-help-manage-data" >}})）。有用户在 Goals 里加了一个目标，Muse 把它存下，并自建了一个每周五上午的定时任务（[UGoEarn]({{< relref "/docs/muse/sources/community/2026-10-09-ugoearn-five-task-types" >}})）。目标如何转为定时任务和主动提醒，见[持续执行]({{< relref "/docs/muse/analysis/continuous-execution" >}})。
+- **对话中写入、上传文件、连接器取得的上下文。** 帮助文档列出记忆有四个来源：用户直接分享的信息、从互动中观察到的偏好、已连接服务的上下文、基于文件的记忆系统（[帮助：个性与记忆]({{< relref "/docs/muse/sources/official/2026-09-30-help-personality-memories" >}})）。文件会被记住，可以说「update my budget spreadsheet」而不必重传（[帮助：Artifacts]({{< relref "/docs/muse/sources/official/2026-09-08-help-artifacts" >}})）。
+- **每小时核对。** 后台任务把新说法与原始消息核对，记录引文、消息 ID、说法 ID，再决定进入精选清单还是留在每日日志（[Peter James：文件系统导出]({{< relref "/docs/muse/sources/community/2026-09-22-peter-james-muse-filesystem-export" >}})）。千问负责人对 InfoQ 介绍竞品时，也称 Muse「强调溯源」，每小时把新记忆与原始对话核对（[InfoQ：千问谈下限与上限]({{< relref "/docs/industry/sources/media/2026-11-08-infoq-qwen-personal-agent" >}})）。
+- **每晚「做梦」。** 每晚回顾近期对话，在 `~/dreams/` 写下给以后会话的指导，文字本身不注入提示（[Peter James：文件系统导出]({{< relref "/docs/muse/sources/community/2026-09-22-peter-james-muse-filesystem-export" >}})）。Future Society 报告另记了每天一次的「Studying」任务，会建议用户「暗示过但从未明说」的目标（[Future Society：Muse 文件审查]({{< relref "/docs/muse/sources/community/2026-09-26-future-society-muse-own-files" >}})）。TIME 查阅的指令也要求推断用户「没有说出口的」目标（[Medianama：人物档案（二手）]({{< relref "/docs/muse/sources/media/2026-10-08-medianama-muse-dossiers" >}})，Medianama 转述 TIME）。
+- **规模示例。** 有作者的重度部署积累了 18 份每日日志、263 个人物画像、21 个群组画像（[2000 万条已删聊天]({{< relref "/docs/muse/sources/community/2026-10-24-muse-subpoena-agent-memory" >}})），这是个例，不代表一般用户。
 
 ## 为用户身边的每个人建页
 
-这是 Muse 记忆中争议最大的部分。WIRED 依据独立研究员 Karan Joshi 提取的指令报道：Muse 每小时运行一次任务，为「用户生活中的每一个人」（家人、伴侣、朋友、同事、合作者、关注的人）建立页面，分事实、历史、这段关系、共同点、未了之事、加强六部分，并记录生日等重要日子。指令写明页面起初可以「很单薄」，只用已有证据，编造比空白更糟（[WIRED：为亲友建档]({{< relref "/docs/muse/sources/media/2026-10-03-wired-muse-profiles-friends-family" >}})）。
+据 WIRED 2026-10-03 报道，研究员 Karan Joshi 提取的内部指令要求 Muse「为用户生活中的每一个人建立一个页面」。任务每小时运行，覆盖家人、伴侣、朋友、同事和「关注」的人；页面分事实、历史、关系、共同点、未了之事等部分；指令要求只用已掌握的证据（[WIRED：亲友人物档案]({{< relref "/docs/muse/sources/media/2026-10-03-wired-muse-profiles-friends-family" >}})）。TIME 的报道（经 [Medianama：人物档案（二手）]({{< relref "/docs/muse/sources/media/2026-10-08-medianama-muse-dossiers" >}}) 转述）补充：档案延伸到不使用 Muse 的人；指令还要求记录哪种互动方式对用户有效；不同虚拟机上的 Muse 通过去标识化的「shared lessons」互相学习。Meta 回应称数据不与广告系统共享，经验用于改进整体产品。
 
-据 MediaNama 转述 TIME 2026-10-06 的报道，档案还延伸到不使用 Muse 的人；指令要求记录「紧张关系与同盟」，推断用户「没有说出口的」目标，记录哪类提示对某个用户有效（例如晚上 10 点后对简短提醒反应更好），并找出内部笑话与共同上下文（[MediaNama 转述 TIME]({{< relref "/docs/muse/sources/media/2026-10-08-medianama-muse-dossiers" >}})）。Future Society 的审查给出了细节：页面存放在 `~/memory/people/`、`~/memory/groups/`，数据来自消息、照片和记忆，提示词要求名册为空时也要补页；陌生人、公众人物、只关注而不认识的人不建页；但「不要推断他人敏感特征」这条规则只出现在目标创建技能里，每小时的 Relationships 提示词中没有（[Future Society 审查]({{< relref "/docs/muse/sources/community/2026-09-26-future-society-muse-own-files" >}})）。
+Future Society 的报告从导出的虚拟机里取得了这一任务的提示词，并指出了两处具体问题。第一，提示词设了门槛，陌生人、公众人物、只出现在搜索结果里的人不建页。第二，目标创建技能写有「不要推断他人的敏感特征」，Relationships 任务的提示词里却没有这条规则（[Future Society：Muse 文件审查]({{< relref "/docs/muse/sources/community/2026-09-26-future-society-muse-own-files" >}})）。Meta 称这些页面只在「明确相关」时才参考；有作者指出，这是指令层面的政策，不是技术屏障（[非用户消息隐私]({{< relref "/docs/muse/sources/community/2026-11-04-muse-non-user-messages" >}})）。被写进页面的第三方没有登录、导出或删除的途径（[删对话不等于删记忆]({{< relref "/docs/muse/sources/community/2026-10-10-muse-memory-what-it-keeps" >}})）。
 
-Meta 的回应：发言人称 Muse 根据公开信息和用户选择分享的内容收集上下文，用户可以随时清除记忆或断开服务，还有审计日志（[WIRED：为亲友建档]({{< relref "/docs/muse/sources/media/2026-10-03-wired-muse-profiles-friends-family" >}})）；Meta 也承认 Muse 会记住用户选择分享的关于他人的信息（[MediaNama 转述 TIME]({{< relref "/docs/muse/sources/media/2026-10-08-medianama-muse-dossiers" >}})）。CDT 的 Miranda Bogen 认为，与竞争对手相比，Muse「更加强调人际关系和个人联系人」（[WIRED：为亲友建档]({{< relref "/docs/muse/sources/media/2026-10-03-wired-muse-profiles-friends-family" >}})）。第三方信息的同意问题和监管反应，见[隐私]({{< relref "/docs/muse/analysis/privacy" >}})。
+这个问题到 11 月仍未了结：Walsh 引用 WIRED、TIME 再次讨论非用户隐私（[Walsh 非用户隐私]({{< relref "/docs/muse/sources/community/2026-11-13-walsh-muse-non-user-privacy" >}})）；马恩岛信息专员 11-27 提醒，Muse 可能处理「从未使用过或同意过它的人」的信息（[信息专员谈代理式 AI]({{< relref "/docs/muse/sources/community/2026-11-27-isle-of-man-commissioner-agentic-ai" >}})）。资料中没有 Meta 改动这一任务的记录。
 
-推断：Relationships 任务与 Meta 已有的社交图谱（好友、关注、群组）能直接对上。这让 Muse 在「记住身边人」这件事上比其他产品走得更远，隐私风险也因此集中在第三方身上。依据是上述指令内容和 Bogen 的评价。
+## 接入的个人数据：Meta 账户自动连接，再加外部账户与设备
 
-## 接入的个人数据：Meta 自家社交数据加外部账户
-
-| 类别 | 资料中出现的数据源 | 资料 |
+| 来源 | 接入方式与说明 | 资料 |
 | --- | --- | --- |
-| Meta 自家 | Facebook、Instagram（帖子、Reels、收藏）、Messenger、Facebook Marketplace、Facebook 好友 | [CNBC]({{< relref "/docs/muse/sources/media/2026-09-08-cnbc-meta-pushes-into-personal-agents" >}})、[Future Society 审查]({{< relref "/docs/muse/sources/community/2026-09-26-future-society-muse-own-files" >}}) |
-| 邮件与日程 | Gmail、Google Calendar；新加坡、墨西哥上线时也以 Gmail、日历、Instagram 为主 | [海峡时报]({{< relref "/docs/muse/sources/media/2026-10-28-straits-times-muse-singapore" >}})、[墨西哥上线]({{< relref "/docs/muse/sources/media/2026-11-05-muse-launches-mexico" >}}) |
-| 手机与电脑 | iPhone 日历与健康数据（需先授权）；配对 Android 手机的通话记录、短信、照片位置与 EXIF；Mac 本地应用按应用设为关闭、只读或读取并交互 | [Tom's Guide]({{< relref "/docs/muse/sources/media/2026-10-07-tomsguide-automate-10-tasks" >}})、[Future Society 审查]({{< relref "/docs/muse/sources/community/2026-09-26-future-society-muse-own-files" >}})、[帮助中心：Mac]({{< relref "/docs/muse/sources/official/2026-10-08-help-mac" >}}) |
-| 金融与其他 | 银行、信用卡（也可上传删节的对账单）；Spotify、Peloton、HealthEx 医疗记录等 | [Yahoo Finance]({{< relref "/docs/muse/sources/media/2026-09-25-yahoo-finance-muse-manage-money" >}})、[Pat Simmons]({{< relref "/docs/industry/sources/community/2026-10-06-pat-simmons-grok-muse-dots" >}}) |
-| 其他 AI 助手 | 在「设置 > 数据控制 > 导入记忆」上传其他助手导出的聊天记录 .zip | [帮助中心：个性与记忆]({{< relref "/docs/muse/sources/official/2026-09-30-help-personality-memories" >}}) |
+| Facebook、Instagram、Threads | 在同一账户中心时自动连接；Muse「只能看到你能看到的东西」 | [英国上线与控制权]({{< relref "/docs/muse/sources/official/2026-11-24-muse-you-stay-in-control" >}}) |
+| Instagram 收藏与推荐兴趣 | 可整理收藏的帖子、Reels；技能能读到推荐系统给用户分配的兴趣话题，被告知呈现时不区分推断与明示，还能写回「感兴趣」 | [Muse 进 Instagram 私信]({{< relref "/docs/muse/sources/media/2026-11-24-techcrunch-muse-instagram-dms" >}})、[Future Society：Muse 文件审查]({{< relref "/docs/muse/sources/community/2026-09-26-future-society-muse-own-files" >}}) |
+| 邮件、日历 | Gmail、Outlook 等，官方称只交换完成任务所需的数据，不下载整个收件箱；邮箱连接器过滤验证码和登录链接 | [帮助：连接器]({{< relref "/docs/muse/sources/official/2026-09-08-help-connectors" >}})、[我们如何将安全构建进 Muse]({{< relref "/docs/muse/sources/official/2026-09-08-how-we-built-safety-into-muse" >}}) |
+| 手机数据 | 数据库有通讯录、通话记录、日历、照片位置等表；健康数据经 Apple Health、Health Connect 接入，Meta 没有公布可读的数据类型清单 | [我的实测：VM 探索]({{< relref "/docs/muse/sources/exploration/2026-10-12-muse-vm-exploration" >}})、[健康数据连接细则]({{< relref "/docs/muse/sources/community/2026-11-15-health-data-permission-chain" >}}) |
+| Mac 本地数据 | Inc. 专栏作家 Aten 称 Muse 把他的 Messages 数据库同步到第 187,462 行；Meta 称需用户主动启用，未解释开关如何被打开 | [iMessage 事件详解]({{< relref "/docs/muse/sources/community/2026-10-01-did-muse-read-your-messages" >}})、[苹果重写 Mac 权限提示]({{< relref "/docs/muse/sources/community/2026-11-19-apple-rewrote-mac-permission-screen" >}}) |
+| 消息通知 | 据路透社（经 ThePrint 转述），安卓上经通知权限读到 Signal 消息，员工称默认已配置通知访问 | [Signal 消息与通知权限]({{< relref "/docs/muse/sources/community/2026-11-19-muse-signal-notification-permission" >}}) |
+| 其他 AI 助手 | 「设置 > 数据控制 > 导入记忆」可上传导出的 .zip；迁移提示词让旧助手生成「便携式记忆快照」，跳过健康、财务、心理健康和「任何短暂或敏感的内容」 | [帮助：个性与记忆]({{< relref "/docs/muse/sources/official/2026-09-30-help-personality-memories" >}})、[雷峰网：Muse 与 OpenClaw]({{< relref "/docs/muse/sources/media/2026-10-23-leiphone-muse-openclaw-lineage" >}}) |
 
-导入记忆时，Muse 还为用户准备了一段发给旧助手的提示词，请它整理「便携式记忆快照」：每条是一句有依据的事实，拿不准的标「推断」；健康、财务、心理健康信息除非用户明确要求否则不收，读入时「跳过任何短暂或敏感的内容」（[雷峰网]({{< relref "/docs/muse/sources/media/2026-10-23-leiphone-muse-openclaw-lineage" >}})）。各连接器的授权方式与生态见[连接器]({{< relref "/docs/muse/analysis/connectors" >}})。
+CDT 的 Miranda Bogen 对 WIRED 说，Muse「积极地诱导用户把自己的整个生活都接进来」（[WIRED：亲友人物档案]({{< relref "/docs/muse/sources/media/2026-10-03-wired-muse-profiles-friends-family" >}})）。CSA 的札记指出，通知、无障碍这类信道不经 Sentinel 审查，Muse 的数据入口不止连接器（[Sentinel 绕过的教训]({{< relref "/docs/muse/sources/community/2026-11-21-csa-sentinel-bypass-lessons" >}})）。
 
-记忆的数据范围也受到批评。WIRED 记录到「想法」标签页不断提示连接银行账户、邮箱、护照或驾照信息，作者认为这是在劝用户上传更多数据（[WIRED：更擅长监视]({{< relref "/docs/muse/sources/media/2026-09-20-wired-muse-better-at-surveilling" >}})）。Hunterbrook 的测试显示，Muse 能利用 Facebook、Instagram、Threads 的公开帖子、评论和 Reels 文字稿汇编名单，而 ChatGPT、Claude 由于缺少通用搜索 API 做不到同样的事（[Hunterbrook]({{< relref "/docs/muse/sources/media/2026-09-28-hunterbrook-dox-for-me-muse" >}})）。Future Society 记录到，Facebook 工具可以按工作单位、城市、生日等条件筛选好友（[Future Society 审查]({{< relref "/docs/muse/sources/community/2026-09-26-future-society-muse-own-files" >}})）。这类能力的滥用风险见[安全]({{< relref "/docs/muse/analysis/security" >}})。
+推断：Meta 账户自动连接，加上推荐系统的兴趣数据，是 Muse 与其他跟踪产品最大的区别。用户没有逐项授权，这部分上下文就已经在了。
 
-## 上下文：一段主对话加侧边对话
+## 上下文的组织：主对话、侧边对话、Spaces 与多个入口
 
-官方的交互结构是一段持续的主对话，复杂话题另开侧边对话（side chats），Muse 在两者之间「保持知情」；对话中提到的文件也会被记住，例如可以直接说「update my budget spreadsheet」，不用重新上传（[帮助中心：入门]({{< relref "/docs/muse/sources/official/2026-09-08-help-get-started" >}})、[帮助中心：Artifacts]({{< relref "/docs/muse/sources/official/2026-09-08-help-artifacts" >}})）。长对话靠压缩（compaction）维持：Future Society 记录到，压缩提示词要求总结完整历史，并尽量保留用户原话（[Future Society 审查]({{< relref "/docs/muse/sources/community/2026-09-26-future-society-muse-own-files" >}})）。2026-11-06 上线的 Spaces 演示中，侧边栏有「记忆库」入口（[Spaces 演示解析]({{< relref "/docs/muse/sources/media/2026-11-06-muse-spaces-demos" >}})）。
+- **主对话与侧边对话。** 设计说明称，侧边对话是应早期测试者希望按话题分开上下文而加的，Muse 在主聊天和各侧边对话之间保持知情（[我们如何设计 Muse]({{< relref "/docs/muse/sources/official/2026-09-08-how-we-designed-muse" >}})）。Instagram 私信里与 Muse 的对话，会作为侧聊出现在主应用中（[Muse 进 Instagram 私信]({{< relref "/docs/muse/sources/media/2026-11-24-techcrunch-muse-instagram-dms" >}})）。
+- **Goals、Spaces。** 长期目标放在 Goals 页，每个目标带一行状态（[AgentConnect：路由与权限]({{< relref "/docs/industry/sources/community/2026-11-23-agentconnect-always-on-routing" >}})）。Spaces 是后台持续更新的自定义页面，例如读学校邮件和日历的学校看板；目前只限个人，不能分享、导出（[Spaces：从对话到居所]({{< relref "/docs/muse/sources/community/2026-11-14-spaces-describe-once-keep-it" >}})）。
+- **入口之间不一定共享。** 眼镜端切换到 Muse 后，已连接的服务不从 Meta AI 继承，「两者互不共享任何东西」（[眼镜端 Muse beta 解析]({{< relref "/docs/muse/sources/community/2026-11-09-muse-on-glasses-beta" >}})，作者据帮助文档，未实测硬件）。
 
 ## 查看、编辑、遗忘与重置
 
-官方给出的控制手段有：直接问 Muse 它保存了什么（官方称这是「最简单的方式」）；手动编辑 Memory.md 等文件，或在对话中让它修改并确认；用「遗忘」技能删除某个人、话题或一组互动；重置（永久删除所有信息、聊天、文件和进行中的任务，无法撤销）（[帮助中心：管理数据]({{< relref "/docs/muse/sources/official/2026-09-10-help-manage-data" >}})、[帮助中心：隐私与安全]({{< relref "/docs/muse/sources/official/2026-09-08-help-privacy-safety-security" >}})）。
+官方给出的控制方式：
 
-官方文档同时写明了这些手段的边界：
+- **查看和编辑：** 随时查看和编辑记忆，或直接改 Memory.md（[帮助：数据管理]({{< relref "/docs/muse/sources/official/2026-09-10-help-manage-data" >}})、[英国上线与控制权]({{< relref "/docs/muse/sources/official/2026-11-24-muse-you-stay-in-control" >}})）。
+- **遗忘：** 让 Muse 忘记某个话题或某个人。「遗忘」技能在记忆和支持文件中查找相关信息，「尽其所能」删除（[帮助：数据管理]({{< relref "/docs/muse/sources/official/2026-09-10-help-manage-data" >}})、[帮助：Muse 邮箱地址]({{< relref "/docs/muse/sources/official/2026-11-16-help-email-addresses" >}})）。
+- **下载：** 下载全部 Muse 数据（[帮助：数据管理]({{< relref "/docs/muse/sources/official/2026-09-10-help-manage-data" >}})）。
+- **重置：** 「重置 Muse」删除全部数据，无法撤销（[英国上线与控制权]({{< relref "/docs/muse/sources/official/2026-11-24-muse-you-stay-in-control" >}})、[Muse 安全吗]({{< relref "/docs/muse/sources/community/2026-11-06-is-meta-muse-safe-privacy" >}})）。
+- **删除账户：** 删除 Meta 账户时，Muse 一并删除（[帮助：数据管理]({{< relref "/docs/muse/sources/official/2026-09-10-help-manage-data" >}})）。
 
-- 删除消息、侧边对话或 VM 文件后，Muse「可能仍然记得」从中了解到的信息；「遗忘」技能「尽其所能」删除（[帮助中心：隐私与安全]({{< relref "/docs/muse/sources/official/2026-09-08-help-privacy-safety-security" >}})）。
-- 断开连接器后，之前通过它取得的信息「可能仍然留在 Muse 的记忆和你的对话历史中」；来自连接器的信息只能用「遗忘」技能删除（[帮助中心：连接器]({{< relref "/docs/muse/sources/official/2026-09-08-help-connectors" >}})、[帮助中心：管理数据]({{< relref "/docs/muse/sources/official/2026-09-10-help-manage-data" >}})）。
-- WIRED 实测：可以用聊天请求清除记忆，或手动编辑文件，但「Meta 目前没有提供完全关闭记忆功能的开关」（[WIRED：更擅长监视]({{< relref "/docs/muse/sources/media/2026-09-20-wired-muse-better-at-surveilling" >}})）。
+官方同时写明了边界：删除消息、侧边对话、虚拟机文件后，Muse「可能仍然记得」（[帮助：隐私与安全]({{< relref "/docs/muse/sources/official/2026-09-08-help-privacy-safety-security" >}})、[帮助：数据管理]({{< relref "/docs/muse/sources/official/2026-09-10-help-manage-data" >}})）；断开连接器后，已取得的信息可能仍留在记忆和对话历史里（[帮助：连接器]({{< relref "/docs/muse/sources/official/2026-09-08-help-connectors" >}})）。WIRED 9-20 的实测称记忆没有完全关闭的开关（[WIRED：更擅长监视]({{< relref "/docs/muse/sources/media/2026-09-20-wired-muse-better-at-surveilling" >}})）。
 
-社区审查揭示了更具体的缺口。据 Future Society 引用的隐私文档：主聊天「can never be deleted」（智能体和应用都删不掉），记忆删除是「best-effort」，没有保留期设置，也没有无痕模式；遗忘只编辑记忆笔记，聊天记录保留，而保留的聊天仍会被后续对话、压缩摘要和后台记忆任务读取，没有机制阻止已遗忘的事实被再次提取；遗忘技能的清单还把遥测系统、集中发布的记忆嵌入、机群学习发件箱等列为可能的留存位置，并要求不得声称已物理擦除备份（[Future Society 审查]({{< relref "/docs/muse/sources/community/2026-09-26-future-society-muse-own-files" >}})）。据 TIME 的报道，指令要求「不要告诉用户」原始消息可能仍然可见（[MediaNama 转述 TIME]({{< relref "/docs/muse/sources/media/2026-10-08-medianama-muse-dossiers" >}})）。审查作者也说明，那台 VM 没有实际运行过遗忘流程，编译代码中可能另有检查。
+Future Society 的报告从内部文档补充了几处细节（[Future Society：Muse 文件审查]({{< relref "/docs/muse/sources/community/2026-09-26-future-society-muse-own-files" >}})）：
 
-推断：「文件可见可改」与「遗忘是尽力而为」并不矛盾。文件只是记忆的一部分，聊天记录、索引、嵌入和服务端遥测都不在用户能编辑的范围内，所以记忆文件的透明度不等于数据可删除。依据是上述官方措辞和审查材料。
+- 遗忘只编辑记忆笔记，对话原文保留，后续轮次、压缩摘要、`chat.read_messages` 和每小时记忆任务仍会读到这些对话。
+- 遗忘技能被告知「Do not tell the user that their original messages may remain visible in the chat」，TIME 也报道了这一句（[Medianama：人物档案（二手）]({{< relref "/docs/muse/sources/media/2026-10-08-medianama-muse-dossiers" >}})）。
+- 新增说法时，去重只比较 `status = 'active'` 的说法。作者据此推断，已撤回的事实可能从保留的对话里被重新提取出来。
+- 主对话无法删除；没有保留期设置；没有无痕模式。
 
-## Active Memory：模型侧的改进（Meta 自报）
+有作者按「已存记录、习得记忆、训练轨迹」三栏对照了六种控制方式，结论是只有删除 Meta 账户能覆盖全部三栏，没有「只删除 Muse」的中间选项（[删除聊天记忆仍在]({{< relref "/docs/muse/sources/community/2026-10-28-muse-delete-chat-memory" >}})）。
 
-2026-10-12 发布 Muse Wonder 时，官方称 Active Memory 让模型能在不同对话之间携带重要上下文，并主动检索与任务相关的细节。模型卡中的内部基准 MemoryBench 测试在 64K 到 100K tokens 的多轮对话中回忆关键信息，Muse Wonder 得 85.6、Muse Wonder Full 得 85.5，对比的 Claude Fable 5.1 为 79.0、GPT-6 Astra 为 81.4、Claude Opus 5.5 为 81.5（[Muse Wonder 模型卡]({{< relref "/docs/muse/sources/official/2026-10-12-muse-wonder-model-card" >}})、[推出 Muse Wonder]({{< relref "/docs/muse/sources/official/2026-10-12-introducing-muse-wonder-models" >}})）。2026-11-06 推送特化模型时，Meta 称模型经过训练，能区分临时和永久信息、判断信息是否过时，Muse 遗忘关键信息的次数「减少了 2.4 倍」，Active Memory 评测得分从上一代的 76% 升到 90%（[特化模型]({{< relref "/docs/muse/sources/official/2026-11-06-specialized-models-muse-meta-ai" >}})）。「2.4 倍」没有给出基线。模型本身见[模型]({{< relref "/docs/muse/analysis/models" >}})。
+11 月下旬，监管机构把记忆控制列为用户须知。英国 CMA 与 ICO 在英国上线时提醒消费者，了解如何「关闭、编辑或删除已保存的信息」（[CMA 英国上线声明]({{< relref "/docs/muse/sources/media/2026-11-24-cma-statement-uk-launch-muse" >}})）；马恩岛信息专员也有类似建议（[信息专员谈代理式 AI]({{< relref "/docs/muse/sources/community/2026-11-27-isle-of-man-commissioner-agentic-ai" >}})）。英国上线稿和 Instagram 私信的公告都重申「可以让它记住或忘掉某件事」（[英国第七个市场]({{< relref "/docs/muse/sources/media/2026-11-24-muse-launches-uk" >}})、[Muse 进 Instagram 私信]({{< relref "/docs/muse/sources/media/2026-11-24-techcrunch-muse-instagram-dms" >}})），没有提到新的控制方式。
 
-一个社群讨论指出，Muse 目前用搜索等常规工具读取记忆，再交给模型（[海外独角兽社群讨论]({{< relref "/docs/industry/sources/community/2026-10-23-haiwaidujiaoshou-discussion" >}})）；dev.to 的作者认为，记忆是检索与判断问题，而不是存储问题（[dev.to 解读]({{< relref "/docs/muse/sources/community/2026-11-09-devto-specialized-models-explainer" >}})）。
+## Active Memory：模型侧的改进（全部为 Meta 自报）
 
-一位社区作者指出，Meta 的这些数字都是自测，没有公布方法，「少遗忘」仍意味着会遗忘（[Spaces 分档分析]({{< relref "/docs/muse/sources/community/2026-11-14-spaces-describe-once-keep-it" >}})）。
+| 时间 | Meta 的说法 | 资料 |
+| --- | --- | --- |
+| 2026-10-12 | Muse Wonder 具备「主动记忆（Active Memory）」：跨对话携带重要上下文，并检索与任务相关的细节 | [推出 Muse Wonder（新闻稿）]({{< relref "/docs/muse/sources/official/2026-10-12-introducing-muse-wonder-models" >}}) |
+| 2026-10-12 | 内部基准 MemoryBench，测 64K–100K tokens 多轮对话中的回忆，含干扰和中途变化的事实：Wonder 85.6，Opus 5.5 81.5，GPT-6 Astra 81.4，Fable 5.1 79.0 | [Muse Wonder 模型卡]({{< relref "/docs/muse/sources/official/2026-10-12-muse-wonder-model-card" >}}) |
+| 2026-11-06 | 特化模型经训练区分临时与永久信息、判断信息是否过时；Muse 中遗忘关键信息减少 2.4 倍；正确使用关键上下文的比例从上一代的 76% 升到 90% | [特化模型：Muse 与 Meta AI]({{< relref "/docs/muse/sources/official/2026-11-06-specialized-models-muse-meta-ai" >}}) |
 
-## 用户反馈：记忆是公认的长处
+Muse Explained 引 datastudios 的算法指出，错误率从 24% 降到 10%，正好是 2.4 倍，两个数字可能是同一次测量的两种说法；Meta 的帖子没有说明 Active Memory 对数据留存意味着什么（[Wonder 训练模型上线]({{< relref "/docs/muse/sources/community/2026-11-09-museexplained-wonder-trained-models-live" >}})）。有作者按 API 价格估算，全量塞入记忆的成本过高，推断 Active Memory 必然是选择性检索（[Wonder 与主动记忆]({{< relref "/docs/muse/sources/community/2026-10-20-muse-wonder-active-memory" >}})，作者推断）。资料中没有第三方复测。
 
-据 Enterpret 对用户帖子的聚合统计，Muse 在邮件分拣、提醒、记忆、不半途而废这几项上得分最高（[用户偏好统计]({{< relref "/docs/industry/sources/community/2026-11-03-personal-ai-agents-users-prefer" >}})）。几个单个用户的报告：有用户在出门旅游前说要开始减肥，Muse 等旅游回来才提醒（[智消前沿：家谱]({{< relref "/docs/industry/sources/community/2026-11-09-aiwenxiao-personal-agent-family-tree" >}})）；有用户因为说过首页很关键，Muse 在改 WordPress 前先做了备份（[投资人日常]({{< relref "/docs/industry/sources/community/2026-11-10-tegongyuzhou-investor-daily-life" >}})）。这些都是单个用户的报告，没有独立验证。DataCamp 对比时指出，Muse 可以「忘记」特定内容，而 Dots 发布时无法查看或编辑单条记忆（[DataCamp]({{< relref "/docs/industry/sources/media/2026-10-27-datacamp-dots-vs-muse" >}})）。记忆在实际任务中的表现见[实际效果与可靠性]({{< relref "/docs/muse/analysis/reliability" >}})。
+## 11 月的新问题：记忆可被篡改，疑似串号
 
-2026-11 的单人实测给出了记忆起作用的具体例子：一位加州选民让 Muse 按官方选民指南处理整张选票，Muse 凭数月请求和文件形成的记忆指出，总检察长办公室 7 月曾发函支持选民自己的项目，10 月又加入一起不利于该项目的联邦诉讼；这一冲突只存在于选民自己的文件里。作者认为个人智能体的优势在于「knows the voter」，同时提醒同一份记忆要以信任为前提（[选票实测]({{< relref "/docs/muse/sources/community/2026-11-11-muse-read-my-ballot" >}})）。Peter Yang 的「目标」页演示中，Muse 先访谈触发点、替代行为和就寝时间，再建立习惯计划并从对话中生成待办（[Peter Yang 十个工作流]({{< relref "/docs/muse/sources/community/2026-10-14-peter-yang-ten-workflows" >}})）。
+- **完整性。** NebuSec 11-20 演示：恶意网页经 Muse 内置的 Chromium 取得代码执行后，可以外传对话历史和存储的记忆，还能修改记忆、向对话历史注入条目。研究称漏洞已在发布前报告并修复（[黑进 Muse 窃取对话]({{< relref "/docs/muse/sources/community/2026-11-20-nebusec-hacking-muse-browser-use" >}})、[Muse 内部架构剖析]({{< relref "/docs/muse/sources/community/2026-11-20-nebusec-inside-meta-muse" >}})）。早在 9 月就有研究者指出，技能更新可以改写记忆文件，借此伪造「用户」权限（[两种入侵路径]({{< relref "/docs/muse/sources/community/2026-09-25-optimus-muse-two-ways-in" >}})）。
+- **疑似跨账号泄露。** 据路透报道，有员工称 Muse 提到了「不属于自己的」对话，还在没被问到时报出了他的银行余额。Meta 内部称是幻觉，路透无法确认是编造还是他人的真实数据（[路透：Muse 安全事故]({{< relref "/docs/muse/sources/media/2026-11-18-muse-early-safety-mishaps-surface" >}})，余额数字见 [Signal 消息与通知权限]({{< relref "/docs/muse/sources/community/2026-11-19-muse-signal-notification-permission" >}})）。
 
-Spaces 也是一种「描述一次、长期保存」的上下文：社区作者把 2026-11-06 Meta 公布的九个示例按所需权限分档，四个无需实时数据，三个依赖已连接应用的数据新鲜度，两个（小商家订单追踪、自由职业客户中心）读取他人的消息和订单（[Spaces 分档分析]({{< relref "/docs/muse/sources/community/2026-11-14-spaces-describe-once-keep-it" >}})）。
+推断：记忆以纯文本存放、用户可以改，这让它透明，也让它成了攻击面。被注入的记忆会在以后的每次会话里生效。资料中没有 Meta 对记忆完整性校验的说明。
+
+## 用户实测：连续性是公认的长处，检索有盲区
+
+- **长处。** 有用户用了两个月，Muse 记住了只说过一次的执照到期日，并提前两个月提醒；他最看重的是连续性（[两个月 Muse 使用记录]({{< relref "/docs/muse/sources/community/2026-11-07-muse-my-ai-assistant" >}})）。有选民案例中，Muse 凭对用户几个月的记忆，找出了选民指南里没有的利益冲突（[Muse 读选票实测]({{< relref "/docs/muse/sources/community/2026-11-11-muse-read-my-ballot" >}})，作者称是单一案例）。Enterpret 对用户帖子的统计中，Muse 在记忆一项得分最高（[12 款个人智能体用户排名]({{< relref "/docs/industry/sources/community/2026-11-03-personal-ai-agents-users-prefer" >}})）。
+- **盲区。** Kunal Ugale 的收件箱测试中，Muse 只查了前 20 封邮件，也没有查已发送文件夹（[Grokbot 与 Muse 收件箱测试]({{< relref "/docs/industry/sources/community/2026-10-29-grokbot-muse-inbox-test" >}})，只收到页面摘要）。有作者提醒，一次性的请求可能悄悄变成长期偏好（[联系不上时智能体在做什么]({{< relref "/docs/muse/sources/community/2026-10-27-muse-unreachable-decision-rules" >}})）。Meta 没有公布长任务中上下文衰减、漂移的数据（[智能体忘了任务中段]({{< relref "/docs/muse/sources/community/2026-11-04-muse-mid-job-forgetting-context-rot" >}})）。
 
 ## 资料缺口
 
-- 遗忘流程的实际运行结果：已遗忘的事实是否会被后台任务从保留的聊天中重新提取（审查所用的 VM 没有运行过遗忘流程）。
-- 「集中发布的用户记忆嵌入」和跨 VM「共享经验」的具体内容、去标识化方式，以及 Meta 的官方说明。
-- Meta 对 Relationships 任务的正式说明：是否调整了提示词，是否加入敏感特征规则，非用户能否要求删除自己的页面。
-- MemoryBench、Active Memory 评测的第三方复测；「2.4 倍」的基线。
-- 跨设备（手表、眼镜、Mac）是否共享同一份记忆，资料中没有直接说明。
+- Relationships 任务的官方说明与现状：是否修改或增加开关，非用户如何删除自己的页面。
+- 遗忘与重置的实测：遗忘后索引、压缩摘要、备份中的残留；已撤回的事实会不会被重新提取。
+- Messages、Signal 通知等同步数据的保存位置、期限与删除方式；Meta 对 NebuSec 研究、路透串号报道的公开回应。
+- Active Memory 的方法论与第三方复测；与数据留存的关系。
+- 健康数据可读的类型清单；Instagram 推荐兴趣进入记忆的范围。
+- 隐私政策原文中记忆的保存期限，以及英国、欧盟地区有无不同的记忆设置。
 
 ## 主要资料
 
-- 官方：[推出 Muse]({{< relref "/docs/muse/sources/official/2026-09-08-introducing-muse" >}})（记住细节、遗忘）；[安全设计]({{< relref "/docs/muse/sources/official/2026-09-08-how-we-built-safety-into-muse" >}})（记忆存于 VM、可下载）；[设计文]({{< relref "/docs/muse/sources/official/2026-09-08-how-we-designed-muse" >}})（记忆文件可读可改）；[帮助中心：管理数据]({{< relref "/docs/muse/sources/official/2026-09-10-help-manage-data" >}})（存储位置与删除）；[帮助中心：个性与记忆]({{< relref "/docs/muse/sources/official/2026-09-30-help-personality-memories" >}})（四种来源、导入记忆）；[帮助中心：隐私与安全]({{< relref "/docs/muse/sources/official/2026-09-08-help-privacy-safety-security" >}})、[帮助中心：连接器]({{< relref "/docs/muse/sources/official/2026-09-08-help-connectors" >}})（遗忘的边界）；[Muse Wonder 模型卡]({{< relref "/docs/muse/sources/official/2026-10-12-muse-wonder-model-card" >}})、[特化模型]({{< relref "/docs/muse/sources/official/2026-11-06-specialized-models-muse-meta-ai" >}})（Active Memory 数字）。
-- 媒体：[WIRED：为亲友建档]({{< relref "/docs/muse/sources/media/2026-10-03-wired-muse-profiles-friends-family" >}})、[MediaNama 转述 TIME]({{< relref "/docs/muse/sources/media/2026-10-08-medianama-muse-dossiers" >}})（Relationships 任务）；[WIRED：更擅长监视]({{< relref "/docs/muse/sources/media/2026-09-20-wired-muse-better-at-surveilling" >}})（无关闭开关）；[雷峰网]({{< relref "/docs/muse/sources/media/2026-10-23-leiphone-muse-openclaw-lineage" >}})（USER.md、记忆迁移）；[Hunterbrook]({{< relref "/docs/muse/sources/media/2026-09-28-hunterbrook-dox-for-me-muse" >}})（社交数据汇编）。
-- 社区：[Future Society 审查]({{< relref "/docs/muse/sources/community/2026-09-26-future-society-muse-own-files" >}})（遗忘缺口、Relationships 提示词）；[Peter James 导出]({{< relref "/docs/muse/sources/community/2026-09-22-peter-james-muse-filesystem-export" >}})（文件、索引、做梦）；[CodePick 架构分析]({{< relref "/docs/muse/sources/community/2026-09-24-codepick-muse-architecture" >}})（压缩与权重不变）；[用户偏好统计]({{< relref "/docs/industry/sources/community/2026-11-03-personal-ai-agents-users-prefer" >}})。
-- 实测：[VM 探索]({{< relref "/docs/muse/sources/exploration/2026-10-12-muse-vm-exploration" >}})（2026-10-12，Muse 自述的数据库结构）。
-- 2026-11-15 增量：[选票实测]({{< relref "/docs/muse/sources/community/2026-11-11-muse-read-my-ballot" >}})、[Peter Yang 十个工作流]({{< relref "/docs/muse/sources/community/2026-10-14-peter-yang-ten-workflows" >}})、[Spaces 分档分析]({{< relref "/docs/muse/sources/community/2026-11-14-spaces-describe-once-keep-it" >}})（社区）。
+- 官方：[我们如何设计 Muse]({{< relref "/docs/muse/sources/official/2026-09-08-how-we-designed-muse" >}})（设计：记忆文件可读可改、侧边对话）；[帮助：数据管理]({{< relref "/docs/muse/sources/official/2026-09-10-help-manage-data" >}})（存储清单、遗忘、导出）；[帮助：个性与记忆]({{< relref "/docs/muse/sources/official/2026-09-30-help-personality-memories" >}})（记忆来源、导入记忆）；[帮助：隐私与安全]({{< relref "/docs/muse/sources/official/2026-09-08-help-privacy-safety-security" >}})、[帮助：连接器]({{< relref "/docs/muse/sources/official/2026-09-08-help-connectors" >}})（删除与断开后仍可能记得）；[我们如何将安全构建进 Muse]({{< relref "/docs/muse/sources/official/2026-09-08-how-we-built-safety-into-muse" >}})（虚拟机内文件可下载）；[Muse Wonder 模型卡]({{< relref "/docs/muse/sources/official/2026-10-12-muse-wonder-model-card" >}})、[特化模型：Muse 与 Meta AI]({{< relref "/docs/muse/sources/official/2026-11-06-specialized-models-muse-meta-ai" >}})（Active Memory 数字）；[英国上线与控制权]({{< relref "/docs/muse/sources/official/2026-11-24-muse-you-stay-in-control" >}})（英国上线时的记忆控制）
+- 媒体：[WIRED：亲友人物档案]({{< relref "/docs/muse/sources/media/2026-10-03-wired-muse-profiles-friends-family" >}})（WIRED 人物页报道）；[Medianama：人物档案（二手）]({{< relref "/docs/muse/sources/media/2026-10-08-medianama-muse-dossiers" >}})（转述 TIME 的档案与遗忘指令）；[WIRED：更擅长监视]({{< relref "/docs/muse/sources/media/2026-09-20-wired-muse-better-at-surveilling" >}})（无关闭开关）；[路透：Muse 安全事故]({{< relref "/docs/muse/sources/media/2026-11-18-muse-early-safety-mishaps-surface" >}})（路透：疑似串号）；[CMA 英国上线声明]({{< relref "/docs/muse/sources/media/2026-11-24-cma-statement-uk-launch-muse" >}})（CMA、ICO 提示）；[Muse 进 Instagram 私信]({{< relref "/docs/muse/sources/media/2026-11-24-techcrunch-muse-instagram-dms" >}})（Instagram 私信与 Collections）
+- 社区：[Peter James：文件系统导出]({{< relref "/docs/muse/sources/community/2026-09-22-peter-james-muse-filesystem-export" >}})、[Muse 沙箱剖析]({{< relref "/docs/muse/sources/community/2026-09-01-adwankar-whats-in-a-muse" >}})（文件系统与索引结构）；[Future Society：Muse 文件审查]({{< relref "/docs/muse/sources/community/2026-09-26-future-society-muse-own-files" >}})（内部指令逐条核验，页面自注由 AI 生成）；[删除聊天记忆仍在]({{< relref "/docs/muse/sources/community/2026-10-28-muse-delete-chat-memory" >}})（删除控制对照）；[iMessage 事件详解]({{< relref "/docs/muse/sources/community/2026-10-01-did-muse-read-your-messages" >}})、[Signal 消息与通知权限]({{< relref "/docs/muse/sources/community/2026-11-19-muse-signal-notification-permission" >}})（Messages 同步与 Signal 通知）；[黑进 Muse 窃取对话]({{< relref "/docs/muse/sources/community/2026-11-20-nebusec-hacking-muse-browser-use" >}})（NebuSec：记忆外传与篡改）；[Wonder 训练模型上线]({{< relref "/docs/muse/sources/community/2026-11-09-museexplained-wonder-trained-models-live" >}})（Active Memory 数字核对）；[两个月 Muse 使用记录]({{< relref "/docs/muse/sources/community/2026-11-07-muse-my-ai-assistant" >}})、[Muse 读选票实测]({{< relref "/docs/muse/sources/community/2026-11-11-muse-read-my-ballot" >}})（长期使用实例）；[信息专员谈代理式 AI]({{< relref "/docs/muse/sources/community/2026-11-27-isle-of-man-commissioner-agentic-ai" >}})（马恩岛信息专员）
+- 实测：[我的实测：VM 探索]({{< relref "/docs/muse/sources/exploration/2026-10-12-muse-vm-exploration" >}})（2026-10-12 虚拟机探索：文件为源、数据库为索引、跨虚拟机重建保留）

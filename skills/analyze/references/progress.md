@@ -8,7 +8,7 @@
 
 | 产品 | 总览 | runtime | memory | continuous-execution | connectors | channels | devices | models | security | privacy | access-pricing | business | reliability |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| muse | 11-15 | 11-15 | 11-15 | 11-15 | 11-15 | 11-15 | 11-15 | 11-15 | 11-15 | 11-15 | 11-15 | 11-15 | 11-15 |
+| muse | 11-28 | 11-28 | 11-28 | 11-28 | 11-28 | 11-28 | 11-28 | 11-28 | 11-28 | 11-28 | 11-28 | 11-28 | 11-28 |
 | dots | 11-11 | 11-11 | 11-11 | 11-11 | 11-11 | 11-11 | 11-11 | 11-11 | 11-11 | 11-11 | 11-11 | 11-11 | 11-11 |
 | claude-duet | 11-12 | 11-12 | 11-12 | 11-12 | 11-12 | 11-12 | — | — | 11-12 | — | 11-12 | — | 11-12 |
 | grok-bot | 11-12 | 11-12 | 11-12 | 11-12 | 11-12 | 11-12 | 11-12 | 11-12 | 11-12 | 11-12 | 11-12 | 11-12 | 11-12 |
@@ -142,6 +142,13 @@
 | 2026-11-28 | microsoft-autopilot | 自动审查模型的型号与误判率；应用卡评估的定量结果；独立安全审计 | /docs/microsoft-autopilot/sources/official/2026-11-17-autopilot-application-card 称不公布通过率 |
 | 2026-11-28 | microsoft-autopilot | OpenAI 子处理时的保存期限与处理地点；eDiscovery、保留覆盖 Autopilot 的时间表 | /docs/microsoft-autopilot/sources/official/2026-11-17-autopilot-admin-configure |
 | 2026-11-28 | microsoft-autopilot | Scout 桌面应用在 Autopilot 推出后的去留与迁移；Microsoft Mechanics 演示（Adam Sheppard） | /docs/microsoft-autopilot/sources/official/2026-11-17-autopilot-requirements 只说不要沿用桌面预览的说明 |
+| 2026-11-28 | muse | 2026-11-28 全面重写时的整体缺口：10-21 之后的官方规模数字、付费人数与收入；交易费费率与开始时间；Meta 对路透社 11-18 报道、NebuSec 攻击链、蒙大拿多州调查的回应 | /docs/muse/sources/media/2026-11-18-muse-early-safety-mishaps-surface、/docs/muse/sources/community/2026-11-20-nebusec-hacking-muse-browser-use |
+| 2026-11-28 | muse | 「不用含私人消息的交互训练」（英国稿 11-24）的适用范围，与 11-16 邮箱帮助页说法不一；英国、澳大利亚版隐私条款；ICO 自愿监测安排的内容 | /docs/muse/sources/official/2026-11-24-introducing-muse-in-the-uk、/docs/muse/sources/official/2026-11-16-help-email-addresses |
+| 2026-11-28 | muse | 各档位实际运行的模型（Wonder 还是特化模型）的一手说明；特化模型名称、模型卡与独立测试 | /docs/muse/sources/community/2026-11-19-emma-muse-free-vs-paid、/docs/muse/sources/official/2026-11-06-specialized-models-muse-meta-ai |
+| 2026-11-28 | muse | 黑五、网络周经 Muse 在沃尔玛、Gopuff、Loblaw 的已验证成交；Forter、HUMAN 的方法说明；亚马逊谈判的第二来源与结果 | /docs/muse/sources/community/2026-11-27-museexplained-black-friday-purchase-check 称 12-04 复查；/docs/muse/sources/media/2026-11-25-techcrunch-amazon-muse-blockade-talks |
+| 2026-11-28 | muse | 各市场渠道与连接器的官方对照（澳大利亚是否有 WhatsApp、Instagram 私信的市场范围）；加拿大、墨西哥、英国本币价；免费档官方额度与加购令牌价格 | /docs/muse/sources/official/2026-11-17-muse-available-australia、/docs/muse/sources/media/2026-11-24-techcrunch-muse-instagram-dms |
+| 2026-11-28 | muse | Chrome 扩展的权限模型与实测；iPad 应用的一手来源；Home Link 发货情况 | /docs/muse/sources/media/2026-11-20-muse-chrome-extension-official-announcement |
+| 2026-11-28 | muse | ANZ Medium 文章与英国上线汇总（仅链接、待翻译）的正文 | /docs/muse/sources/official/2026-11-17-medium-anz-muse-stay-in-control、/docs/muse/sources/media/2026-11-24-muse-uk-agentic-commerce-launch |
 
 ## 分析中发现的资料页问题
 
@@ -256,3 +263,14 @@
 | 2026-11-28 | /docs/microsoft-autopilot/sources/media/2026-11-20-redmondmag-autopilot-rollout | 「会话仅限云端或可在受管设备本地运行」「设置决定某些操作可否自动批准」两处，与 Learn 文档（无法访问本地、自动审查无管理员设置）不一致，出处为未收的 Microsoft Mechanics 演示 | 无需改：原文如此，运行环境页与安全页并列 |
 | 2026-11-28 | /docs/microsoft-autopilot/sources/official/2026-11-28-autopilot-product-page | 推出对象写「拥有 Microsoft Copilot、Agent 365 和按用量计费策略的客户」，要求页与 MC1557730 未把 Agent 365 列为前提 | 无需改：官方两处说法不一，开放与价格页并列 |
 | 2026-11-28 | /docs/microsoft-autopilot/sources/official/2026-11-17-autopilot-admin-configure | 写「激活向导的五个步骤」，表格列六行 | 无需改：原文（original.md 第 70 行 five steps）如此 |
+| 2026-11-28 | /docs/muse/sources/media/2026-11-23-walmart-agent-gateway-black-friday | 内容摘要里残留「（L10）」「（L13）」等行号标记，是编辑时的残留 | 待处理 |
+| 2026-11-28 | /docs/muse/sources/community/2026-11-02-muse-review-personalagentbench | 内容摘要称「文末还给出考试成绩（10 月 20 项任务完成 58%）」，正文「Meta Muse 在我们的考试中表现如何」一节只指向结果页，没有这个数字；58%（36–77）出自同站的拆解页 /docs/muse/sources/community/2026-11-11-muse-teardown-personalagentbench | 待处理 |
+| 2026-11-28 | /docs/muse/sources/community/2026-11-27-museexplained-black-friday-purchase-check、/docs/muse/sources/community/2026-11-27-emma-sweepstakes-trend-check | 标签含「实测评测」，但前者是黑五前一天的检索核查（正文自述「11 月 26 日的检索」），后者 dateNote 和正文都写明「不是抽奖应募的实测」，两篇都没有作者实测 | 待处理 |
+| 2026-11-28 | /docs/muse/sources/official/2026-11-23-montana-ag-investigation-muse、/docs/muse/sources/media/2026-11-24-cma-statement-uk-launch-muse | 两篇都是监管机构自己发布的声明（蒙大拿州司法部、英国 CMA），一篇放在 official/、一篇放在 media/，类型目录不一致；official/ 在其他页面指 Meta 官方，蒙大拿通稿放在这里容易被当作 Meta 一方的说法 | 待处理 |
+| 2026-11-28 | /docs/industry/sources/media/2026-11-05-36kr-pro-intent-consumption-entry、/docs/industry/sources/community/2026-11-04-tegongyuzhou-persom-context-performance | products 列入 muse，但全文各只提到一次 Muse（前者主讲 Karpo，后者主讲 Persom，都不在跟踪清单内），products 依据弱 | 待处理（由用户决定是否去掉 muse） |
+| 2026-11-28 | /docs/muse/sources/community/ 下 AI Home Building 站的 45 篇 | publisher 有三种写法：「AIHomeBuilding」27 篇、「AI Home Building」15 篇、「aihomebuilding」3 篇；同站不同作者署名、文风一致，统一写法后便于识别同一来源 | 待处理 |
+| 2026-11-28 | /docs/muse/sources/community/2026-11-12-muse-goes-global-five-countries | 内容摘要写敏感端点份额「增长了三倍多」，正文写「增长了两倍多」 | 无需改：原文为 more than tripled（8.9% 到约 28%），中文「增长了两倍多」即变为三倍多，两处意思一致 |
+| 2026-11-28 | /docs/muse/sources/community/2026-11-19-emma-muse-free-vs-paid、/docs/muse/sources/community/2026-11-22-emma-spark-vs-wonder、/docs/muse/sources/community/2026-11-22-emma-spark-vs-wonder-long-tasks | 以「免费档 Spark、付费档 Wonder」为前提，与官方 11-06 特化模型博文的说法不完全一致 | 无需改：收录说明已写明「照录作者的前提与实测结果，不作定论」；分析中注明 |
+| 2026-11-28 | /docs/muse/sources/community/2026-11-20-muse-smart-home-tuya-skill | 文中称 Tuya PR #61 仍未合并，与 11-10 已合并的核查不符 | 无需改：收录说明已写明，照录原文 |
+| 2026-11-28 | /docs/muse/sources/community/2026-10-14-detect-muse-ai-agent | 页面日期 10-14，正文含 11-14、11-16 的内容 | 无需改：updatedAt 为 2026-11-16，dateNote 已说明 |
+| 2026-11-28 | /docs/muse/sources/media/2026-10-31-verge-diy-muse-charm、/docs/muse/sources/media/2026-10-12-36kr-wang-openclaw-origin 等 muse 目录下 22 篇 | frontmatter 没有 products 字段 | 无需改：collect-sources 只要求 industry 资料列 products，产品目录下的资料按目录归属 |

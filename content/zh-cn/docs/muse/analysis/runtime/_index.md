@@ -2,114 +2,121 @@
 title: "Meta Muse：运行环境"
 linkTitle: "运行环境"
 weight: 10
-analyzedAt: 2026-11-15
-sourcesUntil: 2026-11-15
+analyzedAt: 2026-11-28
+sourcesUntil: 2026-11-28
 description: >
-  每位 Muse 用户有一台 Meta 云端的专用 Linux 虚拟机（Muse Secure VM），智能体本体 Hatch 跑在其中的 systemd-nspawn 容器里，凭证、审批与出站控制放在容器之外；实测显示虚拟机空闲即回收、按需冷启动，只有 100 GB 的用户盘跨实例保留。
+  每个用户一台云端 Linux 虚拟机，智能体跑在虚拟机内的容器里，凭证、审批、出站检查放在容器之外；计算按需拉起、空闲即回收，状态只靠一块 100 GB 加密卷延续。11 月起多了用户自己的 Chrome 和 Mac 两个本地执行面。
 ---
 
 ## 概要
 
-- 官方称每位用户一台隔离的云端 Linux 虚拟机 Muse Secure VM，带文件系统、终端和真实的 Chromium 浏览器，App 关闭后继续工作；它既是智能体的执行环境，也是用户内容的「记录系统」。
-- 虚拟机内部是两层边界：智能体框架 Hatch 和所有工具运行在 systemd-nspawn「运行时单元」（runtime cell）里，凭证服务、安全分类器、Sentinel、数据库、推理代理作为独立服务放在单元之外。官方安全文章、漏洞赏金指南和用户实测三方说法一致。
-- 用户实测（2026-10）看到的规格是 2 vCPU、8 GB 内存、100 GB 用户盘、无显卡，但内存气球回收了大部分内存；两天内 VM 被替换 9 次，空闲几分钟到半小时即释放，靠冷启动恢复，只有挂在 `/home/hatch` 的用户盘跨实例保留。官方没有公布这些机制。
-- 环境对用户相当透明：用户可以看系统文件、活动日志，打开、接管或停止浏览器；多名用户和记者让 Muse 把整个根文件系统打包导出，Meta 称这不涉及基础设施或他人数据。这也引出了 VM 逃逸、文件导出等安全问题（见[安全]({{< relref "/docs/muse/analysis/security" >}})）。
-- 云端运行的代价是机房 IP 被部分网站屏蔽、文件不在用户本机。Meta 宣布过「机密虚拟机」（Muse Confidential VM），截至 2026-11-12 的资料仍是未来时。Mac 应用是另一条在用户本机执行的路径；2026-11-13 前后上架的 Chrome 扩展让 Muse 在用户自己的浏览器里操作，是第三条。
+- **一人一台云端虚拟机，智能体跑在容器里。** 官方称每个用户有一台专用的 Linux 虚拟机 Muse Secure VM，智能体和用户数据都在里面；harness（内部代号 Hatch）运行在虚拟机内的 systemd-nspawn 运行时容器（runtime cell）中，凭证代理、审批、出站检查 Sentinel 等服务放在容器之外。这一层次已有三份独立拆解和用户自己的实测相互印证，是同类产品中公开得最细的运行环境。
+- **「常驻」是产品体验，计算并不常驻。** 实测显示虚拟机空闲几分钟到几十分钟就被回收，再次使用时冷启动一台新机器，挂上原来的加密用户卷；两天内换了 9 台、宿主 CPU 在 AMD 与 Intel 之间切换。跨机器延续的只有约 100 GB 的用户卷，配置是 2 vCPU、约 8 GB 内存，空闲内存被气球驱动大量回收。
+- **环境对用户高度开放。** 用户可以看到命令、子智能体和浏览器，接管浏览器，安装软件，甚至打包导出整个根文件系统；Meta 称导出是「预期中的行为」。开放带来了可审计性，也让架构细节（以及攻击面）完全公开。
+- **网页操作分两条路。** 默认是云端的 Chromium（独立租用的浏览器虚拟机，或回退到本机容器），出口在云与 CDN 网段，常被网站识别和拦截；2026-11-13 上架、11-20 正式宣布的 Chrome 扩展让 Muse 在用户自己的浏览器标签组里操作。Mac 应用则在本机读取文件和 Messages，形成云端为主、本地补充的混合结构。
+- **隔离边界有两处公开的弱点。** 容器与虚拟机共享内核，第三方研究称内核逃逸后进程可经虚拟机自己的公网 IPv6 绕过 Sentinel；Meta 也写明当前设计不阻止 Meta 在运营必要时访问数据，承诺的 Confidential VM 截至 2026-11 仍未上线。
 
-## 每个用户一台云端虚拟机
+## 每个用户一台虚拟机，智能体在容器里
 
-发布稿称 Muse 运行在 Muse Secure VM 上，这是「专用的虚拟机（VM），同时容纳智能体和个人的数据」（[推出 Muse]({{< relref "/docs/muse/sources/official/2026-09-08-introducing-muse" >}})）。安全工程文章写得更具体：每位用户一台隔离的 Linux 机器，带浏览器，有足够的存储、CPU 和内存来编译智能体写的代码、开发自定义技能、处理并发的子智能体和定时任务；用户与 Muse 共享这台计算机，它是用户内容的记录系统。iOS、Android、网页客户端通过安全传输层直接连到用户的 VM（[我们如何为 Muse 构建安全]({{< relref "/docs/muse/sources/official/2026-09-08-how-we-built-safety-into-muse" >}})）。帮助中心称 Meta 另外维护备份，防止智能体历史丢失（[帮助：隐私、安全与保障]({{< relref "/docs/muse/sources/official/2026-09-08-help-privacy-safety-security" >}})）。日本、新加坡上线稿沿用同样说法，并写明 VM 存放所连接服务的数据和认证信息（[日本上线]({{< relref "/docs/muse/sources/official/2026-10-23-japan-launch" >}})、[新加坡上线]({{< relref "/docs/muse/sources/official/2026-10-27-singapore-launch" >}})）。
+官方的说法从发布起没有变：[发布稿]({{< relref "/docs/muse/sources/official/2026-09-08-introducing-muse" >}})称每位用户有一台专用虚拟机，「同时容纳智能体和个人的数据」，并自带浏览器；[安全架构文章]({{< relref "/docs/muse/sources/official/2026-09-08-how-we-built-safety-into-muse" >}})写明这是一台隔离的 Linux 机器，用于编译智能体写的代码、开发自定义技能、处理并发子智能体和定时任务，是用户放入 Muse 的一切内容的「记录系统」。各地上线稿沿用同一表述（[日本]({{< relref "/docs/muse/sources/official/2026-10-23-japan-launch" >}})、[澳大利亚]({{< relref "/docs/muse/sources/official/2026-11-17-muse-available-australia" >}})），[英国稿]({{< relref "/docs/muse/sources/official/2026-11-24-introducing-muse-in-the-uk" >}})改用更通俗的「就像一台只属于你的笔记本电脑」，并称信息和登录凭证不在 Meta 的其他服务里。Meta 高管 David Singleton 让用户把它看作「云端的免费计算机」（[The Verge]({{< relref "/docs/muse/sources/media/2026-09-24-verge-muse-filesystem-download" >}})）。
 
-高管的说法偏向「一台电脑」：据 The Verge，David Singleton 说用户应把 Muse 看作「云端的免费计算机」，能做放在桌下的计算机能做的几乎任何事（[Verge：文件系统下载]({{< relref "/docs/muse/sources/media/2026-09-24-verge-muse-filesystem-download" >}})）。TOP5 榜单称有高级用户已往 VM 里装了 Claude Code，这是转述，没有逐条出处（[TOP5 榜单]({{< relref "/docs/industry/sources/community/2026-11-01-best-personal-ai-agents-top5apps" >}})）。
+虚拟机内部的分层，官方文章与第三方拆解一致：
 
-内部名称是 Hatch。官方文章、Verge 和多份文件系统导出都写明 Hatch 是 Muse 在代码库中的名字；用户实测看到的镜像名为 `hatch-image`，版本 0.1.46（[用户实测：Muse VM 调研]({{< relref "/docs/muse/sources/exploration/2026-10-12-muse-vm-exploration" >}})）。
-
-## 虚拟机里的两层边界
-
-官方安全文章把一台 VM 描述为「一台机器上的两个隔离的安全域」：
-
-| 层 | 内容 | 资料 |
+| 层 | 内容 | 出处 |
 | --- | --- | --- |
-| 运行时单元（runtime cell） | Hatch 框架、工作区文件系统、所有工具二进制；systemd-nspawn 容器，自带 Debian 根文件系统和虚拟网卡；单元内 root 映射为宿主的非特权用户；过滤系统调用（无 io_uring），去掉 CAP_SYS_PTRACE、CAP_NET_ADMIN 等能力 | [安全工程文章]({{< relref "/docs/muse/sources/official/2026-09-08-how-we-built-safety-into-muse" >}}) |
-| 单元之外的系统服务 | hatch-safety（分类器）、privsep、hatch-authd（凭证）、Sentinel、postgres（持久化应用状态）、推理与遥测代理；与单元之间走 Unix 域套接字，用 SO_PEERCRED 和对端 ACL 鉴别 | 同上 |
+| 宿主与虚拟化 | Linux 宿主 → KVM → Cloud Hypervisor（不是 Firecracker） | [Adwankar 拆解]({{< relref "/docs/muse/sources/community/2026-09-01-adwankar-whats-in-a-muse" >}})、[NebuSec]({{< relref "/docs/muse/sources/community/2026-11-20-nebusec-inside-meta-muse" >}})、[用户实测]({{< relref "/docs/muse/sources/exploration/2026-10-12-muse-vm-exploration" >}}) |
+| 用户虚拟机 | Ubuntu，2 vCPU、约 8 GB 内存，无 GPU，PCI 设备全是 virtio | [用户实测]({{< relref "/docs/muse/sources/exploration/2026-10-12-muse-vm-exploration" >}})、[NebuSec]({{< relref "/docs/muse/sources/community/2026-11-20-nebusec-inside-meta-muse" >}}) |
+| 运行时容器 | systemd-nspawn；容器内 root 映射为虚拟机中的非特权 uid 131072；过滤系统调用（无 io_uring）、去掉 CAP_SYS_PTRACE 和 CAP_NET_ADMIN | [安全架构文章]({{< relref "/docs/muse/sources/official/2026-09-08-how-we-built-safety-into-muse" >}})、[用户实测]({{< relref "/docs/muse/sources/exploration/2026-10-12-muse-vm-exploration" >}}) |
+| 容器内 | harness Hatch（327 MB 的 Rust 二进制，与系统镜像分开以「实时更新包」交付）、工作区文件、工具二进制 | [Adwankar 拆解]({{< relref "/docs/muse/sources/community/2026-09-01-adwankar-whats-in-a-muse" >}})、[安全架构文章]({{< relref "/docs/muse/sources/official/2026-09-08-how-we-built-safety-into-muse" >}}) |
+| 容器外 | hatch-safety（审查输入输出）、privsep、hatch-authd（代管连接器凭证）、Sentinel（出站检查）、postgres 状态库、推理与遥测代理；容器内外经带对端校验的 Unix 套接字通信 | [安全架构文章]({{< relref "/docs/muse/sources/official/2026-09-08-how-we-built-safety-into-muse" >}})、[NebuSec]({{< relref "/docs/muse/sources/community/2026-11-20-nebusec-inside-meta-muse" >}})、[CodePick]({{< relref "/docs/muse/sources/community/2026-09-24-codepick-muse-architecture" >}}) |
 
-漏洞赏金指南从攻击者角度重述了这一划分：用户在自己的沙箱内「按照设计」拥有 root；持有凭证、执行批准和出站控制的进程在沙箱之外；整个安全模型依赖 VM 与生产环境和其他用户隔离、凭证保护、出站控制、敏感操作人工批准四项控制（[漏洞赏金指南]({{< relref "/docs/muse/sources/official/2026-11-04-bug-bounty-payout-guidelines" >}})）。
+模型推理不在虚拟机里，经代理发往外部（[CodePick]({{< relref "/docs/muse/sources/community/2026-09-24-codepick-muse-architecture" >}})）；但发给模型的请求在用户虚拟机上本地组装，个人内容来自家目录下的 Markdown 文件（[PersonalAgentBench 拆解]({{< relref "/docs/muse/sources/community/2026-11-11-muse-teardown-personalagentbench" >}})）。手机、网页客户端经加密传输直连用户的虚拟机（[安全架构文章]({{< relref "/docs/muse/sources/official/2026-09-08-how-we-built-safety-into-muse" >}})）；Adwankar 观察到每台虚拟机都有公开域名，手机经 Noise_XX 会话直连，他认为这是与 Claude Code 云端虚拟机「完全没有入站」相比最大的架构差异（[Adwankar 拆解]({{< relref "/docs/muse/sources/community/2026-09-01-adwankar-whats-in-a-muse" >}})）。网站、App 和 WhatsApp 连到的是同一个智能体（[NebuSec]({{< relref "/docs/muse/sources/community/2026-11-20-nebusec-inside-meta-muse" >}})）。
 
-用户实测与官方描述一致：容器内只有 7 个进程，hatch 约占 213 MB 常驻内存；容器内 uid 0 映射到宿主 uid 131072；容器通过 Unix 套接字访问推理代理、postgres 和疑似 gatekeeper 的 `gk-proxy`（[用户实测]({{< relref "/docs/muse/sources/exploration/2026-10-12-muse-vm-exploration" >}})）。Peter James 的导出中，`/opt/hatch/runtime-cell/` 有 18 个文件，用 systemd-nspawn 启动根文件系统（[Peter James：文件系统导出]({{< relref "/docs/muse/sources/community/2026-09-22-peter-james-muse-filesystem-export" >}})）。镜像里带有 Codex CLI，但作者只找到 Muse 借用它捆绑的 bubblewrap 沙箱跑 ffmpeg（无网络、用户 nobody），没有调用 Codex 的证据（同上）。
+工作区沿用 OpenClaw 的文件结构（SOUL.md、MEMORY.md、USER.md、IDENTITY.md 等），雷峰网据此称 Muse「就是给普通人用的 OpenClaw」；Nat Friedman 回应代码从零构建、产品上深受 OpenClaw 启发（[雷峰网]({{< relref "/docs/muse/sources/media/2026-10-23-leiphone-muse-openclaw-lineage" >}})、[Peter James 导出]({{< relref "/docs/muse/sources/community/2026-09-22-peter-james-muse-filesystem-export" >}})）。记忆文件的细节见[记忆与上下文]({{< relref "/docs/muse/analysis/memory" >}})。
 
-CodePick 的分析提醒，容器里看不到某个服务不能证明它在另一台机器上，作者没有登录 VM，也没有完整执行日志（[CodePick：架构分析]({{< relref "/docs/muse/sources/community/2026-09-24-codepick-muse-architecture" >}})）。Future Society 引用内部注释称，一条 setuid 提权路径靠每次启动打补丁缓解，对容器隐藏某二进制只是「可见性管控而非能力边界」（[Future Society：泄露 VM 审查]({{< relref "/docs/muse/sources/community/2026-09-26-future-society-muse-own-files" >}})）。
+## 计算按需拉起，状态靠一块加密卷延续
 
-推断：两层设计把「用户可完全控制的执行环境」和「持有密钥与审批权的服务」分开，这样即使智能体或用户在单元内拿到 root，也不能直接动用凭证或绕过出站审查。上线前的 VM 逃逸事件说明外层边界同样是攻击目标，详见[安全]({{< relref "/docs/muse/analysis/security" >}})。
+用户自己的实测（[VM 调研]({{< relref "/docs/muse/sources/exploration/2026-10-12-muse-vm-exploration" >}})，2026-10 上旬两天的观察）给出了官方没有公开的生命周期：
 
-## 实测规格：按需拉起，用户盘单独保留
+- **存储：** 四块盘中只有 100 GB、LUKS 加密、btrfs 格式、挂载为 `/home/hatch` 的用户卷是持久的；系统盘、容器镜像盘都是易失的。虚拟机被回收时这块卷摘下、挂到新机器上。Adwankar 与 NebuSec 的拆解给出相同的结构（[Adwankar 拆解]({{< relref "/docs/muse/sources/community/2026-09-01-adwankar-whats-in-a-muse" >}})、[NebuSec]({{< relref "/docs/muse/sources/community/2026-11-20-nebusec-inside-meta-muse" >}})）。
+- **回收：** 8 次释放都发生在空闲时，空闲约 3 到 28 分钟不等，没有固定阈值；有每 10 秒一次的写盘心跳时撑到 93 分钟，30 分钟一次的 cron 检查几乎不能续命；空闲 1 小时或隔夜必被回收。
+- **拉起：** 两天内换了 9 台虚拟机，CPU 在 AMD EPYC 9D25、Intel Xeon 8321HC、AMD EPYC 9D64 之间无规律切换；新机器的拉起并不严格跟着用户消息。作者据启动记录推断恢复是冷启动，而不是内存快照。
+- **内存：** 约 80% 的内存被 virtio-balloon 回收，实际可用约 1.5 GB。Adwankar 也观察到闲置机器只占约 2 GB 工作集，他推断这正是长期在线的按用户虚拟机能负担得起的原因（[Adwankar 拆解]({{< relref "/docs/muse/sources/community/2026-09-01-adwankar-whats-in-a-muse" >}})）。
 
-官方只说资源「足够」，具体规格来自一份用户实测（2026-10-12 整理，迁移自旧笔记；[用户实测]({{< relref "/docs/muse/sources/exploration/2026-10-12-muse-vm-exploration" >}})）：
+Adwankar 记录的另一面是机器池化：虚拟机以「无身份」状态预先启动，用户登录时把用户卷嫁接上去；发布新版本时换一台新机器，中断约 40 秒（13 秒到容器、约 40 秒就绪），家目录文件完好，虚拟机不能原地重启（[Adwankar 拆解]({{< relref "/docs/muse/sources/community/2026-09-01-adwankar-whats-in-a-muse" >}})）。智能体安装的软件包记成清单，在新机器上重放，所以用户装的工具能跨替换保留。
 
-| 项目 | 实测 |
-| --- | --- |
-| 虚拟化 | Cloud Hypervisor，9 个 PCI 设备全为 virtio |
-| CPU / 内存 | 2 vCPU；8 GB（可见约 7.7 GB），但 `/proc/meminfo` 中 Balloon 约 6.2 GB，作者估算宿主回收约 80%，实际可用约 1.5 GB |
-| 磁盘 | 系统盘约 7.4 GB、疑似镜像盘约 7.5 GB、用途未知的小盘、100 GB 用户盘（btrfs，挂在 `/home/hatch`） |
-| 图形 | 无桌面，只有 Xvfb 供无头 Chromium 渲染 |
-| 生命周期 | 两天内 9 次 VM 替换，CPU 在 AMD EPYC 9D25、Intel Xeon 8321HC、AMD EPYC 9D64 之间切换；8 次释放都在空闲时，空闲时长从约 2 分钟到 28 分钟不等，开 10 秒心跳的一台撑了 93 分钟 |
+其他来源的规格说法不一：PC Watch 作者实测为「4 核 EPYC、内存只有 8GB」（[PC Watch]({{< relref "/docs/muse/sources/media/2026-11-19-pc-watch-muse-zaurus-developer" >}})）；ITmedia 称存储官方未公布，有人调查约 100 GB（[ITmedia]({{< relref "/docs/muse/sources/media/2026-11-22-itmedia-muse-explainer" >}})）；Arcjet 从网站一侧看到的 Muse 浏览器报告 6 个逻辑 CPU、约 16 GB（有时 8 GB）内存，作者提醒这些值不稳定（[Arcjet]({{< relref "/docs/muse/sources/community/2026-10-14-detect-muse-ai-agent" >}})）。浏览器可能运行在另一台虚拟机上，这些数字测的不一定是同一台机器。
 
-作者据此推断：VM 暂停和恢复是冷启动新实例，不是内存快照（跨 CPU 厂商无法恢复内存快照）；100 GB 用户盘是「唯一跨 VM 替换存活的盘」，即状态与计算分离；释放没有固定阈值，可能与宿主资源紧张有关。这些是单一用户在一个时间段的观察，Meta 未公布回收策略。Future Society 与 Peter James 的导出测到根文件系统约 7–7.9 GB（解压），与实测的系统盘量级一致（[Future Society]({{< relref "/docs/muse/sources/community/2026-09-26-future-society-muse-own-files" >}})、[Peter James]({{< relref "/docs/muse/sources/community/2026-09-22-peter-james-muse-filesystem-export" >}})）。
+推断：官方和媒体讲的「7×24 小时在后台工作」，落到实现上是「状态常驻、计算按需」。后台任务由定时器唤醒新机器执行，用户感受不到回收；代价是冷启动延迟和对空闲判定的依赖。这也解释了第三方成本测算的分歧：Z Finance 转述的摩根士丹利模型按 2 vCPU、8GB 沙箱计价，并指出 24/7 常驻与「按需拉起 + 状态快照休眠」相差一个数量级（[Z Finance]({{< relref "/docs/industry/sources/media/2026-10-21-zfinance-qi-junyuan-today" >}})）；海外独角兽讨论转述的同一机构估算 CPU 沙箱每用户每月 5 至 8 美元（[海外独角兽讨论]({{< relref "/docs/industry/sources/community/2026-10-23-haiwaidujiaoshou-discussion" >}})）。实测的回收行为更接近后一种模式。
 
-硬件方面，AMD 在 2026-10-27 的公告中称其 EPYC 处理器为 Muse 的「dedicated computing environments」提供算力（据 [All Things Muse：AMD EPYC]({{< relref "/docs/muse/sources/media/2026-10-28-allthingsmuse-amd-epyc-powers-muse" >}}) 转述），与上表实测看到的 EPYC 型号相符；实测中也出现过 Intel Xeon，说明并非全部是 AMD。模型推理和训练则在 NVIDIA 平台上（[All Things Muse：NVIDIA 合作]({{< relref "/docs/muse/sources/media/2026-10-27-allthingsmuse-nvidia-muse-partnership" >}})）。
+## 环境对用户开放：看得见、接管得了、导得出
 
-推断：「App 关了它还在干」与「空闲几分钟就释放」并不矛盾。从实测看，持续存在的是用户盘上的状态和调度，计算实例按需拉起。成本侧的测算也支持这种做法：ZFinance 转引摩根士丹利研报，假设每用户一台 2 vCPU、8 GB 的隔离沙箱，按 AWS 约每小时 0.1217 美元计价；文章另外推演 24/7 常驻与「按需拉起＋状态快照休眠」的成本差距，这是文章作者的推演，不是 Muse 的披露（[ZFinance：齐俊元融资]({{< relref "/docs/industry/sources/media/2026-10-21-zfinance-qi-junyuan-today" >}})）。单用户成本数字见[商业与规模]({{< relref "/docs/muse/analysis/business" >}})。
+- **可见：** 用户在 App 里能看到它运行的命令、浏览器和启动的子智能体，Pat Simmons 认为 Dots 和 Grok Bot 展示得远不如它（[Pat Simmons 实测]({{< relref "/docs/industry/sources/community/2026-10-06-pat-simmons-grok-muse-dots" >}})）；手机 App 有文件列表，可查看、下载虚拟机里的文件（[聚 AI 讨论]({{< relref "/docs/muse/sources/community/2026-10-04-juai-muse-discussion" >}})）。
+- **可装可写：** Muse 有自己的文件系统、终端和完整浏览器，可以写代码构建工具（[设计文章]({{< relref "/docs/muse/sources/official/2026-09-08-how-we-designed-muse" >}})）；用户实测在里面装了其他 AI 的命令行工具（[Emma 实测]({{< relref "/docs/muse/sources/community/2026-11-25-emma-cli-ai-bridge" >}})），PC Watch 作者在里面搭了编译环境，又经 Tailscale 和 SSH 让它连到家里的机器做真机调试（[PC Watch]({{< relref "/docs/muse/sources/media/2026-11-19-pc-watch-muse-zaurus-developer" >}})）。用户说的 MCP 服务器，Muse 能在虚拟机里现写客户端接上，但只能连公开的 HTTPS 地址，够不到用户本机（[智能体互通]({{< relref "/docs/muse/sources/community/2026-11-17-agent-to-agent-interop" >}})）。
+- **可导出：** 2026-09 两名开发者让 Muse 把整个根文件系统打包分享，压缩约 2.7 GB、解压 6.8 GB，含系统文件、内部文档、集成代码和子智能体日志（[Peter James 导出]({{< relref "/docs/muse/sources/community/2026-09-22-peter-james-muse-filesystem-export" >}})、[The Verge]({{< relref "/docs/muse/sources/media/2026-09-24-verge-muse-filesystem-download" >}})）。Meta 称这不带来对 Meta 基础设施或他人数据的访问，Friedman 称是「预期中的行为」（[The Verge]({{< relref "/docs/muse/sources/media/2026-09-24-verge-muse-filesystem-download" >}})）。凭证文件读不出来，SSH 密钥被排除（[Future Society 自查]({{< relref "/docs/muse/sources/community/2026-09-26-future-society-muse-own-files" >}})）。
+- **可清空：** 重置 Muse 会永久删除所有信息、聊天、文件和进行中的任务（[帮助：指导与批准]({{< relref "/docs/muse/sources/official/2026-09-08-help-guidance-and-approval" >}})）。
 
-## 环境里有什么
+开放的代价也来自同一处：产品不开源，但拆解者能从导出的文件里还原出几乎全部架构（[是否开源]({{< relref "/docs/muse/sources/community/2026-11-05-is-meta-muse-open-source" >}})）。镜像里的连接器管控配置自称「可见性管控，而不是能力边界」（[Future Society 自查]({{< relref "/docs/muse/sources/community/2026-09-26-future-society-muse-own-files" >}})），这类细节是安全研究的起点，见[安全]({{< relref "/docs/muse/analysis/security" >}})。
 
-**浏览器。** 帮助中心称聊天里有一个「你和 Muse 都可以控制」的浏览器，用户可打开查看、接管（暂停 Muse）或停止任务（[帮助：浏览网页]({{< relref "/docs/muse/sources/official/2026-09-08-help-browse-web" >}})）。安全文章说明这是保持最新的真实 Chromium，由专门的浏览器子智能体通过独立 broker 管理 CDP 连接；子智能体只看无障碍树快照，不能执行 JavaScript，DevTools 禁用；用户接管或凭证库填表时智能体暂停（[安全工程文章]({{< relref "/docs/muse/sources/official/2026-09-08-how-we-built-safety-into-muse" >}})）。Meta 称没有 API 的服务，智能体「可以像你一样通过浏览器使用」（[GeekWire：亚马逊拦截]({{< relref "/docs/muse/sources/media/2026-09-20-geekwire-amazon-blocks-muse" >}})）。阿里千问算法负责人把这概括为让 AI「像人一样通过 GUI 使用现有互联网服务」，与千问优先走 MCP/API 的路线相对（[InfoQ：千问]({{< relref "/docs/industry/sources/media/2026-11-08-infoq-qwen-personal-agent" >}})）。
+## 网页操作：云端浏览器为主，用户的 Chrome 为补充
 
-**文件、终端与工具。** 设计文章称 Muse 有自己的计算机、文件系统、终端和完整浏览器，可以写代码、填表、预订和购买，产出文档、PDF、网页等 Artifacts（[我们如何设计 Muse]({{< relref "/docs/muse/sources/official/2026-09-08-how-we-designed-muse" >}})）。上传与生成的文件存在 VM 的系统文件中，可在资料库管理（[帮助：管理数据]({{< relref "/docs/muse/sources/official/2026-09-10-help-manage-data" >}})）。技能由 Meta 内置、自动调用（[帮助：技能]({{< relref "/docs/muse/sources/official/2026-09-08-help-skills" >}})）；Future Society 的引导对话中看到 62 个捆绑技能（[Future Society]({{< relref "/docs/muse/sources/community/2026-09-26-future-society-muse-own-files" >}})）。11 月推出的 Spaces 让 Muse 在 VM 上搭出迷你应用并放进 App 标签栏；导出的文件系统里已有 Spaces 的 TypeScript/React/SQLite/Bun 模板（[Peter James]({{< relref "/docs/muse/sources/community/2026-09-22-peter-james-muse-filesystem-export" >}})、[TechCrunch：Spaces]({{< relref "/docs/muse/sources/media/2026-11-06-techcrunch-muse-spaces" >}})）。
+**云端浏览器。** 官方称浏览器是真实、保持最新的 Chromium，运行在虚拟化层之后；驱动它的子智能体只看页面的无障碍树快照，不能在页面里运行 JavaScript，DevTools 被禁用；用户接管或凭证库填表时智能体暂停（[安全架构文章]({{< relref "/docs/muse/sources/official/2026-09-08-how-we-built-safety-into-muse" >}})）。用户可以「打开浏览器」旁观、「接管浏览器」、「停止任务」（[帮助：浏览网页]({{< relref "/docs/muse/sources/official/2026-09-08-help-browse-web" >}})）。拆解显示浏览器通常从专门的浏览器虚拟机池中租用，租期 15 分钟，容器没有直达浏览器代理的路径（[Adwankar 拆解]({{< relref "/docs/muse/sources/community/2026-09-01-adwankar-whats-in-a-muse" >}})）；NebuSec 列出四种浏览器后端，按任务选择，后三种用 Chromium 155.0.8059.80（[NebuSec]({{< relref "/docs/muse/sources/community/2026-11-20-nebusec-inside-meta-muse" >}})）。远程浏览器每个网站都要单独登录，审批卡约 30 分钟后过期，可能让任务中途终止（[两个浏览器]({{< relref "/docs/muse/sources/community/2026-11-25-muse-two-browsers" >}})）。
 
-**主目录。** `/home/hatch` 里有 SOUL.md、IDENTITY.md、USER.md、MEMORY.md 等人格与记忆文件（记忆机制见[记忆与上下文]({{< relref "/docs/muse/analysis/memory" >}})）。雷峰网据此和安卓安装包的静态分析认为 Muse 与 OpenClaw 内核同构；Nat Friedman 回应称代码从零构建、产品上「深受 OpenClaw 启发」（[雷峰网：OpenClaw 血缘]({{< relref "/docs/muse/sources/media/2026-10-23-leiphone-muse-openclaw-lineage" >}})）。
+云端运行的直接后果是出口 IP 在机房。DataDome 统计 99.3% 的 Muse 请求来自云与 CDN 基础设施（Cloudflare 81.2%、Fastly 18.1%），只有 0.6% 来自消费级网络（[DataDome]({{< relref "/docs/muse/sources/media/2026-10-15-datadome-muse-29-million-requests" >}})）；用户实测小红书封禁了 Muse 的机房 IP，视频号登录态只能维持一两天（[村长七天实测]({{< relref "/docs/muse/sources/community/2026-10-03-cunzhang-seven-day-automation" >}})）；Muse 在 FlightHub 被机器人检查拦住后改经 Expedia 订票（[Pat Simmons 实测]({{< relref "/docs/industry/sources/community/2026-10-06-pat-simmons-grok-muse-dots" >}})）。网站的封堵和 Meta 的应对见[连接器]({{< relref "/docs/muse/analysis/connectors" >}})。另一个副作用是购物者手机上的联盟 cookie 不在 Meta 托管的浏览器里（[Hello Partner]({{< relref "/docs/muse/sources/media/2026-11-12-muse-uk-affiliate-pixels-blind" >}})）。
 
-## 多任务与子智能体
+**Chrome 扩展。** 2026-11-13 扩展被发现上架，11-20 Alexandr Wang 正式宣布，称已有 20 万人使用（[Wang 宣布扩展]({{< relref "/docs/muse/sources/media/2026-11-20-muse-chrome-extension-official-announcement" >}})、[扩展上架]({{< relref "/docs/muse/sources/media/2026-11-13-muse-chrome-extension" >}})）。Muse 在用户自己的 Chrome 侧边栏里工作，只能在专属标签组内操作，网站看到的是已登录的用户本人，所以不用重新登录，也不被当作智能体拦截；把标签拖出标签组即收回控制权（[两个浏览器]({{< relref "/docs/muse/sources/community/2026-11-25-muse-two-browsers" >}})，作者未安装实测）。
 
-官方称 VM 能处理并发的子智能体和定时任务，Muse 不是一问一答，用户无需等回复即可追问（[帮助：开始使用]({{< relref "/docs/muse/sources/official/2026-09-08-help-get-started" >}})）。Peter James 的导出中 `agents/` 目录有 113 条带 JSONL 轨迹的子智能体记录；CodePick 据 Muse 自报的 schema 称子任务以父任务对话为起点、之后各自推进（[Peter James]({{< relref "/docs/muse/sources/community/2026-09-22-peter-james-muse-filesystem-export" >}})、[CodePick]({{< relref "/docs/muse/sources/community/2026-09-24-codepick-muse-architecture" >}})）。安卓包和网页的状态栏显示「3 个子智能体工作中」这类提示（[雷峰网]({{< relref "/docs/muse/sources/media/2026-10-23-leiphone-muse-openclaw-lineage" >}})）。一档播客的讨论者则称 Muse 内部只有前台沟通与后台执行两个进程、「没有 Subagent 概念」（[聚 AI 播客]({{< relref "/docs/muse/sources/community/2026-10-04-juai-muse-discussion" >}})），与上述导出和官方说法不符，应视为讨论者对界面的理解。
+推断：扩展把执行从 Meta 的云挪到用户的机器上，绕开了机房 IP 的封堵，也把「隔离的虚拟机」这一卖点在网页操作上部分让渡给了用户的浏览器环境。两条路线的分工（低信任任务用远程浏览器、已登录的常用账户用扩展）目前只是社区建议，缺少实测。
 
-后台执行有用户实测佐证：AI Agents Library 作者 9 月 27 日布置研究任务后立即关掉 App，回来时报告已完成（[AI Agents Library：Duet 对 Muse]({{< relref "/docs/industry/sources/community/2026-10-22-aiagentslibrary-duet-vs-muse" >}})）。定时任务和主动行为见[持续执行]({{< relref "/docs/muse/analysis/continuous-execution" >}})。
+## 本地执行面：Mac 应用与小设备
 
-## 环境的透明度：可看、可导出
+Mac 应用在用户电脑上查找、整理文件，读取 iMessage、备忘录、提醒事项、邮件和日历，需要 macOS 授予完全磁盘访问、自动化、通知三项权限；官方称完全磁盘访问覆盖所有文件，但智能体只用用户让它处理的部分（[帮助：Mac]({{< relref "/docs/muse/sources/official/2026-10-08-help-mac" >}})）。2026-09-23 Connect 大会称 Mac 版可操作 Mac 上的任何应用（[Connect 2026]({{< relref "/docs/muse/sources/official/2026-09-23-connect-2026-everything-announced" >}})）。不开这些权限时，智能体仍从云端电脑处理邮件、日历和浏览（[Mac 权限提示]({{< relref "/docs/muse/sources/community/2026-11-19-apple-rewrote-mac-permission-screen" >}})）。安卓版沿用 OpenClaw 的说法，把手机称为「节点」，云端下命令、手机执行（[雷峰网]({{< relref "/docs/muse/sources/media/2026-10-23-leiphone-muse-openclaw-lineage" >}})）。手表应用相当于云端 Muse 的遥控器（[手表与 Wear OS]({{< relref "/docs/muse/sources/community/2026-11-12-muse-on-apple-watch-wear-os" >}})）；Gadgets SDK 让 Raspberry Pi 等设备上可以部署常驻程序接收事件（[涂鸦技能]({{< relref "/docs/muse/sources/community/2026-11-12-tuya-cloud-devices-skill" >}})）。设备细节见[设备]({{< relref "/docs/muse/analysis/devices" >}})。
 
-官方允许用户浏览系统文件和活动日志，活动日志按时间记录操作、授予的权限和用过的技能（[帮助：引导与批准]({{< relref "/docs/muse/sources/official/2026-09-08-help-guidance-and-approval" >}})）。Pat Simmons 的对比实测称能看到 Muse 运行的每条命令、浏览器和启动的子智能体，Dots 与 Grok Bot「远不如它」（[Pat Simmons 实测]({{< relref "/docs/industry/sources/community/2026-10-06-pat-simmons-grok-muse-dots" >}})）。
+## 隔离边界与 Meta 自身的访问
 
-上线后两周内，多人让 Muse 打包导出自己的 VM：Peter James 拿到压缩约 2.7 GB、解压 6.8 GB 的根文件系统，含内部文档、集成代码和 SSH 密钥文件，未验证密钥是否有效（[Peter James]({{< relref "/docs/muse/sources/community/2026-09-22-peter-james-muse-filesystem-export" >}})）；The Verge 记者复现，Muse 起初拒绝，出示先例后改口。Meta 发言人称这「就像看笔记本里的文件」，不带来对 Meta 基础设施或他人数据的访问，并称可获取的信息量会随更新变化（[Verge]({{< relref "/docs/muse/sources/media/2026-09-24-verge-muse-filesystem-download" >}})）。2026-10-12 的用户实测仍能导出系统提示词副本和 29 个技能文档（[用户实测]({{< relref "/docs/muse/sources/exploration/2026-10-12-muse-vm-exploration" >}})）。
+官方的隔离主张有两层：别的用户的智能体碰不到你的虚拟机；容器里的智能体碰不到凭证和出站通道。第三方研究对后一层提出了具体的反例：容器与虚拟机共享内核，内核逃逸后直接运行在虚拟机里的进程不受 cgroup 出站挂钩约束，可经虚拟机自己的公网 IPv6 绕过 Sentinel（[NebuSec]({{< relref "/docs/muse/sources/community/2026-11-20-nebusec-inside-meta-muse" >}})）；CSA 据此建议把出口管控放在虚拟机或宿主层（[CSA]({{< relref "/docs/muse/sources/community/2026-11-21-csa-sentinel-bypass-lessons" >}})）。已公开的事件有：漏洞赏金发现可触及用户虚拟机的漏洞，Meta 评为 SEV-2；404 Media 报道上线前（2026-08-27 至 09-18）因 KVM 逃逸报告激增紧急修复（[Secure VM 攻击面]({{< relref "/docs/muse/sources/community/2026-11-05-muse-secure-vm-attack-surface" >}})、[404 Media]({{< relref "/docs/muse/sources/media/2026-10-05-404media-vm-escape-before-launch" >}})）。漏洞赏金把 Linux 内核公开漏洞披露后 30 天内的报告排除在外（[赏金规则]({{< relref "/docs/muse/sources/official/2026-11-04-bug-bounty-payout-guidelines" >}})）。
 
-推断：官方把 VM 定义为「用户与 Muse 共享的计算机」，用户可见全部文件在设计上是一致的；被导出的主要是 Meta 自己的提示词、技能和框架代码，问题落在知识产权与攻击面，而不是用户数据隔离。
+对 Meta 自身，官方写明当前设计「并不阻止 Meta 在为支持、保护或运营该服务所必需时访问数据」，员工访问靠政策限制（[Secure VM 攻击面]({{< relref "/docs/muse/sources/community/2026-11-05-muse-secure-vm-attack-surface" >}})）。发布时预告的 Muse Confidential VM（用户持钥，Meta 也看不到）定在「今年晚些时候」（[安全架构文章]({{< relref "/docs/muse/sources/official/2026-09-08-how-we-built-safety-into-muse" >}})）；10 月有人在网页设置里看到未完成的入口，截至 2026-11 的资料中仍未上线（[iFynx]({{< relref "/docs/muse/sources/community/2026-09-16-ifynx-muse-secure-vm" >}})）。这部分与[安全]({{< relref "/docs/muse/analysis/security" >}})、[隐私]({{< relref "/docs/muse/analysis/privacy" >}})交叉。
 
-## 云端运行的限制
+## 与其他跟踪产品的差别
 
-- **IP 与反爬。** 有用户报告 Muse 云电脑是机房动态 IP，小红书封禁该 IP 段，视频号登录态只能维持一两天（[村长：七天自动化]({{< relref "/docs/muse/sources/community/2026-10-03-cunzhang-seven-day-automation" >}})）。Pat Simmons 的订票任务中 Muse 被 FlightHub 机器人检查拦住，改走 Expedia 完成（[Pat Simmons]({{< relref "/docs/industry/sources/community/2026-10-06-pat-simmons-grok-muse-dots" >}})）。平台层面的拦截见[连接器]({{< relref "/docs/muse/analysis/connectors" >}})。
-- **文件不在本机。** 同一用户为把视频传回本地，自建了 Cloudflare 中转存储，并把 API Token 交给 Muse（[村长]({{< relref "/docs/muse/sources/community/2026-10-03-cunzhang-seven-day-automation" >}})）。另有实测称完成的文件难找（[AI Agents Library]({{< relref "/docs/industry/sources/community/2026-10-22-aiagentslibrary-duet-vs-muse" >}})）。
-- **不能自托管。** Muse 的智能体、应用和 VM 全部闭源，只在 Meta 基础设施上运行（[Muse 开源吗]({{< relref "/docs/muse/sources/community/2026-11-05-is-meta-muse-open-source" >}})）。社区观点把这概括为「数据和记忆都放在厂商的云上」（[鱼皮：大厂为何做 Personal Agent]({{< relref "/docs/industry/sources/community/2026-10-12-yupi-why-big-tech-personal-agent" >}})）。
+| 产品 | 执行环境 | 与 Muse 的主要差别 | 出处 |
+| --- | --- | --- | --- |
+| Muse | 每用户一台 Linux 虚拟机，智能体在容器内；另有 Chrome 扩展、Mac 应用 | — | 上文 |
+| Grok Bot | 每账户一台共享云电脑，所有 Bot 共用文件、浏览器会话和登录 | Muse 是单智能体，不存在多 Bot 共享凭证的问题 | [四款入门成本]({{< relref "/docs/industry/sources/community/2026-10-01-dots-muse-grok-bot-duet-costs" >}})、[Top5Apps]({{< relref "/docs/industry/sources/community/2026-11-01-best-personal-ai-agents-top5apps" >}}) |
+| Dots | 每个 dot 一台云电脑，可选连接用户本机 | 路线最接近；Dots 可借用户 Chrome 绕过拦截，Muse 到 11 月才有扩展 | [四款入门成本]({{< relref "/docs/industry/sources/community/2026-10-01-dots-muse-grok-bot-duet-costs" >}})、[Pat Simmons 实测]({{< relref "/docs/industry/sources/community/2026-10-06-pat-simmons-grok-muse-dots" >}}) |
+| Claude Duet | 自己的云电脑，用户看不到也不能接管浏览器 | Muse 的可见性和接管能力明显更强 | [四款入门成本]({{< relref "/docs/industry/sources/community/2026-10-01-dots-muse-grok-bot-duet-costs" >}}) |
+| Gemini Spark | iThome 称每项任务一台临时虚拟机（未注出处） | Muse 的状态跨任务保留在用户卷中 | [iThome]({{< relref "/docs/industry/sources/media/2026-10-02-ithome-five-proactive-agents" >}}) |
 
-## 机密虚拟机与 Mac 本地执行
-
-帮助中心称可选的 Muse Confidential VM 仍在设计中，目标是「甚至对 Meta 也保密」（[帮助：隐私、安全与保障]({{< relref "/docs/muse/sources/official/2026-09-08-help-privacy-safety-security" >}})）。Zuckerberg 在访谈中称与 Nat Friedman 一起招募了 Moxie Marlinspike 开发这一机密虚拟机（[Sources：Zuckerberg 谈 Muse]({{< relref "/docs/muse/sources/media/2026-09-08-sources-zuckerberg-on-muse" >}})）；Wired 转述 Meta 称将在「今年晚些时候」推出（[Wired：更擅长监视]({{< relref "/docs/muse/sources/media/2026-09-20-wired-muse-better-at-surveilling" >}})）；iThome 写作「用户自带加密金钥」（[iThome：五款主动智能体]({{< relref "/docs/industry/sources/media/2026-10-02-ithome-five-proactive-agents" >}})）。截至 2026-11-08 的社区资料仍指出发布页用的是未来语气（[阿彦：从产品到架构]({{< relref "/docs/industry/sources/community/2026-11-08-ayaner-product-to-architecture" >}})），资料中没有上线记录。
-
-Mac 应用是云端 VM 之外的执行路径：帮助中心称 Muse 可在用户电脑上查找、整理文件，读取 iMessage、备忘录、提醒事项、邮件、日历等本地应用（[帮助：Mac]({{< relref "/docs/muse/sources/official/2026-10-08-help-mac" >}})）。Muse Gadgets 的 Linux Device SDK 也能把树莓派等机器变成执行自定义命令的「小设备」（[Gadget SDK]({{< relref "/docs/muse/sources/official/2026-10-02-muse-gadget-sdk-readme" >}})）。本地设备的分工见[设备]({{< relref "/docs/muse/analysis/devices" >}})。
-
-**Chrome 扩展：在用户的浏览器里执行。** 据 All Things Muse 转述 TestingCatalog，Muse 对话内的浏览器与用户自己的浏览器分开运行，而 Chrome 扩展让 Muse 直接使用用户的 Chrome 和已登录的网站，无需再给登录信息。Muse 的标签页归入单独的标签组，只能在组内操作；用户可以观看、暂停，或点击页面、按 Esc、把标签页拖出组来接管，任务完成后控制权交还 Chrome。扩展中 Muse 看不到已保存的密码、浏览历史和 Chrome 设置（[Chrome 扩展]({{< relref "/docs/muse/sources/media/2026-11-13-muse-chrome-extension" >}})）。推断：这绕开了「机房 IP 被网站屏蔽」的问题，代价是执行离开了 Secure VM 的边界，安全与隐私上的影响见[安全]({{< relref "/docs/muse/analysis/security" >}})、[隐私]({{< relref "/docs/muse/analysis/privacy" >}})。Meta 没有正式宣布这一扩展。
-
-截至 2026-11-13 的社区资料，Confidential VM 仍未普遍可用，当前设计下 Meta 仍可出于运营需要访问 VM 中的数据（[Secure VM 攻击面]({{< relref "/docs/muse/sources/community/2026-11-05-muse-secure-vm-attack-surface" >}})、[Walsh：非用户隐私]({{< relref "/docs/muse/sources/community/2026-11-13-walsh-muse-non-user-privacy" >}})）。
+在 2026-11 的四款 20 美元档对比中，作者称 Muse 是唯一自带常驻电脑、不依赖用户笔记本或桌面应用的一款（[20 美元四家]({{< relref "/docs/industry/sources/community/2026-11-22-four-agents-twenty-dollars" >}})，作者未实测）。从上面的实测看，「常驻」指的是状态，不是计算。
 
 ## 资料缺口
 
-- 官方的 VM 规格、配额、回收与恢复策略；单用户实测之外的独立验证。
-- Muse Confidential VM 的上线时间、技术方案和是否默认开启。
-- Mac 本地执行与云端 VM 之间如何分工、数据是否回传云端。
-- 文件系统导出后 Meta 实际做了哪些限制（Verge 只有「会随更新变化」的表态）。
-- 机房 IP 被网站屏蔽的范围，以及 Meta 是否有出口 IP 或身份声明方面的应对（Poppy 1.0 见[连接器]({{< relref "/docs/muse/analysis/connectors" >}})）。
-- Chrome 扩展的官方说明：任务何时走 VM 浏览器、何时走用户浏览器。
+- 官方规格与运营参数：CPU、内存、存储配额，空闲回收阈值，冷启动延迟，并发子智能体上限，长任务超时。目前全部来自拆解和用户实测，且观测时间集中在 2026-09 至 10 月。
+- 浏览器虚拟机池的规模、租用失败时的行为、出口 IP 分配；Chrome 扩展的权限模型与实测（目前只有商店页和帮助中心的转述）。
+- Muse Confidential VM 的上线时间与设计；虚拟机隔离的独立审计；Meta 对 NebuSec 内核逃逸与 IPv6 出站研究的回应。
+- 长期使用中的环境稳定性：用户卷损坏、软件包重放失败、版本滚动时任务中断的记录。
 
 ## 主要资料
 
-- 官方：[我们如何为 Muse 构建安全]({{< relref "/docs/muse/sources/official/2026-09-08-how-we-built-safety-into-muse" >}})（两层边界、浏览器 broker）；[推出 Muse]({{< relref "/docs/muse/sources/official/2026-09-08-introducing-muse" >}})（Secure VM）；[帮助：隐私、安全与保障]({{< relref "/docs/muse/sources/official/2026-09-08-help-privacy-safety-security" >}})（备份、Confidential VM）；[帮助：浏览网页]({{< relref "/docs/muse/sources/official/2026-09-08-help-browse-web" >}})（查看、接管、停止）；[漏洞赏金指南]({{< relref "/docs/muse/sources/official/2026-11-04-bug-bounty-payout-guidelines" >}})（沙箱内 root、四项控制）；[帮助：Mac]({{< relref "/docs/muse/sources/official/2026-10-08-help-mac" >}})（本地执行）。
-- 媒体：[Verge：文件系统下载]({{< relref "/docs/muse/sources/media/2026-09-24-verge-muse-filesystem-download" >}})（复现与 Meta 回应）；[雷峰网：OpenClaw 血缘]({{< relref "/docs/muse/sources/media/2026-10-23-leiphone-muse-openclaw-lineage" >}})（静态分析）；[ZFinance]({{< relref "/docs/industry/sources/media/2026-10-21-zfinance-qi-junyuan-today" >}})（沙箱成本假设）。
-- 社区：[Peter James：文件系统导出]({{< relref "/docs/muse/sources/community/2026-09-22-peter-james-muse-filesystem-export" >}})；[Future Society：泄露 VM 审查]({{< relref "/docs/muse/sources/community/2026-09-26-future-society-muse-own-files" >}})；[CodePick：架构分析]({{< relref "/docs/muse/sources/community/2026-09-24-codepick-muse-architecture" >}})；[村长：七天自动化]({{< relref "/docs/muse/sources/community/2026-10-03-cunzhang-seven-day-automation" >}})（IP 封禁、文件中转）；[Pat Simmons 实测]({{< relref "/docs/industry/sources/community/2026-10-06-pat-simmons-grok-muse-dots" >}})（透明度、反爬）。
-- 实测：[Muse VM 调研]({{< relref "/docs/muse/sources/exploration/2026-10-12-muse-vm-exploration" >}})（规格、VM 替换与释放、用户盘）。
-- 2026-11-15 增量：[Chrome 扩展]({{< relref "/docs/muse/sources/media/2026-11-13-muse-chrome-extension" >}})（媒体）；[Secure VM 攻击面]({{< relref "/docs/muse/sources/community/2026-11-05-muse-secure-vm-attack-surface" >}})、[Walsh：非用户隐私]({{< relref "/docs/muse/sources/community/2026-11-13-walsh-muse-non-user-privacy" >}})（社区）。
+官方：
+- [How We Built Safety Into Muse]({{< relref "/docs/muse/sources/official/2026-09-08-how-we-built-safety-into-muse" >}})：虚拟机、运行时容器、容器外服务、浏览器设计的一手说明。
+- [发布稿]({{< relref "/docs/muse/sources/official/2026-09-08-introducing-muse" >}})、[设计文章]({{< relref "/docs/muse/sources/official/2026-09-08-how-we-designed-muse" >}})：Secure VM 的定位与「自己的计算机」。
+- [帮助：浏览网页]({{< relref "/docs/muse/sources/official/2026-09-08-help-browse-web" >}})、[帮助：Mac]({{< relref "/docs/muse/sources/official/2026-10-08-help-mac" >}})、[帮助：指导与批准]({{< relref "/docs/muse/sources/official/2026-09-08-help-guidance-and-approval" >}})：浏览器接管、Mac 权限、重置。
+- [英国上线]({{< relref "/docs/muse/sources/official/2026-11-24-introducing-muse-in-the-uk" >}})、[赏金规则]({{< relref "/docs/muse/sources/official/2026-11-04-bug-bounty-payout-guidelines" >}})：最新的官方表述与隔离边界的赏金范围。
+
+媒体：
+- [The Verge]({{< relref "/docs/muse/sources/media/2026-09-24-verge-muse-filesystem-download" >}})：根文件系统导出与 Meta 的回应。
+- [DataDome]({{< relref "/docs/muse/sources/media/2026-10-15-datadome-muse-29-million-requests" >}})：浏览器流量来源构成。
+- [PC Watch]({{< relref "/docs/muse/sources/media/2026-11-19-pc-watch-muse-zaurus-developer" >}})：规格观察与经 SSH 外连家用设备的开发实测。
+- [Wang 宣布扩展]({{< relref "/docs/muse/sources/media/2026-11-20-muse-chrome-extension-official-announcement" >}})、[雷峰网]({{< relref "/docs/muse/sources/media/2026-10-23-leiphone-muse-openclaw-lineage" >}})：Chrome 扩展；与 OpenClaw 的结构对照。
+
+社区：
+- [Adwankar 拆解]({{< relref "/docs/muse/sources/community/2026-09-01-adwankar-whats-in-a-muse" >}})：Cloud Hypervisor、四块盘、池化与滚动更新、浏览器租用。
+- [NebuSec]({{< relref "/docs/muse/sources/community/2026-11-20-nebusec-inside-meta-muse" >}})、[CSA]({{< relref "/docs/muse/sources/community/2026-11-21-csa-sentinel-bypass-lessons" >}})：执行层级、四种浏览器后端、出站绕过。
+- [Peter James 导出]({{< relref "/docs/muse/sources/community/2026-09-22-peter-james-muse-filesystem-export" >}})、[Future Society 自查]({{< relref "/docs/muse/sources/community/2026-09-26-future-society-muse-own-files" >}})、[PersonalAgentBench 拆解]({{< relref "/docs/muse/sources/community/2026-11-11-muse-teardown-personalagentbench" >}})：导出内容、权限边界、请求组装。
+- [两个浏览器]({{< relref "/docs/muse/sources/community/2026-11-25-muse-two-browsers" >}})：云端浏览器与 Chrome 扩展对照。
+- [Secure VM 攻击面]({{< relref "/docs/muse/sources/community/2026-11-05-muse-secure-vm-attack-surface" >}})：已公开的隔离失效记录与 Meta 自身的访问。
+
+实测：
+- [Muse VM 调研]({{< relref "/docs/muse/sources/exploration/2026-10-12-muse-vm-exploration" >}})：用户 2026-10 上旬的实测，规格、持久卷、9 次替换、回收与拉起规律。

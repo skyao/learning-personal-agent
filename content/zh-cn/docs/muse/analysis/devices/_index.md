@@ -2,136 +2,195 @@
 title: "Meta Muse：设备"
 linkTitle: "设备"
 weight: 60
-analyzedAt: 2026-11-15
-sourcesUntil: 2026-11-15
+analyzedAt: 2026-11-28
+sourcesUntil: 2026-11-28
 description: >
-  Muse 在云端执行，终端只负责对话、确认和提供本地数据。截至 2026-11-12，已有手机、网页、iPad、Mac（可操作电脑）、Apple Watch 和 Wear OS；眼镜处于 Beta，专用硬件 Muse Charm 尚未发货。Meta 还开源了 Muse Gadgets SDK，并随订阅附赠 Home Link，用于连接家中设备。
+  Muse 的智能体始终在云端虚拟机里运行，终端只是入口和本地数据的来源。截至 2026-11-28，手机、网页、Mac、iPad、手表和眼镜 Beta 已经可用；专用硬件 Muse Charm 只有官方发布和媒体报道，价格和发货日期都来自未证实的报道。
 ---
 
 ## 概要
 
-- 截至 2026-11-12，Muse 的终端是 iOS、Android、网页（muse.ai）、iPad（10 月）、Mac 测试版、Apple Watch 与 Wear OS（11-09）。手机和手表都只是对话与确认的入口，任务在云端执行；Android 手机和 Mac 还能成为云端可调用的本地执行端。
-- Mac 应用支持计算机操作（Computer Use），需要完全磁盘访问、自动化、通知三项 macOS 权限。9 月这个客户端曾被公开过一个本地零日漏洞。
-- AI 眼镜是官方最常提的方向（唤醒词、针对眼前所见的东西行动）。官方帮助中心已有「眼镜 Beta」说明，但 2026-11-10 的媒体稿仍称眼镜接入「尚未推出」，各方对上线状态的说法不一致。据 2026-11-09 的社区核查，截至 11-06 用户可以在 Meta AI 应用中把眼镜的助手切换为 Muse（Beta）：这是替换 Meta AI 而不是并存，已连接的服务和权限要在 Muse 里重新连接。
-- 专用硬件 Muse Charm 在 2026-09-23 Connect 上宣布，官方称「今年晚些时候」再公布细节。媒体称年底前或 12 月发货，价格未公布。
-- Meta 在硬件上走了一条开发者路线：Muse Gadgets SDK 以 Apache 2.0 开源，配对需要 Meta 的 SDK 令牌。另有官方的 Muse Home Link，限美国，随有效订阅附赠，用来通过家庭 Wi-Fi 连接家中设备。
+- **执行在云端，终端负责三件事：入口、本地数据、本地动作。** 手机、Mac 把联系人、日历、通话记录、健康数据同步进云端虚拟机；Android 手机和 Mac 还能替智能体在本机执行动作。专用硬件 Muse Charm 带 5G，也只是连回云端的入口（[拆解实测]({{< relref "/docs/muse/sources/community/2026-11-11-muse-teardown-personalagentbench" >}})的推断）。
+- **Mac 和 Android 的本地权限最宽，事故也出在这两端。** Mac 应用要完全磁盘访问、自动化、通知三项权限，可以操作桌面应用。路透社复现，Muse 能在 Android 上借通知权限、在 macOS 上借辅助功能和截图读取 Signal 消息，同样的请求在 iPhone 上被拦住。之后 Apple 在 macOS 27.3 beta 2 改写了 Mac 的权限授予界面。
+- **终端扩展很快，但都是「轻入口」。** 时间线：
+  - 9-08 推出手机和网页，9-17 推出 Mac；
+  - 约 10 月上旬推出 iPad 专用应用，10-27 起有眼镜 Beta 的帮助页，11-09 登陆 Apple Watch 和 Wear OS。
+  
+  手表和眼镜要依赖配对的手机，眼镜端还要切掉 Meta AI，而且音乐、通话、消息、导航都只部分支持。
+- **专用硬件仍停在宣布阶段。** Muse Charm 由 Meta 在 2026-09-23 的 Connect 上发布；12 月发货、定价 300 美元、附赠 12 个月 5G，都出自媒体转述的未具名消息，Meta 没有证实。家庭网关 Home Link 随订阅附赠，仅限美国，The Verge 报道只做了 5,000 台。
+- **Meta 也向开发者开放了设备一侧。** Muse Gadgets SDK 开源，每台小设备要凭 Meta 发的令牌配对。社区和涂鸦（Tuya）在这基础上把 Muse 接到量产的智能家居设备。官方没有开放智能体本身。
 
-## 手机、网页与 Mac：执行在云端，终端负责入口和本地数据
+## 智能体在云端，终端是入口和数据源
 
-发布时官方列出的客户端是 iOS、Android 和网页（[推出 Muse]({{< relref "/docs/muse/sources/official/2026-09-08-introducing-muse" >}})）。Connect 时官方的说法是 Muse 目前在「手机、电脑和网页上把事情办成」（[Muse 登陆 AI 眼镜]({{< relref "/docs/muse/sources/official/2026-09-23-muse-on-ai-glasses" >}})）。之后陆续增加了几个终端：
+官方称 Muse 帮用户「在手机、电脑和网页上把事情办成」（[推出 Muse]({{< relref "/docs/muse/sources/official/2026-09-08-introducing-muse" >}})、[个人智能体登陆 AI 眼镜]({{< relref "/docs/muse/sources/official/2026-09-23-muse-on-ai-glasses" >}})）。几份拆解对分工的描述一致：智能体跑在 Meta 为每个用户配置的云端 Linux 虚拟机上，手机、网页、Mac 应用都是连到这台虚拟机的入口（[拆解实测]({{< relref "/docs/muse/sources/community/2026-11-11-muse-teardown-personalagentbench" >}})，见 [运行环境]({{< relref "/docs/muse/analysis/runtime" >}})）。
 
-| 时间 | 终端 | 资料 |
-| --- | --- | --- |
-| 2026-09-23 | Muse for Mac 支持计算机操作 | [Connect 2026 发布汇总]({{< relref "/docs/muse/sources/official/2026-09-23-connect-2026-everything-announced" >}}) |
-| 2026-10 | iPad 应用（据 TechCrunch，比手机首发晚约一个月） | [TechCrunch：手表]({{< relref "/docs/muse/sources/media/2026-11-10-techcrunch-muse-apple-watch-wear-os" >}}) |
-| 2026-11-05 | 美国用户的实时语音与化身视频聊天，覆盖手机、网页与 Mac | [语音模式开启指南]({{< relref "/docs/muse/sources/community/2026-11-06-how-to-turn-on-muse-voice-mode" >}}) |
-| 2026-11-09 | Apple Watch 伴侣应用（App Store 15.0 版）；据 Alexandr Wang 在 X 上称，Wear OS 同步上线 | [Muse 登陆 Apple Watch 与 Wear OS]({{< relref "/docs/muse/sources/media/2026-11-09-muse-apple-watch-wear-os" >}}) |
+终端的数据会进到虚拟机里。沙箱剖析和用户实测都看到了这些数据：
+- 数据库的 `device` schema 存着配对设备同步来的通讯录、日历、通话记录和媒体上传（[Muse 沙箱剖析]({{< relref "/docs/muse/sources/community/2026-09-01-adwankar-whats-in-a-muse" >}})、[我的实测：VM 探索]({{< relref "/docs/muse/sources/exploration/2026-10-12-muse-vm-exploration" >}})）；
+- Tom's Guide 的实测读到了 iPhone 上的日历和健康数据，包括步数、锻炼、睡眠（[Tom's Guide：自动化实测]({{< relref "/docs/muse/sources/media/2026-10-07-tomsguide-automate-10-tasks" >}})）；
+- 健康数据在 iPhone 上来自 Apple Health，在 Android 上来自 Health Connect（[健康数据连接细则]({{< relref "/docs/muse/sources/community/2026-11-15-health-data-permission-chain" >}})）。
 
-Mac 应用是从 Meta 网站下载的测试版，不在 Mac App Store 上架，没有版本记录（[语音模式开启指南]({{< relref "/docs/muse/sources/community/2026-11-06-how-to-turn-on-muse-voice-mode" >}})）。资料中没有 Windows 客户端，Ars Technica 称「奇怪的是，没有 Windows 版本」（[Ars Technica：零日漏洞]({{< relref "/docs/muse/sources/media/2026-09-21-arstechnica-muse-zero-day" >}})）。
+终端也能替云端执行动作。雷峰网和社区拆解都发现，Android 版沿用 OpenClaw 的叫法，把手机叫作「节点」：云端下命令，手机执行（[OpenClaw 同源拆解]({{< relref "/docs/muse/sources/community/2026-11-04-muse-openclaw-teardown" >}})、[雷峰网：Muse 与 OpenClaw]({{< relref "/docs/muse/sources/media/2026-10-23-leiphone-muse-openclaw-lineage" >}})）。Muse 自己文件系统里的文档写明，Android 配对后可以设闹钟、用用户自己的号码打电话、读发短信、读手机通知、搜索通话历史（[Future Society：Muse 文件审查]({{< relref "/docs/muse/sources/community/2026-09-26-future-society-muse-own-files" >}})）。
 
-社区资料把手机的角色描述为「接收要求和反馈」，任务在云端执行（[生活有变量：大厂防守]({{< relref "/docs/industry/sources/community/2026-10-30-shenghuoyoubianliang-big-tech-defense" >}})）。在线运行环境的细节见[运行环境]({{< relref "/docs/muse/analysis/runtime" >}})。
+AIX财经的受访者称，Muse 目前主要靠云端，端云协同（轻量任务放在本地处理）是一种可能的方向，但受发热、内存和本地模型能力的限制（[AIX财经：共识还是泡沫]({{< relref "/docs/industry/sources/media/2026-11-05-aixcaijing-consensus-or-bubble" >}})）。
 
-### Android 手机作为「节点」
+推断：从上面几点看，终端在 Muse 里的价值主要是数据和权限，不是算力。所以本地权限的宽窄，决定了各端能做的事和风险有多大（见下一节）。
 
-雷峰网对安卓安装包做了静态分析，结论是代码沿用 OpenClaw 的叫法，把手机称作「节点」：云端下命令，手机去执行。发短信时手机会弹窗「Muse 想用你的手机发送一条短信」，点一下即可放行，也可以设为始终允许（[雷峰网：Muse 与 OpenClaw]({{< relref "/docs/muse/sources/media/2026-10-23-leiphone-muse-openclaw-lineage" >}})、[Muse 与 OpenClaw 拆解]({{< relref "/docs/muse/sources/community/2026-11-04-muse-openclaw-teardown" >}})）。基于泄露虚拟机文件的社区审查也提到，配对 Android 手机后，智能体可以读发短信、读取通知、搜索通话记录（[Future Society：泄露 VM 审查]({{< relref "/docs/muse/sources/community/2026-09-26-future-society-muse-own-files" >}})）。用户自己的虚拟机探索中，设备数据结构（device schema）包含配对设备同步来的联系人、日历事件、通话记录、上传会话等表（[用户实测：VM 探索]({{< relref "/docs/muse/sources/exploration/2026-10-12-muse-vm-exploration" >}})）。
+## Mac：计算机操作与宽本地权限
 
-iOS 方面，Tom's Guide 实测时让 Muse 读取了 iPhone 日历和健康数据（[Tom's Guide：自动化 10 项任务]({{< relref "/docs/muse/sources/media/2026-10-07-tomsguide-automate-10-tasks" >}})）。资料中没有 iOS 端对应「节点」的说明。
+据社区整理，Mac 应用 2026-09-17 上线（[拆解实测]({{< relref "/docs/muse/sources/community/2026-11-11-muse-teardown-personalagentbench" >}})、[5 款智能体 11 月评测]({{< relref "/docs/industry/sources/community/2026-11-01-best-personal-ai-agents-top5apps" >}})）。Connect（9-23）上，Wang 介绍了 Mac 上的计算机操作：「你可以离开你的电脑，它会继续为你处理你排好的所有工作」（[TechCrunch：Connect 上的 Muse]({{< relref "/docs/muse/sources/media/2026-09-23-techcrunch-everything-new-muse" >}})）。资料里没有 Windows 版，Ars Technica 特意提了一句（[Ars Technica：Muse 零日漏洞]({{< relref "/docs/muse/sources/media/2026-09-21-arstechnica-muse-zero-day" >}})）。
 
-### Mac：计算机操作与三项系统权限
+帮助文档写明：
+- 计算机操作需要 macOS 授予完全磁盘访问、自动化、通知三项权限；
+- 消息、备忘录、邮件这类在本地存信息的应用，可以分别设为关闭、只读、读取并交互；
+- 发邮件或购物前会先请用户确认；
+- 要关掉计算机操作，得去 macOS 系统设置里撤销权限（[帮助：Mac 文件与应用]({{< relref "/docs/muse/sources/official/2026-10-08-help-mac" >}})）。
 
-帮助中心写明，Mac 应用需要三项 macOS 权限：完全磁盘访问（Full Disk Access）、自动化（Automation）、通知（Notifications）。对消息、备忘录、邮件等在本地存储信息的应用，用户可以分别设为关闭、只读或读取并交互；发送邮件或购买前会先请用户确认，删除的文件移到废纸篓。要完全关闭计算机操作，需要在系统设置中移除这些权限，因为「这些权限由 macOS 设定和控制，而不是由 Meta 控制」（[帮助中心：Mac]({{< relref "/docs/muse/sources/official/2026-10-08-help-mac" >}})）。
+Mac 是 Muse 争议最集中的终端：
+- **iMessage 同步争议。** 9 月，Inc. 的 Jason Aten 称，Mac 应用同步了他本地的 Messages 数据库，截图里同步到了第 187,462 行。社区复盘指出，这件事只涉及桌面应用读取 `chat.db`，手机应用没有这条路径（[iMessage 事件详解]({{< relref "/docs/muse/sources/community/2026-10-01-did-muse-read-your-messages" >}})）。
+- **听写端点可被篡改。** Wardle 发现，macOS 版的听写端点设置可以被非特权的本地进程修改（[Wardle：not-a-mused]({{< relref "/docs/muse/sources/community/2026-09-21-wardle-not-a-mused" >}})）。
+- **借辅助功能读 Signal。** 据路透社，Muse 在 macOS 上结合辅助功能和截图工具读取 Signal 消息。Apple 当周的系统更新堵住了这条路径，大幅限制开发者在 Mac 上使用辅助功能，还引入了一套面向智能体的新权限（[路透：Muse 安全事故]({{< relref "/docs/muse/sources/media/2026-11-18-muse-early-safety-mishaps-surface" >}})、[Signal 限制截图防读取]({{< relref "/docs/muse/sources/media/2026-11-21-signal-screenshots-block-ai-agents" >}})）。
+- **Apple 改写权限界面。** 社区整理称，Apple 2026-11-16 宣布 macOS 27.3 beta 2 为完全磁盘访问和相关 API 增加透明度：授权改为从列表里选应用，引导用户只授予特定文件夹，可以设成每次访问都询问，一个应用控制另一个应用时会显示指示器；已授予的权限继续有效（[苹果重写 Mac 权限提示]({{< relref "/docs/muse/sources/community/2026-11-19-apple-rewrote-mac-permission-screen" >}})）。
 
-2026-09-21，安全研究者 Patrick Wardle 公开了 Muse macOS 客户端的本地零日漏洞（[Wardle：Not a Mused]({{< relref "/docs/muse/sources/community/2026-09-21-wardle-not-a-mused" >}})），Ars Technica 跟进报道（[Ars Technica：零日漏洞]({{< relref "/docs/muse/sources/media/2026-09-21-arstechnica-muse-zero-day" >}})）。另一篇分析称，问题出在一个未公开的 macOS 偏好键，它决定了语音听写的端点（[一个配置键就够了]({{< relref "/docs/muse/sources/community/2026-11-02-one-config-key-was-enough" >}})）。漏洞的经过与修补见[安全]({{< relref "/docs/muse/analysis/security" >}})。
+推断：Muse 是在 Apple 新权限落地之前上线的。Mac 端能做到什么程度，此后会受操作系统厂商的规则约束；macOS 27.3 正式版之后实际怎样，资料还没有覆盖。
 
-推断：Mac 端同时拥有完全磁盘访问和本地漏洞记录，是 Muse 各终端中权限最大、暴露面也最大的一端。Top5Apps 的语音模式指南建议保持「执行前询问」，也说明了这一点（[语音模式开启指南]({{< relref "/docs/muse/sources/community/2026-11-06-how-to-turn-on-muse-voice-mode" >}})）。
+## 手机：iPhone 与 Android 的权限差异
 
-### 手表：遥控与确认
+路透社和 Signal、AI Now Institute 的复现结果是：Muse 在 Android 上借推送通知权限读到 Signal 消息，同样的请求在 iPhone 上被拦截；而且这条路径不经过 Muse 自己的连接器（[路透：Muse 安全事故]({{< relref "/docs/muse/sources/media/2026-11-18-muse-early-safety-mishaps-surface" >}})、[Signal 消息与通知权限]({{< relref "/docs/muse/sources/community/2026-11-19-muse-signal-notification-permission" >}})）。路透社还报道，Android 版默认拥有访问推送通知的权限（[路透：Muse 安全事故]({{< relref "/docs/muse/sources/media/2026-11-18-muse-early-safety-mishaps-surface" >}})）。
 
-Apple Watch 版把 Muse 形象放在全屏中央，提供通话、聊天、麦克风三个入口，另有表盘复杂功能。Meta 分享的截图示例中，Muse 告诉用户关注的影片已开票，给出 4:30、7:30 两个场次，用户确认后预订两张 7:30 的票（[Muse 登陆 Apple Watch 与 Wear OS]({{< relref "/docs/muse/sources/media/2026-11-09-muse-apple-watch-wear-os" >}})、[MacRumors：Apple Watch]({{< relref "/docs/muse/sources/media/2026-11-09-muse-apple-watch" >}})）。媒体指出，手表应用的设计与 Muse Charm 相似。
+推断：同一个产品在两种手机系统上能拿到的权限不同，Android 端的风险面更大。这一点和 Android「节点」能代打电话、读短信的能力一致。各端权限的完整对照，资料里没有。
 
-据 2026-11-12 的社区核查：手表应用需配对手机，蜂窝版能否独立使用没有来源；Meta 未宣布读取手表传感器；系统要求（iOS 18+、watchOS 9+、Android 10+）只出自 The Gadgeteer 一家；Wear OS 应用据称仍在等待 Google Play 上架，Meta 没有公布兼容列表；手表不额外收费，用量如何计入令牌额度未说明（[手表核查]({{< relref "/docs/muse/sources/community/2026-11-12-muse-on-apple-watch-wear-os" >}})）。该文还指出 11-09 发布的 Muse Ember 是面向开发者的小模型，与手表发布是两件事。
+## 平板与手表：同一个智能体的小屏入口
 
-雷科技的判断是，手表适合承担长时间任务中的零散交互，但 Muse「还远没有获得完整的系统级权限」，对手表市场的短期影响有限（[雷科技]({{< relref "/docs/industry/sources/media/2026-11-10-leikeji-muse-smartwatch" >}})）。
+- **iPad：** TechCrunch 称，手表版上线距 iPad 专用应用约一个月（[上线手表双平台]({{< relref "/docs/muse/sources/media/2026-11-10-techcrunch-muse-apple-watch-wear-os" >}})）。资料里没有 iPad 应用的官方公告。
+- **手表：** 2026-11-09，Wang 和 Muse 官方账号在 X 上宣布 Muse 登陆 Apple Watch 和 Wear OS（[登陆手表双平台]({{< relref "/docs/muse/sources/media/2026-11-09-muse-apple-watch-wear-os" >}})）。
+  - **功能：** 可以通话、发消息、听写；Apple Watch 版有表盘复杂功能（[Muse 登陆 Apple Watch]({{< relref "/docs/muse/sources/media/2026-11-09-muse-apple-watch" >}})、[上线手表双平台]({{< relref "/docs/muse/sources/media/2026-11-10-techcrunch-muse-apple-watch-wear-os" >}})）。演示里，Muse 在手表上提醒用户关注的电影开票了，用户确认后它订了两张票（[登陆手表双平台]({{< relref "/docs/muse/sources/media/2026-11-09-muse-apple-watch-wear-os" >}})）。
+  - **限制：** 社区核查称，手表应用要配对手机和 Muse 账号，没有任何来源提到手表能用蜂窝网络独立使用；Meta 也没有宣布能直接读取手表的传感器（[Muse 登陆手表核查]({{< relref "/docs/muse/sources/community/2026-11-12-muse-on-apple-watch-wear-os" >}})）。iOS 18、watchOS 9、Android 10 这些系统要求，以及 Wear OS 版尚待上架 Google Play 的说法，只出自二手来源 The Gadgeteer（[Muse 登陆手表核查]({{< relref "/docs/muse/sources/community/2026-11-12-muse-on-apple-watch-wear-os" >}})）。
+  - **定位：** 雷科技认为，手表适合给持续数小时到数天的任务做零散交互，比如提醒和确认；但 Muse 远没有拿到系统级权限，对手表市场的影响未必很快显现（[雷科技：Muse 登上智能手表]({{< relref "/docs/industry/sources/media/2026-11-10-leikeji-muse-smartwatch" >}})）。
 
-## AI 眼镜：官方主推，上线状态说法不一
+另据 The Information，Meta 把原定今年推出的自家智能手表推迟到 2027 年，以便集中精力做 Charm（经 [PYMNTS]({{< relref "/docs/muse/sources/media/2026-11-19-pymnts-muse-charm-price-300" >}}) 转述）。这条说的是 Meta 自家的手表硬件，与上面的 Apple Watch、Wear OS 应用是两回事。
 
-发布稿称 Muse「即将登陆 AI 眼镜」（[推出 Muse]({{< relref "/docs/muse/sources/official/2026-09-08-introducing-muse" >}})）。Connect 上官方给出的时间是「未来几个月内」，设想的用法包括：说出智能体的名字激活，免手持；针对用户正看着的东西行动（货架上的商品、墙上的传单、学习用品清单）；指导锻炼、记录饮食、开车或做饭时预约；Muse 在后台工作，完成后再回来告知（[Connect 2026 发布汇总]({{< relref "/docs/muse/sources/official/2026-09-23-connect-2026-everything-announced" >}})、[Muse 登陆 AI 眼镜]({{< relref "/docs/muse/sources/official/2026-09-23-muse-on-ai-glasses" >}})）。官方同时提到眼镜上的「私密处理」（Private Processing），称不让包括 Meta 在内的任何人看到数据，但只有一句话。
+## AI 眼镜：Beta 可用，替换而不是并存
 
-据 AIVO 转述的 Meta 第三季度财报电话会，扎克伯格称 Muse 将「从 11 月开始登陆 Meta Glasses」（[AIVO：Muse 101]({{< relref "/docs/muse/sources/community/2026-11-04-muse-101-agentic-commerce" >}})）。
+2026-09-23 的 Connect 上，Meta 宣布「未来几个月」把 Muse 带到 Meta AI 眼镜上（[个人智能体登陆 AI 眼镜]({{< relref "/docs/muse/sources/official/2026-09-23-muse-on-ai-glasses" >}})、[Connect 2026 全部发布]({{< relref "/docs/muse/sources/official/2026-09-23-connect-2026-everything-announced" >}})）：
+- 说出名字即可唤醒，全程免手持；
+- 可以针对眼前看到的东西行动，比如货架上的商品、墙上的传单；
+- 示例有指导锻炼、记录饮食、预约、帮用户买下看到的商品。
 
-帮助中心「如何在你的 AI 眼镜上使用 Muse（Beta）」（页面创建于 2026-10-27）写明了 Beta 的边界（[帮助中心：眼镜 Beta]({{< relref "/docs/muse/sources/official/2026-10-27-help-glasses-beta" >}})）：
+扎克伯格在 Q3 财报电话会上称，Muse 从 11 月起登陆 Meta 眼镜（经 [Muse 101：智能体商务]({{< relref "/docs/muse/sources/community/2026-11-04-muse-101-agentic-commerce" >}}) 转述）。
 
-- 需要同时使用 Meta AI 应用（配对、设置、固件）和 Muse 应用（对话）。
-- 眼镜上「一次只有一个助手处于启用状态」，在 Meta AI 应用的设备设置中切换 Muse 和 Meta AI；部分音乐、通话、消息、导航功能暂不支持，需要切回 Meta AI。
-- 可以给 Muse 起名并用「Hey 名字」唤醒，也可以说「Hey Meta」或「Hey Muse」；自定义名字和「Hey Muse」不是所有型号都支持。
-- 系统检测到的误唤醒语音交互会在检测后 90 天内删除。位置数据的处理见[隐私]({{< relref "/docs/muse/analysis/privacy" >}})。
-- Beta 参与者在 Beta 期间获得额外用量。
+眼镜版帮助页的日期是 2026-10-27，标为 Beta（[帮助：眼镜 Beta]({{< relref "/docs/muse/sources/official/2026-10-27-help-glasses-beta" >}})）：
+- 要同时用两个应用：Meta AI 应用负责配对、设置、固件和照片视频，Muse 应用负责对话；
+- 眼镜一次只能启用一个助手，可以在 Muse 和 Meta AI 之间切换；
+- 两个应用里连接的服务互不相通；
+- 部分音乐、通话、消息、导航体验暂不支持，需要切回 Meta AI；
+- 自定义唤醒名和「Hey Muse」不是所有型号都支持。
 
-关于眼镜是否已经上线，资料的说法并不一致：
+社区整理称，截至 2026-11-06，眼镜已经可以开启 Beta，距 Connect 约六周。作者没有实测硬件；他指出切换开关的作用是替换掉 Meta AI，不是两者并存；已连接的服务和权限都不会带过去，要在 Muse 里逐项重连（[眼镜端 Muse beta 解析]({{< relref "/docs/muse/sources/community/2026-11-09-muse-on-glasses-beta" >}})）。
 
-| 资料 | 说法 |
+开放地区的说法不一：
+- 澳大利亚的官方稿写 AI 眼镜支持「即将推出」（[Muse 上线澳大利亚]({{< relref "/docs/muse/sources/official/2026-11-17-muse-available-australia" >}})）；
+- 英国写「未来数月」（[英国第七个市场]({{< relref "/docs/muse/sources/media/2026-11-24-muse-launches-uk" >}})、[英国上线与监管协商]({{< relref "/docs/muse/sources/community/2026-11-24-muse-uk-launch-and-regulators" >}})）；
+- 墨西哥一篇报道一边说眼镜「已经运行由 Muse 驱动的助手」，一边转述 Meta「计划增加」眼镜兼容，前后矛盾（[墨西哥上线]({{< relref "/docs/muse/sources/media/2026-11-05-muse-launches-mexico" >}})）。
+
+眼镜 Beta 在哪些国家开放，资料都没有写明。
+
+推断：眼镜版 Muse 现在是试用性质的替换方案：要放弃 Meta AI 的部分能力，还要在 Muse 里重新授权。在 Connect 宣传的用法中，「看见即行动」要靠摄像头的上下文；而早期传闻称 Confidential VM 发布时不支持可穿戴设备（[Secure VM 解析]({{< relref "/docs/muse/sources/community/2026-09-16-ifynx-muse-secure-vm" >}})）。眼镜用户的数据怎样处理，要结合 [隐私]({{< relref "/docs/muse/analysis/privacy" >}}) 一起看。
+
+## Muse Charm：专用硬件只有发布与报道
+
+Connect 上，Meta 发布了 Muse Charm：一个口袋大小、专门用来和 Muse 交谈的设备，搭载实时语音模型，「今年晚些时候」再公布更多信息（[Connect 2026 全部发布]({{< relref "/docs/muse/sources/official/2026-09-23-connect-2026-everything-announced" >}})、[Connect 2026]({{< relref "/docs/muse/sources/official/2026-09-24-connect-2026" >}})）。Meta 11-05 的语音功能公告说，语音对话「即将登陆 AI 眼镜和 Muse Charm」（[语音与表情化身]({{< relref "/docs/muse/sources/official/2026-11-05-give-your-muse-a-voice" >}})）。
+
+各家报道的规格不完全一致：
+
+| 来源 | 说法 |
 | --- | --- |
-| [帮助中心：眼镜 Beta]({{< relref "/docs/muse/sources/official/2026-10-27-help-glasses-beta" >}})（2026-10-27） | 眼镜上的 Muse「目前处于 Beta 阶段」 |
-| [The Verge：语音模式上手]({{< relref "/docs/muse/sources/media/2026-11-05-muse-voice-mode-hands-on" >}})（2026-11-05） | 语音与化身将「很快」登陆 AI 眼镜 |
-| [Muse 墨西哥上线]({{< relref "/docs/muse/sources/media/2026-11-05-muse-launches-mexico" >}})（2026-11-05） | 墨西哥的「眼镜已经运行由 Muse 驱动的助手」；同一篇又转述当地媒体称 Meta「计划增加」对眼镜的兼容 |
-| [Muse Mail 向付费用户开放]({{< relref "/docs/muse/sources/media/2026-11-10-muse-mail-paid-subscribers" >}})（2026-11-10） | Connect 宣布的四项能力中，「眼镜接入尚未推出」 |
+| Meta（经社区拆解转述） | 轻触角落的指纹传感器就能说话；点名的用途有找优惠、订位、管理收件箱；12 月假日季前上市，未公布价格（[拆解实测]({{< relref "/docs/muse/sources/community/2026-11-11-muse-teardown-personalagentbench" >}})） |
+| Bloomberg（经 The Verge，再经社区拆解转述） | 5G 调制解调器、2 英寸 OLED 触屏、新的操作系统、摄像头、扬声器、麦克风、USB-C；Meta 自己没有提摄像头，拆解作者把摄像头列为「据报道」，不是「已确认」（[拆解实测]({{< relref "/docs/muse/sources/community/2026-11-11-muse-teardown-personalagentbench" >}})） |
+| 橘AI 播客讨论者 | 两英寸屏幕、前后摄像头、5G 和 eSIM，赶在圣诞节发货（[橘AI：深入讨论 Muse]({{< relref "/docs/muse/sources/community/2026-10-04-juai-muse-discussion" >}})） |
+| The Information（经 PYMNTS 转述） | 计划定价 300 美元，购买者最多可获 12 个月免费 5G；Meta 当时计划 12 月发货；Meta 没有证实，发言人只说「很快会有更多消息分享」（[Charm 定价 300 美元]({{< relref "/docs/muse/sources/media/2026-11-19-pymnts-muse-charm-price-300" >}})） |
+| The Verge 记者 | 真品 Charm 有摄像头和 5G（[50 美元自制 Muse Charm]({{< relref "/docs/muse/sources/media/2026-10-31-verge-diy-muse-charm" >}})） |
 
-| [眼镜 Beta 核查]({{< relref "/docs/muse/sources/community/2026-11-09-muse-on-glasses-beta" >}})（2026-11-09） | 截至 11-06 可在 Meta AI 应用中开启 Muse Beta（作者依据帮助文档，未实测硬件） |
+36 氪整理的 Wang 访谈称，2026 年 2 月之后的原型里已经有 Charm 的早期版本（[Muse 是玩龙虾玩出来的]({{< relref "/docs/muse/sources/media/2026-10-12-36kr-wang-openclaw-origin" >}})）。截至 2026-11-28，资料库里没有 Charm 开售或发货的记录。
 
-推断：比较一致的解释是，眼镜上的 Muse 截至 2026-11-10 是可自行开启的 Beta，没有正式上线；11-10 媒体稿的「尚未推出」可能指正式版，墨西哥那篇的「已经运行」可能指 Meta AI 助手，而不是 Muse 本身。资料不足以确认。
+The Verge 记者用 50 美元的 Waveshare ESP32-S3 开发板，按官方 Gadgets 方案自制了一个「Charm」（[50 美元自制 Muse Charm]({{< relref "/docs/muse/sources/media/2026-10-31-verge-diy-muse-charm" >}})）：
+- 刚装好时基本不能用：Muse 把语音当成要转录的音频，回复慢、不出声；
+- 记者借 Claude Code 改造后才可用，延迟主要来自 Meta 的服务器；
+- 他的结论是，Muse 本身不是买一块专用硬件的理由，专用硬件应该做手机做不到的事。
 
-**切换的代价。** 同一篇核查依据帮助文档整理：眼镜上 Muse 能做 Meta AI 做不到的事，说完后智能体继续工作，可以用相机看到的内容执行任务；但切换后音乐、通话与消息、导航中的部分功能不可用，Meta 未列明具体缺失项；自定义唤醒名并非所有型号都支持；语音隐私政策随助手而变（见[隐私]({{< relref "/docs/muse/analysis/privacy" >}})）。作者的结论是这一开关「不是免费升级」（[眼镜 Beta 核查]({{< relref "/docs/muse/sources/community/2026-11-09-muse-on-glasses-beta" >}})）。
+推断：Charm 不承载智能体，它的差异只能来自随身、免解锁、独立联网和摄像头。最后两项在官方资料里都没有确认。在 2 英寸屏幕上怎样呈现审批提示，Meta 也没有说明（[拆解实测]({{< relref "/docs/muse/sources/community/2026-11-11-muse-teardown-personalagentbench" >}})）。这个问题直接影响 [安全]({{< relref "/docs/muse/analysis/security" >}}) 里的审批机制。
 
-## Muse Charm：宣布了专用硬件，但未发货
+## Gadgets SDK 与 Home Link：把家里的设备接进来
 
-官方在 Connect 上的描述是：一款可以放进口袋、专为与 Muse 交谈互动打造的趣味设备，搭载最先进的实时语音模型，「今年晚些时候我们将分享更多信息」（[Connect 2026 发布汇总]({{< relref "/docs/muse/sources/official/2026-09-23-connect-2026-everything-announced" >}})）。其他资料的描述：
+**Muse Gadgets SDK（2026-10-02）。** 包括 ESP32 Device SDK 和 Linux Device SDK，可以把 ESP32 开发板或 Raspberry Pi 接到 Muse，再接上屏幕、按钮、传感器（[Gadget SDK README]({{< relref "/docs/muse/sources/official/2026-10-02-muse-gadget-sdk-readme" >}})、[Muse Gadgets 主页]({{< relref "/docs/muse/sources/official/2026-11-04-muse-gadgets-home" >}})）。使用条件：
+- 刷写或配对前要申请 SDK 令牌，每台小设备都要凭令牌配对；
+- 配对在 Muse 应用「设置 > 设备」里进行，要先打开开发者模式；
+- 代码采用 Apache 2.0 许可，Jollybot 头像不在许可范围内；
+- 页面自称「为黑客打造，风险自负」（[Gadget SDK README]({{< relref "/docs/muse/sources/official/2026-10-02-muse-gadget-sdk-readme" >}})、[Muse Gadgets 主页]({{< relref "/docs/muse/sources/official/2026-11-04-muse-gadgets-home" >}})）。
 
-- DataCamp 称它是「一款无需手机即可使用 Muse 的小型钥匙扣设备」（[DataCamp：Dots 与 Muse]({{< relref "/docs/industry/sources/media/2026-10-27-datacamp-dots-vs-muse" >}})）；Tom's Guide 称它是手掌大小的伴侣设备（[Tom's Guide：Muse 与 Dots]({{< relref "/docs/industry/sources/media/2026-09-30-tomsguide-muse-vs-dots" >}})）。
-- 一场播客讨论中，参与者称 Charm 有两英寸屏幕、前后摄像头、语音与视频输入输出、5G 和 eSIM，赶在圣诞节发货（[聚 AI：深入讨论 Muse]({{< relref "/docs/muse/sources/community/2026-10-04-juai-muse-discussion" >}})）。这是讨论者的说法，官方资料中没有这些规格。
-- 发货时间：The Verge 称「预计今年出货」（[The Verge：语音模式上手]({{< relref "/docs/muse/sources/media/2026-11-05-muse-voice-mode-hands-on" >}})）；Top5Apps 转述 Android Authority，称预计 12 月发货，尚无价格（[语音模式开启指南]({{< relref "/docs/muse/sources/community/2026-11-06-how-to-turn-on-muse-voice-mode" >}})）。
-- 扎克伯格在第三季度财报电话会上把 Charm 与眼镜一起列为 Muse 将接入的设备（[36 氪：Muse 时刻]({{< relref "/docs/muse/sources/media/2026-10-27-36kr-muse-moment" >}})）。
+社区解读认为，开放的是设备，不是智能体：小设备没有 Muse 账号就没有可以对话的对象（[拆解实测]({{< relref "/docs/muse/sources/community/2026-11-11-muse-teardown-personalagentbench" >}})、[Meta Muse 开源吗]({{< relref "/docs/muse/sources/community/2026-11-05-is-meta-muse-open-source" >}})）。
 
-The Verge 的一位作者用 50 美元的 Waveshare ESP32-S3 1.75 英寸触屏开发板（Meta 推荐的 Muse Gadget 方案之一）自制了一个 Charm 平替。初始状态基本不可用：Muse 把语音当成待转录的音频片段而不是指令，回复慢而且不出声，屏幕一次只显示几个词，只有一个 Jolly 形象，也不会自动发现智能家居设备。他认为响应延迟主要来自 Meta 的服务器，专用硬件的意义在于做手机做不到的事，「Muse 本身并不是买一块专用计算怀表的理由」。他不信任 Muse 接触自己的家庭网络，所以把设备放在访客 Wi-Fi 上（[The Verge：50 美元自制 Muse Charm]({{< relref "/docs/muse/sources/media/2026-10-31-verge-diy-muse-charm" >}})）。
+**Muse Home Link。** Meta 自家的 USB-C 网关（[Muse Home Link]({{< relref "/docs/muse/sources/official/2026-11-04-muse-home-link" >}})）：
+- 硬件：ESP32-C5、8 MB PSRAM、8 MB 闪存、Wi-Fi 6，尺寸 35×42×10 mm，只运行官方固件，不能重刷；
+- 设置：在 Muse 应用里用低功耗蓝牙配对并选 Wi-Fi，之后常驻家庭网络，Muse 由此能访问兼容设备或本地 HTTP API；
+- 领取：仅限美国，随有效订阅附赠，每位订阅用户限领一个，页面写「10 月发货」。
 
-播客讨论者也认为 Charm 本身「没有什么值得讲的」，价值在于 Muse、WhatsApp 与用户数据组成的闭环（[聚 AI：深入讨论 Muse]({{< relref "/docs/muse/sources/community/2026-10-04-juai-muse-discussion" >}})）。
+社区转述 The Verge，称 Meta 只做了 5,000 台，开放了等待名单（[智能家居接入]({{< relref "/docs/muse/sources/community/2026-11-20-muse-smart-home-tuya-skill" >}})）。9 月的文件系统导出里已经有一份 Home Link 文档，写明设备配对、本地网络发现，以及要单独批准的智能体访问步骤（[Peter James：文件系统导出]({{< relref "/docs/muse/sources/community/2026-09-22-peter-james-muse-filesystem-export" >}})、[The Verge：下载整个文件系统]({{< relref "/docs/muse/sources/media/2026-09-24-verge-muse-filesystem-download" >}})）。
 
-## Muse Gadgets 与 Home Link：把家中设备接进来
+**社区技能。** 官方页面列出 Philips Hue、Sonos、Apple TV、Google Nest 音箱、Samsung 电视等社区技能，提醒不要把它们用于家庭安防、紧急情况或医疗需求（[Muse Home Link]({{< relref "/docs/muse/sources/official/2026-11-04-muse-home-link" >}})、[Muse Gadgets 主页]({{< relref "/docs/muse/sources/official/2026-11-04-muse-gadgets-home" >}})）。2026-11-10，涂鸦的 Tuya Skill 以 PR #61 合并进 Meta 的 muse-gadget-sdk 仓库，把 Muse 能控制的范围扩展到家里已有的量产联网设备（[Tuya 智能家居 Skill]({{< relref "/docs/muse/sources/community/2026-11-12-tuya-cloud-devices-skill" >}})、[智能家居接入]({{< relref "/docs/muse/sources/community/2026-11-20-muse-smart-home-tuya-skill" >}})）。
 
-### 开源的 Gadgets SDK
+**用户自有电脑。** PC Watch 的作者让 Muse 从云端虚拟机经 Tailscale 和 SSH 进入自己的家用电脑，再经 Telnet 开发 2005 年的 Zaurus 旧机（[Muse 当 Zaurus 开发者]({{< relref "/docs/muse/sources/media/2026-11-19-pc-watch-muse-zaurus-developer" >}})）。这条路不经过任何官方设备通道，是用户自己搭的。
 
-Muse Gadgets 是官方的自制设备方案：给 ESP32 开发板编程，或用 SDK 配置树莓派，把 Muse 连接到屏幕、按钮和传感器。SDK 和固件以 Apache 2.0 许可证开源，包括 ESP32 Device SDK、Linux Device SDK，以及手机端的 Muse Gadgets Test。配对需要 SDK 令牌，「每个小设备都需要一个令牌才能配对」。仓库还附有面向 Muse Code 等编程智能体的 AGENTS.md（[Gadget SDK README]({{< relref "/docs/muse/sources/official/2026-10-02-muse-gadget-sdk-readme" >}})、[Muse Gadgets 首页]({{< relref "/docs/muse/sources/official/2026-11-04-muse-gadgets-home" >}})）。首页推荐了树莓派、圆形 AMOLED 屏、电子墨水屏等项目，电视棒标为「即将推出」。
+推断：Home Link 只有 5,000 台，Muse 的用户却超过 1000 万（据 Meta 财报会口径，见 [商业与规模]({{< relref "/docs/muse/analysis/business" >}})）。所以家居接入实际上主要靠社区技能和第三方云。对 [连接器]({{< relref "/docs/muse/analysis/connectors" >}}) 来说，这是另一条接入路径。
 
-一篇社区文章指出，开源的范围有限：设备需要 Meta 的 SDK 令牌并受 Gadget SDK 条款约束，动画化身不在开源许可之内（[Muse 开源吗]({{< relref "/docs/muse/sources/community/2026-11-05-is-meta-muse-open-source" >}})）。
+## 远期形态：人形机器人
 
-### Home Link：随订阅附赠的家庭网关
+NDTV 转述 The Information 的报道（[NDTV：Max 人形机器人]({{< relref "/docs/muse/sources/media/2026-11-02-meta-max-humanoid-robot" >}})）：
+- Meta 和上海的 Fourier 合作，用三个月造出人形机器人原型 Max；
+- Meta 的要求包括在五米外识别声音、在三米外读懂手势；
+- Meta CTO Andrew Bosworth 在内部把人形机器人描述为 Muse 的一种潜在实体形态；
+- Meta 发言人称这项合作只用于内部研究和实验，没有销售计划。
 
-Muse Home Link 是 Meta 自己做的 USB-C 小设备，基于 ESP32-C5（RISC-V，240 MHz），配 8 MB PSRAM、8 MB 闪存、Wi-Fi 6，尺寸 35 × 42 × 10 mm，只运行官方固件，不能重新刷写。设置流程是在 Muse 应用中通过低功耗蓝牙配对、选择 Wi-Fi，再添加技能。之后 Muse 可以通过本地 HTTP API 访问家中的兼容设备，社区技能支持 Philips Hue、Sonos、Apple TV、Google Nest 音箱、Samsung 电视等。官方提醒，社区技能可能变化或失效，「不要在家庭安防、紧急情况或医疗需求等安全攸关的事情上依赖它们」。Home Link 仅限美国，随有效的 Muse 订阅附赠，每位订阅用户限领一个，10 月发货（[Muse Home Link]({{< relref "/docs/muse/sources/official/2026-11-04-muse-home-link" >}})、[Muse Gadgets 首页]({{< relref "/docs/muse/sources/official/2026-11-04-muse-gadgets-home" >}})）。
-
-Home Link 的痕迹在正式公布前就出现过：9 月有用户导出的 Muse 文件系统中，有一份 `docs/devices/home_link.md`，描述一项「Meta Home Link 的实验性集成」（[Peter James：文件系统导出]({{< relref "/docs/muse/sources/community/2026-09-22-peter-james-muse-filesystem-export" >}})）。The Verge 当时报道称 Meta 尚未宣布这项功能（[The Verge：文件系统下载]({{< relref "/docs/muse/sources/media/2026-09-24-verge-muse-filesystem-download" >}})）。
-
-据 Tuya 新闻稿，Tuya Skill 把 Muse 能控制的范围从自制设备扩展到用户家中已联网的量产设备，但不开放门锁控制、实时视频、固件升级、网络配置和设备移除（[Tuya 云设备技能]({{< relref "/docs/muse/sources/community/2026-11-12-tuya-cloud-devices-skill" >}})）。其他设备接入方式（如 Tessie 控制汽车）属于技能与连接器，见[连接器]({{< relref "/docs/muse/analysis/connectors" >}})。
-
-推断：Meta 在家庭设备上先做开发者与爱好者生态（开源 SDK、社区技能、随订阅送网关），而不是像眼镜那样做成官方整合的消费功能。安防和门锁这类高风险操作被明确排除在外。
-
-## 远期形态与零散线索
-
-- 人形机器人：据 NDTV 转述 The Information，Meta 与 Fourier 用三个月造出人形机器人原型 Max（约 48 公斤、约五英尺，运行 Nvidia Jetson Thor）。Meta 机器人部门把它看作 Muse 的一种可能的实体形态，CTO Andrew Bosworth 在内部也这样描述过。Meta 发言人称合作只用于内部研究，没有销售计划（[Meta 人形机器人 Max]({{< relref "/docs/muse/sources/media/2026-11-02-meta-max-humanoid-robot" >}})）。
-- 泄露的界面字符串：社区审查在泄露的虚拟机文件中发现一项「Life Management」捆绑技能的描述，内容是根据用户全天的自言自语（ACS 眼镜转写）整理待办事项、提议需要批准的操作。实时语音配置中还有「Wearables」配置档和带图像拍摄分类器的「Reactive Image Capture Test」配置档。这些文件没有说明转写是否持续录音，也没有说明分类器的作用；Muse 的数据文档称语音输入由用户发起，没有后台监听（[Future Society：泄露 VM 审查]({{< relref "/docs/muse/sources/community/2026-09-26-future-society-muse-own-files" >}})）。这些是未发布功能的痕迹，不能当作计划。
-- 家庭安防摄像头：CNBC 在发布日报道中称 Muse 可监控家庭安防摄像头画面（[CNBC：Meta 进军个人智能体]({{< relref "/docs/muse/sources/media/2026-09-08-cnbc-meta-pushes-into-personal-agents" >}})）。官方资料中没有对应说明，Tuya Skill 也不开放实时视频。
+这条信息只有一个二手来源，只能说明方向，不说明产品计划。
 
 ## 资料缺口
 
-- 眼镜 Beta 的开放范围（地区、型号、人数）、Beta 期间不可用功能的完整清单，以及是否已经正式上线；眼镜上「私密处理」的技术说明（官方提到另有工程博客，未收）。
-- Muse Charm 的官方规格、价格与发货日期；播客中「5G、eSIM、前后摄像头」说法的出处。
-- iPad 应用的官方说明（目前只有 TechCrunch 一句话）；Wear OS 版的功能、上线范围和兼容列表；手表的官方系统要求、能否脱离手机使用。
-- iOS 端能否像 Android 那样作为本地执行「节点」；Android 节点的官方帮助文档。
-- Windows 客户端的计划。
-- Home Link 的实际发货情况与用户使用反馈；Tuya Skill 的官方（Meta 方）说明。
+- Muse Charm 的官方规格、价格、发货日期和开售地区，审批提示在小屏上怎样呈现；是否有摄像头，各方说法不一。
+- 眼镜 Beta 开放的国家和型号、额外用量的数值，眼镜摄像头数据的处理方式。
+- iPad 应用和 Wear OS 版的官方公告，手表端能用哪些功能、系统要求是什么。
+- Home Link 的实际发货数量和后续供应；Gadgets 令牌的审批规则。
+- macOS 27.3 正式版后 Mac 端权限的实际变化，Meta 的应对；各终端权限的官方对照（Android 默认授予通知权限的依据）。
+- Max 人形机器人的一手报道（The Information 原文）。
 
 ## 主要资料
 
-- 官方：[推出 Muse]({{< relref "/docs/muse/sources/official/2026-09-08-introducing-muse" >}})；[Connect 2026 发布汇总]({{< relref "/docs/muse/sources/official/2026-09-23-connect-2026-everything-announced" >}})、[Muse 登陆 AI 眼镜]({{< relref "/docs/muse/sources/official/2026-09-23-muse-on-ai-glasses" >}})（眼镜、Charm、Mac 计算机操作）；[帮助中心：眼镜 Beta]({{< relref "/docs/muse/sources/official/2026-10-27-help-glasses-beta" >}})（眼镜边界）；[帮助中心：Mac]({{< relref "/docs/muse/sources/official/2026-10-08-help-mac" >}})（三项权限）；[Gadget SDK README]({{< relref "/docs/muse/sources/official/2026-10-02-muse-gadget-sdk-readme" >}})、[Muse Gadgets 首页]({{< relref "/docs/muse/sources/official/2026-11-04-muse-gadgets-home" >}})、[Muse Home Link]({{< relref "/docs/muse/sources/official/2026-11-04-muse-home-link" >}})（自制设备与家庭网关）。
-- 媒体：[Muse 登陆 Apple Watch 与 Wear OS]({{< relref "/docs/muse/sources/media/2026-11-09-muse-apple-watch-wear-os" >}})、[TechCrunch：手表]({{< relref "/docs/muse/sources/media/2026-11-10-techcrunch-muse-apple-watch-wear-os" >}})（手表、iPad）；[The Verge：50 美元自制 Muse Charm]({{< relref "/docs/muse/sources/media/2026-10-31-verge-diy-muse-charm" >}})（Gadget 实测）；[Muse Mail 向付费用户开放]({{< relref "/docs/muse/sources/media/2026-11-10-muse-mail-paid-subscribers" >}})（眼镜未上线的说法）；[雷峰网：Muse 与 OpenClaw]({{< relref "/docs/muse/sources/media/2026-10-23-leiphone-muse-openclaw-lineage" >}})（安卓「节点」）。
-- 社区：[语音模式开启指南]({{< relref "/docs/muse/sources/community/2026-11-06-how-to-turn-on-muse-voice-mode" >}})；[Future Society：泄露 VM 审查]({{< relref "/docs/muse/sources/community/2026-09-26-future-society-muse-own-files" >}})、[Peter James：文件系统导出]({{< relref "/docs/muse/sources/community/2026-09-22-peter-james-muse-filesystem-export" >}})（配对手机、Home Link 痕迹）；[Muse 开源吗]({{< relref "/docs/muse/sources/community/2026-11-05-is-meta-muse-open-source" >}})；[Tuya 云设备技能]({{< relref "/docs/muse/sources/community/2026-11-12-tuya-cloud-devices-skill" >}})。
-- 实测：[VM 探索]({{< relref "/docs/muse/sources/exploration/2026-10-12-muse-vm-exploration" >}})（2026-10-12，配对设备同步的数据表）。
-- 2026-11-15 增量：[眼镜 Beta 核查]({{< relref "/docs/muse/sources/community/2026-11-09-muse-on-glasses-beta" >}})、[手表核查]({{< relref "/docs/muse/sources/community/2026-11-12-muse-on-apple-watch-wear-os" >}})（社区）。
+**官方**
+
+- [个人智能体登陆 AI 眼镜]({{< relref "/docs/muse/sources/official/2026-09-23-muse-on-ai-glasses" >}})、[Connect 2026 全部发布]({{< relref "/docs/muse/sources/official/2026-09-23-connect-2026-everything-announced" >}})、[Connect 2026]({{< relref "/docs/muse/sources/official/2026-09-24-connect-2026" >}})：Connect 2026 上的眼镜、Charm 和 Mac 计划。
+- [帮助：Mac 文件与应用]({{< relref "/docs/muse/sources/official/2026-10-08-help-mac" >}})：Mac 计算机操作的三项权限和分级访问。
+- [帮助：眼镜 Beta]({{< relref "/docs/muse/sources/official/2026-10-27-help-glasses-beta" >}})：眼镜 Beta 的使用条件和限制。
+- [Gadget SDK README]({{< relref "/docs/muse/sources/official/2026-10-02-muse-gadget-sdk-readme" >}})、[Muse Gadgets 主页]({{< relref "/docs/muse/sources/official/2026-11-04-muse-gadgets-home" >}})、[Muse Home Link]({{< relref "/docs/muse/sources/official/2026-11-04-muse-home-link" >}})：Gadgets SDK 和 Home Link 的规格与领取条件。
+- [语音与表情化身]({{< relref "/docs/muse/sources/official/2026-11-05-give-your-muse-a-voice" >}})、[Muse 上线澳大利亚]({{< relref "/docs/muse/sources/official/2026-11-17-muse-available-australia" >}})：语音登陆眼镜和 Charm 的预告；澳大利亚的终端清单。
+
+**媒体**
+
+- [路透：Muse 安全事故]({{< relref "/docs/muse/sources/media/2026-11-18-muse-early-safety-mishaps-surface" >}})、[Signal 限制截图防读取]({{< relref "/docs/muse/sources/media/2026-11-21-signal-screenshots-block-ai-agents" >}})：路透社复现 Muse 跨端读取 Signal，Apple 的应对。
+- [登陆手表双平台]({{< relref "/docs/muse/sources/media/2026-11-09-muse-apple-watch-wear-os" >}})、[Muse 登陆 Apple Watch]({{< relref "/docs/muse/sources/media/2026-11-09-muse-apple-watch" >}})、[上线手表双平台]({{< relref "/docs/muse/sources/media/2026-11-10-techcrunch-muse-apple-watch-wear-os" >}})：手表版上线和功能；iPad 应用时间。
+- [Charm 定价 300 美元]({{< relref "/docs/muse/sources/media/2026-11-19-pymnts-muse-charm-price-300" >}})：Charm 的定价报道，Meta 自家手表推迟。
+- [50 美元自制 Muse Charm]({{< relref "/docs/muse/sources/media/2026-10-31-verge-diy-muse-charm" >}})：自制 Charm 的一手实测。
+- [TechCrunch：Connect 上的 Muse]({{< relref "/docs/muse/sources/media/2026-09-23-techcrunch-everything-new-muse" >}})：Connect 上的 Mac 计算机操作。
+- [NDTV：Max 人形机器人]({{< relref "/docs/muse/sources/media/2026-11-02-meta-max-humanoid-robot" >}})：人形机器人 Max。
+- [雷科技：Muse 登上智能手表]({{< relref "/docs/industry/sources/media/2026-11-10-leikeji-muse-smartwatch" >}})：手表端的定位分析。
+
+**社区**
+
+- [拆解实测]({{< relref "/docs/muse/sources/community/2026-11-11-muse-teardown-personalagentbench" >}})：Charm 三类来源的区分，「Charm 不是 Muse 居住的地方」。
+- [眼镜端 Muse beta 解析]({{< relref "/docs/muse/sources/community/2026-11-09-muse-on-glasses-beta" >}})：眼镜 Beta 是替换而不是并存。
+- [Muse 登陆手表核查]({{< relref "/docs/muse/sources/community/2026-11-12-muse-on-apple-watch-wear-os" >}})：手表版的分层核查。
+- [Future Society：Muse 文件审查]({{< relref "/docs/muse/sources/community/2026-09-26-future-society-muse-own-files" >}})、[Muse 沙箱剖析]({{< relref "/docs/muse/sources/community/2026-09-01-adwankar-whats-in-a-muse" >}})、[OpenClaw 同源拆解]({{< relref "/docs/muse/sources/community/2026-11-04-muse-openclaw-teardown" >}})：Android 节点能力和设备数据同步。
+- [苹果重写 Mac 权限提示]({{< relref "/docs/muse/sources/community/2026-11-19-apple-rewrote-mac-permission-screen" >}})：macOS 27.3 beta 2 的权限改动。
+- [智能家居接入]({{< relref "/docs/muse/sources/community/2026-11-20-muse-smart-home-tuya-skill" >}})、[Tuya 智能家居 Skill]({{< relref "/docs/muse/sources/community/2026-11-12-tuya-cloud-devices-skill" >}})：Home Link 数量和 Tuya Skill。
+- [iMessage 事件详解]({{< relref "/docs/muse/sources/community/2026-10-01-did-muse-read-your-messages" >}})：Mac 的 iMessage 同步争议。
+
+**实测**
+
+- [我的实测：VM 探索]({{< relref "/docs/muse/sources/exploration/2026-10-12-muse-vm-exploration" >}})：VM 中 `device` schema 的同步数据。

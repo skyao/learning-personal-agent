@@ -2,121 +2,146 @@
 title: "Meta Muse：开放与价格"
 linkTitle: "开放与价格"
 weight: 100
-analyzedAt: 2026-11-15
-sourcesUntil: 2026-11-15
+analyzedAt: 2026-11-28
+sourcesUntil: 2026-11-28
 description: >
-  Muse 是跟踪产品中唯一免费起步的：只要 Meta 账户、年满 18 岁，没有候补名单；付费档 Power 每月 20 美元、Maximum 每月 100 美元，按每周令牌额度区分。截至 2026-11-12 开放美国、加拿大、日本、新加坡、墨西哥五个市场，欧盟、英国尚未开放。
+  Muse 只要一个 Meta 账户、年满 18 岁即可免费使用，付费档只按每周令牌额度区分；截至 2026-11-28 已开放 7 个市场，新功能则多按「美国付费用户先行」逐步放开。
 ---
 
 ## 概要
 
-- 门槛低：使用 Muse 只需一个 Meta 账户（不必有 Facebook 或 Instagram 账户），年满 18 岁，在已开放的地区通过 iOS、Android、muse.ai 使用，没有候补名单。有两篇第三方资料称免费档注册也要绑定支付卡，官方资料中没有这一要求。
-- 价格按每周令牌额度分档：免费档有用量上限，用完后升级或等额度刷新；Power 每月 20 美元、每周 5 亿 Muse 令牌，Maximum 每月 100 美元、每周 30 亿令牌。帮助中心另有「购买额外的 Muse 令牌」入口。免费档的具体额度官方没有公布，媒体报道的「每周最多 1 亿令牌」出自 Sources 节目。
-- 开放顺序：美国（09-08）、加拿大（09-18）、日本（10-23）、新加坡（10-27）、墨西哥（11-05）。The Times 报道将在数周内进入英国，印度已有卢比标价，但尚在等候名单阶段；据印度媒体 11-12 转述 Meta 印度负责人，Muse 将于 2027 年初进入印度。欧盟没有时间表。
-- 新功能常常先给付费用户：Muse Wonder 模型先面向订阅用户，Muse Mail 先向美加付费用户开放，给商家打电话 11-12 起仅向美国付费用户开放，Home Link 硬件随订阅附赠。语音、视频聊天、Spaces 则向所有档位开放。
-- 订阅在官方帮助中心仍标为「有限测试阶段」，权益与可用性因地区和账户而异。媒体普遍把「免费起步」视为 Muse 相对 Dots（100 美元起）、Grok Bot、Claude Duet 的主要优势。用户反馈中，Muse 在「国家可用性」一项垫底。
+- **门槛低。** 官方要求是：位于已开放的国家或地区、年满 18 岁（或当地成年年龄）、用 Meta 账户登录。没有候补名单，也不需要绑定其他订阅。帮助页至今仍称 Muse 和 Muse 订阅「处于有限测试阶段」。
+- **三档价格，只差用量。** 免费档的额度官方没有公布；Power 每月 20 美元，每周 5 亿 Muse 令牌；Maximum 每月 100 美元，每周 30 亿令牌。帮助页没有列出哪些功能只给付费用户，但 Meta 从未说明一个令牌能换多少工作。免费档「每周 1 亿令牌」只出自 Zuckerberg 的访谈。
+- **截至 2026-11-28 开放 7 个市场**：美国、加拿大、日本、新加坡、墨西哥、澳大利亚、英国。从 10 月下旬起大约两周增加一个。印度已出现卢比定价和等候名单，欧盟没有时间表。本币价格只有日本、新加坡、澳大利亚、印度有媒体或用户报道，英国上线时没有英镑价格。
+- **新功能分批放开。** 按「付费先于免费、美国先于其他市场」的顺序：电话代打至今仅限美国付费用户；Muse Mail 先给美加付费用户，10 天后对所有市场的免费用户开放；语音、Instagram 私信、各地连接器各有自己的地区范围。
+- **免费档的定价策略。** 外界把「免费档包含整套功能」看作 Muse 相对同类的最大优势（同类产品大多以 20 至 100 美元的订阅为前提）。Meta 的长期收费设想是交易抽成加重度用户订阅，见[商业与规模]({{< relref "/docs/muse/analysis/business" >}})。
 
-## 只要一个 Meta 账户，没有候补名单
+## 只要 Meta 账户和 18 岁，但帮助页仍写「有限测试」
 
-官方「开始使用」帮助页写明，使用 Muse 需要用 Meta 账户登录，应用和网页都可以（[帮助：开始使用]({{< relref "/docs/muse/sources/official/2026-09-08-help-get-started" >}})）。订阅帮助页列出的条件是：所在国家或地区已提供服务，年满 18 岁或达到当地成年年龄，用 Meta 账户登录（Meta 账户可以用 Facebook 或 Instagram 账户、邮箱或电话创建），并同意 Meta 订阅服务条款、Muse 补充服务条款和社区守则（[帮助：关于订阅]({{< relref "/docs/muse/sources/official/2026-09-08-help-about-subscriptions" >}})）。Engadget 的上手指南写明「你不需要 Facebook 或 Instagram 账户，但需要一个 Meta 账户」（[Engadget 上手]({{< relref "/docs/muse/sources/media/2026-09-12-engadget-getting-started-muse" >}})）。18 岁的年龄限制也见于 Connect 发布稿和 Muse Wonder 模型卡（[让你的 Muse 栩栩如生]({{< relref "/docs/muse/sources/official/2026-09-23-bringing-your-muse-to-life" >}})、[Muse Wonder 模型卡]({{< relref "/docs/muse/sources/official/2026-10-12-muse-wonder-model-card" >}})）。
-
-AI Agents Library 据官方页面整理称 Muse「没有候补名单，也不用购买」，在 muse.ai/join 用 Meta 账户登录即可（[AI Agents Library：Duet 对 Muse]({{< relref "/docs/industry/sources/community/2026-10-22-aiagentslibrary-duet-vs-muse" >}})）。
-
-有两篇第三方资料称免费档注册也需要支付卡：DataCamp 称「Muse 有免费档，但注册需要支付卡」（[DataCamp]({{< relref "/docs/industry/sources/media/2026-10-27-datacamp-dots-vs-muse" >}})），PROACTIVE 对比文称「连免费层也需要支付卡」（[PROACTIVE 对比]({{< relref "/docs/industry/sources/community/2026-11-03-proactive-ai-agents-compared" >}})）。官方帮助页没有这项要求，其他实测资料也没有提到，暂作待核实处理。
-
-有用户在非开放地区借助境外云浏览器或 VPN 注册成功；据 The Hindu，印度用户经 VPN 注册后账号在印度仍可用（[池中物：国内注册]({{< relref "/docs/muse/sources/community/2026-10-04-chizhongwu-china-registration" >}})、[印度定价]({{< relref "/docs/muse/sources/media/2026-11-09-india-pricing-ahead-of-launch" >}})）。这不代表官方支持。
+- 订阅帮助页列出的资格是：位于 Muse 已提供服务的国家或地区；年满 18 岁或达到当地成年年龄；用 Meta 账户登录；同意 Meta 订阅服务条款与 Muse 补充条款。订阅每月自动续订，在 muse.ai 和移动应用中购买，「权益和可用性可能因地区和账户而异」。该页还写明 Muse 和 Muse 订阅「正处于有限测试阶段，尚未在所有地区提供」（[帮助：关于订阅]({{< relref "/docs/muse/sources/official/2026-09-08-help-about-subscriptions" >}})、[帮助：订阅中心]({{< relref "/docs/muse/sources/official/2026-10-20-help-subscriptions-hub" >}})）。
+- 发布时的入口是 iOS、Android 和 muse.ai。之后陆续扩展到 WhatsApp、Mac、手表等，见[交互渠道]({{< relref "/docs/muse/analysis/channels" >}})。发布稿称「大部分功能免费」（[推出 Muse]({{< relref "/docs/muse/sources/official/2026-09-08-introducing-muse" >}})）。媒体实测普遍写的是「下载免费 App、创建免费账户」，没有候补名单（[NYT 实测]({{< relref "/docs/industry/sources/media/2026-10-25-nyt-five-killer-tasks" >}})、[AI Agents Library：Duet 与 Muse]({{< relref "/docs/industry/sources/community/2026-10-22-aiagentslibrary-duet-vs-muse" >}})）。
+- **免费档注册是否要支付卡，说法不一。** DataCamp 和 Pinggy 称免费档注册也需要支付卡（[Dots 与 Muse 横评]({{< relref "/docs/industry/sources/media/2026-10-27-datacamp-dots-vs-muse" >}})、[六款主动型智能体对比]({{< relref "/docs/industry/sources/community/2026-11-03-proactive-ai-agents-compared" >}})）。一位用户的注册实测显示，银行卡只是年龄验证的一种方式，与 Instagram、Facebook 并列可选；选银行卡时有 1 美元预授权，5 至 7 个工作日退回（[池中悟：国内注册实测]({{< relref "/docs/muse/sources/community/2026-10-04-chizhongwu-china-registration" >}})）。官方资料没有提到这一步。
+- **非开放地区的使用。** 有用户报告从未开放的地区也能注册，例如从中国借境外云浏览器（[池中悟：国内注册实测]({{< relref "/docs/muse/sources/community/2026-10-04-chizhongwu-china-registration" >}})），或在印度连上支持市场的 VPN，注册后不再经 VPN 也能用（[The Hindu]({{< relref "/docs/muse/sources/media/2026-11-09-india-pricing-ahead-of-launch" >}})）。这些都不代表官方支持。
 
 ## 免费档加两档订阅，按每周令牌计
 
-| 档位 | 价格 | 额度 | 出处 |
+| 档位 | 月费（美国） | 每周额度 | 出处 |
 | --- | --- | --- | --- |
-| Free | 0 | 有每周用量上限，官方未量化；用完后可升级或等待刷新 | [帮助：关于订阅]({{< relref "/docs/muse/sources/official/2026-09-08-help-about-subscriptions" >}}) |
-| Power | 每月 20 美元 | 每周 5 亿 Muse 令牌 | 同上 |
-| Maximum | 每月 100 美元 | 每周 30 亿 Muse 令牌 | 同上 |
-| 额外令牌 | 未见价格 | 帮助中心列有「如何购买额外的 Muse 令牌」 | [帮助：订阅目录]({{< relref "/docs/muse/sources/official/2026-10-20-help-subscriptions-hub" >}}) |
+| 免费 | 0 | 未公布；Zuckerberg 称上线时「每周最多 1 亿个令牌」 | [帮助：关于订阅]({{< relref "/docs/muse/sources/official/2026-09-08-help-about-subscriptions" >}})、[Sources 访谈]({{< relref "/docs/muse/sources/media/2026-09-08-sources-zuckerberg-on-muse" >}}) |
+| Power | 20 美元 | 5 亿 Muse 令牌 | [帮助：关于订阅]({{< relref "/docs/muse/sources/official/2026-09-08-help-about-subscriptions" >}}) |
+| Maximum | 100 美元 | 30 亿 Muse 令牌 | [帮助：关于订阅]({{< relref "/docs/muse/sources/official/2026-09-08-help-about-subscriptions" >}}) |
 
-订阅可以在移动应用或 muse.ai 购买，每月自动续订，扣款日与首次购买日相同。帮助页称 Muse 和 Muse 订阅「处于有限测试阶段，尚未在所有地区提供」，权益与可用性可能因地区和账户而异（[帮助：关于订阅]({{< relref "/docs/muse/sources/official/2026-09-08-help-about-subscriptions" >}})）。2026-10-22 第三方核对时，这一表述仍在（[AI Agents Library：Duet 对 Muse]({{< relref "/docs/industry/sources/community/2026-10-22-aiagentslibrary-duet-vs-muse" >}})）。发布当天，CNBC 引用 Wang 的说法：除免费档外，按用量提供每月 20 美元或 100 美元的订阅（[CNBC 发布报道]({{< relref "/docs/muse/sources/media/2026-09-08-cnbc-meta-pushes-into-personal-agents" >}})）。
+- 发布当天 Wang 对 CNBC 给出的就是「免费档，或按用量每月 20 美元或 100 美元」（[CNBC：Muse 发布报道]({{< relref "/docs/muse/sources/media/2026-09-08-cnbc-meta-pushes-into-personal-agents" >}})），此后的媒体报道都沿用这组价格，到 11 月底没有变化（[TechCrunch]({{< relref "/docs/muse/sources/media/2026-11-12-techcrunch-muse-phone-calls-paid" >}})、[Wonder 训练模型上线]({{< relref "/docs/muse/sources/community/2026-11-09-museexplained-wonder-trained-models-live" >}})）。英国版帮助页仍只列美元价，把顶级档写作「Max」，并附有每周令牌数和**每日电话数**（[Muse 英国上线核查]({{< relref "/docs/muse/sources/community/2026-11-25-muse-live-uk" >}})）。
+- **令牌口径不透明。** Meta 没有说明一个 Muse 令牌能换多少条消息、多少分钟浏览或多少次定时任务。用量页称没有固定用量保证固定产出（[六款智能体用量对照]({{< relref "/docs/industry/sources/media/2026-11-15-ai-agent-usage-limits-compared" >}})、[token 计价不透明]({{< relref "/docs/muse/sources/community/2026-10-27-muse-token-price" >}})、[20 美元四智能体对比]({{< relref "/docs/industry/sources/community/2026-11-22-four-agents-twenty-dollars" >}})）。社区作者按每月约 4.33 周换算：每 10 亿令牌约合 Power 9.20 美元、Maximum 7.70 美元。20 美元和 100 美元之间没有中间档，作者称之为「悬崖，而不是斜坡」（[token 计价不透明]({{< relref "/docs/muse/sources/community/2026-10-27-muse-token-price" >}})）。
+- **公开的用量记录只有个人报告：**
 
-**免费额度没有官方数字。** Sources 节目称「Muse 上线时每周免费提供最多 1 亿个令牌」（[Sources：Zuckerberg 谈 Muse]({{< relref "/docs/muse/sources/media/2026-09-08-sources-zuckerberg-on-muse" >}})）。DataCamp 写的是「据报道」（[DataCamp]({{< relref "/docs/industry/sources/media/2026-10-27-datacamp-dots-vs-muse" >}})），ZFinance 引用行业访谈纪要的说法相同（[ZFinance]({{< relref "/docs/industry/sources/media/2026-10-21-zfinance-qi-junyuan-today" >}})）。中金的测算注明免费额度「来自第三方 GetMuseHelp 报道，非官方数据」：中度使用的月消耗与免费额度基本接近，约为 Power 额度的 18%（[中金展望]({{< relref "/docs/industry/sources/community/2026-11-04-cicc-personal-agent-outlook" >}})）。Meta 也没有公布令牌与任务量的换算（[入门成本对比]({{< relref "/docs/industry/sources/community/2026-10-01-dots-muse-grok-bot-duet-costs" >}})）。
+  | 记录者 | 使用情况 | 消耗 |
+  | --- | --- | --- |
+  | Pat Simmons | 免费档，重度使用一周 | 51%（[Pat Simmons：三方对照]({{< relref "/docs/industry/sources/community/2026-10-06-pat-simmons-grok-muse-dots" >}})） |
+  | 村长 | 免费档，一周 | 82%（[Web3 村长：7 天自动化实测]({{< relref "/docs/muse/sources/community/2026-10-03-cunzhang-seven-day-automation" >}})） |
+  | PC Watch 作者 | 一个周六写代码 | 约 43%（[Muse 当 Zaurus 开发者]({{< relref "/docs/muse/sources/media/2026-11-19-pc-watch-muse-zaurus-developer" >}})） |
+  | EFTM（澳大利亚） | 上线前重度使用一周 | 27%（[澳大利亚上线实测]({{< relref "/docs/muse/sources/media/2026-11-18-muse-australia-hands-on" >}})） |
 
-用户报告的免费额度消耗差别很大，都是单人报告：Pat Simmons 重度使用加全部测试一周用掉 51%（[Pat Simmons 三方对比]({{< relref "/docs/industry/sources/community/2026-10-06-pat-simmons-grok-muse-dots" >}})）；有作者连续 7 天自动化用掉 82%（[村长：七天自动化]({{< relref "/docs/muse/sources/community/2026-10-03-cunzhang-seven-day-automation" >}})）；有讨论者称频繁用两三天「只用了百分之二三」（[聚 AI 讨论]({{< relref "/docs/muse/sources/community/2026-10-04-juai-muse-discussion" >}})）。
+  这些都是个人一次性的记录，测试方式各不相同，不能当作额度大小的证据。
+- **用完之后。** 帮助页写的是升级，或等免费用量刷新（[帮助：关于订阅]({{< relref "/docs/muse/sources/official/2026-09-08-help-about-subscriptions" >}})、[帮助：订阅中心]({{< relref "/docs/muse/sources/official/2026-10-20-help-subscriptions-hub" >}})）。帮助中心目录里有「如何购买额外的 Muse 令牌」的入口，但页面正文没有收入（[帮助：订阅中心]({{< relref "/docs/muse/sources/official/2026-10-20-help-subscriptions-hub" >}})）。iPhone 应用 12.0 版（2026-10-17）的 App Store 说明称用完可以再买令牌，测评作者没有买过，不知道价格（[Muse 评测核对]({{< relref "/docs/muse/sources/community/2026-11-02-muse-review-personalagentbench" >}})）。10-27 的价格分析则称触顶后没有充值，也没有按量付费（[token 计价不透明]({{< relref "/docs/muse/sources/community/2026-10-27-muse-token-price" >}})）。
+- **邀请码。** 多篇社区资料称：新用户注册后 48 小时内兑换邀请码，双方各得 10 亿令牌（[池中悟：国内注册实测]({{< relref "/docs/muse/sources/community/2026-10-04-chizhongwu-china-registration" >}})、[优哥跨境：五类任务实测]({{< relref "/docs/muse/sources/community/2026-10-09-ugoearn-five-task-types" >}})、[token 计价不透明]({{< relref "/docs/muse/sources/community/2026-10-27-muse-token-price" >}})、[AI问消：Agent 家谱与选购]({{< relref "/docs/industry/sources/community/2026-11-09-aiwenxiao-personal-agent-family-tree" >}})）。官方资料没有这个说法。
 
-**邀请码。** 中文社区资料称，新用户注册后 48 小时内可以兑换一个邀请码，邀请双方各得 10 亿令牌，超时后兑换入口消失；奖励到账后，在 Settings → General → Usage 中显示为额外令牌（[池中物：国内注册]({{< relref "/docs/muse/sources/community/2026-10-04-chizhongwu-china-registration" >}})、[五类任务实测]({{< relref "/docs/muse/sources/community/2026-10-09-ugoearn-five-task-types" >}})、[智消前沿：家谱]({{< relref "/docs/industry/sources/community/2026-11-09-aiwenxiao-personal-agent-family-tree" >}})）。官方资料中没有找到邀请机制的说明。一份社交平台统计称，各产品用户中最高的诉求是邀请码（566 个用户周），其次是更高的用量上限（465 个）（[用户偏好统计]({{< relref "/docs/industry/sources/community/2026-11-03-personal-ai-agents-users-prefer" >}})）。这两个数字是 12 款产品的合计，不是 Muse 单独的数字。
+推断：价格十一周没变，但开放地区和功能一直在扩大。从这一点看，Meta 调节成本靠的是不公开的免费额度和功能分批开放，不是调价。依据是帮助页始终不写免费额度，而且写明「权益因地区和账户而异」。
 
-**Muse Code 与 API 另行计价。** 据日经相关报道援引 CNBC 10 月 12 日的报道，含 Muse Wonder 的 Muse 计划为每月 20 或 100 美元，含 Muse Wonder Full 的 Muse Code 计划为每月 50 或 200 美元，Meta Model API 费用高于标准订阅（[日经：日本不投广告]({{< relref "/docs/muse/sources/media/2026-10-24-meta-muse-japan-no-ads-nikkei" >}})）。官方发布稿只写 Muse Wonder Full 面向 Muse Code 订阅用户（[推出 Muse Wonder]({{< relref "/docs/muse/sources/official/2026-10-12-introducing-muse-wonder-models" >}})），没有写价格。DataCamp 10 月下旬称 Muse 没有 API（[DataCamp]({{< relref "/docs/industry/sources/media/2026-10-27-datacamp-dots-vs-muse" >}})），说法与此不同，可能是两者对「API」所指的对象不同。模型本身见[模型]({{< relref "/docs/muse/analysis/models" >}})。
+## 七个市场，约两周一个
 
-## 五个市场，按国家逐个开放
+| 顺序 | 市场 | 上线日期 | 依据 | 本币价格（均非 Meta 官方价目） |
+| --- | --- | --- | --- | --- |
+| 1 | 美国 | 2026-09-08 | [推出 Muse]({{< relref "/docs/muse/sources/official/2026-09-08-introducing-muse" >}}) | Power 20 美元、Maximum 100 美元（[帮助：关于订阅]({{< relref "/docs/muse/sources/official/2026-09-08-help-about-subscriptions" >}})） |
+| 2 | 加拿大 | 2026-09-18 | [Muse 四市场超 ChatGPT]({{< relref "/docs/muse/sources/media/2026-10-28-allthingsmuse-app-store-four-markets" >}})、[Muse 登陆澳大利亚]({{< relref "/docs/muse/sources/media/2026-11-17-muse-launches-australia" >}}) | 未见 |
+| 3 | 日本 | 2026-10-23（日本时间） | [日本上线]({{< relref "/docs/muse/sources/official/2026-10-23-japan-launch" >}}) | 网页 2,799 / 13,990 日元；应用内购 3,499 / 16,990 日元（[ITmedia]({{< relref "/docs/muse/sources/media/2026-11-22-itmedia-muse-explainer" >}})、[免费与付费之差]({{< relref "/docs/muse/sources/community/2026-11-19-emma-muse-free-vs-paid" >}})） |
+| 4 | 新加坡 | 2026-10-27 | [新加坡上线]({{< relref "/docs/muse/sources/official/2026-10-27-singapore-launch" >}}) | 22 至 139 新元，未对应到档位（[海峡时报]({{< relref "/docs/muse/sources/media/2026-10-28-straits-times-muse-singapore" >}})） |
+| 5 | 墨西哥 | 2026-11-05 | [推出 Muse]({{< relref "/docs/muse/sources/official/2026-09-08-introducing-muse" >}})（西语版更新）、[墨西哥上线]({{< relref "/docs/muse/sources/media/2026-11-05-muse-launches-mexico" >}}) | 未见 |
+| 6 | 澳大利亚 | 2026-11-17 | [Muse 上线澳大利亚]({{< relref "/docs/muse/sources/official/2026-11-17-muse-available-australia" >}}) | 31 / 149 澳元，出自 EFTM（[Muse 登陆澳大利亚]({{< relref "/docs/muse/sources/media/2026-11-17-muse-launches-australia" >}})、[澳大利亚上线实测]({{< relref "/docs/muse/sources/media/2026-11-18-muse-australia-hands-on" >}})） |
+| 7 | 英国 | 2026-11-24 | [Muse 登陆英国]({{< relref "/docs/muse/sources/official/2026-11-24-introducing-muse-in-the-uk" >}}) | 未公布英镑价（[Muse 英国上线核查]({{< relref "/docs/muse/sources/community/2026-11-25-muse-live-uk" >}})） |
 
-| 日期 | 事件 | 资料 |
+- 上线首月只有美国和加拿大。日本是北美以外的第一个市场。从 10 月下旬起，大致每两周增加一个新市场（[Muse 登陆澳大利亚]({{< relref "/docs/muse/sources/media/2026-11-17-muse-launches-australia" >}})、[英国第七个市场]({{< relref "/docs/muse/sources/media/2026-11-24-muse-launches-uk" >}})）。各国上线通常同时公布一批本地连接器伙伴，例如英国点名了 15 个品牌（[Muse 登陆英国]({{< relref "/docs/muse/sources/official/2026-11-24-introducing-muse-in-the-uk" >}})、[Muse 英国上线核查]({{< relref "/docs/muse/sources/community/2026-11-25-muse-live-uk" >}})）。
+- **日本价格。** 11-13 的核查称有两套相互矛盾的日元价格，Meta 都没有确认（[日本连接器 11-12 核查]({{< relref "/docs/muse/sources/community/2026-11-13-japan-november-12-check" >}})）。11-19 有用户在应用升级界面看到 2,799 和 13,990 日元（[免费与付费之差]({{< relref "/docs/muse/sources/community/2026-11-19-emma-muse-free-vs-paid" >}})）。ITmedia 11-22 说明了两套价格的来历：网页购买是 2,799 和 13,990 日元，iOS、Android 应用内购是 3,499 和 16,990 日元（[ITmedia 入门解说]({{< relref "/docs/muse/sources/media/2026-11-22-itmedia-muse-explainer" >}})）。
+  - 推断：两套价格很可能是两个购买渠道的价格，并不矛盾。
+- **印度。** The Hindu 11-09 查证，Power 定价 ₹1,799、Maximum ₹8,999，经应用商店购买略贵；用户在等候名单上；消息源未披露，Meta 未回应（[印度订阅价已定]({{< relref "/docs/muse/sources/media/2026-11-09-india-pricing-ahead-of-launch" >}})）。另有社区资料转述 Economic Times、Livemint 的片段，称 Meta 印度负责人说 2027 年初进入印度（[电话代打台账]({{< relref "/docs/muse/sources/community/2026-11-14-muse-phone-calls-paid-rollout" >}})）。
+- **欧盟。** 截至 11-28 没有日期。DataDome 转述 Q3 财报电话会：Zuckerberg 称 Muse「尚未全球上线」，原因在于所需算力；英国、欧盟耗时更长，因为 Muse 处理的个人数据更多（[Muse 全球五国流量]({{< relref "/docs/muse/sources/community/2026-11-12-muse-goes-global-five-countries" >}})）。另一障碍据 The Next Web 转述：智能体批准的支付拿不到强客户认证（SCA）豁免（[Muse 101：智能体商务]({{< relref "/docs/muse/sources/community/2026-11-04-muse-101-agentic-commerce" >}})）。英国上线前后的监管交涉见[隐私]({{< relref "/docs/muse/analysis/privacy" >}})。
+- **中文地区。** 没有上线，但网页和安卓包的简体中文界面已经翻译了约 89%（[雷峰网]({{< relref "/docs/muse/sources/media/2026-10-23-leiphone-muse-openclaw-lineage" >}})、[OpenClaw 同源拆解]({{< relref "/docs/muse/sources/community/2026-11-04-muse-openclaw-teardown" >}})）。
+
+## 哪些功能只给付费用户或部分市场
+
+帮助页没有列出按档位解锁的功能（[六款智能体用量对照]({{< relref "/docs/industry/sources/media/2026-11-15-ai-agent-usage-limits-compared" >}})、[免费与付费之差]({{< relref "/docs/muse/sources/community/2026-11-19-emma-muse-free-vs-paid" >}})）。不过，单个功能的开放公告常常限定档位和地区：
+
+| 功能 | 开放范围与变化 | 出处 |
 | --- | --- | --- |
-| 2026-09-08 | 美国上线，iOS、Android、muse.ai；发布稿称「在人们所需的大部分功能上是免费的」 | [推出 Muse]({{< relref "/docs/muse/sources/official/2026-09-08-introducing-muse" >}}) |
-| 2026-09-18 | 加拿大上线 | [墨西哥上线]({{< relref "/docs/muse/sources/media/2026-11-05-muse-launches-mexico" >}})、[入门成本对比]({{< relref "/docs/industry/sources/community/2026-10-01-dots-muse-grok-bot-duet-costs" >}}) |
-| 2026-10-23 | 日本上线，官方称是「继北美之后」第一个地区 | [日本上线]({{< relref "/docs/muse/sources/official/2026-10-23-japan-launch" >}}) |
-| 2026-10-27 | 新加坡上线；当地订阅价 22 至 139 新元 | [新加坡上线]({{< relref "/docs/muse/sources/official/2026-10-27-singapore-launch" >}})、[海峡时报]({{< relref "/docs/muse/sources/media/2026-10-28-straits-times-muse-singapore" >}}) |
-| 2026-11-05 | 墨西哥上线：第五个市场，拉美和西语地区的第一个；iOS、Android、muse.ai、WhatsApp，18 岁以上，免费版加可选订阅 | [墨西哥上线]({{< relref "/docs/muse/sources/media/2026-11-05-muse-launches-mexico" >}}) |
-| 2026-11-09 | 印度订阅价曝光：Power ₹1,799、Maximum ₹8,999，经 Google Play、Apple 购买略贵；印度用户仍在等候名单上 | [印度定价]({{< relref "/docs/muse/sources/media/2026-11-09-india-pricing-ahead-of-launch" >}}) |
-| 2026-11-09 | The Times 称 Meta 准备在数周内于英国推出 Muse，「对大多数人免费」 | [泰晤士报：英国]({{< relref "/docs/muse/sources/media/2026-11-09-times-muse-uk-launch" >}}) |
-| 2026-11-12 | 据社区台账转述《经济时报》、Livemint 对 Meta 印度负责人 Arun Srinivas 的采访，Muse 将于 2027 年初进入印度；作者只读到片段，没有 Meta 的一手确认和确切日期 | [电话代打台账]({{< relref "/docs/muse/sources/community/2026-11-14-muse-phone-calls-paid-rollout" >}}) |
+| 电话代打（向商家拨号） | 9 月起候补名单测试；2026-11-12 起向美国付费用户开放，只能拨打美国商家；日本付费用户也不能用 | [Muse 对外拨号开放]({{< relref "/docs/muse/sources/media/2026-11-12-allthingsmuse-outbound-calling-paid" >}})、[Muse 电话代打上线]({{< relref "/docs/muse/sources/media/2026-11-12-techcrunch-muse-phone-calls-paid" >}})、[免费与付费之差]({{< relref "/docs/muse/sources/community/2026-11-19-emma-muse-free-vs-paid" >}}) |
+| Muse Mail（@muse.ai 邮箱） | 11-10 先向美加付费用户开放；11-20 官方 X 账号称向所有支持市场开放，包括免费档 | [Muse Mail 付费开放]({{< relref "/docs/muse/sources/media/2026-11-10-muse-mail-paid-subscribers" >}})、[Muse Mail 全面开放]({{< relref "/docs/muse/sources/media/2026-11-21-muse-mail-rolls-out-to-everyone" >}})、[Moka 的 Muse 邮箱]({{< relref "/docs/muse/sources/community/2026-11-21-moka-muse-mail-address" >}}) |
+| 实时语音与化身 | 11-05 美国；11-18 加拿大；澳大利亚、英国随上线提供 | [语音化身设计分析]({{< relref "/docs/muse/sources/community/2026-11-18-voice-avatar-design" >}})、[Loblaw 接入 Muse]({{< relref "/docs/muse/sources/official/2026-11-18-loblaw-first-canadian-retail-partner" >}})、[Muse 登陆澳大利亚]({{< relref "/docs/muse/sources/media/2026-11-17-muse-launches-australia" >}}) |
+| Instagram 私信里的 Muse | 11-24 起在美、加、墨、日、新五国逐步推出，不含澳大利亚、英国 | [Muse 进 Instagram 私信]({{< relref "/docs/muse/sources/media/2026-11-24-techcrunch-muse-instagram-dms" >}})、[Instagram 私信 Muse]({{< relref "/docs/muse/sources/community/2026-11-25-emma-instagram-dm" >}}) |
+| Home Link（智能家居配件） | 凭有效 Muse 订阅免费领取，仅限美国，每人一台，有候补名单（据 The Verge） | [智能家居接入]({{< relref "/docs/muse/sources/community/2026-11-20-muse-smart-home-tuya-skill" >}}) |
+| 付费档使用的模型 | 日本升级界面上，两档付费都写着「由 Muse Wonder 运行」；官方研究博客说向 Muse 推送的是用 Wonder 训练的特化模型，两者口径不一 | [免费与付费之差]({{< relref "/docs/muse/sources/community/2026-11-19-emma-muse-free-vs-paid" >}})，见[模型]({{< relref "/docs/muse/analysis/models" >}}) |
+| 地区连接器 | 沃尔玛、Sweetgreen 等美国服务在日本账户里不可用 | [连接器新增 29 件]({{< relref "/docs/muse/sources/community/2026-11-22-emma-connectors-29-added" >}}) |
 
-截至 2026-11-05，英国、欧盟和拉美其他地区都没有公布日期（[墨西哥上线]({{< relref "/docs/muse/sources/media/2026-11-05-muse-launches-mexico" >}})）。有第三方资料称，Meta 不公布完整的国家清单（[入门成本对比]({{< relref "/docs/industry/sources/community/2026-10-01-dots-muse-grok-bot-duet-costs" >}})）。印度稿只列了美国、加拿大、日本、新加坡四地提供免费档，不含墨西哥；同期的手表报道则称 Muse 已在五个市场提供（[手表报道]({{< relref "/docs/muse/sources/media/2026-11-09-muse-apple-watch-wear-os" >}})）。两者口径不同，原因不明。
+- Engadget 称付费订阅「附带额外的 token 和一些额外功能」（[Muse 代打电话细节]({{< relref "/docs/muse/sources/media/2026-11-12-engadget-muse-phone-calls-paid" >}})）。从上表看，这些「额外功能」目前主要是电话代打，以及一段时间内的 Muse Mail。
+- 购物本身不走订阅：在沃尔玛下单，扣的是沃尔玛账户里保存的卡（[沃尔玛网关购物核查]({{< relref "/docs/muse/sources/community/2026-11-23-muse-walmart-agent-gateway" >}})）。Muse 代为下单的责任与保障条款见[安全]({{< relref "/docs/muse/analysis/security" >}})。
+- Chrome 扩展、Spaces、Poppy 的套餐要求和价格都没有公布（[Muse 的两个浏览器]({{< relref "/docs/muse/sources/community/2026-11-25-muse-two-browsers" >}})、[Spaces：从对话到居所]({{< relref "/docs/muse/sources/community/2026-11-14-spaces-describe-once-keep-it" >}})、[Poppy 1.0 落地核查]({{< relref "/docs/muse/sources/community/2026-11-14-poppy-first-sierra-ledger" >}})）。
 
-本地化有两方面的资料。其一是本地支付：据 The Hindu，印度暂不支持用户授权 Muse 代为刷卡，因为这项能力依赖的支付处理商不在印度运营（[印度定价]({{< relref "/docs/muse/sources/media/2026-11-09-india-pricing-ahead-of-launch" >}})）。其二是语言：对网页和安卓安装包的静态分析显示，简体中文界面文案约九成已译好，但 Muse 尚未在中文地区上线（[雷峰网：OpenClaw 渊源]({{< relref "/docs/muse/sources/media/2026-10-23-leiphone-muse-openclaw-lineage" >}})）。墨西哥等地的本地连接器见[连接器]({{< relref "/docs/muse/analysis/connectors" >}})。
+推断：「先付费、先美国」的节奏覆盖了电话、邮箱、Home Link 等成本较高或需要本地落地的功能。Muse Mail 从付费到全员只用了 10 天。从这一点看，付费先行更像控制开放节奏的办法，不是长期的档位区分。
 
-**过时的地区说法。** DataCamp、PROACTIVE、Freistyle 等第三方资料在 10 月下旬至 11 月仍写「仅限美国」，Engadget、TOP5、涂鸦 2026-11-12 的稿件写「美国和加拿大」（[DataCamp]({{< relref "/docs/industry/sources/media/2026-10-27-datacamp-dots-vs-muse" >}})、[Engadget：Dot 对 Muse]({{< relref "/docs/industry/sources/media/2026-10-11-engadget-dot-vs-muse" >}})、[涂鸦技能]({{< relref "/docs/muse/sources/community/2026-11-12-tuya-cloud-devices-skill" >}})）。以官方各地上线稿为准。
+## 与同类产品相比，免费档是主要差异
 
-据媒体转述，开放慢的原因是算力：Meta 称算力密集是最大的制约之一，也是 Muse 尚未在全球推出的原因（[Muse 101]({{< relref "/docs/muse/sources/community/2026-11-04-muse-101-agentic-commerce" >}})）。一份社交平台统计中，Muse 在「为智能体付费」一项排第一，在「国家可用性」一项垫底；欧盟可用的诉求有 397 个用户周（各产品合计）（[用户偏好统计]({{< relref "/docs/industry/sources/community/2026-11-03-personal-ai-agents-users-prefer" >}})）。
+- 多篇比较文章都把 Muse 列为唯一能免费起步、免费档包含全部功能的产品。Dots 需要 ChatGPT Pro（每月 100 美元起），Grok Bot 每月 30 美元起，Claude Duet 包含在 Pro、Max 订阅中（[Tom's Guide：Muse 与 Dots]({{< relref "/docs/industry/sources/media/2026-09-30-tomsguide-muse-vs-dots" >}})、[四款智能体入门成本]({{< relref "/docs/industry/sources/community/2026-10-01-dots-muse-grok-bot-duet-costs" >}})、[六款智能体用量对照]({{< relref "/docs/industry/sources/media/2026-11-15-ai-agent-usage-limits-compared" >}})、[AI问消：Agent 家谱与选购]({{< relref "/docs/industry/sources/community/2026-11-09-aiwenxiao-personal-agent-family-tree" >}})）。IM28 的作者认为，每天按计划工作、连接邮件和日历的智能体选 Muse，理由是免费档包含整套功能（[六款智能体用量对照]({{< relref "/docs/industry/sources/media/2026-11-15-ai-agent-usage-limits-compared" >}})）。
+- 付费档的价位与同行相同：Maximum 每月 100 美元，与 ChatGPT Pro 100、Claude Max 一样是每年 1,200 美元。不同的是，Muse 是「唯一不按消息配给的二十美元」（[20 美元四智能体对比]({{< relref "/docs/industry/sources/community/2026-11-22-four-agents-twenty-dollars" >}})，作者没有做一手实测）。
+- 一项统计用户帖子的对照中，Muse「为智能体付费」一项排第 1，「国家可用性」一项垫底（[12 款个人智能体用户排名]({{< relref "/docs/industry/sources/community/2026-11-03-personal-ai-agents-users-prefer" >}})）。
+- 同名的其他产品有各自的价目表，不能混淆：
+  - Muse Code（终端编程代理）有 Everyday 5、High 15、Power 50、Maximum 200 美元四档，不增加消费级 Muse 的额度（[token 计价不透明]({{< relref "/docs/muse/sources/community/2026-10-27-muse-token-price" >}})，二手）；CNBC 经 FourWeekMBA 转引的是「每月 50 或 200 美元」（[Muse 将一直无广告]({{< relref "/docs/muse/sources/media/2026-10-24-meta-muse-japan-no-ads-nikkei" >}})）。
+  - Meta Model API 按令牌计费（[Muse 将一直无广告]({{< relref "/docs/muse/sources/media/2026-10-24-meta-muse-japan-no-ads-nikkei" >}})、[Meta Muse 开源吗]({{< relref "/docs/muse/sources/community/2026-11-05-is-meta-muse-open-source" >}})）。
+- 厂商的说法：Zuckerberg 称 Muse 最终靠从交易中抽取小部分费用、加上重度用户的付费订阅来实现收支平衡（[Sources：Zuckerberg 谈 Muse]({{< relref "/docs/muse/sources/media/2026-09-08-sources-zuckerberg-on-muse" >}})）；据 Nikkei 经 FourWeekMBA 转述，Meta 称 Muse 将保持无广告（[Muse 将一直无广告]({{< relref "/docs/muse/sources/media/2026-10-24-meta-muse-japan-no-ads-nikkei" >}})）。
 
-## 哪些功能要付费
+## 相互矛盾的说法
 
-| 功能 | 开放对象 | 时间 | 资料 |
-| --- | --- | --- | --- |
-| Muse Wonder 模型 | 「首先面向订阅用户」 | 2026-10-12 公布 | [推出 Muse Wonder]({{< relref "/docs/muse/sources/official/2026-10-12-introducing-muse-wonder-models" >}}) |
-| Home Link 家居硬件 | 仅限美国，随有效 Muse 订阅附赠，每位订阅用户限领一个 | 2026-11-04 | [Home Link]({{< relref "/docs/muse/sources/official/2026-11-04-muse-home-link" >}}) |
-| 语音模式、视频聊天 | 美国所有用户，Free、Power、Maximum 一样；Meta 没有说明计划要求和每分钟费用 | 2026-11-05 起 | [打开语音模式]({{< relref "/docs/muse/sources/community/2026-11-06-how-to-turn-on-muse-voice-mode" >}})、[视频聊天]({{< relref "/docs/muse/sources/media/2026-11-05-muse-video-chat-avatar" >}}) |
-| Spaces | 全部 Muse 用户，「凡是提供 Muse 的地方」 | 2026-11-06 | [Spaces 演示]({{< relref "/docs/muse/sources/media/2026-11-06-muse-spaces-demos" >}}) |
-| Muse Mail | 先向美国、加拿大付费订阅用户开放；11-11 Wang 称很快向所有人开放，「including free plans」，没有给日期 | 2026-11-10 / 11-11 | [Muse Mail 付费用户]({{< relref "/docs/muse/sources/media/2026-11-10-muse-mail-paid-subscribers" >}})、[免费档即将开放]({{< relref "/docs/muse/sources/media/2026-11-11-muse-mail-free-plans-soon" >}}) |
-| 给商家打电话 | 测试期先给主动向 Muse 要求的用户；正式开放后仅限美国付费订阅用户 | 2026-09-16 测试 / 2026-11-12 | [TechCrunch：Instinct 与 Muse 都能打电话]({{< relref "/docs/industry/sources/media/2026-09-17-techcrunch-instinct-muse-phone-calls" >}})、[TechCrunch：付费可打电话]({{< relref "/docs/muse/sources/media/2026-11-12-techcrunch-muse-phone-calls-paid" >}}) |
-| 手表应用 | 不额外收费（据 The Gadgeteer）；用量如何计入令牌额度未说明 | 2026-11-09 | [手表核查]({{< relref "/docs/muse/sources/community/2026-11-12-muse-on-apple-watch-wear-os" >}}) |
-| Poppy | Sierra 称对「所有 Muse 用户」开启；两份官方稿都没有提开关、套餐要求或价格 | 2026-11-13 | [Poppy 落地核查]({{< relref "/docs/muse/sources/community/2026-11-14-poppy-first-sierra-ledger" >}}) |
-| AI 眼镜 Beta | Muse 免费但有用量限制；Beta 参与者获得额外用量，不可转让，Beta 结束时未兑换的优惠失效 | 2026-10-27 | [帮助：眼镜 Beta]({{< relref "/docs/muse/sources/official/2026-10-27-help-glasses-beta" >}}) |
-
-商家电话正式开放时没有新设档位或单次附加价，也没有说明长时间等候如何计入每周令牌；开放范围只限美国订阅用户打给美国商家，比 App 本身的开放地区小（[电话代打台账]({{< relref "/docs/muse/sources/community/2026-11-14-muse-phone-calls-paid-rollout" >}})）。日本的日元订阅价在发布报道和应用截图中出现过两套互相矛盾的数字，Meta 都没有确认（[日本 11-12 核查]({{< relref "/docs/muse/sources/community/2026-11-13-japan-november-12-check" >}})）。Spaces 公告没有说明价格和用量限制（[Spaces 分档分析]({{< relref "/docs/muse/sources/community/2026-11-14-spaces-describe-once-keep-it" >}})）。
-
-语音模式是否从同一份每周额度中扣除，Meta 的订阅页没有说明；有作者假定从同一份额度扣除（[打开语音模式]({{< relref "/docs/muse/sources/community/2026-11-06-how-to-turn-on-muse-voice-mode" >}})）。各渠道和设备见[交互渠道]({{< relref "/docs/muse/analysis/channels" >}})、[设备]({{< relref "/docs/muse/analysis/devices" >}})。
-
-推断：从上表看，Meta 收费的依据是额度和新能力，基础的交互方式不收费。消耗最大的新模型、新渠道（邮件、电话）和硬件先给付费用户，语音、视频、Spaces 这类提高日常使用频率的功能则对所有人开放。这与 Zuckerberg 在财报会上「先建立 Muse 网络」的说法一致（见下节）。
-
-## 「免费起步」的策略与外界评价
-
-Zuckerberg 在 Sources 节目中称，Muse 在「大量令牌」范围内免费，最终靠从交易中抽取少量费用实现收支平衡，同时为重度用户提供付费订阅（[Sources：Zuckerberg 谈 Muse]({{< relref "/docs/muse/sources/media/2026-09-08-sources-zuckerberg-on-muse" >}})）。据 36 氪转述财报电话会，Zuckerberg 称没有一开始就向所有人收费，原因之一是希望先建立 Muse 网络；36 氪还称 Muse 将坚持不放广告，普通用户免费，高阶功能与企业服务收费（[36 氪：Muse 时刻]({{< relref "/docs/muse/sources/media/2026-10-27-36kr-muse-moment" >}})）。交易抽佣、用户规模等内容见[商业与规模]({{< relref "/docs/muse/analysis/business" >}})。
-
-与其他跟踪产品的入门价格对比，截至 2026-11 的第三方资料如下：
-
-| 产品 | 入门价格 | 资料 |
-| --- | --- | --- |
-| Muse | 免费；Power 每月 20 美元、Maximum 每月 100 美元 | [Tom's Guide：Muse 对 Dots]({{< relref "/docs/industry/sources/media/2026-09-30-tomsguide-muse-vs-dots" >}}) |
-| OpenAI Dots | 个人需 ChatGPT Pro，每月 100 美元起；Business Premium 每用户每月 125 美元 | 同上 |
-| Grok Bot | 新客户每月 30 美元；Pat Simmons 写每月 20 美元，口径不同 | [入门成本对比]({{< relref "/docs/industry/sources/community/2026-10-01-dots-muse-grok-bot-duet-costs" >}})、[Pat Simmons 三方对比]({{< relref "/docs/industry/sources/community/2026-10-06-pat-simmons-grok-muse-dots" >}}) |
-| Claude Duet | 含在 Claude Pro（每月 20 美元）中，美国候补名单 | [入门成本对比]({{< relref "/docs/industry/sources/community/2026-10-01-dots-muse-grok-bot-duet-costs" >}}) |
-
-NYT 的结论是，考虑价格与能力，选 Muse「是显而易见的选择」；同文引述 OpenAI 的说法，Dots 在付费用户测试后最终也会免费（[NYT：五个杀手级任务]({{< relref "/docs/industry/sources/media/2026-10-25-nyt-five-killer-tasks" >}})）。Wired 称 Muse 免费，是最容易设置的一款（[Wired：主要 AI 智能体]({{< relref "/docs/industry/sources/media/2026-10-27-wired-every-major-ai-agent" >}})）。中文社区把 Muse 称为「四个里唯一免费起步的」（[智消前沿：家谱]({{< relref "/docs/industry/sources/community/2026-11-09-aiwenxiao-personal-agent-family-tree" >}})）。另有社群观点认为，免费服务要靠厂商长期承担算力成本才可持续，而 Muse 已经免费，短期内靠消费级订阅增长「难度很大」（[海外独角兽讨论]({{< relref "/docs/industry/sources/community/2026-10-23-haiwaidujiaoshou-discussion" >}})）。
-
-推断：Muse 的定价与开放形成了一对取舍。免费起步和无候补名单降低了单个用户的门槛，代价是算力，这也是官方解释开放慢的理由。所以 Muse 一方面在已开放地区门槛最低，另一方面在地区覆盖上落后于 Dots（Dots 只排除 EEA、英国、瑞士）。这一推断依据的是官方关于算力制约的说法和地区时间线，没有资料直接把两者联系起来。
+- **上线日期相差一天。** 原因是时区和页面元数据：
+  - 日本：10-22（美国时间，[Muse 四市场超 ChatGPT]({{< relref "/docs/muse/sources/media/2026-10-28-allthingsmuse-app-store-four-markets" >}})）与 10-23（[日本上线]({{< relref "/docs/muse/sources/official/2026-10-23-japan-launch" >}})）；
+  - 新加坡：10-27（官方页面日期，[新加坡上线]({{< relref "/docs/muse/sources/official/2026-10-27-singapore-launch" >}})）与 10-28（[Muse 四市场超 ChatGPT]({{< relref "/docs/muse/sources/media/2026-10-28-allthingsmuse-app-store-four-markets" >}})、[新加坡上线报道]({{< relref "/docs/muse/sources/media/2026-10-28-straits-times-muse-singapore" >}})）；
+  - 英国：Meta 文章标 11-23，卫报、POLITICO、BBC 报 11-24（[Muse 英国上线核查]({{< relref "/docs/muse/sources/community/2026-11-25-muse-live-uk" >}})）。
+- **开放范围的说法过时。** 这些资料写于其他市场上线之后，仍称 Muse「仅限美国」或「仅美加」：[巨头押注个人智能体]({{< relref "/docs/industry/sources/media/2026-11-08-china-newsweek-personal-agents" >}})（11-08）、[涂鸦新闻稿]({{< relref "/docs/muse/sources/community/2026-11-12-tuya-cloud-devices-skill" >}})（11-12）、[六款主动型智能体对比]({{< relref "/docs/industry/sources/community/2026-11-03-proactive-ai-agents-compared" >}})、[六款智能体对比]({{< relref "/docs/industry/sources/community/2026-11-05-ai-agents-compared-small-business" >}})。马恩岛信息专员 11-27 的博客只列了美国、加拿大、新加坡、澳大利亚（[信息专员谈代理式 AI]({{< relref "/docs/muse/sources/community/2026-11-27-isle-of-man-commissioner-agentic-ai" >}})）。
+- **其他尚无定论的冲突：** 能否加购令牌（[Muse 评测核对]({{< relref "/docs/muse/sources/community/2026-11-02-muse-review-personalagentbench" >}}) 与 [token 计价不透明]({{< relref "/docs/muse/sources/community/2026-10-27-muse-token-price" >}})）；免费档是否必须绑卡（[Dots 与 Muse 横评]({{< relref "/docs/industry/sources/media/2026-10-27-datacamp-dots-vs-muse" >}}) 与 [池中悟：国内注册实测]({{< relref "/docs/muse/sources/community/2026-10-04-chizhongwu-china-registration" >}})）；Muse Code 的价格档位（[token 计价不透明]({{< relref "/docs/muse/sources/community/2026-10-27-muse-token-price" >}}) 与 [Muse 将一直无广告]({{< relref "/docs/muse/sources/media/2026-10-24-meta-muse-japan-no-ads-nikkei" >}})）。
 
 ## 资料缺口
 
-- 免费档每周额度的官方数字；是否随地区、账户、时间调整（帮助页称「因地区和账户而异」）。
-- 免费档注册是否需要支付卡（DataCamp、PROACTIVE 称需要，官方资料未见）。
-- 额外令牌的价格与购买方式（帮助中心目录列有入口，正文未收）。
-- 日本、墨西哥的本币价格；新加坡 22 至 139 新元对应哪几档；印度是否最终定价、何时上线。
-- 邀请码机制（48 小时、各得 10 亿令牌）的官方出处。
-- Muse Code 每月 50 或 200 美元的价格只有 CNBC 转引，没有官方页面；Meta Model API 的价格。
-- 英国上线的官方确认；欧盟的开放计划。
-- 语音、视频聊天消耗的是否为同一份每周额度。
+- 免费档每周额度的官方数字，以及额度是否因地区、账户或时间调整。
+- 额外令牌的购买方式和价格（帮助中心的那一页没有收入）。
+- 加拿大、墨西哥、英国的本币价格；新加坡 22 至 139 新元对应哪几档；澳大利亚价格的官方出处。
+- 英国版帮助页列出的每日电话数，以及它是否适用于美国。
+- 邀请码机制的官方出处。
+- 印度上线日期的一手说法；欧盟的开放计划。
+- Muse Code、Meta Model API 的官方价目页。
+- Chrome 扩展、Spaces、语音是否计入同一份每周额度，有没有档位限制。
+- 免费档注册时银行卡验证是否必选。
 
 ## 主要资料
 
-- 官方：[帮助：关于订阅]({{< relref "/docs/muse/sources/official/2026-09-08-help-about-subscriptions" >}})（档位、额度、条件）；[帮助：订阅目录]({{< relref "/docs/muse/sources/official/2026-10-20-help-subscriptions-hub" >}})（额外令牌入口）；[推出 Muse]({{< relref "/docs/muse/sources/official/2026-09-08-introducing-muse" >}})、[日本上线]({{< relref "/docs/muse/sources/official/2026-10-23-japan-launch" >}})、[新加坡上线]({{< relref "/docs/muse/sources/official/2026-10-27-singapore-launch" >}})（地区）；[推出 Muse Wonder]({{< relref "/docs/muse/sources/official/2026-10-12-introducing-muse-wonder-models" >}})、[Home Link]({{< relref "/docs/muse/sources/official/2026-11-04-muse-home-link" >}})（订阅权益）。
-- 媒体：[Sources：Zuckerberg 谈 Muse]({{< relref "/docs/muse/sources/media/2026-09-08-sources-zuckerberg-on-muse" >}})（免费额度、收费思路）；[海峡时报]({{< relref "/docs/muse/sources/media/2026-10-28-straits-times-muse-singapore" >}})、[印度定价]({{< relref "/docs/muse/sources/media/2026-11-09-india-pricing-ahead-of-launch" >}})（本币价格）；[TechCrunch：付费可打电话]({{< relref "/docs/muse/sources/media/2026-11-12-techcrunch-muse-phone-calls-paid" >}})（通话仅限付费）；[墨西哥上线]({{< relref "/docs/muse/sources/media/2026-11-05-muse-launches-mexico" >}})（开放顺序）；[日经：日本不投广告]({{< relref "/docs/muse/sources/media/2026-10-24-meta-muse-japan-no-ads-nikkei" >}})（Muse Code 价格）；[Tom's Guide：Muse 对 Dots]({{< relref "/docs/industry/sources/media/2026-09-30-tomsguide-muse-vs-dots" >}})（价格对比）。
-- 社区：[入门成本对比]({{< relref "/docs/industry/sources/community/2026-10-01-dots-muse-grok-bot-duet-costs" >}})、[AI Agents Library：Duet 对 Muse]({{< relref "/docs/industry/sources/community/2026-10-22-aiagentslibrary-duet-vs-muse" >}})（据官方页面整理）；[池中物：国内注册]({{< relref "/docs/muse/sources/community/2026-10-04-chizhongwu-china-registration" >}})（邀请码）；[用户偏好统计]({{< relref "/docs/industry/sources/community/2026-11-03-personal-ai-agents-users-prefer" >}})（用户诉求）。
-- 2026-11-15 增量：[电话代打台账]({{< relref "/docs/muse/sources/community/2026-11-14-muse-phone-calls-paid-rollout" >}})、[手表核查]({{< relref "/docs/muse/sources/community/2026-11-12-muse-on-apple-watch-wear-os" >}})、[日本 11-12 核查]({{< relref "/docs/muse/sources/community/2026-11-13-japan-november-12-check" >}})、[Spaces 分档分析]({{< relref "/docs/muse/sources/community/2026-11-14-spaces-describe-once-keep-it" >}})、[Poppy 落地核查]({{< relref "/docs/muse/sources/community/2026-11-14-poppy-first-sierra-ledger" >}})（社区）。
+**官方**
+
+- [帮助：关于订阅]({{< relref "/docs/muse/sources/official/2026-09-08-help-about-subscriptions" >}})：三档价格、每周令牌、订阅资格与「有限测试」的出处。
+- [帮助：订阅中心]({{< relref "/docs/muse/sources/official/2026-10-20-help-subscriptions-hub" >}})：订阅帮助目录，含购买额外令牌的入口。
+- [推出 Muse]({{< relref "/docs/muse/sources/official/2026-09-08-introducing-muse" >}})：美国发布稿；西语版补记墨西哥上线。
+- [日本上线]({{< relref "/docs/muse/sources/official/2026-10-23-japan-launch" >}})、[新加坡上线]({{< relref "/docs/muse/sources/official/2026-10-27-singapore-launch" >}})、[Muse 上线澳大利亚]({{< relref "/docs/muse/sources/official/2026-11-17-muse-available-australia" >}})、[Muse 登陆英国]({{< relref "/docs/muse/sources/official/2026-11-24-introducing-muse-in-the-uk" >}})：日本、新加坡、澳大利亚、英国的上线稿。
+- [Loblaw 接入 Muse]({{< relref "/docs/muse/sources/official/2026-11-18-loblaw-first-canadian-retail-partner" >}})：加拿大语音上线、Loblaw 合作。
+
+**媒体**
+
+- [CNBC：Muse 发布报道]({{< relref "/docs/muse/sources/media/2026-09-08-cnbc-meta-pushes-into-personal-agents" >}})、[Sources：Zuckerberg 谈 Muse]({{< relref "/docs/muse/sources/media/2026-09-08-sources-zuckerberg-on-muse" >}})：发布时的价格；免费每周 1 亿令牌；交易抽成设想。
+- [Muse 四市场超 ChatGPT]({{< relref "/docs/muse/sources/media/2026-10-28-allthingsmuse-app-store-four-markets" >}})、[墨西哥上线]({{< relref "/docs/muse/sources/media/2026-11-05-muse-launches-mexico" >}})、[Muse 登陆澳大利亚]({{< relref "/docs/muse/sources/media/2026-11-17-muse-launches-australia" >}})、[英国第七个市场]({{< relref "/docs/muse/sources/media/2026-11-24-muse-launches-uk" >}})：各市场上线顺序与日期。
+- [ITmedia 入门解说]({{< relref "/docs/muse/sources/media/2026-11-22-itmedia-muse-explainer" >}})、[新加坡上线报道]({{< relref "/docs/muse/sources/media/2026-10-28-straits-times-muse-singapore" >}})、[印度订阅价已定]({{< relref "/docs/muse/sources/media/2026-11-09-india-pricing-ahead-of-launch" >}})、[澳大利亚上线实测]({{< relref "/docs/muse/sources/media/2026-11-18-muse-australia-hands-on" >}})：日本、新加坡、印度、澳大利亚的本币价格。
+- [Muse 对外拨号开放]({{< relref "/docs/muse/sources/media/2026-11-12-allthingsmuse-outbound-calling-paid" >}})、[Muse 电话代打上线]({{< relref "/docs/muse/sources/media/2026-11-12-techcrunch-muse-phone-calls-paid" >}})、[Muse Mail 付费开放]({{< relref "/docs/muse/sources/media/2026-11-10-muse-mail-paid-subscribers" >}})、[Muse Mail 全面开放]({{< relref "/docs/muse/sources/media/2026-11-21-muse-mail-rolls-out-to-everyone" >}})、[Muse 进 Instagram 私信]({{< relref "/docs/muse/sources/media/2026-11-24-techcrunch-muse-instagram-dms" >}})：电话代打、Muse Mail、Instagram 私信的开放范围。
+- [Dots 与 Muse 横评]({{< relref "/docs/industry/sources/media/2026-10-27-datacamp-dots-vs-muse" >}})、[六款智能体用量对照]({{< relref "/docs/industry/sources/media/2026-11-15-ai-agent-usage-limits-compared" >}})、[Tom's Guide：Muse 与 Dots]({{< relref "/docs/industry/sources/media/2026-09-30-tomsguide-muse-vs-dots" >}})：与同类产品的价格对照。
+
+**社区**
+
+- [token 计价不透明]({{< relref "/docs/muse/sources/community/2026-10-27-muse-token-price" >}})：令牌口径、单价换算、邀请码、Muse Code 价目。
+- [免费与付费之差]({{< relref "/docs/muse/sources/community/2026-11-19-emma-muse-free-vs-paid" >}})：日本升级界面的价格与模型。
+- [Muse 英国上线核查]({{< relref "/docs/muse/sources/community/2026-11-25-muse-live-uk" >}})：英国上线、英国版帮助页只列美元价。
+- [Muse 全球五国流量]({{< relref "/docs/muse/sources/community/2026-11-12-muse-goes-global-five-countries" >}})：未全球上线的原因（转述财报电话会）。
+- [池中悟：国内注册实测]({{< relref "/docs/muse/sources/community/2026-10-04-chizhongwu-china-registration" >}})：注册与年龄验证实测。
+- [Pat Simmons：三方对照]({{< relref "/docs/industry/sources/community/2026-10-06-pat-simmons-grok-muse-dots" >}})、[Web3 村长：7 天自动化实测]({{< relref "/docs/muse/sources/community/2026-10-03-cunzhang-seven-day-automation" >}})、[Muse 当 Zaurus 开发者]({{< relref "/docs/muse/sources/media/2026-11-19-pc-watch-muse-zaurus-developer" >}})：个人额度消耗记录。
+- [20 美元四智能体对比]({{< relref "/docs/industry/sources/community/2026-11-22-four-agents-twenty-dollars" >}})、[12 款个人智能体用户排名]({{< relref "/docs/industry/sources/community/2026-11-03-personal-ai-agents-users-prefer" >}})：价位对照、用户评价统计。

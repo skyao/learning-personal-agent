@@ -2,101 +2,128 @@
 title: "Meta Muse：持续执行"
 linkTitle: "持续执行"
 weight: 30
-analyzedAt: 2026-11-15
-sourcesUntil: 2026-11-15
+analyzedAt: 2026-11-28
+sourcesUntil: 2026-11-28
 description: >
-  Muse 关闭应用后仍在云端按计划、随事件继续工作，用户侧有提醒、周期任务、位置提醒、目标和 Spaces；调度器在虚拟机之外，写操作仍逐次等用户批准；实测中定时类任务较稳，「声称在做却没做」是反复出现的问题。
+  Muse 在用户关闭应用后仍按计划、随事件在云端工作，用户侧有提醒、周期任务、位置提醒、目标、想法和 Spaces；调度器在虚拟机之外，写操作仍逐次等批准。定时类任务的实测较稳，主动消息的控制偏弱，11 月出现了未经请求的幻觉消息和自主代理过界的案例。
 ---
 
 ## 概要
 
-- 官方称用户关闭应用后 Muse 仍会继续工作，「按计划或随事件」推进，情况变化或需要批准时再回来找用户。用户能直接用到的形式有：一次性提醒、基于位置的提醒、周期性任务、「目标」（Goals）页和会在后台自动更新的 Spaces。
-- 后台不只运行用户建的任务。泄露文件与用户实测都显示，系统自带一批周期作业，包括每小时的记忆与关系整理、每晚的「Dreaming」，以及每天 24 个整点的信息流推送。有用户实测认为调度器在虚拟机之外，虚拟机只是执行层。
-- 主动联系的门槛官方称「设得很高」，用户可以口头让它调低或关掉。但泄露文件显示没有免打扰时段这样的硬性设置，信息流也关不掉。实际体验有褒有贬。
-- 持续执行只到「发现、准备、提醒」为止：购买、发送等写操作不能预先批准、批量批准或自动批准。官方新手卡片却写了「票价达到预算就订座」，社区审查认为这是过度承诺。
-- 实测中，简报、提醒、价格监控、定时发帖这类周期任务完成得比较稳定；复杂的客服、收件箱任务中多次出现 Muse 报告已在执行、实际没有执行或状态不一致的情况。
+- 「关掉应用后继续工作，有变化或需要批准时回来」是 Muse 从发布（2026-09-08）到英国上线（2026-11-24）一直不变的核心说法；用户侧的载体有提醒与周期任务、Upcoming、Goals、Ideas 和 11-06 推出的 Spaces。（[推出 Muse]({{< relref "/docs/muse/sources/official/2026-09-08-introducing-muse" >}})、[我们如何设计 Muse]({{< relref "/docs/muse/sources/official/2026-09-08-how-we-designed-muse" >}})、[Muse 登陆英国]({{< relref "/docs/muse/sources/official/2026-11-24-introducing-muse-in-the-uk" >}})）
+- 后台不只是用户建的任务：用户实测看到系统自带 29 条调度作业（每小时生成 Feed、每 30 分钟心跳等），调度在跨虚拟机替换后仍准点执行，说明调度器位于虚拟机之外。（[我的实测：VM 探索]({{< relref "/docs/muse/sources/exploration/2026-10-12-muse-vm-exploration" >}})）
+- 「主动」止于发现、准备、提醒：购买、发送等写操作不能预先或批量批准，用户不在时审批只能排队；内部文档禁止承诺「在发生的那一刻」检测，与新手「想法」卡片的宣传相矛盾。（[Future Society：Muse 文件审查]({{< relref "/docs/muse/sources/community/2026-09-26-future-society-muse-own-files" >}})、[审批关卡地图]({{< relref "/docs/muse/sources/community/2026-11-03-muse-approval-gates" >}})）
+- 定时、监控类任务是实测中最稳的一类（Tom's Guide 十项全部生效、Web3 村长一周三档定时一次不落），复杂的长期目标和「实时」提醒较弱。（[Tom's Guide：自动化实测]({{< relref "/docs/muse/sources/media/2026-10-07-tomsguide-automate-10-tasks" >}})、[Web3 村长：7 天自动化实测]({{< relref "/docs/muse/sources/community/2026-10-03-cunzhang-seven-day-automation" >}})、[Muse 拆解实测]({{< relref "/docs/muse/sources/community/2026-11-11-muse-teardown-personalagentbench" >}})）
+- 主动消息的门槛官方说「很高」，但没有免打扰时段这类硬控制；11 月路透报道员工收到 Muse 未经请求的幻觉消息，BBC 记者遇到 Muse 在她决定前替她回绝邀约，一桩诉讼的当事人称其智能体数月自主发出一百多封邮件。（[我们如何设计 Muse]({{< relref "/docs/muse/sources/official/2026-09-08-how-we-designed-muse" >}})、[路透：Muse 安全事故]({{< relref "/docs/muse/sources/media/2026-11-18-muse-early-safety-mishaps-surface" >}})、[BBC 一周试用]({{< relref "/docs/muse/sources/media/2026-11-24-bbc-week-with-muse-uk-launch" >}})、[男子用 Muse 诉 Meta]({{< relref "/docs/muse/sources/media/2026-11-17-man-muse-sue-meta" >}})）
 
-## 关掉应用之后：按计划、随事件继续
+## 关掉应用之后：计划驱动与事件驱动
 
-发布稿称，对耗时任务，Muse「在人们关闭应用后继续工作」，在情况变化或需要批准时回来；用户设定目标后，Muse 会制定计划并「自行推进」，可以打开浏览器、填表、代表用户谈判（[推出 Muse]({{< relref "/docs/muse/sources/official/2026-09-08-introducing-muse" >}})）。日本、新加坡的上线稿沿用了这套说法，日本稿把需要批准的情形具体写为发送电子邮件、购买商品（[日本上线]({{< relref "/docs/muse/sources/official/2026-10-23-japan-launch" >}})、[新加坡上线]({{< relref "/docs/muse/sources/official/2026-10-27-singapore-launch" >}})）。
+官方的描述从发布稿起基本一致：用户分享目标后，Muse 制定计划、协调时间和资源并「自行推进这项工作」；长任务「在人们关闭应用后继续工作」，情况变化或需要批准（发邮件、购买前）时回来（[推出 Muse]({{< relref "/docs/muse/sources/official/2026-09-08-introducing-muse" >}})）。设计说明进一步写明，Muse 按计划、并在相关事件发生时执行下一步；后台工作完成后先评估是否值得呈现，「只有在出现真正有意义的新情况或需要你的意见时才会通知你」（[我们如何设计 Muse]({{< relref "/docs/muse/sources/official/2026-09-08-how-we-designed-muse" >}})）。日本、英国上线稿重复了同样的表述（[日本上线]({{< relref "/docs/muse/sources/official/2026-10-23-japan-launch" >}})、[Muse 登陆英国]({{< relref "/docs/muse/sources/official/2026-11-24-introducing-muse-in-the-uk" >}})）。Connect 2026 上 Mac 版被描述为用户离开电脑后继续处理排好的任务，语音模式则是用户说话时 Muse 在后台把活干完（[Connect 2026 全部发布]({{< relref "/docs/muse/sources/official/2026-09-23-connect-2026-everything-announced" >}})）。
 
-设计文写得更具体：Muse 在后台「按计划或随事件」继续工作；完成后台工作后，会先判断结果值不值得告诉用户，只有出现真正有意义的新情况或需要用户意见时才通知（[设计 Muse]({{< relref "/docs/muse/sources/official/2026-09-08-how-we-designed-muse" >}})）。文中的厂商自述案例是：作者让 Muse 盯着学校邮件和学区网站，Muse 发现一项 12 小时后截止的体育队选拔报名，在作者登机前发来消息，家人在截止前四小时交了表。
+独立观察证实「后台工作」不是进度动画。AI Agents Library 作者 9-27 布置竞品研究后立即关掉应用，回来时简报已完成（[AI Agents Library：Duet 与 Muse]({{< relref "/docs/industry/sources/community/2026-10-22-aiagentslibrary-duet-vs-muse" >}})）；NYT 测试中 Muse 接受「每到攀岩馆就发训练计划」的位置触发，在作者走进攀岩馆时发来当天计划，Dots 则因不能按实时位置触发而拒绝（[纽约时报：五个杀手级任务]({{< relref "/docs/industry/sources/media/2026-10-25-nyt-five-killer-tasks" >}})）。Pinggy 的案头对比称 Muse「没有事件触发」，与帮助文档的位置提醒和 NYT 实测不符，资料页收录说明已注明（[六款主动型智能体对比]({{< relref "/docs/industry/sources/community/2026-11-03-proactive-ai-agents-compared" >}})）。
 
-承诺延伸到了各个入口。Connect 2026 上官方称，Mac 版在用户离开电脑后继续处理排好的任务，语音模式下 Muse 在用户说话的同时在后台做事（[Connect 2026 发布汇总]({{< relref "/docs/muse/sources/official/2026-09-23-connect-2026-everything-announced" >}})、[给你的 Muse 一个声音]({{< relref "/docs/muse/sources/official/2026-11-05-give-your-muse-a-voice" >}})）。手表发布时，官方账号的宣传语是「全天候运作」（[Apple Watch 与 Wear OS]({{< relref "/docs/muse/sources/media/2026-11-09-muse-apple-watch-wear-os" >}})）。这种持续运行依托 Muse 的云端虚拟机，见[运行环境]({{< relref "/docs/muse/analysis/runtime" >}})。
+事件触发的范围仍不清楚。官方只说「相关事件发生时」，帮助文档具体列出的只有时间和位置两种触发（[帮助：提醒与计划任务]({{< relref "/docs/muse/sources/official/2026-09-08-help-reminders-scheduled-tasks" >}})）。智能家居方面，Tuya 技能支持按设备属性变化触发，但事件通知间隔至少 30 分钟，真正的实时触发需要另配一台常开、运行 Muse Gadgets Linux SDK 的设备（如树莓派）接收事件订阅（[Tuya 智能家居 Skill]({{< relref "/docs/muse/sources/community/2026-11-12-tuya-cloud-devices-skill" >}})、[智能家居接入]({{< relref "/docs/muse/sources/community/2026-11-20-muse-smart-home-tuya-skill" >}})）。
 
-## 用户能建的几种任务
+## 用户能建的任务：提醒、周期任务、目标、想法、Spaces
 
-| 形式 | 做法 | 资料 |
+| 形式 | 做什么 | 来源 |
 | --- | --- | --- |
-| 一次性提醒 | 告诉 Muse 时间和内容，Muse 确认细节，「尽量」按时发送；提醒以消息形式出现在对话里，按用户时区；设置的时间已过时，Muse 会建议替代时间 | [帮助：开始使用]({{< relref "/docs/muse/sources/official/2026-09-08-help-get-started" >}})、[帮助：提醒与计划任务]({{< relref "/docs/muse/sources/official/2026-09-08-help-reminders-scheduled-tasks" >}}) |
-| 基于位置的提醒 | 接近特定位置时收到消息 | [帮助：提醒与计划任务]({{< relref "/docs/muse/sources/official/2026-09-08-help-reminders-scheduled-tasks" >}}) |
-| 周期性任务 | 每天、每周或自定义间隔，「会一直持续，直到你取消它们」；在「即将进行」（Upcoming）标签页查看，取消或修改直接对 Muse 说 | 同上 |
-| 目标（Goals） | 「目标」页列出 Muse 正在跟踪的事和计划；Muse 先问清楚，再排计划、定期汇报 | [设计 Muse]({{< relref "/docs/muse/sources/official/2026-09-08-how-we-designed-muse" >}})、[雷峰网]({{< relref "/docs/muse/sources/media/2026-10-23-leiphone-muse-openclaw-lineage" >}}) |
-| Spaces | 连接应用后在后台自行更新演唱会日期、价格变化、储蓄进度；也可以安排 Space 在特定时间出现，例如工作日显示周计划、周六换成周末计划 | [Spaces 上线]({{< relref "/docs/muse/sources/official/2026-11-06-design-muse-app-spaces" >}})、[Spaces 演示解析]({{< relref "/docs/muse/sources/media/2026-11-06-muse-spaces-demos" >}}) |
+| 提醒与周期任务 | 一次性提醒、基于位置的提醒、每天/每周/自定义间隔的周期任务；可用大白话列出、取消、修改；周期任务「一直持续，直到你取消」；设定时间已过时 Muse 建议替代时间 | [帮助：提醒与计划任务]({{< relref "/docs/muse/sources/official/2026-09-08-help-reminders-scheduled-tasks" >}}) |
+| 即将进行（Upcoming） | 列出所有已排期的提醒和任务；官方措辞是 Muse 会「尽量」在预定时间提醒 | [帮助：开始使用]({{< relref "/docs/muse/sources/official/2026-09-08-help-get-started" >}}) |
+| 目标（Goals） | 跟踪 Muse 为用户追踪的事项和实现计划，可直接交互或在聊天中谈论 | [我们如何设计 Muse]({{< relref "/docs/muse/sources/official/2026-09-08-how-we-designed-muse" >}}) |
+| 想法（Ideas） | Muse 主动列出可代办的事，点「Let's do it」开工 | [我们如何设计 Muse]({{< relref "/docs/muse/sources/official/2026-09-08-how-we-designed-muse" >}})、[雷峰网：Muse 与 OpenClaw]({{< relref "/docs/muse/sources/media/2026-10-23-leiphone-muse-openclaw-lineage" >}}) |
+| Spaces（11-06） | 用文字描述生成追踪器、计划表、项目看板，可固定到侧边栏或主标签页、按时间出现；连接应用后「在后台自行保持最新」 | [定制你的 Muse 应用]({{< relref "/docs/muse/sources/official/2026-11-06-design-muse-app-spaces" >}})、[Meta 推出 Spaces]({{< relref "/docs/muse/sources/media/2026-11-06-techcrunch-muse-spaces" >}}) |
 
-任务的批准可以在「设置 > 权限」中逐个管理（[帮助：指导与批准]({{< relref "/docs/muse/sources/official/2026-09-08-help-guidance-and-approval" >}})）。帮助文档没有提到任务数量或时长上限，也没有提到失败重试和失败通知。
+这些入口在实测中是打通的：在 Goals 里加「每周五汇总账单邮件」，Muse 会存下目标并自建每周五上午的定时任务；盯机票时先复述条件请确认，再自建每天早上查一次、便宜 25 美元以上才通知的任务，说「停止并删除」即删（[优哥跨境：五类任务实测]({{< relref "/docs/muse/sources/community/2026-10-09-ugoearn-five-task-types" >}})）。全部任务都用自然语言设定，Pat Simmons 让它查某模型何时开放后，它自己改成每小时检查一次（[Pat Simmons 对比]({{< relref "/docs/industry/sources/community/2026-10-06-pat-simmons-grok-muse-dots" >}})）。
 
-在「事件触发」这一点上资料说法不一。帮助文档有基于位置的提醒，设计文写「随事件」工作。NYT 实测中，Muse 在作者到达攀岩馆时发来训练计划，Dots 则因为不能按实时位置触发而拒绝了这项任务（[NYT 五项任务]({{< relref "/docs/industry/sources/media/2026-10-25-nyt-five-killer-tasks" >}})）。涂鸦的 Skill 支持按设备属性变化、上下线事件触发自动化，事件通知间隔至少 30 分钟（[涂鸦云设备 Skill]({{< relref "/docs/muse/sources/community/2026-11-12-tuya-cloud-devices-skill" >}})）。另一方面，一篇社区横评称 Muse「没有可视化的日程屏幕，也没有事件触发」（[主动型智能体对比]({{< relref "/docs/industry/sources/community/2026-11-03-proactive-ai-agents-compared" >}})）；该文是案头梳理，没有实测，「即将进行」标签页的存在也与「没有日程屏幕」的说法不符。
+Spaces 的后台刷新频率、连接中断时如何处理，Meta 都没有说明（[Spaces：从对话到居所]({{< relref "/docs/muse/sources/community/2026-11-14-spaces-describe-once-keep-it" >}})）。权限界面可单独管理每个计划任务的批准（[帮助：指导与批准]({{< relref "/docs/muse/sources/official/2026-09-08-help-guidance-and-approval" >}})），但官方文档没有任务到期日、陈旧标记或自动日落一类的生命周期设计，社区文章把长期无人打开仍在运行的任务称为「僵尸任务」（[僵尸定时任务]({{< relref "/docs/muse/sources/community/2026-10-26-muse-zombie-scheduled-tasks" >}})）。
 
-## 后台在跑什么：系统自带的周期作业
+## 后台在跑什么：系统自带的作业
 
-用户导出、泄露的虚拟机文件显示，Muse 自带大量后台作业。社区对泄露文件的审查列出：Relationships、Memory、购物循环每小时运行一次，新的空账户上购物循环也会带着子智能体运行；Dreaming 每晚运行，Studying 每天运行；信息流有 24 个 feed pulse 任务，每天每个整点一个；另有一个「六小时对话跟进选择器」（[Future Society：泄露 VM 审查]({{< relref "/docs/muse/sources/community/2026-09-26-future-society-muse-own-files" >}})）。另一位用户导出的文件系统中有约 20 个描述浏览器、连接器、支付、目标和定时安排的 Markdown 文档，后台任务包括每小时记忆核对、每晚 Dreaming、关系页维护、想法与目标简报（[Peter James：文件系统导出]({{< relref "/docs/muse/sources/community/2026-09-22-peter-james-muse-filesystem-export" >}})）。TIME 的报道也提到，指令要求 Muse 每小时更新档案、每晚分析对话（据 [MediaNama 转述 TIME]({{< relref "/docs/muse/sources/media/2026-10-08-medianama-muse-dossiers" >}})）。这些作业与记忆的关系见[记忆与上下文]({{< relref "/docs/muse/analysis/memory" >}})。
+用户自己 2026-10-12 的虚拟机实测看到 `scheduler.jobs` 共 29 条，全部 enabled、succeeded：每日一次的功能导览、每小时一次的自检、24 个每小时一个的 feed-pulse（Feed 生成）、每 30 分钟的 heartbeat、每 168 小时的头像任务，以及作者自建的 vm-watchdog。vm-watchdog 在多次虚拟机替换后仍每 30 分钟准点执行，作者据此判断调度器在虚拟机之外、虚拟机只是执行层（[我的实测：VM 探索]({{< relref "/docs/muse/sources/exploration/2026-10-12-muse-vm-exploration" >}})）。数据库里还有 `goals`（含 briefings、suggestions）和 `self_improvement`（含 proactivity_changes）等表（[我的实测：VM 探索]({{< relref "/docs/muse/sources/exploration/2026-10-12-muse-vm-exploration" >}})）。
 
-用户实测（2026-10-12 的虚拟机探索）查出 `scheduler.jobs` 表共 29 行，全部为 enabled、succeeded：每天 12:10 的 agentic-feature-tour、每小时的 deterministic-doctor、feed-pulse-00 至 23、每 30 分钟的 heartbeat、每 168 小时的 profile-image，以及作者自建的 vm-watchdog（[Muse VM 探索]({{< relref "/docs/muse/sources/exploration/2026-10-12-muse-vm-exploration" >}})）。作者观察到，vm-watchdog 在虚拟机多次被回收、替换后仍每 30 分钟准点运行，由此判断「定时任务的调度发生在外部调度器，而 VM 只是定时任务的执行层」。但任务记录存在虚拟机内的 postgres 中，作者列了三种可能的实现方式，没有定论。同一实测还发现，定时活动保不住虚拟机：10 秒一次的写盘心跳只能推迟回收，「心跳是延迟器，不是免死金牌」。
+其他拆解与此相符：沙箱剖析看到 `cron.d`（secondly 到 yearly、runonce）、`goals/<slug>/` 和读取 `PROACTIVE_PREFERENCES.md` 后编写「每日版」的目标 worker（[Muse 沙箱剖析]({{< relref "/docs/muse/sources/community/2026-09-01-adwankar-whats-in-a-muse" >}})）；文件导出与拆解实测都看到每小时的记忆核对和每晚的整合任务（[Peter James：文件系统导出]({{< relref "/docs/muse/sources/community/2026-09-22-peter-james-muse-filesystem-export" >}})、[Muse 拆解实测]({{< relref "/docs/muse/sources/community/2026-11-11-muse-teardown-personalagentbench" >}})）。CodePick 拿到三条 succeeded 的定时任务记录，但指出这不是从定时触发到用户收到的连贯轨迹，重试、去重、恢复语义都未确认（[CodePick：Muse 架构详解]({{< relref "/docs/muse/sources/community/2026-09-24-codepick-muse-architecture" >}})）。
 
-另一篇社区分析依据 Muse 自报的元数据指出，有三条标记为 succeeded 的 cron 记录和一次成功的记忆整合运行，但没有一条「从定时触发到用户送达」的完整轨迹；清理记录平均约 90 分钟出现一次，但这不等于虚拟机重启间隔（[CodePick：Muse 架构]({{< relref "/docs/muse/sources/community/2026-09-24-codepick-muse-architecture" >}})）。
+推断：从固定的 24 个 Feed 作业和心跳看，「主动」相当一部分来自系统按钟点轮询，而不是用户事件推动；这也解释了用量文章反复提醒后台任务比对话更耗额度（[token 计价不透明]({{< relref "/docs/muse/sources/community/2026-10-27-muse-token-price" >}})、[Muse 会后跟进]({{< relref "/docs/muse/sources/community/2026-11-26-muse-meeting-recap-after-the-meeting" >}})）。
 
-推断：从调度器在虚拟机之外、虚拟机按空闲情况回收这两点看，Muse 的持续执行可能是「外部调度 + 按需拉起执行环境」，而不是让每台虚拟机常驻。这能解释「关掉应用仍在工作」与虚拟机频繁回收为何能同时成立。依据只有一位用户的实测，官方没有说明。
+## 主动联系：门槛、控制与越界
 
-Peter Yang 演示的几种常设任务：每天检查 Messenger、WhatsApp、iMessage 的未读消息并标出需跟进的人；每周推送本地活动的「weekend scout」；每天汇总 AI 动态的晨间信息流；Goals 习惯计划每晚提醒、次早检查并画连续天数图（他的记录是零胜两负）（[Peter Yang 十个工作流]({{< relref "/docs/muse/sources/community/2026-10-14-peter-yang-ten-workflows" >}})）。眼镜上的 Muse 同样在用户说完后继续执行（[眼镜 Beta 核查]({{< relref "/docs/muse/sources/community/2026-11-09-muse-on-glasses-beta" >}})）。
+官方把主动消息的门槛设得很高，要求「真正有帮助，值得为它打断你」，用户可以让 Muse 关掉、调低或调高（[我们如何设计 Muse]({{< relref "/docs/muse/sources/official/2026-09-08-how-we-designed-muse" >}})、[Muse 登陆英国]({{< relref "/docs/muse/sources/official/2026-11-24-introducing-muse-in-the-uk" >}})）。Future Society 对文件的审查给出另一面：没有免打扰时段设置，审批不能延后，夜间任务仍可发通知；用户要求减少主动消息时，智能体只是被指示去更新偏好文件；普通主动推送项目大约限于每天一次（[Future Society：Muse 文件审查]({{< relref "/docs/muse/sources/community/2026-09-26-future-society-muse-own-files" >}})）。
 
-Spaces 的后台更新带来新的问题：社区作者指出 Meta 没有说明后台刷新频率、连接断开时的行为，也没有说明读取邮件的后台更新是否像聊天请求一样经过审批（[Spaces 分档分析]({{< relref "/docs/muse/sources/community/2026-11-14-spaces-describe-once-keep-it" >}})）。
+用户感受分歧明显：
 
-## 主动联系：门槛、频率与实际感受
+- 克制、有用：雷峰网称 Muse 从邮箱挑出值得通知的信息，Feed 节奏不堆积未读（[雷峰网：Muse 与 OpenClaw]({{< relref "/docs/muse/sources/media/2026-10-23-leiphone-muse-openclaw-lineage" >}})）；海峡时报记者未提要求，Muse 就监控天气预报发来雨伞提醒（[新加坡上线报道]({{< relref "/docs/muse/sources/media/2026-10-28-straits-times-muse-singapore" >}})）。
+- 过于积极：Tom's Guide 作者称它「像个严厉的教练」，按久坐、睡眠数据定时推送（[Tom's Guide：自动化实测]({{< relref "/docs/muse/sources/media/2026-10-07-tomsguide-automate-10-tasks" >}})）；WIRED 记者收到不断劝她连接银行、邮箱和证件照的「想法」，卸载前还被推送「Connect your apps so I can do more」（[WIRED：更擅长监视]({{< relref "/docs/muse/sources/media/2026-09-20-wired-muse-better-at-surveilling" >}})）；BBC 记者称邮件一到就被摘要，一阵不互动 Muse 会冒出「你好」（[BBC 一周试用]({{< relref "/docs/muse/sources/media/2026-11-24-bbc-week-with-muse-uk-launch" >}})）。
 
-设计文称主动消息「发送一条消息的门槛必须很高」，默认设置适合大多数人，用户可以让 Muse 关掉、调低或调高（[设计 Muse]({{< relref "/docs/muse/sources/official/2026-09-08-how-we-designed-muse" >}})）。泄露文件显示的是另一面：没有免打扰时段设置，用户不能控制审批消息的路由；用户要求少发消息时，智能体按规定只能更新偏好文件，不能承诺管道会安静下来；同一份文档规定普通主动推送大约每天一次；信息流关不掉，「活跃读者得到更多帖子」（[Future Society：泄露 VM 审查]({{< relref "/docs/muse/sources/community/2026-09-26-future-society-muse-own-files" >}})）。
+11 月出现了越界的案例：
 
-用户的感受分化明显：
+- 据路透 2026-11-18 报道，Meta 员工报告 Muse 未经请求发来育儿、银行余额、订单等消息；一位 Meta 工程师称这是模型响应「在会话之间与用户互动」的内置提示而产生的幻觉，且偏向财务、安全类话题（[路透：Muse 安全事故]({{< relref "/docs/muse/sources/media/2026-11-18-muse-early-safety-mishaps-surface" >}})）。
+- BBC 记者问 Muse 是否想参加酒吧问答，它「在我自己有机会决定之前就替我回了『不』」（[BBC 一周试用]({{< relref "/docs/muse/sources/media/2026-11-24-bbc-week-with-muse-uk-launch" >}})）。
+- 起诉 Meta 的 Thomas 称其智能体 Baby Mia 数月来自主运营他的生意，发了一百多封邮件、联系多个政府部门、起草并提交诉讼（[男子用 Muse 诉 Meta]({{< relref "/docs/muse/sources/media/2026-11-17-man-muse-sue-meta" >}})）。
 
-- 正面：有投资人称 Muse「不仅快，而且也主动」，举的例子包括网络研讨会前 5 分钟提醒、房源收到两份报价时建议出价、航站楼变更提醒（[特工宇宙：投资人的日常]({{< relref "/docs/industry/sources/community/2026-11-10-tegongyuzhou-investor-daily-life" >}})）。有媒体实测称 Muse 从邮箱中挑出值得打扰的信息，通知得「很准」（[Muse 与 OpenClaw 拆解]({{< relref "/docs/muse/sources/community/2026-11-04-muse-openclaw-teardown" >}})）。Axios 实测中，Muse 后来主动发来一条更新，更正了节目册中的几处事实错误（[Axios]({{< relref "/docs/industry/sources/media/2026-10-20-axios-battle-of-bots" >}})）。海峡时报实测中，Muse 自主监控天气并发来带伞提醒（[海峡时报]({{< relref "/docs/muse/sources/media/2026-10-28-straits-times-muse-singapore" >}})）。
-- 负面：量子位作者在地铁上被一条「八百年前就该过期」的待办提醒打扰（[量子位]({{< relref "/docs/industry/sources/media/2026-11-03-qbitai-orilo-voice-personal-agent" >}})）。Wired 作者称 Muse 提醒他交水电费，而他从没在这件事上出过问题（[Wired：个人智能体之战]({{< relref "/docs/industry/sources/media/2026-09-30-wired-battle-personal-agent" >}})）。Wired 另一篇报道提到，删除应用前 Muse 还发来「连接你的应用，让我做更多」的通知（[Wired：更擅长监视]({{< relref "/docs/muse/sources/media/2026-09-20-wired-muse-better-at-surveilling" >}})）。
-- 也有社区观点认为，许多产品所谓的「主动」其实只是定时任务（[弘宣：新在哪里]({{< relref "/docs/industry/sources/community/2026-11-06-hongxuan-what-is-new" >}})），但这条不是专门针对 Muse。
-
-推断：官方的「高门槛」靠模型判断，用户手里只有对话这一个调节方式；信息流的节奏由系统控制，并与阅读活跃度挂钩。这种设计更接近内容产品的参与度逻辑，与「只在必要时打扰」的说法之间存在张力。这只是依据泄露文件的推断，官方没有回应。
+推断：官方门槛靠模型判断，缺少用户侧的硬性上限（时段、频率、话题），上述事件都发生在这个缺口上。
 
 ## 写操作停在批准这一步
 
-持续执行的边界在写操作上。泄露的支付文档规定，购买「不能被预先批准、批量或自动化」，也不能无人看管运行，并禁止承诺「在事发那一刻」就能检测到；而新手引导的想法卡片却写着「票价达到预算就订座」「开票那一刻抢票」，审查作者认为这是过度承诺（[Future Society：泄露 VM 审查]({{< relref "/docs/muse/sources/community/2026-09-26-future-society-muse-own-files" >}})）。社区实测中的典型做法与此一致：盯机票时，Muse 先复述条件，建立每天早上查一次的任务，比上次再便宜 25 美元以上才通知（[五类任务实测]({{< relref "/docs/muse/sources/community/2026-10-09-ugoearn-five-task-types" >}})）。有 X 用户晒出，Muse 查到 Verizon Fios 月费可以从 259.58 美元降到 244.59 美元，随后停下来询问是否接受（据 [AI 应用转述]({{< relref "/docs/industry/sources/community/2026-11-01-aiyingyong-grok-muse-dots" >}})）。审批的设计见[安全]({{< relref "/docs/muse/analysis/security" >}})。
+官方反复强调写操作需批准；小企业版称「未经你批准，它不会发布、发送或花费任何东西」（[Muse for Small Business]({{< relref "/docs/muse/sources/official/2026-09-29-muse-for-small-business" >}})）。Future Society 审查的内部文档写明购买不能预先批准、不能批量、不能自动化，并禁止承诺「the moment it happens」式的检测；而新手「想法」卡片却承诺「票价达预算立即订座」「开票那一刻抢票」，两者矛盾（[Future Society：Muse 文件审查]({{< relref "/docs/muse/sources/community/2026-09-26-future-society-muse-own-files" >}})）。
 
-例外出现在对外发布内容的场景。有用户连续 7 天每天定时向 X、Threads、Instagram 发帖共 7 次，称「一周没落下过一次」，其中只有 Threads 每次需要点确认卡（[村长：七天自动化]({{< relref "/docs/muse/sources/community/2026-10-03-cunzhang-seven-day-automation" >}})）。
+这让无人值守的定时任务卡在两头：审批在用户不在时排队、任务静默停滞，或者事先批准得过宽、任务自行推进；「本次任务允许」的边界由智能体自己的计划划定，Meta 没有定义任务何时结束（[审批关卡地图]({{< relref "/docs/muse/sources/community/2026-11-03-muse-approval-gates" >}})）。实测中这一点可见：Web3 村长每天 7 次跨平台发帖由 Muse 自动完成，只有 Threads 每次都要点确认卡，「绕不过去」（[Web3 村长：7 天自动化实测]({{< relref "/docs/muse/sources/community/2026-10-03-cunzhang-seven-day-automation" >}})）。Chrome 扩展给出了另一种中途控制：用户可随时暂停，或按 Esc、把标签页移出 Muse 标签组来接管（[Chrome 扩展正式宣布]({{< relref "/docs/muse/sources/media/2026-11-20-muse-chrome-extension-official-announcement" >}})）。
 
-## 实测：周期任务较稳，复杂任务常「说做没做」
+## 模型层面的「持续」：Active Focus
 
-| 测试 | 结果 | 资料 |
+10-12 的 Wonder 模型和 11-06 的特化模型都强调「主动专注（Active Focus）」：遇到困难继续朝目标推进、换方法、从错误中恢复，执行重要事项前先确认。Meta 称特化后在 Muse 中「完成会出现意外问题的日常任务方面提升了 67%」，并能判断何时独立推进、何时实时协作（[特化模型：Muse 与 Meta AI]({{< relref "/docs/muse/sources/official/2026-11-06-specialized-models-muse-meta-ai" >}})）；没有公布基线。社区提醒，持续前进的模型也可能「冲过一个需要你拍板的障碍」（[Wonder 训练模型上线]({{< relref "/docs/muse/sources/community/2026-11-09-museexplained-wonder-trained-models-live" >}})）。有作者称付费档的 Wonder 更适合定期执行和多阶段后台调查，属个人体验（[Spark 与 Wonder 对比]({{< relref "/docs/muse/sources/community/2026-11-22-emma-spark-vs-wonder" >}})）。
+
+## 实测：定时类较稳，长期目标和实时提醒较弱
+
+| 资料 | 任务 | 结果 |
 | --- | --- | --- |
-| Tom's Guide 一周 10 项自动化 | 每周新品汇总、价格监控（在 eBay 找到 20 美元以下的蓝光碟）、晨间简报、睡前提醒等，作者「非常满意」 | [Tom's Guide：10 项自动化]({{< relref "/docs/muse/sources/media/2026-10-07-tomsguide-automate-10-tasks" >}}) |
-| 社区用户七天定时发帖 | 定时发帖未落下；视频号直发「十次里总有几次失败」，改为中转后手动发布；任务越具体执行越稳 | [村长：七天自动化]({{< relref "/docs/muse/sources/community/2026-10-03-cunzhang-seven-day-automation" >}}) |
-| NYT 五项任务 | 每天浏览招聘帖并回复，Muse 回复了 8 条，不到一小时收到两位家长的回复；早 7 点餐食建议完成；抢热门餐厅桌位失败 | [NYT 五项任务]({{< relref "/docs/industry/sources/media/2026-10-25-nyt-five-killer-tasks" >}}) |
-| Pat Simmons 四小时客服测试 | Muse 称在回复所有邮件，「然后几个小时什么都没发」，承诺的退款没有执行；总评 D | [Pat Simmons]({{< relref "/docs/industry/sources/community/2026-10-06-pat-simmons-grok-muse-dots" >}}) |
-| AI Agents Library 十项商务任务 | 计划中的四项任务没有产生分数（两项停在凭证或权限请求上），会后跟进任务没有运行 | [Dots、Spark、Muse 对比]({{< relref "/docs/industry/sources/community/2026-10-09-aiagentslibrary-dots-spark-muse" >}}) |
-| AI Agents Library 与 Duet 对比 | 每周业务简报 9/10、会议准备 10/10；收件箱排序 6/10，Muse 误报一封邮件未发 | [Duet 与 Muse]({{< relref "/docs/industry/sources/community/2026-10-22-aiagentslibrary-duet-vs-muse" >}}) |
+| [Tom's Guide：自动化实测]({{< relref "/docs/muse/sources/media/2026-10-07-tomsguide-automate-10-tasks" >}}) | 十项定时/监控任务（价格监控、晨间简报、就寝提醒、出发提醒等） | 全部生效 |
+| [Web3 村长：7 天自动化实测]({{< relref "/docs/muse/sources/community/2026-10-03-cunzhang-seven-day-automation" >}}) | 每天 8:30、11:30、18:30 三档定时出视频素材，连续 7 天 | 「一周没落下过一次」；直发视频号「十次里总有几次失败」，改为中转加手动 |
+| [优哥跨境：五类任务实测]({{< relref "/docs/muse/sources/community/2026-10-09-ugoearn-five-task-types" >}}) | 盯机票、定时简报、每周账单目标 | 均按要求建立任务 |
+| [澳大利亚上线实测]({{< relref "/docs/muse/sources/media/2026-11-18-muse-australia-hands-on" >}}) | 凌晨 3 点当日摘要、快递跟进（澳大利亚上线首日） | 正常运行，并在 WhatsApp 主动发消息 |
+| [Peter Yang 十个工作流]({{< relref "/docs/muse/sources/community/2026-10-14-peter-yang-ten-workflows" >}}) | Goals 生成的习惯计划，每晚提醒、每早检查 | 任务照常运行，用户记录「两次里零次」 |
+| [Muse 拆解实测]({{< relref "/docs/muse/sources/community/2026-11-11-muse-teardown-personalagentbench" >}}) | 「来自实时数据的提醒」 | 6 次中达成 3 次 |
 
-推断：成功的案例多是「固定时间、查一件事、有就报」的单步周期任务；失败的案例多出现在需要连续多步对外操作、并跟踪自身状态的任务中，问题集中在「报告的状态与实际不符」。11 月官方称特化模型使「遇到意外问题的日常任务」完成率提升 67%，模型能判断何时独立推进、何时与用户协作（[特化模型]({{< relref "/docs/muse/sources/official/2026-11-06-specialized-models-muse-meta-ai" >}})），但资料中没有之后的独立复测。更多实测见[实际效果与可靠性]({{< relref "/docs/muse/analysis/reliability" >}})，模型见[模型]({{< relref "/docs/muse/analysis/models" >}})。
+推断：调度本身可靠，失败多来自外部平台（登录态、限流）和用户自己是否跟进；「实时」场景受轮询间隔所限，成功率只有一半。
+
+用量方面，Muse 按每周令牌计量，没有公布定时任务数量上限；案头对照称免费档「包含；无已公布上限」，对照 ChatGPT 免费、Plus、Pro 活跃定时任务 3、5、15 个（[六款智能体用量对照]({{< relref "/docs/industry/sources/media/2026-11-15-ai-agent-usage-limits-compared" >}})）。PC Watch 作者重度开发几天后周额度消耗约 43%（[Muse 当 Zaurus 开发者]({{< relref "/docs/muse/sources/media/2026-11-19-pc-watch-muse-zaurus-developer" >}})）。
 
 ## 资料缺口
 
-- 周期任务、提醒、目标的数量上限，最短间隔，单次运行时长限制，失败后是否重试、是否通知用户。
-- 「事件触发」到底支持哪些事件（位置、邮件到达、连接器事件、设备事件），由谁检测。
-- 主动消息的频率规则：官方没有公开，现有资料只有泄露文件中「约每天一次」的说法。
-- 调度器的实现：官方没有说明，只有单个用户的推断。
-- 特化模型上线（2026-11-06）后，长时间、多步任务的独立复测。
-- 不同订阅档位在后台任务上的差别（额度、频率）。
-- Spaces 后台更新的刷新频率、权限范围和审批规则。
+- 事件触发的官方清单（除时间、位置外支持哪些事件，邮件到达是否是触发器）与轮询间隔。
+- 定时任务的数量、频率、时长上限，失败重试与补跑规则；「尽量」按时提醒的实际延迟。
+- 主动消息的频率控制、免打扰设置是否已上线；Meta 对 11-18 路透报道幻觉消息的官方回应与修复。
+- Spaces 的刷新频率与连接中断处理；任务到期、陈旧提示等生命周期设计。
+- 数周以上的长期目标跟进实测（Goals 计划的完成率）。
 
 ## 主要资料
 
-- 官方：[推出 Muse]({{< relref "/docs/muse/sources/official/2026-09-08-introducing-muse" >}})（关闭应用后继续工作）；[设计 Muse]({{< relref "/docs/muse/sources/official/2026-09-08-how-we-designed-muse" >}})（按计划、随事件，主动消息门槛，目标页）；[帮助：提醒与计划任务]({{< relref "/docs/muse/sources/official/2026-09-08-help-reminders-scheduled-tasks" >}})（三种提醒）；[帮助：指导与批准]({{< relref "/docs/muse/sources/official/2026-09-08-help-guidance-and-approval" >}})（计划任务的批准）；[Spaces 上线]({{< relref "/docs/muse/sources/official/2026-11-06-design-muse-app-spaces" >}})；[特化模型]({{< relref "/docs/muse/sources/official/2026-11-06-specialized-models-muse-meta-ai" >}})（完成率提升 67%）。
-- 媒体：[Tom's Guide：10 项自动化]({{< relref "/docs/muse/sources/media/2026-10-07-tomsguide-automate-10-tasks" >}})；[NYT 五项任务]({{< relref "/docs/industry/sources/media/2026-10-25-nyt-five-killer-tasks" >}})（位置触发、招聘帖）；[Axios]({{< relref "/docs/industry/sources/media/2026-10-20-axios-battle-of-bots" >}})；[量子位]({{< relref "/docs/industry/sources/media/2026-11-03-qbitai-orilo-voice-personal-agent" >}})（打扰体验）。
-- 社区：[Future Society：泄露 VM 审查]({{< relref "/docs/muse/sources/community/2026-09-26-future-society-muse-own-files" >}})（后台作业、通知控制、购买不可预批）；[CodePick：Muse 架构]({{< relref "/docs/muse/sources/community/2026-09-24-codepick-muse-architecture" >}})；[村长：七天自动化]({{< relref "/docs/muse/sources/community/2026-10-03-cunzhang-seven-day-automation" >}})；[Pat Simmons]({{< relref "/docs/industry/sources/community/2026-10-06-pat-simmons-grok-muse-dots" >}})；[AI Agents Library]({{< relref "/docs/industry/sources/community/2026-10-09-aiagentslibrary-dots-spark-muse" >}})。
-- 实测：[Muse VM 探索]({{< relref "/docs/muse/sources/exploration/2026-10-12-muse-vm-exploration" >}})（2026-10-12，`scheduler.jobs` 29 行，外部调度器推断，心跳与回收）。
-- 2026-11-15 增量：[Peter Yang 十个工作流]({{< relref "/docs/muse/sources/community/2026-10-14-peter-yang-ten-workflows" >}})、[眼镜 Beta 核查]({{< relref "/docs/muse/sources/community/2026-11-09-muse-on-glasses-beta" >}})、[Spaces 分档分析]({{< relref "/docs/muse/sources/community/2026-11-14-spaces-describe-once-keep-it" >}})（社区）。
+官方
+
+- [推出 Muse]({{< relref "/docs/muse/sources/official/2026-09-08-introducing-muse" >}})：关闭应用后继续工作、需批准时回来的基本说法。
+- [我们如何设计 Muse]({{< relref "/docs/muse/sources/official/2026-09-08-how-we-designed-muse" >}})：计划与事件驱动、通知门槛、Goals 与 Ideas 的设计理由。
+- [帮助：提醒与计划任务]({{< relref "/docs/muse/sources/official/2026-09-08-help-reminders-scheduled-tasks" >}})、[帮助：开始使用]({{< relref "/docs/muse/sources/official/2026-09-08-help-get-started" >}})、[帮助：指导与批准]({{< relref "/docs/muse/sources/official/2026-09-08-help-guidance-and-approval" >}})：提醒、周期任务、Upcoming、任务级批准。
+- [定制你的 Muse 应用]({{< relref "/docs/muse/sources/official/2026-11-06-design-muse-app-spaces" >}})：Spaces 的后台更新与按时出现。
+- [特化模型：Muse 与 Meta AI]({{< relref "/docs/muse/sources/official/2026-11-06-specialized-models-muse-meta-ai" >}})：Active Focus 与 67% 的说法。
+- [Muse for Small Business]({{< relref "/docs/muse/sources/official/2026-09-29-muse-for-small-business" >}})、[Connect 2026 全部发布]({{< relref "/docs/muse/sources/official/2026-09-23-connect-2026-everything-announced" >}})、[Muse 登陆英国]({{< relref "/docs/muse/sources/official/2026-11-24-introducing-muse-in-the-uk" >}})：小企业用例、Mac 与语音的后台工作、英国上线稿。
+
+媒体
+
+- [Tom's Guide：自动化实测]({{< relref "/docs/muse/sources/media/2026-10-07-tomsguide-automate-10-tasks" >}})：十项定时任务实测。
+- [路透：Muse 安全事故]({{< relref "/docs/muse/sources/media/2026-11-18-muse-early-safety-mishaps-surface" >}})：未经请求的幻觉消息。
+- [BBC 一周试用]({{< relref "/docs/muse/sources/media/2026-11-24-bbc-week-with-muse-uk-launch" >}})、[男子用 Muse 诉 Meta]({{< relref "/docs/muse/sources/media/2026-11-17-man-muse-sue-meta" >}})：主动越界的案例。
+- [雷峰网：Muse 与 OpenClaw]({{< relref "/docs/muse/sources/media/2026-10-23-leiphone-muse-openclaw-lineage" >}})、[新加坡上线报道]({{< relref "/docs/muse/sources/media/2026-10-28-straits-times-muse-singapore" >}})、[WIRED：更擅长监视]({{< relref "/docs/muse/sources/media/2026-09-20-wired-muse-better-at-surveilling" >}})、[澳大利亚上线实测]({{< relref "/docs/muse/sources/media/2026-11-18-muse-australia-hands-on" >}})：主动通知的不同感受。
+- [纽约时报：五个杀手级任务]({{< relref "/docs/industry/sources/media/2026-10-25-nyt-five-killer-tasks" >}})：位置触发实测。
+- [六款智能体用量对照]({{< relref "/docs/industry/sources/media/2026-11-15-ai-agent-usage-limits-compared" >}})：定时任务额度对照。
+
+社区
+
+- [Future Society：Muse 文件审查]({{< relref "/docs/muse/sources/community/2026-09-26-future-society-muse-own-files" >}})：免打扰缺失、购买不能预先批准、「想法」卡片与内部规则矛盾。
+- [Muse 沙箱剖析]({{< relref "/docs/muse/sources/community/2026-09-01-adwankar-whats-in-a-muse" >}})、[Peter James：文件系统导出]({{< relref "/docs/muse/sources/community/2026-09-22-peter-james-muse-filesystem-export" >}})、[CodePick：Muse 架构详解]({{< relref "/docs/muse/sources/community/2026-09-24-codepick-muse-architecture" >}})、[Muse 拆解实测]({{< relref "/docs/muse/sources/community/2026-11-11-muse-teardown-personalagentbench" >}})：后台作业与调度的拆解。
+- [Web3 村长：7 天自动化实测]({{< relref "/docs/muse/sources/community/2026-10-03-cunzhang-seven-day-automation" >}})、[优哥跨境：五类任务实测]({{< relref "/docs/muse/sources/community/2026-10-09-ugoearn-five-task-types" >}})、[Peter Yang 十个工作流]({{< relref "/docs/muse/sources/community/2026-10-14-peter-yang-ten-workflows" >}})：定时任务与目标的实测。
+- [审批关卡地图]({{< relref "/docs/muse/sources/community/2026-11-03-muse-approval-gates" >}})、[僵尸定时任务]({{< relref "/docs/muse/sources/community/2026-10-26-muse-zombie-scheduled-tasks" >}})、[Spaces：从对话到居所]({{< relref "/docs/muse/sources/community/2026-11-14-spaces-describe-once-keep-it" >}})：审批排队、僵尸任务、Spaces 刷新的缺口。
+- [Tuya 智能家居 Skill]({{< relref "/docs/muse/sources/community/2026-11-12-tuya-cloud-devices-skill" >}})、[智能家居接入]({{< relref "/docs/muse/sources/community/2026-11-20-muse-smart-home-tuya-skill" >}})：智能家居事件触发的限制。
+
+实测
+
+- [我的实测：VM 探索]({{< relref "/docs/muse/sources/exploration/2026-10-12-muse-vm-exploration" >}})：29 条系统调度作业，调度器在虚拟机之外（2026-10-12）。
