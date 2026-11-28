@@ -13,7 +13,7 @@ description: 收集 Meta Muse（Meta 的个人 AI 智能体）的资料时使用
 | --- | --- |
 | 产品目录 | `content/zh-cn/docs/muse/` |
 | 发布日期 | 2026-09-08（美国） |
-| 最后收集日期 | 2026-11-27（22:16 轮次：muse 2 篇、industry 1 篇——社区 2 篇：えま《Museはどうやって稼ぐのか》（11-28 JST，财报电话会官方表述的手续费模式独立分析）；Isle of Man 信息专员《Consumer facing agentic AI》（11-27，★，英国 ICO 自愿监测与报告安排、GPA 决议）；industry 1 篇：OpenClaw《Introducing ShellBench》（11-24，100 个日常任务基准，Muse Wonder Full 47.4%）） |
+| 最后收集日期 | 2026-11-28（10:16 轮次：新收 3 篇——媒体 1 篇（allthingsmuse 购物订单取消，CNBC 2026-11-27 报道为底稿，CNBC 原文地址未核实未填 basedOnUrl）、社区 2 篇（museexplained 英国责任上限 ★、The AI Salon 沃尔玛黑五实测）；官方无新文）；2026-11-27（22:16 轮次：muse 2 篇、industry 1 篇——社区 2 篇：えま《Museはどうやって稼ぐのか》（11-28 JST，财报电话会官方表述的手续费模式独立分析）；Isle of Man 信息专员《Consumer facing agentic AI》（11-27，★，英国 ICO 自愿监测与报告安排、GPA 决议）；industry 1 篇：OpenClaw《Introducing ShellBench》（11-24，100 个日常任务基准，Muse Wonder Full 47.4%）） |
 | 页面格式 | 与所有产品一致，见 collect-sources 的 source-page.md「页面正文」。第一阶段直接翻译的旧页面已于 2026-11-06 补上内容摘要、保留理由和分隔线（用户 2026-11-06 要求） |
 
 ## 收录范围
@@ -93,6 +93,13 @@ description: 收集 Meta Muse（Meta 的个人 AI 智能体）的资料时使用
 | 纽约时报 The Daily 播客「Call My A.I. Agent」（Eli Tan） | 不收：无文字稿 |
 | The Verge 关于 Muse 文件系统与夜间回顾的报道 | 已收；同时收了一手来源 mouse.dev（Peter James）和后续「分享功能恢复」 |
 | Hunter Brook「Dox for me, O Muse」 | 已收 |
+| allthingsmuse「Muse Offers $25 Back on a First Purchase of $100 or More」（2026-11-28） | 不收：黑五短期促销（11-25–30），不是定价政策变化 |
+| allthingsmuse「Muse for Bookkeepers」「Muse for Logistics Coordinators」（2026-11-28/27） | 不收：Academy 提示词模板课，无真实执行记录（同 People Ops、Creators、Event Planners） |
+| Guardian 2026-11-27 责任归属报道 | 不收：内容已由 museexplained 综述覆盖，不另收 |
+| explainx.ai、vblogz 的 Instagram DM 报道 | 不收：TechCrunch 原文已收 |
+| 荷兰法院 Ray-Ban 眼镜案（2026-11-27） | 不收：不是 Muse 产品资料 |
+| ashutoshai 的 Muse「product shots」相机功能 | 不收：已由 2026-11-21 allthingsmuse Marketplace 文覆盖 |
+| CNBC 2026-11-27 零售商限制报道 | 收 allthingsmuse 转述版；CNBC 原文地址未核实，basedOnUrl 未填 |
 | Marketplace 住址事件 | 已收卫报报道（Business Insider 首发但有付费墙）；Malwarebytes 转述、EPIC 评论不收；Surfshark 数据收集分析页日期异常，不收 |
 | 人物档案事件 | WIRED 2026-10-03 原文已收；Medianama 二手报道保留（用户 2026-11-05 决定；其转述的是 TIME，内容不完全重合）；TIME 原文仍无法读取 |
 | Future Society「Muse, in its own files」（futuresociety.ch/muse-findings） | 已收：页面自标「由 AI 生成」，但每条发现附 VM 文件引文；发现列表取自 report_data.json |
