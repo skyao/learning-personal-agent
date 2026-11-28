@@ -13,7 +13,7 @@ description: 收集 OpenAI dots（ChatGPT 中始终在线的个人智能体）�
 | --- | --- |
 | 产品目录 | `content/zh-cn/docs/dots/` |
 | 发布日期 | 2026-09-29（OpenAI DevDay 2026 前后发布） |
-| 最后收集日期 | 2026-11-10（增量：What’s new 11 月 2–6 日周汇总 1 篇，全文就是一条 dots 更新：GPT-6.1 Terra 成为驱动模型之一、Enterprise/Edu/Healthcare 可开启、11-18 起计费）；2026-11-06（对照旧笔记补收社区 1 篇：Cyera）；2026-11-05（第一轮完成：官方、媒体、社区）。第二轮起按新流程：原文存 `original.md`，资料页只写摘要与保留理由，不翻译 |
+| 最后收集日期 | 2026-11-28（美东；增量：官方 5 篇——ChatGPT Wallet 发布文、帮助文章 20001654、发布说明 11-13 条目，What's new 首页 11-09–13 周「自定义指令」与补收的 10-12–16 周「iOS 小组件与快捷指令」；媒体、社区 0 篇）；2026-11-10（增量：What’s new 11 月 2–6 日周汇总 1 篇，全文就是一条 dots 更新：GPT-6.1 Terra 成为驱动模型之一、Enterprise/Edu/Healthcare 可开启、11-18 起计费）；2026-11-06（对照旧笔记补收社区 1 篇：Cyera）；2026-11-05（第一轮完成：官方、媒体、社区）。第二轮起按新流程：原文存 `original.md`，资料页只写摘要与保留理由，不翻译 |
 | 页面格式 | 与所有产品一致，见 collect-sources 的 source-page.md「页面正文」。第一轮直接翻译的旧页面已于 2026-11-06 补上内容摘要、保留理由和分隔线（用户 2026-11-06 要求） |
 | 实测材料 | 用户确认没有（2026-11-05） |
 
@@ -35,10 +35,10 @@ description: 收集 OpenAI dots（ChatGPT 中始终在线的个人智能体）�
 | 渠道 | 地址 | 内容 | 抓取方法 |
 | --- | --- | --- | --- |
 | ChatGPT Learn 文档 | `learn.chatgpt.com/docs/dots`、`/docs/dots/<子页>`；同一页面也可经 `/codex/dots/...` 和 `developers.openai.com/codex/dots` 访问 | 用户文档 6 页：认识 dots、入门、任务与记忆、控制、计算机与应用、消息渠道 | 直接下载；`sourceUrl` 用 canonical 的 `/docs/...` 地址，其余写入 `altUrls` |
-| ChatGPT Learn「What's new」 | `learn.chatgpt.com/docs/whats-new/dots-<月>-<日>-2026`；栏目首页 `/docs/whats-new` | dots 专稿（每篇一页）；另有每周汇总和 DevDay 页 | 直接下载；每周汇总与 DevDay 页中的 dots 部分只是专稿和发布文的摘要，不收 |
+| ChatGPT Learn「What's new」 | `learn.chatgpt.com/docs/whats-new/dots-<月>-<日>-2026`；栏目首页 `/docs/whats-new` | dots 专稿（每篇一页）；另有每周汇总和 DevDay 页 | 直接下载；每周汇总与 DevDay 页中的 dots 部分只是专稿和发布文的摘要，不收。**有些周只在栏目首页写一个周标题和几条条目，没有周汇总页（地址 404）**：每轮都要抽取首页，按周标题逐条看 dots 条目，没有专稿的按「节选」收，`sourceUrl` 用首页加周锚点（如 `#november-9-13-2026`），date 取该周第一天（2026-11-28 发现 10-12–16 周的条目此前漏收） |
 | ChatGPT Learn 企业文档 | `learn.chatgpt.com/codex/enterprise/<页>` | dots-security、dots-admin-guide、cloud-local-access | 直接下载 |
 | OpenAI 官网 | `openai.com/index/` | 发布文、安全文、DevDay 回顾、模型发布 | 直接下载和网页抓取工具都返回 403；改用 Wayback 快照（见 collect-sources 的 source-page.md） |
-| 帮助中心 | `help.openai.com/en/articles/<编号>`；有官方简体中文版 `/zh-hans-cn/` | 入门 20001530、隐私安全 FAQ 20001529、工作区管理 20001554；发布说明中的 dots 条目 | 直接下载和网页抓取工具都返回 403；改用 Wayback 快照 |
+| 帮助中心 | `help.openai.com/en/articles/<编号>`；有官方简体中文版 `/zh-hans-cn/` | 入门 20001530、隐私安全 FAQ 20001529、工作区管理 20001554、ChatGPT Wallet 20001654；发布说明中的 dots 条目 | 直接下载和网页抓取工具都返回 403；改用 Wayback 快照。发布说明（6825453）的快照用 `id_` 地址下载时返回 gzip 压缩内容，curl 要加 `--compressed` 或下载后 `zcat`，否则 extract.py 报 `NoneType` 错误（2026-11-28）；11-21 以后的快照都是 403/302，可用的最新一份是 20261118015603 |
 | 部署安全中心 | `deploymentsafety.openai.com` | 模型系统卡 | 直接下载 |
 | 开发者社区 | `community.openai.com`，有「Dots」分类；搜索接口 `/search.json?q=...`，帖子 `/t/<id>.json` | 用户的 bug 报告、功能请求；OpenAI_Support 的回复；版主 VeitB（Leader，非员工）转帖官方更新 | 直接下载；用户主页 `/u/<name>.json` 的 `title` 可区分「OpenAI Staff」与社区版主 |
 
@@ -143,3 +143,22 @@ community.openai.com 的 Dots 分类帖子量大，以 bug 报告和功能请求
 - 帮助中心文章 slug 以 `help-` 开头。
 - What's new 专稿 slug 以 `docs-whats-new-` 开头，日期取 slug 中的日期。
 - 发布说明节选 slug 以 `relnotes-` 开头，例如 `2026-10-28-relnotes-texting-your-dot`。
+
+## 2026-11-28 增量收集
+
+| 资料 | 判断 |
+| --- | --- |
+| OpenAI「Introducing ChatGPT Wallet」（11-13） | 收：dots 代用户付款的官方发布文；目前 Wallet 只在 dots 中推出 |
+| 帮助中心「Making purchases with ChatGPT Wallet」（20001654） | 收：写明只能在 dot 对话中使用，含添卡、批准、管理与 FAQ |
+| 发布说明 11-13「Introducing ChatGPT Wallet」 | 节选收：按发布说明条目惯例；含「批准不等于下单成功」的提醒 |
+| What's new 首页 11-09–13 周「Set custom instructions for your dot」 | 节选收：没有专稿和周汇总页 |
+| What's new 首页 10-12–16 周「Open your dot from iOS widgets and Shortcuts」 | 节选收（补收）：没有专稿和周汇总页，此前漏收 |
+| What's new「GPT-6.2」（11-17，gpt-62-astra-sol） | 不收：模型发布，全文不提 dots |
+| 发布说明 11-10「Retiring Advanced and Standard Voice」「Business Hub」、11-16 Clinicians | 不收：与 dots 无关 |
+| Commerce Partner Playbook（developers.openai.com/commerce） | 未收：面向商家的 Wallet 接入指南，不专讲 dots；按「边缘资料」处理，报告中列出由用户决定 |
+| Android Authority、9to5Mac、TestingCatalog、gori.me、TechNews 科技新报、品玩、IT之家（经凤凰网）等 Wallet 报道 | 不收：复述发布文；品玩称 Wallet 也支持 ChatGPT Work 与 Codex，与帮助文章「只在 dot 对话中可用」相反 |
+| pasqualepillitteri.it「ChatGPT Wallet Is the Missing Piece for OpenAI's dots」等多语种版本 | 不收：发布前的推测文 |
+| 社区论坛「Is GPT-6.2 Extra High Actually Thinking?」（11-24，1419981） | 不收：讨论的是 ChatGPT 中的 GPT-6.2，只有一条回复主观提到 dots 子智能体「像 instant」，没有观察到具体模型 |
+| 社区论坛「Feature request: Show the model used by each Dot and let me choose it」（11-27，1421573） | 不收：功能请求；作者明确说无法确认 dot 用了哪个模型 |
+| 社区论坛 11-07 以后的其余 Dots 帖子（停止响应、Windows 无法续接、语音通话、唤醒词等） | 不收：bug 报告与功能请求 |
+| learn.chatgpt.com 的 dots 文档 6 页与企业文档 3 页 | 仍待用户决定（见 2026-11-10）：11-09–13 周的自定义指令链接到「控制」页，说明文档又有更新 |
