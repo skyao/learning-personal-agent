@@ -1,5 +1,5 @@
 来源：https://apps.apple.com/us/app/cue-by-manus/id6808613358
-取文：2026-11-05，直接下载（美国区）；取应用介绍正文、Information 栏和 In-App Purchases 列表；版本记录只记最新版本号，评分、评论、App Privacy 栏未取
+取文：2026-11-28，直接下载（美国区）；取应用介绍正文、Information 栏和 In-App Purchases 列表；版本记录只记最新版本号（26.19.5），评分、评论、App Privacy 栏未取
 
 Cue has its own identity and can use the apps you authorize to help with everyday tasks, online and in person. From choosing a coffee and planning a trip to organizing your day and helping you learn, Cue can be there to lend a hand.
 
@@ -31,10 +31,14 @@ Have Cue put together your daily agenda, help prepare a weekly shopping list, or
 
 Cue currently requires an invitation code. You can create an account for free and enter your code after signing in. Once you have access, Plus membership is included at no charge.
 
+Privacy Policy: https://manus.im/privacy
+
+Terms of Use: https://manus.im/terms
+
 ## Information
 
 - **Seller**: BUTTERFLY EFFECT PTE. LTD.
-- **Size**: 259.4 MB
+- **Size**: 310 MB
 - **Category**: Productivity
 - **Compatibility**: Requires iOS 18.0 or later.
   - iPhone
@@ -45,20 +49,20 @@ Cue currently requires an invitation code. You can create an account for free an
   - Requires macOS 15.0 or later and a Mac with Apple M1 chip or later.
   - Apple Vision
   - Requires visionOS 2.0 or later.
-- **Languages**: English and 21 more
-  - English, Arabic, Czech, Dutch, French, German, Hindi, Indonesian, Italian, Japanese, Korean, Persian, Polish, Portuguese, Russian, Simplified Chinese, Spanish, Thai, Traditional Chinese, Turkish, Ukrainian, Vietnamese
+- **Languages**: English and 22 more
+  - English, Arabic, Czech, Dutch, French, German, Hebrew, Hindi, Indonesian, Italian, Japanese, Korean, Persian, Polish, Portuguese, Russian, Simplified Chinese, Spanish, Thai, Traditional Chinese, Turkish, Ukrainian, Vietnamese
 - **Age Rating**: 13+
   - Infrequent Medical Treatment information
 
 ## In-App Purchases
 
 - US Phone Number: $9.99
-- US Phone Number: $9.99
-- UK Phone Number: $9.99
-- Israel Phone Number: $9.99
+- Cue Plus: $20.00
 - Cue Pro: $100.00
-- Singapore Phone Number: $9.99
-- Cue Max: $200.00
-- Canada Phone Number: $9.99
+- UK Phone Number: $9.99
 - Cloud Computer: $39.00
-- Cue Max: $2,000.00
+- Cue Max: $200.00
+- US Phone Number: $9.99
+- Singapore Phone Number: $9.99
+- Canada Phone Number: $9.99
+- Israel Phone Number: $9.99
