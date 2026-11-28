@@ -12,14 +12,14 @@ fidelity: 全文
 translation: 已翻译
 collectedAt: 2026-11-17
 tags: [开放与价格, 实测评测, 持续执行]
-products: [muse, claude-duet, gemini-spark, manus-cue, microsoft-autopilot]
+products: [muse, claude-duet, gemini-spark, manus-cue]
 ---
 
 {{< source-info >}}
 
 ## 收录说明
 
-本页收录的文章于 2026-11-15 发布在 allthingsmuse。直接下载全文，未做任何删改。全文为英文，原文全文存于本目录的 original.md，网站上不显示，已翻译。
+本页收录的文章于 2026-11-15 发布在 allthingsmuse。直接下载全文，未做任何删改。全文为英文，原文全文存于本目录的 original.md，网站上不显示，已翻译。文中的 Microsoft 一栏是消费级 Microsoft 365 套餐（Personal、Family、Premium），正文没有提到 Autopilot，2026-11-28 从 products 中去掉 microsoft-autopilot（用户决定）。
 
 本页全文无图片；含一张六款对照表。全部数字来自各公司定价与帮助页，非一手实测；Manus 的 4000 积分与每日 300 积分刷新来自读取其定价页的追踪数据而非 Manus 官方原文。文中涉及的 ChatGPT 指 ChatGPT 应用本身，未提及 OpenAI dots，products 字段未列入 dots。
 
