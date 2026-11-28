@@ -117,12 +117,13 @@ description: 收集 Grok Bot（SpaceXAI / xAI，经 Cursor 交付）的资料时
 | Ars Technica（Dan Goodin，11-17）、The Next Web（11-17）、eWeek、SC World 等关于同一事件的报道 | 不收：转述 NewCore；Ars 只多了「SpaceXSI 未回复邮件询问」 |
 | inclinq.medium.com「Grok Bot Said It Hadn't Accessed Anything…」（11-19） | 不收：Medium 返回 403，Wayback 无快照，看标题是同一事件 |
 | Profero「The Rootkit Built Into Grok Bot」（Omri Segev Moyal，11-08） | 收入 community：第三方安全研究与披露时间线 |
-| Timeline 作者 Marcel Marais 的「Grok Bot symbiosis」（11-21）、「How footsteps cut my Grok Bot quota burn by 50%」（11-23） | 收入 community：作者在推广自家应用，但有一个月的实际使用记录和后台运行次数、额度消耗数据 |
+| Timeline 作者 Marcel Marais 的「Grok Bot symbiosis」（11-21）、「How footsteps cut my Grok Bot quota burn by 50%」（11-23） | 收入 community：作者在推广自家应用，但有一个月的实际使用记录和后台运行次数、额度消耗数据；用户 2026-11-28 确认保留 |
 | Latent Space「Five Days With Grok Bot」（Dan McAteer，09-05） | 收入 community：上一轮漏掉的五天实测 |
 | agentconnect.md「How always-on agents split routing, execution, and permissions」（11-23） | 不收：开源平台厂商依据公开资料比较 dsh-superagent、Grok Bot、Claude Duet，没有新信息 |
 | flaviocopes「What's new in Grok Bot 1.0」（11-11） | 不收：作者说明团队功能按文档整理，截图取自官方 |
 | ryanperry.io「Grok Bot Taught My Jev Agent to Play Smash Bros」（11-23） | 不收：正文由脚本加载取不到，Wayback 无快照 |
 | 开源替代品（Pots、Rakazo、NerdBot 等）、X 帖子 | 不收：按收录范围 |
+| 多 Bot 协作类资料（如 multiple teams 指南）的标签 | 词表没有「多 Bot 协作」，用「持续执行」「连接器」；用户 2026-11-28 决定不加新标签 |
 
 ## 命名约定
 
