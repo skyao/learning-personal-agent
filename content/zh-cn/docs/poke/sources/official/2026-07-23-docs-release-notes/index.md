@@ -8,7 +8,7 @@ author: "未署名"
 publisher: "The Interaction Company of California"
 language: en
 fidelity: 全文
-translation: 待翻译
+translation: 已翻译
 collectedAt: 2026-11-28
 tags: [功能更新, 交互渠道]
 products: [poke]
@@ -17,7 +17,7 @@ dateNote: "发布说明持续追加；日期取最新条目 November 17, 2026。
 
 {{< source-info >}}
 
-**收录说明**：Poke 帮助文档中的发布说明，直接下载后抽取。页面自述只记录主要更新，不是完整的部署日志。待翻译。**2026-11-28 原文在页首新增 November 17, 2026「Devin Bots」一条（插在页首声明之后、July 23, 2026 条目之前）；现有译文覆盖 July 23, 2026 及以前的全部条目，只需补译这一条。**
+**收录说明**：Poke 帮助文档中的发布说明，直接下载后抽取。页面自述只记录主要更新，不是完整的部署日志。已翻译。
 
 **内容摘要**：页面按日期倒序列出更新，最新为 2026 年 11 月 17 日 “Devin Bots”：介绍 Devin Bot 带领一组智能体全天构建、测试和改进软件，并称限时可以去说服 Poke 给自己多少免费额度。再往前是 2026-07-23 “Poke is joining Cognition”，称 Poke 照常工作；2026-06-25 Poke Human（含在 Ultra $199/月，现实开销按成本价计）；2026-06-18 Poke Ultra 上线与网站搭建；2026-06-08 @poke.com 邮箱地址；2026-06-04 Poke 成为 Apple Messages 上“首个也是唯一”通过验证的 AI 产品；2026-03-19 Poke Recipes 并取消 bouncer/waitlist、全面开放，同时改为只发布重大更新。更早条目有 2026-02-02 的 Telegram 备用渠道（WhatsApp 暂不可用）、2025-12-12 的 Microsoft Outlook 支持、2025-11-17 的 iMessage inline replies、2025-11-03 的集成库（Linear、Todoist、Notion、Asana、GitHub 等）及大量修复。页首声明 Poke 可能出错，不能提供医疗、财务或法律建议。
 
@@ -30,6 +30,16 @@ dateNote: "发布说明持续追加；日期取最新条目 November 17, 2026。
 和我们人类一样，Poke 有时也会犯错。你应当核实任何重要信息，而且 Poke 没有资格提供医疗、财务或法律建议。
 
 请查看 [status.poke.com](https://status.poke.com/) 获取实时更新。
+
+---
+
+## 2026 年 11 月 17 日
+
+### Devin Bots
+
+你的 [Devin Bot](https://devin.ai/bots) 会带领一组智能体昼夜不停地构建、测试和改进你的软件。你的 Bot 会拆解工作并协调多个智能体并行推进，每个智能体都在自己的云端计算机上工作。
+
+限时活动：去[说服 Poke](https://poke.com/bots) 你该得到多少免费额度。观看[发布视频](https://x.com/cognition/status/2122737511684587551)，看看 Devin Bots 的实际表现。
 
 ---
 
