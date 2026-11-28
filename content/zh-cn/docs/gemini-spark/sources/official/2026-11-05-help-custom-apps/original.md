@@ -1,5 +1,5 @@
 来源：https://support.google.com/gemini/answer/17209137?hl=en
-取文：2026-11-06，直接下载
+取文：2026-11-28，直接下载（浏览器标识）
 
 You can connect your personal or third-party apps to build highly customized workflows in tasks or take quick actions in chat. To do this, add a custom app with its Model Context Protocol (MCP) server URL in the Gemini web app. After it’s connected, you can use the custom connected app in both the Gemini mobile app and Gemini web app.
 
@@ -11,7 +11,7 @@ To connect a custom app to Gemini Apps, you must:
 
 - **Be 18 or over and in the US.**
 - **Sign in to the Gemini app with a personal Google Account.** For now, this feature isn’t available if you sign in with a work or school Google Account. [Learn how to sign in to Gemini Apps](https://support.google.com/gemini/answer/13278668).
-- **Have [Keep Activity](https://myactivity.google.com/product/gemini?utm_source=help) on.** Custom apps are unavailable when this setting is off.
+- **Have [History](https://myactivity.google.com/product/gemini) on.** Custom apps are unavailable when this setting is off.
 - **Have the MCP server URL for the custom app.** The MCP server must follow the standard MCP specifications.
 
 **Important:** For now, custom Connected Apps are:

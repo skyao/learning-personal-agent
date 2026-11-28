@@ -1,5 +1,5 @@
 来源：https://support.google.com/gemini/answer/17094507?hl=en
-取文：2026-11-10，直接下载
+取文：2026-11-28，直接下载（浏览器标识）
 
 You can now start tasks in the same place you start a chat. Assign Gemini tasks to automate complex workflows and manage schedules for ongoing tasks. Gemini can help handle tasks, using info from sources like Connected Apps, skills, chats, websites you’re signed into, Personal Intelligence, location, and more. Just tell Gemini your specific goals and when you want tasks completed.
 
@@ -9,7 +9,7 @@ For example, you can create tasks for Gemini to help:
 - **Save you money:** Gemini can monitor and alert you when the prices of flights and hotels drop within your budget.
 - **Deep dive on topics & create files:** Gemini can pull research with cited sources and package results into downloadable files, like PDFs, documents, spreadsheets, and presentations.
 
-**Tip:** Schedules in tasks are different from schedules in chats. [Learn how schedules in chats work](https://support.google.com/gemini/answer/16316416?).
+**Tip:** Schedules in tasks are different from schedules in chats. [Learn how schedules in chats work](https://support.google.com/gemini/answer/16316416).
 
 ## What you need
 
@@ -17,12 +17,12 @@ To assign Gemini tasks, you must:
 
 - **Be 18 or over**.
 - **Sign in to the Gemini app with a personal Google Account.** For now, this feature isn’t available if you sign in with a work or school Google Account. [Learn how to sign in to Gemini Apps](https://support.google.com/gemini/answer/13278668).
-- **Have a Google AI Pro or Ultra subscription.** [Learn how to upgrade](https://support.google.com/gemini/answer/14517446).
-- **Have [Keep Activity](https://myactivity.google.com/product/gemini?utm_source=help) on**.
+- **Have [History](https://myactivity.google.com/product/gemini) on**.
 
 **Important:** For now, tasks in Gemini are:
 
-- Available wherever Gemini Apps are supported, except in the European Economic Area, Nigeria, Switzerland, and the United Kingdom.
+- Available without a Google AI subscription in Australia, Canada, India, Japan, South Korea, and the US.
+- Available with a Google AI Pro or Ultra subscription everywhere else Gemini Apps are supported, except in the European Economic Area, Nigeria, Switzerland, and the United Kingdom.
 - Only available in the Gemini mobile app, the Gemini app on Mac, and the Gemini web app at [gemini.google.com](https://gemini.google.com).
 
 ## Before you assign tasks to Gemini
@@ -89,6 +89,8 @@ You can get help with setting up your first skills and tasks conversationally. J
 7. Monitor your task regularly for any input Gemini may need from you. For example, if Gemini needs you to perform certain actions in its browser, it asks you to take over the task.
 
 **Tip:** In the Gemini app on Mac, if tasks are set up, you can ask Gemini to take action on your Mac from another device. [Learn how to control the Gemini app on Mac remotely](https://support.google.com/gemini/answer/17208717#remote_control).
+
+**Tip:** You can also set up email with Gemini to create tasks from your inbox. [Learn how to set up email with Gemini](https://support.google.com/gemini/answer/18745518).
 
 ### Example tasks
 
@@ -169,7 +171,7 @@ Gemini can complete some of your tasks in a local or remote browser. For example
 
 Sign in to websites
 
-When Gemini reaches a sign-in page, it’ll ask you to confirm using “Sign in with Google” if available. If not, it’ll ask you to take over and sign in manually.
+When Gemini reaches a sign-in page, it’ll ask you to confirm using “Sign in with Google” if available or using credentials stored in Google Password Manager. If you don't, it’ll ask you to take over and sign in manually.
 
 Take over remote browser tasks
 
@@ -191,7 +193,7 @@ You can remove data from the Chrome browser on your device at any time. [Learn h
 
 Delete remote browser data
 
-When Gemini uses the remote browser to complete tasks, browser data, like cookies that contain your website authentication info (your sign-in details), is saved for future sessions for your convenience. You can delete all saved browser data from past sessions, at any time. To help protect your privacy, Gemini may automatically delete saved browser data on your behalf, and you may need to sign back in to websites.
+When Gemini uses the remote browser to complete tasks, browser data, like cookies that contain your website authentication info (your sign-in details), is saved for future sessions for your convenience. You can delete all saved browser data from past sessions, at any time. Gemini automatically deletes saved browser data on your behalf after a set period of inactivity or until you manually delete it, and you may need to sign back in to websites.
 
 1. On your computer, go to [gemini.google.com](https://gemini.google.com).
 2. At the bottom, click Settings ![](images/img-14-bbb6bc.png) ![and then](images/img-02-bfcdbc.png) **Browser** ![](images/img-15-23186a.png).
@@ -199,11 +201,7 @@ When Gemini uses the remote browser to complete tasks, browser data, like cookie
 
 Delete remote code execution data
 
-When Gemini uses a remote computer to run code or perform complex tasks, it saves data on the remote computer for future sessions for your convenience. You can delete all the data saved on the remote computer at any time in Task settings. This will delete all saved remote code execution files and data from previous sessions.
-
-1. On your computer, go to [gemini.google.com](https://gemini.google.com).
-2. At the bottom, click Settings ![](images/img-14-bbb6bc.png) ![and then](images/img-02-bfcdbc.png) **Task settings** ![](images/img-17-57eb08.png).
-3. Under “Delete remote code execution,” click **Delete** ![](images/img-16-23ae4d.png).
+When Gemini runs code or complex tasks on a remote computer, it saves data for future sessions that you can delete anytime in Task settings. [Learn how to delete remote code execution data](https://support.google.com/gemini/answer/18789153#delete_code_data).
 
 ## Turn off task mode
 
@@ -228,9 +226,9 @@ In the Gemini app on Mac
 
 **Tips:**
 
-- Turning off task mode does not delete any past activity from schedules, tasks, thread, or files that Gemini updated or created.
+- Turning off task mode does not delete any past history from schedules, tasks, thread, or files that Gemini updated or created.
 - Your schedules and tasks are paused and not deleted.
-- Your chats are not deleted but you can manage them anytime in Gemini Apps Activity.
+- Your chats are not deleted but you can manage them anytime in Gemini History.
 
 ### To turn task mode back on
 
@@ -258,12 +256,13 @@ Gemini can use some Connected Apps and certain Google services for your tasks, i
 - These Google Connected Apps and services:
   - Contacts, which include Google Contacts and contact info from your signed-in devices.
   - Gemini Notebook.
+  - Google Pay and Google Wallet.
   - Google Photos. [Learn about Google Photos tasks in Gemini](https://support.google.com/gemini/answer/18116629).
   - Google Workspace, which includes Calendar, Docs, Drive, Gmail, Keep, Sheets, Slides, and Tasks. [Learn which actions are supported](#workspace_actions).
   - Google Search services, which includes Search, Finance, Flights, Hotels, and Maps.
   - YouTube.
 - Several third-party apps.
-- Sign in with Google, with your confirmation.
+- Sign in with Google or Google Password Manager, with your confirmation.
 
 To check which Connected Apps are available for tasks, [review the Connected Apps list](https://support.google.com/gemini/table/17434654).
 
@@ -328,8 +327,8 @@ How Gemini helps you keep your info safe
 To help reduce [possible risks associated](#agentic_risks) with the use of AI agents, Gemini includes features designed to support safer use and mitigate the likelihood of unintended or potentially harmful actions. While these do not guarantee protection against all risks, these features include:
 
 - **Prompts for user confirmation:** Even if you update your permission preferences, very sensitive actions require your permission each time. Gemini is designed to always ask for your review and confirmation before it completes certain actions, such as:
-  - Sending communications, modifying or deleting your data, making purchases, completing financial transactions, and filling out and submitting web forms.
-  - Signing in to websites using Sign in with Google.
+  - Sending communications, deleting your data, sharing sensitive info, making purchases, completing financial transactions, and filling out and submitting web forms.
+  - Signing in to websites using Sign in with Google or Google Password Manager.
 - **Built-in safety checks for sensitive info:** Even if you set an action or browser permission to “Always allow,” Gemini uses built-in safety checks to help protect your privacy. Gemini pauses and asks for your permission before it shares info you may find sensitive, such as your health information, financial details, or government ID numbers, with a website or connected app.
 - **Prohibited task recognition:** Gemini has safeguards designed to help it recognize and not act on certain types of requests that could be harmful or are outside of its intended purpose, including certain tasks that may violate the [Generative AI Prohibited Use Policy](https://policies.google.com/terms/generative-ai/use-policy).
 - “**Take control” mode:** Gemini may pause and ask you to “take control” of the browser to complete specific actions, including entering specific types of information (such as passwords or payment details).
@@ -378,17 +377,6 @@ To help you get the most out of tasks, it’s helpful to understand the three bu
 - **Example:** Using a "Travel Booking" skill and a "Gmail Writing" skill simultaneously to rebook a room and send a confirmation.
 
 In summary, you define the task (what you want), set the schedules (when it should happen), and provide the skills (how to do it) to complete the work.
-
-What happens if I cancel or downgrade my Google AI subscription?
-
-If you cancel your Google AI subscription or downgrade to a subscription that doesn't support access to Tasks in Gemini, you will lose access to Tasks in Gemini, tasks, and schedules. Your data is retained, but some features are paused or disabled:
-
-- **In-progress tasks** will finish, but are not deleted.
-- **Schedules** will be paused, but not deleted.
-
-To regain access to these features, you’ll need to upgrade or resubscribe to a Google AI subscription that supports Tasks in Gemini. [Learn how to manage your Google AI subscription](https://support.google.com/gemini/answer/14517446).
-
-**Tip:** Skills are available without a Google AI subscription and can be used in your chats.
 
 Where did Spark go? I can't find it.
 

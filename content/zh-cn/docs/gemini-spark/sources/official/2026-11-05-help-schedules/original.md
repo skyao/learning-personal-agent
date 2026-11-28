@@ -1,5 +1,5 @@
 来源：https://support.google.com/gemini/answer/17094710?hl=en
-取文：2026-11-10，直接下载
+取文：2026-11-28，直接下载（浏览器标识）
 
 You can put your workflows on autopilot by adding schedules to your tasks. A schedule acts as the automated trigger for a task, telling Gemini exactly when to step in and execute your instructions. You can set these triggers based on time intervals, like every Monday morning, or based on certain conditions, like when an email arrives in your inbox.
 
@@ -13,17 +13,19 @@ To assign Gemini tasks, you must:
 
 - **Be 18 or over**.
 - **Sign in to the Gemini app with a personal Google Account.** For now, this feature isn’t available if you sign in with a work or school Google Account. [Learn how to sign in to Gemini Apps](https://support.google.com/gemini/answer/13278668).
-- **Have a Google AI Pro or Ultra subscription.** [Learn how to upgrade](https://support.google.com/gemini/answer/14517446).
-- **Have [Keep Activity](https://myactivity.google.com/product/gemini?utm_source=help) on**.
+- **Have [History](https://myactivity.google.com/product/gemini) on**.
 
 **Important:** For now, tasks in Gemini are:
 
-- Available wherever Gemini Apps are supported, except in the European Economic Area, Nigeria, Switzerland, and the United Kingdom.
+- Available without a Google AI subscription in Australia, Canada, India, Japan, South Korea, and the US.
+- Available with a Google AI Pro or Ultra subscription everywhere else Gemini Apps are supported, except in the European Economic Area, Nigeria, Switzerland, and the United Kingdom.
 - Only available in the Gemini mobile app, the Gemini app on Mac, and the Gemini web app at [gemini.google.com](https://gemini.google.com).
 
 ## Types of schedules
 
-Gemini currently supports three types of schedules.
+With a Google AI Pro or Ultra subscription
+
+With a Google AI Pro or Ultra subscription, you can create three types of schedules.
 
 - **Time-based:** schedule tasks to run once, hourly, daily, weekly, monthly, or yearly.
   - For example: “Every day at 7 AM, look through my emails, calendar, and Drive, and let me know what to prioritize for the day”
@@ -33,6 +35,12 @@ Gemini currently supports three types of schedules.
   - For example: “Whenever a new food popup is announced in my city, email me the details and suggest a time on my calendar to check it out.”
 
 While Gemini has improved at monitoring and responding to events more quickly, monitors are still not ideal for tracking fast-moving data or performing time-critical tasks like “Let me know when tickets go on sale immediately so I can buy it.”
+
+[Learn how time-based schedules work with time zones](#schedules_timezones).
+
+Without a Google AI subscription or with Google AI Plus
+
+Without a Google AI subscription, or with Google AI Plus, you can schedule tasks to run up to once a day during a general time window: overnight, daytime, or evening. Once set up, your task runs around the same time within your scheduled time window.
 
 [Learn how time-based schedules work with time zones](#schedules_timezones).
 
@@ -52,7 +60,7 @@ Create a schedule conversationally
 
 Create a time–based schedule using a blank template
 
-The option to create a schedule manually is only available for time-based schedules.
+The option to create a schedule manually is only available for schedules that run at a specific or general time of day. To schedule a task to run at a specific time and more than once a day, you need a Google AI Pro or Ultra subscription.
 
 1. On your computer, go to [gemini.google.com](https://gemini.google.com).
    - On a Mac, you can also open the Gemini app ![](images/img-01-4a5c21.png).
@@ -138,7 +146,7 @@ I can’t create or turn on a schedule
 
 There are a few reasons why you might not be able to create or turn on a schedule.
 
-- **Active schedules limit reached:** The current limit for how many active schedules you can have for tasks is 50. To create or resume a schedule after reaching this limit, first pause or delete an existing one.
+- **Active schedules limit reached:** The current limit for how many active schedules you can have for tasks is 50 with Google AI Pro or Ultra and 10 with Google AI Plus or without a subscription. To create or resume a schedule after reaching this limit, first pause or delete an existing one.
 - **Completed schedule:** You cannot edit or resume a schedule after it’s marked as complete. You can only delete it.
 - **Missing required fields:** If you’re creating a schedule from a template but can’t select “Create,” make sure to fill out all sections: the schedule’s name, when it should run, and instructions for the task.
 
@@ -173,17 +181,6 @@ To help you get the most out of tasks, it’s helpful to understand the three bu
 - **Example:** Using a "Travel Booking" skill and a "Gmail Writing" skill simultaneously to rebook a room and send a confirmation.
 
 In summary, you define the task (what you want), set the schedules (when it should happen), and provide the skills (how to do it) to complete the work.
-
-What happens if I cancel or downgrade my Google AI subscription?
-
-If you cancel your Google AI subscription or downgrade to a subscription that doesn't support access to Tasks in Gemini, you will lose access to Tasks in Gemini, tasks, and schedules. Your data is retained, but some features are paused or disabled:
-
-- **In-progress tasks** will finish, but are not deleted.
-- **Schedules** will be paused, but not deleted.
-
-To regain access to these features, you’ll need to upgrade or resubscribe to a Google AI subscription that supports Tasks in Gemini. [Learn how to manage your Google AI subscription](https://support.google.com/gemini/answer/14517446).
-
-**Tip:** Skills are available without a Google AI subscription and can be used in your chats.
 
 What happens to my schedules if I turn off task mode?
 

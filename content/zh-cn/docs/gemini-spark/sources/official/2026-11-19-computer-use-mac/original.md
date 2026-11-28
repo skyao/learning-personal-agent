@@ -1,0 +1,21 @@
+来源：https://blog.google/innovation-and-ai/products/gemini-app/computer-use-mac/
+取文：2026-11-28，直接下载
+
+*Gemini can now navigate Mac apps and websites in the background to finish complex tasks.*
+
+![Prompting Gemini to take a kid's butterfly sketch, model it, and rig it in Blender](images/img-01-b9c262.webp)
+
+Starting today, computer use in the Gemini app for Mac helps you get multi-step tasks done across your local files, desktop apps, and the web. This saves you time on the repetitive work that normally takes dozens of clicks. Just describe what you need, and Gemini handles the clicking, typing, menus, and forms for you.
+
+Gemini works inside an isolated background window with a live preview right in your chat. Your main screen and cursor remain completely free, so you can keep typing, designing, or taking calls without interruption. Privacy and safety are built in: you choose which apps Gemini can access, watch every step live, pause at any time, and approve key actions before they happen.
+
+Here are a few ways you can start trying it today:
+
+- **Speed up creative workflows:** Batch color-grade photos in your favorite design software or set up complex 3D scenes.
+- **Skip manual form entry:** Extract weights, dimensions, and addresses from local PDFs to fill out multi-box shipping quotes.
+- **Turn live data into ready-to-present decks:** Pull metrics and screenshots from live dashboards across multiple regions and build a presentation in Google Slides.
+- **Batch-list items for sale:** Analyze clothing photos from a local folder, research pricing, log item details, and stage listings on resale platforms.
+
+Computer use is rolling out in English in the U.S. in the Gemini app for Mac.[^1] Download the app at [gemini.google/mac](http://gemini.google/mac) to get started.
+
+[^1]: Requires an Apple Silicon Mac running macOS Sequoia 15.0+. Available for personal Google accounts 18+, available to Google AI Plus, Pro and Ultra users.

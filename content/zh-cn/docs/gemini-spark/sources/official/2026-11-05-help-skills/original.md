@@ -1,5 +1,5 @@
 来源：https://support.google.com/gemini/answer/17094296?hl=en
-取文：2026-11-06，直接下载
+取文：2026-11-28，直接下载（浏览器标识）
 
 You can use skills to create and save custom instructions that can be used across your chats and tasks in Gemini Apps. Instead of re-typing your preferences or uploading the same files, Gemini can automatically use relevant skills or you can specify a skill to use for your task or workflow.
 
@@ -15,9 +15,11 @@ To create and use skills, you must:
 
 - **Be 18 or over.**
 - **Sign in to the Gemini app**. [Learn how to sign in to Gemini Apps](https://support.google.com/gemini/answer/13278668).
-- **Have [Keep Activity](https://myactivity.google.com/product/gemini?utm_source=help) on.**
 
-**Important:** For now, skills are only available in the Gemini mobile app, the Gemini app on Mac, and the Gemini web app at [gemini.google.com](https://gemini.google.com).
+**Important:**
+
+- For now, skills are only available in the Gemini mobile app, the Gemini app on Mac, and the Gemini web app at [gemini.google.com](https://gemini.google.com).
+- Skills work with [Keep Activity](https://myactivity.google.com/product/gemini) off, but features that require it, like Connected Apps, won't be available. For example, skills can’t access Google Workspace services like Google Calendar and Google Drive while Keep Activity is off.
 
 ## Create a skill
 
@@ -213,6 +215,88 @@ Download a skill
 5. Click More ![](images/img-03-f0faa8.png) ![and then](images/img-04-bfcdbc.png) **Download** ![](images/img-18-cd655c.png). This downloads your skill in a `.zip` file.
    - Any Google Drive files and notebooks in your skill aren't included in the download to maintain their live, real-time connection.
 
+## Share skills & manage access
+
+**Important:**
+
+- For now, you can only share and manage access to skills in the Gemini web app at [gemini.google.com](https://gemini.google.com).
+- A skill can only be shared by its owner and individuals with Editor access.
+- For now, skills with a notebook attached can't be shared.
+
+Share a skill
+
+**Important:** If your skill includes files, you’ll also need to share access to those files.
+
+1. On your computer, go to [gemini.google.com](https://gemini.google.com).
+2. On the sidebar, click **Customize** ![](images/img-02-dc4a4e.png) ![and then](images/img-04-bfcdbc.png) **Skills**.
+3. Hover over the skill you want to share.
+4. Click More ![](images/img-03-f0faa8.png) ![and then](images/img-04-bfcdbc.png) **Share skill** ![](images/img-19-c4fa6e.png). This creates a copy of the skill in Google Drive.
+5. Enter the email address you want to share with.
+   - If you use a [work or school account](https://support.google.com/accounts/answer/6250166), you can share with suggested recipients.
+6. Select their access level: **Viewer** or **Editor**.
+7. Optionally:
+   - To set an access expiration date, click the access level ![and then](images/img-04-bfcdbc.png) **Add expiration**. Then next to the expiration date, click Edit expiration ![](images/img-20-01c8d6.png).
+   - To skip sending a notification email, uncheck **Notify people**.
+   - To include a message in the notification email, enter it in the text box.
+8. Click **Send**.
+
+**Tip:** You can share a skill from its details page. At the top, click More ![](images/img-03-f0faa8.png) ![and then](images/img-04-bfcdbc.png) **Share skill**.
+
+#### About access levels
+
+- Editors can:
+  - Share the skill with others
+  - Make changes to the skill’s instructions and uploaded files
+- Viewers can:
+  - Use the shared skill
+  - View the skill’s description, instructions, and uploaded files
+
+Add a shared skill
+
+When the owner shares a skill with you, it’s added as inactive under “All” on your Skills page. You also get an email notification if the owner chose to notify you.
+
+1. Go to the email about the shared skill.
+2. Click **Open** to open the skill in Gemini.
+3. At the top, click **Add skill**.
+   - This adds the skill to your Skills page with a Shared icon ![](images/img-21-3bf806.png).
+   - You can use a shared skill in a chat by entering `@` and selecting it.
+   - Gemini can automatically use active shared skills when they’re relevant.
+   - If you have a skill with the same name, you can:
+     - Choose to save a copy. Copies don’t automatically sync when the original skill is updated.
+     - Change the name if you have edit access, or ask the owner to change it if you don’t. This changes the name for everyone with access.
+
+**Tip:** After you add a skill with "Viewer" access, you can request edit access. On the Skills page, click the skill, and at the top, click **Request edit access**.
+
+Remove someone’s access to a shared skill
+
+1. On your computer, go to [gemini.google.com](https://gemini.google.com).
+2. On the sidebar, click **Customize** ![](images/img-02-dc4a4e.png) ![and then](images/img-04-bfcdbc.png) **Skills**.
+3. Hover over the skill you want to remove access to.
+4. Click More ![](images/img-03-f0faa8.png) ![and then](images/img-04-bfcdbc.png) **Share skill** ![](images/img-19-c4fa6e.png).
+5. Next to the individual’s name, click **Viewer** or **Editor** ![and then](images/img-04-bfcdbc.png) **Remove access**.
+6. Click **Save**.
+
+Transfer ownership of a shared skill
+
+As the owner of a skill, you can transfer ownership to anyone that it’s been shared with. If you haven’t already, first [share the skill](#share_skill) with the new owner. Then, transfer ownership.
+
+1. On your computer, go to [gemini.google.com](https://gemini.google.com).
+2. On the sidebar, click **Customize** ![](images/img-02-dc4a4e.png) ![and then](images/img-04-bfcdbc.png) **Skills**.
+3. Hover over the skill you want to transfer ownership for.
+4. Click More ![](images/img-03-f0faa8.png) ![and then](images/img-04-bfcdbc.png) **Share skill** ![](images/img-19-c4fa6e.png).
+5. Next to the new owner’s name, click **Viewer** or **Editor** ![and then](images/img-04-bfcdbc.png) **Transfer ownership**.
+
+Delete or remove a shared skill
+
+**Important:** If you delete a shared skill as the owner, it's permanently removed for everyone. If you aren't the owner, deletion of a skill removes it for you only.
+
+1. On your computer, go to [gemini.google.com](https://gemini.google.com).
+2. On the sidebar, click **Customize** ![](images/img-02-dc4a4e.png) ![and then](images/img-04-bfcdbc.png) **Skills**.
+3. Click the skill you want to delete or remove.
+4. At the top, click More ![](images/img-03-f0faa8.png) ![and then](images/img-04-bfcdbc.png) **Delete** ![](images/img-17-23ae4d.png).
+
+**Tip:** To keep a skill for later, deactivate it instead. If you deactivate a shared skill, it only affects you. Others can still use and update it.
+
 ## Common questions
 
 What's the difference between a task, schedule, and skill?
@@ -235,17 +319,6 @@ To help you get the most out of tasks, it’s helpful to understand the three bu
 - **Example:** Using a "Travel Booking" skill and a "Gmail Writing" skill simultaneously to rebook a room and send a confirmation.
 
 In summary, you define the task (what you want), set the schedules (when it should happen), and provide the skills (how to do it) to complete the work.
-
-What happens if I cancel or downgrade my Google AI subscription?
-
-If you cancel your Google AI subscription or downgrade to a subscription that doesn't support access to Tasks in Gemini, you will lose access to Tasks in Gemini, tasks, and schedules. Your data is retained, but some features are paused or disabled:
-
-- **In-progress tasks** will finish, but are not deleted.
-- **Schedules** will be paused, but not deleted.
-
-To regain access to these features, you’ll need to upgrade or resubscribe to a Google AI subscription that supports Tasks in Gemini. [Learn how to manage your Google AI subscription](https://support.google.com/gemini/answer/14517446).
-
-**Tip:** Skills are available without a Google AI subscription and can be used in your chats.
 
 How do I recreate my Gems as skills?
 
