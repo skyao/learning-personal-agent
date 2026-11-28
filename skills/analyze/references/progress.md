@@ -18,7 +18,7 @@
 | gemini-spark | 11-10 | 11-10 | 11-10 | 11-10 | 11-10 | 11-10 | 11-10 | 11-10 | 11-10 | 11-10 | 11-10 | — | 11-10 |
 | instinct | 11-13 | 11-13 | 11-13 | 11-13 | 11-13 | 11-13 | — | 11-13 | 11-13 | 11-13 | 11-13 | 11-13 | 11-13 |
 | workbuddy | 11-10 | 11-10 | 11-10 | 11-10 | 11-10 | 11-10 | — | 11-10 | 11-10 | 11-10 | 11-10 | 11-10 | 11-10 |
-| microsoft-autopilot | 11-10 | 11-10 | 11-10 | 11-10 | 11-10 | 11-10 | — | 11-10 | 11-10 | 11-10 | 11-10 | 11-10 | 11-10 |
+| microsoft-autopilot | 11-28 | 11-28 | 11-28 | 11-28 | 11-28 | 11-28 | — | 11-28 | 11-28 | 11-28 | 11-28 | 11-28 | 11-28 |
 | poke | 11-09 | — | — | 11-09 | 11-09 | 11-09 | — | — | 11-09 | — | 11-09 | 11-09 | 11-09 |
 
 ## 主题维度
@@ -119,8 +119,8 @@
 | 2026-11-14 | poke | 第二份独立实测、用户自己的实测（`exploration/` 为空）、长期使用记录；2026-03-19 之后的问题记录；Product Hunt 一周评测 | 目前只有 /docs/poke/sources/media/2026-09-09-unite-ai-poke-review；发布说明 03-19 起只记重大更新 |
 | 2026-11-14 | poke | Free、Pro 额度数值；各渠道的地区可用性（WhatsApp 在何处恢复、RCS 与 SMS 的关系）；Apple 迁移比例 | /docs/poke/sources/official/2026-11-09-docs-usage-and-resets、/docs/poke/sources/official/2026-07-23-docs-release-notes |
 | 2026-11-14 | poke | 加入 Cognition 后的变化（SWE-1.7、与 Devin 整合）；2026-08 以后的媒体报道 | /docs/poke/sources/media/2026-07-24-techcrunch-why-cognition-bought-poke |
-| 2026-11-14 | microsoft-autopilot | 更名后 Autopilot 本身的文档：云端计算机规格与持久化、权限模型、隐私与数据驻留条款、默认模型；桌面应用是否保留 | Learn 文档截至 11-10 仍全部描述 Scout 桌面应用；只有 /docs/microsoft-autopilot/sources/official/2026-09-25-new-copilot-home-code-autopilot；Ignite 11-17 至 20 |
-| 2026-11-14 | microsoft-autopilot | 按用量计费（UBB）的单价；是否仍需 GitHub Copilot 席位与 Microsoft 365 Copilot 许可证 | 9 月博文的定价链接 aka.ms/Sept25/EvolvingModel 未收；各方列出的前提不一 |
+| 2026-11-14 | microsoft-autopilot | 更名后 Autopilot 本身的文档：云端计算机规格与持久化、权限模型、隐私与数据驻留条款、默认模型；桌面应用是否保留 | Learn 文档截至 11-10 仍全部描述 Scout 桌面应用；只有 /docs/microsoft-autopilot/sources/official/2026-09-25-new-copilot-home-code-autopilot；Ignite 11-17 至 20。2026-11-28 增量：Ignite 后的 Autopilot Learn 文档已补上运行环境、权限、隐私、模型，桌面应用去留与云端规格仍缺 |
+| 2026-11-14 | microsoft-autopilot | 按用量计费（UBB）的单价；是否仍需 GitHub Copilot 席位与 Microsoft 365 Copilot 许可证 | 9 月博文的定价链接 aka.ms/Sept25/EvolvingModel 未收；各方列出的前提不一。2026-11-28 增量：前提已明确为 Microsoft 365 Copilot 许可证加支出策略，不再要 GitHub Copilot；单价仍缺 |
 | 2026-11-14 | microsoft-autopilot | 对外开放后的用户数、组织数；完成率等量化数据；9 月后的实测与长期使用报告 | 规模只有 GeekWire 05-01 的内部数字；实测只有 /docs/microsoft-autopilot/sources/community/2026-06-06-copilotatwork-scout-not-just-assistant |
 | 2026-11-14 | microsoft-autopilot | 提示注入防护的测试或独立审计；The Register、Fortune、Gizmodo 等原文 | dSebastien 综述中均为转述，见 /docs/microsoft-autopilot/sources/community/2026-11-04-dsebastien-microsoft-autopilot |
 | 2026-11-15 | instinct | 官方资料：只有官网首页，没有帮助中心、文档站；功能、审批规则、安全机制都靠转述 | 创始人和公司在 X 上的公告（群聊、Concierge、邮箱、可信网络的原帖） |
@@ -136,6 +136,12 @@
 | 2026-11-15 | muse | 美联航运输合同修订原文（Rule 1、5.H、6.J.6）与 WSJ 原报道 | /docs/muse/sources/community/2026-11-13-united-bans-agent-booking 称条款文字来自二手报道 |
 | 2026-11-15 | muse | Muse Ember 的官方发布稿；印度 2027 年初上线的 Meta 一手说法 | /docs/muse/sources/community/2026-11-12-muse-on-apple-watch-wear-os、/docs/muse/sources/community/2026-11-14-muse-phone-calls-paid-rollout |
 | 2026-11-15 | muse | AI 眼镜语音隐私声明美国版与英国版原文 | /docs/muse/sources/community/2026-11-09-muse-on-glasses-beta 作者对照阅读 |
+| 2026-11-28 | microsoft-autopilot | Autopilot 云端版的独立实测、用户反馈、长期使用记录；任何口径的完成率 | 目前只有官方文档与 Ignite 报道；/docs/microsoft-autopilot/sources/media/2026-11-17-neuron-ignite-autopilot-today 称关注几周后的表现 |
+| 2026-11-28 | microsoft-autopilot | Copilot Credits 单价、Autopilot 典型消耗与最终打包方案；GA 时间与美国以外的开放计划 | /docs/microsoft-autopilot/sources/official/2026-11-28-autopilot-product-page 称 GA 前公布 |
+| 2026-11-28 | microsoft-autopilot | 云端计算机规格与持久化；MXC 在 Autopilot 中隔离什么；「会话可在受管设备本地运行」的设置 | 后者只见 /docs/microsoft-autopilot/sources/media/2026-11-20-redmondmag-autopilot-rollout（引 Microsoft Mechanics 演示，演示本身未收） |
+| 2026-11-28 | microsoft-autopilot | 自动审查模型的型号与误判率；应用卡评估的定量结果；独立安全审计 | /docs/microsoft-autopilot/sources/official/2026-11-17-autopilot-application-card 称不公布通过率 |
+| 2026-11-28 | microsoft-autopilot | OpenAI 子处理时的保存期限与处理地点；eDiscovery、保留覆盖 Autopilot 的时间表 | /docs/microsoft-autopilot/sources/official/2026-11-17-autopilot-admin-configure |
+| 2026-11-28 | microsoft-autopilot | Scout 桌面应用在 Autopilot 推出后的去留与迁移；Microsoft Mechanics 演示（Adam Sheppard） | /docs/microsoft-autopilot/sources/official/2026-11-17-autopilot-requirements 只说不要沿用桌面预览的说明 |
 
 ## 分析中发现的资料页问题
 
@@ -244,3 +250,9 @@
 | 2026-11-15 | /docs/industry/sources/community/2026-10-10-pap-personal-agent-protocol-deep-dive | 日期 10-10，原文称「规范今天已发布」，读的应是 1.0 之前的预览版，摘要「通读 PAP 规范全文」未注明版本 | 2026-11-15 收录说明注明读的是 1.0 之前的版本 |
 | 2026-11-15 | /docs/industry/sources/community/2026-11-13-releasing-personal-agent-protocol-1-0 | products 含 instinct、manus-cue，依据只是设计伙伴名单（Instinct 首批，Cue、Manus 在新增名单中） | 2026-11-16 products 去掉 instinct、manus-cue（用户决定） |
 | 2026-11-15 | /docs/muse/sources/community/2026-11-13-united-bans-agent-booking | 标签「商业与规模」依据弱：正文没有 Muse 的用户或收入数字，与商业相关的只有美联航「不想要中间商」的立场 | 无需改：按整篇判断，航空业对智能体分销的立场属商业话题，可保留 |
+| 2026-11-28 | /docs/industry/sources/media/2026-11-15-ai-agent-usage-limits-compared | products 含 microsoft-autopilot，但正文（original.md 无 Autopilot 一词）只讲消费级 Microsoft 365 Copilot 套餐，与企业版 Autopilot 不是同一商品；products 依据弱 | 待用户决定；分析中只作消费级 Copilot 对照 |
+| 2026-11-28 | /docs/microsoft-autopilot/sources/official/2026-10-30-whats-new-copilot-october-2026 | 称 Autopilot「跨用户的本地文件和它自己的远程计算机运行」，11-17 后的应用卡、要求页、FAQ 都称无法访问本地文件夹或应用；页面为第 5 版（11-13 修改），保留理由仍写「Learn 文档仍只描述 Scout 桌面应用」，已过时 | 无需改：官方两处说法不一，运行环境页并列；保留理由可由收集一侧酌情更新 |
+| 2026-11-28 | /docs/industry/sources/media/2026-11-18-uctoday-autopilot-vs-personal-agents | 称微软未说明 Autopilot 是否需要 Microsoft 365 Copilot 许可证或消耗 Copilot Credits，与同期 Learn 要求页不符 | 无需改：原文如此，开放与价格页注明 |
+| 2026-11-28 | /docs/microsoft-autopilot/sources/media/2026-11-20-redmondmag-autopilot-rollout | 「会话仅限云端或可在受管设备本地运行」「设置决定某些操作可否自动批准」两处，与 Learn 文档（无法访问本地、自动审查无管理员设置）不一致，出处为未收的 Microsoft Mechanics 演示 | 无需改：原文如此，运行环境页与安全页并列 |
+| 2026-11-28 | /docs/microsoft-autopilot/sources/official/2026-11-28-autopilot-product-page | 推出对象写「拥有 Microsoft Copilot、Agent 365 和按用量计费策略的客户」，要求页与 MC1557730 未把 Agent 365 列为前提 | 无需改：官方两处说法不一，开放与价格页并列 |
+| 2026-11-28 | /docs/microsoft-autopilot/sources/official/2026-11-17-autopilot-admin-configure | 写「激活向导的五个步骤」，表格列六行 | 无需改：原文（original.md 第 70 行 five steps）如此 |
