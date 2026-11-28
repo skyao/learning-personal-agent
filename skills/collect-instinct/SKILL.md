@@ -13,7 +13,7 @@ description: 收集 Instinct（Spear Street Technology，创始人 Noah Shinn）
 | --- | --- |
 | 产品目录 | `content/zh-cn/docs/instinct/` |
 | 时间线 | 2025 年创立；2026-02 起私人测试（邀请制，至 2026-11 仍未公开开放）；2026-08 下旬在湾区走红，08-27 前后 2.5 亿美元 B 轮（25 亿美元估值）；09-28 宣布 10 亿美元 C 轮（100 亿美元估值） |
-| 最后收集日期 | 2026-11-28（美东；增量：媒体 3 篇——TechCrunch 专属邮箱（09-09）、Instinct Selections 商品推荐（09-30）、The Verge Allison Johnson 上手实测（10-09），都是此前检索漏掉的；官网首页原文更新（入口改为「Text Instinct」））；2026-11-10（增量：补收媒体 1 篇——TechCrunch 群聊上线（10-05）；社区 1 篇——Z Finance 的 Noah Shinn 访谈中文整理（09-30），两篇都是第一轮检索漏掉的）；2026-11-05（美东；第一轮：官方 1 篇、媒体 5 篇） |
+| 最后收集日期 | 2026-11-28（美东；增量：媒体 3 篇——TechCrunch 专属邮箱（09-09）、Instinct Selections 商品推荐（09-30）、The Verge Allison Johnson 上手实测（10-09），都是此前检索漏掉的；官网首页原文更新（入口改为「Text Instinct」）；补查 11 月：合作方公告 2 篇——Zocdoc 预约挂号合作新闻稿（10-29，Wayback 快照）、Plaid 金融账户连接博客（11-18））；2026-11-10（增量：补收媒体 1 篇——TechCrunch 群聊上线（10-05）；社区 1 篇——Z Finance 的 Noah Shinn 访谈中文整理（09-30），两篇都是第一轮检索漏掉的）；2026-11-05（美东；第一轮：官方 1 篇、媒体 5 篇） |
 | 实测材料 | 没有：旧笔记 learning-ai-agent 没有 Instinct 目录 |
 
 ## 背景
@@ -21,6 +21,7 @@ description: 收集 Instinct（Spear Street Technology，创始人 Noah Shinn）
 - 旧金山初创公司，正式名称 Spear Street Technology, Inc.；创始人兼 CEO Noah Shinn，前 Sierra 研究科学家（Reflexion 论文第一作者、τ-bench 合著者）。
 - 产品没有独立 App：用户通过短信、iMessage、WhatsApp 或电话交互，网页工作区在 `app.instinct.com`；智能体使用自己的虚拟手机和电脑执行任务。
 - 2026-09 起陆续宣布的功能：专属邮箱（09-08，`mail.instinct.com` 领取）、Instinct Selections 人工策展的商品推荐（09-29 前后，引起部分用户反感）、电话礼宾（Concierge，09-16 前后）、Instinct-to-Instinct 信任网络与 iMessage 位置共享（09-28 C 轮公告）、群聊（10-05 早期访问，10-27 起对所有 iMessage 用户开放，据二手报道）。这些公告多发在 X 上，原帖取不到时以可靠媒体的转述为准。
+- 合作接入：Stripe 支付（2026-08）、1Password 登录（2026-09）、Zocdoc 预约挂号（10-29 公告，经 Zocdoc 的 MCP server；Instinct 方署名为首席商务官 Ben Schwerin）、Plaid 只读金融账户（11-18）。
 - 2026-11-01 WhatsApp 渠道中断约半天，Noah Shinn 11-02 解释为己方配置错误导致向某服务商的付款中断；只见到聚合站报道（analyticsinsight、newsbytes、officechai、theoutpost 等），未收。
 
 ## 收录范围
@@ -37,11 +38,13 @@ description: 收集 Instinct（Spear Street Technology，创始人 Noah Shinn）
 | 官网 | `instinct.com`（早期为 `instinct.co`） | 首页一段介绍 | 直接下载，首页文字在静态 HTML 中；`/blog`、`/faq` 返回空的应用壳，`sitemap.xml` 只有首页，`docs.`、`help.` 子域不存在（2026-11-05）。2026-11-28：sitemap 增加 `/blog`（「No posts yet」）、`/status`（脚本渲染，静态 HTML 只有「Checking Instinct's status…」）、`/acceptable-use-policy`（法律文档，不收）；以后先看 `/blog` 有没有文章。首页比对时，新抽取结果的一级标题带粗体、示例旁有图标，与存档写法不同，不算实质变化 |
 | Business Wire | `businesswire.com/news/home/20260928153437/en/...`（C 轮公告） | 融资与新功能 | businesswire.com 返回 403；北欧分发平台（via.tt.se 等）站内检索不可用，Wayback 查询当时返回 429，以后再试 |
 | X | 公司与 Noah Shinn（@noahrshinn）的帖子 | 功能公告 | 不能直接抓取；只在可靠媒体转述或嵌入时引用 |
+| 合作方公告 | Plaid 博客 `plaid.com/blog/`、Zocdoc 新闻室 `zocdoc.com/about/news/` 等 | 接入合作的一手公告，常带合作方披露的使用数据 | 按第三方公司博客的先例（Sierra、DataDome）放 `community/`。Plaid 可直接下载；Zocdoc 原站返回 403，用 Wayback 快照（转载全文） |
 | 播客 | Colossus「Invest Like the Best」第 493 期 `colossus.com/episode/instinct-the-personal-agent/` | 创始人长访谈 | 节目页可直接下载；完整文字稿需要登录，只公开开头一段，按节目页文字收（节选）。Colossus 的节目地址可从 `colossus.com/podcast_episode-sitemap*.xml` 查 |
 
 ## 媒体与社区检索
 
 - 英文检索词：`Instinct AI agent`、`Instinct Noah Shinn`、`Instinct personal assistant iMessage`
+- **11 月以后 Instinct 自己几乎不发公告，新动态多由合作方发布**：检索要加 `Instinct partnership`、`Instinct Plaid`、`Instinct Zocdoc` 这类词，并看行业媒体（医疗的 Fierce Healthcare、HLTH，金融的 PYMNTS、FF News）。2026-11-28 第一遍只按产品名检索，漏掉了 Zocdoc 和 Plaid 两篇，用户追问后补查才找到。
 - 「Instinct」是常见词，检索时要带 AI、agent 或 Noah Shinn。
 - **TechCrunch 标签 RSS** `techcrunch.com/tag/instinct/feed/` 一次列出全部 Instinct 稿件的标题与日期（2026-11-28 用它发现了两篇漏收；尾部混有 2008–2009 年同名手机的旧稿，忽略）。
 - The Verge 月度 sitemap `theverge.com/sitemaps/entries/<年>/<月>` 可直接下载，`grep instinct` 找稿件地址。
@@ -99,6 +102,12 @@ description: 收集 Instinct（Spear Street Technology，创始人 Noah Shinn）
 | The Verge「Zuck accelerated Muse launch in response to Instinct.」（Thomas Ricker，10-09，短讯）、Vergecast「How much should you tell your AI agent?」（10-06） | 不收：短讯转述；多话题播客 |
 | WhatsApp 中断（11-01/02）各稿 | 不收：只有聚合站 |
 | every.to 多产品横评、Business Insider Japan「2610-ai-agents-muse-dot-instinct-test-review」、HackerNoon 两篇多产品比较 | 属行业综合，留给行业综合检索判断 |
+| 补查：Zocdoc 新闻稿「Zocdoc Brings Seamless, Real-Time Appointment Booking to Instinct」（10-29） | 收（community）：合作方一手公告；原站 403，按 Wayback 20261116 快照收 |
+| 补查：Plaid 博客「Instinct gets the full financial picture with Plaid」（Kathleen McGuirk，11-18） | 收（community）：合作方一手公告，含接入后的使用数据 |
+| Fierce Healthcare「Zocdoc opens infrastructure to AI agents, launches partnership with Instinct」（11-02） | 不收：主要写 Zocdoc 向所有智能体开放，Instinct 部分复述新闻稿；Healthcare Dive、MobiHealthNews 返回 403，HLTH 是短讯 |
+| PYMNTS、FF News、artiverse 等 Plaid 合作稿 | 不收：复述 Plaid 博客 |
+| Instinct 使用条款 11-17 修订（据 katteb、myclaw 转述：目前免费，保留以后收费的权利） | 不收：法律文档；有可靠媒体报道条款变化时再收 |
+| 新加坡 CSA 等机构关于个人 AI 智能体的提示（11-06） | 属行业综合，留给行业综合检索 |
 | letsdatascience、progressiverobot、runtimewire、dapta、cellcog、hundredlabs、myclaw、eesel 等 | 不收：聚合站与 SEO 站 |
 
 ## 命名约定
