@@ -14,7 +14,7 @@ description: 收集 OpenAI dots（ChatGPT 中始终在线的个人智能体）�
 | 产品目录 | `content/zh-cn/docs/dots/` |
 | 发布日期 | 2026-09-29（OpenAI DevDay 2026 前后发布） |
 | 最后收集日期 | 2026-11-28（美东；增量：官方 5 篇——ChatGPT Wallet 发布文、帮助文章 20001654、发布说明 11-13 条目，What's new 首页 11-09–13 周「自定义指令」与补收的 10-12–16 周「iOS 小组件与快捷指令」；媒体、社区 0 篇）；2026-11-10（增量：What’s new 11 月 2–6 日周汇总 1 篇，全文就是一条 dots 更新：GPT-6.1 Terra 成为驱动模型之一、Enterprise/Edu/Healthcare 可开启、11-18 起计费）；2026-11-06（对照旧笔记补收社区 1 篇：Cyera）；2026-11-05（第一轮完成：官方、媒体、社区）。第二轮起按新流程：原文存 `original.md`，资料页只写摘要与保留理由，不翻译 |
-| 页面格式 | 与所有产品一致，见 collect-sources 的 source-page.md「页面正文」。第一轮直接翻译的旧页面已于 2026-11-06 补上内容摘要、保留理由和分隔线（用户 2026-11-06 要求） |
+| 页面格式 | 与所有产品一致，见 collect-sources 的 source-page.md「页面正文」。第一轮直接翻译的旧页面已于 2026-11-06 补上内容摘要、保留理由和分隔线（用户 2026-11-06 要求）；其中 learn.chatgpt.com 的 9 页文档已于 2026-11-28 补存 `original.md` |
 | 实测材料 | 用户确认没有（2026-11-05） |
 
 ## 收录范围
@@ -155,10 +155,13 @@ community.openai.com 的 Dots 分类帖子量大，以 bug 报告和功能请求
 | What's new 首页 10-12–16 周「Open your dot from iOS widgets and Shortcuts」 | 节选收（补收）：没有专稿和周汇总页，此前漏收 |
 | What's new「GPT-6.2」（11-17，gpt-62-astra-sol） | 不收：模型发布，全文不提 dots |
 | 发布说明 11-10「Retiring Advanced and Standard Voice」「Business Hub」、11-16 Clinicians | 不收：与 dots 无关 |
-| Commerce Partner Playbook（developers.openai.com/commerce） | 未收：面向商家的 Wallet 接入指南，不专讲 dots；按「边缘资料」处理，报告中列出由用户决定 |
+| Commerce Partner Playbook（developers.openai.com/commerce） | 不收：面向商家的 Wallet 接入指南，不专讲 dots（用户 2026-11-28 决定） |
 | Android Authority、9to5Mac、TestingCatalog、gori.me、TechNews 科技新报、品玩、IT之家（经凤凰网）等 Wallet 报道 | 不收：复述发布文；品玩称 Wallet 也支持 ChatGPT Work 与 Codex，与帮助文章「只在 dot 对话中可用」相反 |
 | pasqualepillitteri.it「ChatGPT Wallet Is the Missing Piece for OpenAI's dots」等多语种版本 | 不收：发布前的推测文 |
 | 社区论坛「Is GPT-6.2 Extra High Actually Thinking?」（11-24，1419981） | 不收：讨论的是 ChatGPT 中的 GPT-6.2，只有一条回复主观提到 dots 子智能体「像 instant」，没有观察到具体模型 |
 | 社区论坛「Feature request: Show the model used by each Dot and let me choose it」（11-27，1421573） | 不收：功能请求；作者明确说无法确认 dot 用了哪个模型 |
 | 社区论坛 11-07 以后的其余 Dots 帖子（停止响应、Windows 无法续接、语音通话、唤醒词等） | 不收：bug 报告与功能请求 |
-| learn.chatgpt.com 的 dots 文档 6 页与企业文档 3 页 | 仍待用户决定（见 2026-11-10）：11-09–13 周的自定义指令链接到「控制」页，说明文档又有更新 |
+| learn.chatgpt.com 的 dots 文档 6 页与企业文档 3 页 | 已按新流程重做（用户 2026-11-28 决定）：9 页都补存 `original.md`、`fidelity` 改为「全文」。7 页有实质变化，旧译文删去、改回「待翻译」、摘要按新版重写；getting-started、cloud-local-access 比对后没有实质变化，保留译文。主要变化：Microsoft Teams 渠道从所有页面撤下；短信扩到加拿大、墨西哥；可连多台电脑；新增自定义指令、页面与文件标注、iOS 分享回复；Access 加入 Plus 与 Business Standard，企业版 11-18 起默认开启；安全页撤下「OpenAI 如何评估模型安全防护」整节，存储驻留加入阿联酋；Wallet 写进控制、安全、管理员三页。每页的具体变化记在 `dateNote` |
+| Commerce Partner Playbook | 不收（用户 2026-11-28 决定） |
+
+今后这 9 页的比对：抽取新版存为临时文件，与 `original.md` 做 diff；有新增或改写时按 source-page.md 的「原文更新」处理。界面示意组件的整理方式会让 diff 出现噪声，先看标题列表和 Teams、套餐、地区这类关键词的变化。
