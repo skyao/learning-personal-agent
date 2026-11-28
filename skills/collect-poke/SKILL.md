@@ -12,8 +12,8 @@ description: 收集 Poke（The Interaction Company of California，2026-07 起�
 | 项目 | 值 |
 | --- | --- |
 | 产品目录 | `content/zh-cn/docs/poke/`（2026-11-09 建立） |
-| 时间线 | 2025-09-08 公开发布并宣布 1500 万美元种子轮（General Catalyst 领投，估值 1 亿美元；据官方新闻稿与领投方文章）；2026-03 TechCrunch 称「publicly launched in March」，与 2025-09 的发布说法并存，按原文照录不作判断；2026-04-08 TechCrunch 报道追加 1000 万美元、投后估值 3 亿美元；2026-06-04 成为首个获准上 Apple Messages for Business 的 AI 智能体；2026-07-23 Cognition 宣布「welcoming」The Interaction Company，产品照常运营 |
-| 最后收集日期 | 2026-11-10（增量：官网、价格页与文档比对无实质变化；媒体未见 11 月新报道）；2026-11-09（美东；第一轮：官方 13 篇、媒体 4 篇、社区 1 篇，industry 1 篇；旧笔记 learning-ai-agent 的 Poke 资料索引已逐条对照，隐私声明按 tracking.md 不收） |
+| 时间线 | 2025-09-08 公开发布并宣布 1500 万美元种子轮（General Catalyst 领投，估值 1 亿美元；据官方新闻稿与领投方文章）；2026-03 TechCrunch 称「publicly launched in March」，与 2025-09 的发布说法并存，按原文照录不作判断；2026-04-08 TechCrunch 报道追加 1000 万美元、投后估值 3 亿美元；2026-06-04 成为首个获准上 Apple Messages for Business 的 AI 智能体；2026-07-23 Cognition 宣布「welcoming」The Interaction Company，产品照常运营；2026-11-17 发布说明与首页推广 Cognition 的 Devin Bots（在 Apple Messages 上向 Poke 争取免费额度） |
+| 最后收集日期 | 2026-11-28（美东；增量：官方 2 篇原文更新——发布说明页首新增 11-17「Devin Bots」条目、首页横幅改为「Introducing Devin Bots」并新增推广卡片，均改回待翻译；其余 10 个官方页面无实质变化；媒体与社区未见 11 月新报道）；2026-11-10（增量：官网、价格页与文档比对无实质变化；媒体未见 11 月新报道）；2026-11-09（美东；第一轮：官方 13 篇、媒体 4 篇、社区 1 篇，industry 1 篇；旧笔记 learning-ai-agent 的 Poke 资料索引已逐条对照，隐私声明按 tracking.md 不收） |
 
 ## 背景
 
@@ -39,6 +39,7 @@ description: 收集 Poke（The Interaction Company of California，2026-07 起�
 | 新闻稿 | WebWire `ViewPressRel.asp?aId=343533` | 2025-09-08 发布新闻稿 | 页面是 Windows-1252 编码，先 `iconv -f windows-1252 -t utf-8` 再抽取 |
 | Cognition 博客 | `cognition.com/blog/interaction` | 2026-07-23 加入 Cognition 的公告 | curl 直接下载 |
 | Poke Kitchen | `poke.com/kitchen` | 开发者 recipe、API key | 需要登录，不收；说明见文档 Creating Recipes 与 API |
+| Devin Bots 推广页 | `poke.com/bots` | 2026-11 的限时活动：在 Apple Messages 上向 Poke 说明想法，争取 Devin Bot 免费额度 | 不收（见「已知问题」） |
 | X 账号 | `x.com/interaction` | 发布公告（如 2026-03 上线、2026-06-04 Apple Messages） | X 不能自动读取，不收；需要时引用报道中的嵌入推文 |
 
 ## 媒体与社区检索
@@ -61,6 +62,12 @@ description: 收集 Poke（The Interaction Company of California，2026-07 起�
 - 中文报道多是编译（智东西/新浪、IT之家、iThome），复述 TechCrunch，不收。9to5Mac、AppleInsider 的 06-04 报道复述官方公告，不收。
 - Unite.AI 评测有多语言机器翻译版（`/zh-cn/`、`/ja/` 等），收英文原文，中文版记入 `altUrls`。
 - 第三方「研究」页（rywalker.com/research/poke）只是在复述官网和 FAQ，没有新信息，不收。
+
+## 比对已收页面
+
+- 官方页面（文档 7 页、首页、价格、FAQ、Cognition 公告）用一个脚本批量下载、`extract.py` 抽取，再与 `original.md` 去掉开头两行后比对。新抽取结果有三类格式差异，不是原文变化，比对前先归一化：标题带站内锚点链接（`## [标题](#锚点)`，用 `sed -E 's/^(#+) \[(.*)\]\(#[^)]*\)$/\1 \2/'` 去掉）、页面标题是一级标题（存档里已降为普通文本）、站内链接是相对地址（存档里已改成绝对地址）；x.com 链接的 `?s=20` 是跟踪参数，存档里已去掉。
+- 首页的桌面版、手机版头图和推文轮播重复，存档只留一份；比对时去掉标题符号、图片和链接地址，只比文字行，差异集中在头部几行时，在存档原位置手工插入新内容，不整页重存。价格页新抽取结果多出手机版套餐切换区块（内容与对比表重复），也不算变化。
+- 2026-11-28 判断记录：发布说明 11-17 条目只在页首追加，保留旧译文、只补译新增；首页新增内容在中间（横幅替换、头图后的卡片），按 source-page.md 删去旧译文、整页重译。`poke.com/bots` 推广页主要介绍 Devin Bots 的编程与浏览器能力，跟 Poke 相关的只有「Convince Poke how many free credits you deserve. Available on Apple Messages only.」一句，按「只讲 Devin 的不收」处理，这次活动由发布说明与首页的更新记录。`docs.devin.ai/work-with-devin/bots/imessage.md`（Devin Bot 的 iMessage 接入）不提 Poke，不收。媒体检索只见 6–7 月旧报道的复述（letsdatascience、startupfortune、gadgethacks、beebom、mezha 等），不收。
 
 ## 命名约定
 
