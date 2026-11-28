@@ -96,6 +96,7 @@ description: 收集 Manus Cue（Manus / Butterfly Effect）的资料时使用：
 - App Store 内购列表 2026-11-28 版本：Cue Plus 20 美元、Cue Pro 100 美元、Cue Max 200 美元、Cloud Computer 39 美元、各国号码 9.99 美元；11-05 版本没有 Cue Plus，Cue Max 还有 2000 美元一档。
 
 - 电话号码价格：App Store 内购列表（2026-11-05）各国号码均为 9.99 美元；xiangxiang103 在发布次日看到美国号码 0.99 美元/月，53AI 博主称首批 0.99 美元、之后 9.99 美元，可能是早期优惠。App Store 还列出 Cue Pro 100 美元、Cue Max 200 美元与 2000 美元、Cloud Computer 39 美元，不写计费周期；应用介绍说获得资格后免费附带 Plus。
+- 电话号码价格的第三个数字：硅星人实测（`media/2026-09-29-guixingren-manus-2-cue`）第 1 张截图是 Cue 注册引导的「Choose my number」界面，新加坡 +65 号码标「USD 3.99 / month」（发布次日的截图）。与 App Store 内购的 9.99 美元、xiangxiang103 看到的美国号码 0.99 美元/月都不同，可能因国家或时期而异；截图里的价格没有写进该页摘要，分析时对照（2026-11-28 补图时发现）。
 - Google Play 介绍文字会随版本改动（例如 10-08 版写「depending on availability」，11-04 版已删）。
 
 ## 命名约定
