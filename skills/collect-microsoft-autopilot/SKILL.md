@@ -13,7 +13,7 @@ description: 收集 Microsoft Autopilot（原 Microsoft Scout，微软）的资�
 | --- | --- |
 | 产品目录 | `content/zh-cn/docs/microsoft-autopilot/`（2026-11-10 建立） |
 | 时间线 | 2026-06-02 Build 2026 以 Microsoft Scout 之名发布，是微软首个「Autopilot」类智能体，经 Frontier 计划实验性提供；2026-09-25 微软博客称其为 Autopilot（formerly Scout），同月底扩大私有预览 |
-| 最后收集日期 | 2026-11-14（按 analyze/progress.md 的资料缺口补收：官方 4 篇、媒体 2 篇，见「第二轮判断记录」；Ignite 11-17 至 20 尚未举行）；2026-11-10（增量复查：无新资料；Ignite 2026-11-17 至 20 举行，下一轮重点看 Autopilot 公告）；2026-11-10（美东；第一轮：官方 17 篇、媒体 6 篇、社区 4 篇；Learn 文档 12 篇全收，旧笔记 learning-ai-agent 的 copilot-autopilot 引用来源已逐条对照） |
+| 最后收集日期 | 2026-11-28（美东；Ignite 后增量：官方 17 篇——新 Autopilot Learn 文档集 12 篇、MC1557730、Tech Community Shahine 博文、Copilot 博客 Ignite 主稿、Book of News、产品页；媒体 3 篇，industry 1 篇；见「第三轮判断记录」；Scout 文档集与 MC1479277、MC1546354 无变化）；2026-11-14（按 analyze/progress.md 的资料缺口补收：官方 4 篇、媒体 2 篇，见「第二轮判断记录」；Ignite 11-17 至 20 尚未举行）；2026-11-10（增量复查：无新资料；Ignite 2026-11-17 至 20 举行，下一轮重点看 Autopilot 公告）；2026-11-10（美东；第一轮：官方 17 篇、媒体 6 篇、社区 4 篇；Learn 文档 12 篇全收，旧笔记 learning-ai-agent 的 copilot-autopilot 引用来源已逐条对照） |
 
 ## 背景
 
@@ -36,6 +36,10 @@ description: 收集 Microsoft Autopilot（原 Microsoft Scout，微软）的资�
 | Microsoft Copilot 博客 | `microsoft.com/en-us/copilot/blog/2026/06/02/introducing-microsoft-scout-your-always-on-personal-agent/` | 发布文章，页顶有改名横幅 | curl 加浏览器标识可直接下载；`microsoft-365/blog/2026/06/02/introducing-microsoft-scout/` 重定向到此（记 altUrls）。博客图片对 curl 返回 403，要带浏览器标识单独下载；题图是约 1 MB 的动图，改为链接 |
 | The Official Microsoft Blog | `blogs.microsoft.com/blog/2026/09/25/introducing-the-new-copilot-with-home-code-and-autopilot/` | 改名后的介绍与私有预览扩大 | 直接下载；`extract.py` 把内嵌视频抽成「YouTube Video」，按 HTML 中 `youtube-nocookie.com/embed/<id>` 的顺序换成占位行。微软亚洲新闻中心 2026-09-29 的简体中文版是同文译本，记 altUrls |
 | Microsoft Learn | `learn.microsoft.com/en-us/microsoft-scout/`（目录见 `toc.json`） | 产品文档，12 篇（另有一个只有链接的首页，不收） | 直接下载；`extract.py <html> main`，从 `# 标题` 起到 `## Feedback` 前止。日期取 `updated_at`（页面显示的 Last updated），`ms.date` 写进 dateNote。源仓库 `MicrosoftDocs/microsoft-scout-pr` 是私有仓库，读不到。增量收集时比对 toc.json 与各页 `updated_at`，有更新按「原文更新」覆盖 |
+| Microsoft Learn（Autopilot） | `learn.microsoft.com/en-us/copilot/autopilot/`（目录见 `toc.json`；2026-11-17 前后出现） | 云端 Autopilot（Frontier）文档，12 篇：overview、get-started、using、edge、memory、plugins、approval、scenarios、faq、requirements、admin-configure、microsoft-autopilot-application-card（首页只有链接，不收） | 同 Scout 文档集：直接下载，`extract.py <html> main`，从 `# 标题` 起到 `## Feedback` 前止；站内链接是相对文件名（如 `](overview)`）和 `/en-us/...`，都要改成绝对地址；图片在 `media/` 下，先补成绝对地址再 `localize_images.py`。日期取 `updated_at`，增量收集时比对各页 `updated_at`（2026-11-28 时 overview、using、approval、faq 已更新到 11-24） |
+| Microsoft Copilot 博客（Ignite） | `microsoft.com/en-us/copilot/blog/2026/11/17/copilot-at-microsoft-ignite-…`（aka.ms/MicrosoftIgnite26Blog） | Ignite 主稿（Jared Spataro） | 直接下载；正文图片对 curl 默认请求返回 403，带浏览器标识和 Referer 单独下载 |
+| Ignite Book of News | `news.microsoft.com/events/ignite/2026/book-of-news/` | 官方新闻汇编，约 2 万词，Autopilot 只占少数条目 | 直接下载，`extract.py auto`，从「## Introduction」起存全文 |
+| 产品页 | `microsoft.com/en-us/copilot/features/autopilot` | 卖点、FAQ（计费、Chat/Cowork/Autopilot 分工） | 直接下载；首屏桌面版与移动版重复，删去一份；图片是 Scene7 的 AVIF，过大的加 `?wid=1000&fmt=jpg&qlt=85` 取 JPEG。不标日期，取收集日期；以后比对内容变化按「原文更新」覆盖 |
 | Microsoft 365 消息中心 | MC1332811「Introducing Microsoft Scout, an always-on personal agent」 | 管理员公告 | 需要登录；已依据 `mc.merill.net/message/MC1332811` 收为「转载全文」（handsontek 返回 Cloudflare 验证页）。该公告 2026-10-30 过期。以后的新 MC 公告同样到 mc.merill.net 按编号查 |
 | Tech Community | `techcommunity.microsoft.com/blog/microsoft-copilot-blog/`（Microsoft Copilot Blog） | 官方博文：定价模型（09-25，aka.ms/Sept25/EvolvingModel 指向这里）、每月「What's New in Microsoft Copilot」汇总（10 月版有 Autopilot 一段，称云端、自有邮箱与远程计算机、11 月进 Frontier） | curl 加浏览器标识直接下载（HEAD 请求返回 400，GET 正常）；`extract.py <html> auto`，正文从日期行之后起，到「Updated <日期>」「Version」行前止；日期取 JSON-LD `datePublished`，`article:modified_time` 记 updatedAt。月度汇总每月看一次 |
 | Microsoft 365 消息中心（Autopilot） | MC1479277「New ways to work across Microsoft Copilot and Microsoft 365」（09-25 发布，11-09 第 4 版）、MC1546354（11-09，UBB 体验默认可见、访问请求设置） | Autopilot 的 UBB 前提（Microsoft 365 Copilot 许可证 + 支出策略），称上线时间与管理控制「available 时更新」 | 同 MC1332811，从 mc.merill.net 取；页面有版本历史，增量收集时看 Last Updated 是否变化，有变化按「原文更新」覆盖。页内的 `](/message/…)` 是站内相对链接，存档后要改成 `https://mc.merill.net/message/…`，否则在本站成死链。aguidetocloud.com 的月度汇总会列出相关 MC 编号，可作线索（本身不收） |
@@ -64,9 +68,19 @@ description: 收集 Microsoft Autopilot（原 Microsoft Scout，微软）的资�
 - 未收：Gizmodo 09-25「Microsoft thinks it's finally figured out Copilot this time」原站对 curl 只返回约 6 KB 的空页；Wayback 有快照 20260926122815，但本机权限检查拦下了用 Wayback 取文的命令，未取到。用户 2026-11-19 决定跳过，不再收（其内容只是对 Copilot 反复改名的怀疑，dSebastien 综述已转述）。
 - 放弃：Fortune 10-28 财报稿（没有 Autopilot，只有 UBB 积分消耗客户增长 75% 一句，属 Copilot 整体）；The Register 10-07「let Copilot loose on your file system」（Windows Copilot，不涉及 Autopilot）；ITPro「expands autonomy of Copilot agents ahead of public preview」（2024-10-21 的旧文，与本产品无关）；mindstudio.ai、eesel.ai、usecarly、pasqualepillitteri、kascade、techjacksolutions 等（厂商或 SEO 博客，转述公告，mindstudio 的「hands-on use suggests」无任何实测细节）；aguidetocloud 11 月汇总（个人汇总、作者自称未测试，只用作 MC 编号线索）。
 
+## 第三轮判断记录（2026-11-28，Ignite 后增量）
+
+- Learn：旧的 Scout 文档集 12 篇 `updated_at` 无变化（仍是 08-21 / 06-18 / 09-01）；新出现 `copilot/autopilot/` 文档集，12 篇全收。
+- 消息中心：新收 MC1557730（11-17，Frontier Public 分阶段推出，启用前 24 小时通知）；handsontek 的 `?p=26391` 记 altUrls。MC1479277 仍是 11-09 第 4 版，MC1546354 无版本变化。
+- 已收官方：Tech Community「Autopilot: meet your trusted personal teammate」（Omar Shahine，页面显示 11-17，文末写 Published Nov 13）；Copilot 博客 Ignite 主稿（Spataro，11-17）；Book of News；产品页。十一月「What's New in Microsoft Copilot」汇总截至 11-28 未见发布。
+- 已收媒体：TestingCatalog（11-17，含 Shahine 推文：团队「7 个月 11 天前」从零起步）、The Neuron（11-17，Corey Noles 现场稿，Autopilot 与 Today 的分工）、Redmondmag（11-20，Chris Paoli，转述 Adam Sheppard 的 Microsoft Mechanics 演示与管理中心新设置）。industry：UC Today（11-18，Rob Scott，Autopilot 与 dots、Claude Duet、Gemini Tasks、Grok Bot 比较）。
+- 放弃：SiliconANGLE 11-18（Ignite 整体报道，Autopilot 一段转述 Spataro，内容已在官方主稿中）；UC Today 的 Day 2 与 Ignite 汇总两篇（Autopilot 只有一两句）；Geeky Gadgets、AI Weekly（转述 SiliconANGLE）、explainx、powerdrill、openaimaster（SEO 或转述）；witivio、2-data、orchestry、plainconcepts、powerplatformengineer（合作伙伴博客，转述 Book of News）；computing.co.uk（09-25 改名稿，直接下载只得到约 6 KB 空页）。
+- 未收、可再看：Microsoft Mechanics 的 Autopilot 演示视频（Adam Sheppard；有官方字幕时可按「字幕整理」收）；Digital Trends 的 Ignite 报道（检索摘要提到 Copilot Credits 计费，未取文）。
+
 ## 已知问题
 
 - 改名：2026-06 的资料称 Scout，2026-09 起称 Autopilot。资料页标题按原文，摘要中注明是同一产品。
+- 2026-11-17 前后 Learn 出现 Autopilot 文档集（`copilot/autopilot/`），云端形态、Edge 浏览器、记忆、审批卡、管理员配置都有专页；旧 Scout 文档集仍在线、未更新，两套并存。
 - 截至 2026-11-10，Learn 文档与 MC 公告仍用 Scout 之名、仍描述桌面应用；9-25 起的 Autopilot 是云端托管，文档尚未跟上。增量收集时留意 Learn 是否出现 Autopilot 文档集或改名。截至 2026-11-14 仍是如此；更名后对 Autopilot 形态最具体的官方描述在 Tech Community 十月汇总（自有账号、邮箱、远程计算机），开通前提在 MC1479277（Microsoft 365 Copilot 许可证加支出策略，不再提 GitHub Copilot）。
 - Autopilot 的 Frontier 上线时间，十月汇总写 11 月，MC1479277（11-09 版）仍写「available 时更新」，两处不一致，原文如此。
 - 行业综合中有两篇比较涉及本产品（ithome 五款主动型 Agent、ai-agents-compared-small-business），已在 `products` 补上 `microsoft-autopilot`。
