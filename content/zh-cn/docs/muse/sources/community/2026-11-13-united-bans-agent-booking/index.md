@@ -5,7 +5,7 @@ date: 2026-11-13
 originalTitle: "United Just Told Your AI Agent It Can't Book Your Flight. Your Permission Was Never the Point."
 sourceUrl: "https://aihomebuilding.com/stories/muse-united-bans-agent-booking-2026"
 author: "Frank DeLuca"
-publisher: "AI Home Building"
+publisher: "AIHomeBuilding"
 language: en
 fidelity: 全文
 translation: 已翻译

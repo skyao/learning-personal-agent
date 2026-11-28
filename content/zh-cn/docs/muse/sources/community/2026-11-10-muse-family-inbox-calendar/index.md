@@ -5,7 +5,7 @@ date: 2026-11-10
 originalTitle: "Your Agent Reads the School Email Before You Do. Here's the Deal to Make With It."
 sourceUrl: "https://aihomebuilding.com/stories/muse-family-inbox-calendar-operator-2026"
 author: "Priya Greenwood"
-publisher: "aihomebuilding"
+publisher: "AIHomeBuilding"
 language: en
 fidelity: 全文
 translation: 已翻译

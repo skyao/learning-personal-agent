@@ -5,7 +5,7 @@ date: 2026-11-19
 originalTitle: "Apple Rewrote a Mac Permission Screen Because of Muse. Read the New Warning Before You Click Allow."
 sourceUrl: "https://aihomebuilding.com/stories/muse-apple-full-disk-access-2026"
 author: "Catherine Chen"
-publisher: "AI Home Building"
+publisher: "AIHomeBuilding"
 language: en
 fidelity: 全文
 translation: 已翻译

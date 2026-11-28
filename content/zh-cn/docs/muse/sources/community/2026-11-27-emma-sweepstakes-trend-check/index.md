@@ -10,7 +10,7 @@ language: ja
 fidelity: 全文
 translation: 已翻译
 collectedAt: 2026-11-26
-tags: [实测评测, 隐私]
+tags: [隐私]
 products: [muse]
 dateNote: "按日本时间记 2026-11-27；作者声明本文非本人实测，而是据公表信息验证；期望值图已下载到 images/ 并本地化"
 ---

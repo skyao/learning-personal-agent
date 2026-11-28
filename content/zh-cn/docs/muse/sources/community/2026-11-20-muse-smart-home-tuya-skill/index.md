@@ -5,7 +5,7 @@ date: 2026-11-20
 originalTitle: "Muse Can Finally Dim Your Lights. It Just Has to Borrow Someone Else's Key to Do It."
 sourceUrl: "https://aihomebuilding.com/stories/muse-smart-home-tuya-skill-2026"
 author: "Jake Kowalski"
-publisher: "AI Home Building"
+publisher: "AIHomeBuilding"
 language: en
 fidelity: 全文
 translation: 已翻译

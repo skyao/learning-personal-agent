@@ -5,7 +5,7 @@ date: 2026-11-08
 originalTitle: "Muse Called Your Hair Salon. Nobody Told the Salon It Was an AI."
 sourceUrl: "https://aihomebuilding.com/stories/muse-phone-calls-disclosure-gap-2026"
 author: "Catherine Chen"
-publisher: "AI Home Building"
+publisher: "AIHomeBuilding"
 language: en
 fidelity: 全文
 translation: 已翻译

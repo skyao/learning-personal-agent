@@ -115,7 +115,7 @@ Muse Explained 指出了这一承诺的矛盾：同一页面又称，Meta 只能
 | 日期 | 事件 | 来源 |
 | --- | --- | --- |
 | 2026-10 下旬 | 英国 DRCF 下的 CMA、ICO 等称 AI 智能体可能「放大并加速风险」，ICO 公开征集证据 | [英国数周内上线]({{< relref "/docs/muse/sources/media/2026-11-09-times-muse-uk-launch" >}}) |
-| 2026-11-23 | 蒙大拿州总检察长 Austin Knudsen 牵头多州调查，要求 Meta 在 30 天内提交用户数据用途、「为用户生活中的每个人」建档、未成年人使用与年龄验证等文件；起因是路透社 11-18 报道 | [蒙大拿州调查 Muse 隐私]({{< relref "/docs/muse/sources/official/2026-11-23-montana-ag-investigation-muse" >}}) |
+| 2026-11-23 | 蒙大拿州总检察长 Austin Knudsen 牵头多州调查，要求 Meta 在 30 天内提交用户数据用途、「为用户生活中的每个人」建档、未成年人使用与年龄验证等文件；起因是路透社 11-18 报道 | [蒙大拿州调查 Muse 隐私]({{< relref "/docs/muse/sources/media/2026-11-23-montana-ag-investigation-muse" >}}) |
 | 2026-11-24 | 英国上线。CMA 称协商后 Meta 修改了条款，并发布使用建议，提醒检查信息是否用于训练 AI 或个性化广告；ICO 称已向 Meta 明确保护个人信息的责任 | [CMA 英国上线声明]({{< relref "/docs/muse/sources/media/2026-11-24-cma-statement-uk-launch-muse" >}})、[BBC 一周试用]({{< relref "/docs/muse/sources/media/2026-11-24-bbc-week-with-muse-uk-launch" >}}) |
 | 2026-11-24 | 据转述，Meta 同意与 ICO 建立自愿监测与报告安排；马恩岛信息专员确认此事，并称正在监测 Muse | [英国第七个市场]({{< relref "/docs/muse/sources/media/2026-11-24-muse-launches-uk" >}})、[信息专员谈代理式 AI]({{< relref "/docs/muse/sources/community/2026-11-27-isle-of-man-commissioner-agentic-ai" >}}) |
 | 2026-11-26 | WIRED：FCA 创新负责人 Colin Payne 称 Meta 拒绝了在 FCA 沙盒中联合测试 Muse，关注点是支付 | [Meta 拒绝 FCA 联合测试]({{< relref "/docs/muse/sources/media/2026-11-26-wired-meta-refused-fca-muse-test" >}}) |
@@ -123,7 +123,7 @@ Muse Explained 指出了这一承诺的矛盾：同一页面又称，Meta 只能
 其他与地区、年龄有关的资料：
 
 - **欧盟与英国进度慢。** 据 DataDome 转述 Q3 财报电话会，Zuckerberg 称英国和欧盟预计耗时更长，因为 Muse 处理的个人数据比聊天机器人更多（[Muse 全球五国流量]({{< relref "/docs/muse/sources/community/2026-11-12-muse-goes-global-five-countries" >}})）。截至 2026-11-28，资料中没有 Muse 在欧盟上线的记录。
-- **年龄限制。** Muse 限 18 岁及以上（[帮助：关于订阅]({{< relref "/docs/muse/sources/official/2026-09-08-help-about-subscriptions" >}})）。马恩岛信息专员提醒，其设计和推广方式可能吸引年轻人（[信息专员谈代理式 AI]({{< relref "/docs/muse/sources/community/2026-11-27-isle-of-man-commissioner-agentic-ai" >}})）；蒙大拿的调查也要求 Meta 提交年龄验证有效性的材料（[蒙大拿州调查 Muse 隐私]({{< relref "/docs/muse/sources/official/2026-11-23-montana-ag-investigation-muse" >}})）。
+- **年龄限制。** Muse 限 18 岁及以上（[帮助：关于订阅]({{< relref "/docs/muse/sources/official/2026-09-08-help-about-subscriptions" >}})）。马恩岛信息专员提醒，其设计和推广方式可能吸引年轻人（[信息专员谈代理式 AI]({{< relref "/docs/muse/sources/community/2026-11-27-isle-of-man-commissioner-agentic-ai" >}})）；蒙大拿的调查也要求 Meta 提交年龄验证有效性的材料（[蒙大拿州调查 Muse 隐私]({{< relref "/docs/muse/sources/media/2026-11-23-montana-ag-investigation-muse" >}})）。
 - **地区条款不同。** 眼镜语音存储美英两版条款不同（[眼镜端 Muse beta 解析]({{< relref "/docs/muse/sources/community/2026-11-09-muse-on-glasses-beta" >}})）。
 
 ## 资料缺口
@@ -142,11 +142,11 @@ Muse Explained 指出了这一承诺的矛盾：同一页面又称，Meta 只能
 - [我们如何将安全构建进 Muse]({{< relref "/docs/muse/sources/official/2026-09-08-how-we-built-safety-into-muse" >}})：轨迹训练、广告间接影响、Meta 人员访问、Confidential VM。
 - [帮助：Muse 邮箱地址]({{< relref "/docs/muse/sources/official/2026-11-16-help-email-addresses" >}})：邮件内容与第三方信息。
 - [英国上线与控制权]({{< relref "/docs/muse/sources/official/2026-11-24-muse-you-stay-in-control" >}})：英国稿，私人消息不用于训练，非用户信息不关联账户。
-- [蒙大拿州调查 Muse 隐私]({{< relref "/docs/muse/sources/official/2026-11-23-montana-ag-investigation-muse" >}})：蒙大拿多州调查通稿。
 - [帮助：眼镜 Beta]({{< relref "/docs/muse/sources/official/2026-10-27-help-glasses-beta" >}})：眼镜语音与位置数据。
 - [连接器指南（开发者）]({{< relref "/docs/muse/sources/official/2026-11-04-connector-guidelines" >}})：连接器数据的二次使用禁令。
 
 **媒体**
+- [蒙大拿州调查 Muse 隐私]({{< relref "/docs/muse/sources/media/2026-11-23-montana-ag-investigation-muse" >}})：蒙大拿多州调查通稿。
 - [WIRED：更擅长监视]({{< relref "/docs/muse/sources/media/2026-09-20-wired-muse-better-at-surveilling" >}})：默认训练与专家批评。
 - [路透：Muse 安全事故]({{< relref "/docs/muse/sources/media/2026-11-18-muse-early-safety-mishaps-surface" >}})：路透社安全事故调查，Signal 复现。
 - [Muse 助推 Instagram 广告]({{< relref "/docs/muse/sources/media/2026-11-24-cnbc-muse-instagram-ad-boost" >}})、[Muse 跟进广告后行动]({{< relref "/docs/muse/sources/media/2026-11-24-mediapost-muse-post-ad-actions" >}})：Muse 与 Instagram 广告。

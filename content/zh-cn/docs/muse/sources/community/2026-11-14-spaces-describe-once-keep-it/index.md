@@ -5,7 +5,7 @@ date: 2026-11-14
 originalTitle: "Describe It Once, and Muse Keeps It: Your Agent Just Became a Place You Live In"
 sourceUrl: "https://aihomebuilding.com/stories/muse-spaces-describe-once-keep-it-2026"
 author: "Elena Vasquez"
-publisher: "AI Home Building"
+publisher: "AIHomeBuilding"
 language: en
 fidelity: 全文
 translation: 已翻译

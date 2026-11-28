@@ -5,7 +5,7 @@ date: 2026-11-25
 originalTitle: "Muse Has Two Browsers Now. One of Them Is Yours."
 sourceUrl: "https://aihomebuilding.com/stories/muse-two-browsers-2026"
 author: "Jake Kowalski"
-publisher: "aihomebuilding"
+publisher: "AIHomeBuilding"
 language: en
 fidelity: 全文
 translation: 已翻译

@@ -5,7 +5,7 @@ date: 2026-11-05
 originalTitle: "Your Agent Has Its Own Computer. Here's Everything That Computer Can Reach."
 sourceUrl: "https://aihomebuilding.com/stories/muse-secure-vm-attack-surface-2026"
 author: "Catherine Chen"
-publisher: "AI Home Building"
+publisher: "AIHomeBuilding"
 language: en
 fidelity: 全文
 translation: 已翻译

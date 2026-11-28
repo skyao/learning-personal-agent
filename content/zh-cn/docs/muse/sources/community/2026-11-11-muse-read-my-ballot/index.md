@@ -5,7 +5,7 @@ date: 2026-11-11
 originalTitle: "I Handed Muse My Whole Ballot. It Read It Back With One Conflict I Had Missed."
 sourceUrl: "https://aihomebuilding.com/stories/muse-read-my-ballot-2026"
 author: "Marcus Washington"
-publisher: "AI Home Building"
+publisher: "AIHomeBuilding"
 language: en
 fidelity: 全文
 translation: 已翻译

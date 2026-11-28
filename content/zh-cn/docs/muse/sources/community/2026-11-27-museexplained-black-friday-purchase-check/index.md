@@ -10,7 +10,7 @@ language: en
 fidelity: 全文
 translation: 已翻译
 collectedAt: 2026-11-27
-tags: [连接器, 实测评测]
+tags: [连接器]
 products: [muse]
 dateNote: "页面内文标明最后核查为 2026 年 11 月 26 日；JSON-LD 发布日期为 2026 年 11 月 27 日。"
 ---

@@ -5,7 +5,7 @@ date: 2026-11-26
 originalTitle: "Muse Won't Sit In on Your Meeting. Hand It the Recording and It Does the Part Nobody Wants."
 sourceUrl: "https://aihomebuilding.com/stories/muse-meeting-recap-after-the-meeting-2026.html"
 author: "Frank DeLuca"
-publisher: "AI Home Building"
+publisher: "AIHomeBuilding"
 language: en
 fidelity: 全文
 translation: 已翻译

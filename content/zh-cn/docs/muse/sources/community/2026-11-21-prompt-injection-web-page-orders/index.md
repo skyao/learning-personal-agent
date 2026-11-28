@@ -5,7 +5,7 @@ date: 2026-11-21
 originalTitle: "The Web Page You Asked Muse to Read Just Gave It Orders."
 sourceUrl: "https://aihomebuilding.com/stories/muse-prompt-injection-web-talks-back-2026"
 author: "Catherine Chen"
-publisher: "AI Home Building"
+publisher: "AIHomeBuilding"
 language: en
 fidelity: 全文
 translation: 已翻译

@@ -5,7 +5,7 @@ date: 2026-11-15
 originalTitle: "Your Agent Wants Your Heart Rate. Read the Fine Print Before You Say Yes"
 sourceUrl: "https://aihomebuilding.com/stories/muse-health-data-deal-2026"
 author: "Catherine Chen"
-publisher: "AI Home Building"
+publisher: "AIHomeBuilding"
 language: en
 fidelity: 全文
 translation: 已翻译

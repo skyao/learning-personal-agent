@@ -5,7 +5,7 @@ date: 2026-11-09
 originalTitle: "Muse Moved Onto Your Face. The Beta Gives You Hands-Free Help and Takes Away Your Old Assistant."
 sourceUrl: "https://aihomebuilding.com/stories/muse-on-glasses-beta-2026"
 author: "Jake Kowalski"
-publisher: "AI Home Building"
+publisher: "AIHomeBuilding"
 language: en
 fidelity: 全文
 translation: 已翻译

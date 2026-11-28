@@ -5,7 +5,7 @@ date: 2026-11-18
 originalTitle: "Muse Learned to Talk. Its Face Is Doing More Work Than Its Voice."
 sourceUrl: "https://aihomebuilding.com/stories/muse-voice-mode-2026"
 author: "Elena Vasquez"
-publisher: "AI Home Building"
+publisher: "AIHomeBuilding"
 language: en
 fidelity: 全文
 translation: 已翻译

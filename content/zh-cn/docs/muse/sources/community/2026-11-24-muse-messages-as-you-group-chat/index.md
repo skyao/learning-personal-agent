@@ -5,7 +5,7 @@ date: 2026-11-24
 originalTitle: "Muse Texted Your Group Chat. It Sounded Like You. It Wasn't."
 sourceUrl: "https://aihomebuilding.com/stories/muse-messages-as-you-group-chat-2026.html"
 author: "Marcus Washington"
-publisher: "AI Home Building"
+publisher: "AIHomeBuilding"
 language: en
 fidelity: 全文
 translation: 已翻译

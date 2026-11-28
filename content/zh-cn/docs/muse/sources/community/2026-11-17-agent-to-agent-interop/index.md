@@ -5,7 +5,7 @@ date: 2026-11-17
 originalTitle: "Your Agent Is About to Start Talking to Other Agents. Ask Who Is on the Other End"
 sourceUrl: "https://aihomebuilding.com/stories/muse-agent-to-agent-mcp-a2a-2026"
 author: "Jake Kowalski"
-publisher: "AI Home Building"
+publisher: "AIHomeBuilding"
 language: en
 fidelity: 全文
 translation: 已翻译

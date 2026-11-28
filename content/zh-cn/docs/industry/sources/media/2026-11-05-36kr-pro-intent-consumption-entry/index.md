@@ -12,7 +12,7 @@ translation: 不需要
 collectedAt: 2026-11-06
 dateNote: "微信公众号「36氪Pro」，发布时间取页面内嵌的 create_time：2026-11-05 18:00（北京时间）。"
 tags: [商业与规模, 记忆与上下文]
-products: [muse]
+products: []
 ---
 
 {{< source-info >}}

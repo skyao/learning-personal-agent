@@ -5,7 +5,7 @@ date: 2026-11-12
 originalTitle: "You Pasted a Stranger's Skill File Into Muse. It Can Read Everything Your Agent Can."
 sourceUrl: "https://aihomebuilding.com/stories/muse-pasted-skill-trust-gap-2026"
 author: "Catherine Chen"
-publisher: "aihomebuilding"
+publisher: "AIHomeBuilding"
 language: en
 fidelity: 全文
 translation: 已翻译

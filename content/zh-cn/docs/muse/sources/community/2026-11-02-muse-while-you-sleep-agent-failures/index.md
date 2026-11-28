@@ -5,7 +5,7 @@ date: 2026-11-02
 originalTitle: "Nine Seconds, Nine Days: What Your Agent Does When You're Not Watching"
 sourceUrl: "https://aihomebuilding.com/stories/muse-while-you-sleep-agent-failures-2026"
 author: "Catherine Chen"
-publisher: "AI Home Building"
+publisher: "AIHomeBuilding"
 language: en
 fidelity: 全文
 translation: 已翻译
