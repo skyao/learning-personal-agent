@@ -1,5 +1,5 @@
-来源：https://web.archive.org/web/20261101075904/https://techcrunch.com/2026/10/24/all-the-ai-agents-that-can-live-in-your-text-messages/
-取文：2026-11-09，原站该地址现返回 404，取自 Wayback 快照 20261101075904
+来源：https://techcrunch.com/2026/11/21/all-the-ai-agents-that-can-live-in-your-text-messages/
+取文：2026-11-28，直接下载
 
 Rather than downloading another app, a growing number of agents can simply be texted like an ordinary person.
 
@@ -79,6 +79,20 @@ One distinction is that Folk runs on its own private cloud computer. It can also
 
 Folk launched its beta in May 2026, and it’s available for free but also offers a Pro subscription for $8.33/month if you want unlimited tasks running in the background.
 
+## Haven
+
+![](images/img-06-9386c1.jpg)
+
+**Image Credits:**Haven
+
+[Haven](https://my.hellohaven.ai/) distinguishes itself by presenting the concept of a “digital twin” rather than merely serving as a text-based AI assistant.
+
+According to the company, Haven understands and adapts to your preferences, routines, and decision-making styles, creating a personalized memory graph based on your interactions. As the company [describes](https://my.hellohaven.ai/press/hello-haven-your-digital-twin-not-just-an-assistant), “A personal assistant knows what you asked it to do. Haven knows what you would do and how you would do it.”
+
+Notably, the company envisions future features that customize your experiences across devices, like TV and car.
+
+Currently, Haven is available for free in beta on iPhone and Android devices and on the web.
+
 ## Instinct
 
 ![](images/img-06-9d227b.png)
@@ -148,18 +162,6 @@ It operates through iMessage and combines AI trip planning with support from a d
 Users can send messages, forward emails, or make voice requests, and the assistant can transform them into schedules, reminders, and plans. It can also coordinate calendars, household chores, and meals across multiple members of a family.
 
 It includes a free basic option, but also offers different subscriptions based on family size, starting at $9.99 per month.
-
-## Ollie
-
-![](images/img-12-1dc037.jpg)
-
-Screenshot**Image Credits:**Ollie
-
-Similar to the other family-focused agents, the idea behind [Ollie](https://ollie.ai/) is that families already have the information they need, but it lives across school messages, calendars, task lists, and group chats. Ollie aims to bring those pieces together and keep them in sync. It can keep track of calendars, emails, reminders, tasks, and other household details, then deliver relevant information to users through text.
-
-Its biggest differentiator from other agents is that [Ollie](https://techcrunch.com/2026/09/03/ollie-is-betting-privacy-can-win-the-ai-assistant-race/) is one of the first mainstream, family-focused AI assistants to achieve SOC 2 compliance, a widely used security standard.
-
-Launched in June 2026, Ollie offers a free tier, as well as paid plans starting at $25 per month for 150 messages. A $100-per-month plan includes up to 1,000 messages.
 
 ## Orbits
 
@@ -284,3 +286,5 @@ A key part of Wajo’s approach is giving Fo its own identity. The agent has its
 Notably, when Fo encounters something it cannot handle on its own, Wajo says it can bring in a human assistant to finish the task.
 
 Fo launched publicly in September 2026 with a free tier, while heavier workloads and custom agents are available through a paid Pro offering.
+
+*This post has been updated.*
