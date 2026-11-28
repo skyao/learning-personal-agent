@@ -1,7 +1,7 @@
 来源：https://docs.x.ai/grok-bot/skills-routines-and-automations
-取文：2026-11-06，直接下载（站点提供的 Markdown 版本 https://docs.x.ai/grok-bot/skills-routines-and-automations.md）
+取文：2026-11-28，直接下载（站点提供的 Markdown 版本 https://docs.x.ai/grok-bot/skills-routines-and-automations.md）
 
-Skills and routines
+# Skills and routines
 
 Turn a successful task into a repeatable process. Grok Bot uses two building
 blocks:
@@ -42,6 +42,9 @@ groups, routines, and apps.
 Private skills are one library shared by all your Bots. If the Bot can't find a
 private skill, open **Connect apps** in the sidebar, select the connected count
 next to the title, and enable it for the current Bot under **Private skills**.
+
+If you're on a team, you can also ask a Bot to save a skill just for itself. If
+you later share that Bot, the skill is shared with it.
 
 ### Share a skill with your team
 
@@ -129,7 +132,7 @@ A routine can start when something happens instead of on a schedule: a Slack
 message, a GitHub, Linear, Sentry, or PagerDuty event, an email to your
 [Bot's own address](https://docs.x.ai/grok-bot/computer-and-apps#give-your-bots-an-email-address),
 or a webhook call. Cursor account integrations start these routines; they're
-separate from the Slack or GitHub apps and may need their own connection. Ask
+separate from the [Slack](https://x.ai/bot/plugin/674) or GitHub apps and may need their own connection. Ask
 the Bot for the trigger you want; the routine's **When to run** shows it in
 words, such as “When a Linear issue is created.” Only new activity counts:
 events from before the trigger existed don't start a run.
@@ -146,8 +149,8 @@ usage, and increase the chance of acting on irrelevant input.
 
 ### Slack triggers
 
-A Slack trigger is part of a routine, not the Slack app. The app lets a Bot post
-and read as the Slack user you connected; a trigger starts the routine when
+A Slack trigger is part of a routine, not the [Slack](https://x.ai/bot/plugin/674) app. The app lets a Bot post
+and read as the [Slack](https://x.ai/bot/plugin/674) user you connected; a trigger starts the routine when
 something happens in Slack. Connect Slack on the Cursor account that owns the
 Bot before you rely on it.
 
@@ -216,7 +219,10 @@ webhook call starts also shows **Webhook**. The buttons at the bottom are:
 * **Delete routine** (the trash icon), which asks you to confirm
 
 You can also right-click a routine to **Pause** or **Resume** it, **Test** it,
-**Edit** it in chat, or **Delete** it.
+**Edit** it in chat, or **Delete** it. On a Team Bot, the same menu can also
+show **Who can use this routine?**: choose **Only me** to keep the routine to
+yourself, or **Everyone with access** to run it for everyone who can use the
+Bot.
 
 On the phone, open the Bot's profile and find **Routines**. Tap a routine to see
 **Active**, **Schedule**, **Next run**, **Instruction**, and **Run history**.
@@ -262,7 +268,7 @@ running out faster than you expect, pause routines you don't need, then ask the
 Bot to widen schedules and narrow Slack triggers before you raise a plan or an
 on-demand limit. A routine that never runs doesn't spend usage; **Test** does,
 because it performs the work. See [Plans and
-billing](https://cursor.com/help/grok-bot/plans) for weekly usage and the
+billing](https://grok.com/help/grok-bot/plans) for weekly usage and the
 on-demand monthly limit.
 
 To control unattended usage, Grok Bot may ask whether to keep routines running
@@ -281,6 +287,6 @@ routines when you return.
 * Re-test after a website, app, or source format changes.
 
 For more on schedules, Slack triggers, and webhooks, see
-[Routines](https://cursor.com/help/grok-bot/routines). See [Settings and notifications](https://docs.x.ai/grok-bot/settings-and-notifications) for time zone
+[Routines](https://grok.com/help/grok-bot/routines). See [Settings and notifications](https://docs.x.ai/grok-bot/settings-and-notifications) for time zone
 and usage controls, and [Approvals, security, and
 privacy](https://docs.x.ai/grok-bot/approvals-security-and-privacy) for automation boundaries.

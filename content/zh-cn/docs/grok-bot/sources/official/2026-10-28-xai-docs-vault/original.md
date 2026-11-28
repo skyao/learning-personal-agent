@@ -1,7 +1,7 @@
 来源：https://docs.x.ai/grok-bot/vault
-取文：2026-11-06，直接下载（站点提供的 Markdown 版本 https://docs.x.ai/grok-bot/vault.md）
+取文：2026-11-28，直接下载（站点提供的 Markdown 版本 https://docs.x.ai/grok-bot/vault.md）
 
-Vault and secure sign-in
+# Vault and secure sign-in
 
 Keep passwords, cards, API keys, and other credentials out of chat and ordinary
 files. Save logins, cards, and contact info in **Vault** so your Bots can sign
@@ -12,7 +12,7 @@ is not proof the secret was deleted.
 ## What Vault holds
 
 Vault keeps your logins, cards, and contact info so your Bots can sign in to
-websites and check out for you without seeing the secret values. Open it from
+websites and check out for you without seeing your passwords. Open it from
 **Settings → Vault** in the desktop app or on your phone, where you can add,
 edit, or remove anything. Vault needs Grok Bot 0.75.2 or later.
 
@@ -23,15 +23,29 @@ edit, or remove anything. Vault needs Grok Bot 0.75.2 or later.
 * **Contact info:** names, addresses, phone numbers, and emails for shipping and
   billing.
 
-A Bot never sees a saved password, card number, or security code. It can see
-your contact info and which logins you saved, so it can pick the right entry
-and type contact details for you.
+A Bot never sees a saved password. It can see your contact info and which
+logins you saved, so it can pick the right entry and type contact details for
+you.
+
+In chats in the Grok Bot app, a Bot can also see a saved card's number and
+security code. It types them into a checkout after you tap **Pay** on the order
+card, and tells you a card's details when you ask.
 
 Vault covers your whole account: everything you save is available to every Bot
-on your account, and you can't limit an item to one Bot. Vault isn't supported
-on [shared Bots](https://docs.x.ai/grok-bot/shared-bots); add keys to a shared Bot under
+on your account, and you can't limit an item to one Bot. Your Vault isn't
+available on [Team Bots](https://docs.x.ai/grok-bot/team-bots): a Team Bot can't use the
+logins, cards, or contact info you saved. Add keys to a Team Bot under
 **Secrets** instead. See [API keys and other
 secrets](#api-keys-and-other-secrets).
+
+A Team Bot can have logins of its own. If you own or manage it, choose the
+wrench, **Manage**, and under **General** find **Bot's accounts**. Choose
+**Add**, then **Bot's vault login**, enter the **Website**, **Username or
+email**, and **Password**, and choose **Save login**. The Bot can sign in with
+these logins for anyone on your team, and only managers can see or change
+them. To change or remove one, open its **More actions** menu and choose
+**Edit** or **Remove**. A Team Bot's logins don't appear in your own
+**Settings → Vault**.
 
 ## Add, import, and change items
 
@@ -44,6 +58,11 @@ secrets](#api-keys-and-other-secrets).
      from the card, or type it in. Then choose **Save card**.
    * For contact info, enter the name, address, phone, and email, then choose
      **Save contact info**.
+
+On Grok Bot for iPhone 1.18.0 with iOS 26 or later, **New item** > **Login**
+shows only a back button, so a login typed there can't be saved. Cards and
+contact info aren't affected. This is fixed in iPhone 1.19.0; update Grok Bot
+from the App Store.
 
 Under **Hints**, tell your Bots when to use an entry, such as “Use for work
 purchases.” A Bot follows the hint when it chooses between entries.
@@ -76,17 +95,19 @@ To change a card's number, remove the card and add it again. On the phone,
 saved cards can't be edited yet.
 
 A Bot can change contact info, and an entry's nickname and hints, when you ask.
-Passwords, usernames, websites, card numbers, and security codes change only in
-**Settings → Vault**, and logins and cards are removed only there.
+In chats in the Grok Bot app, it can also change a saved card's number,
+security code, name on card, expiry, and billing address when you give it the
+new details. Passwords, usernames, and websites change only in **Settings →
+Vault**, and logins and cards are removed only there.
 
 ## How a Bot uses Vault
 
 To sign in, a Bot uses a login saved in Vault first, then a connected password
 manager such as
 [1Password](https://docs.x.ai/grok-bot/computer-and-apps#connect-1password), then asks you
-with a Secure Form. Values from Vault and from a Secure Form are filled into the
-page without the Bot seeing them. When a site emails a one-time code, the Bot
-can read it from a connected Gmail or Outlook account or from
+with a Secure Form. Logins from Vault and values from a Secure Form are filled
+in without the Bot seeing them. When a site emails a one-time code, the Bot
+can read it from a connected [Gmail](https://x.ai/bot/plugin/45893410) or [Outlook](https://x.ai/bot/plugin/57302029) account or from
 [its own inbox](https://docs.x.ai/grok-bot/computer-and-apps#give-your-bots-an-email-address).
 
 * **New accounts:** if you let a Bot choose the password when it signs up for a
@@ -128,11 +149,11 @@ secret card** when a Bot asks for one. The field is masked. Choose **Save
 securely**, and the card then says **Saved** and **Saved securely and kept
 private**. The value isn't written into the chat or shown to the Bot.
 
-On a [shared Bot](https://docs.x.ai/grok-bot/shared-bots) you own or manage, you can also add a
+On a [Team Bot](https://docs.x.ai/grok-bot/team-bots) you own or manage, you can also add a
 secret from the Bot's details. Open **Secrets**, choose **Add secret**, enter an
 environment variable name, a short description, and the value, then choose
 **Save secret**. The description is visible to the Bot; the value is not.
-Secrets on a shared Bot are used in every teammate's chat, so only add keys
+Secrets on a Team Bot are used in every teammate's chat, so only add keys
 you're happy for everyone who can chat with the Bot to use.
 
 A credential your company's setup scripts need, such as a license key for a
@@ -153,13 +174,13 @@ Saved values are write-only:
   their last four digits.
 * The secure secret card does not show the value after **Saved**. The footer
   says **Stored securely, never shown to your Bot**.
-* On a shared Bot, **Secrets** lists the name and description only. It never
+* On a Team Bot, **Secrets** lists the name and description only. It never
   shows the value again, including in Shell.
 * To change a value there, choose **Replace**, paste the new value, and choose
   **Replace value**. You can't read the old value back.
 
 If a save fails, the form says **The secret was not saved. Try again.** If a
-shared Bot's **Secrets** list says **Something went wrong. Try again.**, choose
+Team Bot's **Secrets** list says **Something went wrong. Try again.**, choose
 **Try Again**. **No secrets yet** means that Bot has no saved names, not that a
 value is hidden.
 
@@ -171,8 +192,8 @@ computer can disappear with them. That is separate from secrets you saved with
 the secure card, under **Secrets**, or in Vault. See [Update, recover, or reset
 the computer](https://docs.x.ai/grok-bot/computer-and-apps#update-recover-or-reset-the-computer).
 
-Shell not printing a secret does not mean it was wiped. On a shared Bot, if the
-name is still listed under **Secrets**, the value is still stored. If a shared
+Shell not printing a secret does not mean it was wiped. On a Team Bot, if the
+name is still listed under **Secrets**, the value is still stored. If a Team
 Bot's secret name is gone and you did not choose **Remove**:
 
 1. Fully quit Grok Bot and reopen it. On Mac, choose **Quit** from the menu bar,
@@ -199,8 +220,25 @@ payment yourself, don't save the card:
   **Remove**.
 
 **Settings → Vault** also lists **Payment accounts**, wallets you can connect,
-such as Link or X Money, and **Default payment method**, which Grok Bot pays
-with first.
+such as Link, X Money, or Shop Pay, and **Default payment method**, which Grok
+Bot pays with first. On the phone, connected wallets are under **Payments** in
+**Settings → Vault**: a connected wallet shows **Connected** and the account
+it's signed in to, and one you haven't connected shows **Connect**.
+
+When a Bot buys something for you through an order card, it pays with a card
+saved in Vault. If you haven't saved one, the Bot first asks for a card with a
+Secure Form. A card you don't save there gets no order card; the Bot asks you
+to approve the exact total in the chat instead.
+
+A Bot can also send one order card for a batch of up to 500 card payments,
+paid with a saved card. The card lists each payment when there are 10 or
+fewer, and a summary line above that. After you approve with the **Pay**
+button, the Bot makes
+the payments one at a time and stops if a card is declined. It then tells you
+what was paid and what failed, and can offer a new order card for the failed
+payments. One approval covers payments for 24 hours; after that, the Bot sends
+a new order card for the rest. Wallets such as Link or X Money need one order
+card per payment, and a batch ships to one address.
 
 With a Link account connected, a Bot can ask you to approve a one-time card for
 a single purchase. The request shows the merchant, the items, and the total.

@@ -3,102 +3,24 @@ title: "文档：使用场景"
 linkTitle: "文档：使用场景"
 date: 2026-11-05
 originalTitle: "Grok Bot use cases"
-sourceUrl: "https://cursor.com/docs/grok-bot/use-cases"
-altUrls: ["https://docs.x.ai/grok-bot/use-cases"]
+sourceUrl: "https://docs.x.ai/grok-bot/use-cases"
+altUrls: ["https://cursor.com/docs/grok-bot/use-cases"]
 author: "未署名"
-publisher: "Cursor（Grok Bot 文档）"
+publisher: "SpaceXSI（Grok Bot 文档，docs.x.ai）"
 language: en
 fidelity: 全文
-translation: 已翻译
-collectedAt: 2026-11-05
-dateNote: "文档不标日期，取收集日期"
+translation: 待翻译
+collectedAt: 2026-11-28
+updatedAt: 2026-11-06
+dateNote: "文档不标日期，取收集日期；2026-11-28 发现原文更新：整页重写：改为三步结构（助手、有岗位的 Bot、Bot 团队），含 5 个助手示例、9 个带起始提示的岗位、3 个多 Bot 团队（Campaign team 等）和 dr eggbot；不再有八类岗位与六步清单"
 tags: [持续执行]
 products: [grok-bot]
 ---
 
 {{< source-info >}}
 
-**收录说明**：Grok Bot 的产品文档与帮助页由 Cursor 托管（Cursor 于 2026-08-14 并入 SpaceXSI）。直接下载；去掉了文末的相关页面列表与反馈按钮；折叠式 FAQ 的问题文字原在按钮中，抽取时已保留。原文全文存于本目录的 original.md，网站上不显示，已翻译。
+**收录说明**：2026-11 起 cursor.com 的 Grok Bot 文档地址 308 跳转到 docs.x.ai 的同名页，2026-11-28 起改按 docs.x.ai 的 Markdown 版本存档，去掉了文首的分组标签和文末的相关页面列表。以下为首次收录时的说明：Grok Bot 的产品文档与帮助页由 Cursor 托管（Cursor 于 2026-08-14 并入 SpaceXSI）。直接下载；去掉了文末的相关页面列表与反馈按钮；折叠式 FAQ 的问题文字原在按钮中，抽取时已保留。原文全文存于本目录的 original.md，网站上不显示，待翻译。
 
-**内容摘要**：文档给出八类适合 Bot 承担的岗位及起始提示：销售外联、人才寻访、付费媒体、费用管理、产品性能、缺陷复现、客户健康度、幕僚长。每条提示都刻意在审核点前结束，如「只返回审阅清单，不发送、不登记」「不要修改预算或发送消息」，对外发送、发布、购买和生产变更要放在批准之后。建议先做只读和准备类工作，审阅结果，再增加经批准的动作或例程。把岗位变成长期 Bot 的六步为：在 Bot 描述中写明工作、系统、输出格式和边界；做一次真实的小范围任务；修正到无需你也可审阅；存为技能并用第二份输入测试；定义重试和失败情况后再建例程；让有后果的外部动作继续留在批准之后。
+**内容摘要**：页面按三步组织：连接应用让 Bot 帮忙（Google Drive、Google Calendar、Gmail、Granola、Slack、Notion 六个应用示例，另有 Morning briefing、Inbox manager、Competitive intelligence、Travel coordinator、Meeting prep 五个起始提示）；把反复交办的任务交给专职 Bot（Sales development、Invoice coordinator、Content marketer、Talent scout、Paid media、Expense manager、Product performance、Bug reproduction、Account health 九个岗位，各有起始提示）；再把几个 Bot 组成团队（Campaign team 周一 9 AM、Month-end close 每月 1 日、Support queue 工作日 9 AM），可先用 dr eggbot 按提问拆分岗位。每个示例都停在审核点，如「不发送」「不批准或付款」「不联系任何人」，发送、发布、购买和生产变更要放在批准之后。Bot 做得合格后让它自行运行：在聊天中说明工作与边界并让它记住，把步骤存为技能再建例程按计划运行，测试登录存进 Vault 或 Secure Form，不要放在聊天里。
 
-**保留理由**：给出官方推荐的岗位化用法和放权顺序，可与实际案例文章对照，看官方如何建议用户逐步放权。
-
----
-
-最好的 Bot 角色承担的是一种可重复的结果，而不是一类宽泛的问题。每个角色都从读取和准备类工作开始，审阅结果，然后才加入经批准的动作或一个[例程](https://cursor.com/docs/grok-bot/work#skills-and-routines)。
-
-下面每个起始提示都故意停在审阅点。让发送、发布、购买和生产变更继续留在[审批](https://cursor.com/docs/grok-bot/security#approvals-and-auto-review)之后。
-
-## 销售外联
-
-负责客户调研、联系人优先级排序和可审阅的外联内容。连接你的 CRM、产品意向（product-intent）来源和电子邮件。
-
-> 调研此 CRM 视图中的 25 个客户。根据我们的理想客户画像（ideal customer profile）和近期意向为它们评分，为每个客户找出最多三位相关联系人，并参照所附风格示例起草电子邮件和 LinkedIn 外联内容。跳过任何已处于活跃序列中的人。返回一份审阅清单；不要发送或登记任何人。
-
-一旦输出可靠，就安排一个夜间调研例程，并在审阅清单处停止。
-
-## 人才寻访
-
-负责人才搜寻、候选人调研和外联草稿。连接你的申请人跟踪系统（applicant tracking system）、经批准的寻源工具、电子邮件和日历。
-
-> 针对这份职位描述，找到 20 位符合必备条件的候选人。排除已在我们的 ATS 中的人，解释每位匹配者的证据，并用我的语气起草个性化外联内容。不要联系任何人。
-
-让外部外联保持在审批之后，并让 Bot 尊重候选人隐私和每个来源的条款。
-
-## 付费媒体
-
-负责活动监控和预算建议。连接你的广告平台、分析工具、预算电子表格和 Slack。
-
-> 按活动拉取当前支出和表现。将其与月度预算和目标客户获取成本（customer acquisition cost）比较，然后给出有支撑数字的重新分配建议。为增长团队起草一条 Slack 更新。不要更改预算或发送消息。
-
-即使分析已经成为例程，也要让活动变更保持在审批之后。
-
-## 费用管理
-
-负责每周费用核对和缺失信息跟进。连接你的费用系统、电子邮件和财务电子表格。
-
-> 从费用系统和所附政策构建本周的费用摘要。匹配财务收件箱中的收据，标记缺失的类别或政策例外，并为每位负责人起草一条跟进信息。返回摘要和草稿；不要发送消息或更改报销。
-
-对每个例外都要求引用政策，并要求总额能与来源对账。
-
-## 产品性能
-
-负责有证据的定向性能调查。连接可观测性、分析工具和事故工具。
-
-> 调查昨天发布以来结账延迟的上升。查看仪表盘和追踪（traces），找出置信度最高的热点，并返回一份简短说明，附上截图和直接链接。把事实与假设分开。不要更改告警或生产设置。
-
-用例程来做定期健康报告，而不是无人监督的生产变更。
-
-## 缺陷复现
-
-负责把报告转化为可靠的复现包。连接你的问题跟踪器（issue tracker）和一个预发布环境（staging environment）。
-
-> 阅读这份缺陷报告，并用全新的测试账号在预发布环境中复现它。返回确切步骤、预期行为和实际行为、截图、浏览器和操作系统详情，以及尽可能小的测试用例。不要使用生产客户数据。
-
-通过[安全交接（secure handoff）](https://cursor.com/docs/grok-bot/work#take-over-for-sensitive-steps)提供测试凭证，而不是通过聊天。
-
-## 客户健康度
-
-负责整个客户组合中的风险和扩展信号。连接你的 CRM、产品使用情况、支持和账单来源。
-
-> 审阅此组合中的客户。把近期使用情况、支持升级、续约时间和利益相关者活动合并成一份排名的观察清单。对每个客户，包含证据、为何重要，以及建议的下一步。不要联系客户或编辑 CRM。
-
-在 Bot 的描述中定义风险阈值，使每周结果保持一致。
-
-## 幕僚长
-
-负责一份与来源关联的摘要，说明发生了什么变化以及哪些需要你关注。连接 Slack、电子邮件、日历和你的规划文档。
-
-> 审阅自昨天以来我获准渠道、收件箱、日历和会议记录中的活动。只返回与此文档中优先级对应的条目。对每个条目，包含来源、为何重要、建议的下一步，以及我是否欠一个决定。不要发送消息或更改会议。
-
-标记哪些有用、哪些是噪音，然后把摘要安排在你能审阅的时间。
-
-## 把一个角色变成持久的 Bot
-
-1. 把工作、来源系统、输出格式和长期边界写进 [Bot 的描述](https://cursor.com/docs/grok-bot/work#edit-a-bot)。
-2. 用一个安全的范围运行一项真实任务。
-3. 修正结果，直到无需你也能审阅。
-4. 把可用的流程保存为[技能](https://cursor.com/docs/grok-bot/work#save-a-skill)，并在第二份输入上测试。
-5. 只有在定义了重试和失败情况后，才创建[例程](https://cursor.com/docs/grok-bot/work#create-a-routine)。
-6. 让有后果的外部动作继续留在审批之后。
+**保留理由**：给出官方推荐的岗位化用法和起始提示，每个示例都停在审核点，可与实际案例文章对照，看官方如何建议用户逐步放权。

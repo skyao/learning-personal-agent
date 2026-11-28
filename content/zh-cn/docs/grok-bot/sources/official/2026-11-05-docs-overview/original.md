@@ -1,96 +1,93 @@
-来源：https://cursor.com/docs/grok-bot
-取文：2026-11-05，直接下载
+来源：https://docs.x.ai/grok-bot/overview
+取文：2026-11-28，直接下载（站点提供的 Markdown 版本 https://docs.x.ai/grok-bot/overview.md）
 
-Grok Bot gives you Bots you can keep around: AI teammates with names, jobs, and context that compounds over time. Each Bot works on a persistent cloud computer with a browser, filesystem, and terminal, so tasks finish in your real tools instead of as chat drafts. [Get started](https://cursor.com/docs/grok-bot/get-started) with your first Bot, or read [how teams roll it out](https://cursor.com/docs/grok-bot/teams).
+# Grok Bot
 
-You work with a Bot by messaging it. Give it a task, the relevant context, and access to the tools it needs. It takes on multi-step work across apps and websites, keeps you updated in the conversation, and comes back when something needs your approval.
+Grok Bot is your proactive AI teammate. It can help you build a deck, run a
+marketing campaign, book a dinner reservation, or keep your calendar in sync with
+all of your schedule changes.
 
-Grok Bot runs on macOS, Windows, Linux, iOS, and Android, and is included with
-every paid individual Cursor plan and with the Cursor Teams plan. You can also link an
-individual SuperGrok, SuperGrok Plus, or SuperGrok Heavy subscription, or
-sign in with a seat on a self-serve Grok Business plan. See
-[Plans and billing](https://cursor.com/help/grok-bot/plans) for the full matrix.
+It's an agent with access to a real computer in the cloud, so it can do all the
+things you can.
+
+[Get started](https://docs.x.ai/grok-bot/get-started)
+
+[See use cases](https://docs.x.ai/grok-bot/use-cases)
+
+[Grok Bot for teams](https://docs.x.ai/grok-bot/teams-and-enterprises)
+
+## An entire team of bots
+
+Bots can take on big tasks that might otherwise take hours or days. They work
+across apps, websites, and tools, and with one another: multiple Bots can work
+together, like a real team.
+
+Chat is the main interface for Grok Bot, but you can also start a voice call or
+send a voice note. Bots work best when you connect them with the tools you use
+every day: [Slack](https://x.ai/bot/plugin/674), [Notion](https://x.ai/bot/plugin/404), [Google Drive](https://x.ai/bot/plugin/45893413), Teams, and more. Grok Bot supports custom
+tooling, so it can interact with any MCP or API.
+
+* [Google Drive](https://x.ai/bot/plugin/45893413) — Draft from what’s already there. Reads the briefs and past decks in a folder, drafts the next one in your format, and leaves it in Drive for your edits.
+
+* [Google Calendar](https://x.ai/bot/plugin/45893411) — Start each week with a plan. Every Sunday evening, reads the week ahead, flags clashes and packed days, and sends you a short plan for Monday.
+
+* [Gmail](https://x.ai/bot/plugin/45893410) — Wake up to a sorted inbox. Sorts the night’s mail before you’re up, drafts replies to the threads that need you, and leaves every draft for you to send.
+
+* [Granola](https://x.ai/bot/plugin/5609) — Turn notes into next steps. Each evening, reads the day’s Granola notes, pulls out every action item with its owner, and drafts a post for your team’s Slack channel that goes out once you approve.
+
+* [Slack](https://x.ai/bot/plugin/674) — Pick up requests as they come in. Watches for mentions of your name, starts on the ask, like marketing copy or a campaign brief, and sends you a draft to approve before it replies in the thread.
+
+* [Notion](https://x.ai/bot/plugin/404) — Keep project pages current. Every Friday, drafts a progress update for each project page, highlights what changed, and adds it once you approve.
+
+[Browse all apps](https://cursor.com/marketplace)
+
+* [Your primary Bot](https://docs.x.ai/grok-bot/bots#your-primary-bot) — Ask your main Bot what's new, and it answers for every Bot working for you.
+
+* [Morning briefing](https://docs.x.ai/grok-bot/use-cases#chief-of-staff) — Each morning, one Bot sums up your mail, calendar, Slack, and docs in a single post.
+
+* [Use the computer and apps](https://docs.x.ai/grok-bot/computer-and-apps) — Your Bots share a cloud computer, so they can use apps and sites that have no connector.
+
+* [Give a Bot a job](https://docs.x.ai/grok-bot/use-cases#sales-outbound) — Hand a Bot one clear job, like qualifying leads, and it drafts every reply for your OK.
+
+* [Connect your tools](https://docs.x.ai/grok-bot/computer-and-apps#connect-an-app) — Connect the apps you use, and one Bot works across Gmail, Slack, and Drive.
+
+* [Run it every morning](https://docs.x.ai/grok-bot/skills-routines-and-automations#create-a-routine) — Ask a Bot to repeat a task, and it becomes a routine that runs on the schedule you set.
+
+* [A team runs the campaign](https://docs.x.ai/grok-bot/how-grok-bot-works) — Several Bots split a campaign, pass the work along, and bring it to you for review.
 
 ## What makes Grok Bot different
 
-- **Each Bot has a computer.** Your Bots run on a persistent cloud computer with a browser, filesystem, and terminal. They use [connected apps](https://cursor.com/docs/grok-bot/work#connect-apps) where available and computer use for everything else, and work continues while your laptop is closed.
-- **Setup is a message, not a workflow builder.** Create a Bot, describe the job, and grant access as it asks. The same Bot is reachable from the desktop app and the iPhone and Android apps.
-- **Bots coordinate with each other.** Your Bots can run in parallel, message each other, share context in [group chats](https://cursor.com/docs/grok-bot/work#group-chats), and pass ownership of a task, so you aren't the router between tools.
-- **Bots learn workflows from demonstration.** Walk a Bot through a multi-step path once, and it can save the path as a [skill](https://cursor.com/docs/grok-bot/work#skills-and-routines) and rerun it on a schedule.
-- **Context compounds.** A named Bot keeps its memory, files, browser sessions, and preferences across sessions instead of resetting on every task.
+* [Bots hand off work](https://docs.x.ai/grok-bot/skills-routines-and-automations#create-a-routine) — Bots work together, then bring you in. One Bot's routine pulls the week's numbers, another Bot drafts a campaign from them, and a third reviews it. Then they hand it to you to approve, edit, or send back.
 
-## Your Bots share one computer
+* [Bots share a computer](https://docs.x.ai/grok-bot/computer-and-apps) — A Bot can do real work, the way a person would. Under the hood, your Bots share a persistent cloud computer with a browser, filesystem, and terminal, just like yours.
 
-All of your Bots use the same cloud computer, sharing its files, browser sessions, and app logins, which makes handoffs work without repeating setup. The computer belongs to your account, not to an individual Bot, so treat anything placed on it as available to every Bot you run; between users, isolation is strict. [The computer and apps](https://cursor.com/docs/grok-bot/work#the-computer-and-apps) covers the full model. When you chat with a teammate's [shared Bot](https://cursor.com/help/grok-bot/shared-bots), it usually works on your computer too.
+* [Talk to it like a teammate](https://docs.x.ai/grok-bot/chat-and-collaboration#message-a-bot) — Hand off work as easily as telling a coworker. Call your Bot or send a voice note from wherever you are, and it gets to work just as it would on a typed message.
 
-## A good first handoff
+* [Bots learn quickly](https://docs.x.ai/grok-bot/skills-routines-and-automations) — Show it once, and it can take it from there. Walk a Bot through a task once, and it can save the steps as a skill and rerun them on a schedule.
 
-Start with a real task that spans a few tools and has a clear finish line:
+* [Bots remember you](https://docs.x.ai/grok-bot/bots#what-a-bot-remembers) — You never have to start over or repeat yourself. Your Bot picks up where it left off, with your preferences, files, and logins already in place.
 
-> Pull this week's pipeline review list from our CRM. Skip anyone already in an
-> active sequence. Research the top five accounts across the web and Slack,
-> pull the right contacts, draft outreach in my voice, and leave me drafts to
-> approve by tomorrow morning.
+* [Works where you are](https://docs.x.ai/grok-bot/faq#where-do-i-talk-to-grok-bot) — Your Bot meets you where you already work. Work with Bots on desktop, mobile, in Slack, or on X.
 
-This tells the Bot what to do, where to work, what context to pull in, and what finished work looks like. Review the result, correct it, and turn the stable process into a [skill or routine](https://cursor.com/docs/grok-bot/work#skills-and-routines).
+## Prebuilt bots to get started
 
-## FAQ
+Bots that are already set up for a job. Open one in the marketplace to see what it does.
 
-### Does Grok Bot keep working when my laptop is closed?
+* [Overheard](https://x.ai/bot/marketplace/bots/overheard) — Watches Reddit, Hacker News, news sites, and X for third-party mentions of your name, brand, and URLs, then sends a short weekday digest when something clears the bar. Stays quiet on dead days and never posts on your behalf.
 
-Yes. Work runs on the cloud computer. Closing the app, your laptop, or your
-phone doesn't stop a background turn or a routine.
+* [Tradbot](https://x.ai/bot/marketplace/bots/tradbot-2) — Watches your personal email and calendar so school forms, bills, and RSVPs don't slip. Drafts the reply, catches the pickup clash, and never sends without you.
 
-### Can several Bots work at the same time?
+* [Meeting Recap Deck](https://x.ai/bot/marketplace/bots/echo) — Turns your meeting notes into a recap deck in your slide template. Works from notes you paste or upload, and never invents a quote.
 
-Yes. Bots can reason, use connected apps, work with files, and coordinate in
-parallel. Each Bot gets its own screen on the shared computer, and one
-Bot runs one computer-use task on its screen at a time.
+* [Pitch Deck Coach](https://x.ai/bot/marketplace/bots/pitch-deck-coach) — Reviews a pitch deck and reports what an investor is likely to understand, believe, question, and remember, then helps strengthen the story, evidence, and slides.
 
-### What does a Bot remember?
+[Browse the marketplace](https://x.ai/bot/marketplace)
 
-Stable preferences, role context, and summaries of prior work. Conversations
-and learned context stay separate per Bot, while shared files, browser
-sessions, and direct handoffs move context between them. For consequential
-decisions, ask the Bot to check the current source instead of relying on
-memory.
+## Popular guides
 
-### Can a Bot use any website?
-
-Bots can use many browser-based tools, including services without a
-connected app. A site can still block automation, expire a session, or require a
-human step. The Bot hands those steps to you rather than working around
-them.
-
-### Which platforms are supported?
-
-The desktop app runs on macOS (Apple silicon and Intel), Windows (x64
-and Arm64), and Linux (x64 and Arm64), and the mobile app runs on iPhone
-and Android.
-The computers Bots work on run in Cursor's cloud.
-
-### How much does Grok Bot cost?
-
-Access is included with every paid individual Cursor plan and with the
-Cursor Teams plan, through an individual SuperGrok account link, or with
-a seat on a self-serve Grok Business plan. Usage
-resets weekly. See [Plans and billing](https://cursor.com/help/grok-bot/plans).
-
-## Next steps
-
-[Get started
-
-Install the app, create your first Bot, and hand it a useful task.](https://cursor.com/docs/grok-bot/get-started)[Use cases
-
-Roles that work well, with starter prompts you can adapt.](https://cursor.com/docs/grok-bot/use-cases)[Work with Grok Bot
-
-Bots, messaging, the shared computer, and skills and routines in one
-place.](https://cursor.com/docs/grok-bot/work)[Teams and Enterprise
-
-Admin controls, identity, private networks, and the recommended rollout
-baseline.](https://cursor.com/docs/grok-bot/teams)[Security
-
-Network policy, approvals and Auto Review, logging, and data handling.](https://cursor.com/docs/grok-bot/security)[Deployment
-
-Push the desktop app to managed devices, pick a version, and plan
-updates.](https://cursor.com/docs/grok-bot/deployment)
+* [Create and manage Bots](https://docs.x.ai/grok-bot/bots)
+* [Message and collaborate](https://docs.x.ai/grok-bot/chat-and-collaboration)
+* [Files and results](https://docs.x.ai/grok-bot/files-and-results)
+* [Skills and routines](https://docs.x.ai/grok-bot/skills-routines-and-automations)
+* [Approvals, security, and privacy](https://docs.x.ai/grok-bot/approvals-security-and-privacy)
+* [Troubleshooting](https://docs.x.ai/grok-bot/troubleshooting)

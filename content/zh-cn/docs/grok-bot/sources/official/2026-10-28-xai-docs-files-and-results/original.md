@@ -1,7 +1,7 @@
 来源：https://docs.x.ai/grok-bot/files-and-results
-取文：2026-11-06，直接下载（站点提供的 Markdown 版本 https://docs.x.ai/grok-bot/files-and-results.md）
+取文：2026-11-28，直接下载（站点提供的 Markdown 版本 https://docs.x.ai/grok-bot/files-and-results.md）
 
-Files and results
+# Files and results
 
 Attach source material to a request and ask the Bot to return work in a form you
 can inspect, edit, and hand off.
@@ -34,11 +34,10 @@ out; send the rest in another message. Large, encrypted, damaged, or unusual
 files may not be readable; export an unusual format as PDF, CSV, plain text, or
 an image.
 
-On iPhone, you can also share a photo, file, link, or text from another app
-into Grok Bot. Use the system share sheet, choose **Grok Bot**, pick a chat,
-and choose **Attach**. The item is added to that conversation's composer. On
-Android, the share sheet currently accepts text. See
-[Grok Bot for Mobile](https://docs.x.ai/grok-bot/mobile).
+You can also share from another app on your phone: a photo, file, link, or
+text on iPhone, or text, photos, videos, audio, or PDFs on Android. Use the
+system share sheet, choose **Grok Bot**, pick a Bot in **To:**, optionally
+**Add a note**, and choose **Send**. See [Grok Bot for Mobile](https://docs.x.ai/grok-bot/mobile).
 
 Tell the Bot what each attachment is and how it should use it:
 
@@ -60,18 +59,18 @@ credentials or approving an external action.
 
 ## Move files to and from your apps
 
-When you've connected Google Drive, OneDrive, SharePoint, Gmail, or Outlook, a
+When you've connected [Google Drive](https://x.ai/bot/plugin/45893413), [OneDrive](https://x.ai/bot/plugin/57302028), SharePoint, [Gmail](https://x.ai/bot/plugin/45893410), or [Outlook](https://x.ai/bot/plugin/57302029), a
 Bot can move files between its computer and those accounts without pasting
 their contents into the chat:
 
-* Save a file it made or downloaded to Google Drive, OneDrive, or SharePoint,
-  or attach it to a Gmail or Outlook draft.
-* Bring a Drive, OneDrive, or SharePoint file, or an email attachment, onto its
+* Save a file it made or downloaded to [Google Drive](https://x.ai/bot/plugin/45893413), [OneDrive](https://x.ai/bot/plugin/57302028), or SharePoint,
+  or attach it to a [Gmail](https://x.ai/bot/plugin/45893410) or [Outlook](https://x.ai/bot/plugin/57302029) draft.
+* Bring a [Google Drive](https://x.ai/bot/plugin/45893413), [OneDrive](https://x.ai/bot/plugin/57302028), or SharePoint file, or an email attachment, onto its
   computer to work on it. Google Docs, Sheets, Slides, and Drawings arrive as
   `.docx`, `.xlsx`, `.pptx`, and `.png` files.
 
-Say where the file should go. Saving to Google Drive always creates a new file,
-even when one with the same name exists. OneDrive and SharePoint refuse a name
+Say where the file should go. Saving to [Google Drive](https://x.ai/bot/plugin/45893413) always creates a new file,
+even when one with the same name exists. [OneDrive](https://x.ai/bot/plugin/57302028) and SharePoint refuse a name
 that already exists unless you tell the Bot to overwrite it.
 
 ## Ask for a reviewable result
@@ -119,6 +118,11 @@ Describe what you want, such as the subject, style, and mood, in your own
 words. To build on pictures you already have, share them in the conversation and
 say how to use them. The Bot uses them as references.
 
+Images can show real or invented people, including you: share a photo of
+yourself and ask, for example, to see an outfit on you. For a well-known
+person, product, or place, the Bot first looks for a real photo to use as a
+reference.
+
 Images can be square, wide, or tall: 1:1, 4:3, 3:4, 16:9, or 9:16. Image
 creation isn't used for charts, plots, or tables; for those, ask for a
 [page](#pages).
@@ -155,7 +159,8 @@ and the Bot then sends them to the conversation.
 ### If the Bot didn't create what you asked for
 
 * To show you what a real person, place, or product looks like, the Bot finds a
-  real image instead of creating one.
+  real image instead of creating one. If it can't find one, it tells you
+  rather than creating a picture.
 * Some requests are blocked by content rules, and the Bot tells you when that
   happens. Naming trademarked characters, brands, or real people often causes a
   block. Describe the subject in your own words and try again.
@@ -261,6 +266,15 @@ chat to open its profile, then tap **Library**.
   the item at the top of the Library under **Pinned**. Choose **Unpin** to
   take it off. A page's menu also has **Open**, and **Share…** for pages you
   own.
+* In the desktop app, choose a type above the list, such as **Pages**,
+  **Media**, **Links**, **Files**, **Apps**, or **Pinned**, to show only that
+  kind. Choose **All** to see everything again.
+
+On a [Team Bot](https://docs.x.ai/grok-bot/team-bots), the desktop Library lists what the
+Bot made for you under **Private to you**, and pages shared with your team and
+the Bot's own files under **Bot's files**. There's no **Pinned** heading: hover
+over a row in **Private to you** and click its pin to keep it at the top. The
+pin stays shown while the row is pinned; click it again to unpin.
 
 ### Share a page
 

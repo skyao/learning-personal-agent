@@ -1,7 +1,7 @@
 来源：https://docs.x.ai/grok-bot/computer-and-apps
-取文：2026-11-06，直接下载（站点提供的 Markdown 版本 https://docs.x.ai/grok-bot/computer-and-apps.md）
+取文：2026-11-28，直接下载（站点提供的 Markdown 版本 https://docs.x.ai/grok-bot/computer-and-apps.md）
 
-Use the computer and apps
+# Use the computer and apps
 
 Your Bots work from a persistent cloud computer with a browser, command line,
 and filesystem. Work continues while your laptop is closed, and files,
@@ -41,12 +41,12 @@ your laptop does not stop cloud work.
 
 To sign in, a Bot uses a login saved in [Vault](https://docs.x.ai/grok-bot/vault) first, then a
 connected password manager such as [1Password](#connect-1password), then asks
-you with a Secure Form. Values from Vault and the Secure Form are filled into
-the page without the Bot seeing them. When a site emails a one-time code, the
-Bot can read it from a connected Gmail or Outlook account or from [its own
+you with a Secure Form. Logins from Vault and values from the Secure Form are
+filled in without the Bot seeing them. When a site emails a one-time code, the
+Bot can read it from a connected [Gmail](https://x.ai/bot/plugin/45893410) or [Outlook](https://x.ai/bot/plugin/57302029) account or from [its own
 inbox](#give-your-bots-an-email-address). At checkout, it can use a card saved
-in Vault, a card you enter in a Secure Form, or a connected wallet such as Link
-or X Money; see [Pay for things](https://docs.x.ai/grok-bot/vault#pay-for-things).
+in Vault, a card you enter in a Secure Form, or a connected wallet such as Link,
+X Money, or Shop Pay; see [Pay for things](https://docs.x.ai/grok-bot/vault#pay-for-things).
 
 The Bot hands you the computer when a form can't do the step:
 
@@ -75,8 +75,8 @@ the check.
 
 ## Connect an app
 
-Apps give a Bot a structured way to work with services like Gmail, Notion, and
-Slack, and are more reliable than clicking through a website when one exists.
+Apps give a Bot a structured way to work with services like [Gmail](https://x.ai/bot/plugin/45893410), [Notion](https://x.ai/bot/plugin/404), and
+[Slack](https://x.ai/bot/plugin/674), and are more reliable than clicking through a website when one exists.
 Use the browser for services without an app or for visual workflows an app does
 not expose. App connections belong to the same account you used to sign in to
 Grok Bot.
@@ -88,7 +88,8 @@ Grok Bot.
 3. When Grok Bot asks you to **Authorize** or **Authenticate**, finish the
    provider login in your browser.
 4. If sign-in doesn't finish, choose **Reconnect** on the app, or **Reopen** on
-   the in-chat card, to bring the sign-in page back.
+   the in-chat card, to bring the sign-in page back. Finish the sign-in within
+   about 10 minutes, or start again from the card.
 5. Confirm the app appears under **Installed**.
 
 In chat, type `@` to attach the app to the task.
@@ -97,7 +98,7 @@ In chat, type `@` to attach the app to the task.
 says an app is missing, open the app and choose **Authenticate** (**Authorize**
 on the phone) if it shows **Needs auth** or **Disconnected**.
 
-You can also ask a Bot to do this for you, for example “Add the Linear app.”
+You can also ask a Bot to do this for you, for example “Add the Linear app.” [Add Linear to Grok Bot](https://x.ai/bot/plugin/512)
 The Bot searches the catalog, installs the app on your account, and shows a
 **Connect** card when the app needs you to sign in. The app's tools are ready
 from your next message. A Bot can also add an MCP server that isn't in the
@@ -106,12 +107,23 @@ command is available to your other Bots too. Adding a server on a private
 network, or one that uses a private certificate authority, asks for your
 approval first.
 
+To add one yourself in the desktop app, choose **Add a custom connector** at
+the bottom of **Connect apps**. Enter a **Name**, then pick a **Type**:
+**Remote HTTPS** takes a **Server URL**, with optional **HTTP headers** and an
+OAuth **Client ID** (a **Client secret** field appears once you enter one);
+**Command** takes a **Command** and its **Arguments**. Choose **Add plugin** to save it.
+If your team admin's MCP policy blocks the server, it can't be saved.
+
+When a Bot reaches a sign-in page for a site that has an app, it uses that app
+if it's connected, or offers the app's **Connect** card so you can connect it
+instead of signing in through the browser.
+
 When a Bot removes an app for you, everything the app added goes with it and
 you are signed out, so reinstalling it means signing in again. Apps your team
 requires can't be removed.
 
 * **Apps are account-wide.** A connected app is available to every Bot you run.
-  A teammate's [shared Bot](https://docs.x.ai/grok-bot/shared-bots) asks before it uses your
+  A teammate's [Team Bot](https://docs.x.ai/grok-bot/team-bots) asks before it uses your
   accounts.
 * **App logins stay off the computer.** OAuth tokens are held on Cursor's
   connector backend, and the Bot invokes tools without receiving them.
@@ -137,30 +149,82 @@ sharing.
   can edit. It cannot change Google Meet settings, such as the waiting room or
   host controls, and it cannot add a Zoom link, because Google's Zoom add-on
   isn't available to the app. Put the Zoom link in the event location or
-  description yourself, or create the event in Calendar and ask the Bot to
+  description yourself, or create the event in [Google Calendar](https://x.ai/bot/plugin/45893411) and ask the Bot to
   update the other fields.
 * **Google Sheets:** the Bot can read and edit cells in spreadsheets the
   connected Google account can edit. A file shared as Viewer stays view-only.
-  Finding and opening files uses the **Google Drive** app, which can search and
+  Finding and opening files uses the [Google Drive](https://x.ai/bot/plugin/45893413) app, which can search and
   read files that account can open.
-* **Slack:** the app posts as the Slack user you connected, not as a separate
+* **Google Docs:** editing a Doc's content in place uses the [Google Docs](https://x.ai/bot/plugin/45893412)
+  app. If only [Google Drive](https://x.ai/bot/plugin/45893413) is connected, the Bot adds Google Docs, with a
+  **Connect** card if you need to sign in, before it turns to the browser.
+* **Slack:** the app posts as the [Slack](https://x.ai/bot/plugin/674) user you connected, not as a separate
   bot that has to be invited. It can post only in channels that user can post
   in. To use another Slack workspace, connect that workspace. This is separate
   from a Slack message that [starts a
   routine](https://docs.x.ai/grok-bot/skills-routines-and-automations#trigger-work-from-an-event).
 * **Gmail:** the app can search and read mail, draft and send, and apply labels
-  on the connected mailbox. Gmail connects one mailbox at a time; to use a
+  on the connected mailbox. A [Gmail](https://x.ai/bot/plugin/45893410) draft card shows your Gmail signature under
+  the message, and a draft the Bot saves in Gmail keeps that signature, so the
+  Bot leaves the sign-off to it. Gmail connects one mailbox at a time; to use a
   different one, disconnect the current mailbox and authorize the other.
   Disconnect Gmail if a Bot should not use that mailbox. Some other apps, like
-  Notion, can connect a second account.
-* **X:** the X plugin needs X API credits on your X developer account.
+  [Notion](https://x.ai/bot/plugin/404), can [connect a second account](#connect-a-second-account).
+* **Stripe:** Stripe ends every connection a fixed time after sign-in, however
+  often it's used, so you need to reconnect it from time to time. If you've
+  used Stripe recently, a Bot tells you when it needs reconnecting.
+* **X:** the [X](https://x.ai/bot/plugin/49086599) plugin needs X API credits on your X developer account.
+* **Microsoft Power BI:** connects with a work or school Microsoft account; a
+  personal Microsoft account can't connect it. The Bot can list workspaces,
+  reports, and datasets, and render a report or one of its pages as images.
+  Every Power BI tool only reads. Rendering needs the workspace on Premium,
+  Embedded, or Fabric capacity, and the Power BI tenant setting **Export
+  reports as image files** turned on.
+* **Google BigQuery:** the Bot queries the datasets the connected Google
+  account can read. It signs in to Google as **Grok**, like the other Google
+  apps, so a company Google block uses [the steps
+  below](#if-google-says-an-admin-needs-to-review-grok). A team admin can enter
+  the team's own Google OAuth client ID and secret in the plugin's team setup
+  on the dashboard's [Plugins & MCPs page](https://cursor.com/dashboard/plugins);
+  members then sign in under that client instead.
+* **Databricks Genie:** a team admin sets it up before members can connect it.
+  The admin registers an OAuth app connection in the Databricks account, then
+  enters the workspace URL, client ID, and client secret (left blank for a
+  public client) in the plugin's team setup on the dashboard's [Plugins & MCPs
+  page](https://cursor.com/dashboard/plugins). Each member then signs in with
+  their own Databricks account, and the Bot asks Genie questions in natural
+  language against the data that account can query.
+* **Asana:** needs no admin setup. The Bot works in the workspaces and projects
+  your Asana account can open.
+* **Vanta:** keeps each account in one region. The first time you connect it,
+  pick your account's region at sign-in: **United States**, **Europe**, or
+  **Australia**. A sign-in on the wrong region doesn't find your account; sign
+  in again and choose the other region.
+* **Shop Pay:** a wallet. Connect it and sign in to Shop, and the Bot can check
+  out with Shop Pay on Shopify stores. See [Pay for
+  things](https://docs.x.ai/grok-bot/vault#pay-for-things).
+
+### Connect a second account
+
+Some apps can connect more than one account, like two [Notion](https://x.ai/bot/plugin/404) workspaces.
+
+1. Choose **Connect apps** in the sidebar and open the app.
+2. Under **Accounts**, choose **Add Another Account**.
+3. Give the account a label, like work or personal.
+4. Choose **Authorize** and sign in to the second account.
+
+On the phone, open the app from **Connect apps** and choose **Add account**.
+
+Tell the Bot which account to use by its label, for example “Use my work
+Notion.” Every Bot on your Grok Bot account can use every connected account. If
+you don't see **Add Another Account**, that app connects one account at a time.
 
 ### If Google says an admin needs to review Grok
 
-A company Google account can stop the connection before Gmail, Calendar, Drive,
-Docs, Sheets, or Slides finishes signing in. Grok Bot signs in to Google as
-**Grok**, not Cursor. This is separate from the Cursor **Disabled by team
-admin** control.
+A company Google account can stop the connection before [Gmail](https://x.ai/bot/plugin/45893410), [Google Calendar](https://x.ai/bot/plugin/45893411), [Google Drive](https://x.ai/bot/plugin/45893413),
+[Google Docs](https://x.ai/bot/plugin/45893412), Sheets, [Google Slides](https://x.ai/bot/plugin/45893415), or BigQuery finishes signing in. Grok Bot signs in to
+Google as **Grok**, not Cursor. This is separate from the Cursor **Disabled by
+team admin** control.
 
 If the Google page says **Your admin needs to review Grok**, Grok is not
 approved for that Workspace yet. Request access if that button is there, and
@@ -177,12 +241,45 @@ That approval covers the Google apps those people connect. It does not turn an
 app back on in Cursor.
 
 If the page says **Access blocked**, Google refused the sign-in. A personal
-Gmail account does not need a company admin; a company account often hits this
+[Gmail](https://x.ai/bot/plugin/45893410) account does not need a company admin; a company account often hits this
 when Grok is not on the allowlist, or when the admin has blocked third-party
 apps. Ask the Google admin to trust **Grok** with the steps above. Changing
 browsers or connecting the app again does not clear a Google admin block. If the
 page still says access is blocked, [contact support](https://docs.x.ai/grok-bot/troubleshooting)
 with the Google account email and a screenshot of the blocked page.
+
+### If Microsoft says an admin needs to approve Grok Bot
+
+A work or school Microsoft 365 account can stop [Outlook](https://x.ai/bot/plugin/57302029), [Outlook Calendar](https://x.ai/bot/plugin/57302030),
+[OneDrive](https://x.ai/bot/plugin/57302028), or **Teams** from connecting until the organization's
+Microsoft 365 admin approves the app. Retrying the sign-in or allowing the
+permissions again doesn't help.
+
+* On your computer, the sign-in page says **Your organization's Microsoft 365
+  admin needs to approve this app before you can connect** and shows an
+  **Approval link for your IT admin**. Send that link to your IT admin. After
+  they approve it, connect again from Grok Bot.
+* On the phone app 1.19.0 or later, the connect card says the same and adds
+  **Ask your IT admin to approve Grok Bot, then connect again**. The phone
+  doesn't show the approval link, so if your admin needs it, connect once from
+  your computer to get it.
+
+If the page says the app is **blocked by your organization** instead, the admin
+has to allow the connection. The page lists the connector, the Microsoft Entra
+application ID, the error code, and the time to send them.
+
+### If the phone says to connect on your computer
+
+Some providers don't finish sign-in from a phone browser. On the phone app
+1.19.0 or later, **Connect** for **Adapter**, **Robinhood**, and **Intercom**,
+and for **Postiz** on iPhone, shows **Connect on your computer** instead of
+opening the sign-in page. Open Grok Bot on your computer and connect the app
+there. The connection then works on your phone too, because apps belong to your
+account, not the device.
+
+[Slack](https://x.ai/bot/plugin/674) still signs in on the phone. If you close its sign-in before
+finishing, the phone reminds you that [Slack](https://x.ai/bot/plugin/674)'s phone sign-in needs your
+workspace password, and that you can connect Slack from your computer instead.
 
 ### Connect 1Password
 
@@ -192,7 +289,7 @@ it in; your Bots never see the values. The new 1Password integration is rolling
 out gradually. It works with personal and Family 1Password accounts and needs
 1Password 8.12.42 or later.
 
-1. Choose **Connect apps** and open **1Password**, under **Password Managers**.
+1. Choose **Connect apps** and open **1Password**, under **Password managers**.
 2. On your computer, choose **Connect 1Password**.
 3. Your browser opens. Sign in to 1Password there and approve Grok Bot. Grok Bot
    updates when you're done.
@@ -202,6 +299,9 @@ apps**, or search for it, then approve the connection in 1Password. If your phon
 says **1Password can only be set up on a Mac**, the new integration hasn't
 reached your account yet; set it up from Grok Bot on your computer instead. To
 stop using 1Password, open it in **Connect apps** and choose **Disconnect**.
+
+Once 1Password is connected, type **@** in the message box and choose
+**1Password** to have the Bot use your 1Password logins.
 
 When a login isn't saved in Vault, the Bot sends a card in the chat that names
 the website:
@@ -256,8 +356,8 @@ asks. The old vault stays in 1Password.
   can already open. If members see “This team does not have the SharePoint
   integration”, the admin needs to finish the Delegated sign-in.
 
-For more setup help, see [Connect
-apps](https://cursor.com/help/grok-bot/connect-apps).
+For more setup help, see
+[Connect plugins](https://grok.com/help/grok-bot/connect-plugins).
 
 ## Give your Bots an email address
 
@@ -299,7 +399,7 @@ that should act only for certain senders.
   one is deleted.
 * **Yours, not one Bot's.** All your Bots can use the address in your own chats
   and routines. It isn't used in Slack threads or in chats where someone else is
-  talking to the Bot, and a [shared Bot](https://docs.x.ai/grok-bot/shared-bots) doesn't have a
+  talking to the Bot, and a [Team Bot](https://docs.x.ai/grok-bot/team-bots) doesn't have a
   team address.
 * **Reading mail.** Anyone can send mail to the address. Mail that fails the
   spam or virus scan is kept without its body or attachments, and it never
@@ -320,7 +420,7 @@ that should act only for certain senders.
   allows it; if Auto Review needs you, you see an approval card first. Email
   from a routine, or from any other turn you didn't start with that request,
   waits as a draft until you press **Send**, and there's no option for
-  unattended sending. If you've also connected Gmail or Outlook, the Bot asks
+  unattended sending. If you've also connected [Gmail](https://x.ai/bot/plugin/45893410) or [Outlook](https://x.ai/bot/plugin/57302029), the Bot asks
   which account to send from when either could work.
 * **Safety.** A Bot treats email from other people as information, not
   instructions. Each message it reads is marked as from you or from someone
@@ -367,7 +467,7 @@ posts on a topic, or check trends and news.
 
 This access is read-only and doesn't sign in as you. For your DMs, bookmarks,
 home timeline, or who liked your posts, add the X plugin from **Connect apps**
-and sign in with X.
+and sign in with X. [Add X to Grok Bot](https://x.ai/bot/plugin/49086599)
 
 ## Work with files
 
@@ -400,7 +500,7 @@ The app and the computer update separately.
 
 | Action | What it does | What it keeps | What it removes |
 | --- | --- | --- | --- |
-| **Update** | Moves the computer to the latest version. Some updates only refresh Grok Bot's software; others replace the whole computer, and you may be able to schedule those for later. The text under **Update Bot's Computer** says which kind is waiting. | Software update: everything, including installed apps. Computer update: Bots, files, and logins. | Software update: nothing. Computer update: installed apps and packages. |
+| **Update** | Moves the computer to the latest version. Some updates only refresh Grok Bot's software; others replace the whole computer, and you may be able to schedule those for later. The text under **Update Bot's computer** says which kind is waiting. | Software update: everything, including installed apps. Computer update: Bots, files, and logins. | Software update: nothing. Computer update: installed apps and packages. |
 | **Recover** | Saves what it can, then builds a new computer on the latest version from your saved data. Running work is interrupted. | Bots, files, and logins that were saved | Installed apps and packages, and very recent changes if the computer could not be reached to save them |
 | **Reset** | Builds a new computer on the latest version from your last saved data. Running work is interrupted. | Bots, files, and logins that were saved | Installed apps and packages, and very recent changes if the computer could not be reached to save them |
 
@@ -411,17 +511,17 @@ support](https://docs.x.ai/grok-bot/troubleshooting) before you use **Recover** 
 When the computer is unreachable, work from the least destructive option first:
 
 1. Wait, then choose **Retry** if the computer says **Reconnecting** or
-   **Couldn't Reach Grok Bot's Computer**, or reopen the conversation. Bots,
+   **Couldn't reach Grok Bot's computer**, or reopen the conversation. Bots,
    files, and logins are safe while it reconnects. Do not **Reset** during this.
 2. Fully quit Grok Bot and reopen it, and check for an app update. On Mac,
    choose **Quit** from the menu bar, not just close the window.
-3. Use **Update Bot's Computer** in **Settings → Computer** if an update is
+3. Use **Update Bot's computer** in **Settings → Computer** if an update is
    offered.
 4. Choose **Recover computer** (the confirmation dialog calls it **Recover Grok
-   Bot's Computer**) if it still cannot reconnect, or if an update looks stuck
+   Bot's computer**) if it still cannot reconnect, or if an update looks stuck
    and **Recover computer** is shown. On a slow update, **Keep waiting** is the
    safe default.
-5. Use **Reset Bot's Computer** only after those steps.
+5. Use **Reset Bot's computer** only after those steps.
 
 Do not start a second Update or Reset while one is already running; repeated
 resets can interrupt a restore that is still finishing. **Reconnecting** and
@@ -437,7 +537,7 @@ Settings says **An agent couldn't pause in time, so the computer was not
 updated**, let that Bot finish, then choose **Update** again.
 
 A Bot cannot finish a turn while the computer says **Reconnecting** or
-**Couldn't Reach Grok Bot's Computer**. Fix the connection with the steps above,
+**Couldn't reach Grok Bot's computer**. Fix the connection with the steps above,
 then send the message again. See [Troubleshooting](https://docs.x.ai/grok-bot/troubleshooting)
 for missing chats and when to contact support.
 

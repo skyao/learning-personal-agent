@@ -1,7 +1,7 @@
 来源：https://docs.x.ai/grok-bot/settings-and-notifications
-取文：2026-11-06，直接下载（站点提供的 Markdown 版本 https://docs.x.ai/grok-bot/settings-and-notifications.md）
+取文：2026-11-28，直接下载（站点提供的 Markdown 版本 https://docs.x.ai/grok-bot/settings-and-notifications.md）
 
-Settings and notifications
+# Settings and notifications
 
 Grok Bot settings cover app-wide and desktop-local behavior. Each Bot's name,
 picture, and label live in its conversation details.
@@ -14,7 +14,7 @@ conversation details, see
 [Keyboard shortcuts](https://docs.x.ai/grok-bot/chat-and-collaboration#keyboard-shortcuts).
 
 The **Grok Bot settings** dialog has **General**, **Computer**, **Vault**,
-**Usage & Billing**, and **Updates** panes. Sections depend on your account and
+**Usage & billing**, and **Updates** panes. Sections depend on your account and
 rollout, so some options described below may not appear.
 
 ## General
@@ -31,26 +31,26 @@ the same accounts; inactive rows include **Remove**.
 
 ### Appearance
 
-Choose **Follow System**, **Light**, or **Dark**.
+Choose **Follow system**, **Light**, or **Dark**.
 
 **Accent** colors your 1:1 Bot messages and cards with each Bot's color
 (**Bot color**, the default) or keeps them **Black**.
 
-Use **Language** to choose **Follow System** or one of more than 20 app
+Use **Language** to choose **Follow system** or one of more than 20 app
 languages, including English, Spanish, French, German, Japanese, Korean,
 Simplified Chinese, and Traditional Chinese. On iPhone and Android the
 follow-device option is labeled **System**, and the list is shorter. See
 [Grok Bot for Mobile](https://docs.x.ai/grok-bot/mobile).
 
-**Check Spelling While Typing** underlines misspelled words as you type. It's
+**Check spelling while typing** underlines misspelled words as you type. It's
 on by default.
 
 ### System
 
 * **Microphone** picks the microphone Grok Bot listens to when you talk to it:
-  **System Default** or a specific device.
+  **System default** or a specific device.
 * **Use hardware acceleration** lets your graphics card draw the app. Turn it
-  off if the window flickers or stays blank, then choose **Restart Now**. It's
+  off if the window flickers or stays blank, then choose **Restart now**. It's
   on by default on macOS and Windows and off on Linux.
 
 ### Bot
@@ -58,16 +58,16 @@ on by default.
 Configure shared and local Bot behavior:
 
 * **Timezone**, which routines use for schedules
-* Your Auto-review switch and **Custom Rules**
+* Your Auto-review switch and **Custom rules**
 
 Grok Bot manages model selection, so there is no model picker.
 
 ### Import
 
-**Import Memory to Grok Bot** brings your preferences and context over from
-another AI assistant. Choose **Start Import**, copy the prompt into a chat with
+**Import memory to Grok Bot** brings your preferences and context over from
+another AI assistant. Choose **Start import**, copy the prompt into a chat with
 your other assistant, paste its answer into the second box, and choose
-**Add to Memory**. Grok Bot sends the import to your primary Bot and opens that
+**Add to memory**. Grok Bot sends the import to your primary Bot and opens that
 chat. See [What a Bot remembers](https://docs.x.ai/grok-bot/bots#what-a-bot-remembers).
 
 ### Auto-review
@@ -102,7 +102,7 @@ remove another computer while it's offline. Phones can't be removed.
 
 **Execution on this computer** controls whether Bots can run commands on a
 desktop. Each listed desktop under **Your computer** has its own setting. Until
-a desktop is listed, the page shows **Execution on Local Computer** instead.
+a desktop is listed, the page shows **Execution on local computer** instead.
 Per-command approval is the default, and the setting applies to that desktop
 alone. Read [Approvals and Auto Review](https://docs.x.ai/grok-bot/security#approvals-and-auto-review)
 before changing it. For what local execution can reach, see
@@ -119,25 +119,32 @@ session. Only one of your computers routes at a time; if another one is
 routing, send a message from this computer to route through it instead. If the
 setting asks you to **Update Bot's computer**, do that first.
 
-The setting applies to one desktop. If your Enterprise admin turns off **Allow
-Local Egress Routing**, the toggle turns off and locks. The setting reads
-`Your team admin has turned off local traffic routing. Grok Bot's computer routes traffic through the cloud.`
-and the switch shows `Disabled by your admin. You can't turn this on.` Any
-active route stops within five minutes. Your choice is preserved and takes
-effect again if the admin re-allows local egress.
+The setting applies to one desktop. Your Enterprise admin can lock it:
+
+* **Always off**: the toggle turns off and locks. The setting reads
+  `Your team admin has turned off local traffic routing. Grok Bot's computer routes traffic through the cloud.`
+  and the switch shows `Disabled by your admin. You can't turn this on.`
+  Traffic goes through the cloud. Your choice is kept and applies again if the
+  admin changes the mode to **Members decide**.
+* **Always on**: the toggle turns on and locks with
+  `Required by your admin. You can't turn this off.` When none of your
+  computers is connected, Grok Bot's computer refuses routed sites. It does not
+  use the cloud instead. If Grok Bot's computer needs an update first, select
+  **Update Bot's computer**. Until you update, Grok Bot's computer routes
+  traffic through the cloud.
 
 For private network options and their tradeoffs, see
 [Connect to private networks](https://docs.x.ai/grok-bot/private-networks).
 
 ### Update or reset Bot's computer
 
-Under **Bot's computer**, **Update Bot's Computer** moves Grok Bot's computer
+Under **Bot's computer**, **Update Bot's computer** moves Grok Bot's computer
 to the latest version. A software update only refreshes Grok Bot's software and
 keeps installed apps. A computer update rebuilds the computer, keeping files
 and logins but removing installed apps and packages. The text under **Update
-Bot's Computer** says which kind is waiting.
+Bot's computer** says which kind is waiting.
 
-**Reset Bot's Computer** is a last resort. It rebuilds the computer from your
+**Reset Bot's computer** is a last resort. It rebuilds the computer from your
 last saved data, the same as **Recover computer**; if the computer can't be
 reached to save first, very recent changes don't come back.
 
@@ -148,7 +155,7 @@ for the least destructive recovery order.
 ## Vault
 
 **Vault** holds the logins, cards, and contact info your Bots use to sign in and
-check out without seeing the secret values. Use **New item** to add one, select
+check out for you. Use **New item** to add one, select
 an item to edit or remove it, and import logins from another password manager
 with **New item → Import**. See [Vault and secure sign-in](https://docs.x.ai/grok-bot/vault).
 
@@ -163,13 +170,49 @@ use. See [Connect an app](https://docs.x.ai/grok-bot/computer-and-apps#connect-a
 
 ## Usage and billing
 
-**Usage & Billing** shows weekly included usage and on-demand usage for eligible
-accounts, and the account menu can show **Weekly usage** at a glance. If neither
-surface appears, review usage from the Cursor account page or contact your
+**Usage & billing** has up to five sections, always in this order:
+
+* **My plan** shows your plan and a button to manage or change it, plus
+  **Billing** with **Manage billing** for payment methods and invoices. On an
+  Enterprise team it reads **Managed by your organization**. During a free
+  trial, **Cancel trial** ends it early.
+* **Usage limits** shows how much of your weekly usage you've used and when it
+  resets. Enterprise members see their spend limit instead. If your plan has no
+  Grok Bot usage, it says **Your plan doesn't include Grok Bot usage**.
+* **Grok Bot usage** charts your Grok Bot usage, **By Bot** or **By source**.
+* **Additional usage** covers usage past your weekly limit: **Credits**, with
+  **Buy credits**, **Auto top-up**, and **Monthly additional usage limit**, or
+  the **On-demand monthly limit**, depending on your plan.
+* **Resets** lists your usage limit resets; see
+  [Use a usage limit reset](#use-a-usage-limit-reset).
+
+The account menu can also show **Weekly usage** at a glance. If neither surface
+appears, review usage from the Cursor account page or contact your
 organization's admin.
 
+You can also ask your Bot about your plan and usage in your private chat with
+it. It reports where your Grok Bot usage comes from now (your weekly usage
+limit, a trial, or your team's Enterprise usage), how much is used, any
+on-demand usage, and when it resets or the trial ends. Only the Bot's owner can
+ask, and only in a private chat; elsewhere the Bot declines. When a usage
+warning appears, **Review usage** asks your Bot to review your usage
+for you.
+
 For how plans, weekly usage, and on-demand spend work, see
-[Plans and billing](https://cursor.com/help/grok-bot/plans).
+[Plans and billing](https://grok.com/help/grok-bot/plans).
+
+### Use a usage limit reset
+
+A usage limit reset brings your weekly usage back to 0% right away, without
+waiting for your regular weekly reset. Resets you have are listed under
+**Resets** in **Usage & billing**, each as a **Usage reset** row with the date
+it expires. Click **Use reset**, then **Confirm**. After you use one, you have
+to wait before you can use another.
+
+When you reach your weekly usage limit, the banner above the message box also
+offers **Use Reset**. If you have no resets and can refer friends, **Resets**
+shows **Refer a friend to get a free reset**, and the usage banners offer
+**Invite a Friend**. Both open the referral dialog.
 
 ## Team Setup Scripts
 
@@ -180,12 +223,12 @@ Members don't see them in settings. See
 
 ## Updates
 
-**Settings → Updates** handles updates to the desktop app. **Grok Bot Updates**
+**Settings → Updates** handles updates to the desktop app. **Grok Bot updates**
 shows the installed version; use **Check for Updates** and **Restart to
 Update** to install a new one. To update or reset Grok Bot's computer, see
 [Update or reset Bot's computer](#update-or-reset-bots-computer).
 
-**Automatic Updates**, in the same pane, is on by default. When it's on, a
+**Automatic updates**, in the same pane, is on by default. When it's on, a
 downloaded update installs and the app restarts while you're away: your screen
 is locked or the screensaver is on, the computer has been idle for at least 10
 minutes, and Grok Bot isn't busy. Turn it off to install only when you choose

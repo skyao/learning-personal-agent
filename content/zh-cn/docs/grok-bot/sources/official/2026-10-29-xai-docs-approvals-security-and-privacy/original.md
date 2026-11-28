@@ -1,7 +1,7 @@
 来源：https://docs.x.ai/grok-bot/approvals-security-and-privacy
-取文：2026-11-06，直接下载（站点提供的 Markdown 版本 https://docs.x.ai/grok-bot/approvals-security-and-privacy.md）
+取文：2026-11-28，直接下载（站点提供的 Markdown 版本 https://docs.x.ai/grok-bot/approvals-security-and-privacy.md）
 
-Approvals, security, and privacy
+# Approvals, security, and privacy
 
 Grok Bot is designed to complete work while keeping sensitive inputs and
 consequential actions under your control. Use approvals, secure handoffs, and
@@ -83,9 +83,9 @@ card offered a rule, you can still press **Always allow next time**; the Bot
 saves the rule and can go ahead the next time. To finish the task now, ask the
 Bot to try again.
 
-### Shared Bots and group chats
+### Team Bots and group chats
 
-On a [shared Bot](https://docs.x.ai/grok-bot/shared-bots), each teammate answers cards for their
+On a [Team Bot](https://docs.x.ai/grok-bot/team-bots), each teammate answers cards for their
 own requests in their own chat with the Bot. In a Slack thread, the card has
 **Allow once**, **Deny**, and **View details**, and only the person who asked
 can answer. In a group chat, only the person whose message the Bot is answering
@@ -109,8 +109,8 @@ and Android, it's in the **Bot** group of **Settings**. With Auto Review off,
 the Bot runs actions without checking them first, and your Custom Rules are
 hidden and not used but kept; turn it back on to use them again.
 
-While Auto Review is on, **Custom Rules** appears under the switch on desktop;
-on the phone, tap **Custom Rules** in the **Bot** group. To add a rule:
+While Auto Review is on, **Custom rules** appears under the switch on desktop;
+on the phone, tap **Custom rules** in the **Bot** group. To add a rule:
 
 1. Under **When Grok Bot wants to:**, describe one action in plain words, like
    “reply to emails for me.”
@@ -129,8 +129,7 @@ remove it. On the phone, tap a rule to open it, then press **Save Rule** or
 
 You can have up to 20 **Allow automatically** rules and up to 20 **Ask first**
 rules, and each rule can be up to 1,000 characters. If you already have 20 Allow
-rules, **Always allow** on a card removes your oldest Allow rule to make room
-and tells you which rule it removed.
+rules, **Always allow** on a card replaces your oldest Allow rule.
 
 If your admin requires Auto Review, the switch stays on and shows **Required by
 your admin. You can't turn this off.** Team rules appear in the same table with
@@ -155,10 +154,13 @@ desktop and the mobile app.
 
 ## Keep passwords and payment details out of the chat
 
-Bots sign in and check out without seeing secret values. A Bot uses a login
-saved in [Vault](https://docs.x.ai/grok-bot/vault) first, then a connected password manager such
-as 1Password, then asks you with a Secure Form. Values from Vault and Secure
-Forms are filled into the page without being shown to the model.
+Bots sign in without seeing your passwords. A Bot uses a login saved in
+[Vault](https://docs.x.ai/grok-bot/vault) first, then a connected password manager such as
+1Password, then asks you with a Secure Form. Logins from Vault and values from
+Secure Forms are filled into the page without being shown to the model. In
+chats in the Grok Bot app, a Bot can see the number and security code of a card
+you saved in Vault, so it can type them at checkout. See
+[What Vault holds](https://docs.x.ai/grok-bot/vault#what-vault-holds).
 
 When a form can't do the step, such as single sign-on, a passkey, a CAPTCHA, an
 approval on another device, or a bank card verification, the Bot hands you the
@@ -180,7 +182,7 @@ or remove it in **Settings → Vault**.
 
 If you sign in with a hardware security key, such as a YubiKey, the Bot's
 browser can use a key plugged into your desktop while **Use hardware security
-keys** is on under **Settings → General → Security Key**. The setting is on by
+keys** is on under **Settings → General → Security key**. The setting is on by
 default on macOS and Windows and is not yet supported on Linux; every use asks
 you to approve it first.
 
@@ -192,7 +194,7 @@ computer in front of you is a separate capability.
 In **Settings → Computer → Your computer**, choose **Ask every time**,
 **Always allow**, or **Never allow** in **Execution on this computer**. Each
 listed desktop has its own setting; until a desktop is listed, the page shows
-**Execution on Local Computer** instead.
+**Execution on local computer** instead.
 
 The default is **Ask every time**. Use **Never allow** unless a Bot has a
 specific reason to work on your local files. Your team admin can cap this
@@ -206,7 +208,7 @@ Your team's cap also applies when a Bot uses apps on your phone. See
 The first time a Bot asks to run a command on your computer, the conversation
 shows **Allow Grok Bot and all Bots to run commands on your local computer?**
 with **Always allow**, **Allow once**, **Never**, and **Deny once** (Esc).
-**Always allow** and **Never** set **Execution on Local Computer** for every
+**Always allow** and **Never** set **Execution on local computer** for every
 Bot, and you can change the setting later in Settings. If your team's admin has
 set a stricter ceiling, **Always allow** is unavailable.
 
@@ -233,7 +235,7 @@ your computer or logins. Still, do not put secrets, customer data, or internal
 URLs in a Bot you share. See [Share a Bot](https://docs.x.ai/grok-bot/bots#share-a-bot) and the
 [third-party bot terms](https://x.ai/legal/bot-sharing-terms).
 
-A [shared Bot](https://docs.x.ai/grok-bot/shared-bots) is different: teammates chat with the same
+A [Team Bot](https://docs.x.ai/grok-bot/team-bots) is different: teammates chat with the same
 Bot, and the apps, secrets, skills, and files its owner adds work in every
 teammate's chat. Only add keys and files you're happy for everyone you share it
 with to use.

@@ -1,7 +1,7 @@
 来源：https://docs.x.ai/grok-bot/chat-and-collaboration
-取文：2026-11-06，直接下载（站点提供的 Markdown 版本 https://docs.x.ai/grok-bot/chat-and-collaboration.md）
+取文：2026-11-28，直接下载（站点提供的 Markdown 版本 https://docs.x.ai/grok-bot/chat-and-collaboration.md）
 
-Message and collaborate
+# Message and collaborate
 
 Grok Bot is designed to feel like messaging a teammate. Keep requests natural,
 but make the outcome and the decision boundary explicit: what the Bot may
@@ -68,7 +68,7 @@ voice chat?**; choose **End and Chat** to switch.
 
 Voice chat works with one Bot at a time, not in group chats; open that Bot's
 own chat to start a call. On desktop you can also voice chat with a teammate's
-[shared Bot](https://docs.x.ai/grok-bot/shared-bots) from your own chat with it.
+[Team Bot](https://docs.x.ai/grok-bot/team-bots) from your own chat with it.
 
 If the connection drops, Grok Bot tries to reconnect on its own first, so a
 short drop usually picks back up without you doing anything. If it can't, the
@@ -76,6 +76,12 @@ call ends with **Voice chat failed**, and the notice may say **Connection
 lost**, **No connection**, or **The call ended unexpectedly**. Choose
 **Dismiss**, check your internet connection, and choose **Start voice chat**
 again.
+
+On the phone app (1.18 and later, iPhone and Android), a voice chat ends when a
+phone call, FaceTime, or another app takes over the audio. This works the same
+as choosing **Hang up**, and the voice chat doesn't resume on its own; choose
+**Start voice chat** again when you're done. Short interruptions on Android,
+such as a navigation prompt, only pause the conversation.
 
 If Grok Bot says microphone access was denied, allow it to use the microphone in
 your system settings. If it says no microphone was found, connect one and try
@@ -89,10 +95,14 @@ ask **How was the call?**; choose **Good** or **Bad** to send feedback.
 
 ### Review a draft before it is sent
 
-When a Bot prepares an email or Slack message for you, the conversation can
+When a Bot prepares an email or [Slack](https://x.ai/bot/plugin/674) message for you, the conversation can
 show an editable draft. Review the recipients and body, then choose **Send**,
-or **Send message** for a Slack draft in the desktop app. Choose **Discard** to
+or **Send message** for a [Slack](https://x.ai/bot/plugin/674) draft in the desktop app. Choose **Discard** to
 drop the draft.
+
+A [Gmail](https://x.ai/bot/plugin/45893410) or [Outlook](https://x.ai/bot/plugin/57302029) draft can include files the Bot prepared. The card lists
+them, and they're sent with the message. If a file changed after the draft was
+prepared, nothing is sent and the card opens again so you can review it.
 
 Bots draft outgoing messages for your review by default. A draft card shows
 **Needs approval**. If you'd rather have a Bot send without preparing drafts,
@@ -144,7 +154,7 @@ connected.
 | Your email is on a domain your company manages, or your Cursor account is on a team | Connecting from X Chat isn't available. Use Grok Bot in the Grok Bot app instead. |
 | Your Grok account's email isn't verified | Verify your email on Grok, then try again. |
 | More than one Cursor account uses your email | [Contact support](https://docs.x.ai/grok-bot/troubleshooting) with the email address. |
-| You've used up your Grok Bot usage | See [How does Grok Bot usage work?](https://cursor.com/help/grok-bot/plans#how-does-grok-bot-usage-work) |
+| You've used up your Grok Bot usage | See [How does Grok Bot usage work?](https://grok.com/help/grok-bot/plans#how-does-grok-bot-usage-work) |
 | Your Bots don't show up in X Chat | Update the X app to the latest version, then quit and reopen it. |
 | You see a new Bot instead of your own, or tapping your Bot shows **Something went wrong** | Your X account may be connected to a different Grok account. Follow the steps below. |
 
@@ -165,10 +175,75 @@ doesn't work. If none of these match, [contact
 support](https://docs.x.ai/grok-bot/troubleshooting) with your X handle and the email on your
 Grok account.
 
+## Shop with a Bot
+
+Ask a Bot to find something to buy, and it can reply with product cards. Open
+a product to see its photos, options, **Why it fits**, and **Where to buy**,
+and buy it from there. On desktop, each card also has **Buy now**, or says
+**Out of stock**. If a product you open is sold out, choose **Notify me** and
+the Bot sets up a routine that tells you when it's back in stock.
+
+When you're ready to buy, the Bot sends an order card with the store, the
+items, **Ship to**, **Pay with**, and the **Total**. If you're sending a gift,
+the **Gift** row shows who it's for, your message, whether a gift receipt is
+included, and when it arrives. Check them, then choose
+the pay button, which shows the total, or choose **Cancel**. If you cancel,
+nothing is charged. Once the order is placed, the card shows what you
+**Paid with**. If the order card expires, ask the Bot to check the price
+again. Only a Bot's owner can pay its orders. See [Pay for
+things](https://docs.x.ai/grok-bot/vault#pay-for-things) for the cards and wallets a Bot pays
+with.
+
+## Book a hotel
+
+Ask a Bot for a place to stay, with where you're going and roughly when, and it
+searches hotels with live prices. In the Grok Bot app it replies with a card of
+hotels you can view as a grid or on a map. Open a hotel to see its photos,
+rooms and rates, and its check-in, check-out, cancellation, and payment
+details, then choose **Book**. The Bot books the stay for you on the hotel's
+own site, and you approve the payment on an order card as with any other
+purchase. Where the app can't show hotel cards, the Bot lists the hotels in its
+reply; to book one, reply with the hotel's name.
+
+Searching never books or holds a room, and the hotel's site sets the final
+price, which can differ from the one on the card. Only the Bot's owner can
+search for hotels with it. If a booking isn't confirmed yet, check your email
+for the hotel's confirmation before you book the same stay again.
+
+## Have a Bot make a phone call
+
+A Bot can call a business for you, for example to book a table or ask about an
+order, and tell you how it went. Phone calls are available in the US only,
+from the Grok Bot desktop and phone apps.
+
+The first time, the Bot asks you to agree to the calling terms, including that
+you'll only call US businesses and people who've consented to hear from you.
+Choose **Accept** or **Decline**. Before each call, the Bot shows who it will
+call; choose **Call** or **Cancel**.
+
+While the call runs, its card shows the status and a live transcript:
+
+* Choose **End call** to hang up.
+* When **Take over** shows, choose it to join the call yourself. The card says
+  **Connecting you…** and then **Transferred to you**.
+* If the other side asks something the Bot can't answer, a card shows the
+  question and how long you have to respond. Type in **Your answer** and choose
+  **Send**, or choose **Skip**.
+* If the Bot wants to give the call more details while it's live, it asks you
+  first.
+
+When the call is over, its card says **Ended**, followed by the call's length.
+After the call, open the call card to read the transcript and play the
+recording. On desktop, the card's **Call actions** menu also has **Copy
+transcript**, **Export transcript**, and **Download recording**.
+
+Phone calls a Bot makes aren't used to train SpaceXSI's models, whatever your
+privacy settings.
+
 ## Start a group chat
 
 Use a group when several Bots need one shared outcome and visible handoffs.
-You can also add a Bot a teammate [shared with you](https://docs.x.ai/grok-bot/shared-bots), but
+You can also add a Bot a teammate [shared with you](https://docs.x.ai/grok-bot/team-bots), but
 not alongside Bots that run on your own computer.
 
 1. Choose **New chat**, press `Cmd/Ctrl+Shift+N`, or open the command palette
@@ -207,7 +282,7 @@ assigns one owner per stage:
 Your messages in a group can include attachments. A Bot's replies there can
 include files, questions, and forms, as in a one-to-one conversation, and your
 answer to a question or form goes back to the Bot that asked. Approval
-requests, secret and login requests, and email or Slack drafts do not appear in
+requests, secret and login requests, and email or [Slack](https://x.ai/bot/plugin/674) drafts do not appear in
 a group. Bot-to-group handoff messages are text-only, so a Bot should send an
 image directly to another Bot when that teammate must inspect it.
 
@@ -252,19 +327,19 @@ Ask for a single owner at each stage. Parallel handoffs create duplicate work
 and noisy updates.
 
 A handoff needs a Bot acting for one person on that turn. Where you talk to it,
-and whether it's a personal Bot or a [shared Bot](https://docs.x.ai/grok-bot/shared-bots),
+and whether it's a personal Bot or a [Team Bot](https://docs.x.ai/grok-bot/team-bots),
 decide this:
 
 | Bot | Where you ask | Can it message other Bots? | Acting for | Where the reply lands |
 | --- | --- | --- | --- | --- |
 | Personal Bot | The app, or your own Slack DM with it | Yes | You | The app chat, not Slack |
 | Personal Bot | A Slack channel thread | No | Nobody, the thread is shared | The Bot says it can't do that |
-| Shared Bot | A Slack channel thread or Slack DM | Yes, to that person's own Bots | The teammate who mentioned it | The same Slack thread |
+| Team Bot | A Slack channel thread or Slack DM | Yes, to that person's own Bots | The teammate who mentioned it | The same Slack thread |
 
 To hand work between Bots from a Slack channel, share a Bot and add it to Slack.
-A shared Bot has its own Slack app and handle, and anyone in the channel can
-give it work. See [How do I add a shared Bot to
-Slack?](https://docs.x.ai/grok-bot/shared-bots#how-do-i-add-a-shared-bot-to-slack)
+A Team Bot has its own Slack app and handle, and anyone in the channel can
+give it work. See [Add a Team Bot to
+Slack](https://docs.x.ai/grok-bot/create-a-team-bot#add-it-to-slack).
 
 ## Use threads and reactions
 
@@ -286,11 +361,10 @@ Use the search or command palette to:
 * Open settings and common actions
 * Jump back to the matching place in a conversation
 
-Search availability can vary during rollout. If cross-conversation results are
-not available, open the relevant Bot and use its conversation history.
-
 Press `Cmd/Ctrl+K` for the search palette, or `Cmd/Ctrl+Shift+F` to search
-Bots. The full desktop list is in [Keyboard shortcuts](#keyboard-shortcuts).
+Bots. The search palette finds your messages and files across chats. When the
+results say **Searched recent messages**, choose **Search older** to look
+further back. The full desktop list is in [Keyboard shortcuts](#keyboard-shortcuts).
 
 ## Keyboard shortcuts
 

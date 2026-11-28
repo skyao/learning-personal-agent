@@ -1,7 +1,7 @@
 来源：https://docs.x.ai/grok-bot/faq
-取文：2026-11-06，直接下载（站点提供的 Markdown 版本 https://docs.x.ai/grok-bot/faq.md）
+取文：2026-11-28，直接下载（站点提供的 Markdown 版本 https://docs.x.ai/grok-bot/faq.md）
 
-Frequently asked questions
+# Frequently asked questions
 
 ## How is Grok Bot different from an AI assistant?
 
@@ -23,7 +23,7 @@ on iOS or Android. The same Bots and conversations sync across your signed-in
 devices. You can also chat with your Bots in
 [X Chat](https://docs.x.ai/grok-bot/chat-and-collaboration#chat-in-x-chat),
 [tag @bot on X](https://docs.x.ai/grok-bot/tag-on-x) to hand a post to your Bot, and talk to a
-[shared Bot in Slack](https://docs.x.ai/grok-bot/shared-bots#how-do-i-add-a-shared-bot-to-slack).
+[Team Bot in Slack](https://docs.x.ai/grok-bot/create-a-team-bot#add-it-to-slack).
 
 ## Does Grok Bot keep working when my laptop is closed?
 
@@ -36,7 +36,7 @@ Bots work on their own cloud computer. A Bot runs a command on your desktop
 only if you allow it. The setting is under
 **Settings → Computer → Your computer**, labeled
 **Execution on this computer**. If no desktop is listed there yet, the same
-page shows **Execution on Local Computer**. By default it asks you each time.
+page shows **Execution on local computer**. By default it asks you each time.
 See [Run commands on your desktop](https://docs.x.ai/grok-bot/settings-and-notifications#run-commands-on-your-desktop).
 
 ## Do my Bots share one computer?
@@ -122,8 +122,7 @@ does not apply to Grok Bot. Teams with a model allowlist see this notice when
 they [enable Grok Bot](https://docs.x.ai/grok-bot/teams-and-enterprises#enabling-grok-bot-for-your-team).
 Only providers on the sub-processor list can process your data, and the set of
 models changes over time. See
-[Models and data](https://docs.x.ai/grok-bot/security#models-and-data) and
-[Which AI models power Grok Bot?](https://cursor.com/help/grok-bot/models).
+[Models and data](https://docs.x.ai/grok-bot/security#models-and-data).
 
 ## How does Grok Bot handle data and privacy?
 
@@ -164,7 +163,7 @@ if on-demand is enabled, billed through Cursor. Grok Bot usage is metered on
 your Cursor account, not on Grok or X, and macOS and iOS share the same usage.
 
 See [Grok Bot on The X Subscription](https://docs.x.ai/x-subscription/grok-bot) and
-[Plans and billing](https://cursor.com/help/grok-bot/plans). Enterprise
+[Plans and billing](https://grok.com/help/grok-bot/plans). Enterprise
 customers should contact their Cursor account team.
 
 ## Which Grok plans can I link?
@@ -173,17 +172,25 @@ Individual **SuperGrok**, **SuperGrok Plus**, **SuperGrok Heavy**, and
 **X Premium+**. **SuperGrok Lite** and **Grok Enterprise** cannot link. If you
 have a seat on a self-serve **Grok Business** plan, you don't link from the
 plan screen. Sign out, then sign back in with **Sign in with Grok** using the
-Grok account that holds the seat. On The X Subscription there's nothing to
-link: Grok Bot draws from your plan's shared weekly pool. See
-[Link SuperGrok for Grok Bot](https://cursor.com/help/grok-bot/supergrok).
+Grok account that holds the seat. Grok Bot usage matches the license on your
+seat: a **SuperGrok** license gets SuperGrok usage, and a **SuperGrok Heavy**
+license gets SuperGrok Heavy usage. If an admin removes your seat, Grok Bot
+access from the seat ends. On The X Subscription there's nothing to link: Grok
+Bot draws from your plan's shared weekly pool. See
+[Link SuperGrok for Grok Bot](https://grok.com/help/grok-bot/supergrok).
+
+If you see an error that the Grok account is already linked to another Cursor
+account, or you still don't have access after signing in with the right Grok
+account, [contact support](https://docs.x.ai/grok-bot/troubleshooting#before-contacting-support)
+with your Cursor account email and the Grok account email.
 
 ## I don't see Link Grok Account.
 
 **Link Grok Account** is on the **Get Started with Grok Bot** page at
 [cursor.com/bot/onboarding](https://cursor.com/bot/onboarding), and on the
 phone's paywall screen. If you already have access, open
-**Settings → Usage & Billing** and look under **Manage Plan** for
-**Get Access with Grok**. It appears only when linking would raise your usage.
+**Settings → Usage & billing** and look under **Manage plan** for
+**Get access with Grok**. It appears only when linking would raise your usage.
 
 ## I linked SuperGrok to the wrong Cursor account. Can I unlink it?
 
@@ -208,7 +215,7 @@ If you upgrade SuperGrok after linking, allow up to 24 hours for the
 ## Why doesn't my SuperGrok limit match my Grok Bot usage?
 
 They are two separate meters for two products. Grok Bot usage lives on your
-Cursor account. See it in Grok Bot under **Settings → Usage & Billing**, not in
+Cursor account. See it in Grok Bot under **Settings → Usage & billing**, not in
 the Grok app.
 
 ## How do I stop charges after my weekly usage runs out?
@@ -217,7 +224,7 @@ On The X Subscription, leave Auto Top-up off or set a monthly additional usage
 limit under **Additional usage credits** at
 [grok.com/dashboard/billing](https://grok.com/dashboard/billing). On a legacy
 Cursor plan, turn off on-demand or set a cap: in Grok Bot, open
-**Settings → Usage & Billing → On-demand monthly limit**, or on the web go to
+**Settings → Usage & billing → On-demand monthly limit**, or on the web go to
 [cursor.com/dashboard](https://cursor.com/dashboard) and set **Monthly Limit**
 under **Spending**. The cap does not stop a Bot in the middle of a run, so a
 running task can go a little past it. If on-demand is off, Grok Bot stops when
@@ -226,7 +233,7 @@ weekly usage runs out and resumes when weekly usage resets.
 ## Is there a free trial?
 
 Some accounts can try Grok Bot before they pay: when the access screen offers
-**Start Trial**, choose it. The trial is a usage credit, and a 7-day window also
+**Start trial**, choose it. The trial is a usage credit, and a 7-day window also
 applies. It never turns into a paid plan. The credit is drawn down by how much
 work your agents do, measured by agent steps and tokens rather than the number
 of messages you send, so start small, scope tasks tightly, and check your usage
@@ -235,7 +242,7 @@ of it, and used credit is not restored.
 
 **Cancel Trial** appears on free-plan accounts. There is no charge to cancel.
 On a free plan, you can end it early with **Cancel Trial** in
-**Settings → Usage & Billing** on desktop or **Settings → Usage** on iPhone
+**Settings → Usage & billing** on desktop or **Settings → Usage** on iPhone
 and Android. That removes any remaining trial credit, and you can't start the trial
 again. On a paid plan or Teams seat, the trial ends on its own.
 
@@ -290,10 +297,10 @@ a button and has no keybinding.
 ## Can I change the app language?
 
 Yes. On desktop, open **Settings**, go to **General**, and choose a
-**Language** under **Appearance**. **Follow System** uses your computer's
-language, and desktop has 37 languages. On iPhone and Android, open
-**Settings** and choose **Language**; **System** uses your phone's language,
-and the phone app has 12 languages.
+**Language** under **Appearance**. **Follow system** uses your computer's
+language. On iPhone and Android, open **Settings** and choose **Language**;
+**System** uses your phone's language. Desktop and the phone app each have 38
+languages.
 
 The language changes the app's menus and messages. New Bots write to you in
 that language unless you write to them in another one. Voice chat has its own
@@ -343,12 +350,12 @@ They do not get your computer, logins, or conversation history. If your team
 limits template sharing, the app doesn't offer **Create a copy**.
 
 The link exposes the Bot's configuration. Strip secrets and anything
-confidential before you share. Adding a shared Bot accepts the
+confidential before you share. Adding a Team Bot accepts the
 [third-party bot terms](https://x.ai/legal/bot-sharing-terms). See
 [Share a Bot](https://docs.x.ai/grok-bot/bots#share-a-bot).
 
 To give the team one Bot they all talk to, rather than a copy each person
-customizes, publish a [shared Bot](https://docs.x.ai/grok-bot/shared-bots).
+customizes, publish a [Team Bot](https://docs.x.ai/grok-bot/team-bots).
 
 ## What happens if I delete a Bot?
 

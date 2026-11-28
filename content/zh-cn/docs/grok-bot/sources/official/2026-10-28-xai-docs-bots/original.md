@@ -1,31 +1,11 @@
 来源：https://docs.x.ai/grok-bot/bots
-取文：2026-11-06，直接下载（站点提供的 Markdown 版本 https://docs.x.ai/grok-bot/bots.md）
+取文：2026-11-28，直接下载（站点提供的 Markdown 版本 https://docs.x.ai/grok-bot/bots.md）
 
-Create and manage Bots
+# Create and manage Bots
 
 A Bot is a durable AI teammate with a name, a job, its own conversation, and
-working context that develops over time.
-
-## Give each Bot a clear job
-
-Create a separate Bot when the work has a distinct:
-
-* Goal or area of ownership
-* Set of tools and sources
-* Working style
-* Approval boundary
-* Recurring schedule
-
-Jobs like **Talent Scout**, **Expense Manager**, and **Bug Reproduction** give a
-Bot guidance and make its saved context reusable; a **General Helper** does
-neither.
-
-Describe the role in operational terms:
-
-> Own the weekly account-health review. Pull product usage and support signals,
-> flag evidence of churn or expansion, and produce a linked watch list for the
-> customer-success team. Never contact a customer or change an account without
-> approval.
+working context that develops over time. To decide when a job needs its own
+Bot, see [How Grok Bot works](https://docs.x.ai/grok-bot/how-grok-bot-works#your-primary-bot-and-bots-with-one-job).
 
 ## Create a Bot
 
@@ -57,7 +37,7 @@ Bot**, select one of your Bots, and choose **Confirm**.
 
 To pick a different one later, right-click your primary Bot in the sidebar and
 choose **Replace with different Bot**. On iPhone and Android, use **Replace
-Primary Bot…** in the Bot's menu. A [shared Bot](https://docs.x.ai/grok-bot/shared-bots) can't
+Primary Bot…** in the Bot's menu. A [Team Bot](https://docs.x.ai/grok-bot/team-bots) can't
 be your primary Bot.
 
 ## Edit a Bot
@@ -72,7 +52,7 @@ for task-specific instructions:
 
 The Bot keeps lasting rules in its memory. Personal Bots no longer have a
 description or a **Bot settings** page; to change what a Bot does, tell it in
-chat. A [shared Bot](https://docs.x.ai/grok-bot/shared-bots) still has a description, which its
+chat. A [Team Bot](https://docs.x.ai/grok-bot/team-bots) still has a description, which its
 owner or a Manager edits under **About** in the Bot's details.
 
 ### Change a Bot's name, picture, and label
@@ -102,6 +82,11 @@ label) and tap **Done**. To change the picture, tap the picture or **Avatar**
 and choose **Shape**, **Generate**, or **Upload**. **Upload** offers **Choose
 from Photos** or **Take Photo**, then lets you crop the image; images can be up
 to 25 MB.
+
+On Grok Bot for Android 1.18.0, tapping **Done** or **Discard** after changing a
+Bot's name, title, or picture can show a blank or error screen. Your change is
+usually saved; go back to the chat and check. This is fixed in Android 1.19.0;
+update Grok Bot when Google Play offers it.
 
 ## Organize your roster
 
@@ -154,7 +139,7 @@ you share.
 Adding a shared template creates a copy on the recipient's account. They never
 get your computer, logins, or conversation history. To give your team one Bot
 to chat with instead of a copy each, [share the Bot
-itself](https://docs.x.ai/grok-bot/shared-bots).
+itself](https://docs.x.ai/grok-bot/team-bots).
 
 Shared templates are created by other users, not by Grok Bot. Adding one
 accepts the [third-party bot terms](https://x.ai/legal/bot-sharing-terms) shown
@@ -174,9 +159,11 @@ link and choose **Import Bot** to add your own copy of that Bot.
 
 To delete a Bot, right-click it in the sidebar and choose **Delete**. This
 erases its profile, conversations, memory, routines, and attachments, including
-the shared facts it saved for your other Bots. It can't be undone. Files and
-sign-ins on the shared computer aren't isolated per Bot and can remain there;
-clean them up separately. Backend retention follows the applicable Cursor terms.
+the shared facts it saved for your other Bots. It also deletes any template
+you shared from the Bot, so that template's link stops working. It can't be
+undone. Files and sign-ins on the shared computer aren't isolated per Bot and
+can remain there; clean them up separately. Backend retention follows the
+applicable Cursor terms.
 
 If you may need the work later, or want to keep the Bot's memory, choose **Hide
 from sidebar** instead.
@@ -244,19 +231,20 @@ Bot's memory, files, routines, and settings are kept.
 
 ### Who can see or change memory
 
-A personal Bot's memory is yours, and only you can change it. A [shared
-Bot](https://docs.x.ai/grok-bot/shared-bots) can save things it learns for the whole team, and
-it tells you when it does. It doesn't save anything about you personally for
-the team; what it remembers about working with you stays between you and the
-Bot. A teammate's shared Bot doesn't get the facts your own Bots share about
-you.
+A personal Bot's memory is yours, and only you can change it. A [Team
+Bot](https://docs.x.ai/grok-bot/team-bots) can learn things for the whole team, and the owner
+or a Manager approves what it learns from teammates. It doesn't save anything
+about you personally for the team; what it remembers about working with you
+stays between you and the Bot. A teammate's Team Bot doesn't get the facts your
+own Bots share about you. See [What a Team Bot
+learns](https://docs.x.ai/grok-bot/team-bots#what-it-learns)
 
 ### Import memory from another assistant
 
 To bring over what another AI assistant knows about you, open Settings →
-**General** and choose **Start Import** under **Import**. Copy the prompt into
+**General** and choose **Start import** under **Import**. Copy the prompt into
 a chat with your other assistant, paste its answer into the second box, and
-choose **Add to Memory**. Grok Bot sends it to your
+choose **Add to memory**. Grok Bot sends it to your
 [primary Bot](#your-primary-bot) and opens that chat.
 
 ### Memory is not a source of truth
@@ -271,18 +259,6 @@ Memory is not a substitute for an authoritative source:
   than memory alone
 
 Bots have separate roles and conversations, but they share the computer. They
-can pass context through direct messages, group chats, and shared files.
-
-## Organize a team of Bots
-
-Start with the smallest useful roster:
-
-1. Give one Bot ownership of an end-to-end outcome.
-2. Add another Bot only when the work has a stable specialist role.
-3. Put Bots in a [group chat](https://docs.x.ai/grok-bot/chat-and-collaboration) when the handoff itself
-   needs to be visible.
-4. Keep external actions behind a clear approval boundary.
-
-For example, a Website Launch group might include a launch coordinator, a
-content editor, and an analytics reviewer. The coordinator can assign work,
-while the group preserves the handoffs in one conversation.
+can pass context through direct messages, group chats, and shared files. To
+plan a roster, see
+[Build a team of Bots for a bigger goal](https://docs.x.ai/grok-bot/use-cases#build-a-team-of-bots-for-a-bigger-goal).

@@ -1,104 +1,216 @@
-来源：https://cursor.com/docs/grok-bot/use-cases
-取文：2026-11-05，直接下载
+来源：https://docs.x.ai/grok-bot/use-cases
+取文：2026-11-28，直接下载（站点提供的 Markdown 版本 https://docs.x.ai/grok-bot/use-cases.md）
 
-The best Bot roles own a repeatable outcome, not a loose category of questions. Start each role with read-and-prepare work, review the result, and only then add approved actions or a [routine](https://cursor.com/docs/grok-bot/work#skills-and-routines).
+# Use Cases
 
-Every starter prompt below ends at a review point on purpose. Keep sending, publishing, purchasing, and production changes behind [approval](https://cursor.com/docs/grok-bot/security#approvals-and-auto-review).
+The use cases on this page build in three steps. Connect the apps you already
+use and ask a Bot to help with your work. When you notice a task you keep asking
+for, turn it into a Bot of its own. Once you have a few of those, put them on a
+team that works toward a bigger goal.
 
-## Sales outbound
+1. [An assistant](https://docs.x.ai/grok-bot/use-cases#connect-your-apps-and-get-help-with-your-work) — Finds information and drafts work in your apps
 
-Owns account research, contact prioritization, and review-ready outreach. Connect your CRM, product-intent sources, and email.
+2. [A Bot with a job](https://docs.x.ai/grok-bot/use-cases#turn-tasks-you-repeat-into-a-bot) — Takes over a task you keep repeating
 
-> Research the 25 accounts in this CRM view. Score them against our ideal
-> customer profile and recent intent, identify up to three relevant contacts
-> per account, and draft email and LinkedIn outreach in the style examples
-> attached. Skip anyone already in an active sequence. Return a review list;
-> don't send or enroll anyone.
+3. [A team of Bots](https://docs.x.ai/grok-bot/use-cases#build-a-team-of-bots-for-a-bigger-goal) — Works together toward a bigger goal
 
-Once the output is reliable, schedule a nightly research routine that stops at the review list.
+Every example stops for your review. Keep sending, publishing, purchasing, and
+production changes behind
+[approval](https://docs.x.ai/grok-bot/approvals-security-and-privacy#review-an-action).
 
-## Talent scout
+## Connect your apps and get help with your work
 
-Owns sourcing, candidate research, and outreach drafts. Connect your applicant tracking system, approved sourcing tools, email, and calendar.
+Connect your mail, calendar, chat, and docs, and every Bot you run can read and
+work in them. For services without an app, a Bot uses the browser on the cloud
+computer. See [Connect an app](https://docs.x.ai/grok-bot/computer-and-apps#connect-an-app).
 
-> For this role description, find 20 candidates who meet the must-have
-> criteria. Exclude anyone already in our ATS, explain the evidence for each
-> match, and draft personalized outreach in my voice. Don't contact anyone.
+* [Google Drive](https://x.ai/bot/plugin/45893413) — Draft from what’s already there. Reads the briefs and past decks in a folder, drafts the next one in your format, and leaves it in Drive for your edits.
 
-Keep external outreach behind approval, and have the Bot respect candidate privacy and each source's terms.
+* [Google Calendar](https://x.ai/bot/plugin/45893411) — Start each week with a plan. Every Sunday evening, reads the week ahead, flags clashes and packed days, and sends you a short plan for Monday.
 
-## Paid media
+* [Gmail](https://x.ai/bot/plugin/45893410) — Wake up to a sorted inbox. Sorts the night’s mail before you’re up, drafts replies to the threads that need you, and leaves every draft for you to send.
 
-Owns campaign monitoring and budget recommendations. Connect your advertising platforms, analytics, budget spreadsheet, and Slack.
+* [Granola](https://x.ai/bot/plugin/5609) — Turn notes into next steps. Each evening, reads the day’s Granola notes, pulls out every action item with its owner, and drafts a post for your team’s Slack channel that goes out once you approve.
 
-> Pull current spend and performance by campaign. Compare it with the monthly
-> budget and target customer acquisition cost, then recommend reallocations
-> with the supporting numbers. Draft a Slack update for the growth team.
-> Don't change budgets or send the message.
+* [Slack](https://x.ai/bot/plugin/674) — Pick up requests as they come in. Watches for mentions of your name, starts on the ask, like marketing copy or a campaign brief, and sends you a draft to approve before it replies in the thread.
 
-Keep campaign changes behind approval even after the analysis becomes a routine.
+* [Notion](https://x.ai/bot/plugin/404) — Keep project pages current. Every Friday, drafts a progress update for each project page, highlights what changed, and adds it once you approve.
 
-## Expense manager
+[Browse all apps](https://cursor.com/marketplace)
 
-Owns weekly expense reconciliation and missing-information follow-up. Connect your expense system, email, and finance spreadsheets.
+Then ask a Bot for things you'd otherwise look up yourself, like what changed
+overnight, who's in your next meeting, or what a competitor shipped this week.
+It reads across the apps you connected and drafts the next step for you.
 
-> Build this week's expense summary from the expense system and the attached
-> policy. Match receipts from the finance inbox, flag missing categories or
-> policy exceptions, and draft one follow-up per owner. Return the summary and
-> drafts; don't send messages or change reimbursements.
+### Morning briefing
 
-Ask for a policy citation on every exception and totals that reconcile back to the source.
+Your morning brief of what needs you, ready to post.
 
-## Product performance
+**Starter prompt**
 
-Owns targeted performance investigations with evidence. Connect observability, analytics, and incident tooling.
+> Sum up what changed since yesterday in my inbox, calendar, Slack, and docs, and flag what needs me. Draft it as a post for #team; don't send it.
 
-> Investigate the checkout latency increase since yesterday's release. Review
-> dashboards and traces, identify the highest-confidence hotspot, and return a
-> short write-up with screenshots and direct links. Separate facts from
-> hypotheses. Don't change alerts or production settings.
+### Inbox manager
 
-Use a routine for a recurring health report, not for unsupervised production changes.
+Urgent threads first, with replies drafted for your OK.
 
-## Bug reproduction
+**Starter prompt**
 
-Owns turning reports into reliable reproduction packs. Connect your issue tracker and a staging environment.
+> Sort my unread email into urgent, needs a reply, and FYI. Draft replies to the urgent ones and don't send anything.
 
-> Read this bug report and reproduce it in staging with a fresh test account.
-> Return exact steps, expected and actual behavior, screenshots, browser and
-> OS details, and a minimal test case if possible. Don't use production
-> customer data.
+### Competitive intelligence
 
-Provide test credentials through a [secure handoff](https://cursor.com/docs/grok-bot/work#take-over-for-sensitive-steps), not chat.
+What competitors launched or repriced this week, with links.
 
-## Account health
+**Starter prompt**
 
-Owns risk and expansion signals across a customer portfolio. Connect your CRM, product usage, support, and billing sources.
+> Check these three competitors for anything they launched or repriced this week. Send me a short list with links and what it means for our messaging.
 
-> Review the accounts in this portfolio. Combine recent usage, support
-> escalations, renewal timing, and stakeholder activity into a ranked watch
-> list. For each account, include the evidence, why it matters, and a
-> suggested next step. Don't contact customers or edit the CRM.
+### Travel coordinator
 
-Define risk thresholds in the Bot's description so the weekly result stays consistent.
+The two best flights and hotels, ready for you to pick.
 
-## Chief of staff
+**Starter prompt**
 
-Owns a source-linked digest of what changed and what needs your attention. Connect Slack, email, calendar, and your planning documents.
+> Find flights to Austin for Thursday, back Sunday, with no red-eyes, and a hotel near downtown. Send me the two best options; don't book anything.
 
-> Review activity since yesterday across my approved channels, inbox,
-> calendar, and meeting notes. Return only items that map to the priorities in
-> this document. For each item, include the source, why it matters, the
-> proposed next step, and whether I owe a decision. Don't send messages or
-> change meetings.
+### Meeting prep
 
-Mark what was useful and what was noise, then schedule the digest for a time you can review it.
+A one-page brief on who's in the room, your last touch, and open threads.
 
-## Turn a role into a durable Bot
+**Starter prompt**
 
-1. Put the job, source systems, output format, and standing boundaries in the [Bot's description](https://cursor.com/docs/grok-bot/work#edit-a-bot).
-2. Run one real task with a safe scope.
-3. Correct the result until it's reviewable without you.
-4. Save the working process as a [skill](https://cursor.com/docs/grok-bot/work#save-a-skill), and test it on a second input.
-5. Create a [routine](https://cursor.com/docs/grok-bot/work#create-a-routine) only after retries and failure cases are defined.
-6. Keep consequential external actions behind approval.
+> Prep me for my 2 PM: who is attending, what we last discussed, and any open threads. Keep it to one page.
+
+## Turn tasks you repeat into a Bot
+
+Watch for the asks you make every week, like qualifying inbound leads or matching
+invoices. Give each one to a Bot with that single job, so it builds up the
+context to do it well.
+
+### Sales development
+
+Inbound leads qualified, with every reply drafted.
+
+**Starter prompt**
+
+> Qualify this morning's inbound leads against our ideal customer profile. Draft intro replies with times I'm free for good fits and a polite no for the rest; don't send anything.
+
+### Invoice coordinator
+
+Invoices matched to purchase orders, with mismatches flagged.
+
+**Starter prompt**
+
+> Match this week's invoices in the finance inbox to their purchase orders. List the ones that don't match and draft a note to each owner; don't approve or pay anything.
+
+### Content marketer
+
+The newsletter and posts drafted in your voice.
+
+**Starter prompt**
+
+> Pull what we shipped this week from the changelog and Slack, and draft the newsletter and three posts in our voice. Bring me the drafts; don't publish anything.
+
+### Talent scout
+
+A sourced shortlist, with outreach drafted in your voice.
+
+**Starter prompt**
+
+> Find 20 candidates for this role who meet the must-haves and aren't already in our ATS. Draft outreach in my voice; don't contact anyone.
+
+### Paid media
+
+A budget reallocation backed by spend and acquisition cost, for your approval.
+
+**Starter prompt**
+
+> Compare this month's spend by campaign with our budget and target CAC, and recommend where to move money. Don't change any budgets.
+
+### Expense manager
+
+A weekly expense summary with receipts matched and follow-ups drafted.
+
+**Starter prompt**
+
+> Build this week's expense summary, match receipts from the finance inbox, and flag policy exceptions. Draft one follow-up per owner; don't send them.
+
+### Product performance
+
+A short write-up of the likeliest hotspot, with screenshots and links.
+
+**Starter prompt**
+
+> Find out why checkout got slower after yesterday's release. Send me the likeliest hotspot with screenshots and links, and don't change production settings.
+
+### Bug reproduction
+
+A repro pack with exact steps, screenshots, and browser details.
+
+**Starter prompt**
+
+> Reproduce this bug in staging with a fresh test account. Send me the exact steps, screenshots, and browser details; don't use customer data.
+
+### Account health
+
+A ranked watch list of accounts at risk or ready to expand, with the evidence.
+
+**Starter prompt**
+
+> Rank the accounts in my book by churn risk and expansion potential from usage, tickets, and renewal dates. Suggest a next step for each; don't contact anyone.
+
+When the Bot does the job the way you want, make it run on its own:
+
+* Tell the Bot its job and its limits in chat, and
+  [ask it to remember them](https://docs.x.ai/grok-bot/bots#edit-a-bot).
+* [Save the steps as a skill](https://docs.x.ai/grok-bot/skills-routines-and-automations#save-a-skill),
+  then [create a routine](https://docs.x.ai/grok-bot/skills-routines-and-automations#create-a-routine)
+  to run it on a schedule.
+* Save test logins in [Vault](https://docs.x.ai/grok-bot/vault) or enter them in a
+  [Secure Form](https://docs.x.ai/grok-bot/vault#secure-forms), never in chat.
+
+## Build a team of Bots for a bigger goal
+
+Some goals take more than one job, like a launch campaign or the month-end close.
+Ask your primary Bot to set up a few Bots that each own one part. They pass the
+work along, and you check the result. To get help splitting the work into jobs,
+start from dr eggbot.
+
+* [dr eggbot](https://x.ai/bot/marketplace/bots/dr-eggbot-v2) — Asks you a few questions, then sets up the Bots for you, one job each.
+
+### Campaign team
+
+Launch posts drafted from the numbers and checked before you see them.
+
+1. **Sign-ups** — Pulls last week's sign-ups by channel
+
+2. **Launch drafts** — Drafts a launch note and three posts from the numbers
+
+3. **Fact check** — Checks the drafts against the numbers and brand doc
+
+Runs Mondays at 9 AM. Ask your primary Bot to set up this team.
+
+### Month-end close
+
+Invoices matched, expenses reconciled, and exceptions listed for your sign-off.
+
+1. **Invoices** — Matches invoices in the finance inbox to purchase orders
+
+2. **Expenses** — Reconciles expense reports with receipts
+
+3. **Exceptions** — Lists every mismatch for your sign-off
+
+Runs on the 1st of each month. Ask your primary Bot to set up this team.
+
+### Support queue
+
+Tickets sorted, replies drafted, and bugs reproduced for your review.
+
+1. **Ticket triage** — Sorts new tickets and drafts replies
+
+2. **Bug repro** — Reproduces bug reports in staging with a test account
+
+3. **Help pages** — Flags help pages that need fixing
+
+Runs weekdays at 9 AM. Ask your primary Bot to set up this team.
