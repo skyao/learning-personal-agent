@@ -1,7 +1,7 @@
 来源：https://help.openai.com/en/articles/6825453-chatgpt-release-notes
 取文：2026-11-28，Wayback 快照 20261118015603
 
-# November 13, 2026
+November 13, 2026
 
 ## Introducing ChatGPT Wallet
 

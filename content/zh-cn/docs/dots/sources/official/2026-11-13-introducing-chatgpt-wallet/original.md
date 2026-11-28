@@ -3,7 +3,7 @@
 
 November 13, 2026
 
-# Introducing ChatGPT Wallet
+Introducing ChatGPT Wallet
 
 Building trusted agentic payments with networks, banks, and businesses.
 
