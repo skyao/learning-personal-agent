@@ -13,7 +13,7 @@ description: 收集 Instinct（Spear Street Technology，创始人 Noah Shinn）
 | --- | --- |
 | 产品目录 | `content/zh-cn/docs/instinct/` |
 | 时间线 | 2025 年创立；2026-02 起私人测试（邀请制，至 2026-11 仍未公开开放）；2026-08 下旬在湾区走红，08-27 前后 2.5 亿美元 B 轮（25 亿美元估值）；09-28 宣布 10 亿美元 C 轮（100 亿美元估值） |
-| 最后收集日期 | 2026-11-28（美东；增量：媒体 3 篇——TechCrunch 专属邮箱（09-09）、Instinct Selections 商品推荐（09-30）、The Verge Allison Johnson 上手实测（10-09），都是此前检索漏掉的；官网首页原文更新（入口改为「Text Instinct」）；补查 11 月：合作方公告 2 篇——Zocdoc 预约挂号合作新闻稿（10-29，Wayback 快照）、Plaid 金融账户连接博客（11-18））；2026-11-10（增量：补收媒体 1 篇——TechCrunch 群聊上线（10-05）；社区 1 篇——Z Finance 的 Noah Shinn 访谈中文整理（09-30），两篇都是第一轮检索漏掉的）；2026-11-05（美东；第一轮：官方 1 篇、媒体 5 篇） |
+| 最后收集日期 | 2026-11-28（10:16 轮次：无新资料；TechCrunch 标签最新仍为 11-21 短信合集（已在 industry 更新），Verge 10/11 月 sitemap 无新文，官网博客仍无帖子）；2026-11-28（美东；增量：媒体 3 篇——TechCrunch 专属邮箱（09-09）、Instinct Selections 商品推荐（09-30）、The Verge Allison Johnson 上手实测（10-09），都是此前检索漏掉的；官网首页原文更新（入口改为「Text Instinct」）；补查 11 月：合作方公告 2 篇——Zocdoc 预约挂号合作新闻稿（10-29，Wayback 快照）、Plaid 金融账户连接博客（11-18））；2026-11-10（增量：补收媒体 1 篇——TechCrunch 群聊上线（10-05）；社区 1 篇——Z Finance 的 Noah Shinn 访谈中文整理（09-30），两篇都是第一轮检索漏掉的）；2026-11-05（美东；第一轮：官方 1 篇、媒体 5 篇） |
 | 实测材料 | 没有：旧笔记 learning-ai-agent 没有 Instinct 目录 |
 
 ## 背景
