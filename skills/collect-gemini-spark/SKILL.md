@@ -14,7 +14,7 @@ description: 收集 Gemini Spark（Google，2026-10 起改称 Gemini 的 Task �
 | 产品目录 | `content/zh-cn/docs/gemini-spark/` |
 | 发布日期 | 2026-05-19（Google I/O；先给受信测试者，随后美国 AI Ultra Beta） |
 | 改名 | 2026-10 起界面改称「Task」：网页版约 10-01（Chrome Unboxed），Android 约 10-12（9to5Google）；Google 没有发正式公告，产品页和 Spark 更新日志随后下线或跳转 |
-| 最后收集日期 | 2026-11-28（美东；增量：11-17 Task 免费开放——官方新收 10 篇：博客 2 篇（免费开放、Mac computer use）、总发布说明 11-17/11-19 节选、新产品页 overview/productivity、新帮助页 6 篇（远程计算机、邮件、短信、购买与付款、权限、代打电话）；帮助页 5 篇原文更新（任务总览、计划、技能、自定义应用、模型与档位）；媒体只复述公告，未收）；2026-11-10（增量：博客 RSS 无 Spark/Task 新文章；帮助页 tasks 与 schedules 删去「选择加入 Personal Intelligence」一条，原文与译文同步删除；媒体未见新资料）；2026-11-05（美东；第一轮：官方 14 篇、媒体 5 篇、社区 1 篇，其中 12 篇是旧笔记 learning-ai-agent 的 Gemini Spark 资料索引引用过的） |
+| 最后收集日期 | 2026-11-28（10:16 轮次：无新资料；Keyword RSS 11-20 后无 Task 新文章，总发布说明的 Task 条目仍为 11-17/11-19，11-20 Connected Apps 文只顺带提任务不收）；2026-11-28（美东；增量：11-17 Task 免费开放——官方新收 10 篇：博客 2 篇（免费开放、Mac computer use）、总发布说明 11-17/11-19 节选、新产品页 overview/productivity、新帮助页 6 篇（远程计算机、邮件、短信、购买与付款、权限、代打电话）；帮助页 5 篇原文更新（任务总览、计划、技能、自定义应用、模型与档位）；媒体只复述公告，未收）；2026-11-10（增量：博客 RSS 无 Spark/Task 新文章；帮助页 tasks 与 schedules 删去「选择加入 Personal Intelligence」一条，原文与译文同步删除；媒体未见新资料）；2026-11-05（美东；第一轮：官方 14 篇、媒体 5 篇、社区 1 篇，其中 12 篇是旧笔记 learning-ai-agent 的 Gemini Spark 资料索引引用过的） |
 | 实测材料 | 没有：旧笔记的 `agents/personal/gemini-spark/` 是 2026-10-21 至 10-26 的资料阅读与验证方案，没有账号实测，不迁入 |
 
 ## 收录范围
