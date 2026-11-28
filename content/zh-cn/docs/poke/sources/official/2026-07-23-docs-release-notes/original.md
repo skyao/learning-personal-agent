@@ -1,5 +1,5 @@
 来源：https://poke.com/docs/release-notes
-取文：2026-11-09，直接下载
+取文：2026-11-28，直接下载
 
 Release Notes
 
@@ -9,6 +9,16 @@ or legal advice.
 
 Please check [status.poke.com](https://status.poke.com/) for real-time
 updates.
+
+---
+
+## November 17, 2026
+
+### Devin Bots
+
+Your [Devin Bot](https://devin.ai/bots) leads a team of agents to build, test, and improve your software around the clock. Your Bot breaks down the work and coordinates agents in parallel, each on its own cloud machine.
+
+For a limited time, [convince Poke](https://poke.com/bots) how many free credits you deserve. Watch the [launch video](https://x.com/cognition/status/2122737511684587551) to see Devin Bots in action.
 
 ---
 

@@ -1,17 +1,27 @@
 来源：https://poke.com/
-取文：2026-11-09，直接下载
+取文：2026-11-28，直接下载
 
 ![](images/img-01-e7c9db.webp)
 
 ![](images/img-02-c3ab52.webp)
 
-[NewPoke is joining Cognition](https://cognition.com/blog/interaction)
+[NewIntroducing Devin Bots](https://poke.com/bots)
 
 ## Meet Poke, your new favorite contact
 
 Proactive, private, personal, and right in your texts
 
 [Get Started](https://poke.com/get-started)
+
+[New
+
+### Pitch your idea, get a free Devin Bot to build it
+
+Convince Poke how many free credits you deserve
+
+Meet Devin Bots
+
+![](images/img-62-1c20ef.webp)![](images/img-63-59a0c1.webp)![](images/img-64-ee3038.webp)![](images/img-65-13d90e.webp)![](images/img-66-086a67.webp)](https://poke.com/bots)
 
 ![](images/img-03-fbefb8.webp)
 
