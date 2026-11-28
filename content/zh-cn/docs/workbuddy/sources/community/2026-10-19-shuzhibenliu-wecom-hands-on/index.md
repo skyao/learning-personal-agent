@@ -3,7 +3,7 @@ title: "WorkBuddy住进企业微信，AI同事几分靠谱？"
 linkTitle: "数智奔流：企业微信实测"
 date: 2026-10-19
 sourceUrl: "https://m.jiemian.com/article/15208591.html"
-altUrls: ["https://www.woshipm.com/ai/6480802.html"]
+altUrls: ["https://www.woshipm.com/ai/6480802.html", "https://www.huxiu.com/article/4898705.html"]
 author: "田渝（数智奔流，编辑：沈校）"
 publisher: "数智奔流（界面新闻·财经号）"
 language: zh

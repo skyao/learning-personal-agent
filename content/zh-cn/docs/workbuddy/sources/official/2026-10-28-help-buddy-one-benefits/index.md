@@ -8,9 +8,9 @@ publisher: "腾讯（WorkBuddy 官方文档）"
 language: zh
 fidelity: 全文
 translation: 不需要
-collectedAt: 2026-11-05
-updatedAt: 2026-10-28
-dateNote: "页面不标发布日期，日期取页面显示的「最后更新」时间（2026-10-28，UTC）"
+collectedAt: 2026-11-28
+updatedAt: 2026-11-11
+dateNote: "页面不标发布日期，日期取页面显示的「最后更新」时间（2026-10-28，UTC）；2026-11-28 发现原文更新（「最后更新」变为 2026-11-11），按新版覆盖：账号关联入口增加客户端「设置 > 个人主页 > Buddy One 产品套件关联账号」，并配截图"
 tags: [开放与价格, 商业与规模]
 products: [workbuddy]
 ---
@@ -29,7 +29,9 @@ Buddy One VIP 会员权益说明
 
 开通 Buddy One VIP 后，可获得 WorkBuddy、腾讯文档、腾讯会议、ima 和腾讯网盘产品的对应权益。
 
-其中，WorkBuddy 权益购买后立即生效；其他产品的权益需关联对应产品账号后下发。账号关联入口为[个人中心](https://www.workbuddy.cn/profile/plans-usage)。
+其中，WorkBuddy 权益购买后立即生效；其他产品的权益需关联对应产品账号后下发。账号关联入口为 WorkBuddy 客户端 **设置 > 个人主页 > Buddy One 产品套件关联账号**，或网页端[个人中心](https://www.workbuddy.cn/profile/plans-usage)。
+
+![图片说明](images/img-01-3b8d57.png)
 
 ## 权益明细
 
@@ -76,47 +78,47 @@ Buddy One VIP 权益生效后，可前往对应产品查看会员权益、积分
 
 - **会员权益与积分**：进入 WorkBuddy 客户端，选择**设置** > **套餐与积分**，查看 Buddy One VIP 权益、到期时间及积分明细。
 
-![WorkBuddy 设置「套餐与积分」页面，展示 Buddy One VIP 权益、到期时间与积分明细](images/img-01-f28670.png)
+![WorkBuddy 设置「套餐与积分」页面，展示 Buddy One VIP 权益、到期时间与积分明细](images/img-02-282f57.png)
 
 - **存储空间**：前往[存储用量明细](https://www.workbuddy.cn/profile/plans-usage#usage-detail)查看 Buddy One 存储空间总量、已使用额度，以及腾讯文档、ima、workbuddy 资料库、腾讯网盘等各产品的占用明细。
 
-![存储用量明细页面，展示 Buddy One 存储空间总量、已使用额度及各产品占用占比](images/img-02-f689ea.png)
+![存储用量明细页面，展示 Buddy One 存储空间总量、已使用额度及各产品占用占比](images/img-03-16b212.png)
 
 ### 腾讯会议
 
 进入[腾讯会议](https://meeting.tencent.com/user-center/orders-and-services/my-services)服务中心，在**订单与服务** > **我的服务**中查看会员权益与到期时间。
 
-![腾讯会议服务中心「我的服务」页面，展示专业版权益与到期时间](images/img-03-61804c.png)
+![腾讯会议服务中心「我的服务」页面，展示专业版权益与到期时间](images/img-04-d42c2b.png)
 
 ### 腾讯文档
 
 - **会员权益**：前往[腾讯文档 VIP](https://docs.qq.com/vip) 页面，查看超级会员 Plus 权益及到期时间。
 
-![腾讯文档 VIP 页面，展示超级会员 Plus 权益与到期时间](images/img-04-d89663.png)
+![腾讯文档 VIP 页面，展示超级会员 Plus 权益与到期时间](images/img-05-58cf45.png)
 
 - **存储空间**：前往腾讯文档的存储空间页面，查看 Buddy One 存储总量及各产品的存储占用明细
 
-![腾讯文档存储空间管理页面，展示 Buddy One 存储总量与各产品占用明细](images/img-05-166805.png)
+![腾讯文档存储空间管理页面，展示 Buddy One 存储总量与各产品占用明细](images/img-06-401a13.png)
 
 ### 腾讯网盘
 
 - **会员权益**：前往[腾讯网盘](https://drive.tencent.com/disk/storage)页面，查看会员权益与存储容量。
 
-![腾讯网盘存储空间页面，展示会员权益与存储容量](images/img-06-6a4173.png)
+![腾讯网盘存储空间页面，展示会员权益与存储容量](images/img-07-0e1f78.png)
 
 - **存储空间**：前往腾讯网盘的存储空间页面，查看存储用量明细。
 
-![腾讯网盘存储空间页面，展示已用容量与 Buddy One 各产品用量明细](images/img-07-d250b2.png)
+![腾讯网盘存储空间页面，展示已用容量与 Buddy One 各产品用量明细](images/img-08-b991f6.png)
 
 ### ima
 
 - **积分查询**：进入 ima 客户端，点击**我的copilot** > **copilot 设置** > **用量统计**，查询积分的用量。
 
-![ima 客户端用量统计页面，展示 Buddy One 积分与 ima 算力余额](images/img-08-e6139d.png)
+![ima 客户端用量统计页面，展示 Buddy One 积分与 ima 算力余额](images/img-09-3c03d2.png)
 
 - **存储空间**：进入 ima 客户端，点击头像，选中**存储空间**，查看共享的存储空间。
 
-![ima 客户端存储空间页面，展示已用容量与知识库、笔记等占用明细](images/img-09-f74917.png)
+![ima 客户端存储空间页面，展示已用容量与知识库、笔记等占用明细](images/img-10-85f85c.png)
 
 ## 权益变更规则
 
