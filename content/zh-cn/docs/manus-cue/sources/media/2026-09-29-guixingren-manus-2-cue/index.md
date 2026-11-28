@@ -3,7 +3,7 @@ title: "Manus携2.0和「Cue」加入战斗！个人Agent混战彻底热闹咯�
 linkTitle: "硅星人：Cue 实测与 Muse 对照"
 date: 2026-09-29
 sourceUrl: "https://news.pedaily.cn/202609/569752.shtml"
-altUrls: ["https://finance.sina.cn/stock/jdts/2026-09-29/detail-initmzhf7930273.d.html", "https://zhuanlan.zhihu.com/p/2088645364563948085"]
+altUrls: ["https://finance.sina.cn/stock/jdts/2026-09-29/detail-initmzhf7930273.d.html", "https://zhuanlan.zhihu.com/p/2088645364563948085", "https://www.woshipm.com/ai/6471988.html"]
 author: "黄小艺"
 publisher: "硅星人（投资界授权转载）"
 language: zh
