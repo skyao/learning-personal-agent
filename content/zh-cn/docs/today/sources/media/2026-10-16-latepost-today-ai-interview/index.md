@@ -3,7 +3,7 @@ title: "与 Today AI 聊个人 agent：它就是 “the next big thing”"
 linkTitle: "晚点：与 Today AI 聊个人 agent"
 date: 2026-10-16
 sourceUrl: "https://mp.weixin.qq.com/s/_NAo_-HxMD3BTSeBRUwZkA"
-altUrls: ["https://mp.weixin.qq.com/s?__biz=MzU3Mjk1OTQ0Ng==&mid=2247539283&idx=1&sn=5f9912c0587fc035afda36d27e2f1377"]
+altUrls: ["https://mp.weixin.qq.com/s?__biz=MzU3Mjk1OTQ0Ng==&mid=2247539283&idx=1&sn=5f9912c0587fc035afda36d27e2f1377", "https://www.163.com/dy/article/L9BQ16640531M1CO.html"]
 author: "晚点团队"
 publisher: "晚点LatePost"
 language: zh

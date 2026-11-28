@@ -4,6 +4,7 @@ linkTitle: "智能涌现：团队自述十问"
 date: 2026-10-24
 sourceUrl: "https://mp.weixin.qq.com/s/G4Xyzo2hiAFFFrlNDpkYhw"
 reprintUrl: "https://www.36kr.com/p/4039749830120583"
+altUrls: ["https://eu.36kr.com/en/p/4039749830120583"]
 author: "邓咏仪（编辑：张雨忻）"
 publisher: "智能涌现（36氪转载）"
 language: zh
