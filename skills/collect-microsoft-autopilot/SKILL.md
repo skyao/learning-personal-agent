@@ -13,7 +13,7 @@ description: 收集 Microsoft Autopilot（原 Microsoft Scout，微软）的资�
 | --- | --- |
 | 产品目录 | `content/zh-cn/docs/microsoft-autopilot/`（2026-11-10 建立） |
 | 时间线 | 2026-06-02 Build 2026 以 Microsoft Scout 之名发布，是微软首个「Autopilot」类智能体，经 Frontier 计划实验性提供；2026-09-25 微软博客称其为 Autopilot（formerly Scout），同月底扩大私有预览 |
-| 最后收集日期 | 2026-11-28（美东；Ignite 后增量：官方 17 篇——新 Autopilot Learn 文档集 12 篇、MC1557730、Tech Community Shahine 博文、Copilot 博客 Ignite 主稿、Book of News、产品页；媒体 3 篇，industry 1 篇；见「第三轮判断记录」；Scout 文档集与 MC1479277、MC1546354 无变化）；2026-11-14（按 analyze/progress.md 的资料缺口补收：官方 4 篇、媒体 2 篇，见「第二轮判断记录」；Ignite 11-17 至 20 尚未举行）；2026-11-10（增量复查：无新资料；Ignite 2026-11-17 至 20 举行，下一轮重点看 Autopilot 公告）；2026-11-10（美东；第一轮：官方 17 篇、媒体 6 篇、社区 4 篇；Learn 文档 12 篇全收，旧笔记 learning-ai-agent 的 copilot-autopilot 引用来源已逐条对照） |
+| 最后收集日期 | 2026-11-28（10:16 轮次：无新资料；Learn 文档集各页 updated_at 仍为 11-24/11-17/11-20，Ignite 相关媒体稿均为 11-17 公告的复述，未见新 MC 公告）；2026-11-28（美东；Ignite 后增量：官方 17 篇——新 Autopilot Learn 文档集 12 篇、MC1557730、Tech Community Shahine 博文、Copilot 博客 Ignite 主稿、Book of News、产品页；媒体 3 篇，industry 1 篇；见「第三轮判断记录」；Scout 文档集与 MC1479277、MC1546354 无变化）；2026-11-14（按 analyze/progress.md 的资料缺口补收：官方 4 篇、媒体 2 篇，见「第二轮判断记录」；Ignite 11-17 至 20 尚未举行）；2026-11-10（增量复查：无新资料；Ignite 2026-11-17 至 20 举行，下一轮重点看 Autopilot 公告）；2026-11-10（美东；第一轮：官方 17 篇、媒体 6 篇、社区 4 篇；Learn 文档 12 篇全收，旧笔记 learning-ai-agent 的 copilot-autopilot 引用来源已逐条对照） |
 
 ## 背景
 
