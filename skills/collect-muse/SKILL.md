@@ -13,7 +13,7 @@ description: 收集 Meta Muse（Meta 的个人 AI 智能体）的资料时使用
 | --- | --- |
 | 产品目录 | `content/zh-cn/docs/muse/` |
 | 发布日期 | 2026-09-08（美国） |
-| 最后收集日期 | 2026-11-27（10:16 轮次：muse 5 篇、industry 0 篇——社区 5 篇：Retailgentic《FIRST LOOK: Muse/Walmart Connector…》（11-24，沃尔玛连接器一手实测：MCP 底层、$100 上限、Diet Dr Pepper 下单）；museexplained《Black Friday Through Muse…》（11-27，11-26 阴性核查：未发现具名沃尔玛成交与收据，承诺 12 月 4 日复查）；Optimus Labs《Two Ways In…》（09-25 首发、11-16 更新，★，第二条攻击链：SKILL 更新改写记忆文件、Ctrl+X 剪切已保存密码）；えま《「Museに丸投げ」の前に規約チェック》（11-27，对照官方规约核查 X 流行用法）；museexplained《Muse Wonder-Trained Models Are Live…》（11-09，核查 Meta 11-06 特化模型四项数字，均为 Meta 自述）） |
+| 最后收集日期 | 2026-11-27（22:16 轮次：muse 2 篇、industry 1 篇——社区 2 篇：えま《Museはどうやって稼ぐのか》（11-28 JST，财报电话会官方表述的手续费模式独立分析）；Isle of Man 信息专员《Consumer facing agentic AI》（11-27，★，英国 ICO 自愿监测与报告安排、GPA 决议）；industry 1 篇：OpenClaw《Introducing ShellBench》（11-24，100 个日常任务基准，Muse Wonder Full 47.4%）） |
 | 页面格式 | 与所有产品一致，见 collect-sources 的 source-page.md「页面正文」。第一阶段直接翻译的旧页面已于 2026-11-06 补上内容摘要、保留理由和分隔线（用户 2026-11-06 要求） |
 
 ## 收录范围
@@ -636,7 +636,23 @@ description: 收集 Meta Muse（Meta 的个人 AI 智能体）的资料时使用
 | ultragamerz「Muse Explained」指南、tandiu.cn 智能体数据库页、agentready.co 11 月 25 日连接器清单 | 不收：案头整理或目录式更新日志，无新信息 |
 | 英国上线转述：Social Media Today、The Guardian、MacRumors、Neowin、FourWeekMBA | 不收：二手汇总或转述；FourWeekMBA 英国稿原文可读但为二手汇总 |
 | datastudios Meta AI 限额页（11-25 更新） | 不收：含错误（称 Muse 仅在四国） |
-| Manus Cue（2026-11-27 えま已有对比文） | 候选产品：不在跟踪清单，列入报告等 Sky 决定 |
+| Manus Cue | 2026-11-27 已纳入跟踪清单（manus-cue），不再是候选产品；えま 11-27 对比文（Cue vs Muse）此前按旧范围判不收，待按新范围重判是否收 industry |
+
+| えま「Museはどうやって稼ぐのか」（2026-11-28 JST） | 收：社区类；财报电话会官方表述的手续费模式独立分析，区分「设置した人」与「活跃用户」，Forter 51% 外部佐证；电话会本身按用户决定不单独收录 |
+| Isle of Man 信息专员「Consumer facing agentic AI」（Alexandra Delaney-Bhattacharya，2026-11-27） | 收：社区类，★；监管机构视角：英国 ICO 自愿监测与报告安排、GPA 决议、非用户数据与训练退出等隐私风险汇总 |
+| OpenClaw「Introducing ShellBench」（Vincent Koc，2026-11-24） | 收：industry 社区类；100 个日常任务基准，12 模型 × 5 框架，Muse Wonder Full 47.4%／Wonder 1.0 39.7%，安全违规 15.7%；模型×框架表据文中图表转录，arXiv 论文记入 altUrls |
+| aihomebuilding「Muse Can Buy Your Black Friday Gifts Now」（2026-11-26）、「You Think Your Subscriptions Cost $86 a Month」（2026-11-23） | 不收：前者为已收 Spaces 与沃尔玛公告的评论分析，无一手实测；后者为用法指南加调查数据合成，无 Muse 实测 |
+| Retailgentic BFCM 追踪更新（2026-11-27）与 Adobe 数据快讯（2026-11-25） | 不收：前者为 Adobe 通用数据与已收 Forter 数据的合辑；后者无 Muse 一手实测，Forter 51% 已由库中 Forter 页覆盖 |
+| allthingsmuse「Muse for Logistics Coordinators」（2026-11-27） | 不收：Academy 提示词模板课，无真实执行记录（与 People Ops、Creators 同判） |
+| Cloud Security Alliance Sentinel 绕过研究笔记（2026-11-21） | 不收：AI 辅助生成、未经官方审核，已收 NebuSec 两篇一手研究的二次整理，无新事实 |
+| PAEval「Meta Muse vs Zapia」对照页 | 不收：聚合站，汇总他家基准分数，无一手测试；Zapia 为新出现产品名，列入候选产品 |
+| Zapia | 候选产品：PAEval 对照页出现的新产品名，等 Sky 决定是否纳入跟踪 |
+| impresivai Instagram 私信中文合成稿（2026-11-27）、omnitools.ai FCA 稿（2026-11-27）、scommerce 亚马逊谈判稿（2026-11-27）、tandiu.cn 智能体数据库页 | 不收：已收事件的二手合成或聚合，无新信息 |
+| avail.video Claire Vo 基准节目页 | 不收：该期节目已收 industry 条目，本页为视频摘要页，无完整文字稿 |
+| raq.com 六产品对照（2026-10-29） | 不收：窗口外；案头对照，无实测 |
+| Computerworld、GIGAZINE、af.net 的 ShellBench 转述稿（2026-11-25/26） | 不收：已收 OpenClaw 原文的转述 |
+| openaimaster、neoteo、enghyu 特化模型稿 | 不收：已收官方 11-06 研究博客的复述 |
+| museexplained 窗口外未评估页（Ember 成本 11-17、OpenRouter／Vercel Ember 计费 11-23、邮箱指南 11-22、试穿 11-20、早期安全事故 11-19） | 窗口外发现，未评估；其中 Ember 类按模型资料收录原则不收，其余待后续轮次决定是否回填 |
 
 ## 对照旧笔记的判断（2026-11-06）
 
@@ -712,6 +728,7 @@ description: 收集 Meta Muse（Meta 的个人 AI 智能体）的资料时使用
 - 2026-11-16（10:16 轮次）：同上，直接下载与 browser.open 均返回 403，改用检索核对，11 月仅 11-09 Ember（模型发布，不收）与 11-06 特化模型两篇，无新帖。
 - 2026-11-05 补跑：muse.ai/blog 列表页无新文章（最新仍为 11-02 赏金回顾）；Newsroom AI 标签页 11 月仅语音稿一篇。
 - 2026-11-27：列表页直接下载失败（curl exit 56，0 字节），browser.open 被控制平面拦截（control_plane_destination_blocked，勿重复请求）；改用检索核对，11 月仍仅 11-09 Ember（模型发布，不收）与 11-06 特化模型两篇，无新帖。muse.ai/blog 同日 browser.open 同样被拦截，改用检索核对，gradually.ai 的 Muse Changelog 显示 11 月无新博文（最新仍为 11-02 赏金回顾）。
+- 2026-11-27（22:16 轮次）：检索复核，11 月仍仅 11-09 Ember 与 11-06 特化模型两篇，无新帖；Newsroom 主站最新为 11-27 Instagram for TV（与 Muse 无关），英国上线两篇官方稿已在库中。
 
 ### about.fb.com 抽取脚本
 
@@ -723,12 +740,14 @@ description: 收集 Meta Muse（Meta 的个人 AI 智能体）的资料时使用
 
 - 正文容器为 `article.article-body`；直接下载全文，头图为装饰图，未收。
 - 2026-11-22 站点改版：旧短 slug 全部失效——7 个旧地址返回 404 无跳转，11 个返回 308 跳转到去 `.html` 的新地址，3 个本来就无 `.html`、仍返回 200。新规范地址为 `https://aihomebuilding.com/stories/muse-<slug>-2026`（无 `.html`）。本轮已批量更新已收 18 个页面的 sourceUrl（含 industry 四智能体对照页 1 篇），另修 7 个 original.md 头部残留的新 slug + `.html` 形式。
+- 2026-11-27（22:16 轮次）：sitemap 可取最新文章；11-26 假日购物篇与 11-23 订阅审计篇均判不收（前者无实测的评论分析，后者为用法指南加调查合成）。
 - 该站 10 月 10 日至 11 月 6 日间 20 篇 Muse 独立分析此前漏收，本轮已回填全文。
 
 ### museexplained（2026-11-22）
 
 - 2026-11-26：Wells Fargo 份额核查页原地址（/guide/muse-wells-fargo-share-figure-check/）返回 GitHub Pages 404，且已不在该站 sitemap 中，页面或已迁移／删除；已收页面的 sourceUrl 暂未改动，待发现新地址再更新。
 - 2026-11-27：四页承诺的复查仍未出现：手表页最后核查仍为 11-11（承诺 11-19）、Expedia 页仍为 11-09（承诺 11-17）、电话台账页仍为 11-13（承诺 11-20，正确地址为 /guide/muse-can-call-businesses-paid-subscribers/）；Wells Fargo 旧地址仍 404，新地址未找到。Wonder 训练模型核查页承诺的 11 月 16 日复查亦未出现。
+- 2026-11-27（22:16 轮次）：sitemap lastmod 复核，四页承诺复查仍未出现；Wells Fargo 旧地址仍 404。
 - 2026-11-26：新增亚马逊谈判核查页（/guide/amazon-meta-muse-shopping-blockade-talks/，JSON-LD 标 11-26，最后核查 11-25），Promise Ledger 承诺 12 月 9 日复查协议／条款／时间表三项。
 
 - 旧根地址已 404，文章移至 `/guide/` 新地址（如手表页现为 `/guide/muse-on-apple-watch-and-wear-os/`）；仓库已收的两页 sourceUrl 本来就是 `/guide/` 形式，无需修复。
@@ -739,6 +758,7 @@ description: 收集 Meta Muse（Meta 的个人 AI 智能体）的资料时使用
 - 新渠道：日文个人实测站 `muse.emma-muse.com`，作者 えま。正文容器为 `div.article-body`；直接下载全文；头图为装饰图，未收；升级画面截图等实测图片已本地化到 `images/`。
 - 该站以“免费档为 Spark、有料档为 Wonder”为前提设计对照，依据为官方文档与应用内升级画面说明；与待决的 Wonder 切换事实为同一问题，照录前提与实测结果，不作定论。
 - 2026-11-26：该站文章列表为 JS 渲染，直接下载首页拿不到文章链接；RSS 在 `/feed.xml`（约 66 篇），可直接取最新文章、链接与发布日期（日本时间）。
+- 2026-11-27（22:16 轮次）：RSS 继续可用；新文章 muse-monetization（11-28 JST 发布，美东 11-27 20:50）已收。
 
 ### Personal Agent Bench（2026-11-22）
 
@@ -750,6 +770,7 @@ description: 收集 Meta Muse（Meta 的个人 AI 智能体）的资料时使用
 - ai.forter.com 的两页（Muse 单产品页与六款排名页）是活页数据指南，数据每日刷新。BFCM 页（ai.forter.com/agentic-bfcm）为同一系列的季节性活页，2026-11-24 发布，数字每日刷新；本轮按 11-26 取文时快照收录，见 industry 2026-11-24-forter-agentic-bfcm-2026。`date` 取发布日期 2026-11-21，`updatedAt` 取最后修改日期，`dateNote` 写明数字为取文时快照；以后轮次发现修改日期推进且数据有实质变化时，按 source-page.md「原文更新」规则更新已有页面，不另建新页。
 
 - 2026-11-27：BFCM 活页为滚动窗口、每日刷新，媒体最新引用为 51%／219 美元（截至 11-24 的一周）；库中快照为 2026-11-26（52%／220 美元，近 7 天 11-19–25），本轮不更新库中页面，只在报告中注明最新数字。
+- 2026-11-27（22:16 轮次）：媒体最新引用仍为 51%／219 美元（截至 11-24 的一周，CNBC）；库中快照不更新，只在报告中注明。
 
 ## 命名约定
 
