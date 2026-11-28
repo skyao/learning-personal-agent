@@ -85,7 +85,7 @@ description: 收集 Manus Cue（Manus / Butterfly Effect）的资料时使用：
 | 极果「Manus 独立后首次大更新！实测全新个人智能体 Cue」（凤凰网大风号，2026-09-30） | 2026-11-28 收入 media，只节选导语与 Cue 相关的 05–07 节 |
 | 火猫网 firecat-web「Manus推出个人AI助理Cue：……生态隔离致国内实测受限」（2026-10-19） | 不收：AI 资讯站的短摘要（约 1600 字），据虎嗅同日文章改写 |
 | 虎嗅「Cue一周实测｜给AI配了身份证，却还做不到“随时可用”」（`huxiu.com/article/4898743`，2026-10-19） | 2026-11-28 收入 community：是公众号「奇点研究社」原文（`mp.weixin.qq.com/s/XWTrF1z1tr8vHGP2xDusaw`）的授权转载，按公众号原文收，虎嗅地址记入 `altUrls` |
-| 人人都是产品经理 `woshipm.com/ai/6471988`（2026-09-29） | 不另收：硅星人Pro 授权转载的硅星人实测，已收；地址补进该页 `altUrls`。硅星人页以前 5 张截图下载失败、只留原图地址，2026-11-28 已从这个转载补上（该转载另多一张配图，投资界转载没有，未补） |
+| 人人都是产品经理 `woshipm.com/ai/6471988`（2026-09-29） | 不另收：硅星人Pro 授权转载的硅星人实测，已收；地址补进该页 `altUrls`。硅星人页以前 5 张截图下载失败、只留原图地址，2026-11-28 已从这个转载补上，连同投资界转载没有的第 6 张 |
 | sumus.im、hokai.io、heycue.io、catdoes.com、cognitivetoday、digitalapplied 对照文等 | 不收：SEO 或工具站博客、复述官方说明；cognitivetoday 的「CUE by Manus」是另一款手势控制设备；digitalapplied 多产品对照属行业综合，由行业综合一侧判断 |
 | GitHub agent-tincan PR #270「add Manus Cue setup and Catch Hook guidance」 | 不收：第三方项目的接入代码改动，不是关于 Cue 的文章 |
 | 帮助中心：取消订阅、退款、Mail Manus、账号删除、数据保留中的 Cue 小节 | 不收：账号与计费操作类内容。要点：取消号码订阅与退款是两个步骤；发布初期已用和未用的号码都可退款；智能体邮箱在 Manus 的 Settings > Email 中删除；Cue 与 Manus 共用同一账号和数据，不能只删除 Cue 账号 |
