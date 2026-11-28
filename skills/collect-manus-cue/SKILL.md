@@ -13,7 +13,7 @@ description: 收集 Manus Cue（Manus / Butterfly Effect）的资料时使用：
 | --- | --- |
 | 产品目录 | `content/zh-cn/docs/manus-cue/` |
 | 发布日期 | 2026-09-28（与 Manus 2.0 同日，抢先体验，凭邀请码） |
-| 最后收集日期 | 2026-11-10（增量：博客 sitemap 与帮助中心无新 Cue 资料；App Store 26.18.14（11-08）只是修复；媒体未见 11 月新报道）；2026-11-05（第一轮：官方 7 篇、媒体 2 篇、社区 1 篇；其中 5 篇是对照旧笔记 learning-ai-agent 的 Cue 资料索引补收的） |
+| 最后收集日期 | 2026-11-28（美东；增量：App Store 原文更新——内购新增 Cue Plus 20 美元、Cue Max 2000 美元一档不再列出、语言新增 Hebrew，旧译文移除待重译；补收 9 月实测 2 篇——社区：网易号念洲「第一轮实测」（原腾讯云版有反爬未收）、媒体：极果（凤凰网大风号，节选 Cue 部分）；博客、帮助中心无 Cue 新文；Google Play 11-27 更新只改日期；11 月未见媒体新报道）；2026-11-10（增量：博客 sitemap 与帮助中心无新 Cue 资料；App Store 26.18.14（11-08）只是修复；媒体未见 11 月新报道）；2026-11-05（第一轮：官方 7 篇、媒体 2 篇、社区 1 篇；其中 5 篇是对照旧笔记 learning-ai-agent 的 Cue 资料索引补收的） |
 | 实测材料 | 没有：旧笔记 learning-ai-agent 的 `agents/personal/cue/` 是 2026-10-21 至 10-26 的资料阅读与实验方案，作者注明没有账号实测，不迁入 |
 
 从一开始就按新流程：外文原文存 `original.md`，资料页只写摘要与保留理由，不翻译。
@@ -45,6 +45,9 @@ description: 收集 Manus Cue（Manus / Butterfly Effect）的资料时使用：
 - 帮助中心里讲 Cue 的内容大多不在分类列表中，而是散在通用文章里的「Cue」小节（会员定价、Skills、取消订阅、退款、Mail Manus、账号删除、数据保留），另有专讲 Cue 的「Can I connect multiple messaging agents at once in Cue?」。分类列表找不到时，用网页检索 `site:help.manus.im Cue`，或对照旧笔记 learning-ai-agent 的 `agents/personal/cue/references/`。
 - 帮助中心和博客有中文版（`help.manus.im/zh-CN/…`、`manus.im/zh-cn/blog/…`），按同一内容的不同语言版本处理，记入 `altUrls`。
 - 以后检查新官方资料：Manus 博客列表与 Wayback CDX（`url=manus.im/blog/&matchType=prefix`），帮助中心各分类中带「Cue」的文章。
+- 博客列表页 `manus.im/blog` 的内嵌数据里，每篇有 `recordUid`（slug）和 `createdAt` / `updatedAt`（`"seconds":"$n<Unix 秒>"`），用正则一次列出按日期排序的文章，比逐篇下载省事。`manus.im/sitemap.xml` 没有 lastmod。博客每页导航都有指向 cue.im 的链接，按「Cue」计数时每页至少 2 次，不能当作提到 Cue 的依据（2026-11-28）。
+- 帮助中心：首页 `help.manus.im/en/` 列出 8 个分类，各分类页列出文章链接（2026-11-28 共 130 篇）；逐篇下载后取 `"dateModified"` 和正文里「Cue」的次数，就能一次筛出有修改、提到 Cue 的文章。
+- Homebrew cask `manus-cue`（`github.com/Homebrew/homebrew-cask` 的自动版本 PR）记录 Mac 桌面版版本号（2026-11 为 1.2.0 至 1.2.3），只有版本号，不收。
 
 ## 媒体与社区检索
 
@@ -78,9 +81,18 @@ description: 收集 Manus Cue（Manus / Butterfly Effect）的资料时使用：
 | Bloomberg 关于 Manus 估值与中国团队的报道 | 不收：公司新闻，不专门写 Cue |
 | 字母AI「Manus这次，直接冲着“人”去了」（袁心玥，2026-09-29，36氪授权发布） | 不收：复述发布文和肖弘的说法（已收在财经涂鸦一篇中），其余是评论 |
 | Manus 博客「Context Engineering for AI Agents: Lessons from Building Manus」（2025-07-18） | 不收：讲 Manus 本体的智能体工程，早于 Cue，不提 Cue |
+| 「Muse 之后又来新选手？Manus 新产品 Cue 的第一轮实测」 | 2026-11-28 收入 community：网易号「念洲」有完整版（09-29 18:34），知乎 `p/2088322253465428928` 返回登录验证 |
+| 极果「Manus 独立后首次大更新！实测全新个人智能体 Cue」（凤凰网大风号，2026-09-30） | 2026-11-28 收入 media，只节选导语与 Cue 相关的 05–07 节 |
+| 火猫网 firecat-web「Manus推出个人AI助理Cue：……生态隔离致国内实测受限」（2026-10-19） | 不收：AI 资讯站的短摘要（约 1600 字），据虎嗅同日文章改写 |
+| 虎嗅 `huxiu.com/article/4898743`（2026-10-19）、人人都是产品经理 `woshipm.com/ai/6471988` | 待判断：2026-11-28 检索时发现，不在当轮确认范围内，下一轮先看；虎嗅一篇据摘要是国内实测（邮件顺畅、电话与支付需国际账号未跑通、不能接入微信） |
+| sumus.im、hokai.io、heycue.io、catdoes.com、cognitivetoday、digitalapplied 对照文等 | 不收：SEO 或工具站博客、复述官方说明；cognitivetoday 的「CUE by Manus」是另一款手势控制设备；digitalapplied 多产品对照属行业综合，由行业综合一侧判断 |
+| GitHub agent-tincan PR #270「add Manus Cue setup and Catch Hook guidance」 | 不收：第三方项目的接入代码改动，不是关于 Cue 的文章 |
 | 帮助中心：取消订阅、退款、Mail Manus、账号删除、数据保留中的 Cue 小节 | 不收：账号与计费操作类内容。要点：取消号码订阅与退款是两个步骤；发布初期已用和未用的号码都可退款；智能体邮箱在 Manus 的 Settings > Email 中删除；Cue 与 Manus 共用同一账号和数据，不能只删除 Cue 账号 |
 
 ## 已知问题
+
+- 会员定价帮助页（11711111）2026-11-10 修改后，「Cue phone-number subscriptions」一节下面多了 Plan (Monthly)、Plan (Annually) 两个小标题和 4 张截图，截图内容是「Upgrade to Manus Pro」的 20/40/200 美元月付与 17/34/167 美元年付价格表，属于 Manus 本体套餐，不是 Cue 号码价格；Cue 一节的文字没变，已收页面不改（2026-11-28）。
+- App Store 内购列表 2026-11-28 版本：Cue Plus 20 美元、Cue Pro 100 美元、Cue Max 200 美元、Cloud Computer 39 美元、各国号码 9.99 美元；11-05 版本没有 Cue Plus，Cue Max 还有 2000 美元一档。
 
 - 电话号码价格：App Store 内购列表（2026-11-05）各国号码均为 9.99 美元；xiangxiang103 在发布次日看到美国号码 0.99 美元/月，53AI 博主称首批 0.99 美元、之后 9.99 美元，可能是早期优惠。App Store 还列出 Cue Pro 100 美元、Cue Max 200 美元与 2000 美元、Cloud Computer 39 美元，不写计费周期；应用介绍说获得资格后免费附带 Plus。
 - Google Play 介绍文字会随版本改动（例如 10-08 版写「depending on availability」，11-04 版已删）。
