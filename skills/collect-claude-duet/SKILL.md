@@ -13,7 +13,7 @@ description: 收集 Claude Duet（Anthropic）的资料时使用：Claude Duet �
 | --- | --- |
 | 产品目录 | `content/zh-cn/docs/claude-duet/` |
 | 发布日期 | 2026-10-21（研究预览，美国 Pro、Max、Ultra，候补名单） |
-| 最后收集日期 | 2026-11-10（增量：官方渠道无新稿，发布说明 11 月没有 Duet 条目；入门帮助页原文更新，按新版覆盖，旧译文移除待重译；媒体与社区未见新资料）；2026-11-06（第一轮 2026-11-05：官方 7 篇、社区 2 篇；2026-11-06 对照旧笔记补收官方 1 篇、社区 2 篇，行业综合 2 篇；媒体仍没有符合条件的） |
+| 最后收集日期 | 2026-11-28（美东；增量：入门帮助页（11-26 修改）与产品页原文更新——开放地区扩大到印度、印度尼西亚、巴西、日本，入门页可由现有用户邀请、不再提 Team，按新版覆盖、旧译文移除待重译；新收官方 1 篇（托管浏览器如何标识自己的帮助页）、社区 2 篇（No Code MBA 上手、Natalie Walls 第一天）、行业综合 1 篇（AgentConnect 架构比较）；发布说明 11 月仍无 Duet 条目）；2026-11-10（增量：官方渠道无新稿，发布说明 11 月没有 Duet 条目；入门帮助页原文更新，按新版覆盖，旧译文移除待重译；媒体与社区未见新资料）；2026-11-06（第一轮 2026-11-05：官方 7 篇、社区 2 篇；2026-11-06 对照旧笔记补收官方 1 篇、社区 2 篇，行业综合 2 篇；媒体仍没有符合条件的） |
 | 实测材料 | 用户确认没有（2026-11-05） |
 
 从一开始就按新流程：原文存 `original.md`，资料页只写摘要与保留理由，不翻译。
@@ -35,6 +35,9 @@ description: 收集 Claude Duet（Anthropic）的资料时使用：Claude Duet �
 | 合作方新闻稿 | 如 `stripe.com/newsroom/news/anthropic-and-stripe` | 合作方为 Claude Duet 发布的集成公告，含 Anthropic 方的引语 | 直接下载；放 `official/`，`publisher` 写合作方 |
 | 发布说明 | `support.claude.com/en/articles/12138966-release-notes` | 只收 Claude Duet 条目，每条一页，`fidelity: 节选` | 直接下载 |
 
+- claude.com 的 sitemap 里按「duet」过滤只能找到 Duet 专属文章。不点名 Duet 的通用文章（如 2026-11-13 的「Building always-on agents」）不会出现，要在检索结果和他人文章的参考文献里留意；按收录范围，没写 Duet 的不收。
+- 帮助中心搜索 `?q=duet` 会列出只顺带提到 Duet 的通用帮助页（如 Personal Finance、托管浏览器标识）。逐篇用 `grep -i duet` 看提到的分量再判断。
+
 anthropic.com 的 news 下没有 Claude Duet 页面（`/news/claude-duet` 返回 404），发布文在 claude.com。
 
 ## 媒体与社区检索
@@ -48,6 +51,7 @@ anthropic.com 的 news 下没有 Claude Duet 页面（`/news/claude-duet` 返回
 ## 已知问题
 
 - 发布说明条目只写「Pro and Max plans」，发布文、帮助文档和产品页写「Pro, Max, and Ultra」。
+- 2026-11-28 起，入门帮助页写「isn't available on Enterprise plans yet」，不再提 Team；产品页 FAQ 仍写「Team and Enterprise plans are not included yet」。两处照录，不互相改。
 - 发布文文首有 2026-10-23 加入的说明框，链接到当天发布的安全隐私文。
 
 ## 媒体与社区的判断记录
@@ -95,6 +99,23 @@ anthropic.com 的 news 下没有 Claude Duet 页面（`/news/claude-duet` 返回
 | 入门帮助页 17631495 | 原文更新：限额重置改为按套餐发放（Pro 三次，Max 与 Ultra 一次），有效期改到 2026-12-15，新增「Claude Duet 中不提供 Personal Finance」 |
 | 产品页 | 比对只差连接器 logo 文字，未覆盖 |
 | Link by Stripe、Shop Pay 帮助页 | 未变 |
+
+## 2026-11-28 增量收集
+
+| 资料 | 判断 |
+| --- | --- |
+| 入门帮助页 17631495 | 原文更新（dateModified 2026-11-26）：开放地区加印度、印度尼西亚、巴西、日本；邀请可来自现有用户；不再提 Team；删去 Microsoft 365 一句。覆盖原文，移除旧译文 |
+| 产品页 | 原文更新：页首与 FAQ 的开放地区同上，其余不变；改 original.md 的两句，移除旧译文 |
+| 帮助页 18234133「How do Anthropic-hosted browsers identify themselves…」（11-04） | 收：点名 Claude Duet，说明它的托管浏览器带 `Claude-Agent` 标识，IP 公布在 `claude.com/.well-known/sail` |
+| 帮助页 18185620「Use Personal Finance in Claude」 | 不收：只有一句「Claude Duet 中不提供 Personal Finance」，入门页已有 |
+| claude.com「Building always-on agents」（William Hu，2026-11-13） | 不收：Claude Platform 的开发者最佳实践，全文不提 Claude Duet。若用户想收进 industry，可再议 |
+| No Code MBA「Claude Duet Review: What Happened When I Set It Up」（11-11） | 收：第一次设置的上手记录（导入、频道、Tasks、固定模型）；站点是课程与通讯站，文末有联盟链接声明 |
+| Natalie Walls「My First Day with Claude Duet」（11-13） | 收：第一天的多项实测（迁移数据库、邮件替代方案、购物车停在结账），记了 $20 套餐用掉约 75% 的周限额；文末说明文章由 Claude 起草、作者审阅 |
+| AgentConnect「How always-on agents split routing, execution, and permissions」（11-23） | 收入 industry/community：比较 dsh-superagent、Grok Bot、Claude Duet 等的路由与权限设计，含 Duet 预览账号的观察；作者是自家编排产品的团队，收录说明写明。有官方中文版，填 `altUrls` |
+| Every「Vibe Check: Duet—Anthropic's Always-on Agent」（10-21，11-15 修改） | 暂不收：付费墙，静态页只有约 600 词的开头；Every 自述获得了提前试用。需要时请用户在浏览器中复制 |
+| TechCrunch「Claude Duet app is Anthropic's bet on agents」（Ivan Mehta，10-22） | 不收：复述发布文；唯一的新说法是「面向专业人士和小企业」，没有引语 |
+| techbytes.app「Claude's Duet agent is a little neurotic…」（11-14） | 不收：无第一人称，像是对他人上手报道的转写，没有出处 |
+| VKTR、CXOToday、promptzone、kompozy.io、ai.joaoqueiros.com | 不收：发布复述或评论、聚合摘要、工具站评分页（kompozy 的 datePublished 写 2026-05-21，早于发布）、YouTube 视频的二手总结 |
 
 ## 命名约定
 
