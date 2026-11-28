@@ -1,23 +1,23 @@
 来源：https://support.claude.com/en/articles/17631495-get-started-with-claude-duet
-取文：2026-11-10，直接下载
+取文：2026-11-28，直接下载
 
 **[Claude Duet](https://claude.com/product/claude-duet)** is a research preview of Claude that you message the way you'd message a person. Tell it what you need, typed or spoken, and it works in the apps you've connected, lets you know when something needs you, and is designed to ask before it sends a message, makes a payment, signs a document, or deletes anything. This article explains what Claude Duet does, who can get access, how to join the waitlist, and what it can't do yet.
 
-Claude Duet is available as a research preview to users on Pro, Max, and Ultra plans in the US, through a waitlist. It uses your Claude account settings and your plan usage limits. It isn't available on Team or Enterprise plans yet, and we plan to bring it to those plans later. Access opens in waves, and features can change during the research preview.
+Claude Duet is available through a waitlist as a research preview for users on Pro, Max, and Ultra plans in the US, India, Indonesia, Brazil, and Japan. It uses your Claude account settings and your plan usage limits. It isn't available on Enterprise plans yet, and we plan to bring it to those plans later. Access opens in waves, and features can change during the research preview.
 
 ## Who can get access
 
 To use Claude Duet, you need:
 
 - A Pro, Max, or Ultra plan
-- A Claude account in the US
-- An invitation from the waitlist
+- A Claude account in the US, India, Indonesia, Brazil, or Japan
+- An invitation from the waitlist or from a Claude Duet user
 
 ## Why you might not have access yet
 
 - Invitations go out in waves, so joining the waitlist doesn't guarantee a specific date.
-- Claude Duet is available in the US only during the research preview.
-- Claude Duet isn't available on Team or Enterprise plans yet.
+- During the research preview, Claude Duet is only available in the US, India, Indonesia, Brazil, and Japan.
+- Claude Duet isn't available on Enterprise plans yet.
 - The email address you used on the waitlist doesn't match your Claude account, or the Google or Apple account on your phone. Access is tied to the email address you gave us.
 
 ## How Claude Duet works
@@ -81,7 +81,7 @@ During the research preview, keep these limits in mind:
 - It can't see all of your projects or the files on your computer, and it can read your work in Claude but can't change it.
 - It doesn't make phone calls or send text messages to other people. With your approval, it can send emails from the accounts you've connected.
 - Some actions are off-limits even with your approval, such as trading securities, moving money between accounts, or accessing someone else’s account.
-- Some connectors, such as Slack, work with limits in Claude Duet. Microsoft 365 isn't available yet.
+- Some connectors, such as Slack, work with limits in Claude Duet.
 - Personal Finance isn’t available in Claude Duet.
 
 Claude Duet can also make mistakes, such as misreading a thread or misjudging what's urgent. Review drafts and approval requests before you confirm them.

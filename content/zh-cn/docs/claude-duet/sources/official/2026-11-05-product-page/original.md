@@ -1,10 +1,10 @@
 来源：https://claude.com/product/claude-duet
-取文：2026-11-05，直接下载
+取文：2026-11-28，直接下载
 
 
 Claude Duet is a proactive agent that understands what needs your attention. It takes on tasks of all sizes, keeps working while you’re away, and waits for your ok when it matters.
 
-Powered by Opus 5.5. Available in Pro, Max, and Ultra plans in the US.
+Powered by Opus 5.5. Available in Pro, Max, and Ultra plans in the US, India, Indonesia, Brazil & Japan.
 
 ## Join the waitlist
 
@@ -226,7 +226,7 @@ Claude Duet can send a morning brief, flag what needs you in your inbox and cale
 
 ### Who can use Claude Duet and what does it cost?
 
-Claude Duet is a research preview on a waitlist for Claude Pro, Max, and Ultra subscribers in the US. Team and Enterprise plans are not included yet.
+Claude Duet is a research preview on a waitlist for Claude Pro, Max, and Ultra subscribers in the US, India, Indonesia, Brazil & Japan. Team and Enterprise plans are not included yet.
 
 ### How does usage work for Claude Duet?
 

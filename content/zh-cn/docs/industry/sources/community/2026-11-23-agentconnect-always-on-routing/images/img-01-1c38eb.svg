@@ -1,0 +1,124 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 560" width="1200" height="560" font-family="-apple-system, BlinkMacSystemFont, 'Inter', 'Helvetica Neue', Arial, sans-serif" font-size="14">
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#6b7280"/>
+    </marker>
+    <marker id="ap" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#c2410c"/>
+    </marker>
+  </defs>
+  <rect width="1200" height="560" fill="#ffffff"/>
+
+  <!-- Panel 1: one session per conversation -->
+  <g transform="translate(20,20)">
+    <rect width="360" height="520" rx="14" fill="#f8fafc" stroke="#e2e8f0"/>
+    <text x="20" y="34" font-size="18" font-weight="600" fill="#0f172a">① One session per conversation</text>
+    <text x="20" y="58" font-size="12.5" fill="#64748b">Simplest; isolated context, platform-defined bounds</text>
+
+    <rect x="24" y="86" width="154" height="46" rx="8" fill="#ffffff" stroke="#cbd5e1"/>
+    <text x="101" y="114" text-anchor="middle" fill="#0f172a" font-size="12.5">DM · Alice</text>
+    <rect x="24" y="150" width="154" height="46" rx="8" fill="#ffffff" stroke="#cbd5e1"/>
+    <text x="101" y="178" text-anchor="middle" fill="#0f172a" font-size="12.5">#incidents · Thread A</text>
+    <rect x="24" y="214" width="154" height="46" rx="8" fill="#ffffff" stroke="#cbd5e1"/>
+    <text x="101" y="242" text-anchor="middle" fill="#0f172a" font-size="12.5">#incidents · Root</text>
+
+    <rect x="216" y="86" width="120" height="46" rx="8" fill="#eef2ff" stroke="#a5b4fc"/>
+    <text x="276" y="114" text-anchor="middle" fill="#1e1b4b" font-size="13">session 1</text>
+    <rect x="216" y="150" width="120" height="46" rx="8" fill="#eef2ff" stroke="#a5b4fc"/>
+    <text x="276" y="178" text-anchor="middle" fill="#1e1b4b" font-size="13">session 2</text>
+    <rect x="216" y="214" width="120" height="46" rx="8" fill="#eef2ff" stroke="#a5b4fc"/>
+    <text x="276" y="242" text-anchor="middle" fill="#1e1b4b" font-size="13">session 3</text>
+
+    <line x1="178" y1="109" x2="214" y2="109" stroke="#6b7280" stroke-width="1.5" marker-end="url(#a)"/>
+    <line x1="178" y1="173" x2="214" y2="173" stroke="#6b7280" stroke-width="1.5" marker-end="url(#a)"/>
+    <line x1="178" y1="237" x2="214" y2="237" stroke="#6b7280" stroke-width="1.5" marker-end="url(#a)"/>
+
+    <text x="24" y="296" fill="#c2410c" font-weight="600" font-size="13.5">Same task split across blind sessions</text>
+    <text x="24" y="320" fill="#475569" font-size="12.5">Alice asks about a payment rollback in DM;</text>
+    <text x="24" y="340" fill="#475569" font-size="12.5">Bob adds "check billing too" in #incidents.</text>
+    <text x="24" y="360" fill="#475569" font-size="12.5">The platform doesn't link them, so the</text>
+    <text x="24" y="380" fill="#475569" font-size="12.5">session boundary cuts the task in half.</text>
+    <text x="24" y="410" fill="#475569" font-size="12.5">Memory carries preferences, not "what step</text>
+    <text x="24" y="430" fill="#475569" font-size="12.5">are we on and who are we waiting for?"</text>
+    <text x="24" y="468" fill="#0f766e" font-weight="600" font-size="13.5">Works when: one chat = one topic</text>
+    <text x="24" y="492" fill="#475569" font-size="12.5">Isolated tickets or strict thread-only channels.</text>
+  </g>
+
+  <!-- Panel 2: single giant session -->
+  <g transform="translate(420,20)">
+    <rect width="360" height="520" rx="14" fill="#f8fafc" stroke="#e2e8f0"/>
+    <text x="20" y="34" font-size="18" font-weight="600" fill="#0f172a">② One giant session</text>
+    <text x="20" y="58" font-size="12.5" fill="#64748b">Shared context; blocked, mixed up, and leaky</text>
+
+    <rect x="24" y="86" width="154" height="46" rx="8" fill="#ffffff" stroke="#cbd5e1"/>
+    <text x="101" y="114" text-anchor="middle" fill="#0f172a" font-size="12.5">Alice: payment rollback</text>
+    <rect x="24" y="150" width="154" height="46" rx="8" fill="#ffffff" stroke="#cbd5e1"/>
+    <text x="101" y="178" text-anchor="middle" fill="#0f172a" font-size="12.5">Bob: review PR #412</text>
+    <rect x="24" y="214" width="154" height="46" rx="8" fill="#ffffff" stroke="#cbd5e1"/>
+    <text x="101" y="242" text-anchor="middle" fill="#0f172a" font-size="12.5">Channel: "hold merge"</text>
+
+    <rect x="216" y="86" width="120" height="174" rx="8" fill="#eef2ff" stroke="#a5b4fc"/>
+    <text x="276" y="162" text-anchor="middle" fill="#1e1b4b" font-size="13">One session</text>
+    <text x="276" y="186" text-anchor="middle" fill="#64748b" font-size="12">All context mixed</text>
+
+    <line x1="178" y1="109" x2="214" y2="109" stroke="#6b7280" stroke-width="1.5" marker-end="url(#a)"/>
+    <line x1="178" y1="173" x2="214" y2="173" stroke="#6b7280" stroke-width="1.5" marker-end="url(#a)"/>
+    <line x1="178" y1="237" x2="214" y2="237" stroke="#6b7280" stroke-width="1.5" marker-end="url(#a)"/>
+
+    <text x="24" y="296" fill="#c2410c" font-weight="600" font-size="13.5">Blocking, cross-talk, and leaks</text>
+    <text x="24" y="320" fill="#475569" font-size="12.5">Sync tools block quick follow-up questions;</text>
+    <text x="24" y="340" fill="#475569" font-size="12.5">"Hold merge" is ambiguous across tasks;</text>
+    <text x="24" y="360" fill="#475569" font-size="12.5">Compaction can drop earlier constraints;</text>
+    <text x="24" y="380" fill="#475569" font-size="12.5">DM details stay inside the same context</text>
+    <text x="24" y="400" fill="#475569" font-size="12.5">and can leak into public channel replies.</text>
+    <text x="24" y="468" fill="#0f766e" font-weight="600" font-size="13.5">Works when: one user, low concurrency</text>
+    <text x="24" y="492" fill="#475569" font-size="12.5">Personal assistant or uniform-access work.</text>
+  </g>
+
+  <!-- Panel 3: router -> workers -->
+  <g transform="translate(820,20)">
+    <rect width="360" height="520" rx="14" fill="#f0fdfa" stroke="#99f6e4"/>
+    <text x="20" y="34" font-size="18" font-weight="600" fill="#0f172a">③ router → worker</text>
+    <text x="20" y="58" font-size="12.5" fill="#64748b">Coordinator routes; workers run in isolation</text>
+
+    <rect x="18" y="86" width="122" height="46" rx="8" fill="#ffffff" stroke="#cbd5e1"/>
+    <text x="79" y="114" text-anchor="middle" fill="#0f172a" font-size="12">DM · Alice</text>
+    <rect x="18" y="150" width="122" height="46" rx="8" fill="#ffffff" stroke="#cbd5e1"/>
+    <text x="79" y="178" text-anchor="middle" fill="#0f172a" font-size="12">#incidents thread</text>
+    <rect x="18" y="214" width="122" height="46" rx="8" fill="#ffffff" stroke="#cbd5e1"/>
+    <text x="79" y="242" text-anchor="middle" fill="#0f172a" font-size="12">#incidents root</text>
+
+    <rect x="166" y="120" width="76" height="106" rx="10" fill="#ccfbf1" stroke="#0d9488" stroke-width="1.5"/>
+    <text x="204" y="164" text-anchor="middle" fill="#134e4a" font-weight="600" font-size="13.5">router</text>
+    <text x="204" y="186" text-anchor="middle" fill="#134e4a" font-size="12">classify</text>
+    <text x="204" y="203" text-anchor="middle" fill="#134e4a" font-size="12">dispatch</text>
+
+    <line x1="140" y1="109" x2="164" y2="140" stroke="#6b7280" stroke-width="1.5" marker-end="url(#a)"/>
+    <line x1="140" y1="173" x2="164" y2="173" stroke="#6b7280" stroke-width="1.5" marker-end="url(#a)"/>
+    <line x1="140" y1="237" x2="164" y2="206" stroke="#6b7280" stroke-width="1.5" marker-end="url(#a)"/>
+
+    <rect x="266" y="86" width="76" height="46" rx="8" fill="#eef2ff" stroke="#a5b4fc"/>
+    <text x="304" y="106" text-anchor="middle" fill="#1e1b4b" font-size="13">worker</text>
+    <text x="304" y="123" text-anchor="middle" fill="#64748b" font-size="11">rollback</text>
+    <rect x="266" y="150" width="76" height="46" rx="8" fill="#eef2ff" stroke="#a5b4fc"/>
+    <text x="304" y="170" text-anchor="middle" fill="#1e1b4b" font-size="13">worker</text>
+    <text x="304" y="187" text-anchor="middle" fill="#64748b" font-size="11">PR #412</text>
+    <rect x="266" y="214" width="76" height="46" rx="8" fill="#eef2ff" stroke="#a5b4fc"/>
+    <text x="304" y="234" text-anchor="middle" fill="#1e1b4b" font-size="13">worker</text>
+    <text x="304" y="251" text-anchor="middle" fill="#64748b" font-size="11">…</text>
+
+    <line x1="242" y1="140" x2="264" y2="112" stroke="#0d9488" stroke-width="1.5" marker-end="url(#a)"/>
+    <line x1="242" y1="173" x2="264" y2="173" stroke="#0d9488" stroke-width="1.5" marker-end="url(#a)"/>
+    <line x1="242" y1="206" x2="264" y2="234" stroke="#0d9488" stroke-width="1.5" marker-end="url(#a)"/>
+    <path d="M 304 262 L 304 290 L 204 290 L 204 228" fill="none" stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="4 3" marker-end="url(#a)"/>
+    <text x="254" y="306" text-anchor="middle" fill="#64748b" font-size="12">compact report</text>
+
+    <text x="24" y="340" fill="#0f766e" font-weight="600" font-size="13.5">Index in router, execution in workers</text>
+    <text x="24" y="364" fill="#475569" font-size="12.5">"Check billing too" in #incidents routes</text>
+    <text x="24" y="384" fill="#475569" font-size="12.5">straight into the rollback worker.</text>
+    <text x="24" y="404" fill="#475569" font-size="12.5">Long jobs run in parallel without blocking;</text>
+    <text x="24" y="424" fill="#475569" font-size="12.5">the router never carries raw tool logs.</text>
+    <text x="24" y="468" fill="#475569" font-size="12">Same pattern, different cuts: per-place vs.</text>
+    <text x="24" y="488" fill="#475569" font-size="12">global router; code rules vs. model routing.</text>
+  </g>
+</svg>
