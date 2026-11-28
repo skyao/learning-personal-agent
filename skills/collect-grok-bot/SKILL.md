@@ -13,7 +13,7 @@ description: 收集 Grok Bot（SpaceXAI / xAI，经 Cursor 交付）的资料时
 | --- | --- |
 | 产品目录 | `content/zh-cn/docs/grok-bot/` |
 | 发布日期 | 2026-08-11（beta） |
-| 最后收集日期 | 2026-11-10（用户发来公众号文章 1 篇：未来已来AI物语「Grok Bot / Personal Agent 是什么？」11-09，收入 community）；2026-11-10（增量：更新日志更新到 v0.79.3（11-06），目录改为 2026-11-06-changelog，译文只覆盖到 v0.78.1、新增部分待补译；Cursor 文档 teams 与帮助页 shared-bots 原文更新，旧译文移除待重译；x.ai 新闻无新的 Grok Bot 稿件）；2026-11-06（第一轮 2026-11-05：官方 36 篇、媒体 3 篇、社区 5 篇；2026-11-06 对照旧笔记补收官方 11 篇：docs.x.ai 文档 10 篇、更新日志 1 篇） |
+| 最后收集日期 | 2026-11-28（美东；增量：官方新收 11 篇——新闻 3 篇（Grok Bot 1.0、会计团队用例、X Subscription 套餐）、指南 1 篇（multiple teams，原站可下载后补收）、docs.x.ai 新页 7 篇；社区 5 篇——NewCore 越权访问调查、Profero 安全研究、Timeline 作者 2 篇、Latent Space 五天实测；docs.x.ai 20 页原文更新、旧译文删去待重译；更新日志更新到 v1.3.0（11-24），保留旧译文待补译；帮助页迁到 grok.com 被 Cloudflare 拦截，本轮未比对）；2026-11-10（用户发来公众号文章 1 篇：未来已来AI物语「Grok Bot / Personal Agent 是什么？」11-09，收入 community）；2026-11-10（增量：更新日志更新到 v0.79.3（11-06），目录改为 2026-11-06-changelog，译文只覆盖到 v0.78.1、新增部分待补译；Cursor 文档 teams 与帮助页 shared-bots 原文更新，旧译文移除待重译；x.ai 新闻无新的 Grok Bot 稿件）；2026-11-06（第一轮 2026-11-05：官方 36 篇、媒体 3 篇、社区 5 篇；2026-11-06 对照旧笔记补收官方 11 篇：docs.x.ai 文档 10 篇、更新日志 1 篇） |
 | 实测材料 | 用户确认没有（2026-11-05） |
 
 从一开始就按新流程：原文存 `original.md`，资料页只写摘要与保留理由，不翻译。
@@ -44,6 +44,13 @@ description: 收集 Grok Bot（SpaceXAI / xAI，经 Cursor 交付）的资料时
 | 更新日志 | `x.ai/changelog/bot`（有 RSS：`/changelog/bot/rss.xml`） | 每个版本的 New、Improved、Fixed 条目 | 原站 403，用 Wayback 快照；快照是 gzip 压缩的，先解压；`extract.py <html> 'section.pb-24'` 取全部版本（auto 只取到最新一版）；行尾的「Teams」「Enterprise」角标和「Requires Grok Bot x.y or later」提示用 sed 整理 |
 | Cursor 帮助 | `cursor.com/help/grok-bot/<page>`；索引 `cursor.com/help/grok-bot` | 约 25 页 | 直接下载 |
 
+**2026-11 起的渠道迁移（2026-11-28 发现）**：
+
+- `cursor.com/docs/grok-bot/<page>` 全部 308 跳转到 docs.x.ai 的对应页（work→bots、teams→teams-and-enterprises、settings→settings-and-notifications、identity→identity-and-access 等），cursor.com 不再有独立的文档。已收的 cursor.com 文档页（2026-11-05-docs-*）的 `sourceUrl` 已改为 docs.x.ai 地址，cursor.com 地址移入 `altUrls`。今后文档只查 docs.x.ai：目录取任一页侧栏的 `/grok-bot/<page>` 链接，`dateModified` 比收集日期新的页面做比对。docs-work、docs-settings 两页的 cursor.com 地址现在跳到已另收的 xai-docs-bots、xai-docs-settings-and-notifications，这两页原文未更新、保留不动。
+- docs.x.ai 的 `.md` 版本现在文首有分组标签（`#### Use Grok Bot` 等）、站内链接是相对路径、文末有「## Related pages」。存档时去掉分组标签和相关页面列表，相对链接补成 `https://docs.x.ai/...`。比对新旧原文要用词级比对并去掉链接地址（行级 diff 全是换行与链接噪声），缩写展开（doesn't→does not）不算实质变化。
+- `cursor.com/help/grok-bot/<page>` 308 跳转到 `grok.com/help/grok-bot/<page>`，再跳到 grok.com 首页并返回 Cloudflare 验证页（403），换客户端标识也一样；Wayback 没有 grok.com 帮助页的快照（cursor.com 帮助页最晚的快照是 11-07 到 11-11）。2026-11-28 本轮未能比对帮助页，下轮再试 Wayback。
+- 更新日志的目录名约定是 `<最新条目日期>-changelog`，但分析页已用 relref 引用 `2026-11-06-changelog`，收集一侧不能改分析页，所以目录名固定不再改，只更新 `date`、标题和内容。
+
 - x.ai 新闻页的正文从 H1 之后开始，到「## Try Grok Bot today」为止；去掉「Back to news」、下载与联系销售按钮，视频占位 `[](….mp4)` 改为链接行。脚本加载的交互组件（如发布文中按团队展开的示例）静态页面里没有，标「（以下内容无法获取）」。
 - Cursor 文档与帮助页的正文到「## Related…」或「## Was this article helpful?」为止。折叠式 FAQ 的问题文字在标题里的 `<button>` 中，`extract.py` 已在 2026-11-05 改为保留这类按钮的文字。
 - 部分内部用例文章的截图是 4K 以上的 PNG（单张 5–10 MB），下载后必须用 `shrink_images.py` 缩小。
@@ -63,7 +70,7 @@ description: 收集 Grok Bot（SpaceXAI / xAI，经 Cursor 交付）的资料时
 | --- | --- |
 | Techdirt「Whoops: Grok Bot Spills Tech CEO's Bank Data In Public Slack」（Karl Bode，2026-10-19） | 不收：评论文章，转述已收的 Cybernews 报道 |
 | Forbes、The Next Web、GadgetReview 关于 Musk 称成本过高的报道（2026-11-02） | 不收：与已收的 TechCrunch 报道同一事件，未见新信息（据标题与 HN 列表判断，未逐篇打开） |
-| x.ai 指南「How I run multiple teams of Grok Bots」 | 暂不收：属于核心集，但 Wayback 没有快照、原站 403 |
+| x.ai 指南「How I run multiple teams of Grok Bots」 | 2026-11-28 原站可直接下载，已收（official/2026-08-27-guide-multiple-teams） |
 | Lee Robinson 关于 Grok Bot 实现的演讲（视频） | 不收：没有官方文字稿；已收的 Peter Piekarczyk 文章依据该演讲整理 |
 | botsinproduction、aliakbarfakhri.com、buildfastwithai、stork.ai、layer3labs 等的「review」 | 不收：SEO 或工具站博客 |
 | Elon Musk 的 X 帖子（连接银行账户「we will make you whole」、Grok Bot 将使用 Opus 5.5 等） | 不单独收：已在收录的报道中引用 |
@@ -93,6 +100,29 @@ description: 收集 Grok Bot（SpaceXAI / xAI，经 Cursor 交付）的资料时
 | 帮助页 shared-bots | 原文更新：共享范围扩到组织，新增发布草稿、复制链接、浏览共享 Bot、学到的内容需审核、共享连接器 |
 | 其余 Cursor 文档与帮助页 | 比对只差页尾链接，未覆盖 |
 | ryandoser.com「Best Personal AI Agent: Grok Bot vs Muse vs Dots vs Duet」（10-28，更新 11-09） | 不收：在已收的 Claire Vo 基准测试上整理，无自己的实测 |
+
+## 2026-11-28 增量收集
+
+| 资料 | 判断 |
+| --- | --- |
+| x.ai 新闻 grok-bot-1-0（11-11）、grok-bot-accounting（11-16） | 收 |
+| x.ai 新闻 x-subscription（10-12，Grok、Grok Bot、Cursor、X Premium 合并为一个套餐） | 收：上一轮漏判，属套餐类 |
+| x.ai 新闻 partnernetworkannouncement（10-22） | 不收：合作伙伴网络公告，Grok Bot 只出现在伙伴引语里 |
+| x.ai 指南 designing-grok-bot-with-grok-bot（08-24）、grok-bot-for-clay（10-20）、grok-bot-for-linear（11-02）、grok-bot-for-gtm、for-pms、for-founder-led-sales、for-engineering | 不收：设计团队、按岗位或按单个第三方工具的指南；`/bot/guides/getting-started` 是分类页 |
+| docs.x.ai 新页 how-grok-bot-works、initiative、meetings、microsoft-teams、team-bots、create-a-team-bot、okta-fastpass | 收 |
+| docs.x.ai deep-links | 不收：快捷链接格式说明，属操作类 |
+| docs.x.ai 已收页的原文更新 | 20 页有实质变化（Shared Bots 改称 Team Bots、主动 check-in、会议、Microsoft Teams、Vault 存卡等），按 source-page.md 覆盖原文、删旧译文、改回待翻译；proxies 只有缩写展开和页尾链接、tag-on-x 无变化，未覆盖 |
+| 更新日志 v1.0.1–v1.3.0（11-11 至 11-24） | 页首新增 6 个版本；另外 v0.77.0、v0.78.4、v0.78.5、v0.79.2、v0.79.3 的少量条目被补写或改写（约 13 处）。整页 1,900 行，为几处旧条目整页重译不划算，保留旧译文，在收录说明里写明待补译的新增版本和需按原文核对的旧版本 |
+| NewCore「Grok Bot Made 31 Unattended Data Requests」（Ido Hoorvitch，11-17） | 收入 community：安全厂商的一手调查，含披露时间线和 xAI 支持的答复 |
+| Ars Technica（Dan Goodin，11-17）、The Next Web（11-17）、eWeek、SC World 等关于同一事件的报道 | 不收：转述 NewCore；Ars 只多了「SpaceXSI 未回复邮件询问」 |
+| inclinq.medium.com「Grok Bot Said It Hadn't Accessed Anything…」（11-19） | 不收：Medium 返回 403，Wayback 无快照，看标题是同一事件 |
+| Profero「The Rootkit Built Into Grok Bot」（Omri Segev Moyal，11-08） | 收入 community：第三方安全研究与披露时间线 |
+| Timeline 作者 Marcel Marais 的「Grok Bot symbiosis」（11-21）、「How footsteps cut my Grok Bot quota burn by 50%」（11-23） | 收入 community：作者在推广自家应用，但有一个月的实际使用记录和后台运行次数、额度消耗数据 |
+| Latent Space「Five Days With Grok Bot」（Dan McAteer，09-05） | 收入 community：上一轮漏掉的五天实测 |
+| agentconnect.md「How always-on agents split routing, execution, and permissions」（11-23） | 不收：开源平台厂商依据公开资料比较 dsh-superagent、Grok Bot、Claude Duet，没有新信息 |
+| flaviocopes「What's new in Grok Bot 1.0」（11-11） | 不收：作者说明团队功能按文档整理，截图取自官方 |
+| ryanperry.io「Grok Bot Taught My Jev Agent to Play Smash Bros」（11-23） | 不收：正文由脚本加载取不到，Wayback 无快照 |
+| 开源替代品（Pots、Rakazo、NerdBot 等）、X 帖子 | 不收：按收录范围 |
 
 ## 命名约定
 
